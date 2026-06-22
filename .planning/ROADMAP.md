@@ -69,3 +69,4 @@ Plans:
 | 1. Pipeline Validation & Pilots | 4/4 | Complete | 2026-06-22 |
 | 2. Main Experiment & Analysis | 0/4 | In progress | - |
 | 3. Extension & Presentation | 0/2 | Not started | - |
+
