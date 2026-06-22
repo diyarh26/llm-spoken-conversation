@@ -22,7 +22,20 @@ turns characteristic of human spoken conversation.
 ALIGN alignment numbers (conceptual ~0.57 Earlier, etc.) are done on the VM once ALIGN is
 installed — that is the remaining half of the Phase-1 validation gate.
 
+## Coordination-marker rates — vs paper Table 5 (50 conversations)
+| marker | ours (/100 words) | paper SB | note |
+|---|---|---|---|
+| uh-huh | 0.85 | 1.03 | dominant marker — reproduces the SB signature |
+| oh | 0.37 | 0.57 | same order of magnitude |
+| okay | 0.18 | 0.16 | near-exact |
+| sycophancy openers | 0.001 | ~0 | human baseline, as expected |
+
+Ranking `uh-huh > oh > okay` is reproduced exactly; absolute rates run slightly low because
+we count over whole conversations (more words) rather than main-body-only. The marker
+detectors in `analysis/metrics.py` are therefore validated.
+
 ## Reproduce
 ```
 py -3 analysis/swda.py --n 30
+py -3 analysis/metrics.py --n 50
 ```
