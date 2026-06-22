@@ -135,3 +135,152 @@ magnitude of conceptual alignment. The ALIGN phase-1 gate is cleared.
   4. ✓ C2 pilot reveals Vicuna CAN do turn-by-turn (multi_turn_emissions=0 all 10 convs)
 - **HOLDING** — not starting Phase 2 until local lead reviews this report and issues
   updated VM_TASKS.md. No C3/C4 generators yet; no scaling to 50/condition.
+
+---
+
+## Phase 2 prep smoke tests (VM_TASKS, 2026-06-22)
+
+**Superseded by the 2026-06-23 retry below.** This first attempt used the default
+Python/sandbox path, which could not see the GPU. The corrected retry used
+`/anaconda/envs/convsim/bin/python` with host GPU access.
+
+### TASK 1 - Pull and verify code
+
+- Pulled latest `main` with `git pull --ff-only`.
+- Current commit: `7b4a448c8bc28e7c2e6dad1649f0d612e2aa3c7e`.
+- Syntax check command passed:
+  - `python -m py_compile generation/*.py prompts/*.py analysis/*.py`
+- Import check passed for required packages:
+  - `transformers 5.12.1`
+  - `bitsandbytes 0.49.2`
+  - `torch 2.5.1`
+- Current runtime problem:
+  - `torch.cuda.is_available()` is `False`
+  - `nvidia-smi` fails with: `NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver.`
+  - This run is therefore not seeing the V100 GPU that Phase 1 used successfully.
+
+### TASK 2 - Retire old P0 pilot outputs
+
+- Removed stale pre-`sb_prompt` outputs:
+  - `data/generated/C1-P0/`
+  - `data/generated/C2-P0/`
+- No replacement smoke conversations were produced because the model runs could not complete
+  without GPU access.
+
+### TASK 3 - Smoke-test corrected Phase 2 generators
+
+Requested smoke commands were attempted/probed:
+
+| Architecture | Command / probe | Result |
+|--------------|-----------------|--------|
+| C1 | `python generation/generate_c1.py --prompt P0 --n 2 --max-new-tokens 1024` | Reached `target=2 todo=2`; loaded Vicuna weights after network access, then entered generation on bitsandbytes CPU backend and was interrupted after several minutes with no completed output. |
+| C2 | `timeout 120 python generation/generate_c2.py --prompt P0 --n 2 --max-turns 12` | Reached `target=2 todo=2`; timed out while loading Vicuna weights on CPU, before generation. |
+| C3 | `timeout 45 python generation/generate_c3.py --prompt P0 --n 2 --max-turns 12` | Reached `target=2 todo=2`; timed out while loading Vicuna weights on CPU, before generation. |
+| C4 | `timeout 45 python generation/generate_c4.py --prompt P0 --n 2 --max-turns 12` | Reached `target=2 todo=2` and `loading lmsys/vicuna-13b-v1.5-16k for ParticipantA`; timed out while loading Vicuna weights on CPU, before Mistral load or generation. |
+
+Because no smoke conversation completed, I cannot yet evaluate:
+
+- whether the output uses the Switchboard instruction as a caller discussion task,
+- whether the customer-service/help-desk framing disappeared,
+- `n_turns`,
+- `multi_turn_emissions`,
+- C4 VRAM behavior when Vicuna and Mistral are loaded together.
+
+### TASK 4 - Hold before scaling
+
+- Full Phase 2 scale was not started.
+- Blocker: GPU/driver is unavailable in the current VM runtime (`cuda.is_available() = False`,
+  `nvidia-smi` cannot communicate with the NVIDIA driver), so the smoke tests fall back to
+  CPU and are not practical for 13B generation.
+- Holding for local/VM environment fix before rerunning C1/C2/C3/C4 smoke tests.
+
+---
+
+## Phase 2 prep smoke tests retry (GPU path, 2026-06-23)
+
+### Environment correction
+
+The first smoke attempt used the wrong runtime path. Retried with:
+
+```bash
+/anaconda/envs/convsim/bin/python ...
+```
+
+and escalated host GPU access.
+
+- CUDA verification with this path:
+  - `torch 2.5.1+cu121`
+  - CUDA runtime `12.1`
+  - `torch.cuda.is_available() = True`
+  - GPU: `Tesla V100-PCIE-16GB`
+- `nvidia-smi` with host access:
+  - Driver `535.230.02`
+  - CUDA `12.2`
+  - 16 GB VRAM
+- Syntax check remains passing:
+  - `/anaconda/envs/convsim/bin/python -m py_compile generation/*.py prompts/*.py analysis/*.py`
+
+### Smoke commands and outputs
+
+Stale pre-`sb_prompt` C1/C2 outputs had already been removed. The retry produced:
+
+| Architecture | Output files | n_turns / words | multi_turn_emissions | Result |
+|--------------|--------------|-----------------|----------------------|--------|
+| C1-P0 | `4325.json`, `4330.json` | 409 words, 408 words | n/a | Completed on GPU. |
+| C2-P0 | `4325.json`, `4330.json` | 12, 12 turns | 0, 0 | Completed on GPU. |
+| C3-P0 | `4325.json`, `4330.json` | 12, 12 turns | 0, 0 | Completed on GPU. |
+| C4-P0 | none | n/a | n/a | Blocked while downloading/loading Mistral, before generation. |
+
+### Qualitative smoke findings
+
+Question: did outputs use the Switchboard instruction as a caller discussion task?
+
+- C1: The `sb_prompt` is present in the records, but both outputs still frame the task as
+  calling a service/department rather than two ordinary callers discussing the topic.
+- C2: Same issue as C1. Both outputs use the corrected `sb_prompt` field but still drift
+  into help-desk/service framing.
+- C3: Mixed. Drug Testing is closer to a topical discussion. Child Care still drifts into
+  recommendation/help framing.
+- C4: Not evaluated; no output generated.
+
+Question: did customer-service/help-desk framing disappear?
+
+- C1: No. Examples include "is this the child care service?", "How can I help you today?",
+  and "ABC Company's HR department?"
+- C2: No. Examples include "is this the child care service?", "How can I help you today?",
+  and "this is the Switchboard. How can I help you today?"
+- C3: Not fully. Child Care still includes "recommendations" / "I can definitely help you"
+  style language. Drug Testing looks less help-desk-like.
+- C4: Not evaluated.
+
+Additional C3 artifact:
+
+- The C3 outputs can include chat-template residue inside a saved turn (`USER:`,
+  `ASSISTANT:`, and malformed variants like `ASSISTATIVE:` / `ASSISTY:`). The existing
+  `clean_single_turn()` only detects `ParticipantA:` / `ParticipantB:` labels, so these
+  internal role markers are not counted as `multi_turn_emissions`.
+
+### C4 blocker
+
+C4 loaded Vicuna on GPU successfully, then failed while fetching/loading
+`mistralai/Mistral-7B-Instruct-v0.2` for ParticipantB.
+
+- Root filesystem before cleanup: 146 GB total, 144 GB used, 2.1 GB free (99%).
+- Removed pip download cache only (`/home/student/.cache/pip`, about 2.9 GB).
+- Root filesystem after cleanup: about 5.0 GB free.
+- Retry with `HF_HUB_DISABLE_XET=1` still failed:
+  - `OSError: [Errno 28] No space left on device`
+- Existing Hugging Face cache:
+  - Vicuna cache: about 49 GB
+  - partial Mistral cache: about 4.7 GB
+
+### Hold status
+
+- Full Phase 2 scale was not started.
+- Current status:
+  - C1/C2/C3 smoke runs completed and raw JSON is committed.
+  - C4 smoke is blocked by disk capacity before the Mistral model can finish downloading,
+    so C4 VRAM behavior with Vicuna + Mistral is still unknown.
+  - C1/C2 still show customer-service framing; C3 has role-marker artifacts.
+- Holding for local-side decision before scaling or changing prompts/cleaning/model-cache
+  strategy.
