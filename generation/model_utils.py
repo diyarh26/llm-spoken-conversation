@@ -26,7 +26,7 @@ def load_model(name: str):
     )
     tok = AutoTokenizer.from_pretrained(name)
     model = AutoModelForCausalLM.from_pretrained(
-        name, quantization_config=bnb, device_map="auto"
+        name, quantization_config=bnb, device_map="auto", use_safetensors=True
     )
     model.eval()
     return model, tok

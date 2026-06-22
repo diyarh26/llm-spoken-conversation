@@ -8,6 +8,8 @@ transformers>=4.40
 accelerate>=0.30
 bitsandbytes>=0.43
 sentencepiece
+protobuf       # required by transformers to convert the Llama/Vicuna SentencePiece tokenizer
+tiktoken       # tokenizer-extractor fallback used by transformers 5.x
 
 pandas
 numpy
