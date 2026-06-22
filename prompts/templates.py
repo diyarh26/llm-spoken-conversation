@@ -58,20 +58,25 @@ def _style(prompt_level: str) -> str:
 
 
 def _task(topic: str, sb_prompt: str | None = None) -> str:
-    """Render the Switchboard task without turning the topic into a service call."""
+    """Render the Switchboard task as a shared peer discussion, not a service request."""
     if sb_prompt:
         return (
-            f"Topic title: {topic}\n"
-            f"Verbatim instruction given to the callers: {sb_prompt}"
+            f"You were both asked to chat about this topic: {topic}.\n"
+            f"Shared discussion goal (talk it over together as equals — compare your own "
+            f"experiences and opinions; this is NOT one of you interviewing or serving the "
+            f"other): {sb_prompt}"
         )
-    return f"Topic title: {topic}"
+    return f"You were both asked to chat about this topic: {topic}."
 
 
 def _genre_guard() -> str:
     return (
-        "Treat this as an ordinary conversation between two assigned telephone callers. "
-        "Do not turn the topic into a business, help desk, interview, survey, or customer "
-        "service call unless the instruction explicitly says so."
+        "You are an ordinary member of the public — NOT an AI assistant, agent, operator, or "
+        "a representative of any company or service. The other caller is also an ordinary "
+        "person; the two of you are equals who were each asked to phone a stranger and chat. "
+        "Never say things like 'how can I help you', 'is this the ... service', or offer "
+        "help, recommendations, or assistance as if it were your job. Just share your own "
+        "experiences and opinions and ask about theirs, the way two regular people would."
     )
 
 

@@ -68,14 +68,25 @@ def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
 
 
 def clean_single_turn(text: str, labels=("ParticipantA", "ParticipantB")) -> tuple[str, bool]:
-    """Return the first utterance and whether the model started another labeled turn."""
+    """Return the first utterance and whether the model ran on past a single turn.
+
+    Truncates at the first speaker/role marker. Besides the participant labels, this also
+    catches chat-role residue the agent path leaks when Vicuna rambles into a whole fake
+    dialogue (line-initial USER:, ASSISTANT:, and degraded 4-bit variants ASSISTATIVE: /
+    ASSISTY:, plus HUMAN:/AI:/SYSTEM:/BOT:). A True flag here means the model did NOT keep
+    to one turn — which we count as a multi-turn emission.
+    """
     label_alt = "|".join(re.escape(label) for label in labels)
-    label_re = re.compile(rf"\b(?:{label_alt})\s*:", re.I)
+    marker_re = re.compile(
+        rf"(?:\b(?:{label_alt})\s*:)"
+        rf"|(?:(?:^|\n)\s*(?:USER|ASSIST\w*|HUMAN|AI|SYSTEM|BOT)\s*:)",
+        re.I,
+    )
     t = text.strip()
     m = re.match(rf"\s*(?:{label_alt})\s*:\s*", t, re.I)
     if m:
         t = t[m.end():]
-    nxt = label_re.search(t)
+    nxt = marker_re.search(t)
     ran_past = nxt is not None
     if ran_past:
         t = t[:nxt.start()]
