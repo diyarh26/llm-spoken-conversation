@@ -1,0 +1,107 @@
+"""
+C2 (turn-by-turn, single model) pilot generation with Vicuna-13B.
+
+One model sees the whole transcript and writes the next single turn for the named speaker.
+
+IMPORTANT TEST: the paper found Vicuna could NOT follow turn-by-turn prompting (it emitted
+multiple turns at once). This pilot probes exactly that — each generation is truncated to
+the first turn, and we record `multi_turn_emissions` (how often the model ran past one
+turn). A high count means Vicuna is a poor fit for the turn-by-turn family (C2/C3/C4) and
+we should switch those conditions to a stronger instruction-follower (Mistral / Llama-3)
+or rely on truncation.
+
+Resumable; writes data/generated/C2-<prompt>/<id>.json. Run in tmux:
+    python generation/generate_c2.py --prompt P0 --n 10 --max-turns 30
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import pathlib
+import re
+import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+
+from prompts.templates import build_c2                                   # noqa: E402
+from analysis.swda import (                                              # noqa: E402
+    load_metadata, make_personas, iter_conversation_files, conversation_no_of,
+)
+from generation.model_utils import load_model, chat, VICUNA             # noqa: E402
+
+OUT_ROOT = pathlib.Path(__file__).resolve().parent.parent / "data" / "generated"
+LABELS = ("ParticipantA", "ParticipantB")
+_LABEL_RE = re.compile(r"\bParticipant[AB]\s*:", re.I)
+
+
+def first_turn(text: str) -> tuple[str, bool]:
+    """Keep only the first turn the model produced. Returns (clean_text, ran_past_one_turn)."""
+    t = text.strip()
+    m = re.match(r"\s*Participant[AB]\s*:\s*", t, re.I)  # strip a leading speaker label
+    if m:
+        t = t[m.end():]
+    nxt = _LABEL_RE.search(t)  # another label => model ran into more turns
+    ran_past = nxt is not None
+    if ran_past:
+        t = t[:nxt.start()]
+    return t.strip(), ran_past
+
+
+def target_conversations(n: int, meta: dict) -> list[int]:
+    out: list[int] = []
+    for fp in iter_conversation_files():
+        cno = conversation_no_of(fp)
+        if cno in meta:
+            out.append(cno)
+        if len(out) >= n:
+            break
+    return out
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--prompt", default="P0", choices=["P0", "P1"])
+    ap.add_argument("--n", type=int, default=10)
+    ap.add_argument("--max-turns", type=int, default=30)
+    ap.add_argument("--max-new-tokens", type=int, default=200)
+    args = ap.parse_args()
+
+    cond = f"C2-{args.prompt}"
+    out_dir = OUT_ROOT / cond
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    meta = load_metadata()
+    ids = target_conversations(args.n, meta)
+    todo = [c for c in ids if not (out_dir / f"{c}.json").exists()]
+    print(f"[{cond}] target={len(ids)} todo={len(todo)} done={len(ids) - len(todo)}")
+    if not todo:
+        return
+
+    model, tok = load_model(VICUNA)
+    for cno in todo:
+        a, b, topic, sb_prompt = make_personas(meta[cno])
+        history: list[tuple[str, str]] = []
+        multi = 0
+        for i in range(args.max_turns):
+            spk = LABELS[i % 2]
+            messages = build_c2(args.prompt, a, b, topic, history, spk)
+            raw = chat(model, tok, messages, max_new_tokens=args.max_new_tokens)
+            turn, ran_past = first_turn(raw)
+            multi += int(ran_past)
+            if not turn:
+                break
+            history.append((spk, turn))
+        rec = {
+            "condition": cond, "architecture": "C2", "prompt_level": args.prompt,
+            "model": VICUNA, "conversation_no": cno, "topic": topic,
+            "persona_a": vars(a), "persona_b": vars(b),
+            "turns": history, "n_turns": len(history),
+            "multi_turn_emissions": multi,  # paper's Vicuna failure mode, measured
+        }
+        (out_dir / f"{cno}.json").write_text(json.dumps(rec, indent=2), encoding="utf-8")
+        print(f"  saved {cno}  turns={len(history)}  multi_turn_emissions={multi}")
+
+
+if __name__ == "__main__":
+    main()

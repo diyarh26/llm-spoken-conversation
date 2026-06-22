@@ -31,13 +31,18 @@ record everything in `VM_REPORT.md`.
   one-line test completion. Report VRAM used and tokens/sec.
 - **Stop there.** Do not run any experimental generation.
 
-## TASK 5 — C1 pilot (after TASKS 1–4, run in tmux)
-- The C1 pilot generator is ready: `generation/generate_c1.py`.
-- Run: `python generation/generate_c1.py --prompt P0 --n 10`
-- It writes `data/generated/C1-P0/<id>.json` (resumable; skips done ids).
-- Report in `VM_REPORT.md`: did it run? mean words/turn of the 10 outputs (rough sanity
-  vs the paper's Vicuna cell)? any format issues — did Vicuna emit clean
-  `ParticipantA:` / `ParticipantB:` lines, or does the output parser need tuning?
+## TASK 5 — Pilots: C1 (all-at-once) and C2 (turn-by-turn), in tmux
+Both pilot generators are ready. After TASKS 1–4, run:
+- C1: `python generation/generate_c1.py --prompt P0 --n 10`            -> data/generated/C1-P0/
+- C2: `python generation/generate_c2.py --prompt P0 --n 10 --max-turns 30` -> data/generated/C2-P0/
+
+Report in `VM_REPORT.md`:
+- **C1**: did Vicuna emit clean `ParticipantA:`/`ParticipantB:` lines? rough words/turn?
+- **C2 (the critical one)**: the `multi_turn_emissions` counts in the C2 JSONs. The paper
+  found Vicuna CANNOT do turn-by-turn (it dumps multiple turns). If `multi_turn_emissions`
+  is high, Vicuna is a poor fit for the turn-by-turn family (C2/C3/C4) and we'll switch
+  those conditions to a stronger instruction-follower (Mistral-7B / Llama-3-8B) or rely on
+  truncation. **This is the single most important thing the pilot tells us — report it.**
 
 ## TASK 6 — Report and hold before scaling
 - Do NOT scale to 50/condition and do NOT run C2–C4 yet.
