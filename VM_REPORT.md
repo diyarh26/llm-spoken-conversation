@@ -444,3 +444,181 @@ from speaker-labeled `ParticipantA:` / `ParticipantB:` lines in `raw_output`.
 
 - Full Phase 2 scale was not started.
 - Holding after this commit for local-side review.
+
+## 2026-06-23 P1/P0 generation spot check
+
+All commands below were run with `/anaconda/envs/convsim/bin/python` after
+`rm -rf data/generated/C*`.
+
+GPU/runtime:
+
+- `nvidia-smi`: Tesla V100-PCIE-16GB, 16384 MiB
+- `torch 2.5.1+cu121`, `torch.cuda.is_available() = True`
+- C4 fit: yes, Vicuna + Mistral loaded together without OOM.
+- C4 VRAM observed: 11784 MiB / 16384 MiB soon after both models loaded; later
+  sample during generation was 13246 MiB / 16384 MiB.
+
+Commands:
+
+```bash
+/anaconda/envs/convsim/bin/python generation/generate_c1.py --prompt P1 --n 2 --max-new-tokens 1024
+/anaconda/envs/convsim/bin/python generation/generate_c2.py --prompt P1 --n 2 --max-turns 12
+/anaconda/envs/convsim/bin/python generation/generate_c3.py --prompt P1 --n 2 --max-turns 12
+/anaconda/envs/convsim/bin/python generation/generate_c4.py --prompt P1 --n 2 --max-turns 12
+/anaconda/envs/convsim/bin/python generation/generate_c1.py --prompt P0 --n 2 --max-new-tokens 1024
+/anaconda/envs/convsim/bin/python generation/generate_c2.py --prompt P0 --n 2 --max-turns 12
+```
+
+Saved outputs:
+
+| Run | Files | Completion notes |
+| --- | --- | --- |
+| C1-P1 | `4325.json`, `4330.json` | 243 words, 190 words |
+| C2-P1 | `4325.json`, `4330.json` | turns=14/14, multi_turn_emissions=0/0 |
+| C3-P1 | `4325.json`, `4330.json` | turns=14/14, multi_turn_emissions=0/10 |
+| C4-P1 | `4325.json`, `4330.json` | turns=14/14, multi_turn_emissions=6/0 |
+| C1-P0 | `4325.json`, `4330.json` | 279 words, 350 words |
+| C2-P0 | `4325.json`, `4330.json` | turns=14/14, multi_turn_emissions=2/1 |
+
+Help-desk/service notes:
+
+- C1-P0 `4325.json` still has a clear service/help framing:
+  `"I'm calling today to ask about child care services for my preschooler."`
+  and `"I work at a daycare center and I'd be happy to help you."`
+- C2-P0 `4325.json` has assistant/advice phrasing near the end:
+  `"I'm glad that I could offer some helpful advice"` and
+  `"please don't hesitate to reach out if you have any further questions or concerns!"`
+- C3-P1 `4325.json` has translation leakage (`번역결과`) and repetitive
+  child-care lines, but not classic help-desk wording.
+- C4-P1 `4325.json` is topic-focused; no obvious help-desk/customer-service line
+  in the sampled conversation.
+
+### Full turns: C1-P1 `4325.json`
+
+```json
+[
+  ["ParticipantA", "So, what do you think are the most important criteria for selecting child care services for a preschooler?"],
+  ["ParticipantB", "Well, I think it's important to find a place that's safe and clean, with a lot of space for kids to play."],
+  ["ParticipantA", "Definitely. How about the staff? What qualities are you looking for in them?"],
+  ["ParticipantB", "I think it's important to have staff who are kind and patient with the kids, and who have experience working with young children."],
+  ["ParticipantA", "That makes sense. Have you ever had a bad experience with child care services?"],
+  ["ParticipantB", "Yeah, I had a bad experience with one place where the staff didn't seem to care about the kids, and they were always on their phones."],
+  ["ParticipantA", "That sounds awful. I've had a similar experience with a place that was understaffed, and it was really chaotic."],
+  ["ParticipantB", "Yeah, it's hard to find good child care that's also affordable."],
+  ["ParticipantA", "Definitely. Have you ever had to put your child on a waiting list for child care?"],
+  ["ParticipantB", "Yeah, I had to put my son on a waiting list when he was a toddler, and it was really stressful."],
+  ["ParticipantA", "I had the same experience with my daughter. It's tough to find good child care that has openings."],
+  ["ParticipantB", "Yeah, it can be really difficult. I wish there were more options that were affordable and high-quality."],
+  ["ParticipantA", "Agreed. Well, it was nice chatting with you."],
+  ["ParticipantB", "Yeah, you too."]
+]
+```
+
+### Full turns: C2-P1 `4325.json`
+
+```json
+[
+  ["ParticipantA", "Hello!"],
+  ["ParticipantB", "Hello!"],
+  ["ParticipantA", "Hi, how's it going?"],
+  ["ParticipantB", "I'm good, thanks. How about you?"],
+  ["ParticipantA", "What have you been up to lately?"],
+  ["ParticipantB", "Not much, just trying to find a good child care service for my little sister."],
+  ["ParticipantA", "That sounds important. How are you going about finding a good child care service?"],
+  ["ParticipantB", "I'm mostly looking for a place that's safe and reliable, with experienced staff and good reviews."],
+  ["ParticipantA", "I totally get that, safety and reliability are definitely top priorities. I looked for those things too when I was trying to find a child care service for my niece."],
+  ["ParticipantB", "Yeah, and I also wanted a place that could provide a good learning environment for her."],
+  ["ParticipantA", "Yeah, me too. I wanted a place that could help my niece develop her social and cognitive skills."],
+  ["ParticipantB", "I think it's difficult to find a child care service that meets all those criteria."],
+  ["ParticipantA", "It can be tough to find a child care service that checks all the boxes, but it's definitely worth the effort to find a good fit."],
+  ["ParticipantB", "Yeah, I agree. It's hard to find a child care service that's safe, reliable, and provides a good learning environment."]
+]
+```
+
+### Full turns: C3-P1 `4325.json`
+
+```json
+[
+  ["ParticipantA", "Hello!"],
+  ["ParticipantB", "Hello!"],
+  ["ParticipantA", "So, what criteria do you use when selecting child care services for a preschooler?"],
+  ["ParticipantB", "Well, for me, it's important that the facility is clean, safe, and has a good reputation. The staff should be friendly, qualified, and have a good turnover rate. I also like to see if they have a good curriculum and if they offer activities that my child would enjoy.\n\nWhat about you?"],
+  ["ParticipantA", "I totally agree with you. I think safety and cleanliness are top priorities. I also like to see if they have a good teacher-to-child ratio and if they offer a variety of activities and experiences for the kids. I also like to check if they have any references or reviews from other parents.\n\nOverall, I think it's important to feel comfortable with the staff and the facility, and to know that my child will be well taken care of while I'm at work."],
+  ["ParticipantB", "Absolutely. I think it's important to trust your instincts and to feel confident that your child is in good hands. It can be difficult to find the right child care services, especially if you have a busy schedule or a tight budget, but I think it's worth taking the time to do some research and find the best option for your family.\n\nWhat's your experience been like in finding child care services? Have you faced any challenges?\n\n번역결과  \n예, 나는 기본적으로 깨끗하고 안전하며 좋은 평판을 가진 기관이 중요하다고 생각합니다. 직원들은 친절하고 자"],
+  ["ParticipantA", "I think it's great that you have a list of criteria to consider when selecting child care services. It's important to have a checklist of things to look for, so you don't miss anything important. I think you're on the right track.\n\nAs for my experience, I've had a few challenges finding child care services that meet my criteria. I've had to be very selective and even turn down some options because they didn't quite meet my standards. It can be frustrating, but I think it's important to hold out for the right fit.\n\nWhat about you? Have you had any issues finding child care services that meet your needs?\n\n번역결과  \n당신이 아이 집에 대한 선택 기준을 계산할 수 있는"],
+  ["ParticipantB", "I appreciate your feedback. Yes, it can be a challenge to find child care services that meet all of your criteria, and it's important to be selective and hold out for the right fit. I think it's great that you're taking the time to consider what's important to you and your child.\n\nAs for me, I've been fortunate enough to find a child care service that meets my needs. However, I know that finding the right fit can be a challenge, and it's important to be patient and persistent in your search.\n\nWhat's your experience been like with child care services in your area? Have you found it easy or difficult to find a good fit for your child?\n\n번역결과  \n귀하의 피드백에 감사드립니다. 예, 모든 기"],
+  ["ParticipantA", "I'm glad to hear that you've had a positive experience with child care services in your area. It's great when you can find a service that truly meets your needs and provides a safe, nurturing environment for your child.\n\nFor me, I've found it to be a bit of a challenge to find child care services that meet my criteria. I've had to be very selective and even turn down some options because they didn't quite meet my standards. But I think it's important to hold out for the right fit, even if it takes some time.\n\nWhat about you? Have you had any issues finding child care services that meet your needs?"],
+  ["ParticipantB", "I can definitely relate to your experience. Finding child care services that meet your criteria can be a challenge, especially if you have high standards like we do. But I think it's important to hold out for the right fit, even if it takes some time.\n\nAs for me, I've been lucky to find a child care service that meets my needs. However, I know that finding the right fit can be difficult, and it's important to be patient and persistent in your search.\n\nHave you found it easy or difficult to find child care services in your area that meet your needs?\n\n번역결과  \n나는 당신이 지역 내에서 필요를 충족하는 업로드 서비스를 찾는 것이 어려웠다는"],
+  ["ParticipantA", "I'm glad to hear that you've had a positive experience with child care services in your area. It's great when you can find a service that truly meets your needs and provides a safe, nurturing environment for your child.\n\nFor me, I've found it to be a bit of a challenge to find child care services that meet my criteria. I've had to be very selective and even turn down some options because they didn't quite meet my standards. But I think it's important to hold out for the right fit, even if it takes some time.\n\nWhat about you? Have you had any issues finding child care services that meet your needs?\n\n번역결과  \n저는 당신이 그 지역 내에서 필요를 충족하는 업로드 서비스"],
+  ["ParticipantB", "Yes, I can definitely relate to your experience. Finding child care services that meet your criteria can be a challenge, especially if you have high standards like we do. But I think it's important to hold out for the right fit, even if it takes some time.\n\nAs for me, I've been fortunate enough to find a child care service that meets my needs. However, I know that finding the right fit can be difficult, and it's important to be patient and persistent in your search.\n\nWhat's your experience been like with child care services in your area? Have you found it easy or difficult to find a good fit for your child?\n\n번역결과  \n예, 나는 귀하의 경험과 완벽하게 일치하는 것을 확인"],
+  ["ParticipantA", "I'm glad to hear that you've found a child care service that meets your needs. It's important to have peace of mind knowing that your child is in a safe, nurturing environment while you're at work or running errands.\n\nAs for my experience, I've had a few challenges finding child care services that meet my criteria. It can be frustrating at times, but I think it's important to hold out for the right fit, even if it takes some time.\n\nWhat about you? Have you had any issues finding child care services that meet your needs?\n\n번역결과  \n나는 귀하가 자녀가 안전하고 키워지는 환경에 있다는 것을 알고 있어 ����"],
+  ["ParticipantB", "Yes, I agree. Finding child care services that meet your criteria can be a challenge, but it's important to hold out for the right fit, even if it takes some time. It's important to have peace of mind knowing that your child is in a safe and nurturing environment while you're at work or running errands.\n\nAs for me, I've been fortunate enough to find a child care service that meets my needs. However, I know that finding the right fit can be a challenge, and it's important to be patient and persistent in your search.\n\nWhat's your experience been like with child care services in your area? Have you found it easy or difficult to find a good fit for your child?\n\n번역결과  \n예, 나는 귀하가 귀하의 필요 사항을"]
+]
+```
+
+### Full turns: C4-P1 `4325.json`
+
+```json
+[
+  ["ParticipantA", "Hello!"],
+  ["ParticipantB", "Hello!"],
+  ["ParticipantA", "So, what are your thoughts on child care for a preschooler?"],
+  ["ParticipantB", "I think safety and security are top priorities. I also believe it's important for the caregivers to be nurturing and engaged with the children. They should provide a stimulating environment for learning and growth. How about you? What criteria do you consider when selecting child care for a preschooler?"],
+  ["ParticipantA", "I completely agree with you. Safety and security are definitely essential. Additionally, I think it's important for the caregivers to have appropriate training and experience, and for the facility to have a good reputation in the community. I also believe that a suitable ratio of caregivers to children is necessary to ensure individual attention and support. What do you think about these factors?"],
+  ["ParticipantB", "I totally agree that caregiver training and experience are crucial. A good reputation in the community is also important to me, as it indicates a history of providing quality care. I couldn't agree more about the caregiver-to-child ratio; it's vital for ensuring individual attention and development. Have you had any personal experiences with child care services that align or differ from these criteria?"],
+  ["ParticipantA", "Yes, I have. I had a positive experience with a child care facility that had a good reputation in the community. The caregivers were well-trained, and the staff-to-child ratio was appropriate. They provided a stimulating environment that promoted learning and growth. However, I've also heard stories about places that didn't meet these criteria, and it was concerning. Have you had any experiences that didn't align with your criteria?"],
+  ["ParticipantB", "Unfortunately, yes. I've heard stories from friends about caregivers without proper certifications and inadequate training. The staff-to-child ratio was also not up to par at some facilities, resulting in little individual attention for the children. It can be a challenge to find reliable and quality child care services, but it's essential to ensure the best possible environment for a preschooler's development."],
+  ["ParticipantA", "I understand, and it can be quite challenging to find the right child care. It's important to do thorough research and ask around for recommendations from trusted sources. I've also found online reviews helpful in getting an idea of the quality of a facility. Have you tried any of these methods to find suitable child care services?"],
+  ["ParticipantB", "Absolutely, I've relied on recommendations from friends, family, and colleagues when searching for child care services. Online reviews have been an invaluable resource as well, providing insights into the experiences of other parents. It's essential to verify the information by contacting the facilities and asking questions to ensure the best possible care for a preschooler. How about you? What methods have you found most helpful in your search for suitable child care?"],
+  ["ParticipantA", "I've also found recommendations from trusted sources to be very useful. Online research and reviews have helped me gather information about different facilities and their quality of care. Additionally, visiting the facilities and observing the environment and interactions between caregivers and children has been helpful. Have you ever visited a child care facility before making a decision?"],
+  ["ParticipantB", "Yes, I've visited several child care facilities before making a decision. It's a great way to assess the environment, observe the interactions between caregivers and children, and get a sense of the overall atmosphere. I've also asked to speak with the caregivers to learn more about their qualifications and approach to child care. It's essential to ensure that the facility aligns with my criteria and provides a nurturing, stimulating, and safe environment for a preschooler."],
+  ["ParticipantA", "I couldn't agree more. Visiting the facility and talking to the caregivers can provide valuable insights into the quality of care provided. It's essential to ensure that the facility aligns with your criteria and creates a supportive, engaging, and safe environment for the child. Have you ever had to make adjustments to your criteria when searching for child care services?"],
+  ["ParticipantB", "Yes, I've had to make some adjustments to my criteria due to circumstances, such as availability and affordability. While these factors are not as crucial as safety, security, and quality of care, they can still impact the decision-making process. It's essential to find a balance between the various criteria and prioritize them based on individual needs and circumstances. Have you encountered any such challenges in your search for child care services?"]
+]
+```
+
+### Full turns: C1-P0 `4325.json`
+
+```json
+[
+  ["ParticipantA", "Hello!"],
+  ["ParticipantB", "Hello!"],
+  ["ParticipantA", "Hi, my name is Rachel. I'm calling today to ask about child care services for my preschooler."],
+  ["ParticipantB", "Sure, my name is Sarah. I work at a daycare center and I'd be happy to help you."],
+  ["ParticipantA", "That's great, thank you. What criteria do you think are most important when choosing child care services?"],
+  ["ParticipantB", "Well, I think it's important to find a place that provides a safe and nurturing environment for the children."],
+  ["ParticipantA", "Absolutely. What else would you look for?"],
+  ["ParticipantB", "I think it's important to have a good ratio of adults to children, and for the staff to be well-trained and experienced."],
+  ["ParticipantA", "Those are good points. What about the curriculum and activities they offer?"],
+  ["ParticipantB", "I think it's important for the daycare to have a variety of age-appropriate activities that promote learning and development."],
+  ["ParticipantA", "That makes sense. Are there any other factors you would consider?"],
+  ["ParticipantB", "I would also consider the cost and whether or not the center offers any discounts or financial assistance."],
+  ["ParticipantA", "That's definitely something to consider. What about the hours of operation and any additional services they offer, like meals or transportation?"],
+  ["ParticipantB", "Those are all important factors to consider as well. It's important to find a place that meets your family's needs and schedule."],
+  ["ParticipantA", "I agree. It's definitely not an easy decision to make."],
+  ["ParticipantB", "No, it's not. But I think as long as you take the time to research and visit different centers, you'll find one that's a good fit for your family."],
+  ["ParticipantA", "Thank you for your help, Sarah. I appreciate it."],
+  ["ParticipantB", "You're welcome, Rachel. Good luck with your search!"]
+]
+```
+
+### Full turns: C2-P0 `4325.json`
+
+```json
+[
+  ["ParticipantA", "Hello!"],
+  ["ParticipantB", "Hello!"],
+  ["ParticipantA", "So, tell me, what would you look for in a child care service for your preschooler?"],
+  ["ParticipantB", "Well, first of all, I would want to make sure that the facility is clean and safe for my child. I would also want to know if the staff are trained and experienced in working with young children. Additionally, I would want to know if the facility follows any specific curriculum or educational programs for preschoolers. And of course, cost would also be a factor in my decision."],
+  ["ParticipantA", "I understand your concerns, and those are all important factors to consider. Have you had any luck finding a child care service that meets all of your criteria?"],
+  ["ParticipantB", "It's been a bit challenging to find a child care service that meets all of my criteria. I've been looking around for a while now, but it seems like most of the places I've found either have staff who aren't well-trained or don't follow any specific curriculum. I'm still searching, though, and hoping to find a good fit for my child."],
+  ["ParticipantA", "I can definitely understand how difficult it can be to find the right child care service that meets all of your criteria. It's important to take your time and do your research to ensure that your child is in a safe and nurturing environment. Have you considered reaching out to any parent groups or online forums for recommendations? Sometimes, hearing from other parents who have gone through the same process can be helpful in finding a good fit."],
+  ["ParticipantB", "Yes, I have considered reaching out to parent groups and online forums for recommendations. I've also asked around to friends and family to see if anyone has any suggestions. But so far, it's been difficult to find a child care service that meets all of my criteria."],
+  ["ParticipantA", "I see. Well, it sounds like you're doing everything you can to find a good fit for your child. Maybe you could also consider visiting some of the child care services that you're interested in and getting a feel for the environment and the staff. Sometimes, it's easier to tell if a place is a good fit for your child when you actually visit in person. And if you're still having trouble finding a child care service that meets all of your criteria, maybe you could consider being more flexible with some of the criteria. For example, you could prioritize finding a safe and nurturing environment for your child, and then be willing to compromise on some of the other factors."],
+  ["ParticipantB", "Yeah, I've been thinking about visiting some of the child care services that I'm interested in. I think that would be a good way to get a better feel for the environment and the staff. And maybe you're right, maybe I should consider being more flexible with some of the criteria. It's just hard to know what to prioritize when there are so many factors to consider."],
+  ["ParticipantA", "I understand how difficult it can be to prioritize when there are so many factors to consider. Ultimately, it's important to find a child care service that you feel comfortable with and that you believe will provide a safe and nurturing environment for your child. It's okay to be picky and to prioritize different factors depending on what's most important to you and your family. And remember, it's also okay to ask for help and advice from others who may have gone through a similar process. Good luck with your search!"],
+  ["ParticipantB", "Thank you for your advice! I'll definitely consider visiting some of the child care services that I'm interested in and maybe even prioritize finding a safe and nurturing environment for my child. I appreciate your help and advice, and I'll keep looking for the right fit for my child."],
+  ["ParticipantA", "You're welcome! I'm glad that I could offer some helpful advice. Remember, finding the right child care service for your preschooler is an important decision, and it's okay to take your time and do your research to ensure that your child is in a safe and nurturing environment. Good luck with your search, and please don't hesitate to reach out if you have any further questions or concerns!"],
+  ["ParticipantB", "Thank you for your advice! I'll definitely consider visiting some of the child care services that I'm interested in and maybe even prioritize finding a safe and nurturing environment for my child. I appreciate your help and advice, and I'll keep looking for the right fit for my child."]
+]
+```
