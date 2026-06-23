@@ -3,28 +3,28 @@ Prompt and message builders for the conversation-generation experiment.
 
 Architectures
 -------------
-C1  all-at-once           : one model writes the entire dialogue in a single call.
-C2  turn-by-turn single   : one model sees the shared transcript and writes the next
-                            turn for whichever speaker is named ("scriptwriter" — it
-                            knows it authors both sides).
-C3  two agents, same      : two independent first-person sessions of the SAME model.
-C4  two agents, different  : two independent first-person sessions of DIFFERENT models.
-
-In C3/C4 each agent only ever sees the conversation from its own point of view: its own
-past turns are `assistant` messages, the partner's turns arrive as `user` messages.
-Neither agent sees a god's-eye "script" of both sides. This is the key difference from C2
-and is how we isolate the single-author effect.
+C1  all-at-once          : one model writes the entire dialogue in a single call.
+C2  turn-by-turn single  : one model sees the whole transcript and writes the next turn for
+                           the named speaker — replicates the paper's GPT4-1 setup.
+C3  two agents, same     : two independent first-person sessions of the SAME model.
+C4  two agents, different : two independent first-person sessions of DIFFERENT models.
 
 Prompt levels
 -------------
-P0  basic   : replicates the paper's basic prompt (~50-turn target, no early end).
-P1  spoken  : short turns, natural ending, NO coordination-marker forcing.
+P0  basic / replication : faithfully follows the paper's BASIC prompt (their GPT4-1 wording —
+                          "act like a {persona}", topic = the verbatim SB instruction, ~50
+                          turns, no early end). No coordination-marker forcing, no scripted
+                          openings/closings, no peer guard.
+P1  spoken intervention : OUR prompt — short natural turns, natural ending, and an explicit
+                          "you are ordinary peers, not an assistant/service" guard. Still no
+                          marker forcing, so the marker metrics stay non-circular.
 
-All builders return a list of {"role", "content"} dicts, to be rendered with
-`tokenizer.apply_chat_template(...)` so formatting matches each model.
+We deliberately do NOT replicate the paper's *enhanced* prompts, which instruct the model to
+"use okay, oh, uh-huh" and to script greetings/closings, and THEN measure exactly those
+features (a circular evaluation). The generators seed every turn-by-turn dialogue with a
+mutual "Hello!" opening, exactly as the paper did.
 
-NOTE: opening cues and strict user/assistant alternation may need light tuning after the
-Phase-1 pilot, once we see how Vicuna/Mistral actually behave with these templates.
+All builders return a list of {"role", "content"} dicts for tokenizer.apply_chat_template.
 """
 
 from dataclasses import dataclass
@@ -41,87 +41,96 @@ class Persona:
         return f"a {self.age}-year-old {self.gender} with {self.education}"
 
 
-def _style(prompt_level: str) -> str:
-    """Prompt-level style instruction shared across architectures."""
-    if prompt_level == "P0":
-        return (
-            "Have the conversation as this person would on the telephone. "
-            "The conversation should last about 50 turns; do not end it too early."
-        )
-    if prompt_level == "P1":
-        return (
-            "Speak naturally and informally, the way people actually talk out loud on the "
-            "phone. Keep each turn short — usually 1 to 3 sentences. Let the conversation "
-            "end naturally when you both feel it is finished; do not pad or stretch it out."
-        )
-    raise ValueError(f"unknown prompt level: {prompt_level!r}")
+def render_transcript(history: list[tuple[str, str]]) -> str:
+    return "\n".join(f"{spk}: {txt}" for spk, txt in history)
 
 
-def _task(topic: str, sb_prompt: str | None = None) -> str:
-    """Render the Switchboard task as a shared peer discussion, not a service request."""
-    if sb_prompt:
-        return (
-            f"You were both asked to chat about this topic: {topic}.\n"
-            f"Shared discussion goal (talk it over together as equals — compare your own "
-            f"experiences and opinions; this is NOT one of you interviewing or serving the "
-            f"other): {sb_prompt}"
-        )
-    return f"You were both asked to chat about this topic: {topic}."
+# --- shared prompt pieces ------------------------------------------------------------
+
+def _length_clause() -> str:
+    return "The conversation will have about 50 turns of talk; do not end it too early."
 
 
-def _genre_guard() -> str:
+def _p1_style() -> str:
     return (
-        "You are an ordinary member of the public — NOT an AI assistant, agent, operator, or "
-        "a representative of any company or service. The other caller is also an ordinary "
-        "person; the two of you are equals who were each asked to phone a stranger and chat. "
-        "Never say things like 'how can I help you', 'is this the ... service', or offer "
-        "help, recommendations, or assistance as if it were your job. Just share your own "
-        "experiences and opinions and ask about theirs, the way two regular people would."
+        "Speak naturally and informally, the way people actually talk out loud on the phone. "
+        "Keep each turn short — usually 1 to 3 sentences. Let the conversation end naturally "
+        "when you both feel it is finished; do not pad or stretch it out."
     )
 
 
-def render_transcript(history: list[tuple[str, str]]) -> str:
-    """history: list of (speaker_label, text) -> 'ParticipantA: ...\\nParticipantB: ...'."""
-    return "\n".join(f"{spk}: {txt}" for spk, txt in history)
+def _peer_guard() -> str:
+    return (
+        "You are an ordinary member of the public — NOT an AI assistant, agent, operator, or a "
+        "representative of any company or service. The other caller is also an ordinary person; "
+        "the two of you are equals who were each asked to phone a stranger and chat. Never say "
+        "things like 'how can I help you' or 'is this the ... service', and do not offer help "
+        "or recommendations as if it were your job — just share your own views and ask about "
+        "theirs, the way two regular people would."
+    )
+
+
+def _topic_clause(topic: str, sb_prompt: str | None, level: str) -> str:
+    """How the Switchboard task is presented (plain for P0, reframed as peer goal for P1)."""
+    instruction = sb_prompt or topic
+    if level == "P0":
+        return f"The topic of the conversation is: {instruction}"
+    return (
+        f"You were both asked to chat about this topic: {topic}. Shared discussion goal (talk "
+        f"it over together as equals, comparing your own experiences and opinions): {instruction}"
+    )
 
 
 # --- C1: all at once -----------------------------------------------------------------
 
 def build_c1(prompt_level: str, a: Persona, b: Persona, topic: str,
              sb_prompt: str | None = None) -> list[dict]:
-    system = (
-        "You write realistic transcripts of telephone conversations between two people "
-        f"who do not know each other. {_style(prompt_level)} {_genre_guard()}"
-    )
-    user = (
-        f"Write a complete telephone conversation for this Switchboard calling task:\n"
-        f"{_task(topic, sb_prompt)}\n"
-        f"{a.label} is {a.describe()}. {b.label} is {b.describe()}.\n"
-        f"Format every turn on its own line as '{a.label}: ...' or '{b.label}: ...'."
-    )
-    return [{"role": "system", "content": system},
-            {"role": "user", "content": user}]
+    if prompt_level == "P0":
+        prompt = (
+            "Write the log of a telephone conversation between two people who do not know each "
+            f"other and have equal roles in the discussion. {a.label} is {a.describe()}. "
+            f"{b.label} is {b.describe()}. {_topic_clause(topic, sb_prompt, 'P0')} "
+            f"{_length_clause()} The log starts with:\n{a.label}: Hello!\n{b.label}: Hello!\n"
+            "Each line is one turn beginning with the speaker's label and a colon. Write the "
+            "complete conversation, continuing from those greetings."
+        )
+    else:  # P1
+        prompt = (
+            "Write a realistic telephone conversation between two ordinary people who do not "
+            f"know each other. {a.label} is {a.describe()}. {b.label} is {b.describe()}. "
+            f"{_topic_clause(topic, sb_prompt, 'P1')} {_p1_style()} {_peer_guard()} "
+            f"It opens with:\n{a.label}: Hello!\n{b.label}: Hello!\n"
+            f"Write the full conversation, one turn per line as '{a.label}: ...' / '{b.label}: ...'."
+        )
+    return [{"role": "user", "content": prompt}]
 
 
-# --- C2: turn-by-turn, single model sees the whole script ----------------------------
+# --- C2: turn-by-turn, single model sees the whole script (replicates GPT4-1) --------
 
 def build_c2(prompt_level: str, a: Persona, b: Persona, topic: str,
              sb_prompt: str | None,
              history: list[tuple[str, str]], next_speaker: str) -> list[dict]:
-    system = (
-        "You write realistic transcripts of telephone conversations between two people who "
-        f"do not know each other. {a.label} is {a.describe()}. {b.label} is {b.describe()}. "
-        f"{_style(prompt_level)} {_genre_guard()}\n"
-        f"Switchboard calling task:\n{_task(topic, sb_prompt)}"
-    )
-    transcript = render_transcript(history) if history else "(the conversation has not started yet)"
-    user = (
-        f"Conversation so far:\n{transcript}\n\n"
-        f"Write ONLY the next single turn, spoken by {next_speaker}. "
-        "Reply with just the utterance — no speaker label, no quotation marks."
-    )
-    return [{"role": "system", "content": system},
-            {"role": "user", "content": user}]
+    transcript = render_transcript(history) if history else f"{a.label}: Hello!\n{b.label}: Hello!"
+    me = {a.label: a, b.label: b}[next_speaker]
+    if prompt_level == "P0":
+        prompt = (
+            f"Act like {me.describe()} in a phone conversation with someone you do not know. "
+            f"{_topic_clause(topic, sb_prompt, 'P0')} {_length_clause()} "
+            f"The conversation log so far is:\n'''{transcript}'''\n"
+            f"Each line is one turn; the speaker label precedes the colon. Your label is "
+            f"{next_speaker}. Your response is the next turn — respond to the last line but take "
+            "the whole log into account. Do not include more than one turn, and do not write a "
+            "speaker label."
+        )
+    else:  # P1
+        prompt = (
+            "You are writing a realistic phone conversation between two ordinary people who do "
+            f"not know each other. {a.label} is {a.describe()}; {b.label} is {b.describe()}. "
+            f"{_topic_clause(topic, sb_prompt, 'P1')} {_p1_style()} {_peer_guard()}\n"
+            f"Conversation so far:\n{transcript}\n\n"
+            f"Write ONLY {next_speaker}'s next single turn — just the utterance, no label."
+        )
+    return [{"role": "user", "content": prompt}]
 
 
 # --- C3 / C4: independent first-person agents ----------------------------------------
@@ -129,21 +138,21 @@ def build_c2(prompt_level: str, a: Persona, b: Persona, topic: str,
 def build_agent(prompt_level: str, me: Persona, partner: Persona, topic: str,
                 sb_prompt: str | None,
                 history: list[tuple[str, str]]) -> list[dict]:
-    """Build the message list from `me`'s point of view (used for both C3 and C4).
-
-    `me`'s own past turns become `assistant` messages; `partner`'s turns become `user`
-    messages. The model continues by producing `me`'s next turn. Because speakers strictly
-    alternate, the rendered history alternates user/assistant cleanly.
-    """
-    system = (
-        f"You are {me.describe()}. You are on a telephone call with someone you have just "
-        f"met and do not know. {_style(prompt_level)} {_genre_guard()}\n"
-        f"Switchboard calling task:\n{_task(topic, sb_prompt)}\n"
-        "Reply with only what you say next, as a single spoken turn — no speaker label."
-    )
+    """Build the message list from `me`'s point of view (used for both C3 and C4)."""
+    if prompt_level == "P0":
+        system = (
+            f"Act like {me.describe()} in a telephone conversation with someone you do not know. "
+            f"{_topic_clause(topic, sb_prompt, 'P0')} {_length_clause()} "
+            "Reply with only your next single turn of talk — no speaker label, one turn only."
+        )
+    else:  # P1
+        system = (
+            f"You are {me.describe()} on a telephone call with an ordinary stranger you just met. "
+            f"{_topic_clause(topic, sb_prompt, 'P1')} {_p1_style()} {_peer_guard()} "
+            "Reply with only what you say next, as a single spoken turn — no speaker label."
+        )
     messages = [{"role": "system", "content": system}]
     if not history:
-        # `me` is opening the call.
         messages.append({"role": "user", "content": "(The phone connects — your partner is on the line.)"})
         return messages
     if history[0][0] == me.label:
@@ -152,6 +161,5 @@ def build_agent(prompt_level: str, me: Persona, partner: Persona, topic: str,
         role = "assistant" if spk == me.label else "user"
         messages.append({"role": role, "content": txt})
     if messages[-1]["role"] == "assistant":
-        # Last turn was mine; nudge a continuation so the model still has a user cue.
         messages.append({"role": "user", "content": "(Your partner is quiet — continue if you wish.)"})
     return messages
