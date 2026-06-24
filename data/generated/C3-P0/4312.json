@@ -1,0 +1,156 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 4312,
+  "topic": "Music",
+  "sb_prompt": "PLEASE DISCUSS MUSIC.  CAN YOU FIND MUSICIANSOR TYPES OF MUSIC THAT BOTH YOU AND THE OTHER CALLER LIKE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 23,
+    "education": "some college"
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 31,
+    "education": "some college"
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of music do you like?"
+    ],
+    [
+      "ParticipantB",
+      "I'm a big fan of classic rock and roll. What about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm more into indie and alternative music."
+    ],
+    [
+      "ParticipantB",
+      "Oh, that's cool! Have you listened to any classic rock bands?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm a big fan of The Beatles and Led Zeppelin."
+    ],
+    [
+      "ParticipantB",
+      "Awesome! Those are some of my favorites too. Do you have any favorite songs from them?"
+    ],
+    [
+      "ParticipantA",
+      "My favorite Beatles song is \"Hey Jude\" and my favorite Led Zeppelin song is \"Stairway to Heaven."
+    ],
+    [
+      "ParticipantB",
+      "Stairway to Heaven\" is such a great song. Have you listened to any other classic rock bands?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I also like Pink Floyd, The Rolling Stones and Queen."
+    ],
+    [
+      "ParticipantB",
+      "Cool, those are all great bands. Have you heard of any newer bands that have a similar sound to classic rock?"
+    ],
+    [
+      "ParticipantA",
+      "I think the band \"The Black Angels\" has a similar sound to classic rock. They have a great psychedelic rock sound that I really enjoy."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I haven't heard of them before. I'll have to check them out. Thanks for the recommendation!"
+    ],
+    [
+      "ParticipantA",
+      "Sure, happy to help!"
+    ],
+    [
+      "ParticipantB",
+      "So, have you seen any good concerts lately?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I just saw \"The Black Keys\" in concert last weekend and it was amazing!"
+    ],
+    [
+      "ParticipantB",
+      "Oh, I've heard they're great live. I've never had the chance to see them perform, but I'd love to."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, they put on an amazing show. I'd definitely recommend checking them out if you get the chance."
+    ],
+    [
+      "ParticipantB",
+      "I'll definitely keep that in mind. Thanks for the suggestion!"
+    ],
+    [
+      "ParticipantA",
+      "No problem, happy to help!"
+    ],
+    [
+      "ParticipantB",
+      "So, have you heard any new music recently that you really like?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been listening to the new album by \"King Gizzard and the Lizard\" and it's been really good."
+    ],
+    [
+      "ParticipantB",
+      "I haven't heard of them before, but I'll have to check them out. Thanks for the recommendation!"
+    ],
+    [
+      "ParticipantA",
+      "Sure thing, happy to help!"
+    ],
+    [
+      "ParticipantB",
+      "Well, it was nice talking to you about music!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, likewise! It was great chatting with you."
+    ],
+    [
+      "ParticipantB",
+      "Goodbye!"
+    ],
+    [
+      "ParticipantA",
+      "Goodbye!"
+    ],
+    [
+      "ParticipantB",
+      "I'm sorry, I can't find any mistakes in your conversation. It looks like you did a great job!"
+    ],
+    [
+      "ParticipantA",
+      "Thank you, I appreciate that. Is there anything else I can assist you with?"
+    ],
+    [
+      "ParticipantB",
+      "I don't think so, thank you for your help!"
+    ]
+  ],
+  "n_turns": 32,
+  "multi_turn_emissions": 20
+}
