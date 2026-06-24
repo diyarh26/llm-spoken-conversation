@@ -1,48 +1,52 @@
-# VM Tasks — Phase 2 re-smoke (after genre + turn-leak fixes)
+# VM Tasks — RESUME after the GPU-driver crash (2026-06-24)
 
-Owner: **local side** (do not edit on the VM). Read `CLAUDE.md` and `.planning/PROJECT.md`
-first. Append every result to `VM_REPORT.md`. Run everything in the `convsim` env, in a
-shell where `nvidia-smi` works and `torch.cuda.is_available()` is `True`.
+Owner: local side. Read `CLAUDE.md` and `.planning/STATE.md` first.
 
-The first Phase-2 smoke (`1635b73`) found three problems; the local side fixed two in code
-(`d753780`) and the third is a VM cleanup below:
-1. C3/C4 agent turns leaked whole fake dialogues scaffolded with `USER:`/`ASSISTANT:` (and
-   4-bit variants). `clean_single_turn` now truncates at those, so turns are clean and
-   `multi_turn_emissions` is honest.
-2. Vicuna stayed in assistant/help-desk mode. The genre guard + task wording now frame both
-   speakers as ordinary peers.
-3. Disk was full (Vicuna cache ~49 GB with redundant `.bin`). Free it in TASK 1.
+## What happened
+The full generation run (12 conditions, 50 each) was running in `tmux` but **crashed at C4-P0**
+because of an NVIDIA **NVML driver/library version mismatch** (C4 loads two models; torch's
+CUDA allocator called `nvmlInit` and it asserted). Safe on disk on the VM:
+`C1-P0`, `C2-P0`, `C3-P0` = 50 each (150 conversations). `C4-P0` has 1. The P1 set and all of
+P2 were not started. (These 150 are committed locally on the VM as `b0ab7a0` but NOT pushed.)
 
-## TASK 1 — Free disk (delete redundant Vicuna `.bin`; we load safetensors)
+## TASK 1 — Reboot to fix the GPU driver
+Reboot the VM (Azure portal → your VM → **Restart**, or `sudo reboot`). This is the correct
+fix now that nothing is running. After it returns, verify:
 ```bash
-df -h ~ | tail -1
-CACHE=~/.cache/huggingface/hub/models--lmsys--vicuna-13b-v1.5-16k
-for f in $(find "$CACHE" -name "*.bin"); do readlink -f "$f"; done | sort -u | xargs -r rm -f
-find "$CACHE" -name "*.bin" -delete
-df -h ~ | tail -1
+nvidia-smi
+cd ~/llm-spoken-conversation && conda activate convsim
+python -c "import torch; print('cuda', torch.cuda.is_available())"
 ```
-Report free space before/after (need ~15+ GB free for Mistral).
+Expect `nvidia-smi` to work and `cuda True`.
 
-## TASK 2 — Pull fixes + clear old smoke outputs
+## TASK 2 — Resume generation (DO NOT delete data/generated — it is resumable)
 ```bash
-git pull --ff-only
-rm -rf data/generated/C1-P0 data/generated/C2-P0 data/generated/C3-P0 data/generated/C4-P0
+tmux new -s gen
+conda activate convsim
+for LV in P0 P1; do
+  python generation/generate_c1.py --prompt $LV --n 50
+  python generation/generate_c2.py --prompt $LV --n 50 --max-turns 30
+  python generation/generate_c3.py --prompt $LV --n 50 --max-turns 30
+  python generation/generate_c4.py --prompt $LV --n 50 --max-turns 30
+done
 ```
+It skips C1/C2/C3-P0 (done), finishes C4-P0, then does the whole P1 set. Detach: Ctrl-b then d.
 
-## TASK 3 — Re-smoke all four (GPU)
+## TASK 3 — P2 few-shot conditions (after TASK 2)
 ```bash
-python generation/generate_c1.py --prompt P0 --n 2 --max-new-tokens 1024
-python generation/generate_c2.py --prompt P0 --n 2 --max-turns 12
-python generation/generate_c3.py --prompt P0 --n 2 --max-turns 12
-python generation/generate_c4.py --prompt P0 --n 2 --max-turns 12
+python generation/generate_c1.py --prompt P2 --n 50
+python generation/generate_c2.py --prompt P2 --n 50 --max-turns 30
+python generation/generate_c3.py --prompt P2 --n 50 --max-turns 30
+python generation/generate_c4.py --prompt P2 --n 50 --max-turns 30
 ```
-For EACH architecture, record in `VM_REPORT.md`:
-- `n_turns`, `multi_turn_emissions` (C3/C4 may now be > 0 — that is the honest count)
-- whether the assistant/help-desk framing is gone (quote 2–3 lines)
-- the FULL `turns` list of ONE conversation per architecture (paste it — the local lead
-  reads the raw text to judge quality)
-- C4: did Vicuna + Mistral both fit in VRAM? peak VRAM? any OOM?
 
-## TASK 4 — Hold
-Commit + push, then hold. The local lead reviews the raw turns and decides whether to scale
-to 50/condition or change the turn-by-turn approach.
+## TASK 4 — Push + report
+```bash
+git add data/generated && git commit -m "data: full Phase 2 generation (12 conditions)" && git push
+```
+If push is rejected: `git pull --rebase origin main` then push again. Then tell the local lead
+to run `python analysis/analyze.py` and the ALIGN + stats analysis.
+
+## Note
+If the NVML mismatch recurs after reboot, it's an unattended NVIDIA driver update; a reboot
+re-syncs it. Generators are resumable, so no finished conversation is ever lost.

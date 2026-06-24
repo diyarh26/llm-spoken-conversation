@@ -5,52 +5,51 @@ progress:
   total_phases: 3
   completed_phases: 1
   total_plans: 10
-  completed_plans: 4
-  percent: 40
+  completed_plans: 5
+  percent: 55
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-06-22)
+See: .planning/PROJECT.md
 
 **Core value:** Isolate the effect of generation architecture on conversational realism vs Switchboard
-**Current focus:** Phase 2 - Main Experiment & Analysis prep
+**Current focus:** Phase 2 — main generation (12 conditions), RESUMING after a GPU-driver crash
 
 ## Current Position
 
 Phase: 2 of 3 (Main Experiment & Analysis)
-Plan: Phase 2 prep / generator smoke tests
-Status: In progress - corrected prompts + C3/C4 generators ready for VM smoke testing
-Last activity: 2026-06-22 - VM confirmed ALIGN validation and C2 multi_turn_emissions=0; local side added sb_prompt prompt fix, sampling cleanup, C3/C4 generators, and updated VM_TASKS.md
+Status: Generation was running on the VM in tmux but **crashed at C4-P0** (NVML driver/library
+mismatch — C4 loads two models, torch's allocator nvmlInit asserted).
+Done & safe on the VM (committed locally `b0ab7a0`, NOT yet pushed): **C1-P0, C2-P0, C3-P0 = 50
+each (150 conversations)**. C4-P0 has 1. The P1 set and all of P2 were not started.
+Last activity: 2026-06-24 — crash diagnosed; resume plan written to VM_TASKS.md.
 
-Progress: [####------] 40%
+## NEXT STEPS (resume)
 
-## Accumulated Context
+1. **Reboot the VM** (fixes the NVML driver mismatch). Verify `nvidia-smi` + `torch.cuda.is_available()`.
+2. **Re-run the generation loop** (resumable; do NOT delete data/generated). Then run the 4 **P2** conditions.
+3. **Push** the data, then run `python analysis/analyze.py` for the per-condition table, and add ALIGN + stats.
 
-### Decisions
+See VM_TASKS.md for the exact commands.
 
-Logged in PROJECT.md Key Decisions. Recent:
-- Phase 1 gates cleared: parser, marker metrics, ALIGN, C1/C2 pilots.
-- C2 pilot result: multi_turn_emissions=0 across all 10 conversations, so Vicuna remains viable for C2/C3.
-- Customer-service genre issue came from using topic titles only; fixed by feeding the verbatim Switchboard instruction (`sb_prompt`).
-- C3 = two first-person contexts using the same model; C4 = independent first-person agents using different models.
-- The docs still need final confirmation of the condition matrix: "6 conditions" conflicts with "C1-C4 x P0/P1" (8 cells).
+## Findings so far (smoke + partial)
 
-### Pending Todos
+- **Turn length:** C1 (all-at-once) and **C2-P1 (our prompt) ≈ Switchboard ~14–15 words/turn**;
+  C2-P0 ~64, C3/C4 ~75–80 (long). Clear architecture × prompt effect.
+- **Coordination markers (oh/okay/uh-huh): ≈ 0 in all LLM conditions** vs Switchboard (uh-huh 0.85).
+  Replicates the paper.
+- ALIGN validated on Switchboard (~0.59–0.62 vs paper ~0.57). `analysis/analyze.py` ready.
 
-- Review VM smoke outputs for C1/C2/C3/C4 after the prompt fix.
-- Confirm final Phase 2 condition matrix before 50-conversation scaling.
-- Decide whether C4 can keep Vicuna + Mistral loaded together on the V100 or needs a memory workaround.
+## Blockers / Concerns
 
-### Blockers/Concerns
-
-- Final condition matrix ambiguity: "6 conditions" vs C1-C4 x P0/P1.
-- API access for the Phase-3 LLM-judge is unconfirmed (course-staff meeting pending).
+- NVML driver/library mismatch on the VM — reboot to fix; do NOT reboot mid-run.
+- GitHub PATs were pasted in plaintext — revoke them.
+- API access for the Phase-3 LLM-judge still unconfirmed.
 
 ## Session Continuity
 
-Last session: 2026-06-22
-Stopped at: Phase 2 prep handoff written; VM should smoke-test corrected prompts and C3/C4 generators, then hold.
-Resume file: VM_TASKS.md (VM tasks) / VM_REPORT.md (results)
+Last session ended with generation crashed at C4-P0. Resume via VM_TASKS.md (reboot → resume loop → P2).
+Resume files: VM_TASKS.md (VM steps), analysis/analyze.py (metrics), .planning/PROJECT.md & ROADMAP.md (design).
