@@ -18,6 +18,10 @@ hf_cache/
 # --- Switchboard source data — LDC-licensed, do NOT redistribute. Keep local only. ---
 data/switchboard/
 
+# social_metrics.py's turn_labels.csv embeds raw Switchboard transcript text (LDC) in its
+# `text` column — regenerate it locally for review, NEVER commit it.
+results/social_metrics/turn_labels.csv
+
 # --- Raw corpus archives — keep local ---
 *.zip
 
