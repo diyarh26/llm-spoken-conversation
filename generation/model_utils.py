@@ -62,7 +62,8 @@ class SentenceEndStoppingCriteria(StoppingCriteria):
 
 @torch.inference_mode()
 def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
-         do_sample=True, stop_at_sentence=False, min_new_tokens=8,`n         repetition_penalty=1.2, no_repeat_ngram_size=3) -> str:
+         do_sample=True, stop_at_sentence=False, min_new_tokens=8,
+         repetition_penalty=1.2, no_repeat_ngram_size=3) -> str:
     """messages: list of {role, content}. Returns the assistant's text completion."""
     try:
         encoded = tok.apply_chat_template(
@@ -84,7 +85,9 @@ def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
     gen_kwargs = {
         "max_new_tokens": max_new_tokens,
         "do_sample": do_sample,
-        "pad_token_id": tok.eos_token_id,`n        "repetition_penalty": repetition_penalty,`n        "no_repeat_ngram_size": no_repeat_ngram_size,
+        "pad_token_id": tok.eos_token_id,
+        "repetition_penalty": repetition_penalty,
+        "no_repeat_ngram_size": no_repeat_ngram_size,
     }
     if do_sample:
         if temperature is not None:
