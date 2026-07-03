@@ -1,52 +1,56 @@
-# VM Tasks — RESUME after the GPU-driver crash (2026-06-24)
+# VM Tasks — Regenerate C2 + C3 (P0) with the repetition fix (2026-07-03)
 
 Owner: local side. Read `CLAUDE.md` and `.planning/STATE.md` first.
 
-## What happened
-The full generation run (12 conditions, 50 each) was running in `tmux` but **crashed at C4-P0**
-because of an NVIDIA **NVML driver/library version mismatch** (C4 loads two models; torch's
-CUDA allocator called `nvmlInit` and it asserted). Safe on disk on the VM:
-`C1-P0`, `C2-P0`, `C3-P0` = 50 each (150 conversations). `C4-P0` has 1. The P1 set and all of
-P2 were not started. (These 150 are committed locally on the VM as `b0ab7a0` but NOT pushed.)
+## Context
+The first 200 conversations (C1–C4 × P0, 50 each) are generated and committed. Review found
+**C3-P0 is degenerate** (verbatim repetition loops, self-dialogue in a single turn, never
+terminates — pads to the 32-turn cap with "(End of conversation)"). **C2-P0** is coherent but
+far too long (~66 words/turn vs Switchboard ~14). C1-P0 and C4-P0 are good — **leave them alone**.
 
-## TASK 1 — Reboot to fix the GPU driver
-Reboot the VM (Azure portal → your VM → **Restart**, or `sudo reboot`). This is the correct
-fix now that nothing is running. After it returns, verify:
+The `repetition_penalty=1.2` + `no_repeat_ngram_size=3` fix in `generation/model_utils.py`
+was committed with literal `` `n `` (broken, would not import). **Local has now repaired and
+pushed it** (commit `d7997e5`). This task regenerates ONLY C2-P0 and C3-P0 with the working fix.
+
+## TASK 1 — Pull and verify the fix imports
 ```bash
-nvidia-smi
-cd ~/llm-spoken-conversation && conda activate convsim
-python -c "import torch; print('cuda', torch.cuda.is_available())"
+cd ~/llm-spoken-conversation
+git pull --ff-only origin main
+conda activate convsim
+python -m py_compile generation/model_utils.py && echo "SYNTAX OK"
+python -c "from generation.model_utils import chat; print('IMPORT OK')"
 ```
-Expect `nvidia-smi` to work and `cuda True`.
+Both must print OK before continuing. Also confirm the GPU is healthy:
+```bash
+nvidia-smi && python -c "import torch; print('cuda', torch.cuda.is_available())"
+```
+If `nvidia-smi` errors with an NVML driver/library mismatch, `sudo reboot`, then retry.
 
-## TASK 2 — Resume generation (DO NOT delete data/generated — it is resumable)
+## TASK 2 — Delete the bad C2/C3 data (generators SKIP existing ids, so old files must go)
+```bash
+rm -f data/generated/C2-P0/*.json data/generated/C3-P0/*.json
+```
+Do NOT touch C1-P0 or C4-P0.
+
+## TASK 3 — Regenerate C2 + C3 (P0 only) in tmux
 ```bash
 tmux new -s gen
 conda activate convsim
-for LV in P0 P1; do
-  python generation/generate_c1.py --prompt $LV --n 50
-  python generation/generate_c2.py --prompt $LV --n 50 --max-turns 30
-  python generation/generate_c3.py --prompt $LV --n 50 --max-turns 30
-  python generation/generate_c4.py --prompt $LV --n 50 --max-turns 30
-done
-```
-It skips C1/C2/C3-P0 (done), finishes C4-P0, then does the whole P1 set. Detach: Ctrl-b then d.
-
-## TASK 3 — P2 few-shot conditions (after TASK 2)
-```bash
-python generation/generate_c1.py --prompt P2 --n 50
-python generation/generate_c2.py --prompt P2 --n 50 --max-turns 30
-python generation/generate_c3.py --prompt P2 --n 50 --max-turns 30
-python generation/generate_c4.py --prompt P2 --n 50 --max-turns 30
+python generation/generate_c2.py --prompt P0 --n 50 --max-turns 30
+python generation/generate_c3.py --prompt P0 --n 50 --max-turns 30
+# detach: Ctrl-b then d
 ```
 
 ## TASK 4 — Push + report
 ```bash
-git add data/generated && git commit -m "data: full Phase 2 generation (12 conditions)" && git push
+git add data/generated/C2-P0 data/generated/C3-P0
+git commit -m "data: regenerate C2-P0 + C3-P0 with repetition_penalty fix"
+git push
 ```
-If push is rejected: `git pull --rebase origin main` then push again. Then tell the local lead
-to run `python analysis/analyze.py` and the ALIGN + stats analysis.
+If push is rejected: `git pull --rebase origin main` then push again.
+Write results/blockers into `VM_REPORT.md`. Then tell the local lead to re-run
+`python analysis/evaluate_generated.py` so the metrics reflect the fixed C2/C3.
 
 ## Note
-If the NVML mismatch recurs after reboot, it's an unattended NVIDIA driver update; a reboot
-re-syncs it. Generators are resumable, so no finished conversation is ever lost.
+The fix kills verbatim repetition loops. It will NOT by itself fix C3's "(End of conversation)"
+padding or the never-terminates-early behavior — flag in VM_REPORT if those persist after regen.
