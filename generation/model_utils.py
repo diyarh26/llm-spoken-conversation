@@ -114,13 +114,17 @@ def clean_single_turn(text: str, labels=("ParticipantA", "ParticipantB")) -> tup
     to one turn — which we count as a multi-turn emission.
     """
     label_alt = "|".join(re.escape(label) for label in labels)
+    # Tolerant participant label: catches degraded 4-bit variants like "ParticipantsA:"
+    # (stray 's') and "Participant A:" (space) that the exact label misses. The C2
+    # single-model path — where one model writes both speakers — leaks these often.
+    fuzzy_label = r"Participants?\s*[AB]"
     marker_re = re.compile(
-        rf"(?:\b(?:{label_alt})\s*:)"
+        rf"(?:\b(?:{label_alt}|{fuzzy_label})\s*:)"
         rf"|(?:(?:^|\n)\s*(?:USER|ASSIST\w*|HUMAN|AI|SYSTEM|BOT)\s*:)",
         re.I,
     )
     t = text.strip()
-    m = re.match(rf"\s*(?:{label_alt})\s*:\s*", t, re.I)
+    m = re.match(rf"\s*(?:{label_alt}|{fuzzy_label})\s*:\s*", t, re.I)
     if m:
         t = t[m.end():]
     nxt = marker_re.search(t)
