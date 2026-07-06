@@ -128,8 +128,13 @@ def clean_single_turn(text: str, labels=("ParticipantA", "ParticipantB")) -> tup
         rf"|(?:(?:^|\n)\s*(?:USER|ASSIST\w*|HUMAN|AI|SYSTEM|BOT)\s*:)",
         re.I,
     )
+    # Leading label may be a degraded/short variant the single-model C2 path emits when it
+    # tries to write a speaker label anyway: "PartB:", "Partner B:", "Participants:". Strip a
+    # broad participant-ish or role prefix from the very START only (safe there); the inline
+    # marker_re above stays conservative so a legitimate mid-sentence "part:" is never clipped.
+    lead_label = r"Part(?:ner|icipants?)?\s*[AB]?|USER|ASSIST\w*|HUMAN|AI|SYSTEM|BOT"
     t = text.strip()
-    m = re.match(rf"\s*(?:{label_alt}|{fuzzy_label})\s*:\s*", t, re.I)
+    m = re.match(rf"\s*(?:{lead_label})\s*:\s*", t, re.I)
     if m:
         t = t[m.end():]
     nxt = marker_re.search(t)
