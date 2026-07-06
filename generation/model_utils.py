@@ -84,6 +84,11 @@ def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
 
     gen_kwargs = {
         "max_new_tokens": max_new_tokens,
+        # min_new_tokens forbids the end-of-sequence token before this many tokens are
+        # generated — this is what actually prevents 1-word "fragment" turns. It used to be
+        # passed into this function but only fed the sentence-stop criteria, never generate(),
+        # so there was no real floor on turn length. Now it is enforced.
+        "min_new_tokens": min_new_tokens,
         "do_sample": do_sample,
         "pad_token_id": tok.eos_token_id,
         "repetition_penalty": repetition_penalty,

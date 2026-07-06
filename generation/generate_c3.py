@@ -43,10 +43,23 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--prompt", default="P0", choices=["P0", "P1", "P2"])
     ap.add_argument("--n", type=int, default=50)
+    ap.add_argument("--ids", default="",
+                    help="comma-separated conversation_no's to (re)generate; overrides the first-N selection")
     ap.add_argument("--max-turns", type=int, default=50)
     ap.add_argument("--max-new-tokens", type=int, default=200)
     ap.add_argument("--temperature", type=float, default=0.8)
     ap.add_argument("--top-p", type=float, default=0.95)
+    # --- turn-quality knobs (C3 fragmentation fix; tunable for the VM sweep) ---
+    ap.add_argument("--min-new-tokens", type=int, default=16,
+                    help="floor on tokens per turn; prevents 1-word fragment turns")
+    ap.add_argument("--stop-at-sentence", dest="stop_at_sentence", action="store_true", default=True,
+                    help="end each turn at a sentence boundary so turns are complete (default on)")
+    ap.add_argument("--no-stop-at-sentence", dest="stop_at_sentence", action="store_false",
+                    help="disable sentence-boundary stopping (for A/B comparison)")
+    ap.add_argument("--repetition-penalty", type=float, default=1.15,
+                    help="softer than the old 1.2; lower = less anti-repetition pressure")
+    ap.add_argument("--no-repeat-ngram", type=int, default=4,
+                    help="ban exact n-gram repeats; 3 was too aggressive, 0 disables")
     ap.add_argument("--out-root", default=str(OUT_ROOT),
                     help="output root; point at a separate dir to avoid overwriting existing data")
     args = ap.parse_args()
@@ -56,7 +69,11 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     meta = load_metadata()
-    ids = target_conversations(args.n, meta)
+    if args.ids:
+        ids = [int(x) for x in args.ids.split(",") if x.strip()]
+        ids = [c for c in ids if c in meta]
+    else:
+        ids = target_conversations(args.n, meta)
     todo = [c for c in ids if not (out_dir / f"{c}.json").exists()]
     print(f"[{cond}] target={len(ids)} todo={len(todo)} done={len(ids) - len(todo)}")
     if not todo:
@@ -80,6 +97,10 @@ def main() -> None:
                 max_new_tokens=args.max_new_tokens,
                 temperature=args.temperature,
                 top_p=args.top_p,
+                min_new_tokens=args.min_new_tokens,
+                stop_at_sentence=args.stop_at_sentence,
+                repetition_penalty=args.repetition_penalty,
+                no_repeat_ngram_size=args.no_repeat_ngram,
             )
             turn, ran_past = clean_single_turn(raw, LABELS)
             multi += int(ran_past)

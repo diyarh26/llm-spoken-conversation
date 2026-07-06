@@ -1,54 +1,53 @@
-# VM Tasks — Regenerate the full P0 set into generated_v2 (2026-07-06)
+# VM Tasks — C3 fragmentation-fix validation (2026-07-06)
 
-Owner: local side. Read `CLAUDE.md` first. **This job is fire-and-forget — launch it detached,
-confirm it started, then stop. Do NOT stay attached, do NOT poll, do NOT run it in the
-foreground.** The script commits and pushes by itself.
+Owner: local side. Read `CLAUDE.md` first. **Small, fire-and-forget job — launch detached,
+confirm it started, then stop.** It commits and pushes by itself.
 
 ## What & why
-Regenerate all four P0 conditions (C1, C2, C3, C4 — 50 conversations each, 30-turn cap) with
-**unified decoding**. `repetition_penalty` is now a default inside `chat()`, so every
-architecture uses the same decoding — this removes the earlier confound where only C2/C3 had
-the repetition fix. Output goes to a **separate directory `data/generated_v2/`** so the current
-pilot in `data/generated/` is left untouched (a teammate is inspecting it in parallel).
+We diagnosed C3-P0: ~64% of conversations collapse into "word salad" — the two Vicuna agents
+stop taking turns and instead finish one run-on sentence a word at a time. Root cause: turns
+were allowed to end incomplete (no minimum length, no sentence-boundary stop), and the
+anti-repetition settings forced the model to bail early. We changed the C3 turn-quality
+settings (`generation/generate_c3.py` defaults now: `--min-new-tokens 16`,
+`--stop-at-sentence` on, `--repetition-penalty 1.15`, `--no-repeat-ngram 4`) and made
+`min_new_tokens` actually enforced in `chat()`.
 
-The runner `generation/run_p0_v2.sh` does everything: it writes each conversation immediately,
-resumes on rerun (existing ids are skipped), and **auto-commits + pushes after each condition**.
+This task **regenerates only the 8 worst C3 conversations** with the fix into a **separate
+test dir** (`data/generated_test/c3fix/`) so we can read them and judge whether turns now
+sound like two people before touching anything else. It does **not** touch `data/generated/`.
 
 ## TASK 1 — Pull and verify GPU
 ```bash
 cd ~/llm-spoken-conversation          # (or wherever this repo lives on the VM)
 git pull --ff-only origin main
 conda activate convsim
-/anaconda/envs/convsim/bin/python -m py_compile generation/*.py prompts/*.py && echo "SYNTAX OK"
+/anaconda/envs/convsim/bin/python -m py_compile generation/*.py && echo "SYNTAX OK"
 nvidia-smi && /anaconda/envs/convsim/bin/python -c "import torch; print('cuda', torch.cuda.is_available())"
 ```
-If `nvidia-smi` shows an **NVML driver/library mismatch**, run `sudo reboot`, wait, reconnect,
-`conda activate convsim`, and re-check before launching. (This is the crash that killed the last
-C4 run — C4 loads two models. Reboot fixes it. Never reboot mid-run.)
+If `nvidia-smi` shows an **NVML driver/library mismatch**, `sudo reboot`, reconnect,
+`conda activate convsim`, then continue. Never reboot mid-run.
 
-## TASK 2 — Launch detached, then leave
+## TASK 2 — Launch the test detached, then leave
 ```bash
-tmux new-session -d -s genp0 'cd ~/llm-spoken-conversation && bash generation/run_p0_v2.sh'
+tmux new-session -d -s c3fix 'cd ~/llm-spoken-conversation && bash generation/run_c3_fix_test.sh'
 ```
 
 ## TASK 3 — Confirm it started, then STOP
 ```bash
 sleep 20
-tmux ls                         # expect a "genp0" session
-tail -n 15 run_p0_v2.log        # expect "run_p0_v2 START", cuda_available True, C1-P0 START
+tmux ls                          # expect a "c3fix" session
+tail -n 15 run_c3_fix_test.log   # expect cuda True and generation starting
 ```
-If the session exists and the log shows generation starting, **you are done — disconnect.**
-The script runs for a few hours, pushes after each condition, and writes a final
-`run_p0_v2.status` when all four are done. Do not wait for it.
+If the session exists and generation is running, **you are done — disconnect.** The script
+generates ~8 conversations (a few minutes), prints a NEW-vs-OLD median-words/turn comparison,
+and **commits + pushes `data/generated_test/c3fix/`** by itself. Do not wait for it.
 
 ## Do NOT
-- Do **not** touch, delete, or regenerate `data/generated/` (the current pilot — keep it).
-- Do **not** run the generators in the foreground or babysit the tmux session.
-- Do **not** start P1/P2 yet — that is a separate task after local reviews P0-v2.
+- Do **not** touch or regenerate `data/generated/` (the current data stays as the baseline).
+- Do **not** start the full P0 regeneration (`run_p0_v2.sh`) — that waits until this C3 fix
+  and the other architectures are validated.
+- Do **not** run in the foreground or babysit.
 
-## How the user checks progress later (no Codex needed)
-```bash
-tmux attach -t genp0            # watch live (Ctrl-b then d to detach)
-cat run_p0_v2.status           # final per-condition counts once finished
-git -C ~/llm-spoken-conversation log --oneline -5   # the auto-pushed data commits
-```
+## After it pushes
+The local side pulls `data/generated_test/c3fix/`, reads the conversations, and decides whether
+the fix worked (turns coherent, no word-salad) before rolling it into a full regeneration.
