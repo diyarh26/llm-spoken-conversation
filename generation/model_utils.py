@@ -128,15 +128,22 @@ def clean_single_turn(text: str, labels=("ParticipantA", "ParticipantB")) -> tup
         rf"|(?:(?:^|\n)\s*(?:USER|ASSIST\w*|HUMAN|AI|SYSTEM|BOT)\s*:)",
         re.I,
     )
-    # Leading label may be a degraded/short variant the single-model C2 path emits when it
-    # tries to write a speaker label anyway: "PartB:", "Partner B:", "Participants:". Strip a
-    # broad participant-ish or role prefix from the very START only (safe there); the inline
-    # marker_re above stays conservative so a legitimate mid-sentence "part:" is never clipped.
-    lead_label = r"Part(?:ner|icipants?)?\s*[AB]?|USER|ASSIST\w*|HUMAN|AI|SYSTEM|BOT"
+    # Leading label — aggressive. The single-model C2 path (one model writes BOTH speakers off a
+    # labelled transcript) emits a wide variety of degraded/misspelled speaker labels:
+    # "ParticipentB:", "ParticipB:", "Participation:", "ParticipANT_A:", the vocative
+    # "ParticipantB," (comma), even doubled "ParticipParticipant B:". Peel any participant/role
+    # prefix ending in a colon OR comma from the very START (repeatably). A trailing colon/comma
+    # is required, so legitimate words ("Part of...", "...every part: the cost") are never touched.
+    lead_label = re.compile(
+        r"^\s*(?:particip\w*|part(?:ner)?|user|assist\w*|human|ai|system|bot)"
+        r"[\s_]*[ab]?\s*[:,]\s*",
+        re.I,
+    )
     t = text.strip()
-    m = re.match(rf"\s*(?:{lead_label})\s*:\s*", t, re.I)
-    if m:
-        t = t[m.end():]
+    prev = None
+    while prev != t:
+        prev = t
+        t = lead_label.sub("", t, count=1)
     nxt = marker_re.search(t)
     ran_past = nxt is not None
     if ran_past:
