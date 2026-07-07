@@ -208,34 +208,72 @@ Hypothesis:
 
 For each conversation:
 
-1. Join all turns into one full-conversation text.
-2. Embed the full conversation.
-3. For each condition, compute the centroid of its conversation embeddings.
-4. Compute the average cosine distance from each conversation to the centroid.
+1. Embed every turn separately, then mean-pool the turn vectors into one conversation
+   vector (`--ced-text-mode turns`, the default). Joining the whole transcript into one
+   blob and embedding that (`--ced-text-mode concat`, the old behavior) is still available,
+   but sentence encoders only attend to their first ~256 tokens, so a 30-turn conversation
+   effectively gets reduced to its opening turns — `turns` mode makes the whole conversation
+   count.
+2. For each condition, compute the centroid of its conversation embeddings.
+3. Compute the average cosine distance from each conversation to the centroid (`CED`), and
+   the cosine distance from each conversation to its nearest neighbor in the same group
+   (`mean_nn_distance` / `min_nn_distance`) — this directly catches near-duplicate
+   conversations, which centroid distance alone can miss.
 
 Formula:
 
 ```text
 CED(condition) = mean distance(conversation_embedding_i, condition_centroid)
+NN-distance(conversation_i) = min distance(conversation_embedding_i, conversation_embedding_j) for j != i
 ```
 
 The code is in:
 
 ```text
+embed_conversations()
 compute_ced()
 ced_for_indices()
+nearest_neighbor_distances()
 ```
+
+### Embedding Backend
+
+CED defaults to `--ced-embedding-backend auto`, which prefers sentence-transformers
+(`all-MiniLM-L6-v2`) and falls back to the dependency-free TF-IDF vectorizer if it isn't
+installed. TF-IDF measures topic-word overlap, not style, so a TF-IDF-based CED run can come
+out backwards (topic overlap looks like "similarity" even when the styles differ) — install
+`sentence-transformers` before trusting CED numbers for the poster.
 
 ### Interpretation
 
 - higher CED = conversations are more dispersed/diverse
 - lower CED = conversations are more clustered/stereotyped
+- higher `mean_nn_distance` / `min_nn_distance` = conversations are less likely to be
+  near-duplicates of each other within the group
 
-### Important Limitation
+### Important Limitation — Topic Confound
 
-CED can accidentally measure topic diversity. The script therefore also writes a
-topic-condition version when there are at least two conversations for the same topic and
-condition.
+CED can accidentally measure topic diversity rather than style diversity: two conversations
+about the same topic will look "close" even if their conversational style is completely
+different, and two conditions can differ in CED simply because they cover different topic
+mixes. The script addresses this two ways:
+
+1. `ced_by_topic_condition.csv` — one row per (topic, condition) pair, computed only within
+   conversations that share the same topic (topics are exact Switchboard `topic_description`
+   strings, and every LLM condition is generated from the same Switchboard conversation_no
+   set, so topics line up exactly across sources).
+2. `ced_topic_matched_by_condition.csv` — the real comparison: for each condition, average
+   CED (and NN-distance) only over the topics Switchboard also has data for, then report
+   one number per condition. This is what should go on the poster, not the raw
+   `ced_by_condition.csv` numbers, since those are confounded by each condition's topic mix.
+
+### 2-D Projection Plot
+
+`--projection pca` (default) or `--projection umap` (needs `umap-learn`) writes
+`ced_projection.png` — every conversation as one dot, colored by condition, on a 2-D
+projection of the CED embeddings. This is the picture for the poster: if the hypothesis is
+right, Switchboard is a wide, spread-out cloud and the LLM conditions are tight little
+clusters. Pass `--projection none` to skip it.
 
 ## Output Files
 
@@ -302,6 +340,16 @@ topic-condition group.
 
 Use this file to check whether CED patterns remain when topic is controlled.
 
+### `ced_topic_matched_by_condition.csv`
+
+One row per condition, averaged only over topics Switchboard also has (`n_topics` says how
+many). This is the topic-controlled headline number: `mean_CED_topic_matched` and
+`mean_nn_distance_topic_matched`.
+
+### `ced_projection.png`
+
+2-D scatter (PCA or UMAP) of every conversation's CED embedding, colored by condition.
+
 ## What To Check In Code Review
 
 Good review questions:
@@ -320,6 +368,8 @@ Good review questions:
 1. Inspect `turn_labels.csv` manually for 50-100 turns.
 2. Tune the rule patterns.
 3. Add a small manual annotation file and compare human labels to rule labels.
-4. Use sentence-transformers on the VM for better CAS/CED embeddings.
-5. Add plots after the metrics are trusted.
+4. Install `sentence-transformers` on the VM and re-run CED there — this repo's dev sandbox
+   cannot reach huggingface.co, so CED here only ever exercised the TF-IDF fallback.
+5. Regenerate `results/social_metrics/` on the VM (with real Switchboard data present) so the
+   committed CSVs/plot reflect sentence-transformers embeddings, not TF-IDF.
 

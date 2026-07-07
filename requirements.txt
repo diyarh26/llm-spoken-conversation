@@ -17,8 +17,12 @@ scipy
 matplotlib
 
 # Optional but recommended for analysis/social_metrics.py CAS/CED semantic embeddings.
-# The script falls back to local TF-IDF if this is not installed.
+# CED defaults to sentence-transformers (falls back to local TF-IDF if not installed) since
+# TF-IDF measures topic-word overlap, not style. scikit-learn draws the CED 2-D projection
+# plot (PCA); umap-learn is an optional alternative projection.
 # sentence-transformers
+# scikit-learn
+# umap-learn
 
 # ALIGN (Duran et al., 2019) for conceptual/syntactic/lexical alignment is installed
 # SEPARATELY — it is finicky about dependency versions. Follow the install path used in
