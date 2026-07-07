@@ -27,7 +27,9 @@ from prompts.templates import build_c2                                   # noqa:
 from analysis.swda import (                                              # noqa: E402
     load_metadata, make_personas, iter_conversation_files, conversation_no_of,
 )
-from generation.model_utils import load_model, chat, clean_single_turn, VICUNA  # noqa: E402
+from generation.model_utils import (                                          # noqa: E402
+    load_model, chat, clean_single_turn, strip_meta_artifacts, looks_like_closing, VICUNA,
+)
 
 OUT_ROOT = pathlib.Path(__file__).resolve().parent.parent / "data" / "generated"
 LABELS = ("ParticipantA", "ParticipantB")
@@ -48,18 +50,37 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--prompt", default="P0", choices=["P0", "P1", "P2"])
     ap.add_argument("--n", type=int, default=10)
+    ap.add_argument("--ids", default="",
+                    help="comma-separated conversation_no's to (re)generate; overrides the first-N selection")
     ap.add_argument("--max-turns", type=int, default=30)
     ap.add_argument("--max-new-tokens", type=int, default=200)
     ap.add_argument("--temperature", type=float, default=0.8)
     ap.add_argument("--top-p", type=float, default=0.95)
+    # --- turn-quality knobs (same fragmentation/termination fix as C3) ---
+    ap.add_argument("--min-new-tokens", type=int, default=16,
+                    help="floor on tokens per turn; prevents 1-word fragment / bare-label turns")
+    ap.add_argument("--stop-at-sentence", dest="stop_at_sentence", action="store_true", default=True,
+                    help="end each turn at a sentence boundary so turns are complete (default on)")
+    ap.add_argument("--no-stop-at-sentence", dest="stop_at_sentence", action="store_false",
+                    help="disable sentence-boundary stopping (for A/B comparison)")
+    ap.add_argument("--repetition-penalty", type=float, default=1.15,
+                    help="softer than the old 1.2; lower = less anti-repetition pressure")
+    ap.add_argument("--no-repeat-ngram", type=int, default=4,
+                    help="ban exact n-gram repeats; 3 was too aggressive, 0 disables")
+    ap.add_argument("--out-root", default=str(OUT_ROOT),
+                    help="output root; point at a separate dir to avoid overwriting existing data")
     args = ap.parse_args()
 
     cond = f"C2-{args.prompt}"
-    out_dir = OUT_ROOT / cond
+    out_dir = pathlib.Path(args.out_root) / cond
     out_dir.mkdir(parents=True, exist_ok=True)
 
     meta = load_metadata()
-    ids = target_conversations(args.n, meta)
+    if args.ids:
+        ids = [int(x) for x in args.ids.split(",") if x.strip()]
+        ids = [c for c in ids if c in meta]
+    else:
+        ids = target_conversations(args.n, meta)
     todo = [c for c in ids if not (out_dir / f"{c}.json").exists()]
     print(f"[{cond}] target={len(ids)} todo={len(todo)} done={len(ids) - len(todo)}")
     if not todo:
@@ -72,6 +93,7 @@ def main() -> None:
         # "Hello!" so the conversation opens as two equals, not "is this the ... service?".
         history: list[tuple[str, str]] = [("ParticipantA", "Hello!"), ("ParticipantB", "Hello!")]
         multi = 0
+        closing_seen = False
         for i in range(args.max_turns):
             spk = LABELS[i % 2]
             messages = build_c2(args.prompt, a, b, topic, sb_prompt, history, spk)
@@ -80,12 +102,26 @@ def main() -> None:
                 max_new_tokens=args.max_new_tokens,
                 temperature=args.temperature,
                 top_p=args.top_p,
+                min_new_tokens=args.min_new_tokens,
+                stop_at_sentence=args.stop_at_sentence,
+                repetition_penalty=args.repetition_penalty,
+                no_repeat_ngram_size=args.no_repeat_ngram,
             )
             turn, ran_past = clean_single_turn(raw, LABELS)
             multi += int(ran_past)
-            if not turn:
+            turn = strip_meta_artifacts(turn)   # drop chatbot/template residue before it enters the log
+            if not turn:                        # empty after cleaning = model dropped out of the conversation
                 break
+            prev_turn = history[-1][1]
             history.append((spk, turn))
+            # Natural termination: stop at a mutual goodbye / one reciprocal after a farewell
+            # (max_turns is only a cap), same as C3.
+            if looks_like_closing(turn) and looks_like_closing(prev_turn):
+                break
+            if closing_seen:
+                break
+            if looks_like_closing(turn):
+                closing_seen = True
         rec = {
             "condition": cond, "architecture": "C2", "prompt_level": args.prompt,
             "model": VICUNA, "conversation_no": cno, "topic": topic,

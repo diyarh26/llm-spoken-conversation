@@ -44,6 +44,38 @@ ALIGN is installed separately (see PROJECT_PLAN.md §7 / requirements.txt note).
 3. **Phase 2 — main run.** Generate all 6 conditions (50 each); run metrics; run stats.
 4. **Phase 3 — extension.** LLM-as-judge (if API) or qualitative coding (fallback).
 
+## Social metrics extension
+
+The proposed Phase 3 metric package lives in:
+
+```bash
+analysis/social_metrics.py
+```
+
+It computes:
+
+- **TSI/ADI**: social conversation vs assistant-like advice/explanation behavior
+- **CAS**: whether each response is anchored to the real previous turn better than shuffled wrong contexts
+- **CED**: whether full conversations are dispersed/diverse or clustered/stereotyped
+
+Run locally with the dependency-free embedding fallback:
+
+```bash
+py -3 analysis/social_metrics.py --n-sb 50
+```
+
+Outputs are written to:
+
+```bash
+results/social_metrics/
+```
+
+Reviewer notes and metric definitions:
+
+```bash
+analysis/SOCIAL_METRICS.md
+```
+
 ## Models
 
 - Generation: **Vicuna-13B v1.5** (`lmsys/vicuna-13b-v1.5-16k`) for C1–C3;

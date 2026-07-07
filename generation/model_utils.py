@@ -62,7 +62,8 @@ class SentenceEndStoppingCriteria(StoppingCriteria):
 
 @torch.inference_mode()
 def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
-         do_sample=True, stop_at_sentence=False, min_new_tokens=8,`n         repetition_penalty=1.2, no_repeat_ngram_size=3) -> str:
+         do_sample=True, stop_at_sentence=False, min_new_tokens=8,
+         repetition_penalty=1.2, no_repeat_ngram_size=3) -> str:
     """messages: list of {role, content}. Returns the assistant's text completion."""
     try:
         encoded = tok.apply_chat_template(
@@ -83,8 +84,15 @@ def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
 
     gen_kwargs = {
         "max_new_tokens": max_new_tokens,
+        # min_new_tokens forbids the end-of-sequence token before this many tokens are
+        # generated — this is what actually prevents 1-word "fragment" turns. It used to be
+        # passed into this function but only fed the sentence-stop criteria, never generate(),
+        # so there was no real floor on turn length. Now it is enforced.
+        "min_new_tokens": min_new_tokens,
         "do_sample": do_sample,
-        "pad_token_id": tok.eos_token_id,`n        "repetition_penalty": repetition_penalty,`n        "no_repeat_ngram_size": no_repeat_ngram_size,
+        "pad_token_id": tok.eos_token_id,
+        "repetition_penalty": repetition_penalty,
+        "no_repeat_ngram_size": no_repeat_ngram_size,
     }
     if do_sample:
         if temperature is not None:
@@ -111,20 +119,81 @@ def clean_single_turn(text: str, labels=("ParticipantA", "ParticipantB")) -> tup
     to one turn — which we count as a multi-turn emission.
     """
     label_alt = "|".join(re.escape(label) for label in labels)
+    # Tolerant participant label: catches degraded 4-bit variants like "ParticipantsA:"
+    # (stray 's') and "Participant A:" (space) that the exact label misses. The C2
+    # single-model path — where one model writes both speakers — leaks these often.
+    fuzzy_label = r"Participants?\s*[AB]"
     marker_re = re.compile(
-        rf"(?:\b(?:{label_alt})\s*:)"
+        rf"(?:\b(?:{label_alt}|{fuzzy_label})\s*:)"
         rf"|(?:(?:^|\n)\s*(?:USER|ASSIST\w*|HUMAN|AI|SYSTEM|BOT)\s*:)",
         re.I,
     )
+    # Leading label — aggressive. The single-model C2 path (one model writes BOTH speakers off a
+    # labelled transcript) emits a wide variety of degraded/misspelled speaker labels:
+    # "ParticipentB:", "ParticipB:", "Participation:", "ParticipANT_A:", the vocative
+    # "ParticipantB," (comma), even doubled "ParticipParticipant B:". Peel any participant/role
+    # prefix ending in a colon OR comma from the very START (repeatably). A trailing colon/comma
+    # is required, so legitimate words ("Part of...", "...every part: the cost") are never touched.
+    lead_label = re.compile(
+        r"^\s*(?:particip\w*|part(?:ner)?|user|assist\w*|human|ai|system|bot)"
+        r"[\s_]*[ab]?\s*[:,]\s*",
+        re.I,
+    )
     t = text.strip()
-    m = re.match(rf"\s*(?:{label_alt})\s*:\s*", t, re.I)
-    if m:
-        t = t[m.end():]
+    prev = None
+    while prev != t:
+        prev = t
+        t = lead_label.sub("", t, count=1)
     nxt = marker_re.search(t)
     ran_past = nxt is not None
     if ran_past:
         t = t[:nxt.start()]
     return t.strip().strip('"'), ran_past
+
+
+# Farewell / sign-off cues used to end a conversation naturally (see generate_c3.py loop).
+_CLOSING_RE = re.compile(
+    r"\b(?:good-?bye|bye-?bye|bye|take care|farewell|see you(?: around| soon| later| next time)?|"
+    r"talk (?:to you )?(?:soon|later)|catch you later|until next time|happy chatting|"
+    r"(?:nice|great|lovely|a pleasure) (?:talking|chatting|speaking)(?: (?:to|with) you)?|"
+    r"enjoy (?:the rest of )?your day|"
+    r"have a (?:great|good|nice|wonderful|lovely|fantastic) (?:day|one|time|evening|weekend))\b",
+    re.I,
+)
+
+# Assistant / template / end-of-session residue the model emits once it drops out of the
+# conversation (observed in C3 tails: "[End of Response]", "*Session closed.*", code fences,
+# "Here's a summary", stray role tokens, and garbage like "** | **" / "-> |" / "V V V").
+_META_RE = re.compile(
+    r"(?:"
+    r"\[(?:end of|turn|tur|t\b|this|do you|assist|closed|/)"
+    r"|\*{1,}\s*(?:conversation|chat|session|closed|ended|assistance|connection|end of)"
+    r"|here'?s (?:the |a )?(?:quick )?(?:summary|recap)"
+    r"|this (?:concludes|conversation (?:covered|concludes|ends))"
+    r"|```"
+    r"|(?:^|\n)\s*(?:USER|ASSISTANT|ASSISTMENT|SYSTEM|BOT)\b"
+    r"|\*\*\s*\||\|\s*->|->\s*\||\bV\s+V\s+V\b"
+    r"|(?:^|\n)\s*---\s*(?:$|\n)"
+    r")",
+    re.I | re.M,
+)
+
+
+def strip_meta_artifacts(text: str) -> str:
+    """Cut a turn at the first assistant/template/end-of-conversation artifact.
+
+    Keeps the clean leading part so chatbot residue never enters the transcript; if the whole
+    turn was such residue this returns "" (the caller then ends the conversation).
+    """
+    m = _META_RE.search(text)
+    if m:
+        text = text[: m.start()]
+    return text.strip().strip('"').strip()
+
+
+def looks_like_closing(text: str) -> bool:
+    """True if a turn contains a farewell / sign-off (used to stop the conversation)."""
+    return bool(_CLOSING_RE.search(text))
 
 
 def _vicuna_format(messages) -> str:

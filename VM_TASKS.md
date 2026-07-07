@@ -1,52 +1,50 @@
-# VM Tasks — RESUME after the GPU-driver crash (2026-06-24)
+# VM Tasks — C2 fix validation (2026-07-06)
 
-Owner: local side. Read `CLAUDE.md` and `.planning/STATE.md` first.
+Owner: local side. Read `CLAUDE.md` first. **Small, fire-and-forget job — launch detached,
+confirm it started, then stop.** It commits and pushes by itself.
 
-## What happened
-The full generation run (12 conditions, 50 each) was running in `tmux` but **crashed at C4-P0**
-because of an NVIDIA **NVML driver/library version mismatch** (C4 loads two models; torch's
-CUDA allocator called `nvmlInit` and it asserted). Safe on disk on the VM:
-`C1-P0`, `C2-P0`, `C3-P0` = 50 each (150 conversations). `C4-P0` has 1. The P1 set and all of
-P2 were not started. (These 150 are committed locally on the VM as `b0ab7a0` but NOT pushed.)
+## What & why
+C3 is fixed and validated. Now C2. C2 gets the **same** turn-quality + natural-termination fix
+as C3 (min-length floor, sentence-boundary stop, softer repetition, stop at goodbye), **plus**
+its own fix: a strengthened cleaner that strips the leaked speaker-label variants C2 emits
+(`PartB:`, `Partner B:`, `Participants:`) — the single-model-writes-both-speakers path.
 
-## TASK 1 — Reboot to fix the GPU driver
-Reboot the VM (Azure portal → your VM → **Restart**, or `sudo reboot`). This is the correct
-fix now that nothing is running. After it returns, verify:
+This task **regenerates only the 8 worst C2 conversations** with the fix into a **separate test
+dir** (`data/generated_test/c2fix/`). It does **not** touch `data/generated/`.
+
+## TASK 1 — Pull and verify GPU
 ```bash
-nvidia-smi
-cd ~/llm-spoken-conversation && conda activate convsim
-python -c "import torch; print('cuda', torch.cuda.is_available())"
-```
-Expect `nvidia-smi` to work and `cuda True`.
-
-## TASK 2 — Resume generation (DO NOT delete data/generated — it is resumable)
-```bash
-tmux new -s gen
+cd ~/llm-spoken-conversation          # (or wherever this repo lives on the VM)
+git pull --ff-only origin main
 conda activate convsim
-for LV in P0 P1; do
-  python generation/generate_c1.py --prompt $LV --n 50
-  python generation/generate_c2.py --prompt $LV --n 50 --max-turns 30
-  python generation/generate_c3.py --prompt $LV --n 50 --max-turns 30
-  python generation/generate_c4.py --prompt $LV --n 50 --max-turns 30
-done
+/anaconda/envs/convsim/bin/python -m py_compile generation/*.py && echo "SYNTAX OK"
+nvidia-smi && /anaconda/envs/convsim/bin/python -c "import torch; print('cuda', torch.cuda.is_available())"
 ```
-It skips C1/C2/C3-P0 (done), finishes C4-P0, then does the whole P1 set. Detach: Ctrl-b then d.
+If `nvidia-smi` shows an **NVML driver/library mismatch**, `sudo reboot`, reconnect,
+`conda activate convsim`, then continue. Never reboot mid-run.
 
-## TASK 3 — P2 few-shot conditions (after TASK 2)
+## TASK 2 — Launch detached, then leave
 ```bash
-python generation/generate_c1.py --prompt P2 --n 50
-python generation/generate_c2.py --prompt P2 --n 50 --max-turns 30
-python generation/generate_c3.py --prompt P2 --n 50 --max-turns 30
-python generation/generate_c4.py --prompt P2 --n 50 --max-turns 30
+tmux new-session -d -s c2fix 'cd ~/llm-spoken-conversation && bash generation/run_c2_fix_test.sh'
 ```
 
-## TASK 4 — Push + report
+## TASK 3 — Confirm it started, then STOP
 ```bash
-git add data/generated && git commit -m "data: full Phase 2 generation (12 conditions)" && git push
+sleep 20
+tmux ls                          # expect a "c2fix" session
+tail -n 15 run_c2_fix_test.log   # expect cuda True and generation starting
 ```
-If push is rejected: `git pull --rebase origin main` then push again. Then tell the local lead
-to run `python analysis/analyze.py` and the ALIGN + stats analysis.
+If the session exists and generation is running, **you are done — disconnect.** The script
+generates ~8 conversations (a few minutes), prints a NEW-vs-OLD comparison (turns / median
+words-per-turn / leaked-label count), and **commits + pushes `data/generated_test/c2fix/`** by
+itself. Do not wait for it.
 
-## Note
-If the NVML mismatch recurs after reboot, it's an unattended NVIDIA driver update; a reboot
-re-syncs it. Generators are resumable, so no finished conversation is ever lost.
+## Do NOT
+- Do **not** touch or regenerate `data/generated/`.
+- Do **not** start the full P0 regeneration yet — that waits until C2 and C4 are validated.
+- Do **not** run in the foreground or babysit.
+
+## After it pushes
+Local pulls `data/generated_test/c2fix/`, reads the conversations, and checks that turns are
+coherent, labels no longer leak, and conversations end naturally — before we move to C4 and the
+full regeneration.
