@@ -50,6 +50,17 @@ def main() -> None:
     ap.add_argument("--max-new-tokens", type=int, default=2048)
     ap.add_argument("--temperature", type=float, default=0.8)
     ap.add_argument("--top-p", type=float, default=0.95)
+    # C1 generates the WHOLE ~30-turn conversation in one generate() call (up to
+    # max-new-tokens), unlike C2/C3/C4 which call chat() once per short turn. chat()'s
+    # defaults (repetition_penalty=1.2, no_repeat_ngram_size=3) were tuned for those short
+    # per-turn calls; a hard "never repeat any 3-gram" ban over ~2000 tokens of natural
+    # dialogue is nearly unsatisfiable (turns reuse words/phrases constantly) and was
+    # forcing the model to hit EOS almost immediately, producing 1-2 line fragments instead
+    # of full conversations. Disable the n-gram ban here and keep only a mild repetition
+    # penalty (matches C2/C3's tuned value) to discourage verbatim restatement loops.
+    ap.add_argument("--repetition-penalty", type=float, default=1.15)
+    ap.add_argument("--no-repeat-ngram", type=int, default=0,
+                    help="0 disables the n-gram ban; a hard ban is too strict over a whole conversation")
     ap.add_argument("--out-root", default=str(OUT_ROOT),
                     help="output root; point at a separate dir to avoid overwriting existing data")
     args = ap.parse_args()
@@ -74,6 +85,8 @@ def main() -> None:
             max_new_tokens=args.max_new_tokens,
             temperature=args.temperature,
             top_p=args.top_p,
+            repetition_penalty=args.repetition_penalty,
+            no_repeat_ngram_size=args.no_repeat_ngram,
         )
         rec = {
             "condition": cond,

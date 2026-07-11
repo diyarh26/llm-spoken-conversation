@@ -47,8 +47,12 @@ def turns_of(rec: dict) -> list[tuple[str, str]]:
     if rec.get("turns"):
         return [(s, t) for s, t in rec["turns"]]
     out = []
+    # C1's all-at-once output has been observed with wildly randomized label casing/typos
+    # (e.g. "PArTiCIpAnT b:", "ParticipantsA:") — a case-sensitive exact match silently
+    # returns zero turns for most of these, which hid the C1 truncation bug from every
+    # report run. Match case-insensitively and tolerate a stray "s" / spacing.
     for line in rec.get("raw_output", "").splitlines():
-        m = re.match(r"\s*(Participant[AB])\s*:\s*(.*)", line)
+        m = re.match(r"\s*(Particip\w*\s*[ab])\s*:\s*(.*)", line, re.I)
         if m:
             out.append((m.group(1), m.group(2)))
     return out
