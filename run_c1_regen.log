@@ -1,0 +1,395 @@
+=== C1 regen START 2026-07-11T15:05:59+03:00 ===
+cuda True
+=========== C1 P0  2026-07-11T15:06:01+03:00 ===========
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[C1-P0] target=50 todo=50 done=0
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 172.18it/s]
+Loading weights:   0%|          | 0/363 [00:00<?, ?it/s]Loading weights:   0%|          | 1/363 [00:10<1:04:16, 10.65s/it]Loading weights:   1%|          | 2/363 [00:19<59:18,  9.86s/it]  Loading weights:   1%|          | 4/363 [00:23<29:09,  4.87s/it]Loading weights:   1%|▏         | 5/363 [00:28<29:02,  4.87s/it]Loading weights:   2%|▏         | 6/363 [00:33<28:18,  4.76s/it]Loading weights:   2%|▏         | 8/363 [00:33<16:04,  2.72s/it]Loading weights:   2%|▏         | 9/363 [00:34<13:31,  2.29s/it]Loading weights:   3%|▎         | 10/363 [00:36<12:14,  2.08s/it]Loading weights:   3%|▎         | 11/363 [00:37<10:34,  1.80s/it]Loading weights:   4%|▎         | 13/363 [00:41<11:34,  1.98s/it]Loading weights:   4%|▍         | 14/363 [00:44<13:01,  2.24s/it]Loading weights:   4%|▍         | 15/363 [00:50<17:14,  2.97s/it]Loading weights:   5%|▍         | 17/363 [00:52<12:18,  2.13s/it]Loading weights:   5%|▍         | 18/363 [00:53<11:07,  1.93s/it]Loading weights:   5%|▌         | 19/363 [00:54<10:27,  1.82s/it]Loading weights:   6%|▌         | 20/363 [00:56<09:49,  1.72s/it]Loading weights:   6%|▌         | 22/363 [01:03<13:55,  2.45s/it]Loading weights:   6%|▋         | 23/363 [01:07<16:22,  2.89s/it]Loading weights:   7%|▋         | 24/363 [01:12<18:51,  3.34s/it]Loading weights:   7%|▋         | 26/363 [01:13<13:07,  2.34s/it]Loading weights:   7%|▋         | 27/363 [01:15<11:55,  2.13s/it]Loading weights:   8%|▊         | 28/363 [01:16<10:49,  1.94s/it]Loading weights:   8%|▊         | 29/363 [01:18<09:48,  1.76s/it]Loading weights:   9%|▊         | 31/363 [01:20<08:51,  1.60s/it]Loading weights:   9%|▉         | 32/363 [01:23<10:28,  1.90s/it]Loading weights:   9%|▉         | 33/363 [01:27<12:32,  2.28s/it]Loading weights:  10%|▉         | 35/363 [01:28<08:21,  1.53s/it]Loading weights:  10%|▉         | 36/363 [01:29<08:04,  1.48s/it]Loading weights:  10%|█         | 37/363 [01:31<08:28,  1.56s/it]Loading weights:  10%|█         | 38/363 [01:32<08:38,  1.59s/it]Loading weights:  11%|█         | 40/363 [01:37<09:59,  1.86s/it]Loading weights:  11%|█▏        | 41/363 [01:43<15:32,  2.90s/it]Loading weights:  12%|█▏        | 42/363 [01:50<20:33,  3.84s/it]Loading weights:  12%|█▏        | 44/363 [01:53<15:06,  2.84s/it]Loading weights:  12%|█▏        | 45/363 [01:55<14:41,  2.77s/it]Loading weights:  13%|█▎        | 46/363 [01:57<13:10,  2.49s/it]Loading weights:  13%|█▎        | 47/363 [01:59<12:20,  2.34s/it]Loading weights:  13%|█▎        | 49/363 [02:02<11:02,  2.11s/it]Loading weights:  14%|█▍        | 50/363 [02:07<14:43,  2.82s/it]Loading weights:  14%|█▍        | 51/363 [02:13<17:31,  3.37s/it]Loading weights:  15%|█▍        | 53/363 [02:14<11:45,  2.27s/it]Loading weights:  15%|█▍        | 54/363 [02:16<11:04,  2.15s/it]Loading weights:  15%|█▌        | 55/363 [02:17<10:10,  1.98s/it]Loading weights:  15%|█▌        | 56/363 [02:19<10:01,  1.96s/it]Loading weights:  16%|█▌        | 58/363 [02:25<11:50,  2.33s/it]Loading weights:  16%|█▋        | 59/363 [02:28<13:15,  2.62s/it]Loading weights:  17%|█▋        | 60/363 [02:32<14:30,  2.87s/it]Loading weights:  17%|█▋        | 62/363 [02:34<10:06,  2.02s/it]Loading weights:  17%|█▋        | 63/363 [02:35<09:42,  1.94s/it]Loading weights:  18%|█▊        | 64/363 [02:38<10:04,  2.02s/it]Loading weights:  18%|█▊        | 65/363 [02:40<10:09,  2.05s/it]Loading weights:  18%|█▊        | 67/363 [02:45<11:12,  2.27s/it]Loading weights:  19%|█▊        | 68/363 [02:49<13:40,  2.78s/it]Loading weights:  19%|█▉        | 69/363 [02:53<14:40,  3.00s/it]Loading weights:  20%|█▉        | 71/363 [02:54<09:40,  1.99s/it]Loading weights:  20%|█▉        | 72/363 [02:55<08:50,  1.82s/it]Loading weights:  20%|██        | 73/363 [02:57<08:55,  1.85s/it]Loading weights:  20%|██        | 74/363 [02:59<08:38,  1.80s/it]Loading weights:  21%|██        | 76/363 [03:02<08:06,  1.70s/it]Loading weights:  21%|██        | 77/363 [03:06<11:03,  2.32s/it]Loading weights:  21%|██▏       | 78/363 [03:11<13:42,  2.89s/it]Loading weights:  22%|██▏       | 80/363 [03:13<09:41,  2.06s/it]Loading weights:  22%|██▏       | 81/363 [03:14<08:26,  1.79s/it]Loading weights:  23%|██▎       | 82/363 [03:16<08:30,  1.82s/it]Loading weights:  23%|██▎       | 83/363 [03:18<09:10,  1.97s/it]Loading weights:  23%|██▎       | 85/363 [03:23<09:46,  2.11s/it]Loading weights:  24%|██▎       | 86/363 [03:26<11:29,  2.49s/it]Loading weights:  24%|██▍       | 87/363 [03:32<14:43,  3.20s/it]Loading weights:  25%|██▍       | 89/363 [03:33<09:29,  2.08s/it]Loading weights:  25%|██▍       | 90/363 [03:34<08:49,  1.94s/it]Loading weights:  25%|██▌       | 91/363 [03:36<09:13,  2.04s/it]Loading weights:  25%|██▌       | 92/363 [03:38<08:44,  1.94s/it]Loading weights:  26%|██▌       | 94/363 [03:42<08:28,  1.89s/it]Loading weights:  26%|██▌       | 95/363 [03:45<09:56,  2.23s/it]Loading weights:  26%|██▋       | 96/363 [03:50<12:23,  2.78s/it]Loading weights:  27%|██▋       | 98/363 [03:51<08:05,  1.83s/it]Loading weights:  27%|██▋       | 99/363 [03:51<07:10,  1.63s/it]Loading weights:  28%|██▊       | 100/363 [03:53<06:58,  1.59s/it]Loading weights:  28%|██▊       | 101/363 [03:55<07:54,  1.81s/it]Loading weights:  28%|██▊       | 103/363 [03:59<07:41,  1.77s/it]Loading weights:  29%|██▊       | 104/363 [04:03<10:10,  2.36s/it]Loading weights:  29%|██▉       | 105/363 [04:09<14:14,  3.31s/it]Loading weights:  29%|██▉       | 107/363 [04:11<09:29,  2.23s/it]Loading weights:  30%|██▉       | 108/363 [04:12<08:56,  2.10s/it]Loading weights:  30%|███       | 109/363 [04:14<08:07,  1.92s/it]Loading weights:  30%|███       | 110/363 [04:15<06:57,  1.65s/it]Loading weights:  31%|███       | 112/363 [04:17<06:26,  1.54s/it]Loading weights:  31%|███       | 113/363 [04:22<09:07,  2.19s/it]Loading weights:  31%|███▏      | 114/363 [04:25<10:30,  2.53s/it]Loading weights:  32%|███▏      | 116/363 [04:27<07:28,  1.82s/it]Loading weights:  32%|███▏      | 117/363 [04:28<07:02,  1.72s/it]Loading weights:  33%|███▎      | 118/363 [04:30<06:37,  1.62s/it]Loading weights:  33%|███▎      | 119/363 [04:31<06:00,  1.48s/it]Loading weights:  33%|███▎      | 121/363 [04:34<06:38,  1.65s/it]Loading weights:  34%|███▎      | 122/363 [04:39<08:54,  2.22s/it]Loading weights:  34%|███▍      | 123/363 [04:43<10:53,  2.72s/it]Loading weights:  34%|███▍      | 125/363 [04:45<08:05,  2.04s/it]Loading weights:  35%|███▍      | 126/363 [04:46<07:23,  1.87s/it]Loading weights:  35%|███▍      | 127/363 [04:47<06:32,  1.66s/it]Loading weights:  35%|███▌      | 128/363 [04:48<06:02,  1.54s/it]Loading weights:  36%|███▌      | 130/363 [04:53<07:30,  1.93s/it]Loading weights:  36%|███▌      | 131/363 [04:57<08:45,  2.27s/it]Loading weights:  36%|███▋      | 132/363 [05:01<10:34,  2.75s/it]Loading weights:  37%|███▋      | 134/363 [05:02<07:06,  1.86s/it]Loading weights:  37%|███▋      | 135/363 [05:03<06:19,  1.66s/it]Loading weights:  37%|███▋      | 136/363 [05:04<05:34,  1.47s/it]Loading weights:  38%|███▊      | 137/363 [05:06<06:28,  1.72s/it]Loading weights:  38%|███▊      | 139/363 [05:10<06:50,  1.83s/it]Loading weights:  39%|███▊      | 140/363 [05:16<10:05,  2.71s/it]Loading weights:  39%|███▉      | 141/363 [05:20<11:37,  3.14s/it]Loading weights:  39%|███▉      | 143/363 [05:23<08:37,  2.35s/it]Loading weights:  40%|███▉      | 144/363 [05:24<07:26,  2.04s/it]Loading weights:  40%|███▉      | 145/363 [05:26<07:02,  1.94s/it]Loading weights:  40%|████      | 146/363 [05:27<06:04,  1.68s/it]Loading weights:  41%|████      | 148/363 [05:32<07:26,  2.07s/it]Loading weights:  41%|████      | 149/363 [05:38<10:33,  2.96s/it]Loading weights:  41%|████▏     | 150/363 [05:42<11:27,  3.23s/it]Loading weights:  42%|████▏     | 152/363 [05:43<07:43,  2.20s/it]Loading weights:  42%|████▏     | 153/363 [05:44<06:44,  1.93s/it]Loading weights:  42%|████▏     | 154/363 [05:45<06:01,  1.73s/it]Loading weights:  43%|████▎     | 155/363 [05:47<05:48,  1.67s/it]Loading weights:  43%|████▎     | 157/363 [05:50<05:31,  1.61s/it]Loading weights:  44%|████▎     | 158/363 [05:55<08:28,  2.48s/it]Loading weights:  44%|████▍     | 159/363 [05:59<09:29,  2.79s/it]Loading weights:  44%|████▍     | 161/363 [06:01<07:01,  2.08s/it]Loading weights:  45%|████▍     | 162/363 [06:03<06:29,  1.94s/it]Loading weights:  45%|████▍     | 163/363 [06:05<06:43,  2.02s/it]Loading weights:  45%|████▌     | 164/363 [06:06<06:04,  1.83s/it]Loading weights:  46%|████▌     | 166/363 [06:11<06:37,  2.02s/it]Loading weights:  46%|████▌     | 167/363 [06:14<07:54,  2.42s/it]Loading weights:  46%|████▋     | 168/363 [06:19<09:59,  3.08s/it]Loading weights:  47%|████▋     | 170/363 [06:20<06:25,  2.00s/it]Loading weights:  47%|████▋     | 171/363 [06:23<06:29,  2.03s/it]Loading weights:  47%|████▋     | 172/363 [06:24<06:12,  1.95s/it]Loading weights:  48%|████▊     | 173/363 [06:26<05:57,  1.88s/it]Loading weights:  48%|████▊     | 175/363 [06:29<05:32,  1.77s/it]Loading weights:  48%|████▊     | 176/363 [06:34<07:32,  2.42s/it]Loading weights:  49%|████▉     | 177/363 [06:38<08:45,  2.83s/it]Loading weights:  49%|████▉     | 179/363 [06:39<05:58,  1.95s/it]Loading weights:  50%|████▉     | 180/363 [06:41<05:41,  1.87s/it]Loading weights:  50%|████▉     | 181/363 [06:42<05:18,  1.75s/it]Loading weights:  50%|█████     | 182/363 [06:44<05:14,  1.74s/it]Loading weights:  51%|█████     | 184/363 [06:48<05:26,  1.82s/it]Loading weights:  51%|█████     | 185/363 [06:52<06:51,  2.31s/it]Loading weights:  51%|█████     | 186/363 [06:56<08:08,  2.76s/it]Loading weights:  52%|█████▏    | 188/363 [06:57<05:30,  1.89s/it]Loading weights:  52%|█████▏    | 189/363 [06:59<05:40,  1.96s/it]Loading weights:  52%|█████▏    | 190/363 [07:01<05:12,  1.80s/it]Loading weights:  53%|█████▎    | 191/363 [07:02<04:42,  1.65s/it]Loading weights:  53%|█████▎    | 193/363 [07:07<05:32,  1.96s/it]Loading weights:  53%|█████▎    | 194/363 [07:10<06:25,  2.28s/it]Loading weights:  54%|█████▎    | 195/363 [07:12<06:24,  2.29s/it]Loading weights:  54%|█████▍    | 197/363 [07:14<04:24,  1.59s/it]Loading weights:  55%|█████▍    | 198/363 [07:15<04:19,  1.57s/it]Loading weights:  55%|█████▍    | 199/363 [07:16<03:59,  1.46s/it]Loading weights:  55%|█████▌    | 200/363 [07:17<03:43,  1.37s/it]Loading weights:  56%|█████▌    | 202/363 [07:22<04:34,  1.70s/it]Loading weights:  56%|█████▌    | 203/363 [07:25<05:48,  2.18s/it]Loading weights:  56%|█████▌    | 204/363 [07:30<07:11,  2.71s/it]Loading weights:  57%|█████▋    | 206/363 [07:31<04:45,  1.82s/it]Loading weights:  57%|█████▋    | 207/363 [07:32<04:35,  1.76s/it]Loading weights:  57%|█████▋    | 208/363 [07:34<04:11,  1.63s/it]Loading weights:  58%|█████▊    | 209/363 [07:35<04:01,  1.57s/it]Loading weights:  58%|█████▊    | 211/363 [07:39<04:12,  1.66s/it]Loading weights:  58%|█████▊    | 212/363 [07:44<06:16,  2.49s/it]Loading weights:  59%|█████▊    | 213/363 [07:48<07:27,  2.99s/it]Loading weights:  59%|█████▉    | 215/363 [07:49<04:45,  1.93s/it]Loading weights:  60%|█████▉    | 216/363 [07:50<04:22,  1.78s/it]Loading weights:  60%|█████▉    | 217/363 [07:51<03:55,  1.61s/it]Loading weights:  60%|██████    | 218/363 [07:53<03:38,  1.51s/it]Loading weights:  61%|██████    | 220/363 [07:57<04:13,  1.77s/it]Loading weights:  61%|██████    | 221/363 [08:00<05:09,  2.18s/it]Loading weights:  61%|██████    | 222/363 [08:05<06:14,  2.66s/it]Loading weights:  62%|██████▏   | 224/363 [08:06<04:07,  1.78s/it]Loading weights:  62%|██████▏   | 225/363 [08:08<04:08,  1.80s/it]Loading weights:  62%|██████▏   | 226/363 [08:09<03:50,  1.68s/it]Loading weights:  63%|██████▎   | 227/363 [08:10<03:28,  1.53s/it]Loading weights:  63%|██████▎   | 229/363 [08:15<04:19,  1.94s/it]Loading weights:  63%|██████▎   | 230/363 [08:19<05:25,  2.45s/it]Loading weights:  64%|██████▎   | 231/363 [08:21<05:22,  2.44s/it]Loading weights:  64%|██████▍   | 233/363 [08:22<03:31,  1.63s/it]Loading weights:  64%|██████▍   | 234/363 [08:24<03:24,  1.59s/it]Loading weights:  65%|██████▍   | 235/363 [08:26<03:43,  1.75s/it]Loading weights:  65%|██████▌   | 236/363 [08:30<04:39,  2.20s/it]Loading weights:  66%|██████▌   | 238/363 [08:35<04:58,  2.39s/it]Loading weights:  66%|██████▌   | 239/363 [08:39<05:46,  2.80s/it]Loading weights:  66%|██████▌   | 240/363 [08:42<06:03,  2.95s/it]Loading weights:  67%|██████▋   | 242/363 [08:44<04:05,  2.03s/it]Loading weights:  67%|██████▋   | 243/363 [08:45<03:33,  1.78s/it]Loading weights:  67%|██████▋   | 244/363 [08:46<03:15,  1.64s/it]Loading weights:  67%|██████▋   | 245/363 [08:48<03:17,  1.67s/it]Loading weights:  68%|██████▊   | 247/363 [08:52<03:28,  1.80s/it]Loading weights:  68%|██████▊   | 248/363 [08:56<04:36,  2.41s/it]Loading weights:  69%|██████▊   | 249/363 [09:01<05:51,  3.08s/it]Loading weights:  69%|██████▉   | 251/363 [09:03<04:03,  2.17s/it]Loading weights:  69%|██████▉   | 252/363 [09:05<03:58,  2.15s/it]Loading weights:  70%|██████▉   | 253/363 [09:07<03:47,  2.07s/it]Loading weights:  70%|██████▉   | 254/363 [09:08<03:21,  1.85s/it]Loading weights:  71%|███████   | 256/363 [09:13<03:31,  1.97s/it]Loading weights:  71%|███████   | 257/363 [09:16<04:05,  2.31s/it]Loading weights:  71%|███████   | 258/363 [09:20<04:47,  2.74s/it]Loading weights:  72%|███████▏  | 260/363 [09:21<03:10,  1.85s/it]Loading weights:  72%|███████▏  | 261/363 [09:23<03:12,  1.88s/it]Loading weights:  72%|███████▏  | 262/363 [09:25<03:12,  1.91s/it]Loading weights:  72%|███████▏  | 263/363 [09:27<03:03,  1.84s/it]Loading weights:  73%|███████▎  | 265/363 [09:32<03:25,  2.10s/it]Loading weights:  73%|███████▎  | 266/363 [09:37<04:28,  2.77s/it]Loading weights:  74%|███████▎  | 267/363 [09:40<04:50,  3.03s/it]Loading weights:  74%|███████▍  | 269/363 [09:42<03:18,  2.12s/it]Loading weights:  74%|███████▍  | 270/363 [09:44<03:07,  2.02s/it]Loading weights:  75%|███████▍  | 271/363 [09:46<03:07,  2.04s/it]Loading weights:  75%|███████▍  | 272/363 [09:48<02:58,  1.96s/it]Loading weights:  75%|███████▌  | 274/363 [09:51<02:45,  1.86s/it]Loading weights:  76%|███████▌  | 275/363 [09:55<03:21,  2.29s/it]Loading weights:  76%|███████▌  | 276/363 [09:59<03:49,  2.64s/it]Loading weights:  77%|███████▋  | 278/363 [10:00<02:33,  1.81s/it]Loading weights:  77%|███████▋  | 279/363 [10:01<02:20,  1.67s/it]Loading weights:  77%|███████▋  | 280/363 [10:02<02:08,  1.55s/it]Loading weights:  77%|███████▋  | 281/363 [10:04<02:05,  1.53s/it]Loading weights:  78%|███████▊  | 283/363 [10:08<02:16,  1.70s/it]Loading weights:  78%|███████▊  | 284/363 [10:11<02:40,  2.04s/it]Loading weights:  79%|███████▊  | 285/363 [10:15<03:16,  2.51s/it]Loading weights:  79%|███████▉  | 287/363 [10:16<02:14,  1.77s/it]Loading weights:  79%|███████▉  | 288/363 [10:18<02:17,  1.83s/it]Loading weights:  80%|███████▉  | 289/363 [10:20<02:13,  1.80s/it]Loading weights:  80%|███████▉  | 290/363 [10:21<01:59,  1.64s/it]Loading weights:  80%|████████  | 292/363 [10:25<02:08,  1.81s/it]Loading weights:  81%|████████  | 293/363 [10:28<02:21,  2.02s/it]Loading weights:  81%|████████  | 294/363 [10:31<02:33,  2.23s/it]Loading weights:  82%|████████▏ | 296/363 [10:32<01:44,  1.56s/it]Loading weights:  82%|████████▏ | 297/363 [10:33<01:34,  1.43s/it]Loading weights:  82%|████████▏ | 298/363 [10:34<01:27,  1.35s/it]Loading weights:  82%|████████▏ | 299/363 [10:35<01:23,  1.30s/it]Loading weights:  83%|████████▎ | 301/363 [10:40<01:45,  1.70s/it]Loading weights:  83%|████████▎ | 302/363 [10:45<02:32,  2.50s/it]Loading weights:  83%|████████▎ | 303/363 [10:49<02:58,  2.98s/it]Loading weights:  84%|████████▍ | 305/363 [10:50<01:52,  1.94s/it]Loading weights:  84%|████████▍ | 306/363 [10:52<01:47,  1.89s/it]Loading weights:  85%|████████▍ | 307/363 [10:53<01:36,  1.72s/it]Loading weights:  85%|████████▍ | 308/363 [10:54<01:28,  1.61s/it]Loading weights:  85%|████████▌ | 310/363 [10:58<01:33,  1.77s/it]Loading weights:  86%|████████▌ | 311/363 [11:02<01:53,  2.19s/it]Loading weights:  86%|████████▌ | 312/363 [11:06<02:11,  2.57s/it]Loading weights:  87%|████████▋ | 314/363 [11:07<01:30,  1.85s/it]Loading weights:  87%|████████▋ | 315/363 [11:09<01:29,  1.87s/it]Loading weights:  87%|████████▋ | 316/363 [11:10<01:19,  1.68s/it]Loading weights:  87%|████████▋ | 317/363 [11:12<01:15,  1.65s/it]Loading weights:  88%|████████▊ | 319/363 [11:18<01:35,  2.17s/it]Loading weights:  88%|████████▊ | 320/363 [11:21<01:40,  2.35s/it]Loading weights:  88%|████████▊ | 321/363 [11:26<02:14,  3.19s/it]Loading weights:  89%|████████▉ | 323/363 [11:29<01:39,  2.48s/it]Loading weights:  89%|████████▉ | 324/363 [11:31<01:30,  2.31s/it]Loading weights:  90%|████████▉ | 325/363 [11:32<01:19,  2.09s/it]Loading weights:  90%|████████▉ | 326/363 [11:34<01:08,  1.85s/it]Loading weights:  90%|█████████ | 328/363 [11:36<00:55,  1.58s/it]Loading weights:  91%|█████████ | 329/363 [11:39<01:05,  1.94s/it]Loading weights:  91%|█████████ | 330/363 [11:44<01:27,  2.64s/it]Loading weights:  91%|█████████▏| 332/363 [11:45<00:58,  1.88s/it]Loading weights:  92%|█████████▏| 333/363 [11:47<00:54,  1.80s/it]Loading weights:  92%|█████████▏| 334/363 [11:49<00:53,  1.84s/it]Loading weights:  92%|█████████▏| 335/363 [11:51<00:52,  1.88s/it]Loading weights:  93%|█████████▎| 337/363 [11:57<00:59,  2.30s/it]Loading weights:  93%|█████████▎| 338/363 [12:01<01:06,  2.68s/it]Loading weights:  93%|█████████▎| 339/363 [12:05<01:15,  3.13s/it]Loading weights:  94%|█████████▍| 341/363 [12:07<00:48,  2.19s/it]Loading weights:  94%|█████████▍| 342/363 [12:08<00:40,  1.93s/it]Loading weights:  94%|█████████▍| 343/363 [12:10<00:39,  1.97s/it]Loading weights:  95%|█████████▍| 344/363 [12:12<00:37,  1.95s/it]Loading weights:  95%|█████████▌| 346/363 [12:16<00:33,  1.97s/it]Loading weights:  96%|█████████▌| 347/363 [12:20<00:37,  2.37s/it]Loading weights:  96%|█████████▌| 348/363 [12:25<00:45,  3.05s/it]Loading weights:  96%|█████████▋| 350/363 [12:26<00:25,  1.99s/it]Loading weights:  97%|█████████▋| 351/363 [12:27<00:21,  1.83s/it]Loading weights:  97%|█████████▋| 352/363 [12:28<00:19,  1.74s/it]Loading weights:  97%|█████████▋| 353/363 [12:30<00:16,  1.61s/it]Loading weights:  98%|█████████▊| 355/363 [12:32<00:11,  1.48s/it]Loading weights:  98%|█████████▊| 356/363 [12:38<00:17,  2.48s/it]Loading weights:  98%|█████████▊| 357/363 [12:42<00:16,  2.79s/it]Loading weights:  99%|█████████▉| 359/363 [12:44<00:08,  2.10s/it]Loading weights:  99%|█████████▉| 360/363 [12:46<00:06,  2.01s/it]Loading weights:  99%|█████████▉| 361/363 [12:48<00:03,  1.97s/it]Loading weights: 100%|█████████▉| 362/363 [12:49<00:01,  1.78s/it]Loading weights: 100%|██████████| 363/363 [12:49<00:00,  2.12s/it]
+[transformers] The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+=== C1 regen START 2026-07-11T15:50:52+03:00 ===
+cuda True
+=========== C1 P0  2026-07-11T15:50:54+03:00 ===========
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[C1-P0] target=50 todo=50 done=0
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 34759.43it/s]
+Loading weights:   0%|          | 0/363 [00:00<?, ?it/s]Loading weights:   1%|          | 2/363 [00:00<00:21, 17.00it/s]Loading weights:   1%|▏         | 5/363 [00:00<00:17, 20.50it/s]Loading weights:   4%|▎         | 13/363 [00:00<00:08, 39.74it/s]Loading weights:   5%|▍         | 18/363 [00:00<00:07, 43.13it/s]Loading weights:   7%|▋         | 24/363 [00:00<00:07, 44.81it/s]Loading weights:   9%|▉         | 32/363 [00:00<00:06, 52.17it/s]Loading weights:  11%|█         | 40/363 [00:00<00:05, 57.49it/s]Loading weights:  13%|█▎        | 46/363 [00:00<00:05, 56.91it/s]Loading weights:  14%|█▍        | 52/363 [00:01<00:05, 52.14it/s]Loading weights:  16%|█▋        | 59/363 [00:01<00:05, 54.38it/s]Loading weights:  18%|█▊        | 67/363 [00:01<00:04, 60.06it/s]Loading weights:  20%|██        | 74/363 [00:01<00:04, 61.34it/s]Loading weights:  22%|██▏       | 81/363 [00:01<00:04, 60.96it/s]Loading weights:  24%|██▍       | 88/363 [00:01<00:04, 60.43it/s]Loading weights:  26%|██▌       | 95/363 [00:01<00:04, 61.63it/s]Loading weights:  28%|██▊       | 103/363 [00:01<00:04, 63.83it/s]Loading weights:  30%|███       | 110/363 [00:01<00:03, 63.66it/s]Loading weights:  32%|███▏      | 117/363 [00:02<00:03, 63.17it/s]Loading weights:  34%|███▍      | 124/363 [00:02<00:03, 61.88it/s]Loading weights:  36%|███▌      | 131/363 [00:02<00:03, 61.64it/s]Loading weights:  38%|███▊      | 139/363 [00:02<00:03, 64.97it/s]Loading weights:  40%|████      | 146/363 [00:02<00:03, 64.93it/s]Loading weights:  42%|████▏     | 153/363 [00:02<00:03, 57.39it/s]Loading weights:  44%|████▍     | 159/363 [00:02<00:03, 53.80it/s]Loading weights:  46%|████▌     | 167/363 [00:02<00:03, 57.28it/s]Loading weights:  48%|████▊     | 175/363 [00:03<00:03, 59.77it/s]Loading weights:  50%|█████     | 182/363 [00:03<00:03, 59.60it/s]Loading weights:  52%|█████▏    | 189/363 [00:03<00:02, 58.84it/s]Loading weights:  54%|█████▎    | 195/363 [00:03<00:02, 56.06it/s]Loading weights:  56%|█████▌    | 203/363 [00:03<00:02, 59.65it/s]Loading weights:  58%|█████▊    | 211/363 [00:03<00:02, 62.81it/s]Loading weights:  60%|██████    | 218/363 [00:03<00:02, 63.10it/s]Loading weights:  62%|██████▏   | 225/363 [00:03<00:02, 62.14it/s]Loading weights:  64%|██████▍   | 232/363 [00:04<00:02, 61.47it/s]Loading weights:  66%|██████▌   | 239/363 [00:04<00:01, 62.14it/s]Loading weights:  68%|██████▊   | 247/363 [00:04<00:01, 65.09it/s]Loading weights:  70%|██████▉   | 254/363 [00:04<00:01, 64.68it/s]Loading weights:  72%|███████▏  | 261/363 [00:04<00:01, 63.42it/s]Loading weights:  74%|███████▍  | 268/363 [00:04<00:01, 60.74it/s]Loading weights:  76%|███████▌  | 275/363 [00:04<00:01, 61.85it/s]Loading weights:  78%|███████▊  | 283/363 [00:04<00:01, 64.88it/s]Loading weights:  80%|███████▉  | 290/363 [00:04<00:01, 65.42it/s]Loading weights:  82%|████████▏ | 297/363 [00:05<00:01, 64.68it/s]Loading weights:  84%|████████▎ | 304/363 [00:05<00:00, 63.94it/s]Loading weights:  86%|████████▌ | 311/363 [00:05<00:00, 64.53it/s]Loading weights:  88%|████████▊ | 319/363 [00:05<00:00, 67.67it/s]Loading weights:  90%|████████▉ | 326/363 [00:05<00:00, 65.67it/s]Loading weights:  92%|█████████▏| 333/363 [00:05<00:00, 63.95it/s]Loading weights:  94%|█████████▎| 340/363 [00:05<00:00, 63.57it/s]Loading weights:  96%|█████████▌| 347/363 [00:05<00:00, 63.82it/s]Loading weights:  98%|█████████▊| 355/363 [00:05<00:00, 66.57it/s]Loading weights: 100%|█████████▉| 362/363 [00:06<00:00, 65.92it/s]Loading weights: 100%|██████████| 363/363 [00:06<00:00, 60.26it/s]
+[transformers] The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  saved 4325  (424 words)
+  saved 4330  (317 words)
+  saved 4103  (311 words)
+  saved 4327  (299 words)
+  saved 4646  (450 words)
+  saved 4108  (365 words)
+  saved 4171  (422 words)
+  saved 4321  (298 words)
+  saved 4329  (287 words)
+  saved 4356  (379 words)
+  saved 4358  (346 words)
+  saved 4360  (395 words)
+  saved 4617  (373 words)
+  saved 4619  (385 words)
+  saved 4877  (442 words)
+  saved 3389  (307 words)
+  saved 4036  (253 words)
+  saved 4082  (390 words)
+  saved 4104  (333 words)
+  saved 4109  (486 words)
+  saved 4168  (366 words)
+  saved 4320  (387 words)
+  saved 4341  (375 words)
+  saved 4688  (303 words)
+  saved 2451  (596 words)
+  saved 3902  (389 words)
+  saved 4096  (272 words)
+  saved 4133  (375 words)
+  saved 4152  (371 words)
+  saved 4166  (510 words)
+  saved 4319  (356 words)
+  saved 4333  (408 words)
+  saved 4336  (610 words)
+  saved 4345  (256 words)
+  saved 4372  (360 words)
+  saved 4379  (190 words)
+  saved 4382  (269 words)
+  saved 4611  (394 words)
+  saved 4628  (369 words)
+  saved 2095  (283 words)
+  saved 4048  (260 words)
+  saved 4060  (626 words)
+  saved 4148  (414 words)
+  saved 4177  (356 words)
+  saved 4312  (290 words)
+  saved 4316  (620 words)
+  saved 4339  (465 words)
+  saved 4340  (320 words)
+  saved 4353  (352 words)
+  saved 4362  (487 words)
+[main 6299750] data: regen C1-P0 into generated_v2 (ngram6 fix)
+ 200 files changed, 1100 insertions(+), 3300 deletions(-)
+ delete mode 100644 data/generated_v2/C1-P0.broken/2095.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/2451.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/3389.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/3902.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4036.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4048.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4060.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4082.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4096.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4103.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4104.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4108.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4109.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4133.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4148.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4152.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4166.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4168.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4171.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4177.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4312.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4316.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4319.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4320.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4321.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4325.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4327.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4329.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4330.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4333.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4336.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4339.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4340.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4341.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4345.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4353.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4356.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4358.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4360.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4362.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4372.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4379.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4382.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4611.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4617.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4619.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4628.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4646.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4688.json
+ delete mode 100644 data/generated_v2/C1-P0.broken/4877.json
+ create mode 100644 data/generated_v2/C1-P0/2095.json
+ create mode 100644 data/generated_v2/C1-P0/2451.json
+ create mode 100644 data/generated_v2/C1-P0/3389.json
+ create mode 100644 data/generated_v2/C1-P0/3902.json
+ create mode 100644 data/generated_v2/C1-P0/4036.json
+ create mode 100644 data/generated_v2/C1-P0/4048.json
+ create mode 100644 data/generated_v2/C1-P0/4060.json
+ create mode 100644 data/generated_v2/C1-P0/4082.json
+ create mode 100644 data/generated_v2/C1-P0/4096.json
+ create mode 100644 data/generated_v2/C1-P0/4103.json
+ create mode 100644 data/generated_v2/C1-P0/4104.json
+ create mode 100644 data/generated_v2/C1-P0/4108.json
+ create mode 100644 data/generated_v2/C1-P0/4109.json
+ create mode 100644 data/generated_v2/C1-P0/4133.json
+ create mode 100644 data/generated_v2/C1-P0/4148.json
+ create mode 100644 data/generated_v2/C1-P0/4152.json
+ create mode 100644 data/generated_v2/C1-P0/4166.json
+ create mode 100644 data/generated_v2/C1-P0/4168.json
+ create mode 100644 data/generated_v2/C1-P0/4171.json
+ create mode 100644 data/generated_v2/C1-P0/4177.json
+ create mode 100644 data/generated_v2/C1-P0/4312.json
+ create mode 100644 data/generated_v2/C1-P0/4316.json
+ create mode 100644 data/generated_v2/C1-P0/4319.json
+ create mode 100644 data/generated_v2/C1-P0/4320.json
+ create mode 100644 data/generated_v2/C1-P0/4321.json
+ create mode 100644 data/generated_v2/C1-P0/4325.json
+ create mode 100644 data/generated_v2/C1-P0/4327.json
+ create mode 100644 data/generated_v2/C1-P0/4329.json
+ create mode 100644 data/generated_v2/C1-P0/4330.json
+ create mode 100644 data/generated_v2/C1-P0/4333.json
+ create mode 100644 data/generated_v2/C1-P0/4336.json
+ create mode 100644 data/generated_v2/C1-P0/4339.json
+ create mode 100644 data/generated_v2/C1-P0/4340.json
+ create mode 100644 data/generated_v2/C1-P0/4341.json
+ create mode 100644 data/generated_v2/C1-P0/4345.json
+ create mode 100644 data/generated_v2/C1-P0/4353.json
+ create mode 100644 data/generated_v2/C1-P0/4356.json
+ create mode 100644 data/generated_v2/C1-P0/4358.json
+ create mode 100644 data/generated_v2/C1-P0/4360.json
+ create mode 100644 data/generated_v2/C1-P0/4362.json
+ create mode 100644 data/generated_v2/C1-P0/4372.json
+ create mode 100644 data/generated_v2/C1-P0/4379.json
+ create mode 100644 data/generated_v2/C1-P0/4382.json
+ create mode 100644 data/generated_v2/C1-P0/4611.json
+ create mode 100644 data/generated_v2/C1-P0/4617.json
+ create mode 100644 data/generated_v2/C1-P0/4619.json
+ create mode 100644 data/generated_v2/C1-P0/4628.json
+ create mode 100644 data/generated_v2/C1-P0/4646.json
+ create mode 100644 data/generated_v2/C1-P0/4688.json
+ create mode 100644 data/generated_v2/C1-P0/4877.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/2095.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/2451.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/3389.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/3902.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4036.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4048.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4060.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4082.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4096.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4103.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4104.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4108.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4109.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4133.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4148.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4152.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4166.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4168.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4171.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4177.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4312.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4316.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4319.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4320.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4321.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4325.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4327.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4329.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4330.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4333.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4336.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4339.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4340.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4341.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4345.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4353.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4356.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4358.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4360.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4362.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4372.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4379.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4382.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4611.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4617.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4619.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4628.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4646.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4688.json
+ delete mode 100644 data/generated_v2/C1-P1.broken/4877.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/2095.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/2451.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/3389.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/3902.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4036.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4048.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4060.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4082.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4096.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4103.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4104.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4108.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4109.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4133.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4148.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4152.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4166.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4168.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4171.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4177.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4312.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4316.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4319.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4320.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4321.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4325.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4327.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4329.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4330.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4333.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4336.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4339.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4340.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4341.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4345.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4353.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4356.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4358.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4360.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4362.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4372.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4379.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4382.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4611.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4617.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4619.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4628.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4646.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4688.json
+ delete mode 100644 data/generated_v2/C1-P2.broken/4877.json
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+To https://github.com/diyarh26/llm-spoken-conversation.git
+   57626f1..6299750  main -> main
+=========== C1 P1  2026-07-11T17:54:22+03:00 ===========
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[C1-P1] target=50 todo=50 done=0
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 9418.35it/s]
+Loading weights:   0%|          | 0/363 [00:00<?, ?it/s]Loading weights:   1%|          | 2/363 [00:00<00:19, 18.90it/s]Loading weights:   1%|          | 4/363 [00:00<00:19, 18.64it/s]Loading weights:   3%|▎         | 10/363 [00:00<00:10, 34.86it/s]Loading weights:   4%|▍         | 15/363 [00:00<00:09, 38.65it/s]Loading weights:   6%|▋         | 23/363 [00:00<00:06, 49.25it/s]Loading weights:   9%|▊         | 31/363 [00:00<00:05, 55.72it/s]Loading weights:  10%|█         | 37/363 [00:00<00:05, 56.72it/s]Loading weights:  12%|█▏        | 43/363 [00:00<00:05, 55.92it/s]Loading weights:  14%|█▍        | 50/363 [00:01<00:05, 58.24it/s]Loading weights:  16%|█▌        | 58/363 [00:01<00:04, 63.03it/s]Loading weights:  18%|█▊        | 65/363 [00:01<00:04, 63.34it/s]Loading weights:  20%|█▉        | 72/363 [00:01<00:05, 58.05it/s]Loading weights:  21%|██▏       | 78/363 [00:01<00:04, 57.02it/s]Loading weights:  24%|██▎       | 86/363 [00:01<00:04, 62.29it/s]Loading weights:  26%|██▌       | 94/363 [00:01<00:04, 65.94it/s]Loading weights:  28%|██▊       | 101/363 [00:01<00:03, 66.04it/s]Loading weights:  30%|██▉       | 108/363 [00:01<00:03, 64.70it/s]Loading weights:  32%|███▏      | 115/363 [00:02<00:03, 64.23it/s]Loading weights:  34%|███▎      | 122/363 [00:02<00:03, 64.35it/s]Loading weights:  36%|███▌      | 130/363 [00:02<00:03, 66.76it/s]Loading weights:  38%|███▊      | 137/363 [00:02<00:03, 66.33it/s]Loading weights:  40%|███▉      | 144/363 [00:02<00:03, 65.34it/s]Loading weights:  42%|████▏     | 151/363 [00:02<00:03, 58.43it/s]Loading weights:  44%|████▎     | 158/363 [00:02<00:03, 57.82it/s]Loading weights:  46%|████▌     | 166/363 [00:02<00:03, 60.28it/s]Loading weights:  48%|████▊     | 173/363 [00:02<00:03, 59.91it/s]Loading weights:  50%|████▉     | 180/363 [00:03<00:03, 58.57it/s]Loading weights:  51%|█████     | 186/363 [00:03<00:03, 55.88it/s]Loading weights:  53%|█████▎    | 194/363 [00:03<00:02, 59.57it/s]Loading weights:  55%|█████▌    | 200/363 [00:03<00:02, 56.41it/s]Loading weights:  57%|█████▋    | 206/363 [00:03<00:02, 56.46it/s]Loading weights:  59%|█████▊    | 213/363 [00:03<00:02, 56.14it/s]Loading weights:  61%|██████    | 221/363 [00:03<00:02, 61.29it/s]Loading weights:  63%|██████▎   | 229/363 [00:03<00:02, 65.24it/s]Loading weights:  65%|██████▌   | 236/363 [00:04<00:01, 65.35it/s]Loading weights:  67%|██████▋   | 243/363 [00:04<00:01, 63.89it/s]Loading weights:  69%|██████▉   | 250/363 [00:04<00:01, 63.24it/s]Loading weights:  71%|███████   | 257/363 [00:04<00:01, 63.89it/s]Loading weights:  73%|███████▎  | 265/363 [00:04<00:01, 67.18it/s]Loading weights:  75%|███████▍  | 272/363 [00:04<00:01, 66.74it/s]Loading weights:  77%|███████▋  | 279/363 [00:04<00:01, 65.47it/s]Loading weights:  79%|███████▉  | 286/363 [00:04<00:01, 64.57it/s]Loading weights:  81%|████████  | 293/363 [00:04<00:01, 64.87it/s]Loading weights:  83%|████████▎ | 301/363 [00:04<00:00, 68.01it/s]Loading weights:  85%|████████▍ | 308/363 [00:05<00:00, 67.46it/s]Loading weights:  87%|████████▋ | 315/363 [00:05<00:00, 65.48it/s]Loading weights:  89%|████████▊ | 322/363 [00:05<00:00, 63.69it/s]Loading weights:  91%|█████████ | 329/363 [00:05<00:00, 63.19it/s]Loading weights:  93%|█████████▎| 337/363 [00:05<00:00, 66.84it/s]Loading weights:  95%|█████████▍| 344/363 [00:05<00:00, 66.60it/s]Loading weights:  97%|█████████▋| 351/363 [00:05<00:00, 65.11it/s]Loading weights:  99%|█████████▊| 358/363 [00:05<00:00, 64.11it/s]Loading weights: 100%|██████████| 363/363 [00:05<00:00, 61.27it/s]
+[transformers] The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=2048) and `max_length`(=16384) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
