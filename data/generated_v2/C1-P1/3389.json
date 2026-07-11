@@ -1,0 +1,22 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3389,
+  "topic": "Football",
+  "sb_prompt": "PLEASE DISCUSS PROFESSIONAL FOOTBALL.  FIND OUT THE OTHER CALLER'S FAVORITE PRO FOOTBALL TEAM AND WHERE IT'S HEADED THIS YEAR.       DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 20,
+    "education": "some college"
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "some college"
+  },
+  "raw_output": "ParticipantA: Hey, do you like watching football?\nParticipantB: Yeah, I enjoy it. What about you?\nParticipantA: I used to watch it a lot in college, but not as much now.\nParticipantB: Same here. What's your favorite team?\nParticipantA: I'm a big fan of the Dallas Cowboys.\nParticipantB: Nice! I'm more of a Green Bay Packers guy myself.\nParticipantA: Oh, cool. I heard they're doing pretty well this year.\nParticipantB: Yeah, they're looking strong. I think they have a good chance of making it to the playoffs.\nParticipantA: I agree. What do you think about the Cowboys' chances?\nParticipantB: Well, I think they have a solid team, but they've had some injuries that might hold them back.\nParticipantA: Yeah, that's definitely a concern. Do you have a prediction for who's going to win it all?\nParticipantB: Honestly, I think it's going to be a close race between the Packers and the Chiefs.\nParticipantA: That's a tough call. I think the Cowboys could make a run if they can stay healthy.\nParticipantB: I could see that. It's definitely going to be an exciting season.\nParticipantA: For sure. Thanks for chatting with me about football!\nParticipantB: No problem, it was great to talk to you. Have a good day!"
+}
