@@ -64,6 +64,20 @@ def switchboard_records(n: int):
             yield "SB", str(conversation_no_of(fp)), turns
 
 
+def _sanitize_for_align_tsv(text: str) -> str:
+    """Make a turn safe for align.prepare_transcripts()'s pd.read_csv(sep='\\t').
+
+    Some generated turns carry leftover artifacts (label leaks, stray meta-instructions)
+    with an odd number of literal '"' characters or embedded newlines -- e.g. C2 turns like
+    '...getting worse." (Label for ParticipantB)'. An unmatched quote makes pandas' C parser
+    treat everything after it as inside one open quoted field and read straight past EOF
+    (ParserError: "EOF inside string"); an embedded newline creates a bogus extra row. Neither
+    character carries meaning ALIGN's word2vec scoring needs, so strip both rather than trying
+    to preserve them.
+    """
+    return text.replace("\n", " ").replace("\r", " ").replace('"', "").replace("\t", " ").strip()
+
+
 def write_input_files(records, raw_dir: pathlib.Path) -> dict[str, tuple[str, str, int]]:
     """Write one ALIGN-format .txt per conversation; return basename -> (condition, conv_id, n_turns)."""
     raw_dir.mkdir(parents=True, exist_ok=True)
@@ -73,7 +87,7 @@ def write_input_files(records, raw_dir: pathlib.Path) -> dict[str, tuple[str, st
         with open(raw_dir / fname, "w", encoding="utf-8") as f:
             f.write("participant\tcontent\n")
             for speaker, text in turns:
-                text_clean = text.strip().replace("\t", " ")
+                text_clean = _sanitize_for_align_tsv(text)
                 if text_clean:
                     f.write(f"{speaker}\t{text_clean}\n")
         meta[fname] = (condition, conv_id, len(turns))
