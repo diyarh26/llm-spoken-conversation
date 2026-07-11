@@ -20,6 +20,8 @@ Outputs:
     results/social_metrics/group_metrics.csv
     results/social_metrics/ced_by_condition.csv
     results/social_metrics/ced_by_topic_condition.csv
+    results/social_metrics/ced_topic_matched_by_condition.csv
+    results/social_metrics/ced_projection.png
 """
 
 from __future__ import annotations
@@ -589,15 +591,60 @@ def conversation_text(conv: Conversation, max_chars: int) -> str:
     return text[:max_chars] if max_chars > 0 else text
 
 
+def embed_conversations(
+    conversations: list[Conversation],
+    embedder: object,
+    *,
+    text_mode: str,
+    max_chars: int,
+) -> np.ndarray:
+    """Embed each conversation to a single vector.
+
+    ``concat`` joins the whole conversation into one blob and embeds that (the original
+    approach) — sentence encoders only attend to their first ~256 tokens, so this silently
+    reduces a long conversation to its opening turns. ``turns`` (the default) embeds every
+    turn independently and mean-pools per conversation, so the full conversation counts.
+    """
+    if text_mode == "concat":
+        texts = [conversation_text(conv, max_chars) for conv in conversations]
+        embedder.fit(texts)
+        return _l2_normalize(embedder.encode(texts))
+
+    turn_texts: list[str] = []
+    spans: list[tuple[int, int]] = []
+    for conv in conversations:
+        start = len(turn_texts)
+        turn_texts.extend(text for _, text in conv.turns)
+        spans.append((start, len(turn_texts)))
+
+    embedder.fit(turn_texts)
+    turn_vecs = embedder.encode(turn_texts)
+    dim = turn_vecs.shape[1] if turn_vecs.ndim == 2 else 0
+    conv_vecs = np.zeros((len(conversations), dim), dtype=float)
+    for i, (start, end) in enumerate(spans):
+        if end > start:
+            conv_vecs[i] = turn_vecs[start:end].mean(axis=0)
+    return _l2_normalize(conv_vecs)
+
+
+def nearest_neighbor_distances(vecs: np.ndarray) -> list[float]:
+    """Cosine distance from each row to its closest other row (vecs must be L2-normalized)."""
+    n = len(vecs)
+    if n < 2:
+        return []
+    sims = vecs @ vecs.T
+    np.fill_diagonal(sims, -np.inf)
+    return (1.0 - sims.max(axis=1)).tolist()
+
+
 def compute_ced(
     conversations: list[Conversation],
     embedder: object,
     *,
+    text_mode: str,
     max_chars: int,
-) -> tuple[list[dict], list[dict]]:
-    texts = [conversation_text(conv, max_chars) for conv in conversations]
-    embedder.fit(texts)
-    vecs = embedder.encode(texts)
+) -> tuple[list[dict], list[dict], np.ndarray]:
+    vecs = embed_conversations(conversations, embedder, text_mode=text_mode, max_chars=max_chars)
 
     by_condition: dict[str, list[int]] = defaultdict(list)
     by_topic_condition: dict[tuple[str, str], list[int]] = defaultdict(list)
@@ -615,7 +662,7 @@ def compute_ced(
         for (topic, condition), indices in sorted(by_topic_condition.items())
         if len(indices) >= 2
     ]
-    return condition_rows, topic_rows
+    return condition_rows, topic_rows, vecs
 
 
 def ced_for_indices(
@@ -627,6 +674,7 @@ def ced_for_indices(
     selected = vecs[indices]
     centroid = np.mean(selected, axis=0)
     distances = [1.0 - cosine(vec, centroid) for vec in selected]
+    nn_distances = nearest_neighbor_distances(selected)
     head = conversations[indices[0]]
     rec = {
         "source": head.source,
@@ -636,9 +684,94 @@ def ced_for_indices(
         "CED": mean(distances),
         "min_distance": min(distances) if distances else float("nan"),
         "max_distance": max(distances) if distances else float("nan"),
+        # nearest-neighbor distance: low mean/min => conversations are near-duplicates,
+        # which is exactly the LLM-clumping failure mode CED is meant to catch.
+        "mean_nn_distance": mean(nn_distances),
+        "min_nn_distance": min(nn_distances) if nn_distances else float("nan"),
     }
     rec.update(base)
     return rec
+
+
+def matched_topic_summary(topic_rows: list[dict]) -> list[dict]:
+    """Average CED/NN-distance over topics Switchboard also has, so dispersion is compared
+    within the same topics rather than confounded by each condition's own topic mix."""
+    sb_topics = {row["topic"] for row in topic_rows if row["condition"] == "SB"}
+    if not sb_topics:
+        return []
+
+    by_condition: dict[str, list[dict]] = defaultdict(list)
+    for row in topic_rows:
+        if row["topic"] in sb_topics:
+            by_condition[row["condition"]].append(row)
+
+    out = []
+    for condition, rows in sorted(by_condition.items()):
+        out.append(
+            {
+                "condition": condition,
+                "n_topics": len(rows),
+                "mean_CED_topic_matched": mean([r["CED"] for r in rows]),
+                "mean_nn_distance_topic_matched": mean([r["mean_nn_distance"] for r in rows]),
+            }
+        )
+    return out
+
+
+def plot_ced_projection(
+    conversations: list[Conversation],
+    vecs: np.ndarray,
+    out_path: pathlib.Path,
+    *,
+    method: str,
+) -> pathlib.Path | None:
+    """2-D scatter of every conversation, colored by condition (PCA or UMAP)."""
+    try:
+        import matplotlib
+        matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+    except ImportError:
+        print("matplotlib not installed; skipping CED projection plot.")
+        return None
+
+    reducer = None
+    if method == "umap":
+        try:
+            from umap import UMAP
+
+            reducer = UMAP(n_components=2, random_state=7)
+        except ImportError:
+            print("umap-learn not installed; falling back to PCA for the CED projection plot.")
+            method = "pca"
+    if reducer is None:
+        try:
+            from sklearn.decomposition import PCA
+        except ImportError:
+            print("scikit-learn not installed; skipping CED projection plot.")
+            return None
+        reducer = PCA(n_components=2, random_state=7)
+
+    coords = reducer.fit_transform(vecs)
+    conditions = [conv.condition for conv in conversations]
+    cmap = plt.get_cmap("tab10")
+
+    fig, ax = plt.subplots(figsize=(8, 6))
+    for i, condition in enumerate(sorted(set(conditions))):
+        idx = [j for j, c in enumerate(conditions) if c == condition]
+        ax.scatter(
+            coords[idx, 0], coords[idx, 1],
+            label=condition, s=18, alpha=0.75, color=cmap(i % 10),
+        )
+    ax.set_title(f"Conversation embedding dispersion ({method.upper()})")
+    ax.set_xlabel("dim 1")
+    ax.set_ylabel("dim 2")
+    ax.legend(loc="best", fontsize=8)
+    fig.tight_layout()
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(out_path, dpi=150)
+    plt.close(fig)
+    return out_path
 
 
 def write_csv(path: pathlib.Path, rows: list[dict]) -> None:
@@ -661,23 +794,26 @@ def print_summary(groups: list[dict], ceds: list[dict], embedder_name: str) -> N
     print("SOCIAL CONVERSATION EXTENSION METRICS")
     print(f"embedding backend: {embedder_name}")
     print("=" * 86)
-    print(f"{'condition':12} {'n':>4} {'ADI':>7} {'TSI':>7} {'CAS':>8} {'CED':>8}")
+    print(f"{'condition':12} {'n':>4} {'ADI':>7} {'TSI':>7} {'CAS':>8} {'CED':>8} {'NN-dist':>8}")
     print("-" * 86)
-    ced_by_condition = {row["condition"]: row["CED"] for row in ceds}
+    ced_by_condition = {row["condition"]: row for row in ceds}
     for row in groups:
         condition = row["condition"]
+        ced_row = ced_by_condition.get(condition, {})
         print(
             f"{condition:12} {int(row['n_conversations']):4d} "
             f"{float(row['mean_ADI']):7.3f} "
             f"{float(row['mean_TSI_proxy']):7.1f} "
             f"{float(row['mean_CAS']):8.3f} "
-            f"{float(ced_by_condition.get(condition, float('nan'))):8.3f}"
+            f"{float(ced_row.get('CED', float('nan'))):8.3f} "
+            f"{float(ced_row.get('mean_nn_distance', float('nan'))):8.3f}"
         )
     print("-" * 86)
     print("ADI: higher = more assistant-like advice/explanation turns")
     print("TSI: higher = more social-conversation behavior (rule-based proxy)")
     print("CAS: higher = real previous turn beats shuffled wrong contexts more strongly")
     print("CED: higher = full conversations are more dispersed/diverse within condition")
+    print("NN-dist: higher = conversations are less likely to be near-duplicates of each other")
 
 
 def main() -> None:
@@ -705,7 +841,27 @@ def main() -> None:
         "--conversation-max-chars",
         type=int,
         default=12000,
-        help="truncate full conversation text before CED embedding; 0 means no truncation",
+        help="truncate full conversation text before CED embedding when --ced-text-mode=concat; 0 means no truncation",
+    )
+    parser.add_argument(
+        "--ced-embedding-backend",
+        choices=["auto", "sentence-transformers", "tfidf"],
+        default="auto",
+        help="embedding backend for CED specifically; auto prefers sentence-transformers "
+        "(captures style) and falls back to tfidf (captures topic-word overlap) if it isn't installed",
+    )
+    parser.add_argument(
+        "--ced-text-mode",
+        choices=["turns", "concat"],
+        default="turns",
+        help="turns: embed each turn and mean-pool per conversation (full conversation counts); "
+        "concat: embed the whole joined transcript (sentence encoders effectively only see the opening)",
+    )
+    parser.add_argument(
+        "--projection",
+        choices=["pca", "umap", "none"],
+        default="pca",
+        help="2-D projection of conversation embeddings colored by condition; requires scikit-learn (pca) or umap-learn (umap)",
     )
     args = parser.parse_args()
 
@@ -727,24 +883,43 @@ def main() -> None:
     conv_rows = conversation_metrics(turn_rows)
     group_rows = group_metrics(conv_rows)
 
-    ced_embedder, ced_embedder_name = build_embedder(args.embedding_backend, args.embedding_model)
-    ced_condition_rows, ced_topic_rows = compute_ced(
+    ced_embedder, ced_embedder_name = build_embedder(args.ced_embedding_backend, args.embedding_model)
+    ced_condition_rows, ced_topic_rows, ced_vecs = compute_ced(
         conversations,
         ced_embedder,
+        text_mode=args.ced_text_mode,
         max_chars=args.conversation_max_chars,
     )
+    ced_matched_rows = matched_topic_summary(ced_topic_rows)
 
     write_csv(OUT_DIR / "turn_labels.csv", turn_rows)
     write_csv(OUT_DIR / "conversation_metrics.csv", conv_rows)
     write_csv(OUT_DIR / "group_metrics.csv", group_rows)
     write_csv(OUT_DIR / "ced_by_condition.csv", ced_condition_rows)
     write_csv(OUT_DIR / "ced_by_topic_condition.csv", ced_topic_rows)
+    write_csv(OUT_DIR / "ced_topic_matched_by_condition.csv", ced_matched_rows)
+
+    plot_path = None
+    if args.projection != "none":
+        plot_path = plot_ced_projection(
+            conversations, ced_vecs, OUT_DIR / "ced_projection.png", method=args.projection
+        )
 
     backend_name = cas_embedder_name
     if ced_embedder_name != cas_embedder_name:
-        backend_name = f"CAS={cas_embedder_name}; CED={ced_embedder_name}"
+        backend_name = f"CAS={cas_embedder_name}; CED={ced_embedder_name} ({args.ced_text_mode})"
     print_summary(group_rows, ced_condition_rows, backend_name)
+    if ced_matched_rows:
+        print("\ntopic-matched CED (averaged over topics Switchboard also has):")
+        for row in ced_matched_rows:
+            print(
+                f"  {row['condition']:12} n_topics={row['n_topics']:3d} "
+                f"CED={row['mean_CED_topic_matched']:.3f} "
+                f"NN-dist={row['mean_nn_distance_topic_matched']:.3f}"
+            )
     print(f"\nWrote CSV outputs to {OUT_DIR.relative_to(ROOT)}")
+    if plot_path:
+        print(f"Wrote CED projection plot to {plot_path.relative_to(ROOT)}")
     print("\nNote: TSI/ADI is a rule-based proxy until the team creates human labels. "
           "CAS and CED are automatic embedding metrics.")
 
