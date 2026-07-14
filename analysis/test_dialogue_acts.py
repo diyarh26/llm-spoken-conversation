@@ -14,6 +14,7 @@ from analysis.dialogue_acts import (
     dialogtag_to_fine,
     js_divergence,
     normalize_swda_base,
+    sentence_units,
     transition_jsd,
 )
 
@@ -87,6 +88,16 @@ class DistanceTests(unittest.TestCase):
         left = np.array([[1.0, 0.0], [0.0, 0.0]])
         right = np.array([[1.0, 0.0], [0.0, 1.0]])
         self.assertAlmostEqual(transition_jsd(left, right), 0.5)
+
+
+class GranularityTests(unittest.TestCase):
+    def test_sentence_units_preserve_short_reactions(self) -> None:
+        self.assertEqual(sentence_units("Yeah. I see what you mean! Right?"),
+                         ["Yeah.", "I see what you mean!", "Right?"])
+
+    def test_sentence_units_do_not_split_abbreviations_without_terminal_space(self) -> None:
+        self.assertEqual(sentence_units("I met Dr. Smith yesterday."),
+                         ["I met Dr.", "Smith yesterday."])
 
 
 if __name__ == "__main__":
