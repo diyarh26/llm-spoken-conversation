@@ -16,6 +16,7 @@
 - [ ] **GEN-03**: C3 two independent same-model agents (first-person contexts)
 - [ ] **GEN-04**: C4 two independent different-model agents (Vicuna ↔ Mistral)
 - [ ] **GEN-05**: 12 conditions (C1-C4 × P0/P1/P2) × 50 conversations generated and stored
+- [ ] **GEN-06**: Target conversations drawn as a seeded **topic-stratified random sample** (replaces the first-50 convenience sample); per-architecture decoding tuned on a dev set + documented
 
 ### Analysis
 - [ ] **ANLY-01**: words/turn per condition vs SB (opening / main body / closing)
@@ -25,7 +26,7 @@
 - [ ] **ANLY-05**: Independence Gradient tested (C1 ≥ C2 ≥ C3 ≥ C4 → SB)
 
 ### Extension & Delivery
-- [ ] **EXT-01**: LLM-as-judge humanness rating (if API) OR qualitative failure-mode coding
+- [ ] **EXT-01**: **Dialogue-act structural signature** — human (gold DAMSL) vs LLM (tagged) DA distribution + transition-matrix JSD, bootstrap noise floor, topic-matched comparison, tagger-accuracy report; + acts-outside-human-taxonomy layer. Secondary: alignment trajectory. (Old TSI/CAS/CED → supporting.) See `RESEARCH_DIALOGUE_ACTS.md`
 - [ ] **EXT-02**: final poster / presentation with key figures and narrative
 
 ## v2 Requirements
@@ -59,6 +60,7 @@ Deferred — tracked, not in the current roadmap.
 | GEN-03 | Phase 2 | In Progress |
 | GEN-04 | Phase 2 | In Progress |
 | GEN-05 | Phase 2 | Pending |
+| GEN-06 | Phase 2 | Pending |
 | ANLY-01 | Phase 2 | Pending |
 | ANLY-02 | Phase 2 | Pending |
 | ANLY-03 | Phase 2 | Pending |
@@ -68,10 +70,10 @@ Deferred — tracked, not in the current roadmap.
 | EXT-02 | Phase 3 | Pending |
 
 **Coverage:**
-- v1 requirements: 15 total
-- Mapped to phases: 15
+- v1 requirements: 16 total
+- Mapped to phases: 16
 - Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-06-22*
-*Last updated: 2026-06-22 after GSD setup*
+*Last updated: 2026-07-14 — extension refocused to the dialogue-act signature (EXT-01); added GEN-06 (sampling + decoding). See `RESEARCH_DIALOGUE_ACTS.md`.*

@@ -3,15 +3,17 @@
 ## Overview
 
 Three phases mapping onto the course structure: first validate the measurement pipeline and
-prove generation works (Phase 1), then run the full 6-condition experiment and analyze it
-(Phase 2), then add a novel extension and build the poster (Phase 3). Every comparison is
-against the Switchboard corpus.
+prove generation works (Phase 1), then run the full 12-condition experiment (4 architectures
+× 3 prompts) and analyze it (Phase 2), then add a novel extension and build the poster
+(Phase 3). Every comparison is against the Switchboard corpus. **Reframed 2026-07-14:** the
+extension headline is now a **dialogue-act structural signature** — see
+`RESEARCH_DIALOGUE_ACTS.md`.
 
 ## Phases
 
 - [x] **Phase 1: Pipeline Validation & Generation Pilots** - Validate metrics vs the paper; prove C1/C2 generation works on the VM
 - [ ] **Phase 2: Main Experiment & Analysis** - Generate all 12 conditions (C1-C4 × P0/P1/P2); compute metrics; test the Independence Gradient
-- [ ] **Phase 3: Extension & Presentation** - LLM-judge or qualitative coding; poster
+- [ ] **Phase 3: Extension & Presentation** - dialogue-act structural signature metric (+ alignment trajectory); poster
 
 ## Phase Details
 
@@ -51,21 +53,26 @@ Plans:
 
 Plans:
 - [ ] 02-01: C3 and C4 generators (gated on Phase 1 turn-by-turn result)
-- [ ] 02-02: Generate all 6 conditions at scale
+- [ ] 02-02: Generate all 12 conditions at scale (seeded topic-stratified sample, not first-50)
 - [ ] 02-03: Run ALIGN + marker + turn-length metrics on all conditions
 - [ ] 02-04: Mixed-effects models + gradient test + figures
 
 ### Phase 3: Extension & Presentation
-**Goal**: One novel extension beyond the paper, plus the final poster.
-**Depends on**: Phase 2
+**Goal**: A novel, validated structural metric beyond the paper, plus the final poster.
+**Depends on**: Phase 2 for final numbers, but the human-side baseline can start immediately
+(gold DAMSL tags need no generation). See `RESEARCH_DIALOGUE_ACTS.md`.
 **Requirements**: EXT-01, EXT-02
 **Success Criteria** (what must be TRUE):
-  1. LLM-judge analysis (if API) or systematic qualitative failure-mode coding is complete
-  2. Poster presents the research question, key figures, and the gradient finding clearly
+  1. Human dialogue-act signature computed over the full SwDA corpus (the reference)
+  2. LLM conditions tagged; DA distribution + transition JSD vs human, with bootstrap noise
+     floor and topic-matched comparison; tagger accuracy on gold SB reported
+  3. Secondary: alignment-trajectory (over-alignment + slope) scored per condition
+  4. Poster presents the reframed question (structural human↔LLM difference), key figures,
+     and what narrows the gap vs what is irreducible
 **Plans**: 2
 
 Plans:
-- [ ] 03-01: Extension (LLM-judge or qualitative coding)
+- [ ] 03-01: Dialogue-act signature metric (human baseline → LLM tagging → JSD + transitions + noise floor)
 - [ ] 03-02: Poster + presentation
 
 ## Progress
