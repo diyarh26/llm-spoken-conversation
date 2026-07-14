@@ -1,8 +1,8 @@
 """Dialogue-act structural signatures for Switchboard and generated dialogue.
 
-The human side uses the gold ``act_tag`` field in the local SwDA CSV files.  The
-generated side is tagged with DialogTag and then mapped back to exactly the same
-short-code inventory.  The module deliberately keeps model imports inside the
+The human reference uses the gold ``act_tag`` field in the local SwDA CSV files.
+DialogTag is also applied to both human and sentence-segmented generated units,
+with every view mapped to exactly the same short-code inventory.  The module deliberately keeps model imports inside the
 tagging adapter: ``--human-only`` and cached statistical reruns do not require
 DialogTag, TensorFlow, or torch.
 
@@ -13,8 +13,8 @@ Usage::
     python analysis/dialogue_acts.py --force-retag --validation-conversations 20
 
 The default output directory is ``results/dialogue_acts/``.  No transcript text
-is written: the optional cache contains only generated-data labels and aggregate
-gold validation counts.
+is written: the optional cache contains only human/generated labels, identifiers,
+fingerprints, and aggregate gold calibration counts.
 """
 
 from __future__ import annotations
@@ -719,14 +719,11 @@ def bootstrap_noise_floor(
         raise ValueError(f"Unit-matched draw {unit_count} exceeds {len(pooled)} human units")
     full = np.bincount(pooled, minlength=len(inventory)).astype(float)
     full /= full.sum()
-    rng = random.Random(seed)
-    distances = np.zeros(repetitions, dtype=float)
-    population = list(range(len(pooled)))
-    for repetition in range(repetitions):
-        chosen = rng.sample(population, unit_count)
-        sampled = np.bincount([pooled[i] for i in chosen], minlength=len(inventory)).astype(float)
-        sampled /= sampled.sum()
-        distances[repetition] = js_divergence(sampled, full)
+    rng = np.random.default_rng(seed)
+    sampled_counts = rng.multinomial(unit_count, full, size=repetitions)
+    distances = np.asarray(
+        [js_divergence(sampled, full) for sampled in sampled_counts], dtype=float
+    )
     return float(np.quantile(distances, 0.95)), distances
 
 
@@ -1294,7 +1291,9 @@ Switchboard averages {sum(len(c.fine_labels) for c in gold)/len(gold):.1f} units
 
 DialogTag `{model_name}` was retained after a timeboxed Hugging Face search: the plausible public SwDA checkpoint was token-classification with undocumented utterance-boundary encoding, not a clean sentence-classification replacement. The same-tagger primary view removes the two-ruler confound but cannot remove correlated domain errors on polished LLM text. Full-corpus in-domain fine/coarse agreement is {validation_accuracy(confusion_for_label_set(validation.fine_confusion, 'fine')):.1%}/{validation_accuracy(confusion_for_label_set(validation.fine_confusion, 'coarse')):.1%}; this is calibration, not a held-out accuracy claim. Human hand-labeling of generated text remains out of scope.
 
-Noise floors use {bootstrap_repetitions:,} seeded draws without replacement from tagger-human units, matched separately to each condition's classified-unit count (seed {seed}). The label cache contains labels, IDs, fingerprints, and aggregate confusion only—never Switchboard or generated transcript text. This run {'reused the cache' if cache_used else 'created fresh predictions'}.
+The text-only cross-check is especially important for listener feedback: it finds {transparent_rule_counts(gold)['rule_backchannel_rate']:.1%} short lexical backchannels in humans, while generated conditions range from {min(transparent_rule_counts(v)['rule_backchannel_rate'] for v in generated_groups.values()):.1%} to {max(transparent_rule_counts(v)['rule_backchannel_rate'] for v in generated_groups.values()):.1%}. DialogTag assigns substantially more generated backchannels, so the deficit is not an artifact of relying on its labels.
+
+Noise floors use {bootstrap_repetitions:,} seeded multinomial bootstrap draws from tagger-human units, matched separately to each condition's classified-unit count (seed {seed}). The label cache contains labels, IDs, fingerprints, and aggregate confusion only—never Switchboard or generated transcript text. This run {'reused the cache' if cache_used else 'created fresh predictions'}.
 """
     (output_dir / "README.md").write_text(text, encoding="utf-8")
 
