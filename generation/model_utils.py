@@ -17,6 +17,8 @@ from transformers import (
     StoppingCriteriaList,
 )
 
+from generation.quality import is_near_duplicate  # shared with the post-hoc scorer
+
 VICUNA = "lmsys/vicuna-13b-v1.5-16k"
 MISTRAL = "mistralai/Mistral-7B-Instruct-v0.2"
 
@@ -62,9 +64,15 @@ class SentenceEndStoppingCriteria(StoppingCriteria):
 
 @torch.inference_mode()
 def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
-         do_sample=True, stop_at_sentence=False, min_new_tokens=8,
-         repetition_penalty=1.2, no_repeat_ngram_size=3) -> str:
-    """messages: list of {role, content}. Returns the assistant's text completion."""
+         do_sample=True, stop_at_sentence=False, min_new_tokens=2,
+         repetition_penalty=1.0, no_repeat_ngram_size=0) -> tuple[str, dict]:
+    """messages: list of {role, content}. Returns (text, info).
+
+    info = {"n_new_tokens": int, "hit_token_cap": bool} — cap-hits are logged by the
+    generators because a bound cap truncates turn length, a measured DV.
+    Defaults mirror generation/config.py (DV-safe: penalties off, no real token floor);
+    per-run values come from the config/CLI, not from here.
+    """
     try:
         encoded = tok.apply_chat_template(
             messages, add_generation_prompt=True, return_tensors="pt", return_dict=True
@@ -106,7 +114,59 @@ def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
 
     out = model.generate(**model_inputs, **gen_kwargs)
     new_tokens = out[0][input_len:]
-    return tok.decode(new_tokens, skip_special_tokens=True).strip()
+    info = {
+        "n_new_tokens": int(new_tokens.shape[-1]),
+        "hit_token_cap": int(new_tokens.shape[-1]) >= max_new_tokens,
+    }
+    return tok.decode(new_tokens, skip_special_tokens=True).strip(), info
+
+
+def generate_turn(model, tok, messages, history, labels, *,
+                  max_new_tokens, temperature, top_p, min_new_tokens,
+                  stop_at_sentence, repetition_penalty, no_repeat_ngram_size,
+                  dup_min_words=8, dup_jaccard=0.8, resample_temp_bump=0.15,
+                  counters=None) -> str:
+    """One clean conversational turn, with the procedural quality guards.
+
+    Shared by the C2/C3/C4 turn-by-turn generators (single place, per the no-copy-paste
+    rule). Pipeline: generate → truncate to one turn → strip chatbot residue → then
+      - empty result: ONE fresh retry (models may emit instant EOS now that the token
+        floor is gone); still empty = the model left the conversation, return "".
+      - near-duplicate of an earlier turn (loop): ONE resample at temperature+bump —
+        the procedural replacement for logit-level repetition penalties.
+    `counters` (a dict) accumulates: multi_turn_emissions, hit_token_cap, empty_retries,
+    dup_resamples, dup_kept — all recorded in the output JSON for the degeneration score.
+    """
+    counters = counters if counters is not None else {}
+
+    def _once(temp: float) -> str:
+        raw, info = chat(
+            model, tok, messages,
+            max_new_tokens=max_new_tokens, temperature=temp, top_p=top_p,
+            min_new_tokens=min_new_tokens, stop_at_sentence=stop_at_sentence,
+            repetition_penalty=repetition_penalty,
+            no_repeat_ngram_size=no_repeat_ngram_size,
+        )
+        counters["hit_token_cap"] = counters.get("hit_token_cap", 0) + int(info["hit_token_cap"])
+        turn, ran_past = clean_single_turn(raw, labels)
+        counters["multi_turn_emissions"] = counters.get("multi_turn_emissions", 0) + int(ran_past)
+        return strip_meta_artifacts(turn)
+
+    turn = _once(temperature)
+    if not turn:
+        counters["empty_retries"] = counters.get("empty_retries", 0) + 1
+        turn = _once(temperature)
+        if not turn:
+            return ""
+    if is_near_duplicate(turn, history, dup_min_words, dup_jaccard):
+        counters["dup_resamples"] = counters.get("dup_resamples", 0) + 1
+        retry = _once(temperature + resample_temp_bump)
+        if retry and not is_near_duplicate(retry, history, dup_min_words, dup_jaccard):
+            turn = retry
+        else:
+            counters["dup_kept"] = counters.get("dup_kept", 0) + 1
+            turn = retry or turn
+    return turn
 
 
 def clean_single_turn(text: str, labels=("ParticipantA", "ParticipantB")) -> tuple[str, bool]:

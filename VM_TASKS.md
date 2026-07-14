@@ -1,83 +1,73 @@
-# VM Tasks — Regenerate C1 with repetition controls OFF (2026-07-11, CORRECTED)
+# VM Tasks — Track 1: v3 regeneration (2026-07-14)
 
-Owner: local side. Read `CLAUDE.md` first. **Fire-and-forget job — launch detached, confirm it
-started, then STOP.** It commits and pushes by itself.
+Owner: local side. Read `CLAUDE.md`, then **`generation/GENERATION_SPEC.md`** — it is the
+frozen design for this run (what changed vs v2 and why). This SUPERSEDES the old C1-only
+regen task (2026-07-11); do not run that.
 
-## What & why — READ THIS, the earlier fix was wrong
-The first fix attempt loosened C1's n-gram ban from 3 to 6 and kept a `repetition_penalty` of
-1.15. **It did NOT work** — the re-run still produced fragments (median 9 words). Root cause was
-misdiagnosed: the problem is not the n-gram *size*, it is that C1 must repeat the speaker labels
-(`ParticipantA:` / `ParticipantB:`) on every line, and ANY `repetition_penalty > 1.0` (plus the
-n-gram ban) punishes that required repetition, so the model hits EOS after 1-2 turns.
+Summary of what's new on `main` (already implemented + sanity-checked locally):
+- Targets now come from the committed manifest `generation/target_ids.json`
+  (seeded topic-stratified 50 + 5 dev ids). Generators no longer take "first N".
+- P1/P2 prompts: seeded persona cards + register/brevity; turn countdown in every
+  turn-wise prompt (supervisor fix for non-natural endings).
+- Decoding is DV-safe (`generation/config.py`): no token floor, no sentence-stop, logit
+  penalties OFF, procedural near-duplicate resample instead, generous logged caps,
+  uniform max-turns 40.
+- `chat()` now returns `(text, info)` and generators log quality counters — if you patch
+  anything, keep that contract.
 
-Proof: the early C1 pilots that produced full 250-400-word conversations ran BEFORE these
-controls were added (they were added 2026-07-01 to fix the C3 two-agent loops). C1 all-at-once
-does not have C3's loop failure mode, so it does not need them.
-
-**Corrected fix (now on `main`):** `generate_c1.py` defaults are now `--repetition-penalty 1.0`
-(off) and `--no-repeat-ngram 0` (off) — the exact known-good pilot decoding. This job
-regenerates ONLY C1. C2/C3/C4 are fine and are NOT touched.
-
-## TASK 0 — Clear the failed partial output first (IMPORTANT)
-The previous run wrote ~33 fragment files into `data/generated_v2/C1-P0/` before it was killed.
-The runner resumes by SKIPPING existing ids, so those fragments must be removed or the rerun
-will keep them. The good originals are safe in the `.broken` dirs; only clear the active dirs:
+## TASK 0 — Pull, verify env + GPU (BEFORE anything)
 ```bash
 cd ~/llm-spoken-conversation && git pull --ff-only origin main
-rm -rf data/generated_v2/C1-P0 data/generated_v2/C1-P1 data/generated_v2/C1-P2
-```
-Do NOT touch `data/generated_v2/C1-P0.broken` (etc.) — those are the archived comparison copies.
-
-## TASK 1 — Pull and verify GPU
-```bash
-cd ~/llm-spoken-conversation
-git pull --ff-only origin main
 conda activate convsim
-/anaconda/envs/convsim/bin/python -m py_compile generation/*.py && echo "SYNTAX OK"
+/anaconda/envs/convsim/bin/python -m py_compile generation/*.py prompts/templates.py && echo "SYNTAX OK"
+/anaconda/envs/convsim/bin/python -c "from generation.sampling import load_target_ids, load_dev_ids; t=load_target_ids(); print(len(t), 'targets; dev', load_dev_ids())"
+# expect: 50 targets; dev [3325, 3003, 3595, 4333, 3657]
 nvidia-smi && /anaconda/envs/convsim/bin/python -c "import torch; print('cuda', torch.cuda.is_available())"
 ```
-Confirm the CORRECTED fix is present before launching (both must read default 1.0 / 0):
-```bash
-grep -nE "repetition-penalty|no-repeat-ngram" generation/generate_c1.py
-# expect: --repetition-penalty ... default=1.0   AND   --no-repeat-ngram ... default=0
-```
-If either still shows 1.15 or 6, you did not pull the corrected fix — `git pull` again.
-If `nvidia-smi` shows an **NVML driver/library mismatch**, `sudo reboot`, reconnect,
-`conda activate convsim`, then continue. Never reboot mid-run. (C1 loads only Vicuna, ~9 GB —
-this is a light run, not the C4 two-model case.)
+If `nvidia-smi` shows an **NVML driver/library mismatch**: `sudo reboot` NOW (never
+mid-run), reconnect, re-activate, re-check. C4 loads two models — this is where the last
+run crashed, so get the driver clean before starting.
 
-## TASK 2 — Launch detached, then leave
+## TASK 1 — Dev sweep (tmux; a few hours)
 ```bash
-tmux new-session -d -s c1regen 'cd ~/llm-spoken-conversation && bash generation/run_c1_regen.sh'
+tmux new-session -d -s devsweep 'cd ~/llm-spoken-conversation && PY=/anaconda/envs/convsim/bin/python bash generation/run_v3_devsweep.sh'
+# confirm it started, then leave it:
+sleep 30 && tail -n 20 run_v3_devsweep.log
+```
+When done, judge per GENERATION_SPEC.md §5:
+- `dup_turn_rate < 0.05`, `degeneration_per_conv < 1.0`, no runaway `turn_cap` endings
+  (v2-draft reference: C1-P0 scored dup 0.011 / degen 0.22).
+- READ 2–3 transcripts per condition: register (no helpdesk framing in P1), coherence,
+  natural endings, and that short reactive turns are now actually appearing.
+- If a condition loops with penalties off: raise `repetition_penalty` to **1.05 max** in
+  `generation/config.py` for the TURNWISE config only, rerun that condition's dev ids
+  (`rm -rf data/dev_sweep/<COND>` first), and put both scores in `VM_REPORT.md`.
+
+## TASK 2 — Freeze the config
+Commit `generation/config.py` (even if unchanged, record "sweep passed at defaults" +
+the score table in `VM_REPORT.md`). After this commit the config is FROZEN for the run.
+```bash
+git add generation/config.py VM_REPORT.md data/dev_sweep && git commit -m "freeze(gen-v3): decoding config after dev sweep" && git push
 ```
 
-## TASK 3 — Confirm it started, then STOP
+## TASK 3 — Full regeneration (tmux; ~days)
 ```bash
-sleep 20
-tmux ls                        # expect a "c1regen" session
-tail -n 15 run_c1_regen.log    # expect cuda True, then "C1 P0" and "saved <id> (NNN words)"
+tmux new-session -d -s regen3 'cd ~/llm-spoken-conversation && PY=/anaconda/envs/convsim/bin/python bash generation/run_v3_regen.sh'
+sleep 60 && tail -n 20 run_v3_regen.log   # expect C1-P0 "saved <id>" lines, then STOP babysitting
 ```
-The word count on each `saved` line is the health signal: full C1 conversations are **~200-400
-words**. If you see `saved <id> (5 words)` style fragments, the fix did NOT take — STOP and tell
-Diyar. If the saved lines show a few hundred words each, **you are done — disconnect.** The
-script does C1-P0, then P1, then P2 (50 each) and commits + pushes after each. Do not babysit.
+The script goes C1→C2→C3→C4 × P0/P1/P2 into `data/generated_v3/`, scores each condition,
+and commits + pushes after each. It resumes safely if the session drops (existing ids are
+skipped) — just relaunch the same tmux command.
 
-## TASK 4 — Verify when done (no GPU needed; safe to run anytime)
-```bash
-/anaconda/envs/convsim/bin/python analysis/quality_report.py data/generated_v2
-```
-**GO check:** C1-P0/P1/P2 must now **appear** in the table (they were silently skipped before
-the regex fix) with **medWPT ~15-20** and frag/loop/drift/leak all near 0. If C1 rows are
-missing or medWPT is tiny (<8), the regen did not work — report it.
+## TASK 4 — When done
+Write to `VM_REPORT.md`: the degeneration-score table for all 12 conditions, wall-clock
+per condition, any interventions, and 1–2 example transcripts you'd show the supervisor.
+Push. Local then re-runs Track-2 metrics on `data/generated_v3`.
 
 ## Do NOT
-- Do **not** touch `data/generated/` (pre-fix baseline) or the `.broken` C1 dirs (kept for
-  before/after comparison).
-- Do **not** regenerate C2/C3/C4 — they are fine. (C2's not-closing-at-cap issue is a SEPARATE,
-  later task; do not start it here.)
-- Do **not** run in the foreground or babysit.
-
-## After it pushes
-Local pulls the fresh C1 data, re-runs the quality report + `analysis/evaluate_generated.py`,
-and confirms C1 words/turn is in range before the analysis phase. Then the only open generation
-item is C2 natural-termination (separate task).
+- Do NOT edit `VM_TASKS.md` (local owns it) — everything you produce goes in `VM_REPORT.md`.
+- Do NOT touch `data/generated/` or `data/generated_v2/` (kept as the before/after draft).
+- Do NOT change prompts, the manifest, or decoding beyond the single documented
+  escalation in TASK 1 — the design is frozen (GENERATION_SPEC.md).
+- Do NOT commit Switchboard source data or model weights (`.gitignore` enforces).
+- Do NOT reboot mid-run.

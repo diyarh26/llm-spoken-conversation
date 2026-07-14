@@ -123,13 +123,26 @@ def conversation_no_of(csv_path: Path) -> int:
     return int(csv_path.stem.split("_")[2].split(".")[0])
 
 
-def fewshot_example(turns: int = 10, skip: int = 80) -> str:
+def fewshot_example(turns: int = 10, exclude_ids: set[int] | None = None,
+                    exclude_topics: set[str] | None = None, skip: int = 80) -> str:
     """A cleaned Switchboard excerpt for the P2 few-shot style example.
 
-    Taken from beyond the first `skip` conversations so it never overlaps the generation
-    target set (the first ~50), and truncated to `turns` turns. Different topic by design.
+    With `exclude_ids`/`exclude_topics` (from the sampling manifest): the excerpt is the
+    first conversation in sorted order that is not a generation target or dev id AND whose
+    topic appears nowhere in the target set — so the style example can never be the
+    conversation being imitated, nor even share its topic. Deterministic.
+    Without them: legacy behavior (skip the first `skip` files), kept for old callers.
     """
-    for fp in list(iter_conversation_files())[skip:]:
+    meta = load_metadata() if exclude_topics else {}
+    files = list(iter_conversation_files())
+    if exclude_ids is None and exclude_topics is None:
+        files = files[skip:]
+    for fp in files:
+        cno = conversation_no_of(fp)
+        if exclude_ids and cno in exclude_ids:
+            continue
+        if exclude_topics and meta.get(cno, {}).get("topic_description") in exclude_topics:
+            continue
         convo = parse_conversation(fp)
         if len(convo) >= turns + 2:
             label = {"A": "ParticipantA", "B": "ParticipantB"}

@@ -38,10 +38,12 @@ Full detail + the two-task plan live in **`RESEARCH_DIALOGUE_ACTS.md`**. Summary
   **topic-matched** comparison. Report distributions, not just means.
 - **Sampling decided:** replace the "first-50" convenience sample with a **seeded,
   topic-stratified random** sample of `conversation_no`s (change `target_conversations`).
-- **Two tracks:** T1 regeneration (VM) = NOT started, pending prompt/decoding/model design
-  discussion; T2 measurement (local) = can start now with the human dialogue-act baseline.
-- **Prior `data/generated_v2` is a draft** — it will be superseded once T1 reruns with fixed
-  prompts/decoding/sampling. The generation history below is retained for context.
+- **Two tracks:** T1 regeneration = **design DECIDED + implemented locally (2026-07-14)**,
+  ball is now with the VM (dev sweep → freeze → regen, see `VM_TASKS.md` +
+  `generation/GENERATION_SPEC.md`); T2 measurement (local) = can start now with the human
+  dialogue-act baseline.
+- **Prior `data/generated_v2` is a draft** — superseded by `data/generated_v3` once T1
+  reruns. The generation history below is retained for context.
 
 ## Current Position
 
@@ -62,14 +64,20 @@ Last activity: 2026-06-24 — crash diagnosed; resume plan written to VM_TASKS.m
 3. In parallel: **real main-body replication** (topic-initiation extraction → reproduce the
    paper's 0.57 conceptual alignment + marker rates properly) to close the validation gap.
 
-**Track 1 — regeneration (VM, NOT started, pending design discussion):**
-1. Decide prompts (keep P0 faithful; redesign P1 personas/anti-helpdesk), decoding
-   (per-architecture tuned + documented, DV-safe), model (keep Vicuna), N per condition.
-2. Implement the **seeded topic-stratified sampling** of `conversation_no`s (replace first-N
-   in `generation/*/target_conversations`).
-3. Regenerate all 12 conditions into a fresh dir; then re-run Track-2 metrics on it.
+**Track 1 — regeneration (design DONE 2026-07-14; next actor = VM):**
+1. ~~Design~~ DECIDED: P1 = register + brevity + seeded persona cards (never name a measured
+   behavior); N = 50; Vicuna kept; decoding made DV-safe (the old settings *suppressed the
+   headline DV by construction*: min_new_tokens=16 forbade backchannels, sentence-stop
+   forbade abandoned turns, context-wide rep-penalty suppressed repeated acknowledgments).
+   Turn countdown added to turn-wise prompts (supervisor fix for non-natural endings).
+2. ~~Sampling~~ IMPLEMENTED: committed manifest `generation/target_ids.json` (seed 20260714,
+   topic-proportional over all 1,155; 5-id disjoint dev set; P2 excerpt excluded from both).
+3. VM: dev sweep (`generation/run_v3_devsweep.sh`) → freeze `generation/config.py` →
+   full regen (`generation/run_v3_regen.sh`) into `data/generated_v3` → re-run Track-2
+   metrics on it.
 
-Full detail: `RESEARCH_DIALOGUE_ACTS.md`. VM commands: `VM_TASKS.md`.
+Full detail: `generation/GENERATION_SPEC.md` (design), `RESEARCH_DIALOGUE_ACTS.md`
+(metric), `VM_TASKS.md` (VM commands).
 
 ## Local-session work done (2026-06-24, later)
 
@@ -101,9 +109,13 @@ Full detail: `RESEARCH_DIALOGUE_ACTS.md`. VM commands: `VM_TASKS.md`.
 
 ## Session Continuity
 
-Last session (2026-07-14): **reframed the project + chose the dialogue-act headline metric**
-and settled the stats/sampling design (see the DIRECTION UPDATE above and
-`RESEARCH_DIALOGUE_ACTS.md`). Regeneration (Track 1) not started — pending a prompt/decoding/
-model design discussion. Measurement (Track 2) ready to start with the human DA baseline.
-Resume files: `RESEARCH_DIALOGUE_ACTS.md` (metric + plan), `.planning/PROJECT.md` (decisions),
-`VM_TASKS.md` (VM steps). Auto-memory: [[project-metric-dialogue-acts]], [[project-status-phase2-generation]].
+Last session (2026-07-14, later): **Track-1 generation design decided AND implemented
+locally.** Decisions: P1 = register + brevity + seeded persona cards; N = 50; DV-safe
+decoding (penalties off, procedural duplicate-resample guard, no token floor/sentence-stop);
+seeded topic-stratified manifest `generation/target_ids.json`; turn countdown in turn-wise
+prompts (supervisor request). All four generators rewritten to shared modules; sanity checks
+passed locally (no-GPU paths). Next actor: **VM** — dev sweep → freeze config → regen v3
+(`VM_TASKS.md`). Local can start Track 2 (human DA baseline) in parallel.
+Resume files: `generation/GENERATION_SPEC.md` (design + caveats), `RESEARCH_DIALOGUE_ACTS.md`
+(metric + plan), `VM_TASKS.md` (VM steps). Auto-memory: [[project-metric-dialogue-acts]],
+[[project-status-phase2-generation]].
