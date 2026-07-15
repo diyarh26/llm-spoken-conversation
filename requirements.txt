@@ -15,14 +15,10 @@ pandas
 numpy
 scipy
 matplotlib
+sentence-transformers  # required by analysis/semantic_routes.py; no TF-IDF fallback
 
-# Optional but recommended for analysis/social_metrics.py CAS/CED semantic embeddings.
-# CED defaults to sentence-transformers (falls back to local TF-IDF if not installed) since
-# TF-IDF measures topic-word overlap, not style. scikit-learn draws the CED 2-D projection
-# plot (PCA); umap-learn is an optional alternative projection.
-# sentence-transformers
-# scikit-learn
-# umap-learn
+# analysis/social_metrics.py can still use sentence-transformers for its legacy CAS metric.
+# The canonical conversation-level diversity analysis is analysis/semantic_routes.py.
 
 # ALIGN (Duran et al., 2019) for conceptual/syntactic/lexical alignment is installed
 # SEPARATELY — it is finicky about dependency versions. Follow the install path used in

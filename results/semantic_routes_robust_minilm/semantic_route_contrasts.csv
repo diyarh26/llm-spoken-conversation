@@ -1,0 +1,18 @@
+factor,left_condition,right_condition,n_topics,delta_excess_reuse_right_minus_left,ci_low,ci_high,interpretation,analysis_role
+architecture,C1-P0,C2-P0,7,0.0050285174496508146,-0.03272673141264272,0.048129655497336936,negative means the right condition is less route-repetitive,primary
+architecture,C2-P0,C3-P0,7,-0.012643052864574829,-0.04307975580580281,0.01765347020147404,negative means the right condition is less route-repetitive,primary
+architecture,C3-P0,C4-P0,7,0.004952530300371508,-0.01715565605223254,0.029837394603186303,negative means the right condition is less route-repetitive,primary
+architecture,C1-P1,C2-P1,7,-0.11392793391816926,-0.16098489383094755,-0.05865998243412467,negative means the right condition is less route-repetitive,primary
+architecture,C2-P1,C3-P1,7,0.12236533683567484,0.07964125477339978,0.15388456864392439,negative means the right condition is less route-repetitive,primary
+architecture,C3-P1,C4-P1,7,-0.017691695590150335,-0.05307616938237959,0.020673613637398666,negative means the right condition is less route-repetitive,primary
+architecture,C1-P2,C2-P2,7,-0.1285975026837782,-0.192315900779583,-0.07900082055491495,negative means the right condition is less route-repetitive,exploratory
+architecture,C2-P2,C3-P2,7,0.13495032182408087,0.09232919843806633,0.17820873032598883,negative means the right condition is less route-repetitive,exploratory
+architecture,C3-P2,C4-P2,7,-0.010946451919213115,-0.04386681989043866,0.01786662662410329,negative means the right condition is less route-repetitive,exploratory
+prompt,C1-P0,C1-P1,7,0.030911660331194874,-0.004742067908674029,0.0664485747720696,negative means the right condition is less route-repetitive,primary
+prompt,C1-P1,C1-P2,7,-0.014594702041000144,-0.05179854333609181,0.01952662718265058,negative means the right condition is less route-repetitive,exploratory
+prompt,C2-P0,C2-P1,7,-0.0880447910366252,-0.1442604271824932,-0.03291534027907105,negative means the right condition is less route-repetitive,primary
+prompt,C2-P1,C2-P2,7,-0.0292642708066091,-0.06383557535607384,-0.0009435964299209629,negative means the right condition is less route-repetitive,exploratory
+prompt,C3-P0,C3-P1,7,0.04696359866362447,0.00899830129318599,0.07962944129193857,negative means the right condition is less route-repetitive,primary
+prompt,C3-P1,C3-P2,7,-0.016679285818203077,-0.058752613566941524,0.03097932000424102,negative means the right condition is less route-repetitive,exploratory
+prompt,C4-P0,C4-P1,7,0.024319372773102622,0.0060880236918446195,0.04776459576165518,negative means the right condition is less route-repetitive,primary
+prompt,C4-P1,C4-P2,7,-0.009934042147265855,-0.03980410661620301,0.019182138556989053,negative means the right condition is less route-repetitive,exploratory
