@@ -100,7 +100,7 @@ def main() -> None:
         for i in range(args.max_turns):
             spk = LABELS[i % 2]
             messages = build_c2(args.prompt, a, b, topic, sb_prompt, history, spk,
-                                max_turns=args.max_turns)
+                                max_turns=args.max_turns, conversation_no=cno)
             turn = generate_turn(
                 model, tok, messages, history, LABELS,
                 max_new_tokens=args.max_new_tokens, temperature=args.temperature,

@@ -21,6 +21,8 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
+import random
 import re
 import statistics
 from pathlib import Path
@@ -47,11 +49,20 @@ def clean_text(raw: str) -> str:
     t = re.sub(r"<+[^>]*>+", " ", t)      # <beep>, <<long pause>>
     t = re.sub(r"\{[A-Z]\s", " ", t)       # opening {D {F {C {E {A ...
     t = t.replace("}", " ")
+    t = re.sub(r"\(\(\s*(.*?)\s*\)\)", r"\1", t)  # (( uncertain )) -> keep the words
     for ch in "[]+#":
         t = t.replace(ch, " ")
     t = re.sub(r"-?/", " ", t)             # slash-unit and -/ interruption
+    t = t.replace("--", " ")               # interruption dashes
+    t = re.sub(r"(?:^|\s)-+(?=\s|$)", " ", t)  # stray standalone hyphens
     t = re.sub(r"\s+", " ", t).strip()
     t = re.sub(r"\s+([,.?!])", r"\1", t)   # tidy space before punctuation
+    t = t.strip(" ,")                       # no dangling leading/trailing commas
+    # Drop turns that are only non-verbals: e.g. '<Breathing>.' / '<Lipsmack>' clean to
+    # bare punctuation. Left in, they become phantom 1-word "turns" that inflate the human
+    # short-turn/backchannel rate (2.85% of SB turns) and poison the P2 few-shot example.
+    if not re.search(r"[A-Za-z0-9]", t):
+        return ""
     return t
 
 
@@ -110,8 +121,34 @@ def make_personas(meta: dict):
                 _age(meta["from_caller_birth_year"]), _edu(meta["from_caller_education"]))
     b = Persona("ParticipantB", _sex(meta["to_caller_sex"]),
                 _age(meta["to_caller_birth_year"]), _edu(meta["to_caller_education"]))
-    topic = meta["topic_description"].strip().title()
-    return a, b, topic, meta["prompt"].strip()
+    # word-wise capitalize, not .title() — .title() mangles apostrophes ("WOMEN'S" ->
+    # "Women'S"); .capitalize() per word gives "Women's Roles".
+    topic_desc = meta["topic_description"].strip()
+    topic = " ".join(w.capitalize() for w in topic_desc.split())
+    prompt = _PROMPT_FIXES.get(topic_desc, meta["prompt"].strip())
+    return a, b, topic, prompt
+
+
+# Seven SwDA topic prompts are TRUNCATED in the source metadata, leaving a garbage tail
+# (a dangling "ORY" / "FOR EXAMPLE", or a word cut mid-token: "TEN Y[EARS AGO]" -> "TENY",
+# "FOR YOU?" -> "YOUY"). These are source-data artifacts, not prompt-design choices, so we
+# restore each topic's clean intended instruction — verbatim style (ALL CAPS) preserved so
+# P0 stays a faithful replication anchor and P1/P2 naturalize the casing. Keyed by topic.
+_PROMPT_FIXES = {
+    "PETS": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+    "TRIAL BY JURY": "DISCUSS POSSIBLE CHANGES IN THE WAY TRIALS BY JURY ARE CONDUCTED.",
+    "JOB BENEFITS": ("WHAT DO YOU CONSIDER THE MOST IMPORTANT BENEFITS BESIDES SALARY IN A "
+                     "JOB WITH A LARGE ORGANIZATION?  HOW SATISFIED ARE YOU WITH THE CURRENT "
+                     "BENEFITS OF YOUR JOB?"),
+    "DRUG TESTING": ("HOW DO YOU FEEL ABOUT THE PRACTICE OF SOME COMPANIES OR GOVERNMENT "
+                     "AGENCIES TESTING EMPLOYEES OR PROSPECTIVE EMPLOYEES FOR DRUGS?  IS "
+                     "RANDOM SPOT TESTING JUSTIFIED?  WHAT LIMITS SHOULD THERE BE?"),
+    "POLITICS": ("DISCUSS ANY RECENT POLITICAL ELECTIONS OR MOVEMENT THAT YOU AND THE OTHER "
+                 "CALLER CONSIDER INTERESTING OR IMPORTANT."),
+    "SOCIAL CHANGE": ("DISCUSS RECENT SOCIAL CHANGES.  HOW IS LIFE IN AMERICA DIFFERENT "
+                      "TODAY COMPARED TO LIVING TEN YEARS AGO?"),
+    "WOODWORKING": "PLEASE DISCUSS WOODWORKING.  IS IT A HOBBY FOR YOU?",
+}
 
 
 def iter_conversation_files(root: Path = DATA_ROOT):
@@ -121,6 +158,67 @@ def iter_conversation_files(root: Path = DATA_ROOT):
 def conversation_no_of(csv_path: Path) -> int:
     """sw_0001_4325.utt.csv -> 4325 (the SwDA conversation_no, the metadata join key)."""
     return int(csv_path.stem.split("_")[2].split(".")[0])
+
+
+# --- P2 few-shot pool (v3) ------------------------------------------------------------
+#
+# The pool is a committed RECIPE (generation/fewshot_pool.json: conversation ids + turn
+# offsets only, NO transcript text — Switchboard is LDC-licensed and never committed). At
+# generation time we reconstruct each excerpt's text from the local corpus. Each generated
+# conversation draws k excerpts, seeded by its conversation_no, so the draw is deterministic
+# and identical across architectures (paired), yet no single excerpt dominates all of P2.
+
+_POOL_PATH = Path(__file__).resolve().parent.parent / "generation" / "fewshot_pool.json"
+_FILE_INDEX: dict[int, Path] | None = None
+_POOL_CACHE: list[dict] | None = None
+_LABEL = {"A": "ParticipantA", "B": "ParticipantB"}
+
+
+def _file_index() -> dict[int, Path]:
+    global _FILE_INDEX
+    if _FILE_INDEX is None:
+        _FILE_INDEX = {conversation_no_of(fp): fp for fp in iter_conversation_files()}
+    return _FILE_INDEX
+
+
+def load_fewshot_pool() -> list[dict]:
+    """Reconstruct the P2 excerpt pool from the committed recipe + local Switchboard.
+
+    Returns [{conversation_no, topic, text}] where text is the rendered excerpt
+    (ParticipantA/B labels). Cached. Empty list if the recipe or corpus is absent.
+    """
+    global _POOL_CACHE
+    if _POOL_CACHE is not None:
+        return _POOL_CACHE
+    pool: list[dict] = []
+    try:
+        recipe = json.loads(_POOL_PATH.read_text(encoding="utf-8"))
+        idx = _file_index()
+        for e in recipe["excerpts"]:
+            fp = idx.get(e["conversation_no"])
+            if fp is None:
+                continue
+            turns = parse_conversation(fp)[e["start"]:e["start"] + e["window"]]
+            if not turns:
+                continue
+            text = "\n".join(f"{_LABEL.get(spk, spk)}: {txt}" for spk, txt in turns)
+            pool.append({"conversation_no": e["conversation_no"],
+                         "topic": e["topic"], "text": text})
+    except Exception:
+        pool = []
+    _POOL_CACHE = pool
+    return pool
+
+
+def fewshot_examples(conversation_no: int, k: int = 2) -> list[dict]:
+    """k pool excerpts for one conversation, drawn seeded by conversation_no (deterministic,
+    same for that id across all architectures). Pool topics are already disjoint from every
+    target topic, so no drawn excerpt can share the generated conversation's topic."""
+    pool = load_fewshot_pool()
+    if not pool:
+        return []
+    rng = random.Random(f"fewshot:v3:{conversation_no}")
+    return rng.sample(pool, min(k, len(pool)))
 
 
 def fewshot_example(turns: int = 10, exclude_ids: set[int] | None = None,

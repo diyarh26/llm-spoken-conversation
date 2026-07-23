@@ -78,7 +78,7 @@ def main() -> None:
     for cno in todo:
         a, b, topic, sb_prompt = make_personas(meta[cno])
         assign_cards(a, b, cno)   # seeded persona cards; only the P1/P2 prompts render them
-        messages = build_c1(args.prompt, a, b, topic, sb_prompt)
+        messages = build_c1(args.prompt, a, b, topic, sb_prompt, conversation_no=cno)
         text, info = chat(
             model, tok, messages,
             max_new_tokens=args.max_new_tokens,

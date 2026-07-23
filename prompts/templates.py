@@ -33,6 +33,7 @@ turn-by-turn dialogue with a mutual "Hello!" opening, as the paper did.
 """
 
 import random
+import re
 from dataclasses import dataclass
 
 
@@ -120,10 +121,14 @@ def _length_clause() -> str:
 
 
 def _p1_style() -> str:
+    # Turn LENGTH is the one deliberately instructed dimension (declared caveat). Widening
+    # "a sentence or two" to include "a word or two" removes the implicit floor that made
+    # short reactive turns read as forbidden — WITHOUT naming any dialogue act (no "react",
+    # "agree", "acknowledge", "backchannel"), so every measured act stays unprompted.
     return (
-        "Speak casually and informally, the way people actually talk out loud on the phone. "
-        "Keep each turn short — often just a sentence or two. Let the conversation end "
-        "naturally when it feels finished; do not pad or stretch it out."
+        "Talk the way people actually do out loud on the phone — casual and uneven: "
+        "sometimes a sentence or two, sometimes just a word or two. Let the conversation "
+        "end naturally when it feels finished; don't pad it out."
     )
 
 
@@ -140,14 +145,28 @@ def _turn_status(history: list, max_turns: int | None) -> str:
 
 
 def _peer_guard() -> str:
+    # Tightened: one positive framing + a single anti-assistant cue. The old version was a
+    # long negation block repeated every turn AND quoted the exact phrases we don't want
+    # ("how can I help you"), which can prime them. Assistant register is a measured DV, so
+    # P0 (no guard) is the un-instructed baseline; P1's guard tests whether framing reduces
+    # drift — reported as instructed, not emergent.
     return (
-        "You are an ordinary member of the public — NOT an AI assistant, agent, operator, or a "
-        "representative of any company or service. The other caller is also an ordinary person; "
-        "the two of you are equals who were each asked to phone a stranger and chat. Never say "
-        "things like 'how can I help you' or 'is this the ... service', and do not offer help "
-        "or recommendations as if it were your job — just share your own views and ask about "
-        "theirs, the way two regular people would."
+        "You are just an ordinary person — not an assistant, agent, or representative of "
+        "anything. Share your own experiences and opinions and ask about theirs, the way two "
+        "equals would."
     )
+
+
+def _naturalize(text: str) -> str:
+    """The SB prompt is stored verbatim in ALL CAPS ('DISCUSS THE CHANGES...'). For P1/P2,
+    present it in natural sentence case so it reads like something a person was asked, not a
+    shout. Content is preserved — only casing changes. P0 keeps it verbatim (replication)."""
+    t = re.sub(r"\s+", " ", text.strip())
+    letters = [c for c in t if c.isalpha()]
+    if letters and sum(c.isupper() for c in letters) / len(letters) > 0.6:
+        t = t.lower()
+        t = re.sub(r"(^|[.!?]\s+)([a-z])", lambda m: m.group(1) + m.group(2).upper(), t)
+    return t
 
 
 def _topic_clause(topic: str, sb_prompt: str | None, level: str) -> str:
@@ -155,53 +174,48 @@ def _topic_clause(topic: str, sb_prompt: str | None, level: str) -> str:
     instruction = sb_prompt or topic
     if level == "P0":
         return f"The topic of the conversation is: {instruction}"
+    # P1/P2: state the topic once, in natural case, framed as the prompt a real SB caller
+    # was actually handed (authentic) — no ALL-CAPS shout, no duplicated topic line.
     return (
-        f"You were both asked to chat about this topic: {topic}. Shared discussion goal (talk "
-        f"it over together as equals, comparing your own experiences and opinions): {instruction}"
+        f"The two of you were each asked to phone a stranger and talk about {topic.lower()}. "
+        f"The prompt you were given was: {_naturalize(instruction)} "
+        "Talk it over as equals, comparing your own experiences and opinions."
     )
 
 
-_FEWSHOT_EXAMPLE: str | None = None
+def _fewshot_block(level: str, conversation_no: int | None = None, k: int = 2) -> str:
+    """For P2 only: k real Switchboard excerpts (different topics) as a style example.
 
-
-def _fewshot_block(level: str) -> str:
-    """For P2 only: a real Switchboard excerpt (different topic) shown as a style example."""
-    global _FEWSHOT_EXAMPLE
-    if level != "P2":
+    Draws from the committed pool recipe (generation/fewshot_pool.json), seeded by
+    conversation_no so the draw is deterministic and identical across architectures.
+    The framing is deliberately NEUTRAL — it never names a dialogue act, backchannel, or
+    turn behavior. The only thing P2 adds over P1 is the examples themselves, so the P2−P1
+    contrast isolates the effect of showing real conversation (a steerability probe). P2's
+    marker/backchannel rates are therefore example-driven, reported as such."""
+    if level != "P2" or conversation_no is None:
         return ""
-    if _FEWSHOT_EXAMPLE is None:
-        try:
-            from analysis.swda import fewshot_example
-            try:
-                # Source the excerpt outside the sampled target/dev ids AND their topics,
-                # so P2's style example never overlaps what we generate or compare against.
-                from generation.sampling import load_manifest
-                m = load_manifest()
-                excl = set(m["target_ids"]) | set(m["dev_ids"])
-                _FEWSHOT_EXAMPLE = (
-                    fewshot_example(exclude_ids=excl,
-                                    exclude_topics=set(m["target_topics"]))
-                    # if no long-enough conversation exists outside the target topics,
-                    # relax to id-exclusion only rather than losing the example
-                    or fewshot_example(exclude_ids=excl)
-                )
-            except Exception:
-                _FEWSHOT_EXAMPLE = fewshot_example()  # legacy skip-80 fallback
-        except Exception:
-            _FEWSHOT_EXAMPLE = ""
-    if not _FEWSHOT_EXAMPLE:
+    try:
+        from analysis.swda import fewshot_examples
+        picks = fewshot_examples(conversation_no, k=k)
+    except Exception:
+        picks = []
+    if not picks:
         return ""
+    blocks = "\n\n".join(
+        f"Example {i} — two strangers talking about {e['topic'].title()}:\n{e['text']}"
+        for i, e in enumerate(picks, 1)
+    )
     return (
-        "\n\nHere is an example of a real, natural telephone conversation between two strangers "
-        "on a DIFFERENT topic, to show the spoken style (short, casual back-and-forth):\n"
-        f"{_FEWSHOT_EXAMPLE}\n(End of example.)\n"
+        f"\n\nHere are {len(picks)} short excerpts from real recorded telephone conversations "
+        "between strangers on DIFFERENT topics, to show how this kind of call actually "
+        f"sounds:\n\n{blocks}\n(End of examples.)\n"
     )
 
 
 # --- C1: all at once -----------------------------------------------------------------
 
 def build_c1(prompt_level: str, a: Persona, b: Persona, topic: str,
-             sb_prompt: str | None = None) -> list[dict]:
+             sb_prompt: str | None = None, conversation_no: int | None = None) -> list[dict]:
     if prompt_level == "P0":
         prompt = (
             "Write the log of a telephone conversation between two people who do not know each "
@@ -217,7 +231,7 @@ def build_c1(prompt_level: str, a: Persona, b: Persona, topic: str,
             f"know each other. {a.label} is {a.describe()}. {b.label} is {b.describe()}. "
             f"{a.card_third_person()} {b.card_third_person()} "
             f"{_topic_clause(topic, sb_prompt, 'P1')} {_p1_style()} {_peer_guard()}"
-            f"{_fewshot_block(prompt_level)}\n"
+            f"{_fewshot_block(prompt_level, conversation_no)}\n"
             f"It opens with:\n{a.label}: Hello!\n{b.label}: Hello!\n"
             f"Write the full conversation, one turn per line as '{a.label}: ...' / '{b.label}: ...'."
         )
@@ -229,7 +243,7 @@ def build_c1(prompt_level: str, a: Persona, b: Persona, topic: str,
 def build_c2(prompt_level: str, a: Persona, b: Persona, topic: str,
              sb_prompt: str | None,
              history: list[tuple[str, str]], next_speaker: str,
-             max_turns: int | None = None) -> list[dict]:
+             max_turns: int | None = None, conversation_no: int | None = None) -> list[dict]:
     transcript = render_transcript(history) if history else f"{a.label}: Hello!\n{b.label}: Hello!"
     me = {a.label: a, b.label: b}[next_speaker]
     if prompt_level == "P0":
@@ -248,7 +262,7 @@ def build_c2(prompt_level: str, a: Persona, b: Persona, topic: str,
             f"not know each other. {a.label} is {a.describe()}; {b.label} is {b.describe()}. "
             f"{a.card_third_person()} {b.card_third_person()} "
             f"{_topic_clause(topic, sb_prompt, 'P1')} {_p1_style()} {_peer_guard()}"
-            f"{_fewshot_block(prompt_level)}\n"
+            f"{_fewshot_block(prompt_level, conversation_no)}\n"
             f"Conversation so far:\n{transcript}\n{_turn_status(history, max_turns)}\n"
             f"Write ONLY {next_speaker}'s next single turn — just the utterance, no label."
         )
@@ -260,7 +274,7 @@ def build_c2(prompt_level: str, a: Persona, b: Persona, topic: str,
 def build_agent(prompt_level: str, me: Persona, partner: Persona, topic: str,
                 sb_prompt: str | None,
                 history: list[tuple[str, str]],
-                max_turns: int | None = None) -> list[dict]:
+                max_turns: int | None = None, conversation_no: int | None = None) -> list[dict]:
     """Build the message list from `me`'s point of view (used for both C3 and C4).
 
     The partner is deliberately NOT described beyond "a stranger" (P1/P2): the agents are
@@ -279,7 +293,7 @@ def build_agent(prompt_level: str, me: Persona, partner: Persona, topic: str,
             f"You are {me.describe()} on a telephone call with an ordinary stranger you just met. "
             f"{me.card_first_person()} "
             f"{_topic_clause(topic, sb_prompt, 'P1')} {_p1_style()} {_peer_guard()}"
-            f"{_fewshot_block(prompt_level)} "
+            f"{_fewshot_block(prompt_level, conversation_no)} "
             "Reply with only what you say next, as a single spoken turn — no speaker label."
             f"{_turn_status(history, max_turns)}"
         )

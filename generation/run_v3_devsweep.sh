@@ -10,14 +10,21 @@ LOG=run_v3_devsweep.log
 DEV_IDS=$($PY -c "from generation.sampling import load_dev_ids; print(','.join(map(str, load_dev_ids())))")
 echo "dev ids: $DEV_IDS" | tee -a "$LOG"
 
+# P0 (baseline) / P1 (spoken register + word-or-two + persona cards) / P2 (+ few-shot pool).
+# All three so the sweep shows whether the prompt changes actually move backchannels/short
+# turns UP from P0 -> P1 -> P2 (the whole point of this test).
 for arch in c1 c2 c3 c4; do
-  for p in P0 P1; do
+  for p in P0 P1 P2; do
     echo "=== dev ${arch}-${p} $(date -u +%FT%TZ) ===" | tee -a "$LOG"
     $PY "generation/generate_${arch}.py" --prompt "$p" --ids "$DEV_IDS" \
         --out-root data/dev_sweep 2>&1 | tee -a "$LOG"
   done
 done
 
+echo "=== degeneration score ===" | tee -a "$LOG"
 $PY generation/degeneration_score.py data/dev_sweep/C*-P* | tee -a "$LOG"
-echo "SWEEP DONE — check dup_turn_rate < 0.05 and degeneration_per_conv < 1.0 per condition," \
-     "then read 2-3 transcripts per condition before freezing config.py." | tee -a "$LOG"
+echo "=== did-it-improve report (short turns + backchannels vs human) ===" | tee -a "$LOG"
+$PY generation/dev_report.py data/dev_sweep/C*-P* | tee -a "$LOG"
+echo "SWEEP DONE — (1) degeneration: dup_turn_rate < 0.05 and degeneration_per_conv < 1.0;" \
+     "(2) dev_report: P1/P2 backchannel% and <=3w% should rise toward HUMAN; (3) read 2-3" \
+     "transcripts per condition. Then freeze config.py." | tee -a "$LOG"

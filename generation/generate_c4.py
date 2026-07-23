@@ -116,7 +116,7 @@ def main() -> None:
             partner = personas[LABELS[(i + 1) % 2]]
             model, tok, _model_name = loaded[spk]
             messages = build_agent(args.prompt, me, partner, topic, sb_prompt, history,
-                                   max_turns=args.max_turns)
+                                   max_turns=args.max_turns, conversation_no=cno)
             turn = generate_turn(
                 model, tok, messages, history, LABELS,
                 max_new_tokens=args.max_new_tokens, temperature=args.temperature,
