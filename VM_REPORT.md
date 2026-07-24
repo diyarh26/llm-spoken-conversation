@@ -138,6 +138,261 @@ magnitude of conceptual alignment. The ALIGN phase-1 gate is cleared.
 
 ---
 
+## M60 stopgap resume — manually stopped after one additional C3-P0 (2026-07-24)
+
+The resumable sweep was relaunched from `897e748` with the exact TASK 1 environment:
+`PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True`,
+`C4_DEVICE_A=cuda:0`, and `C4_DEVICE_B=cuda:1`. Syntax, the 10-excerpt few-shot
+pool, CUDA, and both M60s passed preflight. C1/C2 and the existing C3 files were
+skipped correctly.
+
+After about 2 hours 20 minutes, only one additional C3-P0 conversation had been
+saved (C3-P0 increased from 2/5 to 3/5). The next conversation was still in
+flight. The run was stopped on user instruction because the two M60s remained
+impractically slow. The interrupted conversation was not written. C4 was never
+reached.
+
+Stop verification:
+
+- tmux session `devsweep`: stopped.
+- Generation processes: none.
+- GPU 0 and GPU 1 after stop: 0 MiB, 0% utilization.
+- Preserved output: all C1/C2 conditions (5 each), C3-P0 (3), C3-P1 (1).
+
+### Dev report on all preserved output
+
+| condition | convs | mean WPT | median WPT | <=3w % | backchannel % | median turns |
+|---|---:|---:|---:|---:|---:|---:|
+| HUMAN (SB) | 300 | 12.8 | 6 | 39.7% | 30.8% | 82 |
+| C1-P0 | 5 | 17.5 | 18 | 0.9% | 0.0% | 21 |
+| C1-P1 | 5 | 18.6 | 16 | 1.3% | 2.5% | 17 |
+| C1-P2 | 5 | 17.9 | 19 | 0.9% | 1.8% | 24 |
+| C2-P0 | 5 | 58.8 | 56 | 0.0% | 0.0% | 42 |
+| C2-P1 | 5 | 11.1 | 11 | 3.5% | 4.0% | 42 |
+| C2-P2 | 5 | 11.7 | 10 | 4.5% | 2.0% | 42 |
+| C3-P0 | 3 | 45.4 | 60 | 1.4% | 0.0% | 26 |
+| C3-P1 | 1 | 41.9 | 34 | 0.0% | 0.0% | 17 |
+| C3-P2 | 0 | — | — | — | — | — |
+
+### Degeneration score on all preserved output
+
+| condition | convs | dup turn rate | turn cap rate | token cap rate | degeneration / conv | mean words/turn | multi-turn emission rate |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| C1-P0 | 5 | 0.0270 | 0.0000 | 0.0000 | 0.600 | 17.16 | 0.0000 |
+| C1-P1 | 5 | 0.0000 | 0.0000 | 0.0000 | 0.000 | 17.72 | 0.0000 |
+| C1-P2 | 5 | 0.0000 | 0.0000 | 0.0000 | 0.000 | 16.81 | 0.0000 |
+| C2-P0 | 5 | 0.1000 | 0.8000 | 0.0444 | 9.600 | 58.81 | 0.0889 |
+| C2-P1 | 5 | 0.0000 | 1.0000 | 0.0000 | 1.000 | 11.14 | 0.0000 |
+| C2-P2 | 5 | 0.0050 | 1.0000 | 0.0000 | 1.400 | 11.70 | 0.0050 |
+| C3-P0 | 3 | 0.0139 | 0.3333 | 0.5278 | 13.667 | 45.43 | 0.7083 |
+| C3-P1 | 1 | 0.0000 | 0.0000 | 0.6000 | 9.000 | 41.87 | 0.8667 |
+| C3-P2 | 0 | — | — | — | — | — | — |
+
+### Representative C2-P1 transcripts
+
+#### C2-P1 / 3325
+
+```text
+A: Hello!
+B: Hello!
+A: So, do you have any pets?
+B: Yes, I have a cat.
+A: That's great! What's your cat's name?
+B: Her name is Whiskers.
+A: Oh, that's such a cute name!
+B: She's a real character.
+A: What kind of personality does she have?
+B: She's very independent and aloof, but also loving when she wants to be.
+A: What kind of cat breed is Whiskers?
+B: She's a rescue cat, so we're not sure what breed she is exactly.
+A: That's so cool that you rescued her.
+B: Yeah, it was a great experience. We found her at a shelter and she's been such a good companion.
+A: That's wonderful. I'm glad she found a good home with you.
+B: Do you have any pets, too?
+A: Yeah, I have a dog.
+B: What kind of dog do you have?
+A: A: She's a Labrador Retriever mix.
+B: Oh, that's such a popular breed. What's her name?
+A: I: Her name is Bella.
+B: What's Bella like as a pet?
+A: I: She's very friendly and loves to play fetch.
+B: What kind of personality does Bella have?
+A: What kind of activities do you like to do with your cat?
+B: Do you have any favorite pet memories you'd like to share with me?
+A: I love taking her to the park and watching her run around.
+B: That sounds like so much fun!
+A: I: I also enjoy taking her to the beach and watching her swim in the ocean.
+B: That sounds like a great time for both of you.
+A: I: What about you? Do you have any favorite activities to do with your cat?
+B: I take her on little adventures around the neighborhood and she always seems to enjoy it.
+A: I: That sounds like a fun way to spend time with your cat.
+B: It's great to hear how much you enjoy spending time with your pets. What's the most memorable moment you've shared with Bella?
+A: I: The most memorable moment with Bella was when she helped me recover from a difficult breakup.
+B: That's really sweet of her.
+A: I: Yeah, she really helped me get through a tough time.
+B: That's really great that your pet could help you through a difficult time.
+A: What about you, do you have any memorable moments with your cat?
+B: Yeah, there was a time when she was really sick, and I was so worried about her, but she pulled through and it was a big relief.
+A: I'm sorry to hear that your cat was sick, but I'm glad she pulled through.
+B: Yeah, it was a really scary time, but she's doing much better now.
+```
+
+#### C2-P1 / 4333
+
+```text
+A: Hello!
+B: Hello!
+A: So, what's your take on taxes?
+B: I think they're necessary, but they can be frustrating.
+A: Yeah, I agree.
+B: I've had some personal experience with taxes that's made me appreciate their importance.
+A: Can you tell me more about your personal experience with taxes?
+B: Well, I had a friend who had to deal with some serious tax issues and it really opened my eyes to how important they are in making sure everyone pays their fair share.
+A: I'm sorry to hear that your friend had to deal with tax issues.
+B: Yeah, it was really tough for him to navigate through the system on his own.
+A: I can understand how that would be difficult for your friend and also how it would make you appreciate the importance of taxes.
+B: It just seems like there should be a better way to make sure everyone is paying their fair share without putting people through so much stress.
+A: Yeah, I agree.
+B: Do you think there are any ways we could make the tax system more fair and efficient?
+A: I think there could be a way to simplify the tax code and make it more accessible to people who aren't tax experts.
+B: Maybe we could also look into implementing a more progressive tax system.
+A: I think so too.
+B: It would also be helpful to have more transparency in how the tax revenue is used.
+A: I agree, transparency is important.
+B: Maybe we could also look into having more support for those who are struggling to navigate the tax system.
+A: Yeah, that would definitely be helpful.
+B: Yeah, having more support for those who are struggling would be really beneficial.
+A: And maybe more education on taxes for everyone, so people can understand how the system works and what their responsibilities are.
+B: Definitely, education is key.
+A: It seems like there are a lot of potential solutions to make the tax system more fair and efficient.
+B: Exactly.
+A: So, what do you think would be the best way to implement some of these changes?
+B: Well, I think we should start by raising awareness and advocating for these changes.
+A: I agree, raising awareness and advocating for these changes is a good starting point.
+B: Maybe we could also push for more government transparency in how tax revenue is allocated.
+A: I think that's a great idea.
+B: I think we should also push for more support for those who are struggling with the tax system.
+A: And maybe more resources for small business owners to ensure they are compliant with the tax code.
+B: I agree, more resources for small business owners would be really helpful.
+A: So, what are your thoughts on the current tax system?
+B: And there are some specific areas where I think we could make improvements, like simplifying the tax code and making it more accessible for non-experts.
+A: Yeah, I think we're on the same page about the need for improvement in the tax system.
+B: I think we should also advocate for more oversight to prevent tax fraud and evasion.
+A: I think that's a great point.
+B: And maybe we could also work on making the tax filing process more user-friendly for everyone.
+A: I think all those ideas are great, and I hope we can work towards implementing some of them.
+B: Yeah, I agree, making the tax filing process more user-friendly would be a great improvement.
+```
+
+### Representative C2-P2 transcripts
+
+#### C2-P2 / 3657
+
+```text
+A: Hello!
+B: Hello!
+A: So, do you have a computer at home?
+B: Yes, I do.
+A: What kind of computer do you have at home?
+B: It's a desktop computer.
+A: What do you use your computer for?
+B: I use it mostly for work and personal stuff, like browsing the internet and checking email.
+A: What do you like about your computer?
+B: I like that it's pretty reliable and has a lot of storage space.
+A: I use my computer mostly for work too, but I also like to play games on it in my free time.
+B: And how about you? What kind of computer do you have?
+A: I have a laptop.
+B: What kind of games do you like to play on your laptop?
+A: Mostly strategy and puzzle games, but I'm open to trying new things.
+B: I'm mostly into reading and research on my computer.
+A: I also use my laptop for work sometimes, but I prefer using it for entertainment and staying connected with friends and family.
+B: I also like to keep up with current events and news on my computer.
+A: I like to stay informed too, but I usually use my phone for that.
+B: And what about you? Do you have any favorite websites or apps that you like to use on your laptop?
+A: I mostly use social media and streaming services.
+B: I also use the library's online resources for research and reading.
+A: I've been thinking about getting a new laptop, but I'm not sure which one to get.
+B: What kind of features are you looking for in a new laptop?
+A: I'm not sure yet, I'm still trying to decide.
+B: I've been using my current laptop for a few years now and it's still functional, but I'm sure there are some newer models out there that would be more efficient.
+A: I'm also considering getting a tablet to use for work, but I'm not sure if it would be more convenient or just another device to carry around.
+B: Well, I think a tablet could be useful for work if you find the right apps and accessories for it.
+A: I'm not really familiar with tablets, so I'll have to do some research and see if it would be worth the investment.
+B: I've found that a good case or cover can make a big difference in protecting the tablet and making it more convenient to use.
+A: What kind of accessories do you recommend for a tablet?
+B: I would recommend getting a stylus pen and a good case or cover that can also serve as a stand.
+A: How about you? Have you ever tried using a tablet for work?
+B: Yeah, I've used a tablet for work a few times, and it can be quite convenient for certain tasks.
+A: I'll have to look into that.
+B: Yeah, I've found that a stylus pen can be quite useful for interacting with the screen and avoiding fingerprints.
+A: Thanks for the advice, I'll have to keep that in mind if I end up getting a tablet.
+B: I've also found that it's important to get a tablet with a good display and enough processing power to handle the tasks you'll be using it for.
+A: Thanks for the advice.
+B: Yeah, and make sure you get one with a long battery life if you'll be using it for extended periods of time.
+A: Thanks for the advice, I'll definitely keep all that in mind.
+B: Do you have any other questions about computers or anything else you'd like to talk about?
+```
+
+#### C2-P2 / 4333
+
+```text
+A: Hello!
+B: Hello!
+A: So, what do you think about taxes?
+B: Well, I think they're necessary for the functioning of society, but I also think they could be better managed.
+A: Yeah, I agree that they're necessary, but sometimes it feels like the system is rigged against certain groups.
+B: Yeah, I know what you mean.
+A: It's frustrating to see how the wealthy can avoid paying their fair share.
+B: I have a friend who's a accountant, and he says the same thing.
+A: And it seems like the burden always falls on the middle class and the poor.
+B: Yeah, it's like they're paying for the benefits that the wealthy are enjoying.
+A: It's hard to feel like our voices are heard when it comes to tax reform.
+B: Yeah, and it's even harder when the government is not transparent about how they spend our taxes.
+A: What are your thoughts on how the tax system could be improved?
+B: I think they should make the tax system more progressive so that the wealthy pay a higher percentage of their income in taxes.
+A: I think so too.
+B: Yeah, and also make sure that corporations are paying their fair share.
+A: And I think there should be more transparency in how the government spends our taxes.
+B: And also, have a more streamlined process for filing taxes.
+A: Yeah, and I think there should be more funding for social programs like education and healthcare.
+B: Yeah, it's definitely important to make sure that the tax system is fair and efficient.
+A: I also think that there should be more incentives for people to give back to their communities through charitable donations.
+B: I agree, giving back to the community is important.
+A: I think we should also consider how taxes affect small businesses and entrepreneurs, as they are a vital part of the economy.
+B: Yeah, I think small businesses should be given a break in terms of taxes to encourage growth and job creation.
+A: Yeah, and I think there should be more incentives for people to give back to their communities through charitable donations.
+B: Yeah, it's definitely important to support small businesses and entrepreneurs.
+A: What do you think would be the best way to ensure that small businesses are not negatively impacted by taxes?
+B: I think they should be given tax breaks or incentives for creating jobs and contributing to the local economy.
+A: Yeah, I think that would be a good way to support small businesses and entrepreneurs.
+B: And also, maybe have a simplified tax system that's easier for everyone to understand and navigate.
+A: Yeah, that sounds like a good idea.
+B: Yeah, and maybe have a system where people can easily file their taxes online.
+A: And I think there should be more education about the tax system so that people can understand how it works and how they can participate in making it better.
+B: Yeah, I think education about the tax system is important for everyone to understand how it works.
+A: Do you think that education should start at a younger age so that people can understand the tax system better?
+B: Yeah, I think that's a good idea.
+A: Yeah, I think that's a good idea.
+B: I also think that people should have more say in how their taxes are spent.
+A: Yeah, I agree that people should have more say in how their taxes are spent.
+B: And maybe have more transparency in the government's spending so that people can see how their taxes are being used.
+A: Yeah, I think that's a good idea too.
+B: Well, I think there should be more oversight to make sure that taxes are being used effectively.
+```
+
+### Interpretation
+
+P1/P2 moved C2 strongly toward HUMAN on turn length and raised short-turn and
+backchannel rates relative to P0, but the gains remain small in absolute terms:
+3.5–4.5% short turns and 2–4% backchannels versus HUMAN at 39.7% and 30.8%.
+All C2-P1/P2 conversations hit the turn cap, and P2 has mild duplicate
+degeneration. C3 remains severely degenerate: the additional P0 conversation
+raised token-cap rate to 52.8%, multi-turn-emission rate to 70.8%, and
+degeneration to 13.667 per conversation. The M60 stopgap did not produce enough
+new evidence to clear the dev-sweep gate; C3/C4 should wait for the V100.
+
+---
+
 ## v3 dev sweep — STOPPED after abnormal runtime (2026-07-24)
 
 ### Executive finding
