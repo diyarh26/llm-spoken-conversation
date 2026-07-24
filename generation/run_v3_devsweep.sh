@@ -7,6 +7,13 @@ cd "$(dirname "$0")/.."
 PY=${PY:-python}
 LOG=run_v3_devsweep.log
 
+# Reduce CUDA fragmentation OOMs (the allocator's own suggested fix). Safe on any GPU; on
+# the tight 2×M60 box it is what lets C3 finish. C4_DEVICE_A/B pin C4's two models to
+# separate GPUs on that box (leave unset on the V100 -> device_map="auto").
+export PYTORCH_CUDA_ALLOC_CONF=${PYTORCH_CUDA_ALLOC_CONF:-expandable_segments:True}
+C4_DEVICE_A=${C4_DEVICE_A:-}
+C4_DEVICE_B=${C4_DEVICE_B:-}
+
 DEV_IDS=$($PY -c "from generation.sampling import load_dev_ids; print(','.join(map(str, load_dev_ids())))")
 echo "dev ids: $DEV_IDS" | tee -a "$LOG"
 
@@ -14,10 +21,15 @@ echo "dev ids: $DEV_IDS" | tee -a "$LOG"
 # All three so the sweep shows whether the prompt changes actually move backchannels/short
 # turns UP from P0 -> P1 -> P2 (the whole point of this test).
 for arch in c1 c2 c3 c4; do
+  # C4 loads two models — pin them to separate GPUs if C4_DEVICE_A/B are set (M60 stopgap).
+  DEV_ARGS=""
+  if [ "$arch" = "c4" ] && [ -n "$C4_DEVICE_A" ] && [ -n "$C4_DEVICE_B" ]; then
+    DEV_ARGS="--device-a $C4_DEVICE_A --device-b $C4_DEVICE_B"
+  fi
   for p in P0 P1 P2; do
     echo "=== dev ${arch}-${p} $(date -u +%FT%TZ) ===" | tee -a "$LOG"
     $PY "generation/generate_${arch}.py" --prompt "$p" --ids "$DEV_IDS" \
-        --out-root data/dev_sweep 2>&1 | tee -a "$LOG"
+        --out-root data/dev_sweep $DEV_ARGS 2>&1 | tee -a "$LOG"
   done
 done
 

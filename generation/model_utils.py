@@ -23,8 +23,15 @@ VICUNA = "lmsys/vicuna-13b-v1.5-16k"
 MISTRAL = "mistralai/Mistral-7B-Instruct-v0.2"
 
 
-def load_model(name: str):
-    """Load a 4-bit quantized causal LM + tokenizer onto the GPU."""
+def load_model(name: str, device: str | None = None):
+    """Load a 4-bit quantized causal LM + tokenizer onto the GPU.
+
+    device=None -> device_map="auto" (default; on a single-GPU box this puts the whole
+    model on that GPU, on a multi-GPU box it splits layers to balance memory — correct for
+    the V100). device="cuda:N" pins the ENTIRE model to one GPU — used only as a multi-GPU
+    stopgap (e.g. C4 on the 2×M60 box: Vicuna on cuda:0, Mistral on cuda:1, so two models
+    don't collide). Placement is output-neutral: same weights, same decoding, same result.
+    """
     bnb = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_compute_dtype=torch.float16,
@@ -32,8 +39,9 @@ def load_model(name: str):
         bnb_4bit_use_double_quant=True,
     )
     tok = AutoTokenizer.from_pretrained(name)
+    device_map = "auto" if device is None else {"": device}
     model = AutoModelForCausalLM.from_pretrained(
-        name, quantization_config=bnb, device_map="auto", use_safetensors=True
+        name, quantization_config=bnb, device_map=device_map, use_safetensors=True
     )
     # Some chat checkpoints ship sampling fields with do_sample=False, which triggers
     # transformers warnings. Keep model defaults neutral; pass sampling choices per call.

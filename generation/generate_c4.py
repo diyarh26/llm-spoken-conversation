@@ -44,6 +44,10 @@ def main() -> None:
                     help="comma-separated conversation_no's to (re)generate; overrides the manifest")
     ap.add_argument("--model-a", default=VICUNA)
     ap.add_argument("--model-b", default=MISTRAL)
+    # Multi-GPU stopgap (2×M60 box): pin each model to its own GPU so two models don't
+    # collide on one small card. Leave unset on the V100 (single GPU) -> device_map="auto".
+    ap.add_argument("--device-a", default=None, help="e.g. cuda:0 (pin model-a to one GPU)")
+    ap.add_argument("--device-b", default=None, help="e.g. cuda:1 (pin model-b to one GPU)")
     # Decoding defaults live in generation/config.py (frozen after the dev sweep); the CLI
     # exists only for the sweep itself.
     ap.add_argument("--max-turns", type=int, default=MAX_TURNS)
@@ -88,13 +92,16 @@ def main() -> None:
         "stop_at_sentence": args.stop_at_sentence, "max_turns": args.max_turns,
     }
 
-    print(f"loading {args.model_a} for {LABELS[0]}")
-    model_a, tok_a = load_model(args.model_a)
-    if args.model_b == args.model_a:
+    print(f"loading {args.model_a} for {LABELS[0]}"
+          + (f" on {args.device_a}" if args.device_a else ""))
+    model_a, tok_a = load_model(args.model_a, device=args.device_a)
+    # Only reuse one instance when it's the SAME model AND not pinned to distinct GPUs.
+    if args.model_b == args.model_a and args.device_a == args.device_b:
         model_b, tok_b = model_a, tok_a
     else:
-        print(f"loading {args.model_b} for {LABELS[1]}")
-        model_b, tok_b = load_model(args.model_b)
+        print(f"loading {args.model_b} for {LABELS[1]}"
+              + (f" on {args.device_b}" if args.device_b else ""))
+        model_b, tok_b = load_model(args.model_b, device=args.device_b)
 
     loaded = {
         LABELS[0]: (model_a, tok_a, args.model_a),

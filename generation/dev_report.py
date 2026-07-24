@@ -97,7 +97,7 @@ def main(argv: list[str]) -> None:
     for d in sorted(dirs):
         print(_row(d.name, stats_from_turns(load_condition(d))))
     print("\nRead: P1/P2 should move '<=3w %' and 'bckchnl %' UP toward the HUMAN row "
-          "vs P0. If P0≈P1 on backchannels, the prompt still isn't letting them emerge.")
+          "vs P0. If P0 ~ P1 on backchannels, the prompt still isn't letting them emerge.")
 
 
 if __name__ == "__main__":
