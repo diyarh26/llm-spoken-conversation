@@ -1,0 +1,215 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have a cat."
+    ],
+    [
+      "ParticipantA",
+      "That's great! What's your cat's name?"
+    ],
+    [
+      "ParticipantB",
+      "Her name is Whiskers."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's such a cute name!"
+    ],
+    [
+      "ParticipantB",
+      "She's a real character."
+    ],
+    [
+      "ParticipantA",
+      "What kind of personality does she have?"
+    ],
+    [
+      "ParticipantB",
+      "She's very independent and aloof, but also loving when she wants to be."
+    ],
+    [
+      "ParticipantA",
+      "What kind of cat breed is Whiskers?"
+    ],
+    [
+      "ParticipantB",
+      "She's a rescue cat, so we're not sure what breed she is exactly."
+    ],
+    [
+      "ParticipantA",
+      "That's so cool that you rescued her."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was a great experience. We found her at a shelter and she's been such a good companion."
+    ],
+    [
+      "ParticipantA",
+      "That's wonderful. I'm glad she found a good home with you."
+    ],
+    [
+      "ParticipantB",
+      "Do you have any pets, too?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I have a dog."
+    ],
+    [
+      "ParticipantB",
+      "What kind of dog do you have?"
+    ],
+    [
+      "ParticipantA",
+      "A: She's a Labrador Retriever mix."
+    ],
+    [
+      "ParticipantB",
+      "Oh, that's such a popular breed. What's her name?"
+    ],
+    [
+      "ParticipantA",
+      "I: Her name is Bella."
+    ],
+    [
+      "ParticipantB",
+      "What's Bella like as a pet?"
+    ],
+    [
+      "ParticipantA",
+      "I: She's very friendly and loves to play fetch."
+    ],
+    [
+      "ParticipantB",
+      "What kind of personality does Bella have?"
+    ],
+    [
+      "ParticipantA",
+      "What kind of activities do you like to do with your cat?"
+    ],
+    [
+      "ParticipantB",
+      "Do you have any favorite pet memories you'd like to share with me?"
+    ],
+    [
+      "ParticipantA",
+      "I love taking her to the park and watching her run around."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like so much fun!"
+    ],
+    [
+      "ParticipantA",
+      "I: I also enjoy taking her to the beach and watching her swim in the ocean."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a great time for both of you."
+    ],
+    [
+      "ParticipantA",
+      "I: What about you? Do you have any favorite activities to do with your cat?"
+    ],
+    [
+      "ParticipantB",
+      "I take her on little adventures around the neighborhood and she always seems to enjoy it."
+    ],
+    [
+      "ParticipantA",
+      "I: That sounds like a fun way to spend time with your cat."
+    ],
+    [
+      "ParticipantB",
+      "It's great to hear how much you enjoy spending time with your pets. What's the most memorable moment you've shared with Bella?"
+    ],
+    [
+      "ParticipantA",
+      "I: The most memorable moment with Bella was when she helped me recover from a difficult breakup."
+    ],
+    [
+      "ParticipantB",
+      "That's really sweet of her."
+    ],
+    [
+      "ParticipantA",
+      "I: Yeah, she really helped me get through a tough time."
+    ],
+    [
+      "ParticipantB",
+      "That's really great that your pet could help you through a difficult time."
+    ],
+    [
+      "ParticipantA",
+      "What about you, do you have any memorable moments with your cat?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, there was a time when she was really sick, and I was so worried about her, but she pulled through and it was a big relief."
+    ],
+    [
+      "ParticipantA",
+      "I'm sorry to hear that your cat was sick, but I'm glad she pulled through."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was a really scary time, but she's doing much better now."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

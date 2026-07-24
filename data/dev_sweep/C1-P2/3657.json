@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what's your experience with computers like?\n\nParticipantB: Well, I've been using them for a while now. I work as a librarian and we have to keep up with the technology to stay relevant.\n\nParticipantA: Yeah, I work as a nurse and we also need to use computers a lot. But I have mixed feelings about it. Some parts of it sit fine with me, but other parts don't.\n\nParticipantB: I can relate to that. I have mixed feelings too. There are some things I really like about computers, but there are other things that I find frustrating.\n\nParticipantA: Like what?\n\nParticipantB: Well, I think the internet is a great resource, but I also find it frustrating when I can't find what I'm looking for. And I find it frustrating when I have to deal with tech support.\n\nParticipantA: Yeah, I know what you mean. I find tech support can be really hit or miss. Sometimes they're really helpful, but other times they're not much help at all.\n\nParticipantB: Exactly. But overall, I think computers have made a big impact on our lives and have opened up a lot of opportunities.\n\nParticipantA: Yeah, I agree. I think it's amazing how much we can do with them. But I also wonder about the impact they're having on society.\n\nParticipantB: What do you mean?\n\nParticipantA: Well, I think about how we're becoming more and more dependent on technology, and I wonder what that's doing to our brains and our relationships with each other.\n\nParticipantB: Those are good points. I think it's important to be mindful of the impact technology is having on our lives. But at the same time, I think it's important to embrace the benefits it can bring.\n\nParticipantA: Yeah, I agree. I think it's a balancing act.\n\nParticipantB: Definitely. So, what kind of computer do you have?\n\nParticipantA: I have a desktop computer that I use mostly for work. It's pretty basic, but it does the job.\n\nParticipantB: I have a laptop that I use for work and personal use. I find it more convenient for traveling.\n\nParticipantA: Yeah, laptops are definitely more portable. Do you have a favorite brand or type of computer?\n\nParticipantB: I don't really have a favorite brand, but I do prefer laptops over desktops. And I think it's important to invest in a good keyboard and mouse.\n\nParticipantA: Yeah, I agree. Good peripherals can make a big difference. So, what's your personal experience with computers?\n\nParticipantB: Well, I have a personal experience that I sometimes tell people about. My daughter was born with a heart condition, and we were able to use a computer program to create a 3D model of her heart.\n\nParticipantA: Wow, that's really interesting. How did that help?\n\nParticipantB: It helped the doctors plan her surgery more accurately. They were able to see exactly how her heart was formed and what needed to be done to fix it.\n\nParticipantA: That's amazing. I had no idea that computers could be used for that.\n\nParticipantB: Yeah, it's really amazing what they can do. And it's just one example of how computers can be used to improve people's lives.\n\nParticipantA: Yeah, that's really cool. Thanks for sharing that with me.\n\nParticipantB:",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 874,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

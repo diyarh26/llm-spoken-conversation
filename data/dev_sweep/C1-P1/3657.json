@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, do you use a computer at work?\nParticipantB: Yes, I work as a librarian and we use computers for a lot of things.\n\nParticipantA: Same here, I work as a nurse and we use computers for patient records and other things.\n\nParticipantB: Do you like using computers?\nParticipantA: I have mixed feelings about it. I've used computers for a long time now, and some parts of it are fine, but other parts don't sit well with me. I made up my mind about it years ago, but I'm not sure why.\n\nParticipantB: I can relate to that. I have mixed feelings too. I think it's great that we can access so much information so easily, but sometimes it can be overwhelming. I also had a personal experience with a computer that I sometimes tell people about.\n\nParticipantA: Oh, what happened?\nParticipantB: Well, a few years ago, I was working on a computer and suddenly it just shut down. I thought it was just a glitch, so I restarted it, but it happened again. I tried to troubleshoot it, but I couldn't figure out what was wrong. In the end, I had to take it in for repairs and it turned out that there was a hardware issue. It was a frustrating experience, but it also reminded me of how reliant we are on technology.\n\nParticipantA: Yeah, that's definitely true. It's scary to think about what would happen if our computers all stopped working.\n\nParticipantB: Absolutely. It's definitely something to think about. So, do you have a preference when it comes to computers?\n\nParticipantA: I'm not really sure. I mostly just use whatever computer is provided for me at work. I don't really have a lot of experience with personal computers.\n\nParticipantB: I see. Well, I do have a preference for Macs. I think they're user-friendly and have a lot of great features.\n\nParticipantA: That's interesting. I've never really used a Mac before. I'm more of a PC person.\n\nParticipantB: Yeah, I hear you. I think it's just a matter of personal preference.\n\nParticipantA: Definitely. Well, it was nice talking to you about computers.\nParticipantB: Same here. It was interesting to hear your perspective.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 584,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

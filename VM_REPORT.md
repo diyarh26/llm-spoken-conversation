@@ -138,6 +138,138 @@ magnitude of conceptual alignment. The ALIGN phase-1 gate is cleared.
 
 ---
 
+## v3 dev sweep — STOPPED after abnormal runtime (2026-07-24)
+
+### Executive finding
+
+The requested sweep was stopped on user instruction after approximately 15 hours with
+33/60 JSON files complete. This is **not normal sweep performance**. Two conditions in the
+current environment/design interact badly:
+
+1. The current VM has **two Tesla M60 GPUs with 7,680 MiB each**, not the 16-GB V100
+   described earlier in this report and assumed by the model-loading comments. Vicuna-13B
+   is therefore split across both old GPUs by `device_map="auto"`. The M60 is much slower
+   for this workload, cross-GPU execution adds overhead, and each card has little memory
+   headroom for long contexts.
+2. Turn-wise generation permits `max_new_tokens=300` with
+   `stop_at_sentence=False`. Vicuna frequently ignores the one-turn instruction and
+   generates a continuation containing multiple dialogue turns. `clean_single_turn()`
+   discards everything after the first detected role/speaker marker, but only **after**
+   all tokens have been generated. The run therefore pays for up to 300 tokens while
+   retaining only the first short portion. Duplicate detection can pay for a second
+   300-token generation.
+
+This produced increasing per-turn latency as context grew, frequent full-token-cap
+emissions, multi-turn emissions, turn-cap endings, and eventually CUDA OOM in C3.
+
+### Stop verification
+
+- tmux session `devsweep`: stopped.
+- Python generation processes: none.
+- GPU state after stop: GPU 0 = 0 MiB / 0%; GPU 1 = 0 MiB / 0%.
+- Completed files preserved: 33.
+- The interrupted in-flight C3-P2 conversation was not written, as intended by the
+  write-on-completion design.
+- No NVML driver/library mismatch occurred, so the VM was not rebooted.
+
+### Preflight results
+
+- `git pull --ff-only`: updated `main` from `34beae3` to `26ce48d`.
+- Python compilation: `SYNTAX OK`.
+- Few-shot pool: all 10 excerpts reconstructed:
+  `FISHING`, `HOME REPAIRS`, `ETHICS IN GOVERNMENT`, `VIETNAM WAR`,
+  `CONSUMER GOODS`, `IMMIGRATION`, `WOODWORKING`, `POLITICS`,
+  `SOVIET UNION`, `GOLF`.
+- CUDA available: `True`.
+- Actual GPU: 2 × Tesla M60, 7,680 MiB each.
+
+### Completed output by condition
+
+| Condition | Completed / 5 |
+|---|---:|
+| C1-P0 | 5 |
+| C1-P1 | 5 |
+| C1-P2 | 5 |
+| C2-P0 | 5 |
+| C2-P1 | 5 |
+| C2-P2 | 5 |
+| C3-P0 | 2 |
+| C3-P1 | 1 |
+| C3-P2 | 0 |
+| C4-P0/P1/P2 | 0 |
+
+### Failure evidence
+
+C3 failed twice with CUDA OOM after saving partial outputs:
+
+- C3-P0 saved 3325 and 3003, then failed trying to allocate 124 MiB on GPU 1;
+  only about 120 MiB was free.
+- C3-P1 saved 3325, then failed trying to allocate 124 MiB on GPU 1;
+  only about 102 MiB was free.
+- The shell correctly advanced to the next condition because the generator output is
+  piped through `tee` and the script does not enable `pipefail`; `set -e` therefore sees
+  `tee` succeed even when Python fails. This is why the sweep did not stop at the first
+  OOM.
+
+### Partial degeneration readout
+
+These values are diagnostic only because C3 is incomplete and C4 is absent.
+
+| Condition | convs | dup turn rate | turn cap rate | token cap rate | degeneration / conv | mean words/turn | multi-turn emission rate |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| C2-P0 | 5 | 0.100 | 0.800 | 0.0444 | 9.6 | 58.81 | 0.0889 |
+| C2-P1 | 5 | 0.000 | 1.000 | 0.0000 | 1.0 | 11.14 | 0.0000 |
+| C2-P2 | 5 | 0.005 | 1.000 | 0.0000 | 1.4 | 11.70 | 0.0050 |
+| C3-P0 | 2 | 0.000 | 0.000 | 0.4688 | 7.5 | 19.19 | 0.7812 |
+| C3-P1 | 1 | 0.000 | 0.000 | 0.6000 | 9.0 | 41.87 | 0.8667 |
+
+C2-P0 also retained 18 duplicate turns and four of five conversations ended at the
+turn cap. All five C2-P1 and all five C2-P2 conversations ended at the turn cap.
+
+### Partial dev report
+
+| condition | convs | mean WPT | median WPT | <=3w % | backchannel % | median turns |
+|---|---:|---:|---:|---:|---:|---:|
+| HUMAN (SB) | 300 | 12.8 | 6 | 39.7% | 30.8% | 82 |
+| C1-P0 | 5 | 17.5 | 18 | 0.9% | 0.0% | 21 |
+| C1-P1 | 5 | 18.6 | 16 | 1.3% | 2.5% | 17 |
+| C1-P2 | 5 | 17.9 | 19 | 0.9% | 1.8% | 24 |
+| C2-P0 | 5 | 58.8 | 56 | 0.0% | 0.0% | 42 |
+| C2-P1 | 5 | 11.1 | 11 | 3.5% | 4.0% | 42 |
+| C2-P2 | 5 | 11.7 | 10 | 4.5% | 2.0% | 42 |
+| C3-P0 | 2 | 19.2 | 16 | 3.1% | 0.0% | 18 |
+| C3-P1 | 1 | 41.9 | 34 | 0.0% | 0.0% | 17 |
+
+### Interpretation
+
+- P1/P2 clearly shortened C2 relative to P0 and produced a small rise in short/reactive
+  turns and backchannels, but they remain far below HUMAN (<=3 words 3.5–4.5% versus
+  39.7%; backchannels 2–4% versus 30.8%).
+- C1 changed only marginally.
+- The available C3 results are severely degenerate and incomplete.
+- The rebuilt prompting did **not** produce enough short/reactive structure to justify a
+  full run in the current setup.
+
+### Decisions needed before another sweep
+
+1. **Use suitable hardware first.** Prefer the intended single V100 16 GB or a newer GPU
+   with at least 16 GB. C4 must fit Vicuna plus Mistral as designed; two 7.5-GB M60s are
+   not a credible target for this run.
+2. **Add `set -o pipefail`** to the sweep runner so a Python OOM stops the sweep instead
+   of silently advancing.
+3. **Reconsider the per-turn stopping strategy.** A 300-token hard cap with no early
+   turn-boundary stopping is empirically not just a safety net. A speaker/role-marker
+   stopping criterion could terminate when the model begins another turn without forcing
+   sentence-final punctuation and therefore without suppressing abandoned turns.
+4. **Run a tiny timing/cap smoke test** (one ID per turn-wise architecture) and require
+   acceptable token-cap/multi-turn rates before launching another 60-file sweep.
+5. Do not freeze `config.py` or begin the full generation run until the corrected sweep
+   passes.
+
+No prompt, pool, manifest, decoding configuration, or full-run output was changed.
+
+---
+
 ## Phase 2 prep smoke tests (VM_TASKS, 2026-06-22)
 
 **Superseded by the 2026-06-23 retry below.** This first attempt used the default

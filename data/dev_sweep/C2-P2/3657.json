@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you have a computer at home?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I do."
+    ],
+    [
+      "ParticipantA",
+      "What kind of computer do you have at home?"
+    ],
+    [
+      "ParticipantB",
+      "It's a desktop computer."
+    ],
+    [
+      "ParticipantA",
+      "What do you use your computer for?"
+    ],
+    [
+      "ParticipantB",
+      "I use it mostly for work and personal stuff, like browsing the internet and checking email."
+    ],
+    [
+      "ParticipantA",
+      "What do you like about your computer?"
+    ],
+    [
+      "ParticipantB",
+      "I like that it's pretty reliable and has a lot of storage space."
+    ],
+    [
+      "ParticipantA",
+      "I use my computer mostly for work too, but I also like to play games on it in my free time."
+    ],
+    [
+      "ParticipantB",
+      "And how about you? What kind of computer do you have?"
+    ],
+    [
+      "ParticipantA",
+      "I have a laptop."
+    ],
+    [
+      "ParticipantB",
+      "What kind of games do you like to play on your laptop?"
+    ],
+    [
+      "ParticipantA",
+      "Mostly strategy and puzzle games, but I'm open to trying new things."
+    ],
+    [
+      "ParticipantB",
+      "I'm mostly into reading and research on my computer."
+    ],
+    [
+      "ParticipantA",
+      "I also use my laptop for work sometimes, but I prefer using it for entertainment and staying connected with friends and family."
+    ],
+    [
+      "ParticipantB",
+      "I also like to keep up with current events and news on my computer."
+    ],
+    [
+      "ParticipantA",
+      "I like to stay informed too, but I usually use my phone for that."
+    ],
+    [
+      "ParticipantB",
+      "And what about you? Do you have any favorite websites or apps that you like to use on your laptop?"
+    ],
+    [
+      "ParticipantA",
+      "I mostly use social media and streaming services."
+    ],
+    [
+      "ParticipantB",
+      "I also use the library's online resources for research and reading."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting a new laptop, but I'm not sure which one to get."
+    ],
+    [
+      "ParticipantB",
+      "What kind of features are you looking for in a new laptop?"
+    ],
+    [
+      "ParticipantA",
+      "I'm not sure yet, I'm still trying to decide."
+    ],
+    [
+      "ParticipantB",
+      "I've been using my current laptop for a few years now and it's still functional, but I'm sure there are some newer models out there that would be more efficient."
+    ],
+    [
+      "ParticipantA",
+      "I'm also considering getting a tablet to use for work, but I'm not sure if it would be more convenient or just another device to carry around."
+    ],
+    [
+      "ParticipantB",
+      "Well, I think a tablet could be useful for work if you find the right apps and accessories for it."
+    ],
+    [
+      "ParticipantA",
+      "I'm not really familiar with tablets, so I'll have to do some research and see if it would be worth the investment."
+    ],
+    [
+      "ParticipantB",
+      "I've found that a good case or cover can make a big difference in protecting the tablet and making it more convenient to use."
+    ],
+    [
+      "ParticipantA",
+      "What kind of accessories do you recommend for a tablet?"
+    ],
+    [
+      "ParticipantB",
+      "I would recommend getting a stylus pen and a good case or cover that can also serve as a stand."
+    ],
+    [
+      "ParticipantA",
+      "How about you? Have you ever tried using a tablet for work?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've used a tablet for work a few times, and it can be quite convenient for certain tasks."
+    ],
+    [
+      "ParticipantA",
+      "I'll have to look into that."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've found that a stylus pen can be quite useful for interacting with the screen and avoiding fingerprints."
+    ],
+    [
+      "ParticipantA",
+      "Thanks for the advice, I'll have to keep that in mind if I end up getting a tablet."
+    ],
+    [
+      "ParticipantB",
+      "I've also found that it's important to get a tablet with a good display and enough processing power to handle the tasks you'll be using it for."
+    ],
+    [
+      "ParticipantA",
+      "Thanks for the advice."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and make sure you get one with a long battery life if you'll be using it for extended periods of time."
+    ],
+    [
+      "ParticipantA",
+      "Thanks for the advice, I'll definitely keep all that in mind."
+    ],
+    [
+      "ParticipantB",
+      "Do you have any other questions about computers or anything else you'd like to talk about?"
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I'm thinking about getting a hybrid."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting a hybrid too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think it's important to be environmentally conscious and save on gas too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. It's important to do our part for the environment."
+    ],
+    [
+      "ParticipantB",
+      "Have you ever owned a hybrid before?"
+    ],
+    [
+      "ParticipantA",
+      "I had a hybrid before, but I had to get rid of it."
+    ],
+    [
+      "ParticipantB",
+      "What happened?"
+    ],
+    [
+      "ParticipantA",
+      "It broke down a lot and the repairs were too expensive."
+    ],
+    [
+      "ParticipantB",
+      "That's too bad."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was really frustrating."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a shame when you have to let go of a car you like."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was really frustrating."
+    ],
+    [
+      "ParticipantB",
+      "What kind of car did you have before the hybrid?"
+    ],
+    [
+      "ParticipantA",
+      "I had a Toyota Prius."
+    ],
+    [
+      "ParticipantB",
+      "That's a popular choice for a hybrid."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was a great car, but the repairs just got too expensive."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I know what you mean."
+    ],
+    [
+      "ParticipantA",
+      "What kind of car are you thinking of getting as a hybrid?"
+    ],
+    [
+      "ParticipantB",
+      "I'm considering getting a Honda Insight."
+    ],
+    [
+      "ParticipantA",
+      "Have you had any experience with Honda Insights before?"
+    ],
+    [
+      "ParticipantB",
+      "I've actually driven one before and it handled really well on the road."
+    ],
+    [
+      "ParticipantA",
+      "What's your experience with the Honda Insight?"
+    ],
+    [
+      "ParticipantB",
+      "I've been pretty happy with my Honda Civic hybrid so far."
+    ],
+    [
+      "ParticipantA",
+      "What do you think about the reliability of Honda hybrids?"
+    ],
+    [
+      "ParticipantB",
+      "I think they're pretty reliable, but like any car, there can be issues."
+    ],
+    [
+      "ParticipantA",
+      "I've heard good things about the reliability of Honda hybrids too."
+    ],
+    [
+      "ParticipantB",
+      "I think it's a good choice if you're looking for a reliable hybrid."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm definitely considering getting another Honda hybrid."
+    ],
+    [
+      "ParticipantB",
+      "So, have you decided on a specific Honda hybrid model yet?"
+    ],
+    [
+      "ParticipantA",
+      "No, I haven't decided yet."
+    ],
+    [
+      "ParticipantB",
+      "Well, I'm glad to hear that. I think the Insight is a great choice too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm still considering my options."
+    ],
+    [
+      "ParticipantB",
+      "So, what are some other factors you're considering when choosing a new car?"
+    ],
+    [
+      "ParticipantA",
+      "I'm thinking about the cost too."
+    ],
+    [
+      "ParticipantB",
+      "How much are you looking to spend on a new car?"
+    ],
+    [
+      "ParticipantA",
+      "I'm hoping to find something around $20,000."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can understand that. I'm trying to keep my budget around that price range too."
+    ],
+    [
+      "ParticipantA",
+      "I'm also thinking about the fuel efficiency and how often I'll be driving."
+    ],
+    [
+      "ParticipantB",
+      "I'm also considering the fuel efficiency and how often I'll be driving."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hi, how are you doing today?\nParticipantB: I'm doing well, thank you. How about you?\nParticipantA: I'm good, thanks. So, what kind of books do you like to read?\nParticipantB: I really enjoy classics like Jane Austen and the Bronte sisters. How about you?\nParticipantA: I'm more of a mystery fan. I love Agatha Christie and James Patterson.\nParticipantB: Oh, I used to love mystery novels. Have you read any good ones lately?\nParticipantA: Actually, I just finished \"The Silent Patient\" by Alex Michaelides. It was really good.\nParticipantB: I'll have to check that out. I've been reading a lot of non-fiction lately, mostly biographies and memoirs.\nParticipantA: That's interesting. I haven't read much non-fiction in a while. Do you have any recommendations?\nParticipantB: Yes, I just finished \"Educated\" by Tara Westover. It's a memoir about her experiences growing up in a survivalist family in rural Idaho.\nParticipantA: That sounds intriguing. I'll have to add that to my list. So, what do you look for in a good book?\nParticipantB: I like books that are well-written and have a strong narrative. I also enjoy books that make me think and challenge my beliefs.\nParticipantA: I totally agree. I like books that can take me on a journey and make me feel something. What's your favorite book of all time?\nParticipantB: That's a tough one, but I'd have to say \"To Kill a Mockingbird\" by Harper Lee. It's just a classic that I can read over and over again.\nParticipantA: I love that book too. It's such a powerful story. Well, it was nice talking to you about books.\nParticipantB: Yes, it was really fun. I hope we can do it again sometime.\nParticipantA: Definitely! Have a great day.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 504,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

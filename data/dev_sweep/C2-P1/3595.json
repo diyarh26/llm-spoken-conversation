@@ -1,0 +1,215 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "I love to read, what about you?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, I'm a big reader too. What kind of books do you like to read?"
+    ],
+    [
+      "ParticipantA",
+      "I usually read mysteries and thrillers."
+    ],
+    [
+      "ParticipantB",
+      "I enjoy those too, but I also like to read non-fiction."
+    ],
+    [
+      "ParticipantA",
+      "I haven't read much non-fiction lately, but I used to love biographies."
+    ],
+    [
+      "ParticipantB",
+      "I've been reading a lot of history lately, especially about the World War II era."
+    ],
+    [
+      "ParticipantA",
+      "That sounds really interesting."
+    ],
+    [
+      "ParticipantB",
+      "Have you read any good ones lately?"
+    ],
+    [
+      "ParticipantA",
+      "I just finished a great one about Eleanor Roosevelt."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I've been wanting to read that one."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite history book about World War II?"
+    ],
+    [
+      "ParticipantB",
+      "I recently read \"The Boys in the Boat\" and found it really engaging."
+    ],
+    [
+      "ParticipantA",
+      "That sounds really interesting."
+    ],
+    [
+      "ParticipantB",
+      "Have you read any other books about that time period?"
+    ],
+    [
+      "ParticipantA",
+      "I haven't read any about World War II, but I've heard good things about \"Unbroken\" by Laura Hillenbrand."
+    ],
+    [
+      "ParticipantB",
+      "I've actually read that one too, it's a great read."
+    ],
+    [
+      "ParticipantA",
+      "I might have to give that one a try."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely worth picking up."
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of non-fiction books do you usually read?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly biographies and memoirs."
+    ],
+    [
+      "ParticipantA",
+      "I usually stick to biographies of people I admire, like Nelson Mandela or Malala Yousafzai."
+    ],
+    [
+      "ParticipantB",
+      "I really admire those people too."
+    ],
+    [
+      "ParticipantA",
+      "I also love reading about inspirational figures."
+    ],
+    [
+      "ParticipantB",
+      "Have you read any books about female leaders or activists?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I recently read \"The Handmaid's Tale\" by Margaret Atwood."
+    ],
+    [
+      "ParticipantB",
+      "What did you think of \"The Handmaid's Tale\"?"
+    ],
+    [
+      "ParticipantA",
+      "I found it to be a really powerful and thought-provoking book."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I've heard of that one, but I haven't gotten around to reading it yet."
+    ],
+    [
+      "ParticipantA",
+      "Have you read any other books by Margaret Atwood?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I've also read \"Oryx and Crake\"."
+    ],
+    [
+      "ParticipantA",
+      "I've been wanting to read that one too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely worth picking up."
+    ],
+    [
+      "ParticipantA",
+      "Have you read any other dystopian novels?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I've also read \"The Hunger Games\" trilogy."
+    ],
+    [
+      "ParticipantA",
+      "What did you think of \"The Hunger Games\"?"
+    ],
+    [
+      "ParticipantB",
+      "I thought it was a really gripping read."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite book by Margaret Atwood?"
+    ],
+    [
+      "ParticipantB",
+      "I think my favorite book by her is actually 'The Blind Assassin'."
+    ],
+    [
+      "ParticipantA",
+      "I've heard that one's really good too."
+    ],
+    [
+      "ParticipantB",
+      "So, have you read any other books by Canadian authors?"
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

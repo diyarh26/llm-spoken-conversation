@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "I do have a cat."
+    ],
+    [
+      "ParticipantA",
+      "What kind of cat do you have?"
+    ],
+    [
+      "ParticipantB",
+      "She's a Siamese mix."
+    ],
+    [
+      "ParticipantA",
+      "That's so cool! What's her name?"
+    ],
+    [
+      "ParticipantB",
+      "Her name is Whiskers."
+    ],
+    [
+      "ParticipantA",
+      "What does Whiskers like to do for fun?"
+    ],
+    [
+      "ParticipantB",
+      "She likes to chase toys and play with yarn."
+    ],
+    [
+      "ParticipantA",
+      "Do you have any other pets?"
+    ],
+    [
+      "ParticipantB",
+      "No, just her."
+    ],
+    [
+      "ParticipantA",
+      "That's so cute!"
+    ],
+    [
+      "ParticipantB",
+      "And what kind of pets do you have?"
+    ],
+    [
+      "ParticipantA",
+      "I have a dog."
+    ],
+    [
+      "ParticipantB",
+      "What kind of dog do you have?"
+    ],
+    [
+      "ParticipantA",
+      "What kind of dog do you have?"
+    ],
+    [
+      "ParticipantB",
+      "What kind of dog do you have?"
+    ],
+    [
+      "ParticipantA",
+      "What kind of dog do you have?"
+    ],
+    [
+      "ParticipantB",
+      "What kind of dog do you have?"
+    ],
+    [
+      "ParticipantA",
+      "A beagle."
+    ],
+    [
+      "ParticipantB",
+      "Beagles are such friendly dogs."
+    ],
+    [
+      "ParticipantA",
+      "I love taking her on long walks."
+    ],
+    [
+      "ParticipantB",
+      "Do you have any favorite dog parks or places to take her for walks?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, we usually go to the park near our house, it's great for her to run around and play with other dogs."
+    ],
+    [
+      "ParticipantB",
+      "What's your beagle's name?"
+    ],
+    [
+      "ParticipantA",
+      "Her name is Bella."
+    ],
+    [
+      "ParticipantB",
+      "That's a great name."
+    ],
+    [
+      "ParticipantA",
+      "I also love taking her to the beach in the summertime."
+    ],
+    [
+      "ParticipantB",
+      "What's Bella like when you take her to the beach?"
+    ],
+    [
+      "ParticipantA",
+      "Sometimes she gets a little scared of the water though."
+    ],
+    [
+      "ParticipantB",
+      "That's too bad she's scared of the water, but I guess it's better to be safe than sorry."
+    ],
+    [
+      "ParticipantA",
+      "I also love taking her to the park for some off-leash playtime."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I used to take my cat to the dog park when she was younger, but she wasn't very interested in playing with the other animals."
+    ],
+    [
+      "ParticipantA",
+      "How does Whiskers feel about going to the dog park?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, she's not really interested in the other animals, she's more of a solo player."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can imagine that."
+    ],
+    [
+      "ParticipantB",
+      "Do you have any favorite dog breeds?"
+    ],
+    [
+      "ParticipantA",
+      "I really like bulldogs."
+    ],
+    [
+      "ParticipantB",
+      "What about you, do you have a favorite cat breed?"
+    ],
+    [
+      "ParticipantA",
+      "I think they're so adorable with their wrinkly faces."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, they're definitely a unique breed."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  }
+}

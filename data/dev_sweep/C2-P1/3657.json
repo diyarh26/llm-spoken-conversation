@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how much do you know about computers?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been using them for a while now, so I'm pretty comfortable with them."
+    ],
+    [
+      "ParticipantA",
+      "That's great. I've been using them for work, but I'm not as comfortable with them as you might be."
+    ],
+    [
+      "ParticipantB",
+      "What kind of work do you do with computers?"
+    ],
+    [
+      "ParticipantA",
+      "I work as a nurse, and we use computers a lot for documenting patient information and research."
+    ],
+    [
+      "ParticipantB",
+      "That sounds interesting. What do you think about personal computers for home use?"
+    ],
+    [
+      "ParticipantA",
+      "I think they can be really useful for everyday tasks, but I've never been that interested in them personally."
+    ],
+    [
+      "ParticipantB",
+      "I've always found personal computers to be quite helpful for staying connected with friends and family, as well as for work-related tasks."
+    ],
+    [
+      "ParticipantA",
+      "I've never been very tech-savvy, to be honest."
+    ],
+    [
+      "ParticipantB",
+      "I've found that using a computer can be a bit overwhelming at first, but once you get the hang of it, it's pretty easy to use."
+    ],
+    [
+      "ParticipantA",
+      "I can see how that would be helpful, but I've never really gotten into it."
+    ],
+    [
+      "ParticipantB",
+      "Have you ever tried using a tablet or smartphone instead of a computer?"
+    ],
+    [
+      "ParticipantA",
+      "I haven't really explored that much."
+    ],
+    [
+      "ParticipantB",
+      "Well, I think tablets and smartphones can be really convenient for everyday tasks, but for more complex work, a computer is still the best option."
+    ],
+    [
+      "ParticipantA",
+      "I've heard that tablets and smartphones can be great for travel, too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, they're definitely more portable and easier to use on the go."
+    ],
+    [
+      "ParticipantA",
+      "I prefer using a desktop computer for work, but I've heard good things about laptops for travel."
+    ],
+    [
+      "ParticipantB",
+      "I agree, laptops can be very convenient for travel. I have a friend who uses one exclusively for work and he loves it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I might have to try using a laptop for work sometime."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think it's definitely worth considering for your work."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think I'll give it a try."
+    ],
+    [
+      "ParticipantB",
+      "Great, let me know how it goes if you try using a laptop for work."
+    ],
+    [
+      "ParticipantA",
+      "Thanks, I will."
+    ],
+    [
+      "ParticipantB",
+      "Do you have any specific questions about using a laptop for work?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm curious about what software or programs might be good for work on a laptop."
+    ],
+    [
+      "ParticipantB",
+      "Well, there are a lot of great options out there, but some popular ones for work include Microsoft Office, Google Suite, and Adobe Creative Cloud."
+    ],
+    [
+      "ParticipantA",
+      "Thanks for the suggestions."
+    ],
+    [
+      "ParticipantB",
+      "Sure, I'd be happy to help you with that."
+    ],
+    [
+      "ParticipantA",
+      "What are some good laptop brands for work?"
+    ],
+    [
+      "ParticipantB",
+      "Well, some popular laptop brands for work include MacBook, Lenovo, and Dell."
+    ],
+    [
+      "ParticipantA",
+      "What about HP laptops?"
+    ],
+    [
+      "ParticipantB",
+      "HP laptops are also a good option, they're known for being reliable and affordable."
+    ],
+    [
+      "ParticipantA",
+      "Thanks for the info."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'll have to do some research on those brands and see which one might work best for me."
+    ],
+    [
+      "ParticipantB",
+      "Sure, let me know if you have any other questions."
+    ],
+    [
+      "ParticipantA",
+      "What kind of warranty do those laptop brands offer?"
+    ],
+    [
+      "ParticipantB",
+      "Most of them offer a one-year warranty, but you can often purchase extended warranties if you want extra protection."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'll have to look into that."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's always a good idea to consider an extended warranty for peace of mind."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 4
+  }
+}

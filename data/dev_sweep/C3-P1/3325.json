@@ -1,0 +1,118 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of pets do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have a dog and a cat."
+    ],
+    [
+      "ParticipantA",
+      "That's great! What kind of dog and cat do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have a golden retriever and a Siamese cat."
+    ],
+    [
+      "ParticipantA",
+      "Nice! I used to have a golden retriever when I was younger. How long have you had your pets?"
+    ],
+    [
+      "ParticipantB",
+      "I've had my pets for about 5 years now. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I don't have any pets right now, but I used to have a cat for a few years. It was a great companion. What do your pets like to do for fun?"
+    ],
+    [
+      "ParticipantB",
+      "My dog loves to play fetch and my cat loves to chase toys. They're both very playful and love to run around in the backyard. What did your cat like to do for fun?"
+    ],
+    [
+      "ParticipantA",
+      "My cat loved to climb and perch on high places. She would often sit on top of the refrigerator or the bookshelf, and watch the world below. It was quite amusing to see her in action. What are some of your favorite memories with your pets?"
+    ],
+    [
+      "ParticipantB",
+      "One of my favorite memories with my dog is when we went on a hike together and he ran up to a waterfall and splashed around in the water. It was so much fun to see him enjoying himself. With my cat, one of my favorite memories is when she curled up on my lap and we watched a movie together. It was a cozy and relaxing moment. What about you? Do you have any favorite memories with your cat?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I have a few favorite memories with my cat. One of them is when she would curl up next to me while I was working on my laptop, and she would purr loudly. It was such a comforting and calming feeling. Another memory is when she would play with a toy and suddenly stop, look at me, and meow as if to say, \"Come on, let's play!\" It was always so cute and endearing. What do your pets do when they're not playing or running around?"
+    ],
+    [
+      "ParticipantB",
+      "My dog loves to snuggle and sleep. He's always up for cuddling on the couch or in bed. My cat, on the other hand, likes to lounge in the sun or in her favorite spot on the windowsill. They both have their own personalities and preferences, which makes them even more special to me. What about your cat? What does she like to do when she's not playing or climbing?"
+    ],
+    [
+      "ParticipantA",
+      "My cat loved to sleep a lot too, especially in the sunny spots in the house. She would often stretch out on a blanket or on top of a stack of books, and just doze off. She was a real cat lover and enjoyed spending time with her family. What do your pets do when they're feeling sick or not well?"
+    ],
+    [
+      "ParticipantB",
+      "When my pets are feeling sick or not well, they tend to be a bit more lethargic and sleep more. My dog will often whine or whimper if he's not feeling well, and my cat will become more affectionate and want more attention. I always make sure to take care of them and give them the attention they need when they're not feeling their best. What about your cat? How did she act when she wasn't feeling well?"
+    ],
+    [
+      "ParticipantA",
+      "My cat was a bit more vocal when she wasn't feeling well. She would meow more often and be more demanding of attention. I always made sure to give her extra love and care when she was sick, and she would always recover quickly. It's important to take care of our pets when they're not feeling well, as they're a part of our family too. What do you think makes pets such great companions?"
+    ]
+  ],
+  "n_turns": 17,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 13,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 9,
+    "multi_turn_emissions": 13
+  }
+}

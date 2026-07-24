@@ -1,0 +1,154 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "I'm not really sure yet. I'm still doing some research and test drives to figure out what would be the best fit for me."
+    ],
+    [
+      "ParticipantA",
+      "That makes sense. What are some of the things that you're looking for in a car?"
+    ],
+    [
+      "ParticipantB",
+      "I'm looking for something that's reliable, has good fuel efficiency, and has enough space for my needs. I also want a car that's comfortable to drive and has some nice features."
+    ],
+    [
+      "ParticipantA",
+      "Those are all important considerations. What kind of features are you looking for?"
+    ],
+    [
+      "ParticipantB",
+      "I'm looking for a car with a good infotainment system, safety features like adaptive cruise control and lane departure warning, and a comfortable ride."
+    ],
+    [
+      "ParticipantA",
+      "Those are some great features to have in a car. Have you considered any specific car brands or models?"
+    ],
+    [
+      "ParticipantB",
+      "I've test driven a few different cars, but I really like the Honda Accord and the Toyota Camry. I'm also considering the Hyundai Sonata and the Kia Optima."
+    ],
+    [
+      "ParticipantA",
+      "Those are all great options. How important is the brand to you when you're making your decision?"
+    ],
+    [
+      "ParticipantB",
+      "Brand is important to me because I want a car that's going to last and have a good reputation for reliability. I'm also considering the warranty and the customer service that comes with the brand."
+    ],
+    [
+      "ParticipantA",
+      "Those are all important factors to consider. What is your budget for this car?"
+    ],
+    [
+      "ParticipantB",
+      "My budget is around $25,000."
+    ],
+    [
+      "ParticipantA",
+      "That's a good budget to work with. Have you considered any other factors that might affect your decision, like your driving habits or lifestyle?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, my driving habits are important to me. I do a lot of city driving, so I want a car that handles well in stop-and-go traffic and has a good turning radius. I also need a car that can fit my golf clubs, since I like to play golf on the weekends."
+    ],
+    [
+      "ParticipantA",
+      "Those are important factors to consider. Have you thought about how you'll finance your new car?"
+    ],
+    [
+      "ParticipantB",
+      "I'm planning on financing my new car through a bank or a credit union. I want to make sure I get a good interest rate and affordable monthly payments."
+    ],
+    [
+      "ParticipantA",
+      "That's a smart approach. Have you thought about how you'll maintain your new car, like oil changes and tire rotations?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I plan on taking my car to the dealership for regular maintenance and repair work. I want to make sure my car is well taken care of and runs smoothly for as long as possible."
+    ],
+    [
+      "ParticipantA",
+      "That's a great approach to car ownership. Well, I think we've covered a lot of ground here. It sounds like you're doing a great job of researching and considering all your options. Good luck with your decision!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you, I appreciate the help and advice!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! Let me know if you have any other questions."
+    ],
+    [
+      "ParticipantB",
+      "I will definitely do that. Thank you again for your help!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "You too!"
+    ]
+  ],
+  "n_turns": 26,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 18,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 11,
+    "multi_turn_emissions": 18
+  }
+}

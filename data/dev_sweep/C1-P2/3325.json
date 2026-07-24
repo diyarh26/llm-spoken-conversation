@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what kind of pets do you have?\nParticipantB: Uh, I have a dog and a cat.\nParticipantA: Nice! What kind of dog is it?\nParticipantB: It's a golden retriever.\nParticipantA: Oh, I love golden retrievers. What's the cat like?\nParticipantB: The cat is a Siamese. Quite the character.\nParticipantA: I've never had a Siamese before. How is it?\nParticipantB: Well, it's very vocal and always wants attention. But it's also very affectionate and loves to snuggle.\nParticipantA: That sounds like my cat, except mine is a calico.\nParticipantB: Oh, what's your cat like?\nParticipantA: She's very playful and loves to chase toys. But she also likes to cuddle, especially at night when I'm going to bed.\nParticipantB: That's so cute. What do you and your cat like to do together?\nParticipantA: We like to play with toys and chase each other around the house. Sometimes I'll even dress her up in little outfits.\nParticipantB: Oh, that's adorable. I've never dressed my cat up before, but I bet she'd love it.\nParticipantA: Yeah, it's a lot of fun. What about your dog? What does it like to do?\nParticipantB: My dog loves to play fetch and go on long walks. We take him to the park a lot, and he just runs around and runs around.\nParticipantA: That sounds like so much fun. I used to take my dog to the park all the time when he was still alive.\nParticipantB: I'm sorry for your loss.\nParticipantA: Thanks. It's been a few years now, but I still miss him a lot.\nParticipantB: I can understand that. Pets are like family, aren't they?\nParticipantA: Definitely. What do you think about pets in general?\nParticipantB: I think they're great. They provide so much companionship and love, and they're just so much fun to be around.\nParticipantA: I agree. I used to be a little skeptical about having a pet, but now I can't imagine my life without one.\nParticipantB: Yeah, it's hard to imagine life without them. They just bring so much joy and happiness to our lives.\nParticipantA: Absolutely. Well, it was nice talking to you about our pets.\nParticipantB: Yes, it was nice talking to you too.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 663,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}
