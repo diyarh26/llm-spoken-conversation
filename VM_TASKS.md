@@ -1,9 +1,11 @@
-# VM Tasks — GPU diagnosis, then a 5-per-condition TEST (2026-09-26)
+# VM Tasks — GPU diagnosis, then a C1 + C2 TEST (2026-09-26)
 
 Owner: local side. Read `CLAUDE.md` first. **Deadline context: the poster is on 2026-10-11.**
 Every GPU hour counts. The goal today is to (A) find out exactly what is wrong with the GPU and
-(B) if it can be made to work, run a small TEST (5 conversations per condition) of the
-latest code. **No full run yet** — local reviews the test first.
+(B) if it can be made to work, run a small TEST of the latest code: 5 conversations per
+condition, **C1 and C2 ONLY**. **No full run yet** — local reviews the test first.
+
+**SCOPE: C3 and C4 are OUT on this GPU. Do not run them at all.**
 
 ## TASK 0 — Diagnose the GPU (read-only first, collect everything)
 Run these and paste ALL output into `VM_REPORT.md` under a new heading
@@ -56,26 +58,25 @@ the report (`git add VM_REPORT.md && git commit -m "report: GPU diagnosis" && gi
 
 If nothing works: report it and STOP. Do not try anything more invasive.
 
-## TASK 2 — If the GPU works: 5-conversation TEST of every condition (tmux)
-What is being tested: the new **next-speaker stop** on `main` (turn-wise generation now
-stops as soon as the model starts writing the other speaker's line; the kept text should be
-identical, only faster, with far fewer token-cap hits — this matters most for C3). Same 5 dev
-ids as the July sweep, into a NEW folder, so it compares directly with `data/dev_sweep/`.
-Order C1 → C2 → C3 → C4; results are pushed after each architecture.
+## TASK 2 — If the GPU works: 5-conversation TEST of C1 and C2 ONLY (tmux)
+What is being tested: the new **next-speaker stop** on `main` (turn-wise generation, i.e.
+C2, now stops as soon as the model starts writing the other speaker's line; the kept text
+should be identical, only faster, with fewer token-cap hits). C1 is unaffected by the fix —
+its test confirms the environment and the frozen design still work. Same 5 dev ids as the
+July sweep, into a NEW folder, so it compares directly with `data/dev_sweep/`.
+6 conditions (C1/C2 × P0/P1/P2); results are pushed after C1 and again after C2.
 ```bash
 cd ~/llm-spoken-conversation
 /anaconda/envs/convsim/bin/python -m py_compile generation/*.py prompts/templates.py && echo SYNTAX OK
 tmux new-session -d -s retest 'cd ~/llm-spoken-conversation && \
   PY=/anaconda/envs/convsim/bin/python \
-  OUT_ROOT=data/dev_sweep_v2 LOG=run_v3_retest.log PUSH_EACH=1 \
-  C4_DEVICE_A=cuda:0 C4_DEVICE_B=cuda:1 \
+  OUT_ROOT=data/dev_sweep_v2 LOG=run_v3_retest.log PUSH_EACH=1 ARCHS="c1 c2" \
   bash generation/run_v3_devsweep.sh'
 sleep 120 && tail -n 20 run_v3_retest.log
 ```
-Confirm it is loading/generating, then leave it. If **C4 OOMs** on the M60, that's expected —
-let the script finish and report it.
+Confirm it is loading/generating, then leave it.
 
-## TASK 3 — Report (after C2 finishes, and again when everything finishes)
+## TASK 3 — Report (quick interim after C1 finishes, full report after C2 finishes)
 Into `VM_REPORT.md` under `## Re-test with next-speaker stop (2026-09-26)`:
 1. **Speed:** minutes per conversation for each condition (from the `=== dev ...` timestamps
    in `run_v3_retest.log`) next to the July numbers from `run_v3_devsweep.log`.
@@ -83,12 +84,15 @@ Into `VM_REPORT.md` under `## Re-test with next-speaker stop (2026-09-26)`:
    (from the JSON `quality_counters`) — old `data/dev_sweep` vs new `data/dev_sweep_v2`.
 3. `degeneration_score.py` and `dev_report.py` tables for `data/dev_sweep_v2/C*-P*`
    (the script prints them at the end; run by hand for an interim report).
-4. **2 full transcripts each** for C2-P1 and C3-P1 (and C4-P1 if it ran) — paste the turns.
+4. **2 full transcripts each** for C1-P1, C2-P1 and C2-P2 — paste the turns.
 5. Anything broken: empty turns, cut-off turns, crashes, OOMs.
+6. **Timing forecast** for the full run: minutes/conversation × 50 for each of the 6
+   conditions, plus the total in hours.
 Then: `git add VM_REPORT.md data/dev_sweep_v2 run_v3_retest.log && git commit -m "test(gen-v3): re-test report" && git push`.
 **STOP. Do NOT start the full run (`run_v3_regen.sh`).** Local reviews the test first.
 
 ## Do NOT
+- Do NOT run C3 or C4 in any form.
 - Do NOT edit `VM_TASKS.md` (local owns it). Everything you produce goes in `VM_REPORT.md`.
 - Do NOT touch `data/generated/`, `data/generated_v2/`, `data/dev_sweep/`; do NOT create `data/generated_v3/`.
 - Do NOT change prompts, the manifest, `generation/config.py`, or decoding.
