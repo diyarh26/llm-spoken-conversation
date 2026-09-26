@@ -6,6 +6,7 @@ import unittest
 
 import numpy as np
 
+from analysis.analyze import conversation_turns
 from analysis.dialogue_acts import (
     COARSE_LABELS,
     DIALOGTAG_TO_FINE,
@@ -88,6 +89,23 @@ class DistanceTests(unittest.TestCase):
         left = np.array([[1.0, 0.0], [0.0, 0.0]])
         right = np.array([[1.0, 0.0], [0.0, 1.0]])
         self.assertAlmostEqual(transition_jsd(left, right), 0.5)
+
+
+class SeedTurnTests(unittest.TestCase):
+    def test_turnwise_seed_greetings_dropped(self) -> None:
+        rec = {"seed_turns": 2, "turns": [["A", "Hello!"], ["B", "Hello!"], ["A", "Uh-huh."]]}
+        self.assertEqual(conversation_turns(rec), [("A", "Uh-huh.")])
+
+    def test_c1_model_opener_kept(self) -> None:
+        # C1 has the greetings only in its prompt; a model-written opener must survive.
+        rec = {"seed_turns": 2, "raw_output": "A: Hi, how are you?\nB: Hello! Good."}
+        self.assertEqual(len(conversation_turns(rec)), 2)
+        echoed = {"seed_turns": 2, "raw_output": "A: Hello!\nB: Hello!\nA: So, pets?"}
+        self.assertEqual(conversation_turns(echoed), [("A", "So, pets?")])
+
+    def test_records_without_seed_field_unchanged(self) -> None:
+        rec = {"turns": [["A", "Hello!"], ["B", "Hello!"]]}
+        self.assertEqual(len(conversation_turns(rec)), 2)
 
 
 class GranularityTests(unittest.TestCase):

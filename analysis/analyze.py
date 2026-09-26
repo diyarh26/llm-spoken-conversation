@@ -30,17 +30,29 @@ GEN_ROOT = pathlib.Path(__file__).resolve().parent.parent / "data" / "generated"
 
 
 def conversation_turns(rec: dict) -> list[tuple[str, str]]:
-    """(speaker, text) turns for a generated record — parses C1 raw_output if needed."""
+    """(speaker, text) turns for a generated record — parses C1 raw_output if needed.
+
+    Drops the scripted opening greetings (v3 records carry `seed_turns`): at most that many
+    LEADING turns, and only while they are literally the scripted "Hello!". C2/C3/C4 store
+    the seeds in `turns`; C1 only has them in its prompt, so its raw_output may or may not
+    echo them — a model-written opener is never dropped. Records without `seed_turns`
+    (v2 and earlier) are unchanged.
+    """
     if rec.get("turns"):
-        return [(t[0], t[1]) for t in rec["turns"]]
-    turns = []
-    for line in rec.get("raw_output", "").split("\n"):
-        line = line.strip()
-        if ":" in line:
-            spk, txt = line.split(":", 1)
-            if txt.strip():
-                turns.append((spk.strip(), txt.strip()))
-    return turns
+        turns = [(t[0], t[1]) for t in rec["turns"]]
+    else:
+        turns = []
+        for line in rec.get("raw_output", "").split("\n"):
+            line = line.strip()
+            if ":" in line:
+                spk, txt = line.split(":", 1)
+                if txt.strip():
+                    turns.append((spk.strip(), txt.strip()))
+    n_seed = 0
+    while (n_seed < int(rec.get("seed_turns", 0)) and n_seed < len(turns)
+           and turns[n_seed][1].strip().strip('"').lower() == "hello!"):
+        n_seed += 1
+    return turns[n_seed:]
 
 
 def switchboard_baseline(n: int = 50) -> dict:
