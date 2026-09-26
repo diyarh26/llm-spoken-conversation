@@ -1,91 +1,88 @@
-# VM Tasks — v3 DEV-SWEEP TEST (2026-07-23, stopgap added 2026-07-24)
+# VM Tasks — GPU diagnosis, then START the v3 run (2026-09-26)
 
-Owner: local side. This is a **TEST**, not the full run. Goal: confirm the rebuilt prompting
-(P0 data fix, P1 rewrite, new P2 few-shot pool) and the DV-safe decoding actually move
-generation toward human structure **before** we spend days on the full 600-conversation run.
-Read `CLAUDE.md`, then `generation/GENERATION_SPEC.md` for the frozen design.
+Owner: local side. Read `CLAUDE.md` first. **Deadline context: the poster is on 2026-10-11.**
+Every GPU hour counts. The goal today is to (A) find out exactly what is wrong with the GPU and
+(B) if it can be made to work, start real v3 generation (C1, then C2) and leave it running.
 
-## ⚠️ HARDWARE STATUS (2026-07-24): this VM was DOWNGRADED
-`nvidia-smi` + Azure IMDS confirm the VM is now `Standard_NV24s_v3` = **2× Tesla M60
-(7.5 GB each)**, not the original `NC6s_v3` V100 (16 GB). The V100 didn't fail — the SKU was
-changed. **A resize back to `NC6s_v3` is being requested from the tutor.** The M60 is why the
-last run crawled (~10 tok/s) and C3/C4 OOM'd. **The full 600-conv run REQUIRES the V100** —
-do NOT attempt it on the M60. This TEST, however, can mostly finish on the M60 (see STOPGAP).
-
-## STOPGAP — finish the TEST on the 2×M60 while waiting for the V100
-C1 + C2 are already done (5 each × P0/P1/P2). Two fixes are now on `main`:
-- `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True` — reduces fragmentation OOM (lets **C3**,
-  a single Vicuna split across both M60s, finish). Set automatically by the sweep script.
-- C4 `--device-a/--device-b` — pins C4's two models to separate GPUs (Vicuna→cuda:0,
-  Mistral→cuda:1) so they don't collide on one 7.5 GB card.
-
-**Honest expectation:** C3 should complete. **C4 may still OOM** — Vicuna-13B alone (~7 GB)
-on a single 7.5 GB M60 leaves almost no room for the growing KV cache, so long conversations
-can die. If C4 fails after a few turns, that's expected: **let it go, C4 waits for the V100.**
-Getting C1+C2+C3 (3 of 4 architectures) fully tested now is the win.
-
-## What changed on `main` since the last VM pull (all local, sanity-checked)
-- **Cleaner fixed** (`analysis/swda.py`): drops non-verbal `.` turns, `(( uncertain ))`
-  markup, and `--` dashes. Fixes both the few-shot examples and the human baseline.
-- **P2 rebuilt**: draws **2 real backchannel-rich Switchboard excerpts** from a committed
-  10-excerpt pool (`generation/fewshot_pool.json` — ids+offsets only, NO transcript text;
-  reconstructed from local corpus at run time), seeded per conversation, distinct topics.
-- **P1 rewritten**: brevity line now allows "just a word or two" (lets short/reactive turns
-  emerge), topic stated once in natural case, anti-assistant guard tightened to one line.
-- **P0 data fix**: 7 of 66 SwDA topic prompts were truncated in the source metadata
-  (`...IMPORTANT.  ORY`, `TENY`, `YOUY`) — restored to clean text. P0 wording is otherwise
-  the untouched replication anchor.
-- New: `generation/dev_report.py` (short-turn% + backchannel% vs human) and P2 added to the
-  dev sweep.
-
-## TASK 0 — Pull, verify env + GPU (BEFORE anything)
+## TASK 0 — Diagnose the GPU (read-only first, collect everything)
+Run these and paste ALL output into `VM_REPORT.md` under a new heading
+`## GPU diagnosis (2026-09-26)`. Do not change anything yet.
 ```bash
 cd ~/llm-spoken-conversation && git pull --ff-only origin main
-conda activate convsim
-/anaconda/envs/convsim/bin/python -m py_compile generation/*.py prompts/templates.py analysis/swda.py && echo "SYNTAX OK"
-# pool must reconstruct 10 excerpts from the local corpus:
-/anaconda/envs/convsim/bin/python -c "from analysis.swda import load_fewshot_pool; p=load_fewshot_pool(); print(len(p),'excerpts:',[e['topic'] for e in p])"
-# expect: 10 excerpts: ['FISHING', 'HOME REPAIRS', ...]  (if 0 -> the swda corpus isn't extracted locally)
-nvidia-smi && /anaconda/envs/convsim/bin/python -c "import torch; print('cuda', torch.cuda.is_available())"
+date; uptime; uname -r
+# 1. What VM size does Azure say we are? (the email to the tutor needs this)
+curl -s -H Metadata:true "http://169.254.169.254/metadata/instance/compute?api-version=2021-02-01" \
+  | python3 -c "import sys,json; d=json.load(sys.stdin); print('vmSize:',d['vmSize'],'| name:',d['name'],'| location:',d['location'])"
+# 2. What GPUs does the hardware expose?
+lspci | grep -i nvidia
+# 3. Driver state
+nvidia-smi; echo "exit=$?"
+cat /proc/driver/nvidia/version 2>&1
+lsmod | grep -i nvidia
+dkms status 2>&1
+ls /lib/modules/
+mokutil --sb-state 2>&1
+sudo dmesg | grep -iE "nvidia|NVRM" | tail -n 30
+# 4. Did an automatic update change the driver or kernel while we were away?
+grep -iE "nvidia|linux-image" /var/log/apt/history.log* 2>/dev/null | tail -n 30
+zgrep -ihE "nvidia|linux-image" /var/log/unattended-upgrades/*.log* 2>/dev/null | tail -n 20
+dpkg -l | grep -iE "nvidia-(driver|dkms|kernel)|cuda-drivers" | awk '{print $2, $3}'
+# 5. Is the rest of the environment still intact?
+df -h ~ | tail -1
+ls ~/.cache/huggingface/hub | grep -iE "vicuna|mistral"
 ```
-If `nvidia-smi` shows an **NVML driver/library mismatch**: `sudo reboot` NOW (never mid-run),
-reconnect, re-activate, re-check. C4 loads two models — that is where the last run crashed.
+Then write a **plain-language diagnosis** (3–5 lines): which VM size, which GPUs, why the
+driver fails (e.g. kernel updated but the NVIDIA module wasn't rebuilt / driver-library
+mismatch / Secure Boot blocking the module / no driver installed).
 
-## TASK 1 — Finish the dev sweep on the M60 (tmux)
-Resumable — C1/C2 (and the C3 ids already on disk) are skipped, so this just finishes C3 and
-attempts C4. Launch with the M60 stopgap env vars set:
+## TASK 1 — Fix the driver (in this order; stop at the first that works)
+Nothing is running, so a reboot is safe.
+1. `sudo reboot`, reconnect, then `nvidia-smi`. The July NVML mismatch was fixed this way.
+2. If it's still broken and `dkms status` shows the nvidia module NOT built for the current
+   kernel (`uname -r`): `sudo dkms autoinstall`, then `sudo reboot`, then `nvidia-smi`.
+3. If it's still broken: reinstall the **same** driver package that `dpkg -l` shows
+   (`sudo apt-get install --reinstall <that nvidia-driver-XXX package>`), reboot, re-check.
+   Do NOT switch driver branches or install GRID drivers without reporting first.
+4. Once `nvidia-smi` works: **stop automatic updates from breaking it again**:
+   `sudo apt-mark hold $(dpkg -l | awk '/^ii/ && $2 ~ /nvidia|linux-image|linux-headers|linux-azure/ {print $2}')`
+   and record what was held.
+
+Verify: `nvidia-smi` shows 2 GPUs, and
+`/anaconda/envs/convsim/bin/python -c "import torch; print(torch.cuda.is_available(), torch.cuda.device_count())"`
+prints `True 2`. Record the result (fixed or not, and how) in `VM_REPORT.md`, then commit and push
+the report (`git add VM_REPORT.md && git commit -m "report: GPU diagnosis" && git push`)
+**before** starting Task 2, so the local side sees it right away.
+
+If nothing works: report it and STOP. Do not try anything more invasive.
+
+## TASK 2 — If the GPU works: START the v3 run (C1, then C2) in tmux
+The design is **FROZEN** (see `generation/GENERATION_SPEC.md` §4). One new change on `main`:
+turn-wise generation now stops as soon as the model starts the *next* speaker's line
+(output-neutral: the kept turn is identical; it only skips wasted tokens).
+
+Order = C1 (all prompts, ~11 h on the M60) → C2-P1 → C2-P2 → C2-P0 (~90 h total on the
+M60). It is resumable and commits + pushes after each condition.
 ```bash
-tmux new-session -d -s devsweep 'cd ~/llm-spoken-conversation && \
+cd ~/llm-spoken-conversation
+/anaconda/envs/convsim/bin/python -m py_compile generation/*.py prompts/templates.py && echo SYNTAX OK
+tmux new-session -d -s regen 'cd ~/llm-spoken-conversation && \
   PY=/anaconda/envs/convsim/bin/python \
   PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
-  C4_DEVICE_A=cuda:0 C4_DEVICE_B=cuda:1 \
-  bash generation/run_v3_devsweep.sh'
-sleep 30 && tail -n 20 run_v3_devsweep.log   # confirm it's saving, then leave it
+  CONDS="C1-P0 C1-P1 C1-P2 C2-P1 C2-P2 C2-P0" \
+  bash generation/run_v3_regen.sh'
+sleep 120 && tail -n 20 run_v3_regen.log
 ```
-The script prints two readouts at the end (degeneration score + did-it-improve report). If
-C4 OOMs (expected — see STOPGAP), that's fine; run the readouts by hand on what exists:
-```bash
-/anaconda/envs/convsim/bin/python generation/degeneration_score.py data/dev_sweep/C*-P*
-/anaconda/envs/convsim/bin/python generation/dev_report.py data/dev_sweep/C*-P*
-```
+Confirm the first conversation is saved (`ls data/generated_v3/C1-P0 | wc -l` > 0), write
+**one line** into `VM_REPORT.md` ("v3 run started <time UTC>, first file saved"), then commit
+and push `VM_REPORT.md` only. **Leave tmux running. Do NOT start C3/C4.** The local side
+decides on C3/C4 after the GPU situation with the tutor is clear.
 
-## TASK 2 — Report back (this is the whole point)
-Into **`VM_REPORT.md`**, paste:
-1. The full **dev_report** table (short-turn% + backchannel% per condition vs the HUMAN row).
-2. The **degeneration_score** table.
-3. **2–3 example transcripts each** for C2-P1 and C2-P2 (the clearest test of whether short
-   reactive turns / backchannels now appear). Just paste the `turns` from the JSON.
-4. One line: did P1/P2 backchannel% and short-turn% rise toward HUMAN vs P0? Any degeneration?
-Then:
-```bash
-git add data/dev_sweep run_v3_devsweep.log VM_REPORT.md && git commit -m "test(gen-v3): dev sweep results" && git push
-```
-**STOP after this.** Do NOT freeze config.py or start the full regen — local reviews the
-sweep first and decides. This is a checkpoint, not the run.
+Monitor without disturbing it: `tail -n 5 run_v3_regen.log`,
+`for d in data/generated_v3/*; do echo $d $(ls $d | wc -l); done`.
 
 ## Do NOT
-- Do NOT edit `VM_TASKS.md` (local owns it) — everything you produce goes in `VM_REPORT.md`.
-- Do NOT touch `data/generated/`, `data/generated_v2/`, or start `data/generated_v3/`.
-- Do NOT change prompts, the pool, the manifest, or decoding — the design is frozen.
-- Do NOT commit Switchboard source data or model weights (`.gitignore` enforces).
-- Do NOT reboot mid-run.
+- Do NOT edit `VM_TASKS.md` (local owns it). Everything you produce goes in `VM_REPORT.md`.
+- Do NOT touch `data/generated/`, `data/generated_v2/`, `data/dev_sweep/`.
+- Do NOT change prompts, the manifest, `generation/config.py`, or decoding.
+- Do NOT commit Switchboard source data or model weights.
+- Do NOT reboot while the tmux run is generating.

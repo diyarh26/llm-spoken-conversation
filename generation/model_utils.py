@@ -70,14 +70,36 @@ class SentenceEndStoppingCriteria(StoppingCriteria):
         return text.endswith((".", "?", "!"))
 
 
+class SpeakerMarkerStoppingCriteria(StoppingCriteria):
+    """Stop as soon as the model starts writing the NEXT speaker's turn.
+
+    Output-neutral: clean_single_turn() cuts at exactly the same marker, so the kept turn is
+    identical — this only skips the tokens that would be thrown away. Without it, Vicuna
+    often writes a whole fake dialogue up to max_new_tokens (the 2026-07-24 dev sweep: most
+    GPU time spent on discarded text, and C3's 50%+ token-cap rate).
+    """
+
+    def __init__(self, tok, prompt_len: int, labels):
+        self.tok = tok
+        self.prompt_len = prompt_len
+        self.labels = labels
+
+    def __call__(self, input_ids, scores, **kwargs) -> bool:
+        text = self.tok.decode(input_ids[0][self.prompt_len:], skip_special_tokens=True)
+        return _next_marker(text, self.labels) is not None
+
+
 @torch.inference_mode()
 def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
          do_sample=True, stop_at_sentence=False, min_new_tokens=2,
-         repetition_penalty=1.0, no_repeat_ngram_size=0) -> tuple[str, dict]:
+         repetition_penalty=1.0, no_repeat_ngram_size=0,
+         stop_labels=None) -> tuple[str, dict]:
     """messages: list of {role, content}. Returns (text, info).
 
     info = {"n_new_tokens": int, "hit_token_cap": bool} — cap-hits are logged by the
     generators because a bound cap truncates turn length, a measured DV.
+    stop_labels: speaker labels for turn-wise generation — stop once the next speaker's
+    marker appears (see SpeakerMarkerStoppingCriteria). None for C1 (whole conversation).
     Defaults mirror generation/config.py (DV-safe: penalties off, no real token floor);
     per-run values come from the config/CLI, not from here.
     """
@@ -115,10 +137,13 @@ def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
             gen_kwargs["temperature"] = temperature
         if top_p is not None:
             gen_kwargs["top_p"] = top_p
+    criteria = []
     if stop_at_sentence:
-        gen_kwargs["stopping_criteria"] = StoppingCriteriaList([
-            SentenceEndStoppingCriteria(tok, input_len, min_new_tokens=min_new_tokens)
-        ])
+        criteria.append(SentenceEndStoppingCriteria(tok, input_len, min_new_tokens=min_new_tokens))
+    if stop_labels:
+        criteria.append(SpeakerMarkerStoppingCriteria(tok, input_len, stop_labels))
+    if criteria:
+        gen_kwargs["stopping_criteria"] = StoppingCriteriaList(criteria)
 
     out = model.generate(**model_inputs, **gen_kwargs)
     new_tokens = out[0][input_len:]
@@ -153,7 +178,7 @@ def generate_turn(model, tok, messages, history, labels, *,
             max_new_tokens=max_new_tokens, temperature=temp, top_p=top_p,
             min_new_tokens=min_new_tokens, stop_at_sentence=stop_at_sentence,
             repetition_penalty=repetition_penalty,
-            no_repeat_ngram_size=no_repeat_ngram_size,
+            no_repeat_ngram_size=no_repeat_ngram_size, stop_labels=labels,
         )
         counters["hit_token_cap"] = counters.get("hit_token_cap", 0) + int(info["hit_token_cap"])
         turn, ran_past = clean_single_turn(raw, labels)
@@ -186,6 +211,20 @@ def clean_single_turn(text: str, labels=("ParticipantA", "ParticipantB")) -> tup
     ASSISTY:, plus HUMAN:/AI:/SYSTEM:/BOT:). A True flag here means the model did NOT keep
     to one turn — which we count as a multi-turn emission.
     """
+    t = _strip_lead_labels(text.strip())
+    cut = _marker_in(t, labels)
+    ran_past = cut is not None
+    if ran_past:
+        t = t[:cut]
+    return t.strip().strip('"'), ran_past
+
+
+def _next_marker(text: str, labels) -> int | None:
+    """Position of the next-speaker marker in raw model output (None = still one turn)."""
+    return _marker_in(_strip_lead_labels(text.strip()), labels)
+
+
+def _marker_in(t: str, labels) -> int | None:
     label_alt = "|".join(re.escape(label) for label in labels)
     # Tolerant participant label: catches degraded 4-bit variants like "ParticipantsA:"
     # (stray 's') and "Participant A:" (space) that the exact label misses. The C2
@@ -196,6 +235,11 @@ def clean_single_turn(text: str, labels=("ParticipantA", "ParticipantB")) -> tup
         rf"|(?:(?:^|\n)\s*(?:USER|ASSIST\w*|HUMAN|AI|SYSTEM|BOT)\s*:)",
         re.I,
     )
+    m = marker_re.search(t)
+    return m.start() if m else None
+
+
+def _strip_lead_labels(t: str) -> str:
     # Leading label — aggressive. The single-model C2 path (one model writes BOTH speakers off a
     # labelled transcript) emits a wide variety of degraded/misspelled speaker labels:
     # "ParticipentB:", "ParticipB:", "Participation:", "ParticipANT_A:", the vocative
@@ -207,16 +251,11 @@ def clean_single_turn(text: str, labels=("ParticipantA", "ParticipantB")) -> tup
         r"[\s_]*[ab]?\s*[:,]\s*",
         re.I,
     )
-    t = text.strip()
     prev = None
     while prev != t:
         prev = t
         t = lead_label.sub("", t, count=1)
-    nxt = marker_re.search(t)
-    ran_past = nxt is not None
-    if ran_past:
-        t = t[:nxt.start()]
-    return t.strip().strip('"'), ran_past
+    return t
 
 
 # Farewell / sign-off cues used to end a conversation naturally (see generate_c3.py loop).

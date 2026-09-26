@@ -58,7 +58,11 @@ the old settings *suppressed by construction* the phenomena that metric measures
 3. The two seeded "Hello!" turns are scripted: `seed_turns: 2` in every JSON; Track 2
    must exclude them from tagging (and treat human openings symmetrically).
 
-## 4. Decoding (pre-sweep defaults; single source: `generation/config.py`)
+## 4. Decoding (FROZEN 2026-09-26 as-is; single source: `generation/config.py`)
+
+Freeze decision: the dev sweep forced no escalation for C1/C2 (dup-turn rate ≤0.005 at
+P1/P2; C2-P0's 0.10 is the paper-prompt replication condition, kept as-is). C3's
+degeneration was the multi-turn/token-cap waste fixed by the next-speaker stop below.
 
 | | C1 (all-at-once) | C2/C3/C4 (turn-wise) |
 |---|---|---|
@@ -67,6 +71,7 @@ the old settings *suppressed by construction* the phenomena that metric measures
 | temperature / top_p | 0.8 / 0.95 | 0.8 / 0.95 (shared — sampling is not a per-arch factor) |
 | repetition_penalty / ngram ban | off (known-good; penalties truncate the required label repetition) | off; **procedural loop guard** instead |
 | stop_at_sentence | — | off |
+| stop at next-speaker marker | — | **on** (added 2026-09-26; output-neutral — the cleaner cuts at the same marker, this only skips discarded tokens, so `hit_token_cap` drops vs the dev sweep) |
 | turn cap | prompt asks ~30 turns | 40, logged (`ended_by: turn_cap`) |
 
 **Procedural loop guard** (`generation/quality.py` + `model_utils.generate_turn`): a turn
