@@ -58,6 +58,13 @@ the old settings *suppressed by construction* the phenomena that metric measures
 3. The two seeded "Hello!" turns are scripted: `seed_turns: 2` in every JSON; Track 2
    must exclude them from tagging (and treat human openings symmetrically).
 
+**Known wording caveat (kept deliberately, decided 2026-09-26):** the C1 (and C2) P1/P2 prompts
+frame the model as the *writer* ("Write/You are writing a conversation…") but reuse the shared
+P1 clauses that address it as a *participant* ("The two of you were each asked…", "You are
+just an ordinary person…"). The model handles it (dev transcripts are coherent); the text is
+identical across architectures within a prompt level, so it cannot drive the architecture
+contrast. Report as a limitation; do not change it mid-study.
+
 ## 4. Decoding (FROZEN 2026-09-26 as-is; single source: `generation/config.py`)
 
 Freeze decision: the dev sweep forced no escalation for C1/C2 (dup-turn rate ≤0.005 at
