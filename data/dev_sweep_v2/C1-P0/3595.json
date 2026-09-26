@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello! How are you doing today?\nParticipantA: I'm doing well, thank you. How about you?\nParticipantB: I'm doing pretty good as well. So, what brings you to call today?\nParticipantA: Well, I was hoping to learn about the books you enjoy reading for pleasure or self-improvement.\nParticipantB: That's an interesting topic. I'm always looking for new books to read. What about you?\nParticipantA: Same here. I enjoy reading a variety of books, from fiction to self-help.\nParticipantB: That's great. What are some of your favorite books?\nParticipantA: Well, I recently read and enjoyed \"The Nightingale\" by Kristin Hannah. It's a historical fiction set during World War II.\nParticipantB: Oh, I've heard of that book. It's quite popular. What about self-help books? Do you have any favorites?\nParticipantA: I've been reading \"Atomic Habits\" by James Clear lately. It's a great book on how to build good habits and break bad ones.\nParticipantB: I've read that book too. It's really insightful. What about fiction books? Do you have any favorite authors?\nParticipantA: I love the works of Jane Austen. \"Pride and Prejudice\" is one of my all-time favorite books.\nParticipantB: Oh, I adore her books as well. Have you read \"Sense and Sensibility\"?\nParticipantA: Yes, I have. It's another great book by her. I also enjoy reading mysteries and thrillers.\nParticipantB: I love mysteries and thrillers too. Have you read any books by Gillian Flynn?\nParticipantA: I haven't, but I've heard great things about her books. Which one do you recommend I start with?\nParticipantB: I would suggest starting with \"Gone Girl.\" It's a psychological thriller that keeps you on the edge of your seat.\nParticipantA: Great, I'll check it out. Thanks for the recommendation.\nParticipantB: You're welcome. So, what are some of your favorite non-fiction books?\nParticipantA: I recently finished reading \"The 7 Habits of Highly Effective People\" by Stephen Covey. It's a classic self-improvement book.\nParticipantB: Oh, I've heard of that one too. What did you think of it?\nParticipantA: It's a great book. I learned a lot from it, and it's helped me become more effective in my personal and professional life.\nParticipantB: That's great to hear. I'm always looking for new books to read. Thanks for sharing your favorites with me.\nParticipantA: You're welcome. It was great talking to you.\nParticipantB: Likewise, it was nice chatting with you. Have a great day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 714,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

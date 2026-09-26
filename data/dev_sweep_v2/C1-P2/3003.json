@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what kind of car are you thinking of buying next?\nParticipantB: Oh, I'm not sure yet. I'm still looking around. What about you?\nParticipantA: Well, I'm thinking of maybe getting a new sedan. I like the idea of having a reliable car for work and family outings.\nParticipantB: Yeah, sedans are great for that. What's your budget like?\nParticipantA: It's not too bad. I'm thinking of spending around 20k.\nParticipantB: Okay, that's definitely doable. Have you looked at any specific models yet?\nParticipantA: Not really, I've just been doing some research online. What about you?\nParticipantB: I've been considering a sports car. I love the idea of having a fast and powerful car for weekend drives.\nParticipantA: That sounds cool, but isn't it a bit expensive to maintain?\nParticipantB: Yeah, it definitely is. But I've done my research and found some good deals on insurance and maintenance.\nParticipantA: I see. I've heard that buying a car can be a real hassle.\nParticipantB: Definitely. It's all about finding the right deal and negotiating the best price. Have you ever had a bad experience buying a car?\nParticipantA: Well, my last car was a total lemon. I bought it from a private seller who didn't disclose some major problems with the engine.\nParticipantB: Oh no, that's terrible. I've had a similar experience, actually. I bought a used car from a dealership that had a hidden defect in the transmission.\nParticipantA: Yeah, it's frustrating when you can't trust the people selling you a car.\nParticipantB: Definitely. But you know, it's all about doing your research and asking around for recommendations.\nParticipantA: Yeah, that's a good point. I should probably get a mechanic to check out any car I'm thinking of buying.\nParticipantB: Absolutely. It's always better to be safe than sorry.\nParticipantA: So, have you decided on a specific sports car model yet?\nParticipantB: Not yet, I'm still looking around. I'm considering a Mazda Miata or a Ford Mustang.\nParticipantA: Those are both great choices. I'm sure you'll find the perfect car for you.\nParticipantB: Thanks, I hope so. It's just so hard to decide with so many options out there.\nParticipantA: Yeah, there's definitely a lot to consider. But as long as you do your research and test drive a few cars, you'll find the one that's right for you.\nParticipantB: You're right. I just need to keep reminding myself that it's okay to take my time and not rush into a decision.\nParticipantA: Definitely. Good luck with your search!\nParticipantB: Thanks, you too!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 741,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

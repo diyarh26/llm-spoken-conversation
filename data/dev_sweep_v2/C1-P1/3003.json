@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: So, what kind of car are you thinking of buying next?\nParticipantB: Well, I'm thinking about getting a new car, and I'm really interested in electric vehicles.\nParticipantA: That's cool. I've been thinking about buying a new car too, but I'm not really sure what I want.\nParticipantB: What kind of things are you looking for in a car?\nParticipantA: I want something that's reliable and easy to maintain. I work at a bank, so I don't want to have to worry about breaking down on the way to work.\nParticipantB: That makes sense. I've been looking into electric cars because I'm interested in the technology and I want to reduce my carbon footprint.\nParticipantA: I've considered electric cars too, but I'm worried about the range. I don't want to be stranded on the side of the road with a dead battery.\nParticipantB: I can understand that. I've actually owned an electric car for a few years now, and I can tell you that the range is definitely improving.\nParticipantA: Really? That's good to hear. What kind of car do you have?\nParticipantB: I have a Nissan Leaf. It's a great car, and the battery range has improved a lot since I got it.\nParticipantA: That's good to know. I've been considering a Toyota, but I'm not sure which one to get.\nParticipantB: Toyota makes some great cars. I've had good experiences with their Corolla models in the past.\nParticipantA: Yeah, I've heard good things about Toyotas too. I just don't want to spend too much money.\nParticipantB: I hear you. It's important to find a car that fits your budget. Have you thought about buying a used car?\nParticipantA: I have, but I'm worried about the reliability of used cars.\nParticipantB: That's a valid concern. It's important to do your research and get a good history report on any used car you're considering.\nParticipantA: Yeah, I'll have to keep that in mind. Thanks for the advice.\nParticipantB: No problem. It was nice chatting with you.\nParticipantA: You too. Thanks for the conversation.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 562,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

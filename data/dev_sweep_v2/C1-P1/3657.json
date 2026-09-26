@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing pretty good, thanks. How about you?\nParticipantA: I'm doing okay. So, what brings you to call about computers today?\nParticipantB: Well, I'm just curious about people's preferences when it comes to personal computers.\nParticipantA: Yeah, same here. I've been using them for years, but I still have mixed feelings about them.\nParticipantB: Same here. I think they're great for certain things, but there are some downsides too.\nParticipantA: Yeah, definitely. I think it's hard to find a perfect computer that meets all your needs.\nParticipantB: Exactly. And what about you? What kind of computer do you use?\nParticipantA: I have a MacBook Pro. I like it, but it's not perfect.\nParticipantB: I see. I have a Windows laptop, and I've had some issues with it, but it's mostly okay.\nParticipantA: Yeah, I've heard Windows can be problematic. But overall, what's your level of interest in computers?\nParticipantB: I'd say I'm pretty interested in them. I work as a librarian, and we use computers a lot for research and other things.\nParticipantA: That makes sense. I work as a nurse, and we use computers a lot too, for patient records and such.\nParticipantB: Oh, that's interesting. So, how do you feel about the use of computers in healthcare?\nParticipantA: I think it's great for keeping records organized and accessible, but sometimes it can be frustrating when the system crashes or when there are technical issues.\nParticipantB: Yeah, I can imagine that. I've had similar experiences with the library's computer system.\nParticipantA: Yeah, it can be frustrating. But overall, I think computers have been a game changer for healthcare and libraries.\nParticipantB: Definitely. And what about you? What's your level of interest in computers?\nParticipantA: I'd say I'm pretty interested in them too. I've always been curious about how they work and what they can do.\nParticipantB: That's cool. Well, it was nice talking to you about computers.\nParticipantA: Yeah, likewise. Thanks for the conversation.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 565,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}
