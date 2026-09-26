@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm good, thanks. How about you?\nParticipantA: I'm doing okay. So, what kind of pets do you have?\nParticipantB: We have a dog and two cats.\nParticipantA: Oh, that's great! I have a cat too. What kind of dog do you have?\nParticipantB: We have a golden retriever.\nParticipantA: That's a nice breed. I've always liked golden retrievers. What are your cats' names?\nParticipantB: One is named Whiskers and the other is Tiger.\nParticipantA: Those are cute names. My cat's name is Mittens. What kind of cats do you have?\nParticipantB: Whiskers is a Siamese and Tiger is a tabby.\nParticipantA: I've always had a soft spot for Siamese cats. They're such elegant animals. What do you like most about having pets?\nParticipantB: I love having something to come home to and having a companion to do things with.\nParticipantA: I totally agree. Pets are just the best. Do you think having pets has any health benefits?\nParticipantB: I think it definitely has mental health benefits. Having something to care for and love can really help with stress and anxiety.\nParticipantA: That's definitely true. I find having a pet to be very calming. What do you think about people who have exotic pets, like snakes or lizards?\nParticipantB: I think it's fine if they can provide proper care for the animal. But I don't think it's necessary to have a exotic pet when there are so many animals in need of adoption.\nParticipantA: I completely agree. I think it's important to adopt from shelters and give a home to an animal in need. Well, that's all I have to say about pets. Thanks for chatting with me!\nParticipantB: No problem, it was great talking with you too!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 495,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

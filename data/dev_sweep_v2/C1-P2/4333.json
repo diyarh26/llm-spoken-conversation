@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4333,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 25,
+    "education": "a college degree",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 27,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what's your take on taxes?\n\nParticipantB: Uh, well, I mean, I don't love paying them, but I guess I understand why they're necessary.\n\nParticipantA: Yeah, same here. I mean, I work in healthcare, so I see firsthand how taxes fund important programs and services.\n\nParticipantB: Right, and I work in construction, so I see how taxes pay for infrastructure and public works projects.\n\nParticipantA: Exactly. I think it's important that we all contribute to the greater good.\n\nParticipantB: Agree, but sometimes it feels like the government just wastes the money on things that don't really matter.\n\nParticipantA: Yeah, I can understand why people might feel that way, but I think there are a lot of people working hard to make sure the money is used effectively.\n\nParticipantB: I hope so. I mean, I know someone close who's dealt with the tax system and it's not always easy to navigate.\n\nParticipantA: Yeah, it can be pretty complicated, but I think that's why it's important to have professionals who specialize in tax law to help people through it.\n\nParticipantB: Yeah, that makes sense. I mean, I'm not sure I'd feel comfortable trying to do it on my own.\n\nParticipantA: Yeah, me neither. I think it's important to have experts who can help us make sure we're paying the right amount and getting all the deductions we're entitled to.\n\nParticipantB: Exactly. I mean, I don't love paying taxes, but I do appreciate the services they provide and the fact that we all contribute to them.\n\nParticipantA: Me too. I think it's important that we all do our part to support the community and make sure everyone has access to the services they need.\n\nParticipantB: Agree. I think taxes are necessary and it's important that we all pay our fair share.\n\nParticipantA: Yeah, I think so too. Well, it was nice talking with you.\n\nParticipantB: You too. Thanks for the conversation.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 536,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

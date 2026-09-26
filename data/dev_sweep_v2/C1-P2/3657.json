@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, do you have a computer at home?\nParticipantB: Yes, I do.\nParticipantA: That's great. I also have a computer at home. I use it mostly for work, but I also like to play games and keep in touch with my friends on social media.\nParticipantB: I use my computer mostly for work too, but I also enjoy reading books and doing some research on the internet. I'm a librarian, so I spend a lot of time looking up information for our patrons.\n\nParticipantA: That's really interesting. I work as a nurse, but I also use my computer for personal stuff like playing games and keeping in touch with friends. I've been thinking about getting a new computer, but I'm not sure which one to get.\nParticipantB: Well, what kind of computer are you looking for? Are you interested in a desktop or a laptop?\nParticipantA: I'm not sure yet. I like the idea of having a desktop because it's more powerful and you can upgrade it more easily. But I also like the idea of having a laptop because it's more portable and I can take it with me when I travel.\nParticipantB: I see. I've been using a desktop for years, but I recently got a laptop too. It's really handy for when I'm traveling or when I need to work from home.\nParticipantA: Do you have any recommendations for a good computer brand? I've been using a brand that's been around for a while, but I'm not sure if it's the best one out there.\nParticipantB: Well, I've had good experiences with both HP and Dell. They make reliable computers that are easy to use. I've also heard good things about Apple, but they can be a bit more expensive.\nParticipantA: Yeah, I've heard good things about Apple too, but I'm not sure if it's worth the extra cost. What about you?\nParticipantB: I've used both Windows and Mac computers, and I prefer Mac. I find the operating system to be more user-friendly and I like the way the computers look. But that's just my preference.\nParticipantA: I've never used a Mac before. Is it hard to learn how to use it?\nParticipantB: Not really. The interface is pretty intuitive and there are a lot of tutorials available online if you need help getting started. Plus, most applications are available for both Windows and Mac, so you won't miss out on anything.\n\nParticipantA: That's good to know. I'll have to consider getting a Mac next time I upgrade. What about you? Are you interested in personal computers?\nParticipantB: Yes, I am. I've been using them for years and I find them to be incredibly useful. I also enjoy tinkering with them and learning new things about them.\nParticipantA: That's cool. I've always been interested in computers too, but I haven't had as much time to learn about them as I would like. What've you been working on lately?\nParticipantB: Well, I've been working on a project to build a custom cabinet for my TV. I designed it myself and it's been a fun challenge to build it. I also enjoy tinkering with my computer and upgrading it when I can.\nParticipantA: That's really cool. I've been thinking about building a custom PC, but I'm not sure if I have the skills to do it.\nParticipantB: It can be challenging, but it's also a lot of fun. I've built a few custom PCs in the past and it's",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 872,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

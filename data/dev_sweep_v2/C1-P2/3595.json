@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, do you have any favorite books that you like to read for fun or self-improvement?\nParticipantB: Oh, I do enjoy reading. I recently finished \"The Alchemist\" by Paulo Coelho. It's a beautiful story about following your dreams.\n\nParticipantA: I've heard of that one. I actually haven't read it yet, but I've been meaning to. What did you think of it?\nParticipantB: I really enjoyed it. It's a quick read, but it has such a powerful message.\n\nParticipantA: That's great to hear. I've been looking for something to read that's both enjoyable and inspiring.\n\nParticipantB: Well, I also love reading classic literature. I just finished \"Jane Eyre\" by Charlotte Bronte. It's a bit of a slower read, but the characters are so well-developed.\n\nParticipantA: I read \"Jane Eyre\" in college, and I loved it. It's been a while since I've read it, but I remember being really moved by the story.\n\nParticipantB: Yeah, it's one of those books that really sticks with you. Have you read any other classics?\n\nParticipantA: I actually just finished \"To Kill a Mockingbird\" by Harper Lee. It's a great book, but it was really tough to read because of the racial injustice portrayed in the story.\n\nParticipantB: Yes, it's a powerful book. I actually work at a bank, and we recently had a display for Black History Month, and \"To Kill a Mockingbird\" was one of the books featured.\n\nParticipantA: That's interesting. I didn't know that it was still being talked about so much.\n\nParticipantB: Oh, it's definitely a book that people still read and talk about. And, it's not just about race, it's also about morality and doing the right thing.\n\nParticipantA: Absolutely. I think that's why it's still so relevant today.\n\nParticipantB: Yes, it's a timeless classic.\n\nParticipantA: So, what's next on your reading list?\nParticipantB: I'm actually thinking about reading \"The Great Gatsby\" by F. Scott Fitzgerald. I've heard it's a really interesting look at the excesses of the roaring twenties.\n\nParticipantA: Oh, that's a great book. I read it a few years ago, and I loved the way Fitzgerald used language to create a sense of atmosphere.\n\nParticipantB: Yeah, I've heard the writing is really beautiful.\n\nParticipantA: It is. I think it's one of those books that you can read over and over again and still find something new in it.\n\nParticipantB: Definitely. Well, I'm glad we had this chance to talk about books. It's always great to connect with someone who shares your interests.\n\nParticipantA: Absolutely. It was really nice talking to you.\n\nParticipantB: You too. Bye!\nParticipantA: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 774,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

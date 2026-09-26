@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what kind of pets do you have?\nParticipantB: I have a dog and a cat.\nParticipantA: Nice. What kind of dog and cat do you have?\nParticipantB: I have a golden retriever and a Siamese cat.\nParticipantA: I used to have a golden retriever too. They're such great dogs.\nParticipantB: Yeah, they're amazing. What kind of cat did you have?\nParticipantA: I had a stray that I took in. She was a beautiful calico.\nParticipantB: That's so nice of you to take her in. What was her name?\nParticipantA: Her name was Whiskers.\nParticipantB: That's such a cute name. I named my cat Mr. Mistoffelees.\nParticipantA: That's a great name. So, how long have you had your dog and cat?\nParticipantB: I've had my dog for about 6 years now, and I got my cat about 2 years ago.\nParticipantA: Oh, that's a long time. I had my dog for about 12 years, but she passed away a few years ago.\nParticipantB: I'm sorry to hear that. Losing a pet is so hard.\nParticipantA: It is. But, I do have a new cat now. I got her about a year ago.\nParticipantB: That's great. What kind of cat is she?\nParticipantA: She's a tortoiseshell. She's very playful and affectionate.\nParticipantB: That sounds like my cat. He's very playful and loves to cuddle.\nParticipantA: Yeah, cats are great companions. So, do you have any other pets?\nParticipantB: No, just the dog and the cat. But, I used to have a hamster when I was a kid.\nParticipantA: Oh, I had a hamster too when I was a kid. I loved it so much.\nParticipantB: They're so cute. What did you name your hamster?\nParticipantA: I named her Cinnamon.\nParticipantB: That's such a cute name. I had a hamster named Houdini.\nParticipantA: That's a great name. So, do you have any other pets now or just the dog and the cat?\nParticipantB: Just the dog and the cat. But, I do love animals and I always want to get more.\nParticipantA: Yeah, I know what you mean. I always say I'm not going to get any more pets, but then I end up getting another one.\nParticipantB: Yeah, it's hard to resist. Well, it was nice talking to you.\nParticipantA: Nice talking to you too. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 711,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

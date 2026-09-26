@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing well, thank you. How about you?\nParticipantA: I'm doing okay. So, what kind of books do you like to read?\nParticipantB: I enjoy reading a variety of genres, but I have a particular interest in historical fiction. What about you?\nParticipantA: I usually read non-fiction books for self-improvement. I find it helps me learn new things and grow as a person.\nParticipantB: That's great. I also enjoy reading non-fiction books, especially biographies and memoirs. I find them inspiring and motivating.\nParticipantA: Yes, non-fiction can be really enlightening. I recently read a book called \"The Power of Now\" by Eckhart Tolle. It's all about living in the present moment and finding inner peace.\nParticipantB: Oh, I've heard of that book. I might have to give it a try. What was your favorite part of the book?\nParticipantA: I loved the way the author explained the concept of mindfulness and how it can change your life for the better. It really opened my eyes to a new way of thinking.\nParticipantB: That's really interesting. I've been practicing mindfulness myself and it has made a big difference in my life. Have you read any other books on spirituality or personal growth?\nParticipantA: I have read \"Man's Search for Meaning\" by Viktor Frankl. It's a powerful book about his experiences in a concentration camp and how he found meaning in his life despite the horrors he faced.\nParticipantB: Yes, that's a great book. I've also read \"The Alchemist\" by Paulo Coelho. It's a beautiful story about following your dreams and finding your personal legend.\nParticipantA: I've heard of that book. I'll have to give it a try. Do you have any other recommendations?\nParticipantB: Yes, I recently read \"The Kite Runner\" by Khaled Hosseini. It's a heart-wrenching story about family, betrayal, and redemption. It's a powerful read.\nParticipantA: That sounds interesting. I'll have to add it to my list. Thanks for the recommendation.\nParticipantB: You're welcome. It was great talking to you.\nParticipantA: Yes, likewise. Have a good day.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 581,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

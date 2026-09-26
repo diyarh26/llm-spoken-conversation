@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4333,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 25,
+    "education": "a college degree",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 27,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing pretty good, thanks. How about you?\nParticipantA: I'm doing well, thanks for asking. So, what brings you to call today?\nParticipantB: Well, I was hoping to talk to you about something that's been on my mind.\nParticipantA: Sure, what's been on your mind?\nParticipantB: I've been thinking a lot about the state of American politics lately.\nParticipantA: Yeah, it's definitely been a wild ride over the past few years.\nParticipantB: I couldn't agree more. It seems like every day there's a new controversy or scandal.\nParticipantA: It definitely can feel overwhelming at times. But I think it's important to stay engaged and informed.\nParticipantB: Absolutely. I think it's easy to get frustrated and give up, but we can't let that happen.\nParticipantA: Definitely. I think it's important to remember that there are still a lot of good people working for positive change in this country.\nParticipantB: That's true. And it's important to remember that even small actions can have a big impact.\nParticipantA: Exactly. And it's important to remember that we all have a role to play in shaping the future of our country.\nParticipantB: Absolutely. So, what are your thoughts on the current state of politics in this country?\nParticipantA: Honestly, I think it's a pretty scary time to be alive. It seems like the divisions in this country are only getting deeper and more entrenched.\nParticipantB: Yeah, it can be really disheartening to see how far apart we've become.\nParticipantA: But I also think that there's still hope for us to come together and find common ground.\nParticipantB: I completely agree. It's going to take a lot of work and compromise, but I think it's possible.\nParticipantA: Definitely. And I think it starts with having respectful conversations with people who have different perspectives than our own.\nParticipantB: Absolutely. It's important to listen to others and try to understand where they're coming from.\nParticipantA: I completely agree. And I think it's important to remember that we're all in this together, and we need to work together to find solutions.\nParticipantB: That's so true. I think it's easy to forget that sometimes.\nParticipantA: Yeah, it can be easy to get caught up in our own bubbles and forget about the bigger picture.\nParticipantB: Definitely. Well, thanks for chatting with me today. It's been really insightful.\nParticipantA: Of course, thank you for the conversation. It's been great to hear your perspective.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 684,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}
