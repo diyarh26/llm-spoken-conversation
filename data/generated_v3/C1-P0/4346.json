@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4346,
+  "topic": "Public Education",
+  "sb_prompt": "DISCUSS WITH THE OTHER CALLER WHETHER THERE IS SOMETHING SERIOUSLY WRONG WITH OUR PUBLIC SCHOOL SYSTEMS TODAYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a high-school education",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: I'm glad we can talk about this. I've been really concerned lately about the state of our public schools.\nParticipantB: Yeah, it's definitely something that's been on my mind too. I think there's a lot of problems with the system that need to be addressed.\nParticipantA: What do you think is the biggest issue?\nParticipantB: I think one of the biggest problems is the lack of funding. Schools just don't have enough money to provide the resources and support that students need to succeed.\nParticipantA: That's definitely a big problem. I also think there's a lack of accountability for teachers and administrators. It seems like they don't always have the training and support they need to effectively educate students.\nParticipantB: I agree, and I also think that there's a lack of diversity in the curriculum. We need to make sure that students are learning about a wide range of topics and perspectives, not just the ones that are familiar to us.\nParticipantA: Absolutely. And I think there's also a lot of pressure on students to perform well on standardized tests, which doesn't necessarily reflect their actual knowledge or abilities.\nParticipantB: Yes, the focus on testing can be really detrimental to the education system. It can create a culture of competition and stress that doesn't benefit anyone.\nParticipantA: I think we need to find a way to balance accountability and support for both students and teachers. We need to make sure that everyone is being held to a high standard, but also that they have the resources and support they need to succeed.\nParticipantB: I completely agree. We need to work together to find solutions to these problems and make sure that our public schools are providing the best education possible for all students.\nParticipantA: I couldn't agree more. Thank you for having this conversation with me. It's been really enlightening.\nParticipantB: Yeah, thank you too. It's important that we keep talking about these issues and working towards solutions.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 474,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

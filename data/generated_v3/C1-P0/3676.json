@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3676,
+  "topic": "Movies",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THOUGHT ABOUT THE LAST FEW MOVIES THEY SAW. WHAT MOVIES HAVE YOU SEEN LATELY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: What have you been up to lately?\nParticipantB: Not much, just trying to stay busy. How about you?\nParticipantA: Same here. I've been watching a lot of movies lately. Have you seen anything interesting?\nParticipantB: Yeah, I saw a really good movie called \"The Father\" a few days ago. It's about an aging man struggling with dementia.\nParticipantA: Oh, I haven't heard of that one. Sounds interesting. Have you seen any other good movies recently?\nParticipantB: Yeah, I also saw \"Promising Young Woman\" which was really good. It's about a woman seeking revenge for her friend's murder.\nParticipantA: I haven't seen either of those. I saw \"Nomadland\" a few days ago, it was pretty good.\nParticipantB: Oh, I've heard great things about \"Nomadland\". I haven't seen it yet but I'm planning to. What did you think about it?\nParticipantA: I thought it was really well done. The acting was great and the story was really powerful.\nParticipantB: I'm glad to hear that. I've been hearing mixed reviews about it but I'm still excited to see it.\nParticipantA: Yeah, it's definitely worth a watch. Have you seen any other movies recently?\nParticipantB: Yeah, I saw \"Minari\" which was really good. It's a film about a Korean American family trying to make a living on a farm in Arkansas.\nParticipantA: I haven't heard of that one either. I'll have to check it out. What did you think about it?\nParticipantB: I thought it was a beautiful film. The cinematography was stunning and the story was really touching.\nParticipantA: I'll have to check it out. I haven't seen many good movies lately. Have you seen anything else worth watching?\nParticipantB: Yeah, I also saw \"Sound of Metal\" which was really good. It's about a heavy metal drummer who starts to lose his hearing.\nParticipantA: Oh, I've heard of that one. I haven't seen it yet but it sounds interesting.\nParticipantB: Yeah, it's definitely worth a watch. The acting was really good and the story was really powerful.\nParticipantA: I'll have to check it out. Thanks for the recommendations.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 577,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

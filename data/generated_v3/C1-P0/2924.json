@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2924,
+  "topic": "Trial By Jury",
+  "sb_prompt": "DISCUSS POSSIBLE CHANGES IN THE WAY TRIALS BY JURY ARE CONDUCTED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 26,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing well, thanks for asking. How about you?\nParticipantA: I'm doing great, thanks. So, I was wondering if you have any thoughts on how trials by jury are conducted?\nParticipantB: Not really, to be honest. I haven't given it much thought. But I'm happy to hear your ideas.\nParticipantA: Well, I think there should be more diversity in the jury selection process.\nParticipantB: That's a good point. It would be great to have a more representative jury.\nParticipantA: Yes, exactly. And also, I think there should be more education on the legal system for the general public.\nParticipantB: I agree. A lot of people don't understand how the system works, and that can be a problem.\nParticipantA: Exactly. And also, I think they should allow more evidence to be presented in court.\nParticipantB: Like what kind of evidence?\nParticipantA: Well, for example, scientific evidence. It's important to consider all the facts in a case.\nParticipantB: I see your point, but I'm not sure if that would be fair to the defendant.\nParticipantA: I understand your concern, but I think it's important to consider all the evidence.\nParticipantB: I hear you, but I'm still not sure. What do you think about the role of the jury in the trial?\nParticipantA: I think the jury should have more power to decide the outcome of the case.\nParticipantB: That's a controversial idea. Some people might argue that the jury should just be a fact-finder.\nParticipantA: I see your point, but I think the jury should have more influence in the outcome.\nParticipantB: That's an interesting perspective. I'm still not sure if I agree, but I appreciate your thoughts on the topic.\nParticipantA: No problem. It's always good to have a discussion on important issues.\nParticipantB: Definitely. Thanks for the conversation.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 499,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

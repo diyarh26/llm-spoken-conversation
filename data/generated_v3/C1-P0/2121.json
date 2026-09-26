@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2121,
+  "topic": "Air Pollution",
+  "sb_prompt": "PLEASE DISCUSS AIR POLLUTION.  FIND OUT WHAT SUBSTANCES THE OTHER CALLER THINKS CONTRIBUTE THE MOST TO AIR POLLUTION TODAY.  WHAT CAN INDIVIDUALS OR SOCIETY DO TO IMPROVE AIR QUALITY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 54,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello! How can I help you today?\nParticipantA: Well, I wanted to discuss something that's been on my mind lately - air pollution.\nParticipantB: Yes, it's definitely a concern. What substances do you think contribute the most to air pollution today?\nParticipantA: I think it's a combination of things, like vehicle emissions, industrial pollution, and even household cleaning products.\nParticipantB: I agree, and I think we also need to consider the impact of deforestation and the burning of fossil fuels.\nParticipantA: Absolutely. It's a complex issue with many factors contributing to it.\nParticipantB: What do you think individuals or society can do to improve air quality?\nParticipantA: I think there are a few things we can do. For one, we can drive less and use public transportation or carpool when possible.\nParticipantB: That's a good point. We can also reduce our use of plastic and other non-biodegradable materials, and properly dispose of hazardous waste.\nParticipantA: Yes, and we can also support policies and initiatives that prioritize clean energy and reduce pollution.\nParticipantB: Absolutely. And on a personal level, we can make an effort to reduce our carbon footprint by conserving energy and recycling more.\nParticipantA: Those are all great ideas. It really takes a collective effort to make a significant impact.\nParticipantB: Agreed. It's important for us to take action and do our part to protect the environment and the air we breathe.\nParticipantA: Thank you for discussing this with me. It's been really informative.\nParticipantB: Of course, it was great talking to you about it. Let's continue to spread awareness and take action to improve air quality.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 449,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

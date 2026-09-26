@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2226,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 44,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 27,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: What can I help you with today?\nParticipantB: I was hoping to find out what books you read for enjoyment or self-improvement. Do you have any recommendations?\nParticipantA: That's an interesting question. For enjoyment, I really like mystery novels. Agatha Christie is one of my favorites.\nParticipantB: I love Agatha Christie too! Have you read any other mystery authors that you would recommend?\nParticipantA: Yes, I also enjoy Tana French and Gillian Flynn. They write psychological thrillers that keep you guessing until the end.\nParticipantB: Those sound great! I'll have to check them out. What about for self-improvement?\nParticipantA: For self-improvement, I like to read books on personal development and motivation. One of my favorites is \"The 7 Habits of Highly Effective People\" by Stephen Covey.\nParticipantB: Oh, I've heard of that one! It's a classic. I've been reading a lot of books on mindfulness lately. Do you have any recommendations in that category?\nParticipantA: Yes, I've been meaning to read \"Wherever You Go, There You Are\" by Jon Kabat-Zinn. It's all about mindfulness and how to live in the present moment.\nParticipantB: That sounds really interesting. I'll have to give it a try. Do you have any other recommendations?\nParticipantA: Well, I also enjoy reading books on history. I recently finished \"The Immortal Life of Henrietta Lacks\" by Rebecca Skloot. It's a fascinating story about a woman whose cancer cells were used for scientific research without her knowledge.\nParticipantB: Wow, that sounds intense. I've been reading more non-fiction lately, especially books on science and technology. Do you have any recommendations in that area?\nParticipantA: Yes, I recently read \"The Information\" by James Gleick. It's all about the history of information and how it has shaped our world.\nParticipantB: That sounds like something I would enjoy. Thanks for the recommendation! Do you have any other book recommendations?\nParticipantA: Sure! I also like reading books on travel and adventure. One of my favorites is \"Wild\" by Cheryl Strayed. It's a memoir about her solo hike along the Pacific Crest Trail.\nParticipantB: I've heard of that one! It's a great story. I love reading books that take me to different places. Do you have any recommendations in that category?\nParticipantA: Yes, I also recommend \"The Art of Travel\" by Alain de Botton. It's a philosophical exploration of what travel means to us and how it can change our perspective on life.\nParticipantB: That sounds really intriguing. I'll have to give it a try. Thanks for all the recommendations!\nParticipantA: No problem! It was great talking to you.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 716,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

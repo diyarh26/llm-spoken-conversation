@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2405,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 28,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hi, I'm calling to ask about your preference and level of interest in personal computers.\nParticipantB: Sure, I'd be happy to share my thoughts. What about you?\nParticipantA: I'm pretty interested in personal computers, but I'm not sure how much you know about them. Can you tell me a bit about your experience with them?\nParticipantB: I've used personal computers for a while now, and I've grown to really like them. I think they're a great way to stay connected and get things done.\nParticipantA: That's cool. I feel the same way. I'm interested in learning more about the latest technology and how it can make our lives easier.\nParticipantB: Me too. I think personal computers have come a long way in recent years, and there are so many new features and capabilities that make them even more useful.\nParticipantA: Definitely. I'm especially interested in laptops and portable devices, since I travel a lot for work.\nParticipantB: Oh, I can definitely relate to that. I use my laptop all the time when I'm on the go, and it's really convenient to have everything I need in one place.\nParticipantA: Yes, that's exactly what I'm looking for. I need a device that I can take with me wherever I go, and that can handle all my work tasks as well as some entertainment.\nParticipantB: I completely understand. For me, having a reliable and powerful computer that I can take with me is essential.\nParticipantA: Absolutely. And I'm sure you agree that it's important to stay up to date with the latest technology and features.\nParticipantB: Definitely. I think it's important to keep learning and exploring new options, especially when it comes to something as essential as a personal computer.\nParticipantA: I couldn't agree more. So, based on what you've told me, it sounds like we both have a high level of interest and preference for personal computers.\nParticipantB: Yes, I think that's safe to say. It's always great to meet someone who shares our interests and values.\nParticipantA: I couldn't agree more. Thanks for chatting with me about this, and I'm looking forward to exploring more about personal computers together.\nParticipantB: Same here. Thanks for the great conversation, and have a great day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 559,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

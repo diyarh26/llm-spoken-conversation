@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3537,
+  "topic": "Universal Health Ins",
+  "sb_prompt": "DO YOU BELIEVE THAT THE US GOVERNMENT SHOULD PROVIDE UNIVERSAL HEALTH INSURANCE",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing well, thanks. How about you?\nParticipantA: I'm doing pretty good, thanks for asking.\nParticipantB: So, what brings you to call today?\nParticipantA: I was hoping to get your thoughts on a topic that's been on my mind lately.\nParticipantB: Sure, I'd be happy to hear your thoughts.\nParticipantA: Do you believe that the US government should provide universal health insurance?\nParticipantB: That's a tough question. I think healthcare is a basic human right, but I'm not sure if the government is the best solution.\nParticipantA: I agree, it's a complex issue. But I think that the government has a responsibility to ensure that all citizens have access to healthcare.\nParticipantB: I see your point, but I'm worried about the cost. How can we afford to provide healthcare to everyone?\nParticipantA: Well, there are other countries that have successfully implemented universal healthcare systems, and they seem to be doing okay.\nParticipantB: That's true, but their systems are different from ours, and it's hard to say if it would work here.\nParticipantA: I understand your concern, but I think we should at least consider it. We can't just leave people without access to healthcare.\nParticipantB: I agree that something needs to be done, but I'm not sure if the government is the best solution.\nParticipantA: I hear you, but I think we need to start having these conversations and exploring different options.\nParticipantB: I completely agree. It's important to have these discussions and figure out what's best for everyone.\nParticipantA: Thanks for your thoughts. It's been great talking with you.\nParticipantB: You too, have a great day.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 447,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

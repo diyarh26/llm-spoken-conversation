@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2279,
+  "topic": "Family Life",
+  "sb_prompt": "IF YOU HAVE CHILDRENY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 37,
+    "education": "a high-school education",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing well, thanks. How about you?\nParticipantA: I'm okay, just a little stressed with work. What do you do for a living?\nParticipantB: I'm a college student studying business. What about you?\nParticipantA: I haven't been to college, but I work at a grocery store. How's your day going so far?\nParticipantB: It's been pretty good. I'm just finishing up some assignments for my classes. How about you?\nParticipantA: My day has been pretty hectic. We're short-staffed at work, so I've been running around all day.\nParticipantB: That sounds tough. Do you have kids?\nParticipantA: No, I don't have any children. How about you?\nParticipantB: I don't have any kids either, but I do have a younger sister.\nParticipantA: Ah, that's nice. I've always thought about having kids, but it just hasn't happened yet.\nParticipantB: Yeah, I'm not sure if I want to have kids either. It's a big responsibility.\nParticipantA: Definitely. Have you thought about what you would do if you did have kids?\nParticipantB: I've thought about it a lot actually. I think I would want to be a hands-on parent and be involved in my child's life as much as possible.\nParticipantA: That's great. I'm the same way. I want to be there for my kids and be a good role model for them.\nParticipantB: I think that's important. It's not just about providing for them, but also being there for them emotionally.\nParticipantA: Absolutely. I think that's what makes a good parent.\nParticipantB: So, have you ever thought about what you would want to name your child if you had one?\nParticipantA: Oh, I've thought about it a lot. I like the name Ethan for a boy, and for a girl, I like the name Ava.\nParticipantB: Those are great names. I like the name Ava too. I've thought about naming my future child after my grandfather, but I'm not sure yet.\nParticipantA: That's a nice touch. My parents named me after my grandmother, and I always felt a special connection to her because of it.\nParticipantB: Yeah, I can see how that would be meaningful. So, what do you like to do in your free time?\nParticipantA: I love to read and watch movies. What about you?\nParticipantB: I like to play sports and go hiking. I also enjoy reading and watching movies, but not as much as you.\nParticipantA: That's cool. I've never been much of a sports person, but I do love hiking.\nParticipantB: Yeah, it's a great way to clear your mind and get some exercise. What's your favorite book or movie?\nParticipantA: My favorite book is \"To Kill a Mockingbird\" and my favorite movie is \"The Shawshank Redemption.\"\nParticipantB: I've heard great things about both of those. I'll have to check them out.\nParticipantA: Definitely. They're both classics. So, what's your plan for the weekend?\nParticipantB: I'm planning on going to a concert with some friends on Saturday. How about you?\nParticipantA: I'm not sure yet. I might just stay home and catch up on some reading.\nParticipantB: That sounds nice. I hope you have a good weekend regardless.\nParticipantA: Thanks, you too.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 906,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

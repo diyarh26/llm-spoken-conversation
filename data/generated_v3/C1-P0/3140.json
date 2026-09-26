@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3140,
+  "topic": "Social Change",
+  "sb_prompt": "DISCUSS RECENT SOCIAL CHANGES.  HOW IS LIFE IN AMERICA DIFFERENT TODAY COMPARED TO LIVING TEN YEARS AGO?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello! How are you doing today?\nParticipantA: I'm doing well, thank you. What about you?\nParticipantB: I'm good too. Thanks for asking. So, let's get started. Have you noticed any recent social changes that you think are significant?\nParticipantA: Yes, I have. I think one of the most significant changes is the increased awareness and conversation around social justice issues.\nParticipantB: I agree. I think that people are more open to discussing these issues and trying to make a change.\nParticipantA: Absolutely. And I think it's great to see people from all different backgrounds coming together to fight for what they believe in.\nParticipantB: Definitely. I also think that technology has played a big role in recent social changes. With social media, people can easily share their opinions and mobilize for change.\nParticipantA: Yes, that's definitely true. But I also think that there's a downside to the increased use of technology. It can be easy to get caught up in online arguments and lose sight of what's really important.\nParticipantB: I completely agree. It's important to remember that there are real people behind the screens, and that we should try to have more productive conversations.\nParticipantA: Absolutely. So, how do you think life in America has changed in the past ten years?\nParticipantB: Well, I think that there have been a lot of changes, both positive and negative. One of the most significant changes, in my opinion, is the increased political polarization.\nParticipantA: I agree. It seems like people are more divided than ever before, and that it's becoming harder to find common ground.\nParticipantB: Yes, it's definitely a challenge. But I also think that there are other positive changes that have happened in the past ten years. For example, the legalization of same-sex marriage and the increasing acceptance of the LGBTQ+ community.\nParticipantA: Definitely. And I think that there has also been a shift in the conversation around mental health. It's becoming more normalized to talk about mental health issues and to seek help when needed.\nParticipantB: Yes, that's definitely true. I think that it's important to continue to have these conversations and to work towards a more inclusive and accepting society.\nParticipantA: Absolutely. Well, it was great speaking with you. Thanks for the conversation!\nParticipantB: Thank you, it was nice speaking with you too. Have a great day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 596,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

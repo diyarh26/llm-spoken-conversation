@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4868,
+  "topic": "Family Finance",
+  "sb_prompt": "DOES YOUR FAMILY KEEP A MONTHLY BUDGETCAN YOU GIVE A GENERAL DESCRIPTION OF YOUR PROCEDURES",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a farmer",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello! How can I help you today?\nParticipantA: I was hoping to get some advice on budgeting. Do you have any experience with that?\nParticipantB: Yes, I do. I've been keeping a monthly budget for years now.\nParticipantA: That's great! Can you give me a general description of your procedures?\nParticipantB: Sure. First, I sit down at the beginning of the month and calculate my expected income and expenses.\nParticipantA: That sounds like a good start.\nParticipantB: Then, I categorize all of my expenses into different categories like food, housing, transportation, etc.\nParticipantA: I see. And do you use any tools or software to help you manage your budget?\nParticipantB: Yes, I use a spreadsheet program to keep track of everything.\nParticipantA: That's a good idea. I'll have to give that a try.\nParticipantB: Definitely. It makes it much easier to see where your money is going and to make adjustments if needed.\nParticipantA: And how do you make sure you stick to your budget?\nParticipantB: Well, I review my budget at the end of each month to see how I did and make any necessary adjustments for the next month.\nParticipantA: That's a good idea. I'll have to do the same.\nParticipantB: Yes, it's important to stay on top of your budget and make sure you're staying within your means.\nParticipantA: Thanks for the advice. I really appreciate it.\nParticipantB: You're welcome. Good luck with your budgeting!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 399,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}
