@@ -3,6 +3,75 @@
 Owner of this file: **VM side** (do not edit on local). Append; keep history.
 Local side reads this to decide the next tasks.
 
+## GPU diagnosis (2026-09-26)
+
+Full requested diagnostic output before making changes:
+
+```text
+Sat Sep 26 14:51:46 IDT 2026
+ 14:51:46 up 41 min,  0 users,  load average: 0.16, 0.10, 0.11
+6.8.0-1059-azure
+vmSize: Standard_NV24s_v3 | name: dpmlgpuNC6sv32025s-0006 | location: westus
+0001:00:00.0 VGA compatible controller: NVIDIA Corporation GM204GL [Tesla M60] (rev a1)
+0002:00:00.0 VGA compatible controller: NVIDIA Corporation GM204GL [Tesla M60] (rev a1)
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+exit=9
+NVRM version: NVIDIA UNIX x86_64 Kernel Module  535.309.01  Wed Mar 25 15:26:15 UTC 2026
+GCC version:
+nvidia_uvm           1773568  0
+nvidia_drm             94208  0
+nvidia_modeset       1314816  1 nvidia_drm
+video                  77824  1 nvidia_modeset
+nvidia              56922112  2 nvidia_uvm,nvidia_modeset
+[dkms status produced no output]
+6.8.0-1029-azure
+6.8.0-1059-azure
+SecureBoot disabled
+[sudo dmesg unavailable: sudo requires a terminal/password in this execution environment]
+[apt history grep produced no output]
+[unattended-upgrades log grep produced no output]
+cuda-drivers-fabricmanager-535 535.247.01-0ubuntu0.22.04.1
+nvidia-driver-535 535.309.01-0ubuntu0.22.04.1
+nvidia-kernel-common-535 535.309.01-0ubuntu0.22.04.1
+nvidia-kernel-common-570 570.133.07-0ubuntu0.22.04.1
+nvidia-kernel-source-535 535.309.01-0ubuntu0.22.04.1
+/dev/root       146G  138G  7.3G  96% /
+models--lmsys--vicuna-13b-v1.5-16k
+models--mistralai--Mistral-7B-Instruct-v0.2
+```
+
+Additional driver-state checks:
+
+```text
+nvidia package/library/userspace version: 535.309.01
+nvidia kernel module version: 535.309.01
+vermagic: 6.8.0-1059-azure SMP mod_unload modversions
+libnvidia-ml.so.1 -> /usr/lib/x86_64-linux-gnu/libnvidia-ml.so.535.309.01
+Both Tesla M60 PCI devices report: Kernel driver in use: nvidia
+Both GPUs are present under /proc/driver/nvidia/gpus and have device minors 0 and 1.
+ls: cannot access '/dev/nvidia*': No such file or directory
+```
+
+Diagnosis: Azure reports `Standard_NV24s_v3`, exposing two Tesla M60 GPUs. The installed
+535.309.01 userspace library, kernel module, and running kernel all match, Secure Boot is
+disabled, and the module sees both GPUs, so this is not a branch/library mismatch or an
+unbuilt DKMS module. The immediate failure is that all `/dev/nvidia*` device nodes are
+missing, preventing NVML/`nvidia-smi` from opening the GPUs. Following TASK 1, the first
+repair attempt is a reboot so normal NVIDIA/udev startup can recreate those nodes.
+
+### TASK 1 repair result
+
+**Not fixed; stopped before generation.** The prescribed first action, `sudo reboot`,
+could not execute because `sudo` prompted for the `student` account password, which is not
+available to this session (`sudo: a password is required`). The standard setuid
+`nvidia-modprobe` node-initialization helper is also not installed, so the missing device
+nodes cannot be recreated unprivileged. The later prescribed actions (`dkms autoinstall`,
+driver-package reinstall, reboot, and package holds) likewise require sudo access. No
+driver packages, branches, kernel modules, prompts, data, or generation settings were
+changed. `nvidia-smi` remains broken, so the CUDA `True 2` verification cannot pass and,
+as instructed, TASK 2 was not started.
+
 ---
 
 ## Environment (TASK 1)
