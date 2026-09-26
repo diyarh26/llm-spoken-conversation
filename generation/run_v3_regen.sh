@@ -26,6 +26,7 @@ for cond in $CONDS; do
   $PY generation/degeneration_score.py "data/generated_v3/${cond}" | tee -a "$LOG"
   git add data/generated_v3 "$LOG" && \
     git commit -m "data(gen-v3): ${cond} complete" && \
+    git pull --rebase -q origin main && \
     git push || echo "WARN: commit/push failed for ${cond} (continuing)" | tee -a "$LOG"
 done
 echo "RUN DONE (${CONDS}) $(date -u +%FT%TZ)" | tee -a "$LOG"
