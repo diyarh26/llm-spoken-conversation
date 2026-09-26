@@ -1,8 +1,9 @@
-# VM Tasks — GPU diagnosis, then START the v3 run (2026-09-26)
+# VM Tasks — GPU diagnosis, then a 5-per-condition TEST (2026-09-26)
 
 Owner: local side. Read `CLAUDE.md` first. **Deadline context: the poster is on 2026-10-11.**
 Every GPU hour counts. The goal today is to (A) find out exactly what is wrong with the GPU and
-(B) if it can be made to work, start real v3 generation (C1, then C2) and leave it running.
+(B) if it can be made to work, run a small TEST (5 conversations per condition) of the
+latest code. **No full run yet** — local reviews the test first.
 
 ## TASK 0 — Diagnose the GPU (read-only first, collect everything)
 Run these and paste ALL output into `VM_REPORT.md` under a new heading
@@ -55,34 +56,41 @@ the report (`git add VM_REPORT.md && git commit -m "report: GPU diagnosis" && gi
 
 If nothing works: report it and STOP. Do not try anything more invasive.
 
-## TASK 2 — If the GPU works: START the v3 run (C1, then C2) in tmux
-The design is **FROZEN** (see `generation/GENERATION_SPEC.md` §4). One new change on `main`:
-turn-wise generation now stops as soon as the model starts the *next* speaker's line
-(output-neutral: the kept turn is identical; it only skips wasted tokens).
-
-Order = C1 (all prompts, ~11 h on the M60) → C2-P1 → C2-P2 → C2-P0 (~90 h total on the
-M60). It is resumable and commits + pushes after each condition.
+## TASK 2 — If the GPU works: 5-conversation TEST of every condition (tmux)
+What is being tested: the new **next-speaker stop** on `main` (turn-wise generation now
+stops as soon as the model starts writing the other speaker's line; the kept text should be
+identical, only faster, with far fewer token-cap hits — this matters most for C3). Same 5 dev
+ids as the July sweep, into a NEW folder, so it compares directly with `data/dev_sweep/`.
+Order C1 → C2 → C3 → C4; results are pushed after each architecture.
 ```bash
 cd ~/llm-spoken-conversation
 /anaconda/envs/convsim/bin/python -m py_compile generation/*.py prompts/templates.py && echo SYNTAX OK
-tmux new-session -d -s regen 'cd ~/llm-spoken-conversation && \
+tmux new-session -d -s retest 'cd ~/llm-spoken-conversation && \
   PY=/anaconda/envs/convsim/bin/python \
-  PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
-  CONDS="C1-P0 C1-P1 C1-P2 C2-P1 C2-P2 C2-P0" \
-  bash generation/run_v3_regen.sh'
-sleep 120 && tail -n 20 run_v3_regen.log
+  OUT_ROOT=data/dev_sweep_v2 LOG=run_v3_retest.log PUSH_EACH=1 \
+  C4_DEVICE_A=cuda:0 C4_DEVICE_B=cuda:1 \
+  bash generation/run_v3_devsweep.sh'
+sleep 120 && tail -n 20 run_v3_retest.log
 ```
-Confirm the first conversation is saved (`ls data/generated_v3/C1-P0 | wc -l` > 0), write
-**one line** into `VM_REPORT.md` ("v3 run started <time UTC>, first file saved"), then commit
-and push `VM_REPORT.md` only. **Leave tmux running. Do NOT start C3/C4.** The local side
-decides on C3/C4 after the GPU situation with the tutor is clear.
+Confirm it is loading/generating, then leave it. If **C4 OOMs** on the M60, that's expected —
+let the script finish and report it.
 
-Monitor without disturbing it: `tail -n 5 run_v3_regen.log`,
-`for d in data/generated_v3/*; do echo $d $(ls $d | wc -l); done`.
+## TASK 3 — Report (after C2 finishes, and again when everything finishes)
+Into `VM_REPORT.md` under `## Re-test with next-speaker stop (2026-09-26)`:
+1. **Speed:** minutes per conversation for each condition (from the `=== dev ...` timestamps
+   in `run_v3_retest.log`) next to the July numbers from `run_v3_devsweep.log`.
+2. **Before/after table** per condition: `hit_token_cap` and `multi_turn_emissions` totals
+   (from the JSON `quality_counters`) — old `data/dev_sweep` vs new `data/dev_sweep_v2`.
+3. `degeneration_score.py` and `dev_report.py` tables for `data/dev_sweep_v2/C*-P*`
+   (the script prints them at the end; run by hand for an interim report).
+4. **2 full transcripts each** for C2-P1 and C3-P1 (and C4-P1 if it ran) — paste the turns.
+5. Anything broken: empty turns, cut-off turns, crashes, OOMs.
+Then: `git add VM_REPORT.md data/dev_sweep_v2 run_v3_retest.log && git commit -m "test(gen-v3): re-test report" && git push`.
+**STOP. Do NOT start the full run (`run_v3_regen.sh`).** Local reviews the test first.
 
 ## Do NOT
 - Do NOT edit `VM_TASKS.md` (local owns it). Everything you produce goes in `VM_REPORT.md`.
-- Do NOT touch `data/generated/`, `data/generated_v2/`, `data/dev_sweep/`.
+- Do NOT touch `data/generated/`, `data/generated_v2/`, `data/dev_sweep/`; do NOT create `data/generated_v3/`.
 - Do NOT change prompts, the manifest, `generation/config.py`, or decoding.
 - Do NOT commit Switchboard source data or model weights.
-- Do NOT reboot while the tmux run is generating.
+- Do NOT reboot while the tmux test is generating.

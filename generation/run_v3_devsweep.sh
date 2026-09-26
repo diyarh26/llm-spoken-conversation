@@ -5,7 +5,11 @@
 set -e
 cd "$(dirname "$0")/.."
 PY=${PY:-python}
-LOG=run_v3_devsweep.log
+# OUT_ROOT/LOG/ARCHS let a re-test (e.g. after a code fix) run beside the original sweep
+# on the same 5 dev ids, so before/after is a direct comparison.
+OUT_ROOT=${OUT_ROOT:-data/dev_sweep}
+LOG=${LOG:-run_v3_devsweep.log}
+ARCHS=${ARCHS:-"c1 c2 c3 c4"}
 
 # Reduce CUDA fragmentation OOMs (the allocator's own suggested fix). Safe on any GPU; on
 # the tight 2×M60 box it is what lets C3 finish. C4_DEVICE_A/B pin C4's two models to
@@ -20,7 +24,7 @@ echo "dev ids: $DEV_IDS" | tee -a "$LOG"
 # P0 (baseline) / P1 (spoken register + word-or-two + persona cards) / P2 (+ few-shot pool).
 # All three so the sweep shows whether the prompt changes actually move backchannels/short
 # turns UP from P0 -> P1 -> P2 (the whole point of this test).
-for arch in c1 c2 c3 c4; do
+for arch in $ARCHS; do
   # C4 loads two models — pin them to separate GPUs if C4_DEVICE_A/B are set (M60 stopgap).
   DEV_ARGS=""
   if [ "$arch" = "c4" ] && [ -n "$C4_DEVICE_A" ] && [ -n "$C4_DEVICE_B" ]; then
@@ -29,14 +33,18 @@ for arch in c1 c2 c3 c4; do
   for p in P0 P1 P2; do
     echo "=== dev ${arch}-${p} $(date -u +%FT%TZ) ===" | tee -a "$LOG"
     $PY "generation/generate_${arch}.py" --prompt "$p" --ids "$DEV_IDS" \
-        --out-root data/dev_sweep $DEV_ARGS 2>&1 | tee -a "$LOG"
+        --out-root "$OUT_ROOT" $DEV_ARGS 2>&1 | tee -a "$LOG"
   done
+  # Push after each architecture so results can be reviewed while the next one runs.
+  if [ -n "$PUSH_EACH" ]; then
+    git add "$OUT_ROOT" "$LOG" && git commit -m "test(gen-v3): ${arch} re-test done" && git push       || echo "WARN: push failed after ${arch} (continuing)" | tee -a "$LOG"
+  fi
 done
 
 echo "=== degeneration score ===" | tee -a "$LOG"
-$PY generation/degeneration_score.py data/dev_sweep/C*-P* | tee -a "$LOG"
+$PY generation/degeneration_score.py "$OUT_ROOT"/C*-P* | tee -a "$LOG"
 echo "=== did-it-improve report (short turns + backchannels vs human) ===" | tee -a "$LOG"
-$PY generation/dev_report.py data/dev_sweep/C*-P* | tee -a "$LOG"
+$PY generation/dev_report.py "$OUT_ROOT"/C*-P* | tee -a "$LOG"
 echo "SWEEP DONE — (1) degeneration: dup_turn_rate < 0.05 and degeneration_per_conv < 1.0;" \
      "(2) dev_report: P1/P2 backchannel% and <=3w% should rise toward HUMAN; (3) read 2-3" \
      "transcripts per condition. Then freeze config.py." | tee -a "$LOG"
