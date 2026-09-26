@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3439,
+  "topic": "Credit Card Use",
+  "sb_prompt": "PLEASE DISCUSS CREDIT CARDS.  FIND OUT HOW THE OTHER CALLER MAKES USE OF CREDIT CARDS.  HOW DO THEY COMPARE TO YOUR OWN?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 51,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hi, how's it going?\nParticipantB: It's going pretty well, thanks. How about you?\nParticipantA: Oh, I'm doing alright. So, what brings you to call about credit cards today?\nParticipantB: Well, I've been thinking about getting one, but I'm not sure how they work. I was hoping you could help me out.\nParticipantA: Sure, I'd be happy to. I've had a few credit cards over the years. How do you plan on using yours?\nParticipantB: Mostly just for emergencies, I guess. I don't like to carry a lot of cash and I'm always worried about being stranded somewhere without money.\nParticipantA: Yeah, I can understand that. I've used my credit card for that too. It's definitely helpful in those situations.\nParticipantB: What about you? Do you use your credit card mainly for emergencies?\nParticipantA: No, I use mine for a lot of different things. I have a few different ones for different purposes.\nParticipantB: Like what?\nParticipantA: Well, I have one for work expenses, one for personal expenses, and one for online purchases. It just makes it easier to keep track of everything.\nParticipantB: That makes sense. I haven't really thought about having different ones for different things.\nParticipantA: Yeah, it can be helpful. It also helps with keeping track of your spending and budgeting.\nParticipantB: That's a good point. I'm not very good with budgeting.\nParticipantA: Well, that's something to work on. But, it's definitely worth it to have a credit card for emergencies.\nParticipantB: Yeah, I'm starting to think that. What advice would you give me about getting a credit card?\nParticipantA: Well, the first thing is to make sure you have a good credit score. That will make it easier to get approved for one.\nParticipantB: Okay, I'll keep that in mind. Are there any other things I should know?\nParticipantA: Just be careful not to overspend and make sure you pay your bill on time. That will help you keep a good credit score.\nParticipantB: Thanks for the advice. I'll definitely keep that in mind.\nParticipantA: No problem. It was nice talking to you.\nParticipantB: Yeah, you too. Have a good day.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 588,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

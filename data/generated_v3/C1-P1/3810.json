@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3810,
+  "topic": "Music",
+  "sb_prompt": "PLEASE DISCUSS MUSIC.  CAN YOU FIND MUSICIANSOR TYPES OF MUSIC THAT BOTH YOU AND THE OTHER CALLER LIKE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: How are you doing today?\nParticipantB: I'm doing well, thanks. How about you?\n\nParticipantA: I'm doing pretty good. So, what kind of music do you like?\nParticipantB: I enjoy a wide range of music, but I have a soft spot for classic rock.\nParticipantA: Oh, me too! I love The Beatles and The Rolling Stones.\nParticipantB: Yes, they are great. Have you listened to any newer rock bands?\nParticipantA: Not really, I kind of stuck to what I like. How about you?\nParticipantB: I've been listening to some newer bands, but I have mixed feelings about it. Some of them are good, but others not so much.\n\nParticipantA: Yeah, I know what you mean. It's hard to find good music these days.\nParticipantB: Have you heard of any new musicians or bands that you like?\nParticipantA: Well, I recently discovered a new artist, Billie Eilish. Her music is very unique and I really like it.\nParticipantB: Oh, I've heard of her. I haven't listened to her music yet, but I've heard good things.\n\nParticipantA: Yeah, she's definitely worth a listen. So, what kind of music do you not like?\nParticipantB: I don't really like electronic dance music or heavy metal.\nParticipantA: Yeah, I can understand that. I'm not a fan of heavy metal either.\n\nParticipantB: Have you listened to any classical music?\nParticipantA: I have, but it's not really my thing.\nParticipantB: That's okay. Classical music is an acquired taste for some people.\n\nParticipantA: Yeah, exactly. So, do you have any favorite musicians or bands?\nParticipantB: My favorite band is Led Zeppelin, but I also like the Red Hot Chili Peppers and Radiohead.\nParticipantA: Oh, I love the Red Hot Chili Peppers! They are one of my favorites too.\nParticipantB: Yeah, they are great. Have you seen them live?\nParticipantA: No, I haven't. But, I've heard they put on an amazing show.\n\nParticipantB: They really do. I've seen them twice and it was one of the best concert experiences of my life.\n\nParticipantA: That's awesome. Maybe I'll have to check them out sometime.\nParticipantB: Yeah, I would definitely recommend it.\n\nParticipantA: Well, that's all I have for now. Thanks for chatting with me about music.\nParticipantB: No problem, it was nice talking to you.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 670,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

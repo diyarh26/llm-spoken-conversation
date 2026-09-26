@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2501,
+  "topic": "Painting",
+  "sb_prompt": "HAVE YOU DONE ANY PAINTING PROJECTS RECENTLYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 50,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hi, I'm looking for someone to chat with about painting. Have you done any painting projects recently?\n\nParticipantB: Well, I haven't done any painting myself, but I've been enjoying some art exhibits lately. What about you?\n\nParticipantA: Yeah, I just finished a painting project for my niece's room. It was a lot of fun, and I learned a lot.\n\nParticipantB: That's great! What kind of painting did you do?\n\nParticipantA: I did a landscape of a beach at sunset. I love painting landscapes, especially ones with natural elements like trees and water.\n\nParticipantB: That sounds beautiful. I've always been more drawn to abstract art, but I appreciate different styles and forms.\n\nParticipantA: Yeah, different styles can be really interesting. I've done some abstract paintings in the past, but I find landscapes more calming to create.\n\nParticipantB: I can see that. I find teaching art to be really rewarding, even though it's not my primary field of expertise.\n\nParticipantA: That's cool. I've always been interested in art, but I ended up working as a bank teller. It's not the most creative job, but it pays the bills.\n\nParticipantB: I understand. I think it's great that you found a way to express yourself through painting, even with your busy schedule.\n\nParticipantA: Yeah, it's a great hobby to have. I even brought some paintings to work and got compliments on them from my coworkers.\n\nParticipantB: That's wonderful! I've had some students who have shown a talent for art, and it's always great to see them pursue it.\n\nParticipantA: I agree. Art is such a great outlet for self-expression and creativity.\n\nParticipantB: Absolutely. Well, it was nice chatting with you about painting. Have you got any other hobbies you'd like to talk about?\n\nParticipantA: Sure, I also enjoy playing guitar and hiking. What about you? Do you have any hobbies?\n\nParticipantB: I do enjoy reading and gardening. I find it's a great way to relax after a long day of teaching.\n\nParticipantA: That sounds lovely. Well, it was nice talking to you. Have a great day!\n\nParticipantB: You too! Take care.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 587,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

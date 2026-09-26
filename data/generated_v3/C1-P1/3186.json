@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3186,
+  "topic": "Restaurants",
+  "sb_prompt": "WHAT KIND OF DINING OUT DO YOU ENJOY? WHAT THINGS DO YOU LOOK FOR IN A RESTAURANT THAT WOULD GET YOU TO GO BACK AGAIN?  SEE WHETHER THE OTHER CALLER'S PREFERENCES ARE SIMILAR TO YOURS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 58,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "an insurance adjuster",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: What kind of dining out do you enjoy?\nParticipantB: Oh, I like a good variety of restaurants. What about you?\nParticipantA: I usually stick to places I know I like. I had a bad experience at a fancy restaurant years ago.\nParticipantB: That's too bad. What happened?\nParticipantA: The food was okay, but the service was terrible. They didn't even bring us the check for a long time.\nParticipantB: Yeah, that can be frustrating. I usually look for good service when I'm out to eat.\nParticipantA: Me too. And I like a menu with a lot of options.\nParticipantB: Agreed. I like to have a few different things to choose from.\nParticipantA: What kind of cuisine do you like?\nParticipantB: I'm pretty open to trying new things. I like trying different ethnic foods.\nParticipantA: Same here. I like trying new places, but I usually stick to American or Mexican cuisine.\nParticipantB: Yeah, those are always good options. Do you have a favorite restaurant that you go back to?\nParticipantA: Yeah, there's a Mexican place down the street that I love. The food is always good and the service is great.\nParticipantB: That's good to hear. I haven't found a Mexican place that I really love yet.\nParticipantA: Well, you should definitely give that place a try. They're always busy, so it must be good.\nParticipantB: I'll have to check it out. Thanks for the recommendation!\nParticipantA: No problem. It was nice talking to you.\nParticipantB: Yeah, you too. Have a good day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 416,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

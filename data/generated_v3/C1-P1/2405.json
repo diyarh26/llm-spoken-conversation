@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2405,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 28,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: So, do you like using personal computers?\nParticipantB: Yeah, I do. I use one at work all the time and at home too.\nParticipantA: That's cool. I actually know someone close who has dealt with some computer issues and it's been a real hassle for them.\nParticipantB: Oh, that can be a pain. But I've been pretty lucky with my computers.\nParticipantA: I've been interested in computers for a while now, and I think they're really interesting. What about you?\nParticipantB: I've always found them interesting too. I used to take classes in college, but I didn't finish my degree.\nParticipantA: Oh, I had some college too. But I've learned a lot about computers from working as a bank teller.\nParticipantB: Yeah, it sounds like you've had some good experience with them. I've mostly just used them for work and personal stuff.\nParticipantA: Yeah, I use mine for work and personal stuff too. I think they're really helpful for keeping track of things and staying organized.\nParticipantB: Definitely. I use mine for work stuff, like keeping track of orders and stuff like that.\nParticipantA: Oh, that sounds important. What kind of restaurant do you work at?\nParticipantB: I work at a pretty busy place. It can be pretty hectic, but it's also really fun.\nParticipantA: Oh, that sounds fun. I've been thinking about getting a new computer recently. Do you have any recommendations?\nParticipantB: Well, I'm not an expert or anything, but I've been pretty happy with my laptop. It's pretty portable and I can take it with me wherever I go.\nParticipantA: That sounds nice. I'm thinking about getting a desktop this time. I like the idea of having a bigger screen and more storage.\nParticipantB: Yeah, that can be nice. I've heard that desktop computers are good for gaming too.\nParticipantA: Oh, I hadn't thought about that. I don't really play games on my computer, but it could be interesting to try.\nParticipantB: Yeah, there are a lot of cool games out there. I've been playing a game on my phone recently, but it would be way better on a computer.\nParticipantA: Oh, what game is that?\nParticipantB: It's called \"Among Us.\" It's kind of like a space-themed version of \"Mafia.\" It's really fun.\nParticipantA: Oh, that sounds interesting. I've been playing a game on my computer called \"Stardew Valley.\" It's like a farming simulator.\nParticipantB: Oh, I've heard of that one. It sounds pretty cool.\nParticipantA: Yeah, it's really addictive. I've been playing it for a while now.\nParticipantB: Yeah, I can relate. There are some pretty addictive games out there.\nParticipantA: Yeah, it's pretty amazing how much you can do on a computer these days.\nParticipantB: Definitely. I'm glad we talked about this. It's been fun.\nParticipantA: Yeah, me too. Thanks for chatting with me.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 782,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

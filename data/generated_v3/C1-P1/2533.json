@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2533,
+  "topic": "Baseball",
+  "sb_prompt": "FIND OUT THE OTHER CALLER'S FAVORITE PRO BASEBALL TEAM AND WHERE IT'S HEADED THIS YEAR.  DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hey there, how's it going?\nParticipantB: Pretty good, how about you?\nParticipantA: I'm doing alright, just got off work. What about you?\nParticipantB: Same here, just finished up for the day.\nParticipantA: So, what's your favorite baseball team?\nParticipantB: I'm a big fan of the New York Yankees.\nParticipantA: That's cool, I know someone who's a die-hard Yankees fan too.\nParticipantB: Yeah, they're definitely one of the most popular teams out there.\nParticipantA: Definitely. So, what do you think about their chances this year?\nParticipantB: I think they're going to do well, but I'm not sure they'll win the World Series.\nParticipantA: Yeah, I agree. I think they have a good chance of making it to the playoffs, but it's a tough field this year.\nParticipantB: Yeah, it's definitely going to be a competitive season.\nParticipantA: Definitely. I'm more of a fan of the Chicago Cubs, but I don't think they'll do as well this year.\nParticipantB: Oh, I've heard good things about the Cubs. What do you think their chances are?\nParticipantA: I think they'll do okay, but I don't think they'll make it to the World Series this year.\nParticipantB: That's too bad, but I guess we'll just have to wait and see.\nParticipantA: Yeah, it's all about the unexpected in baseball.\nParticipantB: Definitely. So, what do you do for work?\nParticipantA: I'm a factory supervisor.\nParticipantB: Oh, that's cool. I'm a car mechanic.\nParticipantA: Nice, I've always thought that would be an interesting job.\nParticipantB: It has its ups and downs, but I enjoy it. How about you?\nParticipantA: I enjoy my job too, but it can be stressful at times.\nParticipantB: Yeah, I can imagine. What do you do for fun outside of work?\nParticipantA: I like to read and watch movies. How about you?\nParticipantB: I like to go to concerts and hang out with friends.\nParticipantA: That sounds fun. I've been wanting to go to a concert for a while now.\nParticipantB: Yeah, they're always a good time. Well, we should wrap this up. It was nice talking to you.\nParticipantA: Yeah, you too. Take care.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 647,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

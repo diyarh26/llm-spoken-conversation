@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3013,
+  "topic": "Recipes/food/cooking",
+  "sb_prompt": "PLEASE DISCUSS FOOD AND COOKING.  WHAT FOODS WOULD YOU INCLUDE IN THE MENU FOR A DINNER PARTY?  SHARE THE RECIPE FOR ONE OF THESE FOODS WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, do you like cooking?\nParticipantB: Yeah, I do. What about you?\nParticipantA: I'm okay with it. I mean, I like it, but I don't love it.\nParticipantB: Yeah, I get that. What kind of food do you usually like to cook?\nParticipantA: Oh, I like making pasta and stuff like that. You know, simple things.\nParticipantB: Yeah, pasta is always a good choice. Have you got a favorite recipe?\nParticipantA: Yeah, I make this pesto sauce that's really good. It's just basil, garlic, pine nuts, parmesan cheese, and olive oil.\nParticipantB: Oh, that sounds good. I've never tried that before. How do you make it?\nParticipantA: Well, you just blend everything together until it's smooth, then you add a little bit of olive oil and salt and pepper. That's it.\nParticipantB: Okay, I'll have to give that a try. What kind of dinner party menu would you include?\nParticipantA: I think I'd do like a roast beef or something like that. You know, something simple but tasty.\nParticipantB: Yeah, that's always a good choice. I like to do something with chicken. Like, chicken parmesan or something.\nParticipantA: Oh, that sounds good too. I've never made that before, but I've had it at other people's houses.\nParticipantB: Yeah, it's pretty easy to make. I can give you the recipe if you want.\nParticipantA: Sure, I'd love to hear it.\nParticipantB: Okay, so you start with like four chicken breasts, and you bread them and then you cook them in oil until they're golden brown. Then you put them in the oven to finish them off.\nParticipantA: Okay, that sounds good. I'll have to try that. Thanks for the recipe.\nParticipantB: No problem. It was nice talking to you.\nParticipantA: Yeah, you too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 537,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

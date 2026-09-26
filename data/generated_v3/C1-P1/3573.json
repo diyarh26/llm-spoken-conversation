@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3573,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 67,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hi, I'm just calling to see if you have any thoughts on buying a new car.\nParticipantB: Oh, I've been thinking about it for a while.\nParticipantA: Yeah, same here. I'm looking for something that's reliable and won't break the bank.\nParticipantB: Well, I've always been a fan of Toyota. I had a Corolla years ago and it never gave me any problems.\nParticipantA: That's a good point. I've heard Toyota makes some of the most reliable cars out there.\nParticipantB: Absolutely. And I like that they have a range of models to choose from, so you can find something that fits your needs.\nParticipantA: Yeah, I've been looking at the Toyota Camry. It seems like a good mid-size sedan with a good reputation for being reliable.\nParticipantB: Yes, the Camry is a great choice. I've also considered the Toyota Sienna for my next car, as I need something bigger to accommodate my growing family.\nParticipantA: Oh, that's a good idea. I've been thinking about a sedan because I don't have a lot of space for a bigger car, but the Sienna might be a good option for me to consider.\nParticipantB: Definitely. And don't forget to take a test drive, so you can get a feel for the car and make sure it's the right fit for you.\nParticipantA: Yeah, I've heard that's important. I want to make sure the car feels comfortable and easy to drive.\nParticipantB: Absolutely. And think about any additional features you might want, like a sunroof or a navigation system.\nParticipantA: That's a good point. I've always wanted a car with a sunroof, so I'll have to keep that in mind.\nParticipantB: And make sure to compare prices and features from different dealerships, so you can get the best deal.\nParticipantA: Yeah, I've been doing some research online, but I'm looking forward to test driving some cars in person.\nParticipantB: Same here. It's important to see the car in person and get a feel for it before making a decision.\nParticipantA: Well, it was good talking to you. I'll definitely keep Toyota in mind and start test driving some cars.\nParticipantB: Same to you. Good luck with your search, and I hope you find the perfect car for your needs.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 594,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

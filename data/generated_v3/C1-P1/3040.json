@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3040,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 56,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hey there, so, what's on your mind today?\nParticipantB: Well, I was hoping to chat about taxes. Have you got a minute?\nParticipantA: Yeah, sure. I've dealt with taxes a fair bit in my job as an accountant.\nParticipantB: I'm a farmer, so it's a big part of my life too. What's your take on it all?\nParticipantA: I think it's a necessary evil, you know? Some parts of it are fair, but others just seem like a way for the government to take more money from us.\nParticipantB: I know what you mean. It's like they're always trying to find new ways to get us to pay more.\nParticipantA: Yeah, and it's not just about the money. It's about fairness, too. Some people can afford to pay more, and some can't.\nParticipantB: I agree with that. I've seen how hard it can be for small farmers to make ends meet, and taxes just make it harder.\nParticipantA: That's true. I've also seen how taxes can be used to help people who need it, though. Like with social programs and things like that.\nParticipantB: I see your point, but it still feels like there's too much waste in the system. And it's hard to know if the money is really going where it's supposed to.\nParticipantA: Yeah, that's definitely a concern. I know someone close who's dealt with the tax system, and it was a real mess for them.\nParticipantB: I can believe that. It's always seemed like a real headache to me, even though I know it's important.\nParticipantA: Definitely. It's just frustrating when it feels like there's so much confusion and uncertainty around it all.\nParticipantB: For sure. It's like they're always changing the rules and it's hard to keep up.\nParticipantA: Yeah, and that's not even counting all the different taxes there are. It can be overwhelming.\nParticipantB: I know what you mean. I just hope they can find a way to make it simpler and more fair for everyone.\nParticipantA: Yeah, that would be great. I think we'd all appreciate it if it was more straightforward and less confusing.\nParticipantB: Definitely. Well, it was good chatting with you about this. Thanks for your time.\nParticipantA: No problem, it was good to talk with you, too. Have a good day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 616,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

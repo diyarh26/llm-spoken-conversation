@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2485,
+  "topic": "Family Reunions",
+  "sb_prompt": "DISCUSS PLANNING A FAMILY REUNION.  DRAW ON YOUR EXPERIENCES AND THOSE OF THE OTHER CALLER FOR MAKING THE NEXT GET-TOGETHER SUCCESSFUL AND MEMORABLE.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 45,
+    "education": "a high-school education",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hi there! It's great to talk to someone about family reunions. I've been planning mine for a while now.\nParticipantB: Oh, really? I've been meaning to organize a reunion for my family too, but I haven't had the time.\nParticipantA: I understand. I work as a receptionist, so I have a lot of free time to plan these things. I usually start by sending out invitations to everyone in the family, including distant relatives.\nParticipantB: That sounds like a good start. I usually ask around my close family members for suggestions on where to hold the reunion. It's usually in a park or a community center, depending on who's available.\nParticipantA: I've had my reunion at a park before, and it was a great experience. We had a picnic, played games, and caught up with each other.\nParticipantB: Sounds nice. I'm a bit skeptical about family reunions, though. I know someone close who had a bad experience at a reunion.\nParticipantA: Oh, I'm sorry to hear that. But I think with the right planning and communication, you can avoid those kinds of situations. It's important to set expectations and boundaries early on.\nParticipantB: Yeah, that makes sense. What kind of activities do you usually plan for your reunion?\nParticipantA: Well, I like to plan games and activities that the whole family can enjoy. We usually have a potluck, where everyone brings a dish to share. It's a great way to bring everyone together and create lasting memories.\nParticipantB: I like that idea. I've never thought of a potluck before. Do you have any suggestions for activities that are fun for all ages?\nParticipantA: Definitely! I've found that board games and card games are great for all ages. You can also have a photo booth with fun props and a scavenger hunt with clues that lead to a family memorabilia.\nParticipantB: Those are great ideas. I'll definitely keep them in mind for my reunion. Thanks for sharing your experiences and advice.\nParticipantA: You're welcome! I'm glad I could help. Let me know if you need any more suggestions or advice.\nParticipantB: I will definitely keep that in mind. Thanks again!\nParticipantA: No problem! Take care, and good luck with your reunion!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 565,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

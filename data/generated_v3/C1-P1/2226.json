@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2226,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 44,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 27,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hi, I'm looking for someone to talk to about books and literature. Do you have any interest in that kind of thing?\n\nParticipantB: Uh, yeah, I guess. I mean, I've read some books, but I don't know if I could call myself a big reader.\n\nParticipantA: Oh, that's okay. I love reading, and I'm always looking for new recommendations. Do you have any favorites?\n\nParticipantB: Well, I really liked \"The Catcher in the Rye\" in high school. I don't read as much anymore, but I've been trying to make time for it again.\n\nParticipantA: I read \"The Catcher in the Rye\" in college and really enjoyed it too. Have you read any other books that you would recommend?\n\nParticipantB: Not recently, to be honest. I read a lot of non-fiction for work, but for fun, I usually stick to mystery novels or something light.\n\nParticipantA: Oh, I love mystery novels. Have you read any good ones lately?\n\nParticipantB: Yeah, I just finished \"Gone Girl\" by Gillian Flynn. It was really good, and I'm not usually a fan of thrillers.\n\nParticipantA: I've been meaning to read that one! I've heard it's a real page-turner. What did you think of the ending?\n\nParticipantB: Well, I won't spoil it for you, but I thought it was really well done. It's definitely not what you expect.\n\nParticipantA: Oh, I'll have to check it out then. I'm always looking for books that surprise me. Do you have any other recommendations?\n\nParticipantB: Not really, like I said, I don't read as much as I used to. But I do have a friend who's really into literature, so maybe I can ask her for some suggestions.\n\nParticipantA: That's a good idea. I love getting book recommendations from friends too. Well, thanks for chatting with me about books. It was nice talking to you.\n\nParticipantB: Yeah, you too. Have fun reading!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 523,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

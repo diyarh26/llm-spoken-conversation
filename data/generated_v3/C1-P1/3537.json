@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3537,
+  "topic": "Universal Health Ins",
+  "sb_prompt": "DO YOU BELIEVE THAT THE US GOVERNMENT SHOULD PROVIDE UNIVERSAL HEALTH INSURANCE",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hi there! How are you doing today?\nParticipantB: I'm doing well, thank you. How about you?\nParticipantA: I'm good, thanks for asking. So, I heard we're going to talk about universal health insurance today. What are your thoughts on that?\nParticipantB: Yeah, I've been thinking about it a lot lately. I work as a nurse, so I've seen firsthand how important access to healthcare is.\nParticipantA: Yeah, I can imagine. I actually know someone who's dealing with a serious health issue right now, and it's been a real struggle for them to find affordable coverage.\nParticipantB: I'm sorry to hear that. It's definitely a problem when people can't get the care they need because they can't afford it.\nParticipantA: Exactly. And I think that's where universal health insurance could really make a difference.\nParticipantB: I agree. I think everyone should have access to basic healthcare services, regardless of their income.\nParticipantA: Yeah, and it's not just about keeping people healthy, it's also about preventing financial ruin for families who can't afford medical bills.\nParticipantB: Absolutely. And I think the government has a responsibility to provide that kind of support for its citizens.\nParticipantA: I couldn't agree more. I think it's time for us to take a more comprehensive approach to healthcare in this country.\nParticipantB: I couldn't agree more. It's an issue that affects all of us, and we need to work towards a solution that benefits everyone.\nParticipantA: Well, it was great chatting with you. I really enjoyed our conversation.\nParticipantB: Same here. Thanks for your time and thoughts on this important topic.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 432,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

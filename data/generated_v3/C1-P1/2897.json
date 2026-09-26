@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2897,
+  "topic": "Job Benefits",
+  "sb_prompt": "WHAT DO YOU CONSIDER THE MOST IMPORTANT BENEFITS BESIDES SALARY IN A JOB WITH A LARGE ORGANIZATION?  HOW SATISFIED ARE YOU WITH THE CURRENT BENEFITS OF YOUR JOB?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 50,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing well, thank you. How about you?\nParticipantA: I'm good. So, what brings you to call today?\nParticipantB: Well, I was asked to call a stranger and talk about job benefits. How about you?\nParticipantA: Same here. I work as an accountant at a large organization.\nParticipantB: Oh, that's great. What do you consider the most important benefits besides salary in a job with a large organization?\nParticipantA: Honestly, I think health insurance and retirement plans are important.\nParticipantB: Yes, I agree. What about paid time off?\nParticipantA: Definitely. I think having a good work-life balance is important.\nParticipantB: Absolutely. How satisfied are you with the current benefits of your job?\nParticipantA: I'm satisfied with most of the benefits, but I think they could improve the mental health support they offer.\nParticipantB: That's a great point. I think mental health support is important too.\nParticipantA: Yeah, it's something that's often overlooked. What about you?\nParticipantB: I work as an office receptionist, and I think the most important benefits besides salary are health insurance and paid time off.\nParticipantA: That's interesting. What about the other benefits they offer?\nParticipantB: I think they're pretty good. I'm satisfied with the current benefits they offer.\nParticipantA: That's great to hear. What made you choose this line of work?\nParticipantB: I've always been interested in office work and I enjoy helping people.\nParticipantA: That's nice. I was actually laid off from my previous job and that's what led me to become an accountant.\nParticipantB: Oh, I'm sorry to hear that. But I'm glad you found a new path.\nParticipantA: Thank you. So, what do you think is the most important factor when choosing a job besides the benefits?\nParticipantB: I think it's finding a job that you're passionate about and that challenges you.\nParticipantA: I agree. I think having a sense of purpose in your job is important too.\nParticipantB: Definitely. Well, it was nice talking to you.\nParticipantA: Yes, it was nice talking to you too.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 577,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

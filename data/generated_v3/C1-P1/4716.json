@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4716,
+  "topic": "Gun Control",
+  "sb_prompt": "DISCUSS GUN CONTROL.  WHERE DO YOU AND THE OTHER CALLER STAND ON A SCALE FROM 1 TO 10",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hey, do you want to talk about gun control for a bit?\nParticipantB: Sure, let's do it.\nParticipantA: I'm pretty passionate about it. I think it's a pretty important issue.\nParticipantB: Yeah, I agree. I've got a friend who's had to deal with it firsthand.\nParticipantA: Oh, that's tough. Have they had a bad experience with guns?\nParticipantB: Yeah, they were shot in a robbery. They didn't survive.\nParticipantA: I'm so sorry. That's just terrible.\nParticipantB: Yeah, it's something that really makes you think.\nParticipantA: I've been thinking about it for a long time. I've done some research, and I think that we should have stricter gun laws.\nParticipantB: Yeah, I agree. I think that there should be more regulation.\nParticipantA: I think that we need to make it harder for people to get their hands on guns.\nParticipantB: Yeah, I think that there should be more background checks and stuff like that.\nParticipantA: Exactly. It's just too easy for people to get guns right now.\nParticipantB: Yeah, and I think that we need to do something about it.\nParticipantA: Do you have any ideas about what we could do?\nParticipantB: Well, I think that we should have stricter laws about who can own a gun.\nParticipantA: Yeah, I agree. I think that we should have more regulations about who can buy a gun.\nParticipantB: Yeah, and I think that we should have more background checks.\nParticipantA: Definitely. I think that we should also have laws that make it harder for people to buy guns online.\nParticipantB: Yeah, I agree. It's too easy for people to buy guns online right now.\nParticipantA: I think that we should also have laws that make it harder for people to buy guns at gun shows.\nParticipantB: Yeah, I think that's a good idea.\nParticipantA: Do you think that there should be any exceptions to these laws?\nParticipantB: Well, I think that there should be exceptions for people who use guns for hunting or for self-defense.\nParticipantA: Yeah, I agree. I think that people should be able to own guns for those reasons.\nParticipantB: Yeah, and I think that we should also have laws that make it harder for people to buy assault weapons.\nParticipantA: Definitely. I think that those kinds of weapons have no place in our society.\nParticipantB: Yeah, I agree. I think that we should also have laws that make it harder for people to buy high-capacity magazines.\nParticipantA: Yeah, I think that's a good idea.\nParticipantB: So, do you think that we're making any progress on this issue?\nParticipantA: I think that we're making some progress, but there's still a lot of work to be done.\nParticipantB: Yeah, I agree. I think that we need to keep pushing for change.\nParticipantA: Definitely. It's just too important of an issue to give up on.\nParticipantB: Yeah, I agree. I think that we should all be working towards a safer society.\nParticipantA: Absolutely. It's something that we should all be invested in.\nParticipantB: Yeah, I agree. It's something that affects us all.\nParticipantA: Well, thanks for talking about this with me.\nParticipantB: Yeah, thanks for having the conversation. It's been good to talk to you.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 884,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

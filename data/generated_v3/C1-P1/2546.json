@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2546,
+  "topic": "Capital Punishment",
+  "sb_prompt": "COMPARE YOUR OPINIONS AND THOSE OF THE OTHER CALLER ON CAPITAL PUNISHMENT.  DO EITHER OF YOU THINK IT SHOULD BE RESTRICTED TO CERTAIN CRIMES OR CIRCUMSTANCES?  HOW DO THE POLICIES AND PRACTICES OF YOUR STATE FIT WITH YOUR OPINIONS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 38,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what do you think about capital punishment?\nParticipantB: I think it's a necessary form of punishment for certain crimes.\nParticipantA: Yeah, I agree. But I also think it's important to limit it to certain crimes or circumstances.\nParticipantB: I'm not sure about that. I think it's a deterrent for other potential criminals.\nParticipantA: I understand that, but I've seen it affect someone close to me, and it's not a decision to be taken lightly.\nParticipantB: I see your point, but I think it's a fair punishment for certain heinous crimes.\nParticipantA: Yeah, I agree. I just think there needs to be more discussion about what crimes it should apply to.\nParticipantB: I understand. I think it's a complex issue, and there's no easy answer.\nParticipantA: Absolutely. I think it's something that needs to be looked at on a state-by-state basis.\nParticipantB: I agree. I think policies and practices should align with the opinions of the people in the state.\nParticipantA: Yeah, I think that's important. I'm glad we had this discussion.\nParticipantB: Me too. It's always good to talk about these things with someone who has a different perspective.\nParticipantA: Yeah, definitely. Thanks for the chat!\nParticipantB: No problem, have a good day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 369,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

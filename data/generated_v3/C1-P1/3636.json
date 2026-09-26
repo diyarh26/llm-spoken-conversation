@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3636,
+  "topic": "Camping",
+  "sb_prompt": "FIND OUT FROM THE OTHER CALLER WHAT KIND OF CAMPING THEY HAVE DONE.  HOW DOES IT COMPARE WITH YOUR OWN EXPERIENCES?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hey, how are you doing today?\nParticipantB: I'm doing well, thanks. How about you?\nParticipantA: I'm good. So, what kind of camping have you done?\nParticipantB: Mostly just tent camping, but I've also done some RV camping with my family.\nParticipantA: Nice. I've done both too. What's your favorite type of camping?\nParticipantB: I think I prefer tent camping, it just feels more rugged and adventurous.\nParticipantA: Yeah, I feel the same way. I've done some backpacking and that was definitely a challenge, but also really rewarding.\nParticipantB: Oh wow, I couldn't do that. I need my comforts.\nParticipantA: Yeah, it's not for everyone. I know someone who did a solo backpacking trip across the Sierra Nevada mountains and it was pretty incredible.\nParticipantB: That's impressive. I don't think I could handle that kind of isolation.\nParticipantA: Yeah, it takes a certain mindset, but the views and experiences are worth it.\nParticipantB: I can see that. I just prefer being around people and having some amenities.\nParticipantA: That makes sense. I've also done some car camping and that's a nice balance between being comfortable and still being able to enjoy nature.\nParticipantB: Yeah, that sounds nice. I've done some car camping too and it's a good way to relax and enjoy the outdoors without having to rough it too much.\nParticipantA: Definitely. So, have you done any camping trips recently?\nParticipantB: Not recently, but I do like to go camping with my family a couple times a year.\nParticipantA: That's great. I haven't been able to go camping in a while because of work, but I'm hoping to change that soon.\nParticipantB: Yeah, work always seems to get in the way. I hope you're able to go back soon too.\nParticipantA: Thanks, I appreciate that. Well, I should let you go. It was nice talking to you.\nParticipantB: Yeah, you too. Have a good day.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 540,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

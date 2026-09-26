@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2452,
+  "topic": "Middle East",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THINKS ABOUT CURRENT US POLICY IN THE MIDDLE EAST. SHOULD US POLICY BE CHANGED OR NOT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hi, how are you doing today?\nParticipantB: I'm good, thanks. How about you?\nParticipantA: I'm doing well, thanks for asking. So, what do you think about US policy in the Middle East?\nParticipantB: Honestly, I'm not too sure. I've had some personal experiences that have made me a bit skeptical.\nParticipantA: Can you tell me more about that?\nParticipantB: Sure, I used to work in construction in the Middle East and saw firsthand how the US military presence over there affected the local people. It wasn't always positive.\nParticipantA: I see. I've always been pretty interested in the topic, and I've made up my mind about it years ago. But I'm not sure why.\nParticipantB: That's interesting. What's your take on it?\nParticipantA: I think the US should stay involved in the Middle East, but we need to be more mindful of the impact our policies have on the local people. We can't just focus on our own interests.\nParticipantB: I agree that we need to consider the impact on the local people, but I'm not sure if I think US involvement is the best solution.\nParticipantA: Can you tell me more about why you feel that way?\nParticipantB: Well, I think there are a lot of complex issues at play in the Middle East, and I'm not sure that US involvement is always the best way to address them. I think we need to be more careful about how we approach things over there.\nParticipantA: I understand where you're coming from. I think it's important for us to be engaged, but we need to be smart about it.\nParticipantB: Absolutely. I think we need to be more thoughtful and strategic in our approach to the Middle East.\nParticipantA: I completely agree. It's a complex issue, and we need to be willing to have difficult conversations about it.\nParticipantB: Yes, definitely. It's not something that can be solved easily, but I think we need to keep talking about it.\nParticipantA: I couldn't agree more. Thanks for having this conversation with me.\nParticipantB: Of course, it was great talking to you. Take care.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 541,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

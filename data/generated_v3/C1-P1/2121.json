@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2121,
+  "topic": "Air Pollution",
+  "sb_prompt": "PLEASE DISCUSS AIR POLLUTION.  FIND OUT WHAT SUBSTANCES THE OTHER CALLER THINKS CONTRIBUTE THE MOST TO AIR POLLUTION TODAY.  WHAT CAN INDIVIDUALS OR SOCIETY DO TO IMPROVE AIR QUALITY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 54,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: How's it going?\nParticipantB: Not too bad. How about you?\nParticipantA: Pretty good. So, what brings you to call today?\nParticipantB: Oh, I was just asked to call a stranger and talk about air pollution.\nParticipantA: Same here. What's your take on air pollution?\nParticipantB: I think it's a big problem. There are a lot of substances that contribute to it, like carbon monoxide from cars, and pollution from factories.\nParticipantA: Yeah, I agree. I think factories are a big contributor too, especially the ones that produce chemicals.\nParticipantB: What about individuals? What can we do to improve air quality?\nParticipantA: Well, I think we can all do our part by driving less, and using public transportation when we can. And, of course, recycling and reducing waste helps too.\nParticipantB: That's all good, but I think we need to do more as a society. Like, we need to hold companies accountable for their pollution, and invest in cleaner energy sources.\nParticipantA: I completely agree. I think it's important that we all work together to make a difference.\nParticipantB: Yeah, it's going to take a collective effort to make a real impact.\nParticipantA: Absolutely. So, what's your experience with air pollution?\nParticipantB: Not much, to be honest. I just know it's a problem and we need to do something about it.\nParticipantA: I have a personal experience related to it. A few years ago, I had a respiratory issue that was caused by air pollution. It was a wake-up call for me, and I've been more conscious of it ever since.\nParticipantB: That's unfortunate. I made up my mind about it years ago without quite being able to say why.\nParticipantA: Yeah, it's something that affects us all, and it's important that we take it seriously.\nParticipantB: Definitely. I think we should all be doing more to reduce our impact on the environment.\nParticipantA: Agreed. Well, it was nice chatting with you.\nParticipantB: You too. Take care.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 558,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

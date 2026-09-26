@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2942,
+  "topic": "Choosing A College",
+  "sb_prompt": "WHAT ADVICE OR EXPERIENCE CAN YOU OFFER TO A PARENT ON HOW TO HELP A SON OR DAUGHTER CHOOSE A COLLEGE TO ATTEND?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 44,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hi, I'm calling about a project I'm working on and I was wondering if you have any advice on how to help a child choose a college to attend?\n\nParticipantB: Sure, I'd be happy to help. I have a son who's going to college next year.\n\nParticipantA: That's great. I have a friend whose son is also going to college soon. I was wondering if you had any advice on how to help them make the best choice.\n\nParticipantB: Well, I think it's important to start early and do your research. Visit different colleges and talk to the admissions staff.\n\nParticipantA: Absolutely. I know someone who visited a college and felt like it was a good fit, but when they got there, it wasn't what they expected. So, I think it's important to not just rely on what the college tells you.\n\nParticipantB: Yeah, I agree. I think it's also important to consider the cost of attendance and whether or not the college offers financial aid.\n\nParticipantA: Definitely. That's something that's important to my friend's family. I was also thinking about the location of the college. Does it matter where the college is located?\n\nParticipantB: I think it depends on the student's interests. If they want to study something that's only offered at one college, then location might not be as important. But if they're interested in something more general, then it might be worth considering a college that's closer to home.\n\nParticipantA: That makes sense. I was also thinking about the size of the college. Do you think that matters?\n\nParticipantB: I think it can make a difference. My son is considering a small liberal arts college, but he's also looking at a larger university. He likes the idea of a smaller class size, but he's also interested in the resources that a larger university can offer.\n\nParticipantA: Yeah, I think that's important too. Thanks for your advice. It's been really helpful.\n\nParticipantB: You're welcome. Good luck to your friend's son and my son. I'm sure they'll make the right choice.\n\nParticipantA: Thank you. I'll let them know about your advice. Have a good day.\n\nParticipantB: You too. Thanks for calling.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 553,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

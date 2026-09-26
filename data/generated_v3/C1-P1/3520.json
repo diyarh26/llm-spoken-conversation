@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3520,
+  "topic": "Elections And Voting",
+  "sb_prompt": "WHY DO YOU THINK THAT ONLY ABOUT HALF OF ELIGIBLE VOTERS IN AMERICA TAKE PART IN NATIONAL ELECTIONS",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 43,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: So, what do you think about the upcoming elections?\nParticipantB: Oh, I'm not really sure. I haven't been following it too closely.\nParticipantA: Yeah, I know what you mean. It's hard to stay up to date with everything going on.\nParticipantB: Definitely. I think it's just so overwhelming sometimes.\nParticipantA: Yeah, and it's hard to know who to trust, you know?\nParticipantB: Definitely. I feel like there's so much misinformation out there.\nParticipantA: Exactly. It's hard to know what's true and what's not.\nParticipantB: Yeah, and I think a lot of people just don't feel like their vote matters.\nParticipantA: I know what you mean. I have a friend who's been dealing with that. It's frustrating.\nParticipantB: Yeah, it can be really disheartening. But I think it's important to keep trying to make a difference.\nParticipantA: Definitely. I think voting is a way to make your voice heard, you know?\nParticipantB: Yeah, absolutely. Even if it feels like your vote doesn't make a difference, it still counts.\nParticipantA: Exactly. And who knows, maybe if more people voted, things would change.\nParticipantB: I hope so. It's just hard to stay motivated when it feels like the system is so broken.\nParticipantA: Yeah, I know what you mean. But I think it's important to stay engaged and try to make a difference.\nParticipantB: Definitely. And I think it's important to talk to others about it too.\nParticipantA: Absolutely. We can all learn from each other and make a difference together.\nParticipantB: Exactly. Thanks for the conversation.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 446,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

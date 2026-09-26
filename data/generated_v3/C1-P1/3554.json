@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3554,
+  "topic": "Exercise And Fitness",
+  "sb_prompt": "DO YOU DO ANY EXERCISE REGULARLY TO MAINTAIN YOUR HEALTH OR FITNESS LEVEL?  IF SOOR DO IT AS A TASK?  COMPARE YOUR HABITS AND YOUR MOTIVES",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hi there, how are you doing today?\nParticipantB: I'm doing well, thanks for asking. How about you?\nParticipantA: I'm good, just getting over a cold.\nParticipantB: Oh no, I'm sorry to hear that. Did you take any medication for it?\nParticipantA: Yeah, I took some Sudafed and it helped a lot.\nParticipantB: That's good to hear. I've had a headache for a few days now, but I haven't taken anything for it yet.\nParticipantA: Have you tried any over-the-counter pain relievers?\nParticipantB: No, I haven't. I usually just take some ibuprofen or acetaminophen when I have a headache.\nParticipantA: Yeah, those are good options. So, do you do any exercise regularly to maintain your health or fitness level?\nParticipantB: Yeah, I try to go for a run or do some weightlifting a few times a week.\nParticipantA: That's great! I used to go to the gym a lot, but I've been struggling to find the motivation lately.\nParticipantB: I can understand that. It can be hard to find the motivation to exercise, especially when you're not seeing immediate results.\nParticipantA: Yeah, exactly. I've been trying to find a workout buddy to help keep me accountable, but it's been tough.\nParticipantB: I can relate to that. I have a friend who is really into fitness, and we sometimes go to the gym together. It helps to have someone to push you and keep you motivated.\nParticipantA: Yeah, that sounds nice. I wish I had someone like that in my life.\nParticipantB: Well, maybe you can find someone in your office or through a social group. It's all about finding someone who shares your interests and goals.\nParticipantA: That's a good point. I'll have to look into that. Thanks for the advice!\nParticipantB: No problem. It was nice talking to you. Take care!\nParticipantA: You too! Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 517,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

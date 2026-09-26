@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2227,
+  "topic": "Tv Programs",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER'S FAVORITE TV SHOWS ARE AND WHY.  ARE YOUR INTERESTS SIMILAR OR DIFFERENT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 16,
+    "education": "a high-school education",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hey, so what's your favorite TV show?\nParticipantB: Um, I don't really have one.\nParticipantA: Oh, that's okay. I'm kind of the same way. But if you had to pick one, what would it be?\nParticipantB: I don't know, maybe \"Friends\" or something.\nParticipantA: \"Friends\" is a good one. I like that show too.\nParticipantB: Yeah, it's just so relatable.\nParticipantA: Definitely. I think that's why it's so popular.\nParticipantB: What about you? Do you have a favorite show?\nParticipantA: Well, I used to like \"The Office\" a lot.\nParticipantB: Oh, I love that show!\nParticipantA: Yeah, it's pretty funny. Have you seen the American version or the British one?\nParticipantB: The American one, of course.\nParticipantA: Yeah, it's definitely one of my favorites.\nParticipantB: So, what made you like it so much?\nParticipantA: I just think it's really well written and the characters are all really interesting.\nParticipantB: Yeah, I agree. I especially love Jim and Pam.\nParticipantA: Oh, me too. Their relationship is so cute.\nParticipantB: Yeah, it's just the best.\nParticipantA: So, what do you think makes a good TV show?\nParticipantB: I think it just has to be relatable and have good writing.\nParticipantA: Definitely. And I think it's important for the characters to be likable too.\nParticipantB: Yeah, I agree. I can't stand shows where the characters are just annoying.\nParticipantA: Exactly. And I think it's also important for the show to have a clear concept or message.\nParticipantB: Yeah, I agree. I think that's why I like \"Friends\" so much. It's just about friendship and relationships.\nParticipantA: Yeah, it's a pretty simple concept, but it's executed really well.\nParticipantB: So, what do you think is the best TV show of all time?\nParticipantA: Oh, that's tough. I don't know if I can pick just one.\nParticipantB: Yeah, there are so many good ones.\nParticipantA: I think \"Breaking Bad\" is up there for me.\nParticipantB: Oh, I've heard that's really good. Have you seen it?\nParticipantA: Yeah, I have. It's definitely one of the best shows I've ever seen.\nParticipantB: Yeah, I've been meaning to watch it. Maybe I'll have to check it out.\nParticipantA: Definitely. It's worth the watch.\nParticipantB: Cool, I'll have to check it out.\nParticipantA: Alright, well it was nice talking to you.\nParticipantB: Yeah, you too. Have a good day.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 741,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

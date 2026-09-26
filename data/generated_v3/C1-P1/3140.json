@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3140,
+  "topic": "Social Change",
+  "sb_prompt": "DISCUSS RECENT SOCIAL CHANGES.  HOW IS LIFE IN AMERICA DIFFERENT TODAY COMPARED TO LIVING TEN YEARS AGO?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hey, how are you doing today?\nParticipantB: Pretty good, thanks. How about you?\nParticipantA: I'm doing okay, just got off a long shift at work.\nParticipantB: Oh, what do you do for work?\nParticipantA: I'm a plumber. It's been a tough job, but it pays the bills.\nParticipantB: That's cool. I work on a farm. Life is pretty simple out here.\nParticipantA: Yeah, I bet. I feel like things are so different now than they were ten years ago.\nParticipantB: Definitely. I have a friend who's a nurse, and she's seen a lot of changes in the medical field.\nParticipantA: Yeah, healthcare is definitely one of the biggest changes.\nParticipantB: Absolutely. And the way we communicate with each other has changed so much.\nParticipantA: Yeah, it's crazy to think about how much technology has changed in just a decade.\nParticipantB: Yeah, it's like the world is so much smaller now.\nParticipantA: Definitely. I feel like we're more connected, but also more divided.\nParticipantB: Agreed. It seems like there's so much more hate and anger in the world now.\nParticipantA: Yeah, it's scary. But I also think there's more awareness and activism around social issues.\nParticipantB: That's true. I think it's really important for people to speak up and fight for what they believe in.\nParticipantA: Definitely. I've been involved in a few protests and marches, and it's been really empowering.\nParticipantB: Yeah, I've been to a few rallies myself. It's important to stand up for what you believe in.\nParticipantA: Yeah, I think it's important to have a voice and make change happen.\nParticipantB: Absolutely. So, what made you want to call and talk about social change?\nParticipantA: I just feel like it's such a big part of our lives right now, and it's something that affects all of us.\nParticipantB: Yeah, it definitely does. It's important to talk about these things and stay informed.\nParticipantA: Definitely. Well, thanks for chatting with me about it.\nParticipantB: Of course, it was great talking to you.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 589,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

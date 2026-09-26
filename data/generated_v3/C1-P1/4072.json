@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4072,
+  "topic": "News Media",
+  "sb_prompt": "DISCUSS HOW YOU AND THE OTHER CALLER KEEP UP ON CURRENT EVENTS.      DO YOU GET MOST OF YOUR NEWS FROM TVOR PEOPLE YOU KNOW?  ARE YOU SATISFIED WITH THE QUALITY OF COVERAGE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 24,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 25,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hi there, how are you doing today?\nParticipantB: I'm doing pretty good, thanks. How about yourself?\nParticipantA: I'm doing okay, just had a long day at work.\nParticipantB: Oh, what kind of work do you do?\nParticipantA: I'm a car mechanic. How about you?\nParticipantB: I'm an accountant.\nParticipantA: Nice. So, how do you keep up with current events?\nParticipantB: Mostly through social media and the news apps on my phone.\nParticipantA: Same here, though I try to avoid the news sometimes because it can be so negative.\nParticipantB: Yeah, I know what you mean. But I think it's important to stay informed.\nParticipantA: Definitely. Do you have a favorite news source?\nParticipantB: Not really, I try to get my news from a variety of sources to get a well-rounded view.\nParticipantA: Same here. I have a friend who's a journalist, so I know how hard they work to get the facts right.\nParticipantB: Yeah, it's definitely not an easy job.\nParticipantA: So, are you satisfied with the quality of coverage you see?\nParticipantB: Most of the time, but sometimes it feels like they're sensationalizing things.\nParticipantA: Yeah, I know what you mean. I think they sometimes focus on the wrong things.\nParticipantB: Definitely. But overall, I think the news media is doing an important job.\nParticipantA: Agree. So, do you get most of your news from TV or people you know?\nParticipantB: A mix of both. I think it's important to hear different perspectives.\nParticipantA: Same here. I think it's good to hear what people I know think, but also to get a wider view from the news.\nParticipantB: Yeah, exactly.\nParticipantA: Well, it was nice talking to you.\nParticipantB: You too, have a great day.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 495,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

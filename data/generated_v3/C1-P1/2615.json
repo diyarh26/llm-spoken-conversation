@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2615,
+  "topic": "Auto Repairs",
+  "sb_prompt": "WHAT WAS THE LAST AUTO REPAIR YOU PERFORMED OR HAD DONE ON YOUR CAR? ARE THERE SOME TYPES OF REPAIRS OR MAINTENANCE TASKS YOU PREFER TO DO YOURSELF?  DISCUSS YOUR EXPERIENCES IN THIS AREA WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 50,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello! How are you doing today?\nParticipantA: I'm doing well, thanks. How about you?\nParticipantB: I'm doing alright, just got off work. What brings you to call today?\nParticipantA: Oh, I was just wondering if you had any recent experience with auto repairs.\nParticipantB: Yeah, I just had my oil changed last week. How about you?\nParticipantA: Same here. I usually change my oil every 5,000 miles or so.\nParticipantB: That's good to know. I usually go a bit longer between oil changes, but I guess it depends on your driving habits.\nParticipantA: Exactly. I try to stay on top of maintenance to avoid bigger problems down the road.\nParticipantB: Absolutely. It's always better to take care of small issues before they turn into big ones.\nParticipantA: So, what kind of repairs have you had to do on your car recently?\nParticipantB: I had to get a new battery a couple of months ago. It was a pain, but it had to be done.\nParticipantA: Yeah, that can be a hassle. I had a blown fuse a few months back and that was a nightmare to fix.\nParticipantB: Oh, I know how that goes. It seems like such a small thing, but it can be a real headache.\nParticipantA: Exactly. And sometimes it's hard to figure out what's causing the problem.\nParticipantB: Yeah, that's definitely frustrating. But, I prefer to do as much maintenance as I can on my own.\nParticipantA: Same here. I enjoy working on my car and it saves me a lot of money.\nParticipantB: Yeah, it's a great feeling to be able to fix something on your own. What kind of repairs do you like to do yourself?\nParticipantA: I've done a lot of work on my brakes and suspension. It's pretty satisfying to see the difference it makes.\nParticipantB: That's really cool. I usually stick to more basic repairs like changing the oil and filters.\nParticipantA: Yeah, it's all about finding what works for you and your car. What kind of car do you drive?\nParticipantB: I have a Honda Accord. It's a great car, but it does need a bit of maintenance.\nParticipantA: Yeah, I have a Honda as well. It's a reliable car, but it does need some attention every now and then.\nParticipantB: Yeah, they're good cars. I'm glad I got mine. Well, it was nice chatting with you.\nParticipantA: Same here, it was good to talk to you. Take care!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 667,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

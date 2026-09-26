@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hey, so how's your day going?\nParticipantB: It's been pretty good. Just working a lot at the restaurant.\nParticipantA: Oh, I can imagine. What do you do there?\nParticipantB: I'm a server. You know, taking orders, making sure everything runs smoothly.\nParticipantA: Yeah, I've done that kind of work before. It can be tough.\nParticipantB: Definitely. What about you? What do you do for work?\nParticipantA: I'm a truck driver. I spend a lot of time on the road.\nParticipantB: Oh, that sounds interesting. I've always wondered what it's like to travel so much.\nParticipantA: It has its ups and downs. But I do like having a change of scenery.\nParticipantB: That's true. So, what brought you to talk about houses today?\nParticipantA: Well, I've been thinking a lot about homes lately, and I thought it would be interesting to hear about other people's experiences.\nParticipantB: Yeah, I can relate. My own experience has been a bit mixed.\nParticipantA: Same here. What's your experience been like?\nParticipantB: I grew up in a small town and always thought I'd end up back there. But after college, I moved to the city and started working at the restaurant.\nParticipantA: Yeah, I did something similar. I grew up in a small town, but I ended up moving away for work.\nParticipantB: Right, so what's your home like?\nParticipantA: I live in a pretty typical home for the area. It's a small, single-story house in a suburban neighborhood.\nParticipantB: That sounds nice. My apartment is also pretty typical for the city. It's small, but it's in a great location.\nParticipantA: Yeah, location can make a big difference. What do you like most about your home?\nParticipantB: Honestly, it's just being able to walk to work. It's so convenient.\nParticipantA: That's a big advantage. I like having a bit more space in my house. I can spread out and relax.\nParticipantB: Yeah, I can see how that would be nice. Do you have any favorite features in your home?\nParticipantA: I love my backyard. It's nice to be able to go outside and have some space to yourself.\nParticipantB: That sounds lovely. I don't have a backyard, but I do have a balcony, which is nice for getting fresh air.\nParticipantA: That's a good alternative. What's your least favorite thing about your home?\nParticipantB: It's probably the noise. Living in the city, there's always some kind of noise outside.\nParticipantA: Yeah, I can relate to that. I live in a pretty quiet neighborhood, but sometimes there are loud trucks or noisy neighbors.\nParticipantB: Right, so how does your home compare to other homes in your area?\nParticipantA: It's pretty typical for the area, like I said before. Most of the houses around here are similar in size and style.\nParticipantB: My apartment is also pretty typical for the city. It's not the fanciest place, but it's comfortable.\nParticipantA: Yeah, I think that's the most important thing. Comfort is key.\nParticipantB: Definitely. Well, it was nice talking to you.\nParticipantA: Same here. Thanks for chatting about houses with me.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 860,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}
