@@ -1,0 +1,91 @@
+{
+  "condition": "C2-P0",
+  "architecture": "C2",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I do have a pet! I have a dog named Max. How about you? Do you have any pets?"
+    ],
+    [
+      "ParticipantA",
+      "That's so great that you have a dog! I used to have a dog too, but he passed away a few years ago. It was really tough, but I still miss him a lot. How old is your dog Max?"
+    ],
+    [
+      "ParticipantB",
+      "Max is 5 years old. He's a golden retriever and he's such a sweet dog. I love taking him for walks and playing fetch with him. What kind of pet did you used to have?"
+    ],
+    [
+      "ParticipantA",
+      "I used to have a cat named Whiskers. She was a beautiful calico cat and had the sweetest personality. I loved her so much and still think about her often. Do you have any other pets besides Max?"
+    ],
+    [
+      "ParticipantB",
+      "No, just Max. I always thought about getting another pet, but I travel a lot for work and I don't want to leave him alone for too long. How long did you have Whiskers?"
+    ],
+    [
+      "ParticipantA",
+      "I had Whiskers for about 10 years. She was with me through a lot of life changes and was always there for me. It's hard to lose a pet, but I'm glad I had the opportunity to love and care for her."
+    ],
+    [
+      "ParticipantB",
+      "I'm sorry for your loss, it's never easy saying goodbye to a beloved pet. I can imagine how difficult it must have been for you. What did you do to cope with the loss of Whiskers?"
+    ],
+    [
+      "ParticipantA",
+      "Thank you, it was definitely a tough experience. I found comfort in talking to other pet owners who had gone through similar situations and also by volunteering at a local animal shelter. It helped me feel like I was making a difference in the lives of other animals and also gave me a sense of purpose."
+    ]
+  ],
+  "n_turns": 11,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
