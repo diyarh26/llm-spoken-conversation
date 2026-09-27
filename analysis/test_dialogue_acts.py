@@ -13,6 +13,7 @@ from analysis.dialogue_acts import (
     FINE_LABELS,
     FINE_TO_COARSE,
     dialogtag_to_fine,
+    drop_loop_turns,
     js_divergence,
     normalize_swda_base,
     sentence_units,
@@ -106,6 +107,17 @@ class SeedTurnTests(unittest.TestCase):
     def test_records_without_seed_field_unchanged(self) -> None:
         rec = {"turns": [["A", "Hello!"], ["B", "Hello!"]]}
         self.assertEqual(len(conversation_turns(rec)), 2)
+
+
+class LoopFilterTests(unittest.TestCase):
+    def test_echo_repeats_dropped_backchannels_kept(self) -> None:
+        long_turn = "yes I have test driven the Honda Accord and the Toyota Camry myself"
+        turns = [("A", long_turn), ("B", "Uh-huh."), ("A", long_turn + " too"),
+                 ("B", "Uh-huh."), ("A", "What about the price of those two cars though?")]
+        kept = drop_loop_turns(turns)
+        self.assertEqual([t for _, t in kept],
+                         [long_turn, "Uh-huh.", "Uh-huh.",
+                          "What about the price of those two cars though?"])
 
 
 class GranularityTests(unittest.TestCase):

@@ -316,12 +316,34 @@ def load_switchboard(root: pathlib.Path = SWDA_ROOT) -> list[Conversation]:
     return conversations
 
 
-def load_generated(root: pathlib.Path = GEN_ROOT) -> list[Conversation]:
+def drop_loop_turns(turns: list[tuple[str, str]]) -> list[tuple[str, str]]:
+    """Remove echo-loop turns: near-verbatim repeats of an earlier turn.
+
+    Same definition as the generation-time guard (generation.quality.is_near_duplicate:
+    >= 8 distinct words, token-set Jaccard >= 0.8), applied post hoc so every condition is
+    judged identically. Short turns are never dropped (backchannels legitimately repeat).
+    Used only for the sensitivity analysis (--exclude-loops); the default keeps all turns.
+    """
+    from generation.quality import is_near_duplicate
+
+    kept: list[tuple[str, str]] = []
+    seen: list[tuple[str, str]] = []
+    for speaker, text in turns:
+        if not is_near_duplicate(text, seen):
+            kept.append((speaker, text))
+        seen.append((speaker, text))
+    return kept
+
+
+def load_generated(root: pathlib.Path = GEN_ROOT,
+                   exclude_loops: bool = False) -> list[Conversation]:
     conversations: list[Conversation] = []
     for path in sorted(root.glob("*/*.json")):
         with path.open(encoding="utf-8") as handle:
             record = json.load(handle)
         turns = conversation_turns(record)
+        if exclude_loops:
+            turns = drop_loop_turns(turns)
         if not turns:
             continue
         condition = str(record.get("condition", path.parent.name))
@@ -1368,6 +1390,10 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--no-figures", action="store_true",
         help="skip matplotlib figures",
     )
+    parser.add_argument(
+        "--exclude-loops", action="store_true",
+        help="sensitivity analysis: drop echo-loop turns (near-verbatim repeats) before tagging",
+    )
     return parser.parse_args(argv)
 
 
@@ -1431,7 +1457,7 @@ def main(argv: Sequence[str] | None = None) -> None:
         print(f"Wrote gold outputs to {output_dir}")
         return
 
-    generated = load_generated(args.generated_root)
+    generated = load_generated(args.generated_root, exclude_loops=args.exclude_loops)
     generated_groups = grouped_by_condition(generated)
     print(
         f"Loaded {len(generated):,} generated conversations across "

@@ -65,6 +65,14 @@ just an ordinary person…"). The model handles it (dev transcripts are coherent
 identical across architectures within a prompt level, so it cannot drive the architecture
 contrast. Report as a limitation; do not change it mid-study.
 
+**Echo loops are measured, not patched (decided 2026-09-27):** the re-test showed C2-P0 (paper
+prompt, turn-by-turn) falls into near-verbatim echo loops (17% of turns; one retry of the
+loop guard is often not enough). The guard is NOT changed mid-study: C2-P1 was already
+generated with it, and every architecture must run identical generation code, or the
+architecture contrast is confounded. Instead, loops are a reported outcome, and the
+dialogue-act analysis runs twice: all turns (primary) and `--exclude-loops` (sensitivity;
+same near-duplicate definition applied post hoc to every condition).
+
 ## 4. Decoding (FROZEN 2026-09-26 as-is; single source: `generation/config.py`)
 
 Freeze decision: the dev sweep forced no escalation for C1/C2 (dup-turn rate ≤0.005 at
