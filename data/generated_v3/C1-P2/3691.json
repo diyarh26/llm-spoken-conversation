@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3691,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what kind of pets do you have?\nParticipantB: Oh, I have a dog.\nParticipantA: Nice! What kind of dog is it?\nParticipantB: It's a golden retriever.\nParticipantA: Oh, I love golden retrievers. I actually have a friend who has one, and it's such a great breed.\nParticipantB: Yeah, mine is really friendly and loving.\nParticipantA: That's great. I used to have a dog when I was younger, but I haven't had one in a while.\nParticipantB: Yeah, I can understand that. Pets require a lot of time and attention.\nParticipantA: Absolutely. I work as a real estate agent, and it can be pretty hectic, so I haven't had the time to take care of a pet.\nParticipantB: Yeah, I work as a bank teller, and it can be pretty busy too. But I make sure to take my dog for a walk every day, even if it's just a quick one.\nParticipantA: That's great. I've been thinking about getting a pet again, but I'm not sure I'm ready for the responsibility.\nParticipantB: Yeah, it's a big commitment. But if you're ready for it, it can be really rewarding.\nParticipantA: Absolutely. I've heard that pets can provide a lot of emotional support and companionship.\nParticipantB: Yeah, my dog is always there for me when I need someone to talk to.\nParticipantA: That's great. I know someone close who has a cat, and they say the same thing. Cats are great companions too.\nParticipantB: Yeah, I've always been a dog person, but I can see the appeal of having a cat as a pet.\nParticipantA: Absolutely. Pets are great companions and can bring a lot of joy to our lives.\n\nParticipantB: Yeah, they really can. Well, thanks for chatting with me about pets. It was nice talking to you.\nParticipantA: Yeah, likewise. Take care!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 531,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

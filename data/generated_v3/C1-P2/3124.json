@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3124,
+  "topic": "Weather Climate",
+  "sb_prompt": "DISCUSS THE WEATHER.   WHAT HAS IT BEEN LIKE IN YOUR AREA?   HAS IT BEEN TYPICAL FOR THIS TIME OF YEAR?  COMPARE IT WITH THE OTHER CALLER'S WEATHER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 38,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: How are you doing today?\nParticipantB: I'm doing pretty good, thank you. And yourself?\nParticipantA: I'm doing well, thanks. So, what brings you to call about the weather today?\nParticipantB: Well, I've been really interested in the topic lately, and I thought it would be a great conversation starter. How about you?\nParticipantA: Honestly, it's been on my mind a lot lately too. I have a friend who's been dealing with the effects of climate change, and it's been tough to see.\nParticipantB: That's really unfortunate. Climate change is such a complex issue, and it's heartbreaking to see how it affects people's lives.\nParticipantA: Definitely. So, what's the weather like in your area?\nParticipantB: We've been having some pretty unusual weather lately. It's been really warm for this time of year, and we've had some pretty intense storms.\nParticipantA: Wow, that's interesting. Here in the city, we've been having some pretty strange weather too. We had a heatwave a few weeks back, and now it's been raining non-stop for days.\nParticipantB: That does sound strange. I've been reading that weather patterns are becoming more unpredictable, and it seems like that's the case in both our areas.\nParticipantA: Yeah, it's definitely something to be concerned about. I heard on the news that we're seeing more extreme weather events than ever before.\nParticipantB: Absolutely. And I think it's important for people to understand that their actions, like driving less or using renewable energy, can make a difference.\nParticipantA: I totally agree. It's not just about reducing our carbon footprint, but also about being aware of the impact of our choices on the environment.\nParticipantB: Exactly. And it's not just about the environment, either. Climate change can have serious consequences for people's health and well-being.\nParticipantA: Yes, that's so true. It's something we should all be thinking about and working towards solutions for.\n\nParticipantB: Absolutely. Well, it was great chatting with you about this important topic.\nParticipantA: Yes, likewise. I'm glad we had this conversation, and I hope we can continue to be mindful of the impact of our actions on the environment.\nParticipantB: Me too. Take care, and have a great day!\nParticipantA: You too! Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 633,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

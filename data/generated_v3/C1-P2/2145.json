@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2145,
+  "topic": "Women's Roles",
+  "sb_prompt": "DISCUSS THE CHANGES IN THE ROLES OF WOMEN IN AMERICAN SOCIETY OVER THE PAST GENERATION OR TWO.  WHICH CHANGES HAVE BEEN THE MOST SIGNIFICANT? DO YOU HAVE AN OPINION ON WHAT FURTHER CHANGES WILL TAKE PLACE OVER THE NEXT GENERATION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 44,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 45,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what do you think about the changes in the roles of women in American society over the past generation or two?\n\nParticipantB: Hmm, I'm not sure. I think things have definitely changed, but I'm not sure I can pinpoint the most significant ones.\n\nParticipantA: Yeah, I totally agree. I think that women have come a long way in terms of gaining more rights and opportunities. But there's still a lot of work to be done.\n\nParticipantB: Definitely. I mean, I think that it's great that women can now pursue careers and have more choices in terms of their lives.\n\nParticipantA: Absolutely. I think that the rise of the women's movement has been instrumental in creating these changes. And I know someone close who's dealt with it, so it's a topic that I find genuinely interesting.\n\nParticipantB: Yeah, I think that the women's movement has definitely been a driving force behind these changes. But I'm a bit skeptical about it all. I made up my mind about it years ago, but I can't quite say why.\n\nParticipantA: I can understand that. I think that it's important to have differing opinions on these topics. But I really do believe that women's roles have evolved significantly over the past few decades.\n\nParticipantB: Yeah, I think that's true. I just think that there's a lot of noise around the topic and it's hard to know what's really going on.\n\nParticipantA: I can see that. But I really do believe that we're heading in the right direction. I think that the next generation will see even more changes and progress.\n\nParticipantB: That's possible. I just hope that people can agree on what changes need to be made and work together to make them happen.\n\nParticipantA: Absolutely. I think that collaboration is key. And I'm hopeful that we can continue to make progress in the future.\n\nParticipantB: Me too. Well, it was nice talking to you about this.\n\nParticipantA: Yeah, it was great chatting with you. Thank you for your time.\n\nParticipantB: No problem, have a good day.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 547,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

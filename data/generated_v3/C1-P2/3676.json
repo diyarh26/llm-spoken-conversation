@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3676,
+  "topic": "Movies",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THOUGHT ABOUT THE LAST FEW MOVIES THEY SAW. WHAT MOVIES HAVE YOU SEEN LATELY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what movies have you seen lately?\nParticipantB: I saw that new superhero movie last weekend.\nParticipantA: Oh, which one was it?\nParticipantB: The one with the guy in the red suit.\nParticipantA: Ah, I think I know which one you mean. I saw that too. What did you think of it?\nParticipantB: It was pretty good. The special effects were impressive, and the story was interesting.\nParticipantA: Yeah, I agree. I thought the story was well done, and the actors did a good job.\nParticipantB: Did you see any other movies recently?\nParticipantA: Actually, I saw a romantic comedy a few days ago. It was pretty funny.\nParticipantB: Oh, I love romantic comedies. What was it about?\nParticipantA: It's about a guy who tries to win back his ex-girlfriend by pretending to be a famous movie director.\nParticipantB: Sounds interesting. Did you enjoy it?\nParticipantA: Yes, I did. It was a light-hearted movie, and I needed a break from all the serious movies I've been watching lately.\nParticipantB: I can relate to that. Sometimes you just need a movie that's easy to watch and makes you feel good.\nParticipantA: Exactly. So, what did you think of the superhero movie you saw?\nParticipantB: It was good. I enjoyed it. The action scenes were well choreographed, and the characters were well developed.\nParticipantA: I'm glad you enjoyed it. I thought the same thing. It was definitely a step up from some of the other superhero movies out there.\nParticipantB: Yeah, I think they're really trying to make the best movies they can now.\nParticipantA: Definitely. So, what do you usually look for in a movie?\nParticipantB: I usually look for a good story, interesting characters, and great acting. If a movie has those three things, I'm usually happy.\nParticipantA: Same here. I think those are the most important things in a movie.\nParticipantB: What about you? What do you usually look for in a movie?\nParticipantA: I like movies that make me think, movies that challenge me in some way. I also like movies that have a strong message or theme.\nParticipantB: I can relate to that. I like movies that make me feel something, whether it's happy or sad.\nParticipantA: Yeah, exactly. And I also like movies that are based on true stories, or that teach me something new.\nParticipantB: I agree. Those are the kind of movies that stick with you long after you've seen them.\nParticipantA: Yeah, absolutely. Well, it was nice talking to you about movies.\nParticipantB: Same here. It was fun talking to you.\nParticipantA: Goodbye!\nParticipantB: Goodbye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 737,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

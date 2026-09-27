@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2615,
+  "topic": "Auto Repairs",
+  "sb_prompt": "WHAT WAS THE LAST AUTO REPAIR YOU PERFORMED OR HAD DONE ON YOUR CAR? ARE THERE SOME TYPES OF REPAIRS OR MAINTENANCE TASKS YOU PREFER TO DO YOURSELF?  DISCUSS YOUR EXPERIENCES IN THIS AREA WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 50,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what was the last auto repair you had done on your car?\nParticipantB: Well, I had my oil changed about a month ago.\nParticipantA: Oh, yeah? Where did you get it done?\nParticipantB: I took it to the dealership.\nParticipantA: Yeah, that makes sense. I usually go to the dealership too.\nParticipantB: Do you prefer doing your own repairs or getting someone else to do them?\nParticipantA: I usually prefer getting someone else to do them. I don't have the time or the knowledge to do it myself.\nParticipantB: Same here. I don't have the tools or the expertise to do it myself.\nParticipantA: Yeah, it's definitely better to leave it to the professionals. But, do you have any maintenance tasks that you like to do yourself?\nParticipantB: I change my own oil and I check my tire pressure regularly.\nParticipantA: Yeah, that's a good idea. I usually do the same things myself. It's easy and it saves money.\nParticipantB: Do you have any other maintenance tasks you like to do yourself?\nParticipantA: Not really, no. I don't have the time or the inclination to do anything else.\nParticipantB: Yeah, I know what you mean. It can be time-consuming and sometimes it's just easier to let someone else do it.\nParticipantA: Definitely. So, what was the last auto repair you performed on your car?\nParticipantB: I replaced my brake pads myself. It was pretty easy and it saved me a lot of money.\nParticipantA: Oh, that's great. I've never tried that before. Maybe I'll give it a shot next time.\nParticipantB: Yeah, it's not too difficult if you have the right tools and you follow the instructions carefully.\nParticipantA: That's good to know. Thanks for the advice.\nParticipantB: No problem. It was nice talking to you.\nParticipantA: Same here. Take care!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 510,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

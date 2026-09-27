@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2279,
+  "topic": "Family Life",
+  "sb_prompt": "IF YOU HAVE CHILDRENY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 37,
+    "education": "a high-school education",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, how's it going?\nParticipantB: It's going pretty good. How about you?\n\nParticipantA: Pretty good, thanks. I have a son who's 10 and a daughter who's 8.\nParticipantB: Oh, that's nice. I don't have any kids yet, but I do have a niece who's 5.\n\nParticipantA: Oh, that's great. What's she like?\nParticipantB: She's pretty cool. She's always asking questions and wanting to learn new things.\n\nParticipantA: That's awesome. My kids are the same way. They're always curious and wanting to explore.\n\nParticipantB: Yeah, it's great to see them learn and grow. What are your kids like?\n\nParticipantA: They're both pretty different. My son is into sports and loves playing basketball, while my daughter is into art and loves to draw.\n\nParticipantB: That's cool. My niece is into dancing and loves to perform. She's always asking to take ballet classes.\n\nParticipantA: That's great. I wish my kids were into something like that. Maybe I'll sign them up for a class soon.\n\nParticipantB: Yeah, it's a great way for them to express themselves and learn discipline. What do your kids like to do for fun?\n\nParticipantA: My son loves to play video games and watch sports on TV, while my daughter loves to read books and play with her dolls.\n\nParticipantB: That's interesting. My niece loves to play dress up and pretend she's a princess. She also loves to watch cartoons.\n\nParticipantA: Yeah, kids have such different interests. My husband and I try to encourage our kids to explore different activities and find something they're passionate about.\n\nParticipantB: Yeah, that's a good idea. My niece is already showing a lot of interest in dance, so I think we might try to enroll her in some classes soon.\n\nParticipantA: That's great. It's important to support their interests and help them grow into the person they want to be.\n\nParticipantB: Definitely. It's a balance between guiding them and letting them explore on their own.\n\nParticipantA: Absolutely. Well, it was nice talking to you.\nParticipantB: Yeah, you too. Thanks for chatting about family life.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 621,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

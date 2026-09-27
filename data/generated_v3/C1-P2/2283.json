@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, how do you like to do your lawn and garden work?\nParticipantB: Oh, I enjoy it a lot. I find it relaxing and it's a great way to get some exercise.\n\nParticipantA: That's nice. I used to enjoy it, but now it's just another task on my to-do list.\nParticipantB: I can understand that. But you know, I think it's important to take care of your lawn and garden, especially if you have kids or pets.\nParticipantA: Yeah, I agree. I have a small yard, so it's not too bad, but I still try to keep it looking nice.\n\nParticipantB: That's good to hear. I have a pretty big yard, so it takes me a while to maintain it, but it's worth it in the end.\nParticipantA: Yeah, I bet. I used to help my dad with the lawn when I was a kid, but now it's all on me.\nParticipantB: I can imagine that can be a lot of work. Do you have any tips for keeping the lawn healthy?\nParticipantA: Well, I try to water it enough, but not too much, and I fertilize it once a year. That seems to keep it pretty healthy.\nParticipantB: That's good to know. I usually do the same thing, but I also try to aerate the soil every few years to keep it from getting too compacted.\nParticipantA: Oh, that's a good idea. I'll have to try that next time I do some work on the lawn.\n\nParticipantB: Yeah, it's definitely worth it. So, do you have any plants that you like to grow in your garden?\nParticipantA: I usually just stick with the basics, like tomatoes and peppers. I tried growing some herbs last year, but they didn't do very well.\nParticipantB: Oh, I love growing herbs. I have a small herb garden on my balcony, and it's so easy to maintain.\nParticipantA: That's nice. I don't have a balcony, so I don't think I could do that.\nParticipantB: Yeah, I can understand that. But you know, even if you don't have a lot of space, you can still grow some herbs in pots.\nParticipantA: Oh, that's a good idea. I'll have to try that next year.\n\nParticipantB: Yeah, it's a great way to add some flavor to your cooking without having to buy expensive herbs at the store. So, do you have any other hobbies besides gardening?\nParticipantA: Well, I like to read and watch movies, but other than that, gardening is pretty much it for me.\nParticipantB: I can understand that. I enjoy gardening, but I also like to play golf and go hiking in my free time.\nParticipantA: Oh, that's nice. I used to play golf a lot, but now I don't have as much time for it.\nParticipantB: Yeah, I can understand that. But you know, even if you don't have a lot of time, you can still go for a short hike or play a few holes of golf.\nParticipantA: Yeah, you're right. I should make more of an effort to do those things.\n\nParticipantB: Yeah, it's important to take some time for yourself and do things you enjoy. Well, thanks for",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 851,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

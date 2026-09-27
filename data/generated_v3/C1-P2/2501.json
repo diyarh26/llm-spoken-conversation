@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2501,
+  "topic": "Painting",
+  "sb_prompt": "HAVE YOU DONE ANY PAINTING PROJECTS RECENTLYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 50,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, have you done any painting projects recently?\nParticipantB: Well, I actually haven't had the time to do any painting projects lately, but it's something I'm really passionate about.\n\nParticipantA: That's cool. I actually just finished a painting project last weekend. I painted a landscape of my favorite spot in the park.\nParticipantB: Oh, that sounds lovely. I love landscapes. I find them so calming and peaceful.\n\nParticipantA: Yeah, me too. I find painting to be a great way to relax and unwind after a long day at work.\nParticipantB: Absolutely. I find painting to be a great way to express myself and explore my creativity.\n\nParticipantA: Yeah, I totally agree. I've been painting for a few years now and I love how it allows me to escape into my own world and forget about everything else.\nParticipantB: Exactly. I've been painting for a long time and it's something that I always come back to, no matter what else is going on in my life.\n\nParticipantA: That's great. I think painting is something that you can always come back to and find new inspiration in.\nParticipantB: Absolutely. I think the best part about painting is that there are no rules, you can do whatever you want and express yourself in any way you choose.\n\nParticipantA: Yeah, I agree. I think that's what makes painting so special, you can really make it your own and express yourself in a way that feels true to you.\nParticipantB: Exactly. And I think that's what makes painting so appealing to so many people, it's a way to express yourself and explore your creativity in a way that's unique to you.\n\nParticipantA: Yeah, absolutely. Well, it was nice chatting with you.\nParticipantB: Oh, likewise. It was really interesting talking to you about painting.\nParticipantA: Yeah, definitely. Have a good day!\nParticipantB: You too!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 503,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

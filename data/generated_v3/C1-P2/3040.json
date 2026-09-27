@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3040,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 56,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what's on your mind today?\nParticipantB: Not much, just been thinking about taxes.\nParticipantA: Oh, really? What about taxes?\nParticipantB: I don't know, just feeling like they're too high.\nParticipantA: Yeah, I can understand that. I work as an accountant, so I see how much people pay in taxes.\nParticipantB: Do you think they're necessary?\nParticipantA: I think they're necessary for some things, like infrastructure and education.\nParticipantB: Yeah, I agree with that. But I just feel like there's so much waste.\nParticipantA: I know what you mean. It can be frustrating.\nParticipantB: So, have you always felt this way about taxes?\nParticipantA: Not always, but I know someone close who has dealt with taxes, and that shaped my view.\nParticipantB: I made up my mind about it years ago without quite being able to say why.\nParticipantA: Yeah, sometimes it's hard to put our finger on exactly why we feel a certain way.\nParticipantB: Exactly. Do you think there's any way to make the system more efficient?\nParticipantA: I think there's definitely room for improvement. I think there are ways to streamline the process and make it more transparent.\nParticipantB: Yeah, that would be great. I just feel like there's so much bureaucracy and red tape.\nParticipantA: I agree. I think there's a lot of potential for improvement.\nParticipantB: Yeah, I hope so. Thanks for talking with me.\nParticipantA: Of course, anytime. It was nice talking with you.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 437,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

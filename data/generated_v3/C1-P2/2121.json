@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2121,
+  "topic": "Air Pollution",
+  "sb_prompt": "PLEASE DISCUSS AIR POLLUTION.  FIND OUT WHAT SUBSTANCES THE OTHER CALLER THINKS CONTRIBUTE THE MOST TO AIR POLLUTION TODAY.  WHAT CAN INDIVIDUALS OR SOCIETY DO TO IMPROVE AIR QUALITY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 54,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: How's it going?\nParticipantB: Good, good.\n\nParticipantA: What's been on your mind lately?\nParticipantB: Just been thinking about air pollution.\nParticipantA: Yeah, I've been thinking about it too. What do you think contributes the most to air pollution today?\nParticipantB: I think it's a mix of things, but I'd say cars and factories are the biggest contributors.\nParticipantA: Yeah, I agree. I work in an office and sometimes the air quality is terrible. It's hard to breathe sometimes.\nParticipantB: Yeah, I work with cars all day and I can see how exhaust fumes can really affect the air quality.\nParticipantA: Have you noticed any changes in air quality over the years?\nParticipantB: I think it's gotten worse, to be honest. I remember when I was a kid, the air always seemed fresher.\nParticipantA: Yeah, I remember the same thing. It's sad to see how much it's declined.\nParticipantB: Yeah, it really is. What do you think we can do to improve air quality?\nParticipantA: I think we need to start investing in cleaner energy sources and reduce our reliance on fossil fuels.\nParticipantB: I agree. And I think we should also hold companies accountable for their pollution.\nParticipantA: Yeah, regulations and penalties can be a big help.\nParticipantB: Definitely. It's important that we all do our part to protect the environment.\nParticipantA: Absolutely. I think it's a responsibility we all share.\nParticipantB: Yeah, we all need to do our part.\n\nParticipantA: Well, thanks for chatting with me about this. It's been nice talking to you.\nParticipantB: Yeah, likewise. Take care.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 474,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4346,
+  "topic": "Public Education",
+  "sb_prompt": "DISCUSS WITH THE OTHER CALLER WHETHER THERE IS SOMETHING SERIOUSLY WRONG WITH OUR PUBLIC SCHOOL SYSTEMS TODAYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a high-school education",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: How's it going?\nParticipantB: It's going alright.\nParticipantA: So, what brings you to call a stranger?\nParticipantB: I was asked to talk to someone about public education.\nParticipantA: Oh, same here. What's your take on it?\nParticipantB: I think there's something seriously wrong with our public school systems today.\nParticipantA: Yeah, I feel the same way. I think there's a lot of issues that need to be addressed.\nParticipantB: What kind of issues do you think are the most pressing?\nParticipantA: I think funding is a big problem. A lot of schools are underfunded and it affects the quality of education.\nParticipantB: Yeah, that's definitely a big issue. And I also think that there's a lack of resources and support for teachers.\nParticipantA: Exactly. And I think there's also a lack of accountability for students.\nParticipantB: Yeah, that's definitely a problem. I think there needs to be more emphasis on accountability for students.\nParticipantA: Absolutely. And I also think that there needs to be more emphasis on vocational education.\nParticipantB: Yes, I agree. I think that's important for students to have options beyond just going to college.\nParticipantA: Exactly. And I think that there needs to be more focus on STEM education.\nParticipantB: Yeah, that's definitely important. And I also think that there needs to be more emphasis on mental health resources for students.\nParticipantA: Absolutely. And I think that there needs to be more emphasis on social-emotional learning.\nParticipantB: Yeah, that's definitely important. I think that's something that's often overlooked in public schools.\nParticipantA: Yeah, definitely. And I think that there needs to be more emphasis on diversity and inclusion in the curriculum.\nParticipantB: Yes, I agree. I think that's important for students to learn about different cultures and perspectives.\nParticipantA: Absolutely. And I think that there needs to be more emphasis on parent involvement in schools.\nParticipantB: Yes, I agree. I think that's important for parents to be involved in their child's education.\nParticipantA: Absolutely. And I think that there needs to be more emphasis on teacher training and professional development.\nParticipantB: Yeah, that's definitely important. And I also think that there needs to be more emphasis on technology in the classroom.\nParticipantA: Absolutely. And I think that there needs to be more emphasis on extracurricular activities.\nParticipantB: Yeah, that's definitely important. And I also think that there needs to be more emphasis on civic education.\nParticipantA: Absolutely. And I think that there needs to be more emphasis on early childhood education.\nParticipantB: Yes, I agree. I think that's important for children to have access to quality early childhood education.\nParticipantA: Absolutely. And I think that there needs to be more emphasis on teacher salaries and benefits.\nParticipantB: Yes, I agree. I think that's important for teachers to be compensated fairly for their work.\nParticipantA: Absolutely. And I think that there needs to be more emphasis on school safety.\nParticipantB: Yeah, that's definitely important. And I also think that there needs to be more emphasis on career and technical education.\nParticipantA: Absolutely. And I",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 873,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

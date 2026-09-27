@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3013,
+  "topic": "Recipes/food/cooking",
+  "sb_prompt": "PLEASE DISCUSS FOOD AND COOKING.  WHAT FOODS WOULD YOU INCLUDE IN THE MENU FOR A DINNER PARTY?  SHARE THE RECIPE FOR ONE OF THESE FOODS WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: How are you today?\nParticipantB: I'm good, thank you. How about you?\nParticipantA: I'm doing well, thanks for asking. So, let's talk about something interesting: food and cooking. What's your favorite dish to cook?\nParticipantB: Well, I really enjoy making pasta. I have a recipe that I got from my grandmother, and it's always a hit with my friends and family.\nParticipantA: That sounds delicious. I'm more of a meat and potatoes kind of person, but I love trying new things. What's your go-to recipe for pasta?\nParticipantB: It's a classic spaghetti and meatballs. I make the meatballs from scratch, and I use my nonna's tomato sauce recipe. It's so easy and always turns out great.\nParticipantA: That sounds amazing. I've always wanted to make my own meatballs. Do you have any tips or tricks?\nParticipantB: Sure! The key is to make sure you're using high-quality ground beef and to not overwork the meat. You want to keep the meat light and fluffy. Also, make sure to season the meat with plenty of salt and pepper before cooking.\nParticipantA: Got it. I'll have to try that out sometime. So, for a dinner party menu, what are some other dishes you would include?\nParticipantB: I think a nice antipasto platter would be a great start. You can have some fresh vegetables, cheese, and cured meats. For the main course, I would do a roasted chicken with potatoes and green beans. And for dessert, I love making a classic chocolate cake.\nParticipantA: That all sounds great. I'm not the best baker, but I might try making the chocolate cake. What's your secret to getting it just right?\nParticipantB: Honestly, the secret is to not overmix the batter. You want to make sure the flour is incorporated well, but you don't want to overwork the mixture. Also, make sure the oven is preheated to the right temperature and you use the right amount of ingredients.\nParticipantA: Thanks for the advice. I'll have to give it a try. What's your personal experience with cooking? Is there a specific dish that reminds you of someone or something?\nParticipantB: Well, my parents are both from Italy, so cooking has always been a big part of my life. My nonna used to make these amazing stuffed shells that I loved growing up. Unfortunately, she passed away a few years ago, so I don't get to enjoy them as much anymore. But whenever I make them, I feel like she's still with me in a way.\nParticipantA: That's so nice. I can imagine how special that dish must be for you. I'm sure your nonna would be proud of how well you make it now. Thanks for chatting with me today. It was really nice talking to you.\nParticipantB: No, thank you! It was great to chat with you too. Let me know how your meatballs turn out!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 775,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

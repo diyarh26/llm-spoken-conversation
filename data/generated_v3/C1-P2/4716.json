@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4716,
+  "topic": "Gun Control",
+  "sb_prompt": "DISCUSS GUN CONTROL.  WHERE DO YOU AND THE OTHER CALLER STAND ON A SCALE FROM 1 TO 10",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, I heard we're supposed to talk about gun control. Where do you stand on that issue?\n\nParticipantB: Oh, um, I'd say I'm a six. I'm not super passionate about it, but I think there should be some regulation.\n\nParticipantA: Yeah, I agree. I'm definitely a ten, though. I think there needs to be more restrictions on who can own a gun and what kind of guns they can own.\n\nParticipantB: Um, okay. I can see why you feel that way, but I also think that there are a lot of responsible gun owners out there who just want to protect themselves and their families.\n\nParticipantA: I totally agree that there are responsible gun owners. But I think that the number of people who use guns for illegal or harmful purposes is just too high.\n\nParticipantB: Yeah, I know what you mean. I have a friend who owns a gun for hunting, and he's a really responsible person. But I also know that some people use guns for more nefarious purposes.\n\nParticipantA: Definitely. And I think that the easier it is to access guns, the more likely it is that they'll be used in that way.\n\nParticipantB: Yeah, that makes sense. I just worry that if we make it too hard for people to get guns, then only criminals will have them.\n\nParticipantA: I understand that concern, but I think that the benefits of stricter gun control outweigh the risks.\n\nParticipantB: I see your point, but I still think that there needs to be a balance. We can't just take away people's Second Amendment rights without considering the implications.\n\nParticipantA: I totally agree. I think it's important to have a conversation about this and find a middle ground that works for everyone.\n\nParticipantB: Yeah, I think that's a good idea. It's just a complex issue, you know?\n\nParticipantA: Definitely. But I think that if we all work together, we can find a solution that works for everyone.\n\nParticipantB: I hope so. It's just a tough issue to navigate.\n\nParticipantA: Yeah, it really is. But I think that if we keep talking about it and working towards a solution, we can make progress.\n\nParticipantB: I hope you're right.\n\nParticipantA: Thanks for chatting with me about this. It's been interesting to hear your perspective.\n\nParticipantB: Yeah, likewise. Have a good day.\n\nParticipantA: You too.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 634,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

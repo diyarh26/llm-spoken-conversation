@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2924,
+  "topic": "Trial By Jury",
+  "sb_prompt": "DISCUSS POSSIBLE CHANGES IN THE WAY TRIALS BY JURY ARE CONDUCTED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 26,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hi, how are you doing today?\nParticipantB: I'm doing well, thanks. How about you?\nParticipantA: I'm okay, just a bit stressed with work lately.\nParticipantB: I can relate, work can be overwhelming at times.\nParticipantA: Yeah, I work as a bank teller and I've been thinking a lot about the trial by jury system lately.\nParticipantB: Oh, what has been on your mind regarding the trial by jury system?\nParticipantA: Well, I'm not sure exactly. I think it's just that I've been hearing a lot of stories about how the system is broken and how it's not always fair.\nParticipantB: Yeah, I can understand that. I work as an accountant and I've seen firsthand how the legal system can be flawed.\nParticipantA: Really? Can you tell me more about that?\nParticipantB: Well, I have a close friend who was involved in a trial by jury and it was a really difficult experience for her. The jury wasn't able to come to a unanimous decision and it dragged on for months.\nParticipantA: That sounds rough. I've heard that the trial by jury system can be really slow and inefficient.\nParticipantB: Definitely. And it's not just the length of the trial, it's also the fact that the jury can be swayed by outside influences and not make an impartial decision.\nParticipantA: That's true. I think it's important that we find ways to make the trial by jury system more effective and fair for everyone involved.\nParticipantB: I agree. Maybe we could explore alternative methods of resolving legal disputes, like mediation or arbitration.\nParticipantA: That's an interesting idea. I think it's worth considering alternative options to the trial by jury system.\nParticipantB: Yeah, I think so too. It's important that we continue to evaluate and improve our legal system to ensure that everyone is treated fairly and justly.\nParticipantA: Definitely. Well, it was nice talking with you today.\nParticipantB: Same here, thank you for sharing your thoughts with me.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 529,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2227,
+  "topic": "Tv Programs",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER'S FAVORITE TV SHOWS ARE AND WHY.  ARE YOUR INTERESTS SIMILAR OR DIFFERENT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 16,
+    "education": "a high-school education",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what's your favorite TV show?\nParticipantB: Uh, I like \"Friends\" and \"The Office\".\nParticipantA: Oh, I love \"The Office\" too! What do you like about it?\nParticipantB: I just think it's funny and relatable. The characters are all so different and quirky.\nParticipantA: Yeah, I agree. It's definitely one of my favorites.\nParticipantB: What about you? What's your favorite TV show?\nParticipantA: I really like \"Breaking Bad\".\nParticipantB: Oh, I've heard of that one. What do you like about it?\nParticipantA: It's just so intense and well-written. The characters are all so interesting and complex.\nParticipantB: Yeah, I can see how that would be appealing. I don't think I could handle a show that intense though.\nParticipantA: Yeah, it's definitely not for everyone. But it's worth watching if you can handle the suspense.\nParticipantB: What kind of shows do you usually watch?\nParticipantA: I usually watch dramas and crime shows. I'm not really into reality TV or anything like that.\nParticipantB: Same here, I prefer something with a good storyline. What's your favorite drama?\nParticipantA: I really like \"Mad Men\". It's set in the 1960s and follows the lives of advertising executives.\nParticipantB: Oh, I've heard of that one too. I'm not really into period pieces, but it sounds interesting.\nParticipantA: Yeah, it's definitely worth checking out if you're into that kind of thing.\nParticipantB: So, what do you think makes a good TV show?\nParticipantA: I think it's a combination of good writing, interesting characters, and a compelling storyline.\nParticipantB: I agree. And for me, I also like shows that make me think or feel something.\nParticipantA: Yeah, exactly. I think that's what separates the good shows from the mediocre ones.\nParticipantB: What's your favorite show that makes you feel something?\nParticipantA: I really like \"This Is Us\". It's a family drama that just pulls at your heartstrings.\nParticipantB: Oh, I've heard of that one too. I might have to check it out.\nParticipantA: Yeah, it's definitely worth it.\nParticipantB: So, what do you do for work?\nParticipantA: I work as a factory supervisor. How about you?\nParticipantB: I do the same thing actually. It can be tough, but it's a good job.\nParticipantA: Yeah, it can be tough, but it's definitely rewarding.\nParticipantB: Agreed. So, what do you like to do in your free time?\nParticipantA: I like to read and play video games. How about you?\nParticipantB: I like to hang out with friends and go to the movies.\nParticipantA: Yeah, that sounds fun. What's your favorite movie?\nParticipantB: I really like \"The Shawshank Redemption\". It's just such a classic.\nParticipantA: Oh, yeah, that's a great one. I haven't seen that in a while, maybe I should rewatch it.\nParticipantB: Definitely. It's always worth a watch.\nParticipantA: Well, it was nice talking to you.\nParticipantB: Yeah, you too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 883,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

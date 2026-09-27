@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2226,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 44,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 27,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what kind of books do you like to read?\nParticipantB: Oh, I like to read thrillers and mystery novels mostly.\nParticipantA: That's cool. I'm more into non-fiction and biographies.\nParticipantB: Really? What kind of non-fiction do you like to read?\nParticipantA: I love reading books about history and politics.\nParticipantB: Oh, that's interesting. I don't really read much non-fiction, to be honest.\nParticipantA: What kind of books do you read for leisure then?\nParticipantB: I like to read fantasy and science fiction books.\nParticipantA: That's cool. I haven't read much science fiction, but I've been meaning to pick up some books by H.G. Wells.\nParticipantB: Oh, yeah, he's a great author. Have you read \"The War of the Worlds\" yet?\nParticipantA: No, I haven't. I've heard it's a classic, though.\nParticipantB: It definitely is. It's one of my favorites.\nParticipantA: Yeah, I've heard it's a really interesting story.\nParticipantB: Yeah, it's a great read. Have you read any other classics?\nParticipantA: Yeah, I really enjoyed \"To Kill a Mockingbird\" by Harper Lee.\nParticipantB: Oh, yeah, that's a great book. Have you read any other books by her?\nParticipantA: No, that's the only one I've read so far. I heard \"Go Set a Watchman\" is also good, but it's a bit controversial.\nParticipantB: Yeah, I've heard that too. But I haven't read it yet.\nParticipantA: Yeah, it's definitely a must-read for anyone who loves literature.\nParticipantB: Definitely. So, have you read any other books by male authors?\nParticipantA: Yeah, I love reading books by male authors too. I recently read \"The Catcher in the Rye\" by J.D. Salinger.\nParticipantB: Oh, yeah, that's a classic. I haven't read it yet, but I've heard it's a great book.\nParticipantA: Yeah, it's a must-read. Have you read any books by female authors?\nParticipantB: Yeah, I love reading books by female authors too. I recently read \"The Handmaid's Tale\" by Margaret Atwood.\nParticipantA: Oh, I've heard that's a great book. I've been meaning to read it for a while now.\nParticipantB: Yeah, it's a great read. You should definitely check it out.\nParticipantA: Yeah, I will. So, what do you think about the current state of literature?\nParticipantB: Oh, I think it's great. There are so many amazing books out there.\nParticipantA: Yeah, I totally agree. I think the literary world is always evolving and changing.\nParticipantB: Exactly. And there are so many new voices and perspectives to discover.\nParticipantA: Yeah, it's definitely an exciting time for literature.\nParticipantB: Definitely. Well, it was great talking to you.\nParticipantA: Yeah, it was great talking to you too. Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 848,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}
