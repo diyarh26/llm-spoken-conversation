@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2279,
+  "topic": "Family Life",
+  "sb_prompt": "IF YOU HAVE CHILDRENY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 37,
+    "education": "a high-school education",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how many kids do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have one kid."
+    ],
+    [
+      "ParticipantA",
+      "That's great! What's their age?"
+    ],
+    [
+      "ParticipantB",
+      "She's two years old."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's such a cute age! What's she like?"
+    ],
+    [
+      "ParticipantB",
+      "She's a handful, but I love her to pieces."
+    ],
+    [
+      "ParticipantA",
+      "That's great! What's their age?"
+    ],
+    [
+      "ParticipantB",
+      "She's got quite the personality already."
+    ],
+    [
+      "ParticipantA",
+      "What does she like to do?"
+    ],
+    [
+      "ParticipantB",
+      "She loves to play with her toys and run around outside."
+    ],
+    [
+      "ParticipantA",
+      "Do you think she'll be a handful as she gets older too?"
+    ],
+    [
+      "ParticipantB",
+      "It's hard to say, but I hope she'll stay curious and adventurous."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think it's important for kids to stay curious and adventurous."
+    ],
+    [
+      "ParticipantB",
+      "What about you? How many kids do you have?"
+    ],
+    [
+      "ParticipantA",
+      "I have two kids, a boy and a girl."
+    ],
+    [
+      "ParticipantB",
+      "How old are they?"
+    ],
+    [
+      "ParticipantA",
+      "My son is six and my daughter is eight."
+    ],
+    [
+      "ParticipantB",
+      "What are their personalities like?"
+    ],
+    [
+      "ParticipantA",
+      "My son is quite the goofball and my daughter is very focused on her schoolwork."
+    ],
+    [
+      "ParticipantB",
+      "What do they like to do for fun?"
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have any favorite activities to do with your child?"
+    ],
+    [
+      "ParticipantB",
+      "I love reading to her before bed and playing with her toys together."
+    ],
+    [
+      "ParticipantA",
+      "That sounds really nice."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a highlight of my day."
+    ],
+    [
+      "ParticipantA",
+      "I'm really glad I have them, but it's definitely not easy being a parent."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a challenge, but it's totally worth it."
+    ],
+    [
+      "ParticipantA",
+      "I agree, it's totally worth it."
+    ],
+    [
+      "ParticipantB",
+      "How do you balance your work and family life?"
+    ],
+    [
+      "ParticipantA",
+      "I have a pretty strict schedule and make sure to prioritize family time whenever possible."
+    ],
+    [
+      "ParticipantB",
+      "What do you like to do for fun when you're not working or taking care of your kids?"
+    ],
+    [
+      "ParticipantA",
+      "I love spending time with my kids, but I also make sure to have some me-time to recharge."
+    ],
+    [
+      "ParticipantB",
+      "That's great to hear that you prioritize family time and self-care."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have any hobbies or interests outside of being a parent?"
+    ],
+    [
+      "ParticipantB",
+      "I enjoy playing basketball and watching sports in my free time."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite thing about being a parent?"
+    ],
+    [
+      "ParticipantB",
+      "The best thing about being a parent is watching my daughter grow and learn new things every day."
+    ],
+    [
+      "ParticipantA",
+      "What's the most challenging part of being a parent for you?"
+    ],
+    [
+      "ParticipantB",
+      "I'd say the most challenging part of being a parent is finding the balance between work and family life."
+    ],
+    [
+      "ParticipantA",
+      "I know exactly what you mean about the balance between work and family life."
+    ],
+    [
+      "ParticipantB",
+      "I'm just glad I have a job that allows me to have a flexible schedule and be there for my daughter."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 4
+  }
+}

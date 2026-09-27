@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3883,
+  "topic": "Clothing And Dress",
+  "sb_prompt": "THE TOPIC IS CLOTHING.  PLEASE FIND OUT HOW THE OTHER CALLER TYPICALLY DRESSES FOR WORK.  HOW MUCH VARIATION IS THERE FROM DAY TO DAY?  HOW MUCH VARIATION IS THERE FROM SEASON TO SEASON?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 57,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how do you usually dress for work?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I wear scrubs for work."
+    ],
+    [
+      "ParticipantA",
+      "What kind of scrubs?"
+    ],
+    [
+      "ParticipantB",
+      "They're usually a pale green color."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that sounds nice and professional."
+    ],
+    [
+      "ParticipantB",
+      "And how about you?"
+    ],
+    [
+      "ParticipantA",
+      "I usually wear dress pants and a blouse or a polo shirt, depending on the day."
+    ],
+    [
+      "ParticipantB",
+      "That sounds a bit more formal than what I wear."
+    ],
+    [
+      "ParticipantA",
+      "I find that dressing professionally helps me feel more confident and focused at work."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can see how that would be the case."
+    ],
+    [
+      "ParticipantA",
+      "Do you ever feel like your work outfit affects your mood or productivity at work?"
+    ],
+    [
+      "ParticipantB",
+      "Sometimes I do, especially if I'm wearing something uncomfortable or not fitting well."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've had that experience too."
+    ],
+    [
+      "ParticipantB",
+      "But overall, I think it's not a big deal as long as I'm doing my job well."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. As long as you're doing your job well, it doesn't really matter what you wear."
+    ],
+    [
+      "ParticipantB",
+      "True, it's more about what's inside than what's on the outside."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's really important to remember."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely."
+    ],
+    [
+      "ParticipantA",
+      "Do you have any favorite clothing items that you like to wear outside of work?"
+    ],
+    [
+      "ParticipantB",
+      "I love wearing comfy leggings and a cozy sweater on my days off."
+    ],
+    [
+      "ParticipantA",
+      "That sounds cozy and comfortable."
+    ],
+    [
+      "ParticipantB",
+      "I also love wearing a nice dress and heels for special occasions."
+    ],
+    [
+      "ParticipantA",
+      "What kind of dresses do you like to wear for special occasions?"
+    ],
+    [
+      "ParticipantB",
+      "I usually go for something classic and timeless, like a black or navy dress."
+    ],
+    [
+      "ParticipantA",
+      "That sounds really elegant and sophisticated."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I like to keep it simple and classic."
+    ],
+    [
+      "ParticipantA",
+      "I prefer more casual outfits on my days off, like jeans and a t-shirt."
+    ],
+    [
+      "ParticipantB",
+      "That sounds comfortable and relaxed."
+    ],
+    [
+      "ParticipantA",
+      "I love the idea of having a nice dress and heels for special occasions."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's nice to have a change of pace from work clothes."
+    ],
+    [
+      "ParticipantA",
+      "What kind of occasions do you usually wear the dress and heels for?"
+    ],
+    [
+      "ParticipantB",
+      "Usually, I wear them for weddings, anniversaries, or other formal events."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have any special outfits that you like to wear for formal occasions?"
+    ],
+    [
+      "ParticipantB",
+      "I usually go for a suit and tie for more formal events."
+    ],
+    [
+      "ParticipantA",
+      "That sounds really sharp and put-together."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's important to make a good impression at those kinds of events."
+    ],
+    [
+      "ParticipantA",
+      "I can see how that would be important."
+    ],
+    [
+      "ParticipantB",
+      "And what about you? Do you have any favorite outfits that you like to wear on your days off?"
+    ],
+    [
+      "ParticipantA",
+      "I love wearing a nice dress and heels for special occasions too."
+    ],
+    [
+      "ParticipantB",
+      "That's great that you have a special outfit for formal occasions."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  }
+}

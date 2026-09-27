@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3111,
+  "topic": "Crime",
+  "sb_prompt": "DISCUSS CRIME IN AMERICAN CITIES TODAY.  WHAT ARE YOUR CONCERNS AND THE CONCERNS OF THE OTHER CALLER?  WHAT STEPS CAN BE TAKEN TO REDUCE CRIME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 45,
+    "education": "a college degree",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 31,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What do you think about crime in American cities today?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's a complex issue with many factors contributing to it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. It's not just about law enforcement, but also social and economic issues."
+    ],
+    [
+      "ParticipantB",
+      "And I know someone close who has dealt with it, which shaped my view."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, me too."
+    ],
+    [
+      "ParticipantB",
+      "I think there needs to be a holistic approach to addressing crime, including investing in education and job opportunities."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely."
+    ],
+    [
+      "ParticipantB",
+      "We also need to address the root causes of crime, such as poverty and lack of access to resources."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. It's not just about law enforcement, but also social and economic issues."
+    ],
+    [
+      "ParticipantB",
+      "And I think we need to have more discussions like this to raise awareness and find solutions."
+    ],
+    [
+      "ParticipantA",
+      "I think we also need to address the issue of systemic racism and inequality in our criminal justice system."
+    ],
+    [
+      "ParticipantB",
+      "Definitely."
+    ],
+    [
+      "ParticipantA",
+      "And we need to make sure that law enforcement is held accountable for their actions."
+    ],
+    [
+      "ParticipantB",
+      "I couldn't agree more."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, there's definitely a lot to be done."
+    ],
+    [
+      "ParticipantB",
+      "We also need to address the issue of gun violence in our communities."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, gun violence is a huge problem."
+    ],
+    [
+      "ParticipantB",
+      "I think we also need to address the issue of mental health and how it relates to crime."
+    ],
+    [
+      "ParticipantA",
+      "And we also need to address the issue of substance abuse and addiction, which often leads to crime."
+    ],
+    [
+      "ParticipantB",
+      "We also need to support programs that help former inmates reintegrate back into society."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, there are a lot of factors to consider."
+    ],
+    [
+      "ParticipantB",
+      "I think we also need to focus on community policing and building stronger relationships between law enforcement and the communities they serve."
+    ],
+    [
+      "ParticipantA",
+      "I think we also need to address the issue of police brutality and hold officers accountable for their actions."
+    ],
+    [
+      "ParticipantB",
+      "And we need to provide resources for at-risk youth to help prevent them from getting involved in crime in the first place."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, there's a lot to be done, but I think if we work together and address these issues holistically, we can make a real difference."
+    ],
+    [
+      "ParticipantB",
+      "I couldn't agree more."
+    ],
+    [
+      "ParticipantA",
+      "And I think we also need to work on addressing the underlying causes of crime, such as poverty and lack of access to resources."
+    ],
+    [
+      "ParticipantB",
+      "Exactly."
+    ],
+    [
+      "ParticipantA",
+      "And I think we also need to address the issue of police corruption and misconduct."
+    ],
+    [
+      "ParticipantB",
+      "I think we also need to focus on rehabilitation and providing support for those who have been incarcerated."
+    ],
+    [
+      "ParticipantA",
+      "And I think we also need to work on improving the criminal justice system as a whole, to ensure that it is fair and just for all people."
+    ],
+    [
+      "ParticipantB",
+      "Definitely."
+    ],
+    [
+      "ParticipantA",
+      "And we need to address the issue of police corruption and misconduct."
+    ],
+    [
+      "ParticipantB",
+      "Yes, we definitely need to work on improving the criminal justice system as a whole."
+    ],
+    [
+      "ParticipantA",
+      "And I think we also need to address the issue of gun control and regulation to prevent gun violence."
+    ],
+    [
+      "ParticipantB",
+      "I agree, we need to address all of these issues to make a real impact."
+    ],
+    [
+      "ParticipantA",
+      "I think we also need to address the issue of police accountability and transparency to build trust between law enforcement and the communities they serve."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think we need to take a comprehensive approach to addressing crime and its underlying causes."
+    ],
+    [
+      "ParticipantA",
+      "I couldn't agree more."
+    ],
+    [
+      "ParticipantB",
+      "Exactly."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 6,
+    "dup_kept": 1
+  }
+}

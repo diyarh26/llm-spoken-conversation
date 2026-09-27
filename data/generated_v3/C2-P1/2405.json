@@ -1,0 +1,215 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2405,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 28,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Do you use a personal computer often?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I use mine pretty much every day."
+    ],
+    [
+      "ParticipantA",
+      "What kind of activities do you use your computer for?"
+    ],
+    [
+      "ParticipantB",
+      "I mostly use it for work, banking, and staying in touch with friends and family through social media and messaging apps."
+    ],
+    [
+      "ParticipantA",
+      "I use my computer mostly for work and personal stuff like online shopping and watching movies."
+    ],
+    [
+      "ParticipantB",
+      "I also use it for gaming, but not as much as I used to."
+    ],
+    [
+      "ParticipantA",
+      "What kind of games do you enjoy playing?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly RPGs and strategy games, but I'm open to trying new genres."
+    ],
+    [
+      "ParticipantA",
+      "I'm more of a puzzle game person myself."
+    ],
+    [
+      "ParticipantB",
+      "What kind of puzzle games do you like playing?"
+    ],
+    [
+      "ParticipantA",
+      "I enjoy playing games like Sudoku and Tetris."
+    ],
+    [
+      "ParticipantB",
+      "I used to be really into puzzle games too, but now I'm more into multiplayer games with friends."
+    ],
+    [
+      "ParticipantA",
+      "What kind of multiplayer games do you like playing with your friends?"
+    ],
+    [
+      "ParticipantB",
+      "I usually play games like Among Us and Jackbox Party Pack with my friends."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a lot of fun."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's always a blast when we play together."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite thing about playing multiplayer games with friends?"
+    ],
+    [
+      "ParticipantB",
+      "It's just really enjoyable to spend time with friends and have a good laugh while playing games."
+    ],
+    [
+      "ParticipantA",
+      "What kind of gaming console do you use to play multiplayer games?"
+    ],
+    [
+      "ParticipantB",
+      "I use a PlayStation."
+    ],
+    [
+      "ParticipantA",
+      "I'm an Xbox player myself."
+    ],
+    [
+      "ParticipantB",
+      "What about you? What kind of games do you like playing on your Xbox?"
+    ],
+    [
+      "ParticipantA",
+      "So, do you prefer PC gaming or console gaming?"
+    ],
+    [
+      "ParticipantB",
+      "I prefer console gaming, but I do enjoy playing some games on my PC too."
+    ],
+    [
+      "ParticipantA",
+      "That's cool."
+    ],
+    [
+      "ParticipantB",
+      "What kind of games do you usually play on your Xbox?"
+    ],
+    [
+      "ParticipantA",
+      "What kind of games do you enjoy playing on your PlayStation?"
+    ],
+    [
+      "ParticipantB",
+      "I mostly play sports and racing games on my PlayStation."
+    ],
+    [
+      "ParticipantA",
+      "I'm more of a fan of RPGs and adventure games myself."
+    ],
+    [
+      "ParticipantB",
+      "That's interesting."
+    ],
+    [
+      "ParticipantA",
+      "Have you tried any new games recently?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I just started playing Ghost of Tsushima."
+    ],
+    [
+      "ParticipantA",
+      "What do you think of Ghost of Tsushima?"
+    ],
+    [
+      "ParticipantB",
+      "It's really fun, the graphics are amazing and the story is engaging."
+    ],
+    [
+      "ParticipantA",
+      "What do you think of the gaming community?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's a mixed bag."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "What about you? Have you played any new games recently?"
+    ],
+    [
+      "ParticipantA",
+      "I recently finished playing The Last of Us Part II."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I've been wanting to play that game."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

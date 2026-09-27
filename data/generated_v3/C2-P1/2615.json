@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2615,
+  "topic": "Auto Repairs",
+  "sb_prompt": "WHAT WAS THE LAST AUTO REPAIR YOU PERFORMED OR HAD DONE ON YOUR CAR? ARE THERE SOME TYPES OF REPAIRS OR MAINTENANCE TASKS YOU PREFER TO DO YOURSELF?  DISCUSS YOUR EXPERIENCES IN THIS AREA WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 50,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what was the last auto repair you had done on your car?"
+    ],
+    [
+      "ParticipantB",
+      "I had to get my brakes replaced last month."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I had to get my oil changed last week."
+    ],
+    [
+      "ParticipantB",
+      "That's interesting, I usually do that myself at home."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I usually do that too."
+    ],
+    [
+      "ParticipantB",
+      "What kind of oil do you usually use?"
+    ],
+    [
+      "ParticipantA",
+      "I usually go for the synthetic blend, what about you?"
+    ],
+    [
+      "ParticipantB",
+      "I usually go for full synthetic."
+    ],
+    [
+      "ParticipantA",
+      "I find that the synthetic blend works well for me, but I guess it's all about personal preference."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantA",
+      "So, what's your opinion on self-diagnostic tools?"
+    ],
+    [
+      "ParticipantB",
+      "I find them to be very helpful."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever had any issues with the self-diagnostic tools not being accurate?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've had a few instances where the readings were a bit off, but overall they've been pretty reliable for me."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've had a similar experience."
+    ],
+    [
+      "ParticipantB",
+      "I usually take my car to the mechanic for more complex repairs, though."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I usually take my car to the mechanic too for more complex repairs."
+    ],
+    [
+      "ParticipantB",
+      "I find it's better to let the professionals handle the more complicated stuff."
+    ],
+    [
+      "ParticipantA",
+      "I agree, it's always better to be safe than sorry when it comes to complex repairs."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantA",
+      "I usually take my car to the mechanic for more complex repairs too, but I've been thinking about learning more about auto repairs lately."
+    ],
+    [
+      "ParticipantB",
+      "What made you interested in learning more about auto repairs?"
+    ],
+    [
+      "ParticipantA",
+      "I've always been interested in cars and how they work, but I never had the chance to learn much about auto repairs. Recently, I've been thinking that it would be a good skill to have, especially since I'm a grocery store manager and have to deal with a lot of logistics and planning."
+    ],
+    [
+      "ParticipantB",
+      "I see, it can be helpful to have that knowledge for your job."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, and I also like the idea of being able to save some money by doing some repairs myself."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it can be a good way to save some money and also be more knowledgeable about your car."
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of repairs do you usually do yourself?"
+    ],
+    [
+      "ParticipantB",
+      "I usually change my own oil and replace my air filters."
+    ],
+    [
+      "ParticipantA",
+      "I haven't done those things myself yet, but I've been thinking about learning how to do them."
+    ],
+    [
+      "ParticipantB",
+      "It's definitely a good skill to have, and there are a lot of resources available online to learn about auto repairs."
+    ],
+    [
+      "ParticipantA",
+      "What kind of resources do you usually use to learn about auto repairs?"
+    ],
+    [
+      "ParticipantB",
+      "I usually use YouTube videos and online forums to learn about auto repairs."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been using YouTube videos too, they're really helpful."
+    ],
+    [
+      "ParticipantB",
+      "I also find it helpful to read the owner's manual and do some research before attempting any repairs."
+    ],
+    [
+      "ParticipantA",
+      "What kind of repairs do you find more challenging to do yourself?"
+    ],
+    [
+      "ParticipantB",
+      "I find more complex electrical repairs and engine repairs to be quite challenging to do on my own."
+    ],
+    [
+      "ParticipantA",
+      "I agree, engine repairs can be pretty challenging."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely better to leave those kinds of repairs to the professionals."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Are there any repairs that you've been wanting to learn how to do yourself?"
+    ],
+    [
+      "ParticipantB",
+      "I've been wanting to learn how to change my own spark plugs."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3573,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 67,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been considering a hybrid car."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting a pickup truck."
+    ],
+    [
+      "ParticipantB",
+      "I like the idea of a hybrid for its eco-friendliness and fuel efficiency."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's definitely something I've been considering too."
+    ],
+    [
+      "ParticipantB",
+      "What kind of pickup truck are you looking at?"
+    ],
+    [
+      "ParticipantA",
+      "I'm thinking about getting a Ford F-150."
+    ],
+    [
+      "ParticipantB",
+      "I've been considering a Toyota Prius."
+    ],
+    [
+      "ParticipantA",
+      "I've actually had a good experience with Ford in the past."
+    ],
+    [
+      "ParticipantB",
+      "I've heard good things about the Prius as well."
+    ],
+    [
+      "ParticipantA",
+      "I've been driving a Ford for years now and I've been pretty satisfied with its performance and reliability."
+    ],
+    [
+      "ParticipantB",
+      "That's good to hear. I've been a little hesitant about switching brands, but I'm open to considering it if the Prius seems like the better choice."
+    ],
+    [
+      "ParticipantA",
+      "I think I've decided on the F-150, but it's definitely worth considering other options."
+    ],
+    [
+      "ParticipantB",
+      "What factors are you considering in your decision to get the F-150?"
+    ],
+    [
+      "ParticipantA",
+      "I'm looking for a car that can handle a lot of weight and has a good towing capacity."
+    ],
+    [
+      "ParticipantB",
+      "I'm also interested in a car with good fuel economy."
+    ],
+    [
+      "ParticipantA",
+      "Well, I've been considering a hybrid car."
+    ],
+    [
+      "ParticipantB",
+      "Yes, fuel efficiency is definitely a priority for me."
+    ],
+    [
+      "ParticipantA",
+      "I also value a car that has good safety features and can handle different types of weather conditions."
+    ],
+    [
+      "ParticipantB",
+      "I agree, safety features are important too."
+    ],
+    [
+      "ParticipantA",
+      "Have you done any research on the Prius' towing capacity and weight handling?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, the Prius has a decent towing capacity, but it's not as high as some other cars in its class."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been looking at the F-150's towing capacity and it seems like it's one of the best in its class."
+    ],
+    [
+      "ParticipantB",
+      "I'll have to do some more research on the F-150's towing capacity and weight handling to make a fair comparison."
+    ],
+    [
+      "ParticipantA",
+      "I've also been thinking about the Prius's maintenance costs and how much it would cost to replace the battery."
+    ],
+    [
+      "ParticipantB",
+      "I'll have to keep that in mind when making a decision."
+    ],
+    [
+      "ParticipantA",
+      "Have you test driven any hybrid cars yet?"
+    ],
+    [
+      "ParticipantB",
+      "No, I haven't had a chance to test drive any hybrid cars yet."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been considering the F-150's EcoBoost engine option for its fuel efficiency."
+    ],
+    [
+      "ParticipantB",
+      "I'll have to look into that option too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think I'll probably end up test driving a few different cars before making a decision."
+    ],
+    [
+      "ParticipantB",
+      "That's a good idea. I should probably do the same."
+    ],
+    [
+      "ParticipantA",
+      "So, have you had any experience with hybrid cars before?"
+    ],
+    [
+      "ParticipantB",
+      "No, I haven't had a chance to drive a hybrid car before."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I had a relative who owned a Prius and I was impressed by how smooth it rode and how quiet it was."
+    ],
+    [
+      "ParticipantB",
+      "I should probably do some research on the F-150's EcoBoost engine as well."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've heard that the EcoBoost engine can be pretty fuel efficient too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'll have to look into that EcoBoost option more."
+    ],
+    [
+      "ParticipantA",
+      "Well, let me know if you have any questions or if there's anything I can help with."
+    ],
+    [
+      "ParticipantB",
+      "Thanks for your help, I appreciate it."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

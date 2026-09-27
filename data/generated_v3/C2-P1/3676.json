@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3676,
+  "topic": "Movies",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THOUGHT ABOUT THE LAST FEW MOVIES THEY SAW. WHAT MOVIES HAVE YOU SEEN LATELY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What movies have you seen lately that you thought were really good?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I just saw a movie called 'The Shawshank Redemption' and it was amazing."
+    ],
+    [
+      "ParticipantA",
+      "I've heard great things about that movie, but I haven't had a chance to see it yet. How would you describe it to someone who hasn't seen it?"
+    ],
+    [
+      "ParticipantB",
+      "It's a drama about a man who's wrongly convicted of murder and sent to prison, where he befriends a fellow inmate and tries to find a way to escape."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a really powerful story."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a movie that will stick with you for a long time."
+    ],
+    [
+      "ParticipantA",
+      "I'm glad you enjoyed it."
+    ],
+    [
+      "ParticipantB",
+      "And what about you, have you seen anything good lately?"
+    ],
+    [
+      "ParticipantA",
+      "I recently saw a movie called \"Get Out\" and it was really thought-provoking."
+    ],
+    [
+      "ParticipantB",
+      "That sounds interesting."
+    ],
+    [
+      "ParticipantA",
+      "It's a horror-thriller that tackles some heavy themes like racism and privilege."
+    ],
+    [
+      "ParticipantB",
+      "I'll have to check that one out."
+    ],
+    [
+      "ParticipantA",
+      "Have you seen any other movies that you would recommend?"
+    ],
+    [
+      "ParticipantB",
+      "I saw 'The Godfather' recently and it was a classic."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've heard a lot of great things about 'The Godfather' as well."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a must-watch for any movie lover."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantB",
+      "So, what did you think of the ending?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I thought the ending was really powerful."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it really packs a punch."
+    ],
+    [
+      "ParticipantA",
+      "What did you think of the characters in the movie?"
+    ],
+    [
+      "ParticipantB",
+      "I thought the characters were well-developed and the acting was top-notch."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, the cast was really talented."
+    ],
+    [
+      "ParticipantB",
+      "So, have you seen any other classics that you would recommend?"
+    ],
+    [
+      "ParticipantA",
+      "I also really enjoyed the character development in 'The Shawshank Redemption', especially the relationship between Red and Andy."
+    ],
+    [
+      "ParticipantB",
+      "I'm glad you liked it too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, the friendship between those two characters was really heartwarming."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, their bond was really inspiring."
+    ],
+    [
+      "ParticipantA",
+      "I also recently saw \"12 Angry Men\" and it was a great courtroom drama."
+    ],
+    [
+      "ParticipantB",
+      "12 Angry Men\" sounds interesting, I'll have to check that one out too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely a must-watch."
+    ],
+    [
+      "ParticipantB",
+      "What's your favorite genre of movies to watch?"
+    ],
+    [
+      "ParticipantA",
+      "I really enjoy watching dramas and thought-provoking films."
+    ],
+    [
+      "ParticipantB",
+      "What about you?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think dramas and thought-provoking films can really make you think about life and society in a different way."
+    ],
+    [
+      "ParticipantB",
+      "I enjoy action and comedy movies too."
+    ],
+    [
+      "ParticipantA",
+      "Have you seen any recent releases that you thought were particularly impressive?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I recently saw a movie called \"John Wick\" and it was a thrilling action film."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a really intense action film."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was definitely a lot of fun to watch."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

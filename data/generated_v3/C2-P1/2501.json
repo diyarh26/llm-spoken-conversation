@@ -1,0 +1,212 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2501,
+  "topic": "Painting",
+  "sb_prompt": "HAVE YOU DONE ANY PAINTING PROJECTS RECENTLYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 50,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "I actually just finished a painting project last weekend."
+    ],
+    [
+      "ParticipantB",
+      "Oh, that's nice."
+    ],
+    [
+      "ParticipantA",
+      "It was a still life of some fruit and a vase."
+    ],
+    [
+      "ParticipantB",
+      "That sounds lovely."
+    ],
+    [
+      "ParticipantA",
+      "I really enjoy painting, it's a great way to unwind and express myself creatively."
+    ],
+    [
+      "ParticipantB",
+      "I used to paint a lot when I was in college."
+    ],
+    [
+      "ParticipantA",
+      "What kind of paintings did you used to paint in college?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly landscapes and portraits."
+    ],
+    [
+      "ParticipantA",
+      "What made you stop painting after college?"
+    ],
+    [
+      "ParticipantB",
+      "Just didn't have time, you know?"
+    ],
+    [
+      "ParticipantA",
+      "Do you still have a passion for painting even though you don't have as much time for it now?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I still have a love for it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can understand how that is. I wish I had more time to paint too."
+    ],
+    [
+      "ParticipantB",
+      "Maybe we can find a way to make time for it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been thinking about taking a painting class or something to make it a priority."
+    ],
+    [
+      "ParticipantB",
+      "That's a great idea, I should look into it too."
+    ],
+    [
+      "ParticipantA",
+      "I've actually been thinking about trying to paint more abstract pieces lately."
+    ],
+    [
+      "ParticipantB",
+      "That sounds interesting, I've never tried abstract painting before."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely something I want to explore more."
+    ],
+    [
+      "ParticipantB",
+      "I'd be interested in seeing some of your abstract paintings if you end up doing any."
+    ],
+    [
+      "ParticipantA",
+      "Maybe I'll start taking some pictures and using them as reference for my abstract pieces."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a great idea, I'd love to see how your abstract pieces turn out."
+    ],
+    [
+      "ParticipantA",
+      "I'll definitely share my progress with you."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a great plan."
+    ],
+    [
+      "ParticipantA",
+      "I'll have to plan out my schedule to make time for the painting class."
+    ],
+    [
+      "ParticipantB",
+      "Sounds like a good plan."
+    ],
+    [
+      "ParticipantA",
+      "I'll let you know when I sign up for the class and we can exchange ideas."
+    ],
+    [
+      "ParticipantB",
+      "That sounds great, looking forward to it."
+    ],
+    [
+      "ParticipantA",
+      "Alright, I'll let you know once I sign up for the class."
+    ],
+    [
+      "ParticipantB",
+      "Well, good luck with the painting class and your abstract pieces."
+    ],
+    [
+      "ParticipantA",
+      "Thanks, I will."
+    ],
+    [
+      "ParticipantB",
+      "I'll definitely be following your progress."
+    ],
+    [
+      "ParticipantA",
+      "Thanks, I'll definitely keep you updated."
+    ],
+    [
+      "ParticipantB",
+      "I'll be rooting for you too."
+    ],
+    [
+      "ParticipantA",
+      "Thanks, I'll definitely keep you updated."
+    ],
+    [
+      "ParticipantB",
+      "Thanks for chatting with me about painting."
+    ],
+    [
+      "ParticipantA",
+      "Well, I should let you go. Thanks for the conversation."
+    ],
+    [
+      "ParticipantB",
+      "Have a great day!"
+    ],
+    [
+      "ParticipantA",
+      "I'll talk to you soon."
+    ]
+  ],
+  "n_turns": 41,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

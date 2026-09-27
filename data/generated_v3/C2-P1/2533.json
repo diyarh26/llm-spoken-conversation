@@ -1,0 +1,213 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2533,
+  "topic": "Baseball",
+  "sb_prompt": "FIND OUT THE OTHER CALLER'S FAVORITE PRO BASEBALL TEAM AND WHERE IT'S HEADED THIS YEAR.  DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hey, have you been following the baseball season so far?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I have. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I've been watching a bit, but it's not my top priority."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, me neither."
+    ],
+    [
+      "ParticipantA",
+      "So, who's your favorite pro baseball team?"
+    ],
+    [
+      "ParticipantB",
+      "The Yankees, I guess."
+    ],
+    [
+      "ParticipantA",
+      "Oh, interesting. Why the Yankees?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I grew up in New York and they've always been my favorite team."
+    ],
+    [
+      "ParticipantA",
+      "That's cool."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I know a lot of people who hate them, but I just can't help it."
+    ],
+    [
+      "ParticipantA",
+      "I used to like the Red Sox a lot when I was younger, but now I'm not as invested in any particular team."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I know how that goes."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I mean, I still follow the games and stuff, but it's not like it used to be when I was a kid."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I hear you."
+    ],
+    [
+      "ParticipantA",
+      "So, do you think the Yankees are headed in a good direction this year?"
+    ],
+    [
+      "ParticipantB",
+      "I hope so, but it's hard to say. They've had some ups and downs this season."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely been a rollercoaster ride for them."
+    ],
+    [
+      "ParticipantB",
+      "I mean, I think they have a good shot at making the playoffs, but it all depends on how they finish the season."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "I just hope they can keep it together and play to their full potential."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I know how that goes."
+    ],
+    [
+      "ParticipantB",
+      "And how about you? Do you have a favorite team?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I used to be a big fan of the Red Sox."
+    ],
+    [
+      "ParticipantB",
+      "That's cool, I used to live in Boston for a while, so I have a bit of a soft spot for them too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think they have a good chance of making it to the playoffs this year."
+    ],
+    [
+      "ParticipantB",
+      "That's great to hear."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I just hope they can stay healthy and avoid any major injuries."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's definitely a concern."
+    ],
+    [
+      "ParticipantA",
+      "So, who do you think will win it all this year?"
+    ],
+    [
+      "ParticipantB",
+      "I'm not sure, it's really hard to predict. I think any team could win it all this year."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. It's anyone's game this year."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely unpredictable."
+    ],
+    [
+      "ParticipantA",
+      "I know someone who's a big Red Sox fan, and they're really excited about their chances this year."
+    ],
+    [
+      "ParticipantB",
+      "I know someone who's a big Yankees fan, and they're pretty bummed about their chances this year."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely tough to be a fan sometimes."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely tough to be a fan sometimes."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely tough to be a fan sometimes."
+    ],
+    [
+      "ParticipantB",
+      "Well, I better get back to work. It was nice talking to you!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was nice talking to you too."
+    ]
+  ],
+  "n_turns": 41,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 4,
+    "dup_kept": 2
+  }
+}

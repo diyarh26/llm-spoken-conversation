@@ -1,0 +1,215 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2155,
+  "topic": "Care Of The Elderly",
+  "sb_prompt": "PLEASE DISCUSS CARE OF THE ELDERLY.  FIND OUT HOW THE OTHER CALLER FEELS ABOUT SENDING AN ELDERLY FAMILY MEMBER TO A NURSING HOME.  WHAT SHOULD ONE KNOW ABOUT THE NURSING HOME ENVIRONMENT WHEN MAKING THIS DECISION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how do you feel about sending an elderly family member to a nursing home?"
+    ],
+    [
+      "ParticipantB",
+      "Well, it's a tough decision."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it really is."
+    ],
+    [
+      "ParticipantB",
+      "I think it really depends on the individual's needs and the quality of care at the nursing home."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that makes sense."
+    ],
+    [
+      "ParticipantB",
+      "I've had a personal experience with a nursing home, and it wasn't the best."
+    ],
+    [
+      "ParticipantA",
+      "What was your experience like?"
+    ],
+    [
+      "ParticipantB",
+      "It was a pretty bad experience."
+    ],
+    [
+      "ParticipantA",
+      "I'm sorry to hear that. Can you tell me more about what happened?"
+    ],
+    [
+      "ParticipantB",
+      "It was just really impersonal and not very caring."
+    ],
+    [
+      "ParticipantA",
+      "What do you mean by \"not very caring\"?"
+    ],
+    [
+      "ParticipantB",
+      "They didn't seem to really care about the residents, it was more like a job to them."
+    ],
+    [
+      "ParticipantA",
+      "I'm sorry to hear that you had a bad experience."
+    ],
+    [
+      "ParticipantB",
+      "It was just really disheartening to see."
+    ],
+    [
+      "ParticipantA",
+      "That's really unfortunate."
+    ],
+    [
+      "ParticipantB",
+      "But I think it's important to consider all options and not just assume that a nursing home is the best choice."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's true."
+    ],
+    [
+      "ParticipantB",
+      "I think it's important to do research and visit different nursing homes before making a decision."
+    ],
+    [
+      "ParticipantA",
+      "I agree, it's important to do your due diligence and make an informed decision."
+    ],
+    [
+      "ParticipantB",
+      "And also, talk to other families who have experience with the nursing home to get their perspective."
+    ],
+    [
+      "ParticipantA",
+      "What do you think are some of the key things to look for when visiting a nursing home?"
+    ],
+    [
+      "ParticipantB",
+      "Staff-to-resident ratio."
+    ],
+    [
+      "ParticipantA",
+      "What are some of the other key things that you would look for when visiting a nursing home?"
+    ],
+    [
+      "ParticipantB",
+      "Cleanliness and overall maintenance of the facility would be another important factor to consider."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, those are definitely important factors to consider."
+    ],
+    [
+      "ParticipantB",
+      "Another important factor to consider would be the level of engagement and activities provided for the residents."
+    ],
+    [
+      "ParticipantA",
+      "What are some specific examples of activities and engagement that you think are important for the residents to have access to?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think having access to outdoor spaces and opportunities for physical activity would be important."
+    ],
+    [
+      "ParticipantA",
+      "And what about mental stimulation and socialization?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, mental stimulation and socialization are also key."
+    ],
+    [
+      "ParticipantA",
+      "What are some specific examples of mental stimulation and socialization that you think are important for the residents to have access to?"
+    ],
+    [
+      "ParticipantB",
+      "I think having access to things like puzzles, books, and games would be important for mental stimulation."
+    ],
+    [
+      "ParticipantA",
+      "And what about opportunities for the residents to connect with their families and loved ones?"
+    ],
+    [
+      "ParticipantB",
+      "And having opportunities for family visits and communication with loved ones is also important for their overall well-being."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's really important too."
+    ],
+    [
+      "ParticipantB",
+      "And having access to religious and spiritual services if that's important to the resident."
+    ],
+    [
+      "ParticipantA",
+      "Have you had any personal experience with nursing homes?"
+    ],
+    [
+      "ParticipantB",
+      "No, I haven't had any personal experience with nursing homes, but I've heard from others who have had positive experiences."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's really important too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think it's important to consider all of these factors when making a decision about sending a loved one to a nursing home."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3691,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I have a cat."
+    ],
+    [
+      "ParticipantA",
+      "What kind of cat do you have?"
+    ],
+    [
+      "ParticipantB",
+      "A mixed breed."
+    ],
+    [
+      "ParticipantA",
+      "What's the cat's name?"
+    ],
+    [
+      "ParticipantB",
+      "Her name is Luna."
+    ],
+    [
+      "ParticipantA",
+      "That's a great name for a cat."
+    ],
+    [
+      "ParticipantB",
+      "Thanks, I think so too."
+    ],
+    [
+      "ParticipantA",
+      "How long have you had Luna?"
+    ],
+    [
+      "ParticipantB",
+      "We've had her for about two years now."
+    ],
+    [
+      "ParticipantA",
+      "That's great."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, she's a great companion."
+    ],
+    [
+      "ParticipantA",
+      "Do you have any other pets besides Luna?"
+    ],
+    [
+      "ParticipantB",
+      "No, just her."
+    ],
+    [
+      "ParticipantA",
+      "What kind of cat is Luna mixed with?"
+    ],
+    [
+      "ParticipantB",
+      "She's mostly Siamese with some tabby."
+    ],
+    [
+      "ParticipantA",
+      "That's really interesting."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, she's a great companion."
+    ],
+    [
+      "ParticipantA",
+      "What do you like most about having Luna as a pet?"
+    ],
+    [
+      "ParticipantB",
+      "She's just so affectionate and playful."
+    ],
+    [
+      "ParticipantA",
+      "What kind of cat breeds does Luna take after?"
+    ],
+    [
+      "ParticipantB",
+      "She's got a lot of personality."
+    ],
+    [
+      "ParticipantA",
+      "What kind of activities do you like to do with Luna?"
+    ],
+    [
+      "ParticipantB",
+      "We like to play with toys together and go for walks."
+    ],
+    [
+      "ParticipantA",
+      "What's Luna's favorite toy?"
+    ],
+    [
+      "ParticipantB",
+      "She really likes to play with these little ball toys."
+    ],
+    [
+      "ParticipantA",
+      "What does Luna like to do when you're not playing with her?"
+    ],
+    [
+      "ParticipantB",
+      "She usually likes to nap in the sun."
+    ],
+    [
+      "ParticipantA",
+      "That's great."
+    ],
+    [
+      "ParticipantB",
+      "She's a great companion."
+    ],
+    [
+      "ParticipantA",
+      "What kind of personality traits does Luna have?"
+    ],
+    [
+      "ParticipantB",
+      "She's very curious and likes to explore new things."
+    ],
+    [
+      "ParticipantA",
+      "What does Luna do when she wants attention?"
+    ],
+    [
+      "ParticipantB",
+      "She'll usually come up and rub against my leg or meow loudly."
+    ],
+    [
+      "ParticipantA",
+      "That's really interesting."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, she's a great companion."
+    ],
+    [
+      "ParticipantA",
+      "What's Luna's favorite place to nap?"
+    ],
+    [
+      "ParticipantB",
+      "She likes to nap on the windowsill."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I have a cat."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

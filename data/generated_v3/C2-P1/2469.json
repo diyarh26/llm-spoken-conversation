@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2469,
+  "topic": "Hobbies And Crafts",
+  "sb_prompt": "WHAT HOBBIES DO YOU HAVE IN YOUR SPARE TIME?  DO THEY INCLUDE ANY HANDICRAFTSWOODWORKING?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what hobbies do you have in your spare time?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been doing a lot of knitting lately."
+    ],
+    [
+      "ParticipantA",
+      "That's really interesting! I used to knit a lot when I was younger, but I haven't had much time for it lately."
+    ],
+    [
+      "ParticipantB",
+      "I find it really relaxing, you know?"
+    ],
+    [
+      "ParticipantA",
+      "What kind of things do you usually knit?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly scarves and sweaters, but I've been trying to branch out into other projects too."
+    ],
+    [
+      "ParticipantA",
+      "That's great! I remember knitting a lot of blankets when I was younger, but I haven't done that in a while."
+    ],
+    [
+      "ParticipantB",
+      "I actually just finished a blanket for my niece, it was a lot of fun to make."
+    ],
+    [
+      "ParticipantA",
+      "That's so nice of you!"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was a lot of work but it was worth it to see her face light up when she opened it."
+    ],
+    [
+      "ParticipantA",
+      "I'm glad to hear that knitting is relaxing for you."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a stress reliever for me."
+    ],
+    [
+      "ParticipantA",
+      "What about you, do you have any other hobbies besides knitting?"
+    ],
+    [
+      "ParticipantB",
+      "I also like to do some woodworking in my spare time."
+    ],
+    [
+      "ParticipantA",
+      "That's really interesting! What kind of woodworking projects do you usually work on?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly just small projects like birdhouses and picnic tables, but I'm hoping to tackle something bigger soon."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a lot of fun!"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a great way to unwind after a long day at work."
+    ],
+    [
+      "ParticipantA",
+      "What kind of woodworking projects would you like to tackle?"
+    ],
+    [
+      "ParticipantB",
+      "I'm thinking about building a deck for my backyard."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a really exciting project!"
+    ],
+    [
+      "ParticipantB",
+      "I'm looking forward to it."
+    ],
+    [
+      "ParticipantA",
+      "What inspired you to take up woodworking as a hobby?"
+    ],
+    [
+      "ParticipantB",
+      "I've always been interested in it and finally had the time and space to start doing it a few years ago."
+    ],
+    [
+      "ParticipantA",
+      "That's really cool."
+    ],
+    [
+      "ParticipantB",
+      "I also like to read in my spare time."
+    ],
+    [
+      "ParticipantA",
+      "That's great, I love reading too!"
+    ],
+    [
+      "ParticipantB",
+      "What kind of books do you like to read?"
+    ],
+    [
+      "ParticipantA",
+      "I usually read a mix of fiction and non-fiction, but lately I've been really into mystery novels."
+    ],
+    [
+      "ParticipantB",
+      "I've been reading a lot of true crime lately too."
+    ],
+    [
+      "ParticipantA",
+      "That's really interesting, I've never been into true crime myself."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a great way to unwind after a long day at work."
+    ],
+    [
+      "ParticipantA",
+      "That's really interesting."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a great way to unwind after a long day at work."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite true crime book or podcast?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite true crime book is 'The Devil in the White City' by Erik Larson."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a really interesting book, I'll have to check it out."
+    ],
+    [
+      "ParticipantB",
+      "And my favorite true crime podcast is 'Serial'."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've heard of 'Serial'."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a great way to unwind after a long day at work."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 4,
+    "dup_kept": 3
+  }
+}

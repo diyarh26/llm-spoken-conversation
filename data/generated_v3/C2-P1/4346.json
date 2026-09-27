@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4346,
+  "topic": "Public Education",
+  "sb_prompt": "DISCUSS WITH THE OTHER CALLER WHETHER THERE IS SOMETHING SERIOUSLY WRONG WITH OUR PUBLIC SCHOOL SYSTEMS TODAYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a high-school education",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "I wanted to talk to you about public education."
+    ],
+    [
+      "ParticipantB",
+      "Sure, I'd be happy to chat about it."
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about the state of public education today?"
+    ],
+    [
+      "ParticipantB",
+      "I think there are definitely some issues with the system, but it also depends on where you're looking."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I feel the same way. I think it's definitely not perfect, but I don't know if it's as bad as some people make it out to be."
+    ],
+    [
+      "ParticipantB",
+      "I think one of the biggest problems is the lack of funding for schools in lower-income areas."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. It's definitely a problem when schools can't provide the resources and support that students need to succeed."
+    ],
+    [
+      "ParticipantB",
+      "And I think there's also an issue with the way standardized testing is used to evaluate teachers and schools."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's a big problem too."
+    ],
+    [
+      "ParticipantB",
+      "I also think that there's not enough emphasis on vocational education."
+    ],
+    [
+      "ParticipantA",
+      "I definitely agree about vocational education."
+    ],
+    [
+      "ParticipantB",
+      "And I think there's also a lack of diversity in the curriculum."
+    ],
+    [
+      "ParticipantA",
+      "I also think that there's not enough support for students with learning difficulties."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's definitely an issue."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think there are a lot of problems with public education."
+    ],
+    [
+      "ParticipantB",
+      "And I think there's also a lack of emphasis on social and emotional learning."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think social and emotional learning is really important too."
+    ],
+    [
+      "ParticipantB",
+      "And I think there's also a lack of focus on community involvement and engagement."
+    ],
+    [
+      "ParticipantA",
+      "I also think that there's a lack of emphasis on practical skills and hands-on learning."
+    ],
+    [
+      "ParticipantB",
+      "And I think there's also a lack of focus on the arts."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, there are definitely a lot of issues with public education."
+    ],
+    [
+      "ParticipantB",
+      "It seems like there are a lot of problems with public education, but I also think that there are a lot of dedicated teachers and staff who are trying their best to help students succeed."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's really important too."
+    ],
+    [
+      "ParticipantB",
+      "I agree, it's important to recognize the efforts of the dedicated educators and staff who are making a difference in the lives of their students."
+    ],
+    [
+      "ParticipantA",
+      "I also think that there's not enough emphasis on mental health resources for students."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, mental health resources are definitely important too."
+    ],
+    [
+      "ParticipantA",
+      "I think so too."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely."
+    ],
+    [
+      "ParticipantA",
+      "I think there's also a lack of emphasis on extracurricular activities."
+    ],
+    [
+      "ParticipantB",
+      "I agree, extracurricular activities are important for students to have a well-rounded education."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think there's a lot more that can be done to improve public education."
+    ],
+    [
+      "ParticipantB",
+      "And I think there's also a need for more parent involvement in schools."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's really important too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think that's definitely an issue."
+    ],
+    [
+      "ParticipantA",
+      "I think there's also an issue with the way that the curriculum is designed and how it doesn't always align with the needs of the students or the job market."
+    ],
+    [
+      "ParticipantB",
+      "I agree, the curriculum could definitely be more tailored to the needs of the students and the job market."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it seems like there are a lot of issues with public education that need to be addressed."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it definitely seems like there's a lot that needs to be done to improve public education."
+    ],
+    [
+      "ParticipantA",
+      "I think there's also a lack of emphasis on hands-on learning experiences."
+    ],
+    [
+      "ParticipantB",
+      "I think there's also a lack of support for English language learners."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  }
+}

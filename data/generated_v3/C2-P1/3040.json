@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3040,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 56,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 1,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how do you feel about taxes?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think they're necessary, but sometimes it feels like they take too much."
+    ],
+    [
+      "ParticipantA",
+      "I can understand that."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I mean, I think we should have a good system in place to fund important things like schools and hospitals, but it's hard not to feel like we're giving away a big chunk of our paychecks."
+    ],
+    [
+      "ParticipantA",
+      "I agree, it can be tough to swallow at times."
+    ],
+    [
+      "ParticipantB",
+      "And, have you ever had any personal experiences with taxes that stand out to you?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, actually a close friend of mine had a really difficult time with taxes a few years ago."
+    ],
+    [
+      "ParticipantB",
+      "That must have been tough for them."
+    ],
+    [
+      "ParticipantA",
+      "I helped them out with some of the paperwork and it was a real headache."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's not something most people enjoy dealing with."
+    ],
+    [
+      "ParticipantA",
+      "It was a really stressful time for them, but thankfully they were able to get things sorted out in the end."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely not something that people look forward to."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was a really tough time for them."
+    ],
+    [
+      "ParticipantB",
+      "But overall, I think they're necessary for the common good."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think so too."
+    ],
+    [
+      "ParticipantB",
+      "I think we should have a fair system that ensures everyone pays their share."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's important too."
+    ],
+    [
+      "ParticipantB",
+      "Do you think the current tax system is fair?"
+    ],
+    [
+      "ParticipantA",
+      "I think there are definitely areas that could be improved."
+    ],
+    [
+      "ParticipantB",
+      "I think so too."
+    ],
+    [
+      "ParticipantA",
+      "What do you think needs to be improved?"
+    ],
+    [
+      "ParticipantB",
+      "I think the wealthy should be paying more."
+    ],
+    [
+      "ParticipantA",
+      "I agree, I think the wealthy should be paying more too."
+    ],
+    [
+      "ParticipantB",
+      "I think the loopholes for big corporations need to be closed."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think closing those loopholes would be a good start."
+    ],
+    [
+      "ParticipantB",
+      "And maybe simplify the tax codes for individuals too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think simplifying the tax codes for individuals would be a good idea too."
+    ],
+    [
+      "ParticipantB",
+      "And I think we should also consider raising taxes on things like cigarettes and alcohol to help fund important programs."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's a good idea too."
+    ],
+    [
+      "ParticipantB",
+      "Well, I think those are all good points, but I'm not sure how realistic it is to expect everyone to be happy with the tax system."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "I think it's important to have a system that's fair and efficient, but at the same time, we have to be realistic about what's possible."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think you're right. It's important to have a system that's fair and efficient, but also realistic."
+    ],
+    [
+      "ParticipantB",
+      "Well, I think it's important to keep talking about it and trying to find ways to improve the system."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantB",
+      "I agree, let's keep talking and trying to find ways to improve the system."
+    ],
+    [
+      "ParticipantA",
+      "I agree, let's keep talking."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, let's keep talking."
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think is the most important aspect of the tax system that needs improvement?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think it's important to keep talking about it and trying to find ways to improve the system."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1,
+    "dup_kept": 1
+  }
+}

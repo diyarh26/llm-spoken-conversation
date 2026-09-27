@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3636,
+  "topic": "Camping",
+  "sb_prompt": "FIND OUT FROM THE OTHER CALLER WHAT KIND OF CAMPING THEY HAVE DONE.  HOW DOES IT COMPARE WITH YOUR OWN EXPERIENCES?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of camping have you done?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly just car camping, but I did go on a backpacking trip a few years ago."
+    ],
+    [
+      "ParticipantA",
+      "What kind of backpacking trip did you go on?"
+    ],
+    [
+      "ParticipantB",
+      "It was a pretty intense experience, hiking for miles with all our gear on our backs."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like quite the adventure."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it definitely was."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a great way to get away from it all and disconnect from the hustle and bustle of everyday life."
+    ],
+    [
+      "ParticipantB",
+      "Definitely."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever tried camping in a more rugged terrain like the mountains or forests?"
+    ],
+    [
+      "ParticipantB",
+      "Not really, I prefer car camping because it's easier and I can have all the comforts of home with me."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can understand that."
+    ],
+    [
+      "ParticipantB",
+      "I do enjoy the convenience of car camping though, it's nice to be able to drive to your campsite and have all your gear with you."
+    ],
+    [
+      "ParticipantA",
+      "I agree, it's nice to have the comforts of home, but sometimes I feel like it takes away from the true camping experience."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can see that."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think there's something special about being out in nature and really experiencing it, you know?"
+    ],
+    [
+      "ParticipantB",
+      "I agree, there's something special about being out in nature and really experiencing it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's a great way to appreciate the beauty of nature and all that."
+    ],
+    [
+      "ParticipantB",
+      "I've always found it to be a great way to unwind and reconnect with nature."
+    ],
+    [
+      "ParticipantA",
+      "What about you, have you done any backpacking trips?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't done any backpacking trips, but I have done some hiking and camping in more rugged terrain."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've done a few backpacking trips and I have to say, it's a whole different world up there in the mountains."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like quite the adventure."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely a challenge, but also incredibly rewarding."
+    ],
+    [
+      "ParticipantB",
+      "I'd love to try backpacking someday."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think it's a great way to challenge yourself and really experience the beauty of nature."
+    ],
+    [
+      "ParticipantB",
+      "Maybe I'll have to plan a trip soon."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I highly recommend it."
+    ],
+    [
+      "ParticipantB",
+      "Sounds like a great idea, I'll have to plan something soon."
+    ],
+    [
+      "ParticipantA",
+      "What's the most challenging backpacking trip you've been on?"
+    ],
+    [
+      "ParticipantB",
+      "The most challenging backpacking trip I've been on was in the Rocky Mountains."
+    ],
+    [
+      "ParticipantA",
+      "What made that trip so challenging?"
+    ],
+    [
+      "ParticipantB",
+      "It was a pretty long hike and the elevation was quite high, so it was definitely a challenge."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can imagine."
+    ],
+    [
+      "ParticipantB",
+      "It was definitely a challenge, but it was also incredibly beautiful."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've heard that the Rocky Mountains are pretty breathtaking."
+    ],
+    [
+      "ParticipantB",
+      "It was definitely worth the effort."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it sounds like a great experience."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was definitely worth it."
+    ],
+    [
+      "ParticipantA",
+      "I've always wanted to go on a backpacking trip in the Rocky Mountains."
+    ],
+    [
+      "ParticipantB",
+      "It's definitely worth planning a trip for."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

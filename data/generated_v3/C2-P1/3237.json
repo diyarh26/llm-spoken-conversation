@@ -1,0 +1,144 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, tell me about your home."
+    ],
+    [
+      "ParticipantB",
+      "Well, it's a small apartment in the city."
+    ],
+    [
+      "ParticipantA",
+      "That sounds nice."
+    ],
+    [
+      "ParticipantB",
+      "It's cozy, but sometimes it feels cramped."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I know what you mean."
+    ],
+    [
+      "ParticipantB",
+      "What about you? Do you live in a house or an apartment?"
+    ],
+    [
+      "ParticipantA",
+      "I actually live in a small house in the suburbs."
+    ],
+    [
+      "ParticipantB",
+      "Oh, that sounds interesting. What's it like living in the suburbs?"
+    ],
+    [
+      "ParticipantA",
+      "It's pretty peaceful, but sometimes I miss the hustle and bustle of the city."
+    ],
+    [
+      "ParticipantB",
+      "I've always wondered what it's like to live in the suburbs."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely different from city life."
+    ],
+    [
+      "ParticipantB",
+      "Do you like living in the suburbs?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I do. It's quieter and more relaxed, but I still have access to the city if I want to go there."
+    ],
+    [
+      "ParticipantB",
+      "I've never really thought about it, but I guess I do like the idea of having a bit of space and peace and quiet."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you ever feel like you want to move out of the city and try living in the suburbs?"
+    ],
+    [
+      "ParticipantB",
+      "Maybe someday I'll give it a try."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely worth considering."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've been thinking about it more lately."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely worth considering."
+    ],
+    [
+      "ParticipantB",
+      "Thanks for sharing your experiences. It's been really interesting talking to you about this."
+    ],
+    [
+      "ParticipantA",
+      "It's been great talking to you too."
+    ],
+    [
+      "ParticipantB",
+      "Well, I should probably wrap this up and get back to work. It was really nice talking to you!"
+    ]
+  ],
+  "n_turns": 24,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

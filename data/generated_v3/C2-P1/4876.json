@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4876,
+  "topic": "Child Care",
+  "sb_prompt": "FIND OUT WHAT CRITERIA THE OTHER CALLER WOULD USE IN SELECTING CHILD CARE SERVICES FOR A PRESCHOOLER.  IS IT EASY OR DIFFICULT TO FIND SUCH CARE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your opinion on child care services for preschoolers?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think it's really important to find a place that feels like a home away from home for the child."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. I mean, my son went to a daycare center when he was younger and he loved it, but I always felt guilty about leaving him there."
+    ],
+    [
+      "ParticipantB",
+      "I know how you feel, but I think it's important for both parents to work and have a support system in place for their kids."
+    ],
+    [
+      "ParticipantA",
+      "I understand that, but it's hard to find a place that really feels like a home away from home."
+    ],
+    [
+      "ParticipantB",
+      "And I think it's also important to have a good rapport with the caregivers, you know?"
+    ],
+    [
+      "ParticipantA",
+      "I agree, having a good relationship with the caregivers is important."
+    ],
+    [
+      "ParticipantB",
+      "Definitely."
+    ],
+    [
+      "ParticipantA",
+      "What do you mean by \"a good rapport\" with the caregivers?"
+    ],
+    [
+      "ParticipantB",
+      "Trust and open communication."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's important too."
+    ],
+    [
+      "ParticipantB",
+      "I've been really lucky to have a close friend who's a preschool teacher, and she's helped me understand what to look for in a good child care program."
+    ],
+    [
+      "ParticipantA",
+      "That's great, it must be helpful to have someone with experience guiding you."
+    ],
+    [
+      "ParticipantB",
+      "I think it's important to have a balance between structure and freedom for the kids."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "I also think it's important to have a diverse group of kids and caregivers."
+    ],
+    [
+      "ParticipantA",
+      "How do you define \"diverse\"?"
+    ],
+    [
+      "ParticipantB",
+      "It means having kids and caregivers from different backgrounds and cultures."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's important too."
+    ],
+    [
+      "ParticipantB",
+      "And I think it's important for the caregivers to have a good understanding of child development."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantB",
+      "I think it's also important for the facility to have a good safety record and a low turnover rate among staff."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantB",
+      "And I think it's important for the caregivers to have a good understanding of child development."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "And of course, affordability is a big factor too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "And I think it's important to have a good ratio of caregivers to children."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "Well, I think those are all great points."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "What do you think about the importance of outdoor play and learning opportunities for young children in child care?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's important too."
+    ],
+    [
+      "ParticipantB",
+      "And a healthy meal program."
+    ],
+    [
+      "ParticipantA",
+      "And I think it's important for the caregivers to be able to recognize and address any special needs the child might have."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely."
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about the role of technology in child care services?"
+    ],
+    [
+      "ParticipantB",
+      "I think it can be helpful, but it's important to use it in moderation and not rely on it too much."
+    ],
+    [
+      "ParticipantA",
+      "I agree, technology can be helpful, but it's important to have a balance."
+    ],
+    [
+      "ParticipantB",
+      "Well, I think that covers most of the important points."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 5,
+    "dup_kept": 1
+  }
+}
