@@ -1,0 +1,67 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2155,
+  "topic": "Care Of The Elderly",
+  "sb_prompt": "PLEASE DISCUSS CARE OF THE ELDERLY.  FIND OUT HOW THE OTHER CALLER FEELS ABOUT SENDING AN ELDERLY FAMILY MEMBER TO A NURSING HOME.  WHAT SHOULD ONE KNOW ABOUT THE NURSING HOME ENVIRONMENT WHEN MAKING THIS DECISION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what are your thoughts on care of the elderly?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think it's important to take care of them, but sometimes it's hard to know what's best for them."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I feel the same way."
+    ]
+  ],
+  "n_turns": 5,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3013,
+  "topic": "Recipes/food/cooking",
+  "sb_prompt": "PLEASE DISCUSS FOOD AND COOKING.  WHAT FOODS WOULD YOU INCLUDE IN THE MENU FOR A DINNER PARTY?  SHARE THE RECIPE FOR ONE OF THESE FOODS WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What do you like to cook for yourself or for others?"
+    ],
+    [
+      "ParticipantB",
+      "I like to cook a lot of different things, but one of my favorite dishes to make is chicken parmesan."
+    ],
+    [
+      "ParticipantA",
+      "I like chicken parmesan too, but I usually stick to a simpler recipe."
+    ],
+    [
+      "ParticipantB",
+      "What's your recipe like?"
+    ],
+    [
+      "ParticipantA",
+      "I usually just bread the chicken and bake it with some marinara sauce and mozzarella cheese."
+    ],
+    [
+      "ParticipantB",
+      "I usually do something similar, but I also add a layer of breadcrumbs to the top before baking it."
+    ],
+    [
+      "ParticipantA",
+      "That sounds delicious."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's really tasty."
+    ],
+    [
+      "ParticipantA",
+      "I usually serve it with a side of spaghetti."
+    ],
+    [
+      "ParticipantB",
+      "Do you have a favorite type of pasta to serve with the chicken parmesan?"
+    ],
+    [
+      "ParticipantA",
+      "I like to use spaghetti too."
+    ],
+    [
+      "ParticipantB",
+      "Do you have any other favorite dishes you like to make?"
+    ],
+    [
+      "ParticipantA",
+      "I also like to make a vegetable stir-fry with tofu."
+    ],
+    [
+      "ParticipantB",
+      "What kind of vegetables do you use in your stir-fry?"
+    ],
+    [
+      "ParticipantA",
+      "I like to use a mix of broccoli, carrots, and bell peppers."
+    ],
+    [
+      "ParticipantB",
+      "I've never tried tofu before."
+    ],
+    [
+      "ParticipantA",
+      "I also like to add some mushrooms and snap peas."
+    ],
+    [
+      "ParticipantB",
+      "That sounds interesting."
+    ],
+    [
+      "ParticipantA",
+      "I usually add some garlic and ginger to the stir-fry for extra flavor."
+    ],
+    [
+      "ParticipantB",
+      "I've never tried tofu before, but I'm open to trying new things."
+    ],
+    [
+      "ParticipantA",
+      "I think it's important to try new things in the kitchen."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantA",
+      "So what do you think of vegan cooking?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think it's great."
+    ],
+    [
+      "ParticipantA",
+      "I've only made a few vegan dishes before, but I'm interested in trying more."
+    ],
+    [
+      "ParticipantB",
+      "I actually have a personal experience with vegan cooking. My cousin is vegan, and I've made her a few meals."
+    ],
+    [
+      "ParticipantA",
+      "What kind of vegan meals have you made for your cousin?"
+    ],
+    [
+      "ParticipantB",
+      "I made her a quinoa and black bean stuffed pepper dish that she loved."
+    ],
+    [
+      "ParticipantA",
+      "What was the recipe for the quinoa and black bean stuffed pepper dish?"
+    ],
+    [
+      "ParticipantB",
+      "The recipe is pretty simple. You just cook the quinoa and black beans separately, and then mix them together with some spices and vegetables like onions and bell peppers. Then you stuff the mixture into some bell peppers and bake it in the oven."
+    ],
+    [
+      "ParticipantA",
+      "What spices do you use in the quinoa and black bean stuffed pepper dish?"
+    ],
+    [
+      "ParticipantB",
+      "We also serve it with some rice."
+    ],
+    [
+      "ParticipantA",
+      "That sounds really tasty."
+    ],
+    [
+      "ParticipantB",
+      "And I also like to add some chopped tomatoes to the mix for extra flavor."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite type of rice to serve with the quinoa and black bean stuffed pepper dish?"
+    ],
+    [
+      "ParticipantB",
+      "I usually use brown rice."
+    ],
+    [
+      "ParticipantA",
+      "I've never tried brown rice before, but I'm interested in giving it a try."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a great way to add some variety to your meals."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite way to season the brown rice?"
+    ],
+    [
+      "ParticipantB",
+      "I like to add some turmeric and cumin to the brown rice for extra flavor."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  }
+}

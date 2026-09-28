@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4876,
+  "topic": "Child Care",
+  "sb_prompt": "FIND OUT WHAT CRITERIA THE OTHER CALLER WOULD USE IN SELECTING CHILD CARE SERVICES FOR A PRESCHOOLER.  IS IT EASY OR DIFFICULT TO FIND SUCH CARE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of child care services are you looking for?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I'm looking for someone who can provide a safe and stimulating environment for my child while I'm at work."
+    ],
+    [
+      "ParticipantA",
+      "I understand that."
+    ],
+    [
+      "ParticipantB",
+      "I also want someone who is experienced and trained in early childhood education."
+    ],
+    [
+      "ParticipantA",
+      "And what about the cost of child care services?"
+    ],
+    [
+      "ParticipantB",
+      "The cost is definitely a factor, but I'm willing to pay more for quality care."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. Cost is important, but it's also important to make sure my child is in good hands."
+    ],
+    [
+      "ParticipantB",
+      "And also, I want a place that can accommodate my child's special needs."
+    ],
+    [
+      "ParticipantA",
+      "I have a friend who runs a daycare center and she's great with kids, but she doesn't have any special training in early childhood education."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's important too."
+    ],
+    [
+      "ParticipantA",
+      "My wife and I had to put our daughter in child care when she was a toddler, and it was tough finding the right place for her."
+    ],
+    [
+      "ParticipantB",
+      "What kind of special needs does your child have?"
+    ],
+    [
+      "ParticipantA",
+      "My daughter had some developmental delays, but she's doing much better now."
+    ],
+    [
+      "ParticipantB",
+      "I'm sorry to hear that, but it's good to hear that she's doing better now."
+    ],
+    [
+      "ParticipantA",
+      "It took us a while to find the right place for her, but we eventually did."
+    ],
+    [
+      "ParticipantB",
+      "What kind of place did you finally settle on?"
+    ],
+    [
+      "ParticipantA",
+      "A center that specialized in working with children who have developmental delays."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a good approach."
+    ],
+    [
+      "ParticipantA",
+      "I think it's important to find a place that can meet your child's needs and provide a nurturing environment."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantA",
+      "Have you had any personal experience with child care services?"
+    ],
+    [
+      "ParticipantB",
+      "No, I haven't had any personal experience with child care services yet, but my sister-in-law recently had to put her child in a daycare center and it was a nightmare for her."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's tough to find a good place that meets all your needs."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's really hard to find a place that you can trust with your child."
+    ],
+    [
+      "ParticipantA",
+      "But it's definitely worth the effort to find a good place."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think I just want to find a place where I can trust the people taking care of my child."
+    ],
+    [
+      "ParticipantA",
+      "I know what you mean."
+    ],
+    [
+      "ParticipantB",
+      "I think I'll just have to do some research and talk to other parents to get recommendations."
+    ],
+    [
+      "ParticipantA",
+      "I had to do the same thing when I was looking for child care for my son."
+    ],
+    [
+      "ParticipantB",
+      "And ask about their policies on things like sickness and vacation days."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's a good idea."
+    ],
+    [
+      "ParticipantB",
+      "And check if they offer any kind of educational curriculum for the kids."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's a good point."
+    ],
+    [
+      "ParticipantB",
+      "And ask if they have any special programs for children with allergies."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, those are all good points to consider."
+    ],
+    [
+      "ParticipantB",
+      "And make sure they have a good ratio of caregivers to children."
+    ],
+    [
+      "ParticipantA",
+      "And ask if they have any experience with children with special needs."
+    ],
+    [
+      "ParticipantB",
+      "And ask if they have any outdoor play areas or activities."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, those are all important factors to consider."
+    ],
+    [
+      "ParticipantB",
+      "And ask if they have any references from other parents."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 5
+  }
+}

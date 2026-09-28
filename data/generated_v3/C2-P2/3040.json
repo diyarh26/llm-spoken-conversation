@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3040,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 56,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 1,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about taxes?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think they're necessary for our society to function properly."
+    ],
+    [
+      "ParticipantA",
+      "I agree, but sometimes it feels like they're too high."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I know what you mean."
+    ],
+    [
+      "ParticipantA",
+      "I know someone close to me who had to deal with taxes recently and it was a real headache."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can understand that."
+    ],
+    [
+      "ParticipantA",
+      "How about you? Have you had any personal experiences with taxes that stood out to you?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I had to pay a lot of taxes when I started my farm."
+    ],
+    [
+      "ParticipantA",
+      "What was that experience like for you?"
+    ],
+    [
+      "ParticipantB",
+      "It was quite overwhelming at first, but I learned to manage it over time."
+    ],
+    [
+      "ParticipantA",
+      "How did you manage to deal with it?"
+    ],
+    [
+      "ParticipantB",
+      "It was a lot of paperwork and calculations, but I sought help from a tax professional and eventually got the hang of it."
+    ],
+    [
+      "ParticipantA",
+      "That's good to hear you were able to get help and manage it."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was definitely a learning experience."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can imagine."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was definitely a learning experience."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever felt like the tax system is unfair in any way?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think there are definitely some unfair aspects to it, but overall I think it's necessary for our society to function properly."
+    ],
+    [
+      "ParticipantA",
+      "I know what you mean."
+    ],
+    [
+      "ParticipantB",
+      "I think the government could do a better job of simplifying the tax code."
+    ],
+    [
+      "ParticipantA",
+      "I agree, the tax code could definitely use some simplifying."
+    ],
+    [
+      "ParticipantB",
+      "I think they could also do a better job of ensuring that everyone pays their fair share."
+    ],
+    [
+      "ParticipantA",
+      "I agree, it seems like some people find ways to avoid paying their fair share."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a complex issue."
+    ],
+    [
+      "ParticipantA",
+      "What do you think they could do to make it more fair?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think they could implement stricter regulations and penalties for tax evasion."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that would be a good start."
+    ],
+    [
+      "ParticipantB",
+      "And maybe also offer more tax breaks for people who are struggling financially."
+    ],
+    [
+      "ParticipantA",
+      "I agree, tax breaks for those in need would be a great step towards a more fair tax system."
+    ],
+    [
+      "ParticipantB",
+      "I think they could also make it easier for small business owners to comply with the tax code."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, small business owners often have a hard time navigating the tax code."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a complex issue."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely a complex issue."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a complex issue."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely a complex issue."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a complex issue."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely a complex issue."
+    ],
+    [
+      "ParticipantB",
+      "Well, I think we've talked about taxes enough for now. It's been a great conversation."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think you're right. It's been a great conversation."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a complex issue."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

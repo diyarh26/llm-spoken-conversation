@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2469,
+  "topic": "Hobbies And Crafts",
+  "sb_prompt": "WHAT HOBBIES DO YOU HAVE IN YOUR SPARE TIME?  DO THEY INCLUDE ANY HANDICRAFTSWOODWORKING?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have any hobbies or crafts you like to do in your free time?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been trying to get into knitting lately."
+    ],
+    [
+      "ParticipantA",
+      "That's great!"
+    ],
+    [
+      "ParticipantB",
+      "I made a scarf for my cousin for Christmas last year."
+    ],
+    [
+      "ParticipantA",
+      "I've been meaning to pick up knitting again too, it's such a calming hobby."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's really relaxing."
+    ],
+    [
+      "ParticipantA",
+      "Do you have a favorite yarn or pattern you like to use?"
+    ],
+    [
+      "ParticipantB",
+      "I've been using this really soft acrylic yarn for my latest project, it's so cozy."
+    ],
+    [
+      "ParticipantA",
+      "I usually stick to cotton yarn for my projects, but I might have to give that acrylic a try."
+    ],
+    [
+      "ParticipantB",
+      "And how about you? Do you have any specific craft or project you're working on right now?"
+    ],
+    [
+      "ParticipantA",
+      "I'm actually working on a woodworking project right now."
+    ],
+    [
+      "ParticipantB",
+      "That's interesting."
+    ],
+    [
+      "ParticipantA",
+      "I made a bookshelf for my bedroom."
+    ],
+    [
+      "ParticipantB",
+      "That sounds really cool!"
+    ],
+    [
+      "ParticipantA",
+      "I've always been interested in woodworking, ever since I took a class in college."
+    ],
+    [
+      "ParticipantB",
+      "What kind of wood did you use for the bookshelf?"
+    ],
+    [
+      "ParticipantA",
+      "I used oak for the bookshelf."
+    ],
+    [
+      "ParticipantB",
+      "I've never tried woodworking, but it sounds like a lot of fun."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Have you ever considered trying any woodworking projects?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've thought about it, but I'm not very handy with tools."
+    ],
+    [
+      "ParticipantA",
+      "Well, it does take some practice and patience, but I think anyone can learn it with the right guidance."
+    ],
+    [
+      "ParticipantB",
+      "Maybe I'll look into taking a class or something."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think it would be a great way to learn."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe I'll check out some tutorials online first."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, there are a lot of resources online now that can help you get started."
+    ],
+    [
+      "ParticipantB",
+      "Thanks for the advice, I'll definitely look into it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, there's a lot of great resources out there to help you get started."
+    ],
+    [
+      "ParticipantB",
+      "Sure, I'll definitely check out some tutorials online."
+    ],
+    [
+      "ParticipantA",
+      "I also enjoy reading in my free time."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I also love reading."
+    ],
+    [
+      "ParticipantA",
+      "What kind of books do you like to read?"
+    ],
+    [
+      "ParticipantB",
+      "I usually read mystery novels and thrillers."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I usually stick to non-fiction and biographies, but I do enjoy a good mystery every now and then."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I love reading too, it's such a great escape from the daily routine."
+    ],
+    [
+      "ParticipantA",
+      "What's the latest mystery novel you've read?"
+    ],
+    [
+      "ParticipantB",
+      "The last mystery novel I read was \"Gone Girl\" by Gillian Flynn."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a really gripping book."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was really hard to put down."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have any hobbies or crafts you like to do in your free time?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I also enjoy hiking and exploring new trails."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1,
+    "dup_kept": 1
+  }
+}

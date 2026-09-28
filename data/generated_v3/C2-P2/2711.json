@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2711,
+  "topic": "Vacation Spots",
+  "sb_prompt": "PLEASE DISCUSS TYPES OF VACATIONS AND TRIPS YOU ENJOY.  FIND OUT WHETHER THE OTHER CALLER CAN INTEREST YOU IN A VACATION SPOT YOU HAVEN'T VISITED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 25,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of vacations do you usually enjoy?"
+    ],
+    [
+      "ParticipantB",
+      "I usually like going on road trips and exploring new places."
+    ],
+    [
+      "ParticipantA",
+      "I love road trips too, there's something about the freedom of the open road that's really exhilarating."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a great way to see a lot of different things and make some amazing memories."
+    ],
+    [
+      "ParticipantA",
+      "I've also found that camping trips can be really rewarding, you know? Just being out in nature and disconnecting from everything can be really refreshing."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've never been camping, but I've heard it's a great way to reconnect with nature and yourself."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have any favorite vacation spots that you like to visit?"
+    ],
+    [
+      "ParticipantB",
+      "Actually, my best friend just went on a trip to Hawaii and said it was amazing."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, Hawaii sounds amazing. I've always wanted to go there."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, the beaches are so beautiful and the water is so clear."
+    ],
+    [
+      "ParticipantA",
+      "What's the best beach you've been to?"
+    ],
+    [
+      "ParticipantB",
+      "Kaanapali Beach."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite thing to do when you're there?"
+    ],
+    [
+      "ParticipantB",
+      "Going snorkeling."
+    ],
+    [
+      "ParticipantA",
+      "That sounds amazing."
+    ],
+    [
+      "ParticipantB",
+      "Have you ever been snorkeling before?"
+    ],
+    [
+      "ParticipantA",
+      "No, I haven't."
+    ],
+    [
+      "ParticipantB",
+      "Maybe we can plan a trip there together sometime."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a great idea."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, let's do that!"
+    ],
+    [
+      "ParticipantA",
+      "What's the best time of year to go to Hawaii?"
+    ],
+    [
+      "ParticipantB",
+      "I think the best time to go is from April to June when it's not too crowded and the weather is perfect."
+    ],
+    [
+      "ParticipantA",
+      "What do you think about the food there?"
+    ],
+    [
+      "ParticipantB",
+      "The food is amazing, you won't be disappointed."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've heard the food in Hawaii is incredible."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely worth checking out."
+    ],
+    [
+      "ParticipantA",
+      "So, what's the best way to get around the island while you're there?"
+    ],
+    [
+      "ParticipantB",
+      "Renting a car is the best way to get around, but there are also public buses and shuttles that can take you around too."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite restaurant on the island?"
+    ],
+    [
+      "ParticipantB",
+      "Huli Huli Chicken."
+    ],
+    [
+      "ParticipantA",
+      "That sounds delicious."
+    ],
+    [
+      "ParticipantB",
+      "Have you tried it before?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've heard of Huli Huli Chicken before."
+    ],
+    [
+      "ParticipantB",
+      "So, what are some of your favorite vacation spots?"
+    ],
+    [
+      "ParticipantA",
+      "What about you? Have you been to any other places that you would recommend?"
+    ],
+    [
+      "ParticipantB",
+      "Have you ever been to California?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I love California."
+    ],
+    [
+      "ParticipantB",
+      "What's your favorite place in California?"
+    ],
+    [
+      "ParticipantA",
+      "I really like the coast up in Big Sur."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's really beautiful up there."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

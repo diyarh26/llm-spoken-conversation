@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What kind of lawn and garden work do you do?"
+    ],
+    [
+      "ParticipantB",
+      "I mostly work on my own garden, but I do enjoy helping out friends and family with theirs too."
+    ],
+    [
+      "ParticipantA",
+      "I mostly work on my own garden too, but I also manage the garden section at the grocery store."
+    ],
+    [
+      "ParticipantB",
+      "That's interesting, I'm sure you get to see a lot of different gardening techniques and ideas that way."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely helpful to see what others are doing and get inspiration from that."
+    ],
+    [
+      "ParticipantB",
+      "What's your favorite type of gardening to do?"
+    ],
+    [
+      "ParticipantA",
+      "I really enjoy working with herbs and trying out new recipes with them."
+    ],
+    [
+      "ParticipantB",
+      "I've been trying to grow some tomatoes this year, but they keep getting eaten by some critter."
+    ],
+    [
+      "ParticipantA",
+      "Have you tried any gardening hacks to deter those critters?"
+    ],
+    [
+      "ParticipantB",
+      "I've tried using a motion sensor sprinkler to scare them off."
+    ],
+    [
+      "ParticipantA",
+      "I've heard that using a mixture of bloodmeal and cayenne pepper around your plants can also deter critters."
+    ],
+    [
+      "ParticipantB",
+      "That sounds interesting, I'll have to try that."
+    ],
+    [
+      "ParticipantA",
+      "I find it interesting that despite our different experiences, we both enjoy helping out others with their gardening."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's nice to share knowledge and ideas with others who are passionate about gardening."
+    ],
+    [
+      "ParticipantA",
+      "I also enjoy making compost and using it to improve the soil in my garden."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, composting is definitely important for maintaining healthy soil."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's a great way to recycle and give back to the earth."
+    ],
+    [
+      "ParticipantB",
+      "I agree, it's a great way to give back to the earth."
+    ],
+    [
+      "ParticipantA",
+      "What kind of plants are you trying to grow in your garden?"
+    ],
+    [
+      "ParticipantB",
+      "I'm trying to grow some herbs and vegetables, but I'm having trouble with the squirrels eating them."
+    ],
+    [
+      "ParticipantA",
+      "I've had similar issues with squirrels in my garden too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a constant battle but it's worth it in the end."
+    ],
+    [
+      "ParticipantA",
+      "Do you have any tips on how to keep squirrels away from your garden?"
+    ],
+    [
+      "ParticipantB",
+      "I've tried putting up a small fence around my garden to keep them out."
+    ],
+    [
+      "ParticipantA",
+      "What about using a motion-activated sprinkler to scare them away?"
+    ],
+    [
+      "ParticipantB",
+      "I'll have to try that too."
+    ],
+    [
+      "ParticipantA",
+      "What about using a natural predator like a cat or a owl to scare the squirrels away?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'll have to try that too."
+    ],
+    [
+      "ParticipantA",
+      "I've heard that planting companion plants like marigolds or nasturtiums can also deter squirrels."
+    ],
+    [
+      "ParticipantB",
+      "Thanks for the tip, I'll definitely give that a try."
+    ],
+    [
+      "ParticipantA",
+      "Do you have any favorite herbs or vegetables that you like to grow in your garden?"
+    ],
+    [
+      "ParticipantB",
+      "I like growing basil and cilantro."
+    ],
+    [
+      "ParticipantA",
+      "I like growing rosemary and thyme too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'll have to try that too."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have any favorite plants that you like to grow?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've been trying to grow some jalapenos too."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite recipe that you've made with your homegrown herbs?"
+    ],
+    [
+      "ParticipantB",
+      "I made a pizza with homemade pesto and roasted vegetables."
+    ],
+    [
+      "ParticipantA",
+      "That sounds delicious!"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was really tasty."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

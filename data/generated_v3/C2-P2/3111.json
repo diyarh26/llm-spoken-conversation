@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3111,
+  "topic": "Crime",
+  "sb_prompt": "DISCUSS CRIME IN AMERICAN CITIES TODAY.  WHAT ARE YOUR CONCERNS AND THE CONCERNS OF THE OTHER CALLER?  WHAT STEPS CAN BE TAKEN TO REDUCE CRIME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 45,
+    "education": "a college degree",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 31,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What's your take on crime in American cities these days?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's a complex issue."
+    ],
+    [
+      "ParticipantA",
+      "I've been following the news and it seems like crime rates have been going up in many cities."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a problem."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it seems like there are a lot of factors contributing to the rise in crime rates."
+    ],
+    [
+      "ParticipantB",
+      "I agree, it's not just one thing causing it."
+    ],
+    [
+      "ParticipantA",
+      "One of the main factors that I believe is contributing to the rise in crime rates is the lack of job opportunities and economic stability for many people in urban areas."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I know someone who lost their job during the pandemic and turned to crime to support their family."
+    ],
+    [
+      "ParticipantA",
+      "That's really unfortunate."
+    ],
+    [
+      "ParticipantB",
+      "And also, I think there's a lack of access to education and resources for people to better their situation."
+    ],
+    [
+      "ParticipantA",
+      "And another concern I have is the rise of gang activity and drug trafficking in many cities."
+    ],
+    [
+      "ParticipantB",
+      "And that's not even mentioning the impact of systemic issues like poverty and discrimination."
+    ],
+    [
+      "ParticipantA",
+      "I agree, it's a big issue."
+    ],
+    [
+      "ParticipantB",
+      "It's just really hard to pinpoint one single cause for the rise in crime."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely a complex issue."
+    ],
+    [
+      "ParticipantB",
+      "And, I think there should be more investment in community programs and education to help address some of these underlying issues."
+    ],
+    [
+      "ParticipantA",
+      "What do you think we can do to reduce crime rates?"
+    ],
+    [
+      "ParticipantB",
+      "And I think there should be more funding for law enforcement to help combat crime as well."
+    ],
+    [
+      "ParticipantA",
+      "What are your thoughts on the role of law enforcement in reducing crime rates?"
+    ],
+    [
+      "ParticipantB",
+      "And also, I think we need to focus on rehabilitation rather than just punishment for criminals."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree that rehabilitation is important, but I also think that law enforcement has a role to play in reducing crime rates."
+    ],
+    [
+      "ParticipantB",
+      "I think we also need to address the issue of gun control."
+    ],
+    [
+      "ParticipantA",
+      "I think stricter gun control laws could help reduce the number of violent crimes."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, gun control is definitely a big issue."
+    ],
+    [
+      "ParticipantA",
+      "I think we also need to address the issue of mental health and how it relates to crime."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, mental health is definitely a big factor in crime."
+    ],
+    [
+      "ParticipantA",
+      "And what about the role of community involvement in preventing crime?"
+    ],
+    [
+      "ParticipantB",
+      "I think community involvement is really important too."
+    ],
+    [
+      "ParticipantA",
+      "I think we should also focus on providing support for at-risk youth to prevent them from turning to crime."
+    ],
+    [
+      "ParticipantB",
+      "Definitely."
+    ],
+    [
+      "ParticipantA",
+      "And what about the role of drugs in crime?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, drugs are definitely a big issue when it comes to crime."
+    ],
+    [
+      "ParticipantA",
+      "And what about the role of poverty and economic inequality in crime rates?"
+    ],
+    [
+      "ParticipantB",
+      "I think poverty and economic inequality are definitely contributing factors to crime, but I also think that there needs to be more focus on addressing the root causes of crime, like trauma and social inequality."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree that addressing the root causes of crime is really important."
+    ],
+    [
+      "ParticipantB",
+      "And I think we need to focus on providing opportunities for people to have a better quality of life, like job training programs and affordable housing."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree that job training programs and affordable housing are important for reducing crime rates."
+    ],
+    [
+      "ParticipantB",
+      "And what about the role of education in preventing crime?"
+    ],
+    [
+      "ParticipantA",
+      "And what about the role of community policing in reducing crime rates?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, education is definitely key in preventing crime."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 3
+  }
+}

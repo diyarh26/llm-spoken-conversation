@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3636,
+  "topic": "Camping",
+  "sb_prompt": "FIND OUT FROM THE OTHER CALLER WHAT KIND OF CAMPING THEY HAVE DONE.  HOW DOES IT COMPARE WITH YOUR OWN EXPERIENCES?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, have you done much camping?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've gone camping a few times, but not as much as I would like."
+    ],
+    [
+      "ParticipantA",
+      "What kind of camping have you done?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly just car camping, but I did go on a backpacking trip a few years ago."
+    ],
+    [
+      "ParticipantA",
+      "That sounds great! I've done some backpacking too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was quite an experience."
+    ],
+    [
+      "ParticipantA",
+      "What kind of backpacking trip was it?"
+    ],
+    [
+      "ParticipantB",
+      "We went to Yosemite National Park and hiked for a few days."
+    ],
+    [
+      "ParticipantA",
+      "I've also been to Yosemite, it's a beautiful place."
+    ],
+    [
+      "ParticipantB",
+      "It was amazing, but it was also really tiring."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it can be pretty grueling, but it's also really rewarding."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was really something else."
+    ],
+    [
+      "ParticipantA",
+      "What was the most challenging part of the trip for you?"
+    ],
+    [
+      "ParticipantB",
+      "The most challenging part was probably the physical exhaustion from hiking all day every day."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can definitely relate to that."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was really something else."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was definitely a challenge, but also a great experience."
+    ],
+    [
+      "ParticipantB",
+      "I would love to do more camping, but it's hard to find the time."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I know what you mean. It can be hard to find the time, but it's definitely worth it when you can make the time."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantA",
+      "I totally agree, it's worth the effort."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a great way to get away from it all and just enjoy nature."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's a great way to recharge and connect with nature."
+    ],
+    [
+      "ParticipantB",
+      "I haven't been camping in a while, but I've done some car camping with my family when I was younger."
+    ],
+    [
+      "ParticipantA",
+      "What kind of car camping have you done?"
+    ],
+    [
+      "ParticipantB",
+      "We went to a state park nearby and set up our tent by the lake."
+    ],
+    [
+      "ParticipantA",
+      "What was your favorite part of the car camping trip?"
+    ],
+    [
+      "ParticipantB",
+      "It was just so peaceful by the lake, and we had a great time together as a family."
+    ],
+    [
+      "ParticipantA",
+      "What was the most challenging part of the car camping trip?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess that was just a different kind of camping experience than backpacking."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely different."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was more of a relaxing experience."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely different."
+    ],
+    [
+      "ParticipantB",
+      "What about you? What kind of camping have you done?"
+    ],
+    [
+      "ParticipantA",
+      "I've done a lot of car camping with my friends, and I've also done some backpacking in the mountains."
+    ],
+    [
+      "ParticipantB",
+      "What kind of backpacking have you done?"
+    ],
+    [
+      "ParticipantA",
+      "I've done a lot of backpacking in the Sierra Nevada mountains."
+    ],
+    [
+      "ParticipantB",
+      "What kind of Sierra Nevada mountains have you backpacked in?"
+    ],
+    [
+      "ParticipantA",
+      "I've been to a few different areas, including Kings Canyon and Sequoia National Parks."
+    ],
+    [
+      "ParticipantB",
+      "Wow, that sounds amazing."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}
