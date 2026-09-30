@@ -37,7 +37,9 @@ for arch in $ARCHS; do
   done
   # Push after each architecture so results can be reviewed while the next one runs.
   if [ -n "$PUSH_EACH" ]; then
-    git add "$OUT_ROOT" "$LOG" && git commit -m "test(gen-v3): ${arch} re-test done" && git push       || echo "WARN: push failed after ${arch} (continuing)" | tee -a "$LOG"
+    git add "$OUT_ROOT" "$LOG" && git commit -m "test(gen-v3): ${arch} re-test done" && \
+      git pull --rebase -q origin main && git push \
+      || echo "WARN: push failed after ${arch} (continuing)" | tee -a "$LOG"
   fi
 done
 
