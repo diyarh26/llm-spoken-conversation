@@ -1,0 +1,118 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I do have a pet. I have a cat named Whiskers."
+    ],
+    [
+      "ParticipantA",
+      "Ah, that's so cute! I actually have a cat too, his name is Mr. Mittens. How old is Whiskers?"
+    ],
+    [
+      "ParticipantB",
+      "Whiskers is about 5 years old now. And how old is Mr. Mittens?"
+    ],
+    [
+      "ParticipantA",
+      "Mr. Mittens is also 5 years old. They must be around the same age, then. Do you have any funny stories about Whiskers?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, there are so many funny stories about Whiskers. One time, I came home and found him sitting on top of the refrigerator. Another time, he got into a bag of chips and ate the whole thing, and we found him lying on the couch with chip crumbs all around him. He's such a funny little guy."
+    ],
+    [
+      "ParticipantA",
+      "Oh my, that sounds like my Mr. Mittens. He once got into a bag of chips too and ate the whole thing, and he ended up with chip crumbs all over his face. Cats can be so funny sometimes. What does Whiskers like to do for fun?"
+    ],
+    [
+      "ParticipantB",
+      "Whiskers loves to play with toys, especially balls and feathers. He also likes to chase after laser pointers and jump up onto high surfaces like the kitchen counter or the furniture. He's a very active and playful cat."
+    ],
+    [
+      "ParticipantA",
+      "Sounds like Mr. Mittens loves to play with toys too, especially balls. He also likes to chase after toys like a ball or a feather. He's such a fun and playful cat. What's your favorite thing about having Whiskers as a pet?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite thing about having Whiskers as a pet is just having his company at home. He's always there to keep me company and provide some entertainment. I also love how he always greets me at the door when I come home, and how he likes to snuggle up with me when we watch TV or read a book together. He's just such a comforting and loving presence in my home."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I can definitely relate to that. Mr. Mittens is the same way. He's always there to keep me company, and I love how he snuggles up with me when we watch TV or read a book together. He's such a comforting and loving presence in my home too. It's just the best having a pet as a companion."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely, having a pet as a companion is one of the best things in the world. They bring so much joy and happiness into our lives, and it's always great to have someone to come home to and spend time with."
+    ],
+    [
+      "ParticipantA",
+      "Definitely, having a pet as a companion is one of the best things in the world. They bring so much joy and happiness into our lives, and it's always great to have someone to come home to and spend time with.\n\n(The conversation has reached its natural end, and the call is now concluded.)"
+    ],
+    [
+      "ParticipantB",
+      "Thank you for the lovely conversation. Have a great day!"
+    ],
+    [
+      "ParticipantA",
+      "Thank you for the lovely conversation too! Have a great day!"
+    ]
+  ],
+  "n_turns": 17,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 7,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 7
+  }
+}
