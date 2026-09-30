@@ -1,0 +1,118 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "How are you doing today?"
+    ],
+    [
+      "ParticipantB",
+      "I'm doing pretty good, thanks. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm doing well, thanks. So, I heard we're supposed to talk about personal computers. What's your interest level in them?"
+    ],
+    [
+      "ParticipantB",
+      "I'd say I'm pretty interested in personal computers. I work as a librarian and I've been using them for a long time now."
+    ],
+    [
+      "ParticipantA",
+      "That's cool! I've been working as a nurse for a few years now and I've definitely become more dependent on my computer for work. I think I'd say I'm pretty interested in them too.\n\nBut, I have to admit, I haven't really explored all the features of my computer yet, and I'm sure there are things I could be doing to improve my experience. Do you ever feel that way?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I totally understand that. There's always something new to learn about computers and technology. I feel like I'm constantly trying to keep up with the latest trends and updates.\n\nBut at the same time, I think it's important to not get too caught up in all the bells and whistles. Sometimes it's nice to just use a computer for its basic functions and not get bogged down by all the extra features.\n\nHow about you? Do you feel like you're able to keep up with the latest technology trends?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think I do a pretty good job of keeping up with technology trends. My job as a nurse requires me to use a lot of different software and applications, so I have to stay on top of updates and new features.\n\nThat being said, I also try to take breaks from technology and just unplug for a little while. I find that it helps me to recharge and be more productive when I'm working on the computer.\n\nWhat about you? Do you take breaks from technology?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I definitely try to take breaks from technology too. I think it's important to disconnect and give yourself some time to recharge.\n\nI also make sure to take some time to learn new things about technology, whether it's a new software program or a new device. It's important to me to stay current and up-to-date with the latest advancements in technology.\n\nSo, what do you think is the most important feature of a personal computer?"
+    ],
+    [
+      "ParticipantA",
+      "For me, I think the most important feature of a personal computer is reliability. I use my computer for work, so I need it to be able to handle all the programs and applications I need without crashing or freezing up on me.\n\nThat being said, I also appreciate a computer that's easy to use and has a user-friendly interface. It's important to me that I can navigate my computer with ease and not get frustrated by complicated settings or features.\n\nWhat about you? What do you think is the most important feature of a personal computer?"
+    ],
+    [
+      "ParticipantB",
+      "I agree with you, reliability is definitely important. I also appreciate a computer that's easy to use and has a user-friendly interface.\n\nBut for me, the most important feature of a personal computer is probably the ability to customize it to my preferences. I like being able to change the settings, install new software, and make the computer my own in a way that suits my needs and preferences.\n\nWhat about you? Do you like to customize your computer or do you prefer to keep it more standard and straightforward?"
+    ],
+    [
+      "ParticipantA",
+      "I think I'm somewhere in the middle. I like to have some control over my computer and be able to customize it to a certain extent, but I also appreciate a computer that's easy to use and doesn't require a lot of technical know-how.\n\nI don't have a lot of experience with customizing my computer beyond the basic settings, but I do appreciate being able to change the background, add new icons, and make other small changes to personalize my computer.\n\nWhat about you? Do you like to customize your computer beyond the basic settings?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I definitely like to customize my computer beyond the basic settings. I enjoy tweaking the settings and experimenting with different configurations to see how they affect the performance of my computer.\n\nI also enjoy installing new software and trying out different programs to see if they're useful or helpful to me. It's all about finding what works best for me and my needs.\n\nWell, I think we've talked about personal computers for long enough. Thanks for chatting with me about this topic!"
+    ],
+    [
+      "ParticipantA",
+      "Absolutely! It was great to talk to you about personal computers and hear your perspective on the topic. Thanks for the chat!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was nice talking to you too. Have a great day!"
+    ],
+    [
+      "ParticipantA",
+      "You too!"
+    ]
+  ],
+  "n_turns": 17,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 10,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 10
+  }
+}
