@@ -56,7 +56,7 @@ apt-get update -qq && apt-get install -y -qq tmux unzip
 ```
 
 ## Step 4 — Python environment matching the VM (pod)
-The VM ran Python 3.10, torch 2.5.1+cu121, transformers 5.12.1, bitsandbytes 0.49.2.
+The VM ran Python 3.10, torch 2.5.1+cu121, transformers 5.12.1, bitsandbytes 0.46.1, accelerate 1.14.0 (see requirements-vm-lock.txt — it is the source of truth).
 ```bash
 cd /workspace/llm-spoken-conversation
 pip install -q uv
@@ -67,7 +67,7 @@ grep -vE "^(torch|nvidia-|triton)" requirements-vm-lock.txt | grep -v " @ " > /t
 uv pip install -r /tmp/lock.txt
 python -c "import torch, transformers, bitsandbytes; print(torch.__version__, transformers.__version__, bitsandbytes.__version__, torch.cuda.is_available())"
 ```
-Expect `2.5.1+cu121 5.12.1 0.49.2 True`. If a line of the lock file fails to install,
+Expect `2.5.1+cu121 5.12.1 0.46.1 True`. If a line of the lock file fails to install,
 drop that package from `/tmp/lock.txt` only if it is not torch/transformers/bitsandbytes/
 accelerate, and write what you dropped into `VM_REPORT.md`.
 
