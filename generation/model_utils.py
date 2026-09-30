@@ -32,6 +32,11 @@ def load_model(name: str, device: str | None = None):
     stopgap (e.g. C4 on the 2×M60 box: Vicuna on cuda:0, Mistral on cuda:1, so two models
     don't collide). Placement is output-neutral: same weights, same decoding, same result.
     """
+    # Never generate on the CPU: with the GPU driver lost (it happened twice on the course
+    # VM), transformers silently loads the model into RAM and a single conversation takes
+    # hours. Fail fast instead. Output-neutral: it only refuses to start.
+    if not torch.cuda.is_available():
+        raise RuntimeError("No CUDA GPU visible (check nvidia-smi) — refusing to run on CPU.")
     bnb = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_compute_dtype=torch.float16,
