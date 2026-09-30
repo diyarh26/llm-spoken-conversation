@@ -10,6 +10,7 @@ PY=${PY:-python}
 OUT_ROOT=${OUT_ROOT:-data/dev_sweep}
 LOG=${LOG:-run_v3_devsweep.log}
 ARCHS=${ARCHS:-"c1 c2 c3 c4"}
+PROMPTS=${PROMPTS:-"P0 P1 P2"}   # e.g. PROMPTS="P2 P3" for the P3 exploratory test
 
 # Reduce CUDA fragmentation OOMs (the allocator's own suggested fix). Safe on any GPU; on
 # the tight 2×M60 box it is what lets C3 finish. C4_DEVICE_A/B pin C4's two models to
@@ -30,7 +31,7 @@ for arch in $ARCHS; do
   if [ "$arch" = "c4" ] && [ -n "$C4_DEVICE_A" ] && [ -n "$C4_DEVICE_B" ]; then
     DEV_ARGS="--device-a $C4_DEVICE_A --device-b $C4_DEVICE_B"
   fi
-  for p in P0 P1 P2; do
+  for p in $PROMPTS; do
     echo "=== dev ${arch}-${p} $(date -u +%FT%TZ) ===" | tee -a "$LOG"
     $PY "generation/generate_${arch}.py" --prompt "$p" --ids "$DEV_IDS" \
         --out-root "$OUT_ROOT" $DEV_ARGS 2>&1 | tee -a "$LOG"

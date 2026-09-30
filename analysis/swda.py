@@ -91,6 +91,51 @@ def parse_conversation(csv_path: Path) -> list[tuple[str, str]]:
     return turns
 
 
+def parse_conversation_tagged(csv_path: Path) -> list[tuple[str, str, list[str]]]:
+    """Like parse_conversation, but also returns each merged turn's gold SwDA act tags
+    (one per utterance, in order). Skips exactly the same rows, so turn i here is turn i
+    of parse_conversation — the P3 labeled excerpts line up with P2's unlabeled ones."""
+    turns: list[tuple[str, str, list[str]]] = []
+    with open(csv_path, newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            spk = row["caller"].strip()
+            txt = clean_text(row["text"])
+            if not txt:
+                continue
+            tag = row.get("act_tag", "").strip()
+            if turns and turns[-1][0] == spk:
+                turns[-1] = (spk, turns[-1][1] + " " + txt, turns[-1][2] + [tag])
+            else:
+                turns.append((spk, txt, [tag]))
+    return turns
+
+
+# Plain-language names for the SwDA act tags shown in P3's labeled examples. Base tag =
+# the part before any ^ ( @ modifier. Anything unlisted renders as "other".
+ACT_NAMES = {
+    "sd": "statement", "sv": "opinion", "b": "backchannel", "bh": "backchannel question",
+    "bk": "acknowledgment", "aa": "agreement", "aap": "partial agreement",
+    "ba": "appreciation", "%": "unfinished", "+": "continues their earlier turn",
+    "qy": "yes/no question", "qw": "wh-question", "qo": "open question",
+    "qh": "rhetorical question", "qrr": "or-question", "ny": "yes answer",
+    "nn": "no answer", "na": "affirmative answer", "ng": "negative answer",
+    "no": "other answer", "h": "hedge", "fc": "closing", "fp": "opening",
+    "bf": "summary", "br": "didn't understand", "ar": "disagreement",
+    "arp": "partial disagreement", "bd": "downplayer", "ft": "thanks", "fa": "apology",
+    "ad": "suggestion", "oo": "offer", "x": "non-verbal", "t1": "self-talk",
+    "t3": "aside", "^2": "completes the other's sentence", "^q": "quotation",
+}
+
+
+def act_name(tag: str) -> str:
+    """'qy^d' -> 'yes/no question', 'sd(^q)' -> 'statement', '^2' -> ..."""
+    tag = tag.strip()
+    if tag in ACT_NAMES:
+        return ACT_NAMES[tag]
+    base = re.split(r"[\^(@]", tag, maxsplit=1)[0].strip().split("_")[0]
+    return ACT_NAMES.get(base, "other")
+
+
 def words_per_turn(turns: list[tuple[str, str]]) -> list[int]:
     return [len(txt.split()) for _, txt in turns]
 
@@ -198,12 +243,18 @@ def load_fewshot_pool() -> list[dict]:
             fp = idx.get(e["conversation_no"])
             if fp is None:
                 continue
-            turns = parse_conversation(fp)[e["start"]:e["start"] + e["window"]]
+            turns = parse_conversation_tagged(fp)[e["start"]:e["start"] + e["window"]]
             if not turns:
                 continue
-            text = "\n".join(f"{_LABEL.get(spk, spk)}: {txt}" for spk, txt in turns)
+            text = "\n".join(f"{_LABEL.get(spk, spk)}: {txt}" for spk, txt, _ in turns)
+            # P3 only: the same excerpt with each turn's gold act(s) in plain language.
+            labeled = "\n".join(
+                f"{_LABEL.get(spk, spk)}: {txt}   "
+                f"[{', '.join(dict.fromkeys(act_name(t) for t in tags))}]"
+                for spk, txt, tags in turns
+            )
             pool.append({"conversation_no": e["conversation_no"],
-                         "topic": e["topic"], "text": text})
+                         "topic": e["topic"], "text": text, "labeled_text": labeled})
     except Exception:
         pool = []
     _POOL_CACHE = pool

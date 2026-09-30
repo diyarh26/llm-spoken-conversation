@@ -52,7 +52,22 @@ def conversation_turns(rec: dict) -> list[tuple[str, str]]:
     while (n_seed < int(rec.get("seed_turns", 0)) and n_seed < len(turns)
            and turns[n_seed][1].strip().strip('"').lower() == "hello!"):
         n_seed += 1
-    return turns[n_seed:]
+    turns = turns[n_seed:]
+    # P3 shows examples with "[backchannel]"-style labels; if the model copies one into its
+    # own turn, strip it (only our exact label vocabulary, so ordinary text is untouched).
+    turns = [(s, _P3_LABEL_RE.sub("", t).strip()) for s, t in turns]
+    return [(s, t) for s, t in turns if t]
+
+
+def _p3_label_re():
+    import re
+    from analysis.swda import ACT_NAMES
+    names = sorted(set(ACT_NAMES.values()) | {"other"}, key=len, reverse=True)
+    alt = "|".join(re.escape(n) for n in names)
+    return re.compile(rf"\s*\[(?:{alt})(?:,\s*(?:{alt}))*\]", re.I)
+
+
+_P3_LABEL_RE = _p3_label_re()
 
 
 def switchboard_baseline(n: int = 50) -> dict:

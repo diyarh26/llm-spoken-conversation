@@ -73,6 +73,16 @@ architecture contrast is confounded. Instead, loops are a reported outcome, and 
 dialogue-act analysis runs twice: all turns (primary) and `--exclude-loops` (sensitivity;
 same near-duplicate definition applied post hoc to every condition).
 
+**P3 — exploratory, INSTRUCTED condition (added 2026-09-30, outside the P0–P2 design):**
+P2's framing + (1) the style line shows short reactions by example ("like 'uh-huh', 'yeah',
+'right' or 'oh, really?'") and (2) two FIXED excerpts (pool ids 3352 Fishing, 2909
+Immigration — the richest in listener behavior by gold labels) with each turn's gold SwDA act
+in plain words ("[backchannel]"), plus a note that the labels are a guide and must not be
+written. It deliberately shows the measured forms, so it answers a different question —
+*can explicit showing close the structural gap?* — and is never reported as emergent.
+P0–P2 prompts are verified byte-identical after adding P3 (180 prompts, all builders).
+Copied labels are stripped in analysis (`analysis/analyze.py`, exact label vocabulary only).
+
 ## 4. Decoding (FROZEN 2026-09-26 as-is; single source: `generation/config.py`)
 
 Freeze decision: the dev sweep forced no escalation for C1/C2 (dup-turn rate ≤0.005 at

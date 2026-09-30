@@ -31,7 +31,7 @@ OUT_ROOT = pathlib.Path(__file__).resolve().parent.parent / "data" / "generated"
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--prompt", default="P0", choices=["P0", "P1", "P2"])
+    ap.add_argument("--prompt", default="P0", choices=["P0", "P1", "P2", "P3"])
     ap.add_argument("--n", type=int, default=0,
                     help="generate only the first N manifest ids (0 = all; prefix is ~stratified)")
     ap.add_argument("--ids", default="",
