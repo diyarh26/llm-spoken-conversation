@@ -1,0 +1,122 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2227,
+  "topic": "Tv Programs",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER'S FAVORITE TV SHOWS ARE AND WHY.  ARE YOUR INTERESTS SIMILAR OR DIFFERENT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 16,
+    "education": "a high-school education",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "How's it going?"
+    ],
+    [
+      "ParticipantB",
+      "It's going well, thanks. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm doing good, thanks. So, what's your favorite TV show?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite TV show is \"The Office\"."
+    ],
+    [
+      "ParticipantA",
+      "Nice! I've heard that one's pretty funny. What do you like about it?"
+    ],
+    [
+      "ParticipantB",
+      "I love the characters and the way they're so relatable. It's just a really well-written show."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can see why. I've never really been a fan of that show, but I can appreciate the writing. What about you, do you have a favorite TV show?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, my other favorite TV show is \"Breaking Bad\"."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I've heard that one's really intense. Is it the acting or the plot that you like most about it?"
+    ],
+    [
+      "ParticipantB",
+      "I love the acting, especially by Bryan Cranston. The plot is also so well-written and it's just really addictive."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can see why. I've heard good things about it, but I've never actually watched it myself. Do you have any other favorite shows?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I also really like \"Parks and Recreation\". It's a really funny show with a great cast."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I've heard of that one. I've never actually seen it, but I've heard it's pretty funny. What do you like about it?"
+    ],
+    [
+      "ParticipantB",
+      "I love the characters, especially Leslie Knope. The writing is also really clever and there's a lot of heart to the show."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can see why. I've heard good things about it, but I've never actually watched it myself. Thanks for sharing your favorites with me, it was nice chatting with you."
+    ],
+    [
+      "ParticipantB",
+      "No problem, it was nice chatting with you too!"
+    ]
+  ],
+  "n_turns": 18,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
