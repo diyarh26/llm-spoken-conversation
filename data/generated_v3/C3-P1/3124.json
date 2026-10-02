@@ -1,0 +1,138 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3124,
+  "topic": "Weather Climate",
+  "sb_prompt": "DISCUSS THE WEATHER.   WHAT HAS IT BEEN LIKE IN YOUR AREA?   HAS IT BEEN TYPICAL FOR THIS TIME OF YEAR?  COMPARE IT WITH THE OTHER CALLER'S WEATHER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 38,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how has the weather been like in your area lately?"
+    ],
+    [
+      "ParticipantB",
+      "It's been pretty mild here. Not too hot, not too cold."
+    ],
+    [
+      "ParticipantA",
+      "That sounds nice. How does it compare to what you would typically expect for this time of year?"
+    ],
+    [
+      "ParticipantB",
+      "It's been pretty typical, actually. We usually have mild weather around this time."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's good to hear. How about you? Has the weather been typical for this time of year?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it has been. It's been a bit cooler than usual, but nothing too extreme."
+    ],
+    [
+      "ParticipantA",
+      "Okay. So, have you experienced any unusual weather patterns lately?"
+    ],
+    [
+      "ParticipantB",
+      "No, nothing too unusual. Just the usual rain and sun."
+    ],
+    [
+      "ParticipantA",
+      "That's good. Have you noticed any changes in the weather over the years?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I have. We seem to be getting more extreme weather patterns, like heavier rain and stronger winds."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's been happening a lot lately. It's definitely something to be concerned about."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. I think it's important for us to do our part in reducing our impact on the environment."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. What kind of things do you do to reduce your impact on the environment?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I try to recycle as much as possible, and I also try to reduce my carbon footprint by using public transportation or carpooling when I can."
+    ],
+    [
+      "ParticipantA",
+      "Those are great ideas. I try to do similar things, too. Have you noticed any changes in the weather that have affected your daily life?"
+    ],
+    [
+      "ParticipantB",
+      "Not really, but I have noticed that extreme weather events seem to be happening more frequently."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely something to be concerned about. What do you think we can do as individuals to help address this issue?"
+    ],
+    [
+      "ParticipantB",
+      "I think we can all make small changes in our daily lives to help reduce our impact on the environment. Even small changes can make a big difference when we all do them."
+    ],
+    [
+      "ParticipantA",
+      "That's true. It's important for us to do our part and be mindful of our impact on the environment. Well, it was nice talking to you."
+    ],
+    [
+      "ParticipantB",
+      "It was nice talking to you too. Take care!"
+    ]
+  ],
+  "n_turns": 22,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

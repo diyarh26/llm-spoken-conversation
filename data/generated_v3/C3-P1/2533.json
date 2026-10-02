@@ -1,0 +1,106 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2533,
+  "topic": "Baseball",
+  "sb_prompt": "FIND OUT THE OTHER CALLER'S FAVORITE PRO BASEBALL TEAM AND WHERE IT'S HEADED THIS YEAR.  DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your favorite pro baseball team?"
+    ],
+    [
+      "ParticipantB",
+      "I'm actually more into football, but if I had to pick a baseball team, I'd say the Los Angeles Dodgers."
+    ],
+    [
+      "ParticipantA",
+      "Nice choice! I'm a fan of the New York Yankees."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I've heard of them. So, what do you think about their chances this year?"
+    ],
+    [
+      "ParticipantA",
+      "Well, it's hard to say for sure, but I think they have a strong team this year. They've made some great acquisitions and their roster is looking pretty solid. Plus, they've got some great young players coming up through the ranks.\n\nBut of course, you never know what's going to happen in sports. Anything can happen during the season."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's so true. Sports are so unpredictable. I remember when my cousin was really into baseball and he used to root for the Boston Red Sox. It was like a family thing, you know? But then they went through this really rough patch for like a decade or so. It was tough to watch.\n\nBut then they finally won the World Series in 2004, and it was like this huge relief for everyone. It's crazy how sports can bring people together like that."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely! Sports can bring people together in a way that nothing else can. Even if you don't know much about baseball, you can still feel the excitement of the game and the connection to your team. It's a shared experience that brings people together.\n\nAnd I remember when the Yankees won their last World Series in 2009. I was in college at the time and it was like the whole campus came to a halt. Everyone was just buzzing with excitement. It was a really special moment."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it sounds like it. I'm glad you got to experience that. I remember when the Dodgers won the World Series in 2020. It was crazy because it was the first time they had won since 1988. So many people were just so excited and happy.\n\nI think it's just amazing how sports can create such a sense of community, even across generations. It's really cool."
+    ],
+    [
+      "ParticipantA",
+      "Definitely! Sports have a way of bringing people together, regardless of age, background, or anything else. It's something that we can all enjoy and share, no matter who we are.\n\nAnd even though we might have different favorite teams, we can still have a great conversation about baseball and share our love for the game."
+    ],
+    [
+      "ParticipantB",
+      "Exactly! It's all about finding common ground and enjoying the shared experience of following our favorite teams. I'm glad we got to talk about this today. It was really cool to connect with another baseball fan.\n\nThanks for chatting with me!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It was great talking with you too. Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "You too!"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

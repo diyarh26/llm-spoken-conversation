@@ -1,0 +1,114 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 4876,
+  "topic": "Child Care",
+  "sb_prompt": "FIND OUT WHAT CRITERIA THE OTHER CALLER WOULD USE IN SELECTING CHILD CARE SERVICES FOR A PRESCHOOLER.  IS IT EASY OR DIFFICULT TO FIND SUCH CARE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what criteria would you use in selecting child care services for a preschooler?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think it's important to find a place that's safe and nurturing, with qualified teachers who really care about the kids. I also like to see a good ratio of adults to children, so the kids get the attention they need."
+    ],
+    [
+      "ParticipantA",
+      "Definitely. Those are all great points. I agree that safety is a top priority. Have you ever had any negative experiences with child care services?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, unfortunately I have. My sister once left her child at a daycare that didn't have very good reviews online, and it turned out to be a disaster. The staff were unqualified and didn't seem to care about the kids at all. My sister was really worried about leaving her child there every day, and it ended up being a big stress for our whole family."
+    ],
+    [
+      "ParticipantA",
+      "I'm sorry to hear that. It sounds like it was a difficult situation for everyone. I think it's so important to do your research and find a place that really cares about the kids. I've been fortunate to have good experiences with the child care services my kids have used."
+    ],
+    [
+      "ParticipantB",
+      "That's great to hear. I'm glad you've had good experiences. It can be so stressful to find the right place for your child, but it's so worth it to know they're in a safe and nurturing environment while you're at work."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. It's a big responsibility to entrust someone else with your child's care, but it's also a relief to know they're in good hands. How do you go about finding child care services that meet your criteria? Do you have any tips or tricks for other parents?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I always start with online reviews and ratings. It's a good way to get a sense of what other parents think about the place. I also like to talk to other parents who use the service and ask for their opinion. And of course, I always make sure to visit the facility and meet the staff in person before making a decision. It's important to trust your instincts and make sure the place feels right for you and your child."
+    ],
+    [
+      "ParticipantA",
+      "Those are all great tips. I've also found that talking to the staff and asking about their training and qualifications is important. And of course, observing the interactions between the staff and the children is a good way to see if they're really engaged with them."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. And I think it's important to find a place that's flexible and accommodating to your family's needs. For example, if you need to make changes to your schedule or have special needs, it's good to find a place that's willing to work with you."
+    ],
+    [
+      "ParticipantA",
+      "Yes, flexibility is definitely important. It's great to find a child care service that understands and accommodates your family's needs. Do you think it's difficult to find good child care services in your area?"
+    ],
+    [
+      "ParticipantB",
+      "I think it can be challenging, especially if you have specific criteria that you're looking for. But if you're willing to be flexible and open to different options, you can usually find something that works. And it's always a good idea to start your search early, so you have plenty of time to find a good place before you need it."
+    ],
+    [
+      "ParticipantA",
+      "That's a good point. It's always better to start early and have plenty of time to research and visit different options. Well, it was nice talking with you about child care services. I hope you find a great place that meets your criteria!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you, you too! It was really interesting talking with you about this. I'm sure we'll both find great child care services for our kids."
+    ]
+  ],
+  "n_turns": 16,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 1,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1
+  }
+}

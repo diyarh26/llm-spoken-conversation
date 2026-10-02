@@ -1,0 +1,154 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3691,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of pets do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have a dog."
+    ],
+    [
+      "ParticipantA",
+      "That's great! What kind of dog is it?"
+    ],
+    [
+      "ParticipantB",
+      "It's a golden retriever."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I love golden retrievers! What's his name?"
+    ],
+    [
+      "ParticipantB",
+      "His name is Max."
+    ],
+    [
+      "ParticipantA",
+      "Max, that's such a great name for a dog! How old is he?"
+    ],
+    [
+      "ParticipantB",
+      "He's about two years old."
+    ],
+    [
+      "ParticipantA",
+      "Oh, he's still a youngster! What's he like? Is he energetic or more chill?"
+    ],
+    [
+      "ParticipantB",
+      "He's definitely energetic. Always wanting to play and go for walks."
+    ],
+    [
+      "ParticipantA",
+      "Sounds like a fun dog to have around! Do you have any other pets?"
+    ],
+    [
+      "ParticipantB",
+      "No, just Max."
+    ],
+    [
+      "ParticipantA",
+      "Oh, well, having just one pet can be a lot of work, but also very rewarding! Do you take Max on any adventures or have any favorite spots you like to go to together?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, we like to go to the park and play fetch."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a blast! I used to play fetch with my childhood dog all the time. What do you like most about having Max as a pet?"
+    ],
+    [
+      "ParticipantB",
+      "I love how loyal and loving he is. It's always great to come home to a wagging tail."
+    ],
+    [
+      "ParticipantA",
+      "Completely agree! Dogs have a way of making you feel loved and appreciated. Do you have any funny stories about Max that you can share?"
+    ],
+    [
+      "ParticipantB",
+      "Well, one time I was trying to clean the floor and he stole my mop and started running around the house with it in his mouth!"
+    ],
+    [
+      "ParticipantA",
+      "Haha, that's hilarious! Dogs can be so playful and mischievous sometimes. What's Max's favorite treat?"
+    ],
+    [
+      "ParticipantB",
+      "He loves carrots."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's great! I didn't know dogs could eat carrots. Do you ever take Max to any dog-friendly places, like a dog park or a pet-friendly restaurant?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, we go to a dog park near our house sometimes. And we also like to take him to a local restaurant that has a dog-friendly patio."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a good time for both you and Max! I'm glad you're able to enjoy your pet in so many different ways. Thanks for sharing your experiences with me, it was great talking to you about Max!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you, it was nice talking to you too!"
+    ]
+  ],
+  "n_turns": 26,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
