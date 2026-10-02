@@ -1,0 +1,126 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of home do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I live in a small apartment. It's not too bad, but it's not exactly what I want either."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I know what you mean. I live in a house, but it's not really what I want either."
+    ],
+    [
+      "ParticipantB",
+      "Really? What do you mean?"
+    ],
+    [
+      "ParticipantA",
+      "Well, it's just that I'm not really a homebody. I'm always on the road, so I don't really get to enjoy it that much."
+    ],
+    [
+      "ParticipantB",
+      "I see. I can imagine that would make it hard to feel settled. What do you do for work?"
+    ],
+    [
+      "ParticipantA",
+      "I'm a truck driver. It's not the most glamorous job, but it pays the bills."
+    ],
+    [
+      "ParticipantB",
+      "Oh, that sounds interesting. I work as a restaurant server, so I'm always on my feet too. What's your favorite thing about being on the road?"
+    ],
+    [
+      "ParticipantA",
+      "I love the freedom of it. I get to see so many different places and meet all kinds of people. It's not always easy, but it's worth it to me."
+    ],
+    [
+      "ParticipantB",
+      "That sounds nice. I imagine it would be hard to be away from home for long periods of time, though."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it can be. But I've gotten used to it over the years. And it's not all bad, you know? I get to come home and have some downtime, which is nice."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can imagine that would be a nice change of pace. What's your favorite thing to do when you're not working or on the road?"
+    ],
+    [
+      "ParticipantA",
+      "I love spending time with my dog. She's my best friend and always makes me laugh. What about you?"
+    ],
+    [
+      "ParticipantB",
+      "I love spending time with my friends and family. We always have fun together, whether it's going out to eat or just hanging out at home."
+    ],
+    [
+      "ParticipantA",
+      "That sounds great. I don't have any family nearby, so I don't get to see them very often. But I'm lucky to have some good friends who I can always count on."
+    ],
+    [
+      "ParticipantB",
+      "That's good to hear. It's important to have people you can rely on. Well, it was nice talking to you. Thanks for sharing your experiences."
+    ],
+    [
+      "ParticipantA",
+      "You too! It was great chatting with you. Take care!"
+    ]
+  ],
+  "n_turns": 19,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 1,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "condition": "C4-P2",
+  "architecture": "C4",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your home like?"
+    ],
+    [
+      "ParticipantB",
+      "I live in a small apartment in the city. It's got two bedrooms, a living room, and a kitchen. It's pretty typical for the area, but I've made it feel like home with some decorations and personal touches. How about you? What's your home like?"
+    ],
+    [
+      "ParticipantA",
+      "I live in a house in a suburban area. It's a bit bigger than your apartment, with three bedrooms, a living room, a dining room, and a big backyard. I love having a yard for my dog to play in and for gardening. What about you? Do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "No, I don't have any pets right now. I like the idea of having a pet, but it's not currently possible for me. I do enjoy visiting friends and family who have pets though. It's always nice to spend time with animals.\n\nYour house sounds beautiful, especially with the big backyard. I can imagine how nice it must be to have that extra space. It's interesting how different our living situations are."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely interesting to see how different people's homes can be. I'm glad I have a big backyard because I love spending time outdoors, but I can imagine that an apartment in the city might have its advantages too, like being close to all the action.\n\nWhat do you like most about your apartment? Is there a particular feature or aspect that you enjoy?"
+    ],
+    [
+      "ParticipantB",
+      "I really like the convenience of my apartment's location. I'm close to a lot of shops, restaurants, and public transportation, which makes it easy for me to get around and run errands. Plus, I've made some great friends in my building, so I enjoy the sense of community. The size might be a challenge sometimes, but overall, I'm happy with my living situation.\n\nWhat about you? Is there anything specific that you enjoy about your house? Is it the size, the location, or something else?"
+    ],
+    [
+      "ParticipantA",
+      "I really enjoy the size of my house and the fact that I have a backyard. It's great for entertaining friends and family, especially during the summer months. I also appreciate the sense of privacy that a house provides compared to an apartment. The location is pretty suburban, so it's a bit further from the city center, but I have a nice quiet neighborhood with good schools and parks nearby.\n\nIt's interesting to hear how different our homes are, and it sounds like we both appreciate the aspects of our living situations that work best for our lifestyles."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely! It's fascinating to learn about how different people live and the unique aspects of their homes that make them happy. Your house sounds like it's perfect for entertaining and enjoying the privacy and space that comes with it. And I can definitely understand the appeal of a quiet suburban neighborhood with good schools and parks. It's all about finding what works best for us, isn't it?\n\nWell, it's been a pleasure chatting with you about our homes. I hope you have a great day!\n\nBye for now!"
+    ],
+    [
+      "ParticipantA",
+      "Bye! Thanks for the conversation. It was nice to learn about your apartment and your experiences. Have a great day too!"
+    ]
+  ],
+  "n_turns": 11,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

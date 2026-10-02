@@ -1,0 +1,114 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3013,
+  "topic": "Recipes/food/cooking",
+  "sb_prompt": "PLEASE DISCUSS FOOD AND COOKING.  WHAT FOODS WOULD YOU INCLUDE IN THE MENU FOR A DINNER PARTY?  SHARE THE RECIPE FOR ONE OF THESE FOODS WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of food do you like to cook or eat?"
+    ],
+    [
+      "ParticipantB",
+      "I love cooking all kinds of food, but I especially enjoy making Italian dishes."
+    ],
+    [
+      "ParticipantA",
+      "That sounds great! I'm more of a Mexican food lover myself."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I love Mexican food too! What's your favorite dish?"
+    ],
+    [
+      "ParticipantA",
+      "I would have to say tacos. I could eat them every day."
+    ],
+    [
+      "ParticipantB",
+      "I totally agree! Tacos are amazing. I love making them at home too. Do you have a favorite taco recipe you'd like to share?"
+    ],
+    [
+      "ParticipantA",
+      "Sure! My favorite recipe is for pork tacos with a pineapple salsa. It's super easy to make and so delicious."
+    ],
+    [
+      "ParticipantB",
+      "Ooh, that sounds amazing! Can you share the recipe with me?"
+    ],
+    [
+      "ParticipantA",
+      "Of course! Here's what you'll need:\n\nIngredients:\n\n* 1 1/2 pounds pork shoulder, cut into 1-inch cubes\n* 1/2 cup salsa\n* 1/4 cup chopped fresh cilantro\n* 1/4 cup chopped fresh mint\n* 1/4 cup chopped fresh pineapple\n* 1/4 cup chopped red onion\n* 1 lime, juiced\n\nInstructions:\n\n1. Season the pork with salt and pepper.\n2. In a large skillet over medium heat, cook the pork until browned on all sides.\n3. Add the salsa and bring to a simmer.\n4. Reduce the heat to low and let it simmer for about 30 minutes, or until the pork is tender.\n5. In a blender or food processor, combine the cilantro, mint, pineapple, and red onion. Add the lime juice and blend until smooth.\n6. Serve the pork in tacos with the pineapple salsa on top.\n\nEnjoy!"
+    ],
+    [
+      "ParticipantB",
+      "Wow, that sounds amazing! I can't wait to try it out. Thanks for sharing the recipe with me."
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! I hope you enjoy it. Let me know how it turns out."
+    ],
+    [
+      "ParticipantB",
+      "I definitely will! Thanks again for sharing."
+    ],
+    [
+      "ParticipantA",
+      "No problem, happy to help. Well, I think that's all the time we have for our call. It was great talking to you!"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was really nice talking to you too! Thanks for the great conversation."
+    ]
+  ],
+  "n_turns": 16,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
