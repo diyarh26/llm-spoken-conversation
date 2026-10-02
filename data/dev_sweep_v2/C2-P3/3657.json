@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P3",
+  "architecture": "C2",
+  "prompt_level": "P3",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What do you think about personal computers?"
+    ],
+    [
+      "ParticipantB",
+      "I think they're pretty useful."
+    ],
+    [
+      "ParticipantA",
+      "What do you use your computer for most often?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly for work, but I also enjoy playing games and browsing the internet."
+    ],
+    [
+      "ParticipantA",
+      "I use mine mostly for work too, but I also enjoy playing games and browsing the internet."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I remember when I first got my computer, I was so excited to play solitaire."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I remember feeling the same way when I first got mine."
+    ],
+    [
+      "ParticipantB",
+      "And what about you? What do you use your computer for the most?"
+    ],
+    [
+      "ParticipantA",
+      "I also use it for checking my emails and staying in touch with friends and family."
+    ],
+    [
+      "ParticipantB",
+      "I also use it to do some research for my job."
+    ],
+    [
+      "ParticipantA",
+      "What kind of games do you like to play on your computer?"
+    ],
+    [
+      "ParticipantB",
+      "I like to play puzzle games and some word games too."
+    ],
+    [
+      "ParticipantA",
+      "I like to play some puzzle games too, but I also enjoy some strategy games."
+    ],
+    [
+      "ParticipantB",
+      "I also enjoy some strategy games."
+    ],
+    [
+      "ParticipantA",
+      "I also like some educational games to learn new things."
+    ],
+    [
+      "ParticipantB",
+      "That's great, I haven't really tried any educational games yet."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think educational games are a great way to learn new things and keep your mind sharp."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I should try some educational games."
+    ],
+    [
+      "ParticipantA",
+      "I've also used my computer to do some online courses and learn new skills."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I should try some educational games."
+    ],
+    [
+      "ParticipantA",
+      "Have you tried any online courses or educational programs on your computer?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've actually taken a few online courses on my computer too."
+    ],
+    [
+      "ParticipantA",
+      "What kind of online courses have you taken?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly business and computer science related courses."
+    ],
+    [
+      "ParticipantA",
+      "That's great, I've also taken some courses on healthcare and nursing."
+    ],
+    [
+      "ParticipantB",
+      "That's really interesting."
+    ],
+    [
+      "ParticipantA",
+      "What kind of business and computer science courses have you taken?"
+    ],
+    [
+      "ParticipantB",
+      "I've taken some courses on project management and data analysis."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's really interesting to see how technology can be used for learning and professional development."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's really interesting to see how technology can be used for learning and professional development."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite educational game that you've tried?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've tried some educational games that are designed to help you learn a new language, but I haven't really found them very engaging."
+    ],
+    [
+      "ParticipantA",
+      "I've also tried some language learning apps, but I found them to be more useful for reviewing what I've already learned rather than actually learning something new."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it seems like there are a lot of different ways to use a computer for learning and professional development."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and there's also a lot of different types of games and educational programs available online, so it's easy to find something that interests you."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "Have you tried any language learning apps that you found to be particularly effective?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I found one that uses a lot of interactive exercises and activities to make learning a new language more engaging and fun."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think it's important to find something that interests you and makes learning enjoyable."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 6,
+    "dup_kept": 1
+  }
+}
