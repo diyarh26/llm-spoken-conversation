@@ -1,0 +1,102 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2469,
+  "topic": "Hobbies And Crafts",
+  "sb_prompt": "WHAT HOBBIES DO YOU HAVE IN YOUR SPARE TIME?  DO THEY INCLUDE ANY HANDICRAFTSWOODWORKING?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what hobbies do you have in your spare time?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I enjoy reading books and watching movies. I also like to go for walks and hikes in nature.\n\nAnd yes, I do have a handicraft hobby, specifically woodworking. It's a fun and rewarding activity that allows me to create something with my hands."
+    ],
+    [
+      "ParticipantA",
+      "That's great! What kind of woodworking projects do you like to work on?"
+    ],
+    [
+      "ParticipantB",
+      "I enjoy making various items like picture frames, birdhouses, and even furniture like coffee tables and benches. I find it satisfying to take a piece of wood and transform it into something functional and beautiful.\n\nI'm currently working on a wooden jewelry box, and it's turning out quite nice. Once I finish it, I plan to give it as a gift to someone special."
+    ],
+    [
+      "ParticipantA",
+      "That's really impressive! You must have a lot of patience and attention to detail to make such intricate pieces.\n\nI've always been interested in woodworking, but I haven't had the chance to try it myself. Maybe I should give it a shot someday."
+    ],
+    [
+      "ParticipantB",
+      "Thank you! Yes, patience and attention to detail are crucial in woodworking. It's not just about the finished product, but also the process of creating it. It's a great way to relax and focus on something other than daily stressors.\n\nI definitely encourage you to give woodworking a try. You don't need a fancy workshop or expensive tools to start. There are plenty of beginner projects you can make with just a few basic tools and some scrap wood. It's a rewarding and enjoyable hobby, and you might find that you love it as much as I do!"
+    ],
+    [
+      "ParticipantA",
+      "I appreciate the encouragement and advice! I'll definitely consider giving it a try someday.\n\nBy the way, have you ever considered joining a woodworking community or taking a class to improve your skills and learn new techniques? I've heard that it's an excellent way to connect with like-minded individuals and gain valuable insights."
+    ],
+    [
+      "ParticipantB",
+      "That's a great idea! Joining a woodworking community or taking a class can be a fantastic way to learn new techniques, get inspired, and share your work with others. It's always helpful to have a supportive network of people who share your interests and can provide valuable feedback.\n\nI have considered taking a class to improve my skills, and I might do that in the future. For now, I find joy in exploring different woodworking projects on my own and learning as I go. But I can see the benefits of being part of a community or taking a class, and I might give it a try someday.\n\nThanks for the suggestion!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! I'm glad I could offer some helpful advice. Learning from others and being part of a community can truly enhance your woodworking experience and help you grow as a craftsperson.\n\nIf you ever decide to take a class or join a community, don't hesitate to reach out and ask for advice or guidance. Everyone in these communities is usually more than happy to help a fellow woodworker.\n\nKeep enjoying your hobbies, and I hope we can continue to chat about our interests in the future!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you for your kind words and support! I appreciate your enthusiasm and am looking forward to our next conversation. Have a great day!\n\nYou too!"
+    ],
+    [
+      "ParticipantA",
+      "Thank you, and have a wonderful day! I'm looking forward to our next conversation as well. Take care!"
+    ]
+  ],
+  "n_turns": 13,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
