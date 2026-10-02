@@ -1,0 +1,86 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2615,
+  "topic": "Auto Repairs",
+  "sb_prompt": "WHAT WAS THE LAST AUTO REPAIR YOU PERFORMED OR HAD DONE ON YOUR CAR? ARE THERE SOME TYPES OF REPAIRS OR MAINTENANCE TASKS YOU PREFER TO DO YOURSELF?  DISCUSS YOUR EXPERIENCES IN THIS AREA WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 50,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what was the last auto repair you had done on your car?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, I had my oil changed about a month ago."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I had mine done a couple of weeks ago. I usually try to get it done every 5000 miles or so.\n\nBut there are some things I prefer to do myself, like changing my own oil and checking my tire pressure. I just feel like I can do it more efficiently and effectively than taking it to a shop.\n\nHow about you? Do you prefer to do any repairs or maintenance yourself?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I usually change my own oil too. It's actually pretty easy and it saves me some money. Plus, I can always use the oil I drain to do other things around the house.\n\nBut I have to admit, I'm not as confident about doing more complex repairs myself. I've had some bad experiences with mechanics in the past, so I usually take my car to a reputable shop when I need something more serious fixed.\n\nWhat about you? Do you have any favorite car repair or maintenance tasks that you like to do yourself?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I definitely agree with you on taking it to a reputable shop for more complex repairs. I'm not as knowledgeable about more advanced stuff, so I always leave that to the professionals.\n\nAs for tasks I like to do myself, I really enjoy working on my car's engine. I find it to be really satisfying and it's a great way to learn more about how my car works.\n\nBut, of course, I always make sure to have a buddy nearby in case anything goes wrong.\n\nWhat about you? Are there any specific tasks you enjoy doing yourself?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I'm not as experienced with engine work, so I usually leave that to the professionals as well. But, I do enjoy working on smaller tasks, like changing my car's air filter or replacing my brake pads.\n\nI find it to be a good way to stay on top of my car's maintenance and it's also a great way to learn more about how it works. I feel like it helps me to be more informed about my car and how to take care of it.\n\nWhat about you? Are there any specific tasks you enjoy doing yourself?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I completely agree. It's important to stay on top of your car's maintenance and do what you can yourself to save some money.\n\nI really enjoy working on my car's electrical system. It's a bit more challenging, but I find it to be really interesting and it's a great way to learn more about how my car works.\n\nOf course, I always make sure to have the right tools and safety equipment before I start any work.\n\nWhat about you? Are there any specific tasks you enjoy doing yourself?"
+    ]
+  ],
+  "n_turns": 9,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
