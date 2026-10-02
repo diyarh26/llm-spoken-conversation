@@ -1,0 +1,106 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 4346,
+  "topic": "Public Education",
+  "sb_prompt": "DISCUSS WITH THE OTHER CALLER WHETHER THERE IS SOMETHING SERIOUSLY WRONG WITH OUR PUBLIC SCHOOL SYSTEMS TODAYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a high-school education",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think is wrong with our public school systems today?"
+    ],
+    [
+      "ParticipantB",
+      "I think there are a few issues, like lack of funding and resources, teacher shortages, and inadequate curriculums. What about you?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree with those points. I also think there's too much standardized testing and not enough focus on creativity and critical thinking."
+    ],
+    [
+      "ParticipantB",
+      "That's a good point. The focus on testing can take away from a well-rounded education. What do you think should be done to improve the system?"
+    ],
+    [
+      "ParticipantA",
+      "I think we need to invest more in teacher training and provide them with the resources they need to effectively teach. Additionally, we should prioritize a well-rounded curriculum that focuses on developing students' critical thinking and creativity skills."
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. Teachers are such an important part of the education system, and they need to be supported in order to provide the best education possible. A well-rounded curriculum that focuses on developing students' skills beyond just testing would be a great step forward.\n\nIs there anything else you think is important in improving our public school systems?"
+    ],
+    [
+      "ParticipantA",
+      "I think we also need to address the issue of inequality in education. Students from low-income backgrounds often have less access to resources and opportunities, and we need to work towards providing equal access to education for all students.\n\nWhat are your thoughts on that?"
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. Access to education should not be determined by a student's socioeconomic status. We need to work towards providing equal opportunities and resources for all students, regardless of their background.\n\nOverall, I think there are a lot of issues that need to be addressed in our public school systems. But with the right investment, support, and prioritization, we can work towards creating a better educational system for all students."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. It's important that we continue to have these conversations and work towards finding solutions to improve our public school systems. Thanks for talking with me about this important topic."
+    ],
+    [
+      "ParticipantB",
+      "Of course, it was great discussing this with you. I think it's important for people to share their experiences and opinions on important topics like this. Thank you for the conversation!"
+    ],
+    [
+      "ParticipantA",
+      "Thank you too! Take care!"
+    ],
+    [
+      "ParticipantB",
+      "You too!"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

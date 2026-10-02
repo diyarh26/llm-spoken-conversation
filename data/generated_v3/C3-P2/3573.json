@@ -1,0 +1,162 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3573,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 67,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, have you decided on what kind of car you want to buy next?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been thinking about it for a while now, and I think I might go for a mid-sized sedan."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a practical choice. What are your main requirements for the car?"
+    ],
+    [
+      "ParticipantB",
+      "I guess I'm looking for something reliable, comfortable, and with good fuel economy. Safety features are also important to me."
+    ],
+    [
+      "ParticipantA",
+      "Those are all great requirements. How about you, have you thought about what you're looking for in a car?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've been considering a smaller SUV. I want something with good cargo space and good fuel economy, too. And I want it to be reliable and safe, of course."
+    ],
+    [
+      "ParticipantA",
+      "It sounds like we both value reliability and safety in our future car purchases. What brands or models are you considering for your mid-sized sedan and SUV, respectively?"
+    ],
+    [
+      "ParticipantB",
+      "For the sedan, I'm considering a Honda Accord or a Toyota Camry. For the SUV, I'm thinking about a Honda CR-V or a Toyota RAV4."
+    ],
+    [
+      "ParticipantA",
+      "Those are both great choices. I've heard great things about the Honda Accord and Camry, and the Honda CR-V and Toyota RAV4 are both popular and reliable options for SUVs. What are your thoughts on buying a car that's a few years old versus buying a brand new one?"
+    ],
+    [
+      "ParticipantB",
+      "I've been considering a slightly used car, actually. I think it could save me some money, and the car would still be under warranty. What about you?"
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking the same thing. I think buying a slightly used car with low mileage could be a good option, too. It's all about finding a reliable and well-maintained vehicle."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. And I think it's also important to take a test drive and really get a feel for the car before making a decision."
+    ],
+    [
+      "ParticipantA",
+      "Yes, definitely. You want to make sure the car is comfortable and that you feel safe driving it. And what about features? Are there any specific features or technologies that you're looking for in your next car?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think I would like a car with Bluetooth connectivity and a backup camera. Those are just some of the features that I find useful. What about you?"
+    ],
+    [
+      "ParticipantA",
+      "I agree, those are some great features to have. For me, I'm looking for a car with a good infotainment system, and I want it to have a comfortable and supportive seat."
+    ],
+    [
+      "ParticipantB",
+      "Those are all good choices. I think it's important to find a car that has the features that are important to you and that you'll use regularly."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. And have you thought about how much you're willing to spend on your next car?"
+    ],
+    [
+      "ParticipantB",
+      "I've been thinking that I want to stay within a certain budget, but I haven't decided on an exact number yet. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm in the same boat. I want to make sure I'm getting a good value for my money, but I haven't set a hard budget yet either."
+    ],
+    [
+      "ParticipantB",
+      "Well, I think it's important to do some research and figure out what kind of car you can afford that still meets your requirements."
+    ],
+    [
+      "ParticipantA",
+      "Yes, that's a good point. And it's also important to consider the ongoing costs of owning a car, like gas, insurance, and maintenance."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. Those are all important factors to consider when making a decision about which car to buy."
+    ],
+    [
+      "ParticipantA",
+      "Definitely. It's important to think about all of these things before making a decision. Thanks for talking with me about this!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was great to talk with you about this."
+    ],
+    [
+      "ParticipantA",
+      "Same here, have a good day!"
+    ],
+    [
+      "ParticipantB",
+      "You too!"
+    ]
+  ],
+  "n_turns": 28,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 1,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1
+  }
+}

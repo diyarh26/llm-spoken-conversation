@@ -1,0 +1,134 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2942,
+  "topic": "Choosing A College",
+  "sb_prompt": "WHAT ADVICE OR EXPERIENCE CAN YOU OFFER TO A PARENT ON HOW TO HELP A SON OR DAUGHTER CHOOSE A COLLEGE TO ATTEND?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 44,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of advice do you have for parents helping their children choose a college?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think it's important for parents to listen to their child's goals and interests and try to help them find a college that aligns with those."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely, I couldn't agree more. It's important that the child is passionate about what they'll be studying, otherwise it might not be the best fit for them."
+    ],
+    [
+      "ParticipantB",
+      "Exactly. And I think it's also important for parents to consider the financial aspect and make sure their child is getting the best value for their education."
+    ],
+    [
+      "ParticipantA",
+      "Definitely, the cost of college can be a big factor. It's important to consider both the tuition fees and the potential return on investment after graduation."
+    ],
+    [
+      "ParticipantB",
+      "Yes, and I think it's also important for parents to encourage their child to visit the campus and talk to current students and professors to get a sense of the college's culture and community."
+    ],
+    [
+      "ParticipantA",
+      "That's a great point. A college is more than just a place to learn, it's also a community, and it's important to find a good fit there too."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. And don't forget to take into account the location and the opportunities available in the surrounding area."
+    ],
+    [
+      "ParticipantA",
+      "Yes, location can play a big role in the college experience and the opportunities available after graduation."
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. And lastly, I think it's important for parents to remember that it's the child's decision ultimately, and they should support and guide them, but not make it for them."
+    ],
+    [
+      "ParticipantA",
+      "That's wise advice. It's a big decision and ultimately it's the child's life and they should feel empowered to make the choice that's right for them."
+    ],
+    [
+      "ParticipantB",
+      "Exactly. So, any other questions or advice you'd like to share?"
+    ],
+    [
+      "ParticipantA",
+      "Well, I think that covers most of the important points. Just to reiterate, it's important to consider the child's interests and goals, the financial aspect, the college's culture and community, the location and opportunities, and to remember that it's the child's decision ultimately."
+    ],
+    [
+      "ParticipantB",
+      "Yes, that's a great summary. I think we've covered some important points to consider when helping a child choose a college."
+    ],
+    [
+      "ParticipantA",
+      "I'm glad we agree. It's a big decision and it's important to approach it with thought and consideration."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely, and I think it's important to remember that the college experience is unique for each individual, and it's important to find the right fit for them."
+    ],
+    [
+      "ParticipantA",
+      "Yes, that's a great way to look at it. Finding the right college is a personal journey and it's important to find the one that's the best fit for the individual."
+    ],
+    [
+      "ParticipantB",
+      "Exactly. Well, thank you for sharing your thoughts and advice on this topic. It was great talking to you."
+    ],
+    [
+      "ParticipantA",
+      "It was great talking to you too. I hope the conversation was helpful for you. Good luck to your child in their college search."
+    ]
+  ],
+  "n_turns": 21,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

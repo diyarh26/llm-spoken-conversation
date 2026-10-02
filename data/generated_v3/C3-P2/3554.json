@@ -1,0 +1,106 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3554,
+  "topic": "Exercise And Fitness",
+  "sb_prompt": "DO YOU DO ANY EXERCISE REGULARLY TO MAINTAIN YOUR HEALTH OR FITNESS LEVEL?  IF SOOR DO IT AS A TASK?  COMPARE YOUR HABITS AND YOUR MOTIVES",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you do any exercise regularly to maintain your health or fitness level?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I try to go for a run or do some weightlifting at least a few times a week. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I do try to exercise regularly, but I find it hard to motivate myself sometimes. I usually stick to walks or light weightlifting, but I know I should be doing more."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it can definitely be hard to find the motivation to exercise. Have you found anything that helps you stay motivated? Maybe a workout buddy or setting small goals for yourself?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, having a workout buddy would be great, but unfortunately, I don't have anyone like that in my life right now. And I have tried setting goals for myself, but it's hard to stay consistent with them."
+    ],
+    [
+      "ParticipantB",
+      "I can definitely relate to that. Sometimes it can be hard to stay consistent with exercise, especially if you're doing it alone. Maybe you could try finding a local fitness class or group that you could join? That way you could meet new people and also have a set schedule to stick to."
+    ],
+    [
+      "ParticipantA",
+      "That's a great idea. I'll look into it and see if there are any classes or groups that I could join. Thanks for the suggestion!"
+    ],
+    [
+      "ParticipantB",
+      "Of course! I hope it helps you to stay motivated and consistent with your exercise routine. Let me know if there's anything else I can do to help."
+    ],
+    [
+      "ParticipantA",
+      "Thanks, I appreciate it. It's great to have someone to talk to about this."
+    ],
+    [
+      "ParticipantB",
+      "Of course, that's what I'm here for. I'm happy to listen and offer any advice or support that I can. Keep in touch!"
+    ],
+    [
+      "ParticipantA",
+      "I will definitely keep in touch. Thank you again for your help. Bye for now!"
+    ],
+    [
+      "ParticipantB",
+      "Goodbye! Take care!"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
