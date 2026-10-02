@@ -1,0 +1,90 @@
+{
+  "condition": "C4-P2",
+  "architecture": "C4",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "I've been eyeing a used Subaru Outback. It's got good gas mileage, reliable, and I've had great experiences with Subaru in the past. What about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm interested in getting a new electric car. I'm excited about the technology and the potential savings on fuel costs. Have you considered electric cars?"
+    ],
+    [
+      "ParticipantB",
+      "No, I haven't, mostly because of the cost and the limited driving range for my job. I need a car that can go long distances and tow heavy loads. But I can see the appeal for those who don't need the extra features. Do you have a preferred brand or model?"
+    ],
+    [
+      "ParticipantA",
+      "I've been looking at the Tesla Model 3. I like the brand and the advanced technology they offer. However, I'm also open to considering other electric car models as well. What about you? Have you considered any specific brands or models?"
+    ],
+    [
+      "ParticipantB",
+      "I've had my eye on a Toyota Tacoma for my next car. It's a workhorse and has excellent fuel efficiency. I've heard great things about the new hybrid models they offer. But the electric car technology is interesting, and I'll definitely keep it in mind for future consideration. Good luck with your car search!"
+    ],
+    [
+      "ParticipantA",
+      "Thanks! I'm sure I'll find a great electric car that fits my needs. And good luck with your search for the Toyota Tacoma. I'm sure it'll be a great choice for your needs. Take care!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! Have a great day! And thanks, I'll keep you posted on my search. Bye for now!"
+    ]
+  ],
+  "n_turns": 10,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "How's it going?"
+    ],
+    [
+      "ParticipantB",
+      "It's going well, thanks for asking. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm good too, thanks. So, I heard we're supposed to talk about computers today. What's your interest in personal computers like?"
+    ],
+    [
+      "ParticipantB",
+      "I'd say I'm pretty interested in them. I work as a librarian and we use computers a lot for our work, so I've become pretty familiar with them over the years. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I work as a nurse and we use computers quite a bit too. I'd say I'm pretty interested in them as well, but not as much as I used to be. I've been working with them for so long that they've kind of become just a tool for me to get things done."
+    ],
+    [
+      "ParticipantB",
+      "I can definitely relate to that. I've been working with computers for a long time too and sometimes it feels like they're just a means to an end. But at the same time, I still find them really fascinating and like to keep up with the latest developments. How about you? Do you still find them interesting?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I still find them interesting. I think it's important to stay up to date with the latest developments in technology, especially in the medical field. There are so many new developments happening all the time that can really improve patient care."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. And I think that's true for a lot of industries. The technology field is constantly evolving and it's important to keep up with the changes. What kind of computer do you use at work?"
+    ],
+    [
+      "ParticipantA",
+      "At work, we use a lot of different computers depending on the task. We have desktops for administrative tasks, laptops for mobile tasks, and tablets for patient care."
+    ],
+    [
+      "ParticipantB",
+      "That makes sense. We use a lot of different computers at my work too. I usually work on a desktop, but we also have laptops that we can check out if we need to work remotely. What kind of computer do you use at home?"
+    ],
+    [
+      "ParticipantA",
+      "At home, I have a desktop that I use for personal things like browsing the internet, playing games, and doing homework. I don't really do much work-related stuff on it, but I do use it for some personal projects that I'm working on."
+    ],
+    [
+      "ParticipantB",
+      "I see. I'm actually in the process of building my own computer right now. It's been a fun project and I'm excited to see how it turns out. Do you ever build your own computers?"
+    ],
+    [
+      "ParticipantA",
+      "I've never built my own computer before, but I've definitely thought about it. It seems like it could be a fun and rewarding experience. Have you found it to be difficult or challenging?"
+    ],
+    [
+      "ParticipantB",
+      "It can be challenging at times, but it's also really rewarding. I've always been interested in technology and building my own computer has been a great way for me to learn more about how everything works together. Plus, it's a lot cheaper than buying a pre-built computer. How about you? Have you ever thought about building your own computer?"
+    ],
+    [
+      "ParticipantA",
+      "I've definitely thought about it, but I've never actually done it. I'm not really handy when it comes to things like that, so I've always been a bit intimidated by the idea. But I do think it would be a cool experience to have a computer that I built myself."
+    ],
+    [
+      "ParticipantB",
+      "I totally understand. Building a computer can be intimidating if you're not familiar with the process. But if you're interested, there are a lot of resources online that can help you learn more about it. And if you have any questions, I'd be happy to help you out. What do you think?"
+    ],
+    [
+      "ParticipantA",
+      "Thanks for the offer! I might have to take you up on that. I've been curious about building my own computer for a while, but I've never really known where to start. I'll have to do some research and see if it's something I'm really interested in pursuing."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. And if you have any questions, don't hesitate to reach out. I'm always happy to help out a fellow computer enthusiast. Well, I think we've talked for long enough. It was nice chatting with you!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was nice chatting with you too! Thanks for the conversation. Have a great day!"
+    ]
+  ],
+  "n_turns": 21,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

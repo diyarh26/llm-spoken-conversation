@@ -1,0 +1,118 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 4333,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 25,
+    "education": "a college degree",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 27,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about American politics?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's pretty chaotic and polarizing right now."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it definitely seems that way. Do you think there's any hope for bipartisanship and compromise in the near future?"
+    ],
+    [
+      "ParticipantB",
+      "It's hard to say for sure, but I think it's definitely possible if both parties are willing to work towards it."
+    ],
+    [
+      "ParticipantA",
+      "I agree. What do you think is the most pressing issue facing the country right now?"
+    ],
+    [
+      "ParticipantB",
+      "In my opinion, the most pressing issue is probably the COVID-19 pandemic and its impact on the economy and healthcare system."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's definitely up there. What do you think should be the priority for the government in terms of addressing the pandemic?"
+    ],
+    [
+      "ParticipantB",
+      "I think the priority should be getting people vaccinated as quickly and efficiently as possible, as well as providing economic support to those who have been hit hardest by the pandemic."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. What do you think about the role of social media in politics and its impact on the public discourse?"
+    ],
+    [
+      "ParticipantB",
+      "I think social media has both positive and negative effects on politics and public discourse. On one hand, it can be a powerful tool for mobilizing people and spreading important information. On the other hand, it can also be a breeding ground for misinformation and extreme views."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely a double-edged sword. What do you think the solution is to address the negative effects of social media on politics?"
+    ],
+    [
+      "ParticipantB",
+      "I think there needs to be more regulation and oversight of social media platforms, as well as more education and media literacy programs to help people navigate the information landscape more effectively."
+    ],
+    [
+      "ParticipantA",
+      "Those are some great ideas. Thanks for chatting with me!"
+    ],
+    [
+      "ParticipantB",
+      "No problem, it was great chatting with you too!"
+    ],
+    [
+      "ParticipantA",
+      "Have a good day!"
+    ]
+  ],
+  "n_turns": 17,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

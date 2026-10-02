@@ -1,0 +1,154 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of pets do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have a dog and a cat."
+    ],
+    [
+      "ParticipantA",
+      "That's great! What breed is your dog?"
+    ],
+    [
+      "ParticipantB",
+      "My dog is a golden retriever."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I love golden retrievers! What's your cat like?"
+    ],
+    [
+      "ParticipantB",
+      "My cat is a sassy Siamese. She's quite the diva."
+    ],
+    [
+      "ParticipantA",
+      "Haha, I can imagine. I used to have a Siamese myself. What's your dog like?"
+    ],
+    [
+      "ParticipantB",
+      "He's a sweetheart. Super friendly and loves to play fetch."
+    ],
+    [
+      "ParticipantA",
+      "Sounds like a fun companion. What's your cat's name?"
+    ],
+    [
+      "ParticipantB",
+      "Her name is Whiskers."
+    ],
+    [
+      "ParticipantA",
+      "That's a cute name. What's your dog's name?"
+    ],
+    [
+      "ParticipantB",
+      "His name is Max."
+    ],
+    [
+      "ParticipantA",
+      "Max is a great name for a golden retriever. Do you have any funny stories about your pets?"
+    ],
+    [
+      "ParticipantB",
+      "Well, Max once got into the garbage and ate an entire pizza box. It wasn't pretty."
+    ],
+    [
+      "ParticipantA",
+      "Oh no! Did he get sick?"
+    ],
+    [
+      "ParticipantB",
+      "Thankfully, no. But he was pretty gassy for a while."
+    ],
+    [
+      "ParticipantA",
+      "Haha, poor Max. I can imagine. What about your cat? Do you have any funny stories about her?"
+    ],
+    [
+      "ParticipantB",
+      "Whiskers likes to hide in strange places, like inside the washing machine or inside the toilet paper roll. It's hilarious when we find her there."
+    ],
+    [
+      "ParticipantA",
+      "That's adorable! Do you have any favorite pet memories?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have a lot of great memories with my pets. One of my favorites is when Max came to greet me after a long trip. It was the best feeling in the world."
+    ],
+    [
+      "ParticipantA",
+      "I can imagine. Pets are such great companions. Do you have any advice for someone who's thinking about getting a pet?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I would say go for it! Just make sure you're ready for the responsibility and that you have the time and resources to care for them properly."
+    ],
+    [
+      "ParticipantA",
+      "Great advice. Well, it was nice talking to you about pets. Thanks for sharing your stories with me!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was great talking to you too."
+    ]
+  ],
+  "n_turns": 26,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "condition": "C4-P1",
+  "architecture": "C4",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "I've been eyeing a Subaru Outback. I love the versatility of an SUV with the reliability of a Subaru. How about you?\n\nWhat car do you have in mind?"
+    ],
+    [
+      "ParticipantA",
+      "I've been considering a Honda Civic. I like the fuel efficiency and the reliability of Honda vehicles. I also appreciate the compact size for city driving. How about you? What's your favorite car brand?\n\nWhat's your favorite car brand?"
+    ],
+    [
+      "ParticipantB",
+      "Subaru's my favorite. I've always had great experiences with their cars, and I really trust the brand. I've heard good things about the Honda Civic too. Fuel efficiency is definitely important, especially for my daily commute.\n\nDo you have a particular model of the Subaru Outback you're eyeing?\n\nI've had my eye on the latest model with all the bells and whistles, but I'm trying to keep it budget-friendly. What about you and the Civic? Do you have a preferred model?\n\nI've been looking at the Civic Sedan EX. It's a nice balance between comfort, features, and affordability for me. Have you test driven the Subaru Outback you're considering?\n\nYes, I have. I was really impressed with the ride quality and the features, especially the all-wheel drive system. It's a game-changer for me, living in a place with snowy winters. I'm really considering it.\n\nI see. Well, we both prioritize reliability, practicality, and fuel efficiency in our choices. It's nice to have this conversation and learn about each other's perspectives. Best of luck to you with your car search!\n\nThank you! You too. I wish you a happy and safe driving experience with your new Subaru Out"
+    ],
+    [
+      "ParticipantA",
+      "back. It seems like we both found a great match for our needs. It's always good to talk to others about our choices and learn from each other. Enjoy your new ride!\n\nThank you! I'll definitely enjoy my new car. And I appreciate our conversation too. Take care and enjoy your new Honda Civic."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was great talking to you about this. Have a wonderful time with your new Subaru Outback. Safe travels!\n\nBye for now! Take care and enjoy your new Honda Civic. Have a great day!"
+    ]
+  ],
+  "n_turns": 8,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 1,
+    "multi_turn_emissions": 0
+  }
+}
