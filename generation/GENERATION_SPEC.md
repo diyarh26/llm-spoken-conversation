@@ -83,6 +83,17 @@ written. It deliberately shows the measured forms, so it answers a different que
 P0–P2 prompts are verified byte-identical after adding P3 (180 prompts, all builders).
 Copied labels are stripped in analysis (`analysis/analyze.py`, exact label vocabulary only).
 
+**Stage-direction junk cutter extended (2026-10-02), applied before the C3/C4 full runs:** the
+C3/C4 test showed agents appending non-speech after their turn — "(Your turn count is N)",
+"(End of conversation.)", "(I'll now wait for the other caller's response)", "(Note: …)",
+"## Example response:" — in C4-P0 (59/177 turns), C4-P2 (64/120) and C3 (18/312). These
+patterns were added to `_META_RE` (the July junk cutter) and generation now also STOPS when
+one starts (`MetaArtifactStoppingCriteria`, output-neutral like the speaker-marker stop).
+Consistency proof: re-applying the new cutter to every stored turn changes **0** turns in
+C2-P1 (2,080), C2-P2 (2,051), C2-P0 (1,002 incl. the archived partial run) and C4-P1; C1
+never uses it. So all 12 conditions run identical cleaning. Ordinary parentheses in speech
+("(IoT)", "401(k)", "(writing, drawing, …)") are not matched (verified).
+
 ## 4. Decoding (FROZEN 2026-09-26 as-is; single source: `generation/config.py`)
 
 Freeze decision: the dev sweep forced no escalation for C1/C2 (dup-turn rate ≤0.005 at

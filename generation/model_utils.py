@@ -147,6 +147,7 @@ def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
         criteria.append(SentenceEndStoppingCriteria(tok, input_len, min_new_tokens=min_new_tokens))
     if stop_labels:
         criteria.append(SpeakerMarkerStoppingCriteria(tok, input_len, stop_labels))
+        criteria.append(MetaArtifactStoppingCriteria(tok, input_len))
     if criteria:
         gen_kwargs["stopping_criteria"] = StoppingCriteriaList(criteria)
 
@@ -286,9 +287,35 @@ _META_RE = re.compile(
     r"|(?:^|\n)\s*(?:USER|ASSISTANT|ASSISTMENT|SYSTEM|BOT)\b"
     r"|\*\*\s*\||\|\s*->|->\s*\||\bV\s+V\s+V\b"
     r"|(?:^|\n)\s*---\s*(?:$|\n)"
+    # Parenthesized stage directions / prompt echoes and fake headings (2026-09-30 C3/C4
+    # test: "(Your turn count is 68)", "(End of conversation.)", "## Example response:").
+    # Only these meta openers — ordinary parentheses in speech ("(IoT)", "401(k)",
+    # "(writing, drawing, composing music)") are never matched.
+    r"|\((?:your turn|end of (?:the )?conversation|the conversation (?:can|has|ends|is)|"
+    r"note:|i'll (?:now )?(?:wait|end)|here'?s a suggested|this is the final turn|"
+    r"it'?s important to remember that these conversations)"
+    r"|(?:^|\n)\s*#{1,6}\s"
+    r"|\bexample response\s*:"
     r")",
     re.I | re.M,
 )
+
+
+class MetaArtifactStoppingCriteria(StoppingCriteria):
+    """Stop as soon as the model starts writing non-speech residue (_META_RE).
+
+    Output-neutral like SpeakerMarkerStoppingCriteria: strip_meta_artifacts() cuts the turn
+    at the same match, so this only skips tokens that would be discarded. Searched after
+    peeling leading labels, exactly as the turn cleaner sees the text.
+    """
+
+    def __init__(self, tok, prompt_len: int):
+        self.tok = tok
+        self.prompt_len = prompt_len
+
+    def __call__(self, input_ids, scores, **kwargs) -> bool:
+        text = self.tok.decode(input_ids[0][self.prompt_len:], skip_special_tokens=True)
+        return _META_RE.search(_strip_lead_labels(text.strip())) is not None
 
 
 def strip_meta_artifacts(text: str) -> str:
