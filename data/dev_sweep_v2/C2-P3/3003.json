@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P3",
+  "architecture": "C2",
+  "prompt_level": "P3",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car do you think you might buy next?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been thinking about getting a hybrid."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting a hybrid too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'm really interested in getting one because of the gas mileage and the environmental benefits."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting one because of the gas mileage and the environmental benefits."
+    ],
+    [
+      "ParticipantB",
+      "I heard they're pretty reliable too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's definitely something I'm considering too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've been hearing good things about the Toyota Prius."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've also been looking at the Honda Insight."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think I might go with the Prius."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm considering both of them too."
+    ],
+    [
+      "ParticipantB",
+      "I've heard the Prius has a lot of advanced technology."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm also interested in the advanced technology."
+    ],
+    [
+      "ParticipantB",
+      "I think it's really important to test drive it before making a decision, though."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I definitely want to test drive it before making a decision."
+    ],
+    [
+      "ParticipantB",
+      "What about you? Have you test driven any hybrids yet?"
+    ],
+    [
+      "ParticipantA",
+      "I haven't had a chance to test drive one yet, but I'm planning to soon."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think it's a good idea to test drive it and see how it feels before making a decision."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm definitely going to test drive it and see how it feels before making a decision."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think it's important to think about the long-term costs too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. You should definitely think about the long-term costs."
+    ],
+    [
+      "ParticipantB",
+      "Well, I think I'm going to start looking for one soon."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, me too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, me too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, me too."
+    ],
+    [
+      "ParticipantB",
+      "Well, I'm looking forward to it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, me too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, me too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, me too."
+    ],
+    [
+      "ParticipantB",
+      "I'm really excited to try out the different features and see how it performs on the road."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, me too. I'm excited to see how it performs on the road too."
+    ],
+    [
+      "ParticipantB",
+      "Well, I should probably start doing some research and comparing prices too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, me too. I'm planning to do some research and compare prices too."
+    ],
+    [
+      "ParticipantB",
+      "What kind of features are you looking for in a hybrid car?"
+    ],
+    [
+      "ParticipantA",
+      "I'm looking for a car with good safety features, comfortable seats, and good handling."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, me too. I want a car that's safe and comfortable, and has all the latest technology."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, me too. I'm also looking for a car with good fuel economy and low emissions."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and I heard that the Prius has a great safety rating."
+    ],
+    [
+      "ParticipantA",
+      "I'm also interested in a car with good reliability and low maintenance costs."
+    ],
+    [
+      "ParticipantB",
+      "I'm looking for a car that's safe and comfortable, and has all the latest technology."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}
