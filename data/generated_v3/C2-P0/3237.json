@@ -1,0 +1,83 @@
+{
+  "condition": "C2-P0",
+  "architecture": "C2",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your home like? Is it typical for the area?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, it's a cozy little bungalow. Nothing too fancy, but it's got everything we need. It's typical for the area, I'd say. Most people around here have similar homes. How about yours?"
+    ],
+    [
+      "ParticipantA",
+      "That sounds nice. What do you mean by \"typical for the area\"?"
+    ],
+    [
+      "ParticipantB",
+      "Well, you know, just a typical suburban home. Most people around here have similar houses with a yard, a garage, and a few bedrooms. It's not too big or too small, just the right size for our family. How about yours?"
+    ],
+    [
+      "ParticipantA",
+      "That sounds great. I live in a larger house in a different area, so it's not really typical for here. My house has more bedrooms and a bigger yard, but it's not as cozy as what you described. How do you like living in a bungalow?"
+    ],
+    [
+      "ParticipantB",
+      "I love living in a bungalow! It's just the right size for us and we can easily take care of it. Plus, we have a small garden in the front and a backyard where the kids can play. It's perfect for us. How about you? Do you like living in a larger house?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I do like living in a larger house. It has more space for my family and I love having a big yard for my kids to play in. But it can be a lot of work to keep up with the maintenance and cleaning. How do you manage to keep your bungalow so cozy and welcoming?"
+    ]
+  ],
+  "n_turns": 9,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 2,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 2
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "condition": "C2-P0",
+  "architecture": "C2",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2469,
+  "topic": "Hobbies And Crafts",
+  "sb_prompt": "WHAT HOBBIES DO YOU HAVE IN YOUR SPARE TIME?  DO THEY INCLUDE ANY HANDICRAFTSWOODWORKING?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of hobbies do you have in your spare time?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I enjoy reading and learning new things. I also like to go hiking and exploring nature. As for handicrafts, I haven't tried woodworking yet, but I do love knitting and sewing."
+    ],
+    [
+      "ParticipantA",
+      "That's really interesting! I also enjoy reading and exploring nature, but I've never tried knitting or sewing before. Have you always been interested in handicrafts?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I've always been interested in creating things with my hands. My grandmother was a skilled seamstress, and I learned to sew from her when I was young. I later taught myself how to knit and have been enjoying it ever since."
+    ],
+    [
+      "ParticipantA",
+      "That's great that you learned from your grandmother. I wish I had someone in my family who could teach me handicrafts, but I never had the chance. Maybe I'll take a class or find a mentor someday. Do you have any favorite projects you've completed in knitting or sewing?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have a few favorite projects that I'm particularly proud of. One of them is a sweater that I knitted for my sister, which took me a while to complete but turned out really well. I also made a quilt for my parents' anniversary, which was a fun and challenging project."
+    ],
+    [
+      "ParticipantA",
+      "That's really impressive! I can imagine the satisfaction you must have felt completing those projects. Have you ever considered selling your handmade items or sharing them with a wider audience?"
+    ],
+    [
+      "ParticipantB",
+      "Actually, I have considered selling my handmade items before. I've even thought about starting an Etsy shop or participating in local craft fairs. But to be honest, I mostly do it for the joy of creating something with my own hands, and I haven't yet found the motivation to turn it into a business. Plus, I don't have as much time for my hobbies as I used to now that I have a full-time job."
+    ],
+    [
+      "ParticipantA",
+      "I completely understand where you're coming from. It's important to have a balance between work and personal interests, and sometimes turning a hobby into a business can take away the joy of doing it. Have you thought about joining any local craft groups or communities where you can share your passion for handicrafts with others?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have thought about joining a local craft group or community, and I'm actually planning to attend a meeting next week to see if it's a good fit for me. I'm excited about the prospect of meeting others who share my passion for handicrafts and learning from them. I think it could be a great way to expand my skills and knowledge in the field."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a great idea! I think joining a local craft group or community is a great way to meet like-minded people and learn from them. I hope you find it to be a rewarding experience and that you get to share your own skills and knowledge with others as well."
+    ],
+    [
+      "ParticipantB",
+      "Thanks, I appreciate your encouragement! I'm looking forward to meeting new people and expanding my skills in handicrafts. And who knows, maybe one day I'll even feel motivated to turn it into a business. But for now, I'm just enjoying the process and the satisfaction of creating something with my own hands."
+    ],
+    [
+      "ParticipantA",
+      "It's great to hear that you're enjoying the process and finding satisfaction in creating something with your own hands. I think it's important to have hobbies that bring us joy and fulfillment, and it sounds like handicrafts do that for you. Maybe one day you'll feel motivated to turn it into a business, but for now, enjoying the process is what matters. I hope you have a great time at the craft group meeting next week, and I look forward to hearing about your experiences and any new skills you learn."
+    ],
+    [
+      "ParticipantB",
+      "Thank you so much for your support and encouragement! I really appreciate it. I'm looking forward to meeting new people and learning more about handicrafts. I'll definitely keep you updated on my experiences and any new skills I learn. And who knows, maybe someday we'll even collaborate on a project together."
+    ]
+  ],
+  "n_turns": 16,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 2,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 2,
+    "dup_resamples": 1
+  }
+}
