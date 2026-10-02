@@ -1,0 +1,134 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, where are you from?"
+    ],
+    [
+      "ParticipantB",
+      "I'm from a small town in the Midwest. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm from a suburb outside of a big city. I love living here because it's close to everything, but still has a small-town feel. How about you?"
+    ],
+    [
+      "ParticipantB",
+      "I also live in a suburb, but it's a bit more rural. I love the peace and quiet, and being able to see the stars at night. But sometimes I do miss having more things to do within walking distance."
+    ],
+    [
+      "ParticipantA",
+      "That sounds lovely. I can imagine how peaceful it must be. My suburb has a lot of restaurants and shops, and there's always something going on. But sometimes the noise and crowds can be overwhelming. What's your favorite thing about living in your town?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite thing about living in my town is the sense of community. Everyone knows each other and looks out for one another. Plus, we have a lot of events throughout the year that bring people together, like a county fair and a farmers market."
+    ],
+    [
+      "ParticipantA",
+      "That sounds wonderful. In my suburb, there are also a lot of community events, like festivals and charity runs. I especially love the farmers market, where I can buy fresh produce and support local vendors. What's your favorite thing to do in your town?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite thing to do in my town is to take long walks in the park. There's a beautiful trail that goes around a lake, and it's so peaceful and scenic. I also love to visit the local farms and pick fresh fruits and vegetables."
+    ],
+    [
+      "ParticipantA",
+      "That sounds so relaxing. In my suburb, I love going to the park for a picnic or a game of frisbee with my friends. We also have a lot of great hiking trails nearby that I like to explore. What's your favorite thing to do when you have some free time?"
+    ],
+    [
+      "ParticipantB",
+      "When I have some free time, I love to read a good book or do some painting. I find that these activities help me relax and unwind after a long day."
+    ],
+    [
+      "ParticipantA",
+      "That's great. I also enjoy reading and painting. I find that they help me escape from the stresses of everyday life. What kind of books do you like to read?"
+    ],
+    [
+      "ParticipantB",
+      "I like to read a variety of books, but I especially enjoy mystery novels and romance books. They're both fun and entertaining, and I love getting lost in the stories."
+    ],
+    [
+      "ParticipantA",
+      "I can definitely relate. I also enjoy reading a mix of genres, but I particularly love science fiction and fantasy. They're so imaginative and creative, and they take me to different worlds. What's your favorite romance novel?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite romance novel is probably \"The Hating Game\" by Sally Thorne. It's a fun, lighthearted read about two people who work together and can't stand each other, but eventually fall in love."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I've heard great things about that book! I'll have to add it to my reading list. Thanks for the recommendation!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! I hope you enjoy it."
+    ],
+    [
+      "ParticipantA",
+      "Me too! Thanks for chatting with me. It was great getting to know more about you and your hometown."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was nice chatting with you too. Take care!"
+    ],
+    [
+      "ParticipantA",
+      "You too! Bye!"
+    ]
+  ],
+  "n_turns": 21,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

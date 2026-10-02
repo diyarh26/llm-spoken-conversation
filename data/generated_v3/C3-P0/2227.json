@@ -1,0 +1,114 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2227,
+  "topic": "Tv Programs",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER'S FAVORITE TV SHOWS ARE AND WHY.  ARE YOUR INTERESTS SIMILAR OR DIFFERENT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 16,
+    "education": "a high-school education",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what are your favorite TV shows?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite TV shows are \"Riverdale\" and \"Stranger Things.\" I love the mix of drama and mystery in \"Riverdale,\" and the sci-fi and supernatural elements in \"Stranger Things.\" How about you?"
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's cool! I actually really enjoy \"Stranger Things\" too! It's such a fun and exciting show. As for my favorite TV shows, I love \"Breaking Bad\" and \"The Office.\" I think they're both really well-written and have great characters.\n\nWhat do you like about \"Riverdale\" and \"Stranger Things\"?"
+    ],
+    [
+      "ParticipantB",
+      "I love the characters in \"Riverdale\" and how they all have their own unique personalities and storylines. The mystery aspect of the show also keeps me on the edge of my seat. As for \"Stranger Things,\" I love the 80s nostalgia and the strong friendships between the characters. The sci-fi elements are also really interesting and add to the show's overall atmosphere.\n\nWhat do you think makes \"Breaking Bad\" and \"The Office\" stand out from other TV shows?"
+    ],
+    [
+      "ParticipantA",
+      "I think \"Breaking Bad\" is so good because of its complex characters and the moral dilemmas they face. It's not just a show about a drug dealer, it's about the human side of the story and the consequences of one's actions. And \"The Office\" is just hilarious! The characters are all so relatable and the humor is timeless. It's a show that never gets old.\n\nDo you have a favorite character from \"Riverdale\" or \"Stranger Things\"?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite character from \"Riverdale\" is definitely Jughead. I love his sense of humor and how he's always thinking outside the box. From \"Stranger Things,\" my favorite character is Eleven. Her powers and her backstory make her a really interesting and unique character.\n\nWhat about you? Who is your favorite character from \"Breaking Bad\" or \"The Office\"?"
+    ],
+    [
+      "ParticipantA",
+      "My favorite character from \"Breaking Bad\" is definitely Walter White. I think Bryan Cranston did an amazing job portraying his transformation from a meek chemistry teacher to a ruthless drug lord. And from \"The Office,\" my favorite character is probably Jim. He's just so likable and his pranks are always hilarious.\n\nHave you watched any other shows that you would recommend?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I would definitely recommend \"Friday Night Lights\" if you're looking for a show with a lot of heart and great characters. It's about a high school football team in a small town, and it explores themes of family, friendship, and perseverance. Another show I would recommend is \"The Good Place,\" which is a really clever and funny show about the afterlife.\n\nWhat about you? Do you have any other show recommendations?"
+    ],
+    [
+      "ParticipantA",
+      "Sure! I would recommend \"Better Call Saul\" if you're a fan of \"Breaking Bad.\" It's a prequel that follows the story of Jimmy McGill, who becomes Saul Goodman. It's a great show with great characters and a lot of suspense. Another show I would recommend is \"The Marvelous Mrs. Maisel,\" which is a period comedy-drama about a housewife who becomes a stand-up comic in the 1950s.\n\nThanks for the recommendations!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! I'll have to check out \"Better Call Saul\" and \"The Marvelous Mrs. Maisel.\"\n\nIs there anything else you'd like to talk about?"
+    ],
+    [
+      "ParticipantA",
+      "Sure! What are your thoughts on the current state of television? Do you think there are more good shows now than there used to be?\n\nAnd, just curious, what do you do for a living?\n\n(This was the final turn of talk in the conversation.)"
+    ],
+    [
+      "ParticipantB",
+      "I think there are definitely more good shows now than there used to be, thanks to the increased competition between streaming services and cable networks. There's a wider range of shows that cater to different tastes and interests, which is great for audiences.\n\nAs for what I do for a living, I'm a software engineer. It's a demanding but rewarding job, and it allows me to use my creativity and problem-solving skills. How about you? What do you do for a living?"
+    ],
+    [
+      "ParticipantA",
+      "That's great to hear! I'm actually a software developer too. It can be challenging at times, but it's a rewarding career that allows me to use my skills to build useful and innovative products.\n\nWell, it was great chatting with you!"
+    ],
+    [
+      "ParticipantB",
+      "Likewise! It was nice talking to someone who shares my interest in TV shows and software engineering. Have a great day!"
+    ]
+  ],
+  "n_turns": 16,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 1,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1
+  }
+}
