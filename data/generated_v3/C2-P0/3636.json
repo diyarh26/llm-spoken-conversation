@@ -1,0 +1,115 @@
+{
+  "condition": "C2-P0",
+  "architecture": "C2",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3636,
+  "topic": "Camping",
+  "sb_prompt": "FIND OUT FROM THE OTHER CALLER WHAT KIND OF CAMPING THEY HAVE DONE.  HOW DOES IT COMPARE WITH YOUR OWN EXPERIENCES?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of camping have you done in the past? I'm always looking for new places to explore and compare notes."
+    ],
+    [
+      "ParticipantB",
+      "Well, I've done a bit of everything when it comes to camping. I've gone on backpacking trips through the mountains, car camping with my family, and even a few luxury glamping experiences. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "Sounds like you've had a lot of diverse camping experiences. I've mostly done car camping and a few backpacking trips, but nothing too extreme. I'd love to try glamping sometime, it sounds like a nice change of pace from roughing it in the wilderness. What's been your favorite type of camping experience?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite type of camping experience has been backpacking through the Sierra Nevada mountains. The views were breathtaking and the feeling of being so immersed in nature was unbeatable. Have you ever done any backpacking trips?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I have done some backpacking trips, but nothing as intense as the Sierra Nevada mountains. I've mostly stuck to more manageable trails and shorter trips. But I do agree that the feeling of being immersed in nature is truly unbeatable. It's what I love most about camping. What about you? Do you have a favorite spot you like to camp at?"
+    ],
+    [
+      "ParticipantB",
+      "I do have a favorite spot that I like to camp at, but it's hard to pick just one! I've had some great experiences at Yosemite National Park, but I also love the scenery and peacefulness of the Redwood forests in Northern California. How about you? Do you have a favorite spot you like to camp at?"
+    ],
+    [
+      "ParticipantA",
+      "I don't have a specific favorite spot, but I do enjoy exploring different national parks and wilderness areas. I've had some great experiences at Yellowstone, Yosemite, and Grand Teton, but I'm always on the lookout for new places to explore. How about you? Do you have any specific spots you like to return to, or do you prefer to try new places?"
+    ],
+    [
+      "ParticipantB",
+      "I do have a few spots that I like to return to, but I also love discovering new places to camp. I think it's important to mix it up and try different types of camping experiences. Have you ever tried any winter camping?"
+    ],
+    [
+      "ParticipantA",
+      "Actually, I have tried winter camping before and it was quite an experience. I went on a skiing trip with some friends and we set up our tents in a secluded area near the slopes. The cold air and snow made it a unique camping experience, but it was also very challenging. Have you ever tried winter camping before?"
+    ],
+    [
+      "ParticipantB",
+      "I have tried winter camping before, but it's not my favorite type of camping experience. I prefer warmer temperatures and more comfortable conditions. Have you ever gone on a camping trip with a large group of people, like a family reunion or a friends' get-together?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I have gone on a few camping trips with large groups of people, usually for family reunions or friends' get-togethers. It's always a great way to connect and spend time together in nature. What about you? Have you ever gone camping with a large group of people?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have gone on camping trips with large groups of people before. It's always a fun and memorable experience, especially when you have a big group of friends or family members to share it with. What about you? Do you have any upcoming camping trips planned?"
+    ],
+    [
+      "ParticipantA",
+      "Actually, I do have a trip planned for this summer. I'm planning to take a group of friends to the Boundary Waters Canoe Area Wilderness in Minnesota for a week-long canoe trip. I've heard it's a beautiful and remote area with lots of lakes and forests to explore. Have you ever been there before or have any recommendations for places to camp?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, that sounds like a fantastic trip! I have been to the Boundary Waters Canoe Area Wilderness before, and I can attest to the fact that it is a beautiful and remote area. There are so many lakes and forests to explore, and the canoeing is a great way to experience the area. Just make sure to bring plenty of bug spray, as the mosquitoes can be quite pesky in some areas. Have a great time on your trip!"
+    ],
+    [
+      "ParticipantA",
+      "Thanks for the advice! I'll definitely keep that in mind. I'm really looking forward to the trip, and I'm sure it will be an unforgettable experience. Have you ever been to any other great camping destinations that you'd recommend?"
+    ]
+  ],
+  "n_turns": 17,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
