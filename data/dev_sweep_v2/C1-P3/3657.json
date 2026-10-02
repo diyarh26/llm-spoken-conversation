@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what do you think about personal computers?\nParticipantB: Uh, well, I think they're pretty useful, but I'm not exactly an expert.\nParticipantA: Same here. I mean, I've been using one for years now, but I don't know everything about it.\nParticipantB: Yeah, I feel the same way. I mean, I use one for work and stuff, but I'm not really into it.\nParticipantA: Yeah, I guess it's just a tool for us, you know?\nParticipantB: Exactly. I mean, it's not something I really think about much.\nParticipantA: Right. So, what do you use your computer for mostly?\nParticipantB: Oh, mostly just work stuff, you know, checking emails, organizing our catalog.\nParticipantA: Yeah, that sounds about right. I use mine mostly for work too, and for browsing the internet.\nParticipantB: Yeah, I do a lot of that too.\nParticipantA: How about you? Do you have a preferred type of computer or brand?\nParticipantB: Well, I don't really have a preference, to be honest. As long as it does what I need it to, I'm happy.\nParticipantA: Yeah, that's pretty much how I feel too. I mean, I haven't really had any problems with my computer, so I haven't had a reason to switch.\nParticipantB: Yeah, I think that's important. I mean, if it works well and doesn't break down, why bother changing it?\nParticipantA: Exactly. So, do you have any experience with computer problems?\nParticipantB: Well, I had a problem with my computer a while back. It wouldn't start up and I had to get it fixed.\nParticipantA: Oh, that sounds frustrating. What was wrong with it?\nParticipantB: It was a virus, apparently. Someone had sent me an email with a virus attached, and it messed up my computer.\nParticipantA: Oh, I see. Yeah, viruses can be a real pain.\nParticipantB: Yeah, but luckily, I was able to get it fixed without too much trouble.\nParticipantA: That's good to hear. I had a similar problem once, but I wasn't as lucky. I had to buy a new computer.\nParticipantB: Oh, I'm sorry to hear that. That can be pretty expensive.\nParticipantA: Yeah, it was. But I guess it was worth it in the end, since I needed a new one anyway.\nParticipantB: Yeah, I can imagine. So, do you have any favorite computer programs or games?\nParticipantA: Well, I don't really play games much, but I do use a lot of programs for work. Like, there's this one program that helps me keep track of my patients' information.\nParticipantB: Oh, that sounds useful. I don't really use any programs for work, but I do have a few games on my computer that I like to play.\nParticipantA: Oh, cool. What kind of games do you like to play?\nParticipantB: Well, I like puzzle games and some adventure games. They're pretty fun.\nParticipantA: Yeah, I can see how those would be entertaining. I'm not really into games myself, but I know some people who are.\nParticipantB: Yeah, I think games can be a great way to relax and have some fun.\nParticipantA:",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 853,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

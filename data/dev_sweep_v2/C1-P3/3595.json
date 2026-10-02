@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what kind of books do you like to read?\nParticipantB: Oh, I really enjoy reading a lot of classic literature.\nParticipantA: Yeah, me too. I'm a big fan of Jane Austen and the Bront\u00eb sisters.\nParticipantB: Oh, really? I love them too. Have you read any of their lesser-known works?\nParticipantA: Yes, I recently read \"The Watsons\" by Jane Austen and found it quite enjoyable.\nParticipantB: Oh, I haven't read that one yet, but I'll have to give it a try. Do you have any other favorite authors or genres?\nParticipantA: I also enjoy reading some contemporary fiction, like the works of Toni Morrison and Margaret Atwood.\nParticipantB: Oh, I've read \"Beloved\" by Toni Morrison, it was a powerful book. What about you?\nParticipantA: Yeah, I've read \"The Handmaid's Tale\" by Margaret Atwood, it's a thought-provoking book that raises important questions about society and gender.\nParticipantB: Yeah, I agree. I also like to read books that challenge me and make me think. Have you read any non-fiction books that you found particularly insightful?\nParticipantA: Yes, I recently read \"The Immortal Life of Henrietta Lacks\" by Rebecca Skloot, which is a true story about a woman whose cancer cells were used without her knowledge for scientific research.\nParticipantB: Oh, I've heard of that book, but I haven't read it yet. It sounds interesting. What did you think about it?\nParticipantA: It was a fascinating and well-written book that shed light on some important ethical issues in science and medicine.\nParticipantB: Yeah, I can imagine. I'm also interested in books that explore different cultures and perspectives. Have you read any books that do that?\nParticipantA: Yes, I recently read \"The Sympathizer\" by Viet Thanh Nguyen, which is a novel about a Vietnamese soldier who comes to the United States after the fall of Saigon.\nParticipantB: Oh, I've heard of that book, but I haven't read it yet. It sounds like it would be a good read.\nParticipantA: Yes, it's a thought-provoking book that explores the complexities of identity and the immigrant experience.\nParticipantB: Yeah, I'm always looking for books that challenge my perspective and broaden my understanding of the world.\nParticipantA: Me too. It's great to find someone who shares my love for reading.\nParticipantB: Definitely. Well, it was nice talking to you.\nParticipantA: Yeah, it was great talking to you too.\n\nParticipantB: Bye!\nParticipantA: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 700,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

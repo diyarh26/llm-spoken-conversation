@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what kind of pets do you have?\nParticipantB: Oh, I have a dog.\nParticipantA: That's great! What kind of dog is it?\nParticipantB: It's a golden retriever.\nParticipantA: I love golden retrievers. I used to have one when I was a kid.\nParticipantB: Yeah, they're such great dogs.\nParticipantA: Definitely. What do you like about them?\nParticipantB: I think they're just so friendly and loyal.\nParticipantA: Yeah, that's definitely true. What do you do with your dog? Do you take it for walks or anything?\nParticipantB: Oh, all the time. We love going on hikes together.\nParticipantA: That sounds like so much fun. I used to go on hikes with my dog too.\nParticipantB: Yeah, it's a great way to spend time together and get some exercise.\nParticipantA: Definitely. I don't have a pet right now, but I used to have a cat.\nParticipantB: Oh, I love cats too. What did your cat like to do?\nParticipantA: My cat loved to curl up in my lap and sleep. It was such a comfort to have her around.\nParticipantB: Yeah, cats are great for that. They can be so comforting.\nParticipantA: Definitely. What do you think about pets in general?\nParticipantB: I think they're great. They can bring so much joy to your life.\nParticipantA: Yeah, I agree. I'm a little bit skeptical about the whole pet thing, though.\nParticipantB: Really? Why is that?\nParticipantA: I don't know, I just feel like it's a lot of work to take care of a pet.\nParticipantB: Yeah, I can see how that would be. But I think it's worth it if you're willing to put in the effort.\nParticipantA: I agree. It's just that I've never really been a big animal person.\nParticipantB: Oh, I see. Well, I've always loved animals. I think they're so cute and interesting.\nParticipantA: Yeah, I can understand that. I just don't have the same connection with them that some people do.\nParticipantB: Yeah, I get it. But I think that everyone has their own unique perspective on things.\nParticipantA: Definitely. Well, it was nice talking with you.\nParticipantB: Yeah, you too. Thanks for chatting with me.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 644,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}
