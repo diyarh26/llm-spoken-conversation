@@ -15,3 +15,15 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
   saved 3595  (400 words, cap_hit=False)
   saved 4333  (319 words, cap_hit=False)
   saved 3657  (516 words, cap_hit=False)
+WARN: push failed after c1 (continuing)
+=== dev c2-P3 2026-10-02T13:11:06Z ===
+usage: generate_c2.py [-h] [--prompt {P0,P1,P2}] [--n N] [--ids IDS]
+                      [--max-turns MAX_TURNS]
+                      [--max-new-tokens MAX_NEW_TOKENS]
+                      [--temperature TEMPERATURE] [--top-p TOP_P]
+                      [--min-new-tokens MIN_NEW_TOKENS] [--stop-at-sentence]
+                      [--no-stop-at-sentence]
+                      [--repetition-penalty REPETITION_PENALTY]
+                      [--no-repeat-ngram NO_REPEAT_NGRAM]
+                      [--out-root OUT_ROOT]
+generate_c2.py: error: argument --prompt: invalid choice: 'P3' (choose from 'P0', 'P1', 'P2')
