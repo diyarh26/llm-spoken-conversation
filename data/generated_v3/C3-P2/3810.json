@@ -1,0 +1,122 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3810,
+  "topic": "Music",
+  "sb_prompt": "PLEASE DISCUSS MUSIC.  CAN YOU FIND MUSICIANSOR TYPES OF MUSIC THAT BOTH YOU AND THE OTHER CALLER LIKE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of music do you like?"
+    ],
+    [
+      "ParticipantB",
+      "I really enjoy pop and rock music. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm more into indie and alternative music, but I do enjoy a good pop or rock song every now and then. What are some of your favorite pop and rock artists?"
+    ],
+    [
+      "ParticipantB",
+      "I'm a big fan of Taylor Swift, Ed Sheeran, and Coldplay. How about you? Who are some of your favorite indie and alternative artists?"
+    ],
+    [
+      "ParticipantA",
+      "I like artists like Arcade Fire, The National, and Fleet Foxes for indie, and The Strokes, The White Stripes, and Radiohead for alternative. What about you, any favorite artists or songs you'd like to share?"
+    ],
+    [
+      "ParticipantB",
+      "I also love The Strokes and Radiohead! And I've been really into the new Taylor Swift album. Have you listened to it yet? What are your thoughts on it?"
+    ],
+    [
+      "ParticipantA",
+      "I have listened to it, and while I enjoy some of the songs, I found the production to be a bit too polished for my taste. I prefer her earlier work, like \"Red\" and \"Fearless.\" What about you? Do you have a favorite album or song from her discography?"
+    ],
+    [
+      "ParticipantB",
+      "I agree that her earlier work is really great too, especially \"Fearless.\" I'd say my favorite album is \"1989.\" What about you, any favorite songs or albums from those artists you mentioned?"
+    ],
+    [
+      "ParticipantA",
+      "From Arcade Fire, I love their album \"The Suburbs.\" It's one of those rare albums that I can listen to start to finish. From The Strokes, I enjoy their self-titled debut album. And from Radiohead, I have a soft spot for \"Kid A.\" What about you, any favorite albums or songs from these artists?"
+    ],
+    [
+      "ParticipantB",
+      "I also love \"The Suburbs\" by Arcade Fire and \"Kid A\" by Radiohead. And from The Strokes, I really like their song \"Last Nite.\" Have you heard their latest album, \"The New Abnormal\"? What are your thoughts on it?"
+    ],
+    [
+      "ParticipantA",
+      "I have listened to \"The New Abnormal\" and while it's a solid album, I don't think it's as strong as their earlier work. But, I really like their song \"Bad Decisions.\" What do you think about that one?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't heard that song yet, but I'll definitely have to check it out! What are your thoughts on some of the newer indie and alternative artists like Phoebe Bridgers, Arlo Parks, and Glass Animals?"
+    ],
+    [
+      "ParticipantA",
+      "I think Phoebe Bridgers is a fantastic artist, and her album \"Punisher\" is one of the best albums I've heard in recent years. Arlo Parks is also quite talented, and her song \"Black Dog\" is beautiful. As for Glass Animals, I'm not as familiar with their music, but I've heard good things. What do you think about these artists?"
+    ],
+    [
+      "ParticipantB",
+      "I completely agree about Phoebe Bridgers and Arlo Parks! And I've heard great things about Glass Animals too, but I haven't had a chance to listen to them yet. I'm always on the lookout for new artists to discover, so I'll have to check them out. Thanks for the recommendations!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! I'm glad I could recommend some new artists for you to check out. It's always great to discover new music and expand our musical horizons. Thanks for the conversation, and take care!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you too! It was great talking with you. Have a good day!"
+    ]
+  ],
+  "n_turns": 18,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

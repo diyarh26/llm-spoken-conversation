@@ -1,0 +1,126 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3676,
+  "topic": "Movies",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THOUGHT ABOUT THE LAST FEW MOVIES THEY SAW. WHAT MOVIES HAVE YOU SEEN LATELY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what movies have you seen lately?"
+    ],
+    [
+      "ParticipantB",
+      "I saw a movie called \"Ford v Ferrari\" recently. It was really good."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I heard it was great! Did you enjoy it?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I really liked it. It had a lot of great racing scenes and the acting was top-notch."
+    ],
+    [
+      "ParticipantA",
+      "That's great to hear. Have you seen any other good movies lately?"
+    ],
+    [
+      "ParticipantB",
+      "I also saw \"Joker\" and while it was a well-made film, it was a bit too dark for my taste."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it definitely had a different tone than what I'm used to. What did you think of the performances in the movie?"
+    ],
+    [
+      "ParticipantB",
+      "Joaquin Phoenix was phenomenal in his role as the Joker. He completely embodied the character and gave a powerful performance."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. He's an incredibly talented actor. Did you see any other movies recently that you thought were worth mentioning?"
+    ],
+    [
+      "ParticipantB",
+      "I also saw \"Little Women\" and thought it was a beautiful film. The acting was superb and the story was well-told."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I've been wanting to see that one. I've heard it's a great adaptation of the classic novel. Have you seen any other movies that you thought were disappointing?"
+    ],
+    [
+      "ParticipantB",
+      "I recently saw \"Terminator: Dark Fate\" and while it had some decent action scenes, the story was just too predictable and lacked any real surprises."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, the Terminator franchise has had its ups and downs. What did you think of the new characters introduced in the movie?"
+    ],
+    [
+      "ParticipantB",
+      "I thought the new characters were fine, but they just didn't add much to the overall story. It felt like they were trying to reboot the franchise, but it just didn't work for me."
+    ],
+    [
+      "ParticipantA",
+      "That's too bad. Well, we'll have to agree to disagree on that one. Thanks for chatting with me about movies!"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was great chatting with you too! Take care!"
+    ],
+    [
+      "ParticipantA",
+      "You too!"
+    ]
+  ],
+  "n_turns": 19,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

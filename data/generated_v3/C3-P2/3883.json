@@ -1,0 +1,110 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3883,
+  "topic": "Clothing And Dress",
+  "sb_prompt": "THE TOPIC IS CLOTHING.  PLEASE FIND OUT HOW THE OTHER CALLER TYPICALLY DRESSES FOR WORK.  HOW MUCH VARIATION IS THERE FROM DAY TO DAY?  HOW MUCH VARIATION IS THERE FROM SEASON TO SEASON?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 57,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you typically wear to work?"
+    ],
+    [
+      "ParticipantB",
+      "For work, I usually wear scrubs. How about you? What do you wear to work?"
+    ],
+    [
+      "ParticipantA",
+      "I usually wear business casual attire, like slacks and a button-up shirt. How about you, do you wear scrubs every day?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I wear scrubs every day to work as a dental hygienist. It's important to wear clothing that's comfortable and allows for easy movement during work. What's your experience with dress codes at your workplace?"
+    ],
+    [
+      "ParticipantA",
+      "Our factory has a pretty relaxed dress code, as long as we're wearing something that's not too revealing or offensive. But I've worked at other places where the dress code was stricter, so I appreciate the freedom we have here. How about you, do you have a dress code at your workplace?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have a dress code at my workplace, as dental hygiene requires a professional and sterile environment. But I agree, it's nice to have some freedom in what you wear to work. It can make a big difference in how comfortable and confident you feel throughout the day. What do you think about dress codes in general?"
+    ],
+    [
+      "ParticipantA",
+      "I think dress codes can be helpful in setting a professional tone and maintaining a certain level of decorum in the workplace. But at the same time, I think it's important to strike a balance between professionalism and individuality. What's your take on that?"
+    ],
+    [
+      "ParticipantB",
+      "I agree, dress codes can set a professional tone and maintain a certain level of decorum in the workplace. However, I also believe that individuality is important, and it's essential to strike a balance between the two. Sometimes, dress codes can be too strict and limit personal expression. What's your experience with that?"
+    ],
+    [
+      "ParticipantA",
+      "I've definitely had experiences where dress codes were too strict, and it felt like they were stifling my creativity and personal expression. But at the same time, I can understand the need for a certain level of professionalism and consistency in the workplace. What are your thoughts on that?"
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. It's essential to find a balance between professionalism and individuality, as overly strict dress codes can stifle creativity and personal expression. It's important to maintain a level of professionalism in the workplace, but at the same time, allow for individuality to foster a more inclusive and creative environment. What do you think about that?"
+    ],
+    [
+      "ParticipantA",
+      "I think that's a great way to look at it. It's important to maintain a level of professionalism, but also to allow for individuality and creativity in the workplace. That way, we can create an environment that's both productive and inclusive. Thanks for chatting with me about this!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was great chatting with you too. Have a great day!"
+    ],
+    [
+      "ParticipantA",
+      "You too! Take care!"
+    ]
+  ],
+  "n_turns": 15,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

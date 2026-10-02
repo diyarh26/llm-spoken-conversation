@@ -1,0 +1,122 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3573,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 67,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "I'm thinking of getting a pickup truck."
+    ],
+    [
+      "ParticipantA",
+      "Nice! What kind of pickup truck are you interested in?"
+    ],
+    [
+      "ParticipantB",
+      "I'm not really sure yet. I've been thinking about a Ford or a Chevy, but I haven't decided on a specific model yet."
+    ],
+    [
+      "ParticipantA",
+      "That makes sense. What are your main priorities when it comes to choosing a pickup truck?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I want something that's reliable and has a good towing capacity. I also want something that's comfortable to drive and has plenty of room for hauling stuff."
+    ],
+    [
+      "ParticipantA",
+      "Those are all important factors to consider. What about fuel efficiency? Do you care about how much gas it uses?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, definitely. I don't want to spend a fortune on gas, so I'll be looking for something that has good fuel economy."
+    ],
+    [
+      "ParticipantA",
+      "That's a smart move. What are your thoughts on buying new vs. used?"
+    ],
+    [
+      "ParticipantB",
+      "I've been considering both options. A new pickup truck would have the latest features and warranty, but it would also be more expensive. On the other hand, a used pickup truck would be more affordable, but I'd have to worry about potential issues with the previous owner."
+    ],
+    [
+      "ParticipantA",
+      "That's a tough decision. Have you thought about test driving a few different models to see which one feels the best to you?"
+    ],
+    [
+      "ParticipantB",
+      "I have thought about that. I'm hoping to test drive a few different models to get a feel for which one is the best fit for me."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a good plan. Well, I hope you find the perfect pickup truck for your needs. Thanks for chatting with me!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you, you too!"
+    ],
+    [
+      "ParticipantA",
+      "Bye!"
+    ],
+    [
+      "ParticipantB",
+      "Bye!"
+    ]
+  ],
+  "n_turns": 18,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

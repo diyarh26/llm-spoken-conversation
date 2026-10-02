@@ -1,0 +1,126 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2227,
+  "topic": "Tv Programs",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER'S FAVORITE TV SHOWS ARE AND WHY.  ARE YOUR INTERESTS SIMILAR OR DIFFERENT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 16,
+    "education": "a high-school education",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your favorite TV show?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite TV show is \"Breaking Bad\"."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I've heard of that one! What do you like about it?"
+    ],
+    [
+      "ParticipantB",
+      "I love the character development and the storyline. The show is so well written and the actors do an amazing job."
+    ],
+    [
+      "ParticipantA",
+      "That sounds interesting. I haven't seen it yet, but I've heard good things. What kind of shows do you usually watch?"
+    ],
+    [
+      "ParticipantB",
+      "I watch a mix of shows, but I mostly enjoy dramas and comedies. I also like to watch reality shows sometimes."
+    ],
+    [
+      "ParticipantA",
+      "That's cool! I usually watch comedies and sometimes documentaries. What's your favorite reality show?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite reality show is \"Survivor\". I love the challenge and the strategy involved in the game."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I used to watch that show a long time ago! What do you think about the latest season?"
+    ],
+    [
+      "ParticipantB",
+      "The latest season of \"Survivor\" was really good. I thought the cast was really strong and the challenges were interesting."
+    ],
+    [
+      "ParticipantA",
+      "Great! I might have to check it out again. So, what do you think about the current state of TV in general? Do you think there's enough variety or do you feel like there's a lack of originality?"
+    ],
+    [
+      "ParticipantB",
+      "I think there's a good amount of variety on TV right now. There are a lot of shows that are really well done and offer something different. Of course, there are also shows that are more formulaic, but I think that's always been the case with TV."
+    ],
+    [
+      "ParticipantA",
+      "That's a good point. I agree that there's always been a mix of good and not-so-good shows. What do you think about the rise of streaming services and how it's changing the way we watch TV?"
+    ],
+    [
+      "ParticipantB",
+      "I think streaming services have definitely changed the game. It's so convenient to be able to watch what you want, when you want. And there are so many great shows on these platforms that might not have made it to traditional TV."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I totally agree. It's really opened up the possibilities for storytelling and allowed for more diverse perspectives. Well, thanks for chatting with me! This was really interesting."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was great chatting with you too. Have a good day!"
+    ],
+    [
+      "ParticipantA",
+      "You too! Take care!"
+    ]
+  ],
+  "n_turns": 19,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2942,
+  "topic": "Choosing A College",
+  "sb_prompt": "WHAT ADVICE OR EXPERIENCE CAN YOU OFFER TO A PARENT ON HOW TO HELP A SON OR DAUGHTER CHOOSE A COLLEGE TO ATTEND?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 44,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's the topic we're supposed to talk about today?"
+    ],
+    [
+      "ParticipantB",
+      "We're supposed to talk about how to help a son or daughter choose a college to attend."
+    ],
+    [
+      "ParticipantA",
+      "Ah, yes. Well, I have a bit of personal experience with this topic. My younger sister is currently in the process of choosing a college to attend."
+    ],
+    [
+      "ParticipantB",
+      "That's great. Did she have any specific questions or concerns that you can share with me?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, she's really torn between two schools. One is a larger state school and the other is a smaller private college. She's really struggling to decide which one would be the best fit for her."
+    ],
+    [
+      "ParticipantB",
+      "That can be a tough decision. I think it really depends on what she values in a college experience. For me, I knew I wanted a smaller school with a strong focus on my major, so I ended up choosing a small liberal arts college. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I went to a large state school and really enjoyed the diversity of the student body and the variety of classes offered. But I also think it's important to consider the campus culture and the resources available to students."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. My sister is really interested in joining a sorority, so the social life of the school is a big factor for her. She's also interested in studying business, so she's looking at the business programs at both schools."
+    ],
+    [
+      "ParticipantA",
+      "That makes sense. I think it's important for students to get involved in extracurricular activities and clubs, especially in their first year, to help them feel connected to the campus community. And it's always a good idea to talk to professors and current students to get a sense of the academic environment and what kind of support is available."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. I think it's also important to visit the campus and get a feel for the physical space. Sometimes a school can look great on paper, but it just doesn't feel like the right fit when you're actually there."
+    ],
+    [
+      "ParticipantA",
+      "Definitely. My sister actually just went on a campus tour last week and she said it really helped her get a sense of what it would be like to be a student there. She's still struggling with her decision, but at least she has some more information to help her make up her mind."
+    ],
+    [
+      "ParticipantB",
+      "I'm glad to hear that she's getting a lot of information and visiting the campuses. Ultimately, it's a big decision and it's important to take the time to make the right choice. I hope she finds the perfect school for her."
+    ],
+    [
+      "ParticipantA",
+      "Thank you. I appreciate your thoughts on this. It's always helpful to hear from someone who's been through the process themselves."
+    ],
+    [
+      "ParticipantB",
+      "Of course, happy to help. Good luck to your sister in her decision-making process!"
+    ],
+    [
+      "ParticipantA",
+      "Thank you, I appreciate that. I'm sure she'll make the right choice for her."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome. Take care!"
+    ],
+    [
+      "ParticipantA",
+      "You too!"
+    ]
+  ],
+  "n_turns": 19,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 1,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1
+  }
+}

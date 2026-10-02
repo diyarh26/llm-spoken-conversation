@@ -1,0 +1,118 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3636,
+  "topic": "Camping",
+  "sb_prompt": "FIND OUT FROM THE OTHER CALLER WHAT KIND OF CAMPING THEY HAVE DONE.  HOW DOES IT COMPARE WITH YOUR OWN EXPERIENCES?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, have you done much camping in your life?"
+    ],
+    [
+      "ParticipantB",
+      "I have done some camping, yes."
+    ],
+    [
+      "ParticipantA",
+      "That's cool. Have you preferred camping in tents or RVs?"
+    ],
+    [
+      "ParticipantB",
+      "I've mostly camped in tents."
+    ],
+    [
+      "ParticipantA",
+      "Nice. I've done both, but I prefer camping in tents too. There's just something about being out in nature that's really special.\n\nWhat kind of camping have you done? Have you gone on any big hikes or done any backpacking?"
+    ],
+    [
+      "ParticipantB",
+      "I've mostly done car camping and some backpacking."
+    ],
+    [
+      "ParticipantA",
+      "Backpacking is a great way to really get out into nature. Have you done any backpacking trips that stand out to you?"
+    ],
+    [
+      "ParticipantB",
+      "One of my favorite backpacking trips was in the Sierra Nevada mountains. We hiked for a few days and set up camp near a beautiful lake. The views were amazing and the air was so fresh.\n\nWhat about you? Have you done any backpacking trips that you really enjoyed?"
+    ],
+    [
+      "ParticipantA",
+      "I actually went on a backpacking trip in the Rocky Mountains a few years ago that was incredible. The views were breathtaking and the experience was unforgettable. It was definitely one of the best trips I've ever been on.\n\nDo you have any recommendations for someone who wants to try backpacking for the first time?"
+    ],
+    [
+      "ParticipantB",
+      "Definitely start with a shorter trip and work your way up to longer ones. Make sure you're in good physical shape and have all the necessary gear. It's also important to have a good understanding of Leave No Trace principles and to be prepared for any potential emergencies.\n\nWhat about you? Do you have any recommendations for someone who wants to try camping for the first time?"
+    ],
+    [
+      "ParticipantA",
+      "I would say start with car camping and work your way up to backpacking or more rugged camping experiences. Make sure you have all the necessary gear and that you're comfortable with camping basics like setting up a tent and starting a fire. And most importantly, have fun and enjoy the experience!"
+    ],
+    [
+      "ParticipantB",
+      "That sounds like great advice. Thanks for sharing your thoughts on camping and backpacking. It's clear that you have a real passion for it.\n\nWhat about you? What do you enjoy most about camping and backpacking?"
+    ],
+    [
+      "ParticipantA",
+      "I think what I enjoy most about camping and backpacking is the opportunity to disconnect from technology and the hustle and bustle of daily life and just be out in nature. There's something really special about being surrounded by beautiful scenery and having the chance to really unplug and enjoy the simple things in life."
+    ],
+    [
+      "ParticipantB",
+      "I totally agree. Being in nature and disconnecting from technology is such a great way to recharge and refresh. It's definitely something that I value and try to incorporate into my life as much as possible.\n\nWell, it was really great chatting with you about camping and backpacking. Thanks for sharing your experiences and insights with me."
+    ],
+    [
+      "ParticipantA",
+      "Thank you! It was really fun chatting with you too. I'm glad we got to connect over something we both enjoy so much. Take care!"
+    ]
+  ],
+  "n_turns": 17,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
