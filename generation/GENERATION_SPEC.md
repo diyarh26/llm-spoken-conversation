@@ -94,6 +94,14 @@ C2-P1 (2,080), C2-P2 (2,051), C2-P0 (1,002 incl. the archived partial run) and C
 never uses it. So all 12 conditions run identical cleaning. Ordinary parentheses in speech
 ("(IoT)", "401(k)", "(writing, drawing, …)") are not matched (verified).
 
+**C4 retest follow-up (2026-10-02, later):** (a) one more junk form, only in C4-P0: fake
+"**Prompt:** Act like a 42-year-old… **Reply:** …" pairs echoing our own instructions — added
+to `_META_RE` (0 changes on every stored C1/C2/C3/C4-P1/P2 turn incl. the C2-P0 run in progress;
+29 turns in the C4-P0 retest). (b) Per-turn cap raised **300 → 512 tokens**: Mistral writes
+genuine 250-word turns that 300 truncated mid-sentence (C4-P2 retest: 14 hits). Output-neutral
+for existing data — C2-P1/P2 and the C3 retest never reached 300. The C2-P0 run already in
+progress keeps 300 (1 hit in its first 643 turns) — the one documented exception.
+
 ## 4. Decoding (FROZEN 2026-09-26 as-is; single source: `generation/config.py`)
 
 Freeze decision: the dev sweep forced no escalation for C1/C2 (dup-turn rate ≤0.005 at

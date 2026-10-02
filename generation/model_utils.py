@@ -291,11 +291,21 @@ _META_RE = re.compile(
     # test: "(Your turn count is 68)", "(End of conversation.)", "## Example response:").
     # Only these meta openers — ordinary parentheses in speech ("(IoT)", "401(k)",
     # "(writing, drawing, composing music)") are never matched.
-    r"|\((?:your turn|end of (?:the )?conversation|the conversation (?:can|has|ends|is)|"
+    r"|\((?:your turn|end of (?:the )?conversation|the conversation (?:can|has|ends|is|so far)|"
     r"note:|i'll (?:now )?(?:wait|end)|here'?s a suggested|this is the final turn|"
     r"it'?s important to remember that these conversations)"
     r"|(?:^|\n)\s*#{1,6}\s"
     r"|\bexample response\s*:"
+    # Prompt echo (2026-10-02 C4 retest): fake "**Prompt:** … **Reply:** …" pairs that copy
+    # our own instructions back ("Act like a 42-year-old…", "…turns of talk; do not end it
+    # too early"). A leading digit is included so a turn that STARTS mid-echo ("0 turns of
+    # talk…") is cut to empty rather than to a stray "0".
+    r"|\*\*\s*(?:prompt|reply|response|answer|user|assistant|system)\s*:?\s*\*\*"
+    r"|\bact like an? \d+-year-old"
+    r"|\d*\s*\bturns of talk\b"
+    r"|\bdo not end it too early"
+    r"|\bthe topic of the conversation is\s*:"
+    r"|\bthe conversation will have about"
     r")",
     re.I | re.M,
 )

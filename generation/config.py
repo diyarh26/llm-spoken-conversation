@@ -45,9 +45,12 @@ class DecodingConfig:
 # 16k context, so the cap should never bind (log if it does).
 C1 = DecodingConfig(max_new_tokens=4096)
 
-# C2/C3/C4 generate one turn per call. 300 tokens ≈ 225 words — far above the longest
-# observed turns (~80 words), so the cap is a safety net, not a bound.
-TURNWISE = DecodingConfig(max_new_tokens=300)
+# C2/C3/C4 generate one turn per call. The cap is a safety net, never a bound on a measured
+# DV. Raised 300 -> 512 on 2026-10-02: the C4 retest showed Mistral writing genuine 250-word
+# turns that 300 cut mid-sentence (C4-P2: 14 cap hits). Output-neutral for existing data:
+# C2-P1/P2 and the C3 retest never reached 300 (0 hits); the C2-P0 run already in progress
+# keeps 300 and hit it once in 643 turns (documented in GENERATION_SPEC.md).
+TURNWISE = DecodingConfig(max_new_tokens=512)
 
 # Uniform hard cap on turns for the turn-by-turn conditions (was inconsistent: C2=30,
 # C3/C4=50). The prompt tells the model where it is in this budget (supervisor fix) so
