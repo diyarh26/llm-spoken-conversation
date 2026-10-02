@@ -1,0 +1,102 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2557,
+  "topic": "Recycling",
+  "sb_prompt": "WHAT IS BEING DONE IN YOUR COMMUNITY OR AREA ABOUT RECYCLING WASTE MATERIALS?  DO YOU THINK MORE SHOULD BE DONE?  DO YOU HAVE ANY IDEAS ON HOW TO ENCOURAGE MORE RECYCLING OR ON WHAT OTHER MATERIALS SHOULD BE INCLUDED?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 55,
+    "education": "a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 46,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's being done in your community or area about recycling waste materials?"
+    ],
+    [
+      "ParticipantB",
+      "Well, there's a recycling center in town that collects paper, plastics, and metals."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's great! What do you think should be done to encourage more recycling?"
+    ],
+    [
+      "ParticipantB",
+      "I think education is important. People should be aware of what can and can't be recycled, and the benefits of recycling."
+    ],
+    [
+      "ParticipantA",
+      "I agree. Education is key. What other materials do you think should be included in the recycling program?"
+    ],
+    [
+      "ParticipantB",
+      "I think we should start recycling more electronics, like old phones and computers. It's important to get rid of them properly."
+    ],
+    [
+      "ParticipantA",
+      "That's a great idea! Electronics contain valuable materials that can be recycled and reused. Thanks for sharing your thoughts on this!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It's important to do our part in taking care of the environment."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely! We all need to do our part to protect the planet for future generations. Thank you for your insightful conversation!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was nice talking to you."
+    ],
+    [
+      "ParticipantA",
+      "Nice talking to you too! Take care!"
+    ]
+  ],
+  "n_turns": 13,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2533,
+  "topic": "Baseball",
+  "sb_prompt": "FIND OUT THE OTHER CALLER'S FAVORITE PRO BASEBALL TEAM AND WHERE IT'S HEADED THIS YEAR.  DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your favorite pro baseball team?"
+    ],
+    [
+      "ParticipantB",
+      "I'm a big fan of the New York Yankees!"
+    ],
+    [
+      "ParticipantA",
+      "That's awesome! I've always been a fan of the Boston Red Sox."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I see. Well, it looks like we're on opposite sides of the rivalry."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but that's what makes it so fun to watch! I think the Yankees have a really strong lineup this year."
+    ],
+    [
+      "ParticipantB",
+      "I agree, their batting lineup is very impressive. But I think the Red Sox have a great pitching staff, which could give them an edge."
+    ],
+    [
+      "ParticipantA",
+      "Definitely. It's always tough to predict who will come out on top in the playoffs. But I think the Yankees have a good chance of making it to the World Series this year."
+    ],
+    [
+      "ParticipantB",
+      "I hope the Red Sox can give them a run for their money! It would be great to see a competitive series between the two teams."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely! And you never know, the Red Sox might surprise us all and come out on top. Anything can happen in baseball."
+    ],
+    [
+      "ParticipantB",
+      "That's very true. I just hope we have a great season filled with exciting games and unexpected twists and turns."
+    ],
+    [
+      "ParticipantA",
+      "Same here! It's always fun to watch the underdogs come out on top and shock the world. Who knows, maybe this will be the year for the Red Sox!"
+    ],
+    [
+      "ParticipantB",
+      "I wouldn't count them out just yet! Anything is possible in baseball. Thanks for the conversation!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It was great talking to you about our favorite baseball teams. Go Yankees! (or Red Sox!)"
+    ],
+    [
+      "ParticipantB",
+      "Thanks! And remember, it's all in good fun. Let's enjoy the games and the excitement of the season!"
+    ]
+  ],
+  "n_turns": 16,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
