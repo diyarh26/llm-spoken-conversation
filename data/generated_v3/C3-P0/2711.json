@@ -1,0 +1,106 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2711,
+  "topic": "Vacation Spots",
+  "sb_prompt": "PLEASE DISCUSS TYPES OF VACATIONS AND TRIPS YOU ENJOY.  FIND OUT WHETHER THE OTHER CALLER CAN INTEREST YOU IN A VACATION SPOT YOU HAVEN'T VISITED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 25,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what types of vacations and trips do you enjoy?"
+    ],
+    [
+      "ParticipantB",
+      "I love going on beach vacations, exploring new cities, and taking road trips to discover hidden gems."
+    ],
+    [
+      "ParticipantA",
+      "That sounds great! I enjoy beach vacations too, but I haven't been on a road trip in a while. What's the most memorable place you've discovered on a road trip?"
+    ],
+    [
+      "ParticipantB",
+      "One of the most memorable places I discovered on a road trip was a small town in the mountains called Banner Elk. It had a charming main street with quaint shops, beautiful scenery, and a relaxing atmosphere."
+    ],
+    [
+      "ParticipantA",
+      "That sounds lovely! I haven't been to a small mountain town like that in a while. I'd love to visit a place like Banner Elk someday. By the way, do you have any recommendations for a beach vacation spot?"
+    ],
+    [
+      "ParticipantB",
+      "I really enjoyed my trip to Siesta Key in Florida. The beaches there have a unique white sand that's so soft and comfortable to walk on. It's a great spot for relaxation and water activities like swimming and snorkeling."
+    ],
+    [
+      "ParticipantA",
+      "That sounds amazing! I've heard great things about Siesta Key, but I haven't had a chance to visit yet. I love the idea of a soft white sand beach for relaxation. What kind of activities do you usually enjoy during your beach vacations?"
+    ],
+    [
+      "ParticipantB",
+      "During my beach vacations, I love to go swimming, sunbathing, and reading a good book while soaking up the sun. I also enjoy taking a walk along the beach at sunset, and sometimes I'll rent a paddleboard or kayak to explore the coastline."
+    ],
+    [
+      "ParticipantA",
+      "Sounds like a perfect beach vacation to me! I've been wanting to try paddleboarding and kayaking, and I've heard that Siesta Key has great waters for those activities. Maybe I'll consider planning a trip there soon. Thanks for the suggestions!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! I'm glad I could help. Siesta Key is a beautiful place, and I'm sure you'd love it there. Let me know if you have any other questions or if there's anything else I can help you with."
+    ],
+    [
+      "ParticipantA",
+      "Thanks, I appreciate it! I might take you up on that offer later if I have more questions. Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "You too! Enjoy your day, and happy vacation planning!"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

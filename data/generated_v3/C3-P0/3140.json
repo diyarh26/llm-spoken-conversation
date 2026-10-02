@@ -1,0 +1,94 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3140,
+  "topic": "Social Change",
+  "sb_prompt": "DISCUSS RECENT SOCIAL CHANGES.  HOW IS LIFE IN AMERICA DIFFERENT TODAY COMPARED TO LIVING TEN YEARS AGO?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "It's so nice to meet you!"
+    ],
+    [
+      "ParticipantB",
+      "Likewise!"
+    ],
+    [
+      "ParticipantA",
+      "So, have you noticed any recent social changes?"
+    ],
+    [
+      "ParticipantB",
+      "Definitely. In terms of social changes, I think the biggest one would be the increase in awareness and activism around social justice issues. With the rise of social media, it's become easier for people to organize and raise awareness about important issues like police brutality, systemic racism, and LGBTQ+ rights."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. And I think that's made a big impact on how we interact with each other and the world around us. For example, I think people are more conscious of their language and actions, and there's a greater emphasis on inclusivity and diversity."
+    ],
+    [
+      "ParticipantB",
+      "Yes, I agree. There's definitely been a shift towards a more inclusive and diverse society, and I think that's a positive change. With that shift, there's also been a greater emphasis on mental health and wellness, which is important for everyone to prioritize."
+    ],
+    [
+      "ParticipantA",
+      "That's a great point. It's important for us to prioritize our mental health and wellness, especially in today's fast-paced world. I think this shift towards wellness has also led to a greater emphasis on self-care and self-love, which is so important for our overall well-being."
+    ],
+    [
+      "ParticipantB",
+      "Yes, I think self-care and self-love are becoming more normalized and accepted, which is a great change. It's important for people to take care of themselves both physically and mentally, and I think this shift towards self-care is helping people do that."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. And I think that's especially important for women, who have historically been expected to prioritize everyone else's needs over their own. It's important for us to prioritize our own well-being and to recognize that taking care of ourselves is not selfish, but necessary."
+    ]
+  ],
+  "n_turns": 11,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
