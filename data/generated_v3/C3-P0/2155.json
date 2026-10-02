@@ -1,0 +1,140 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2155,
+  "topic": "Care Of The Elderly",
+  "sb_prompt": "PLEASE DISCUSS CARE OF THE ELDERLY.  FIND OUT HOW THE OTHER CALLER FEELS ABOUT SENDING AN ELDERLY FAMILY MEMBER TO A NURSING HOME.  WHAT SHOULD ONE KNOW ABOUT THE NURSING HOME ENVIRONMENT WHEN MAKING THIS DECISION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hi! How are you?"
+    ],
+    [
+      "ParticipantB",
+      "I'm doing well, thanks for asking. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm good, thanks. So, let's talk about something important. How do you feel about sending elderly family members to nursing homes?\n\n\ubc88\uc5ed\uacb0\uacfc  \nHello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hi! How are you?"
+    ],
+    [
+      "ParticipantB",
+      "I'm doing well, thanks for asking. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm good, thanks. So, let's talk about something important. How do you feel about sending elderly family members to nursing homes?"
+    ],
+    [
+      "ParticipantB",
+      "It's a difficult decision to make, but ultimately it depends on the specific circumstances and needs of the elderly family member. It's important to do research and visit different nursing homes to find the best fit for the individual.\n\n\ubc88\uc5ed\uacb0\uacfc  \n\uc88b\uc544\uc694!"
+    ],
+    [
+      "ParticipantA",
+      "I completely agree with you. It's important to make sure that the elderly family member is receiving the best care possible. What are some things that you think someone should know when considering a nursing home for their loved one?\n\n\ubc88\uc5ed\uacb0\uacfc  \n\ub2f9\uc2e0\uacfc \uc644\uc804\ud788 \ub3d9\uc758\ud569\ub2c8\ub2e4. \ub178\uc778 \uac00\uc871 \ud68c\uc6d0\uc774 \uac00\ub2a5\ud55c \ucd5c\uace0 \uac74\uac15 \uad00\ub9ac\ub97c \ubc1b\ub294\uc9c0 \ud655\uc778\ud558\ub294 \uac83\uc774 \uc911\uc694\ud569\ub2c8\ub2e4. \uc790\uc2e0\uc758 \uc0ac\ub791\ud558\ub294 \uc0ac\ub78c\uc744 \uc704\ud574 \uc2e0\uc0dd \uc6d0\uc744 \uace0\ub824\ud560 \ub54c \uc54c\uc544\uc57c \ud560 \uc77c\uc774 \uba87 \uac00\uc9c0 \uc788\uc2b5\ub2c8\uae4c?"
+    ],
+    [
+      "ParticipantB",
+      "One important factor to consider is the level of care and medical attention the nursing home provides. It's also important to evaluate the staff-to-patient ratio, as well as the overall environment and atmosphere of the facility. Visiting the nursing home in person and speaking with other families who have placed their loved ones there can also provide valuable insight.\n\n\ubc88\uc5ed\uacb0\uacfc  \n\uace0\ub824\ud574\uc57c \ud560 \uc911\uc694\ud55c \uc694\uc18c \uc911 \ud558\ub098\ub294 \ub178\uc778 \uc6d0\uc5d0\uc11c \uc81c\uacf5\ud558\ub294 \uce58\ub8cc \ubc0f \uc758\ub8cc \uad00\ub9ac \uc218\uc900\uc785\ub2c8\ub2e4. \ub610\ud55c \uc9c1\uc6d0 \ub300 \ud658\uc790 \ube44\uc728\uc744 \ud3c9\uac00\ud558\ub294 \uac83\ub3c4 \uc911\uc694\ud558\uba70, \uc2dc\uc124\uc758 \uc804\ubc18\uc801\uc778 \ud658\uacbd\uacfc \ubd84\uc704\uae30\ub3c4 \ud3c9\uac00\ud574\uc57c \ud569\ub2c8\ub2e4. \uc9c1\uc811 \ub178\uc778 \uc6d0\uc744 \ubc29\ubb38\ud558\uace0 \uc790\uc2e0\uc758 \uc0ac\ub791\ud558\ub294 \uc0ac\ub78c\uc744 \uc785\uc8fc\uc2dc\ud0a8 \ub2e4\ub978 \uac00\uc871\ub4e4\uacfc \ub300\ud654\ud558\uba74 \uc720\uc6a9\ud55c \ud1b5\ucc30\ub825\uc744 \uc81c\uacf5\ud560 \uc218\ub3c4 \uc788\uc2b5\ub2c8\ub2e4."
+    ],
+    [
+      "ParticipantA",
+      "Those are all great points. It's important to make sure that the nursing home can provide the necessary care and attention for the elderly family member. Do you have any personal experience with sending a loved one to a nursing home, or do you know anyone who has?\n\n\ubc88\uc5ed\uacb0\uacfc  \n\ubaa8\ub4e0 \uc88b\uc740 \ud3ec\uc778\ud2b8. \ub178\uc778 \uc6d0\uc774 \ud544\uc694\ud55c \uac04\ubcd1\uacfc \uad00\uc2ec\uc744 \uc81c\uacf5\ud560 \uc218 \uc788\ub294\uc9c0 \ud655\uc778\ud558\ub294 \uac83\uc774 \uc911\uc694\ud569\ub2c8\ub2e4. \ub178\uc778 \uc6d0\uc5d0 \uc0ac\ub791\ud558\ub294 \uc0ac\ub78c\uc744 \ubcf4\ub0b4\ub294 \uacbd\ud5d8\uc774 \uc788\uc73c\uc2e0\uac00\uc694, \uc544\ub2c8\uba74 \uc544\ub294 \uc0ac\ub78c\uc774 \uc788\uc73c\uc2e0\uac00\uc694?"
+    ],
+    [
+      "ParticipantB",
+      "I don't have any personal experience with sending a loved one to a nursing home, but I know several people who have had to make that difficult decision for their elderly family members. From what I understand, it's important to prioritize the individual's needs and preferences when making that decision.\n\n\ubc88\uc5ed\uacb0\uacfc  \n\uc800\ub294 \uc790\uc2e0\uc758 \uc0ac\ub791\ud558\ub294 \uc0ac\ub78c\uc744 \ub178\uc778 \uc6d0\uc5d0 \ubcf4\ub0b4\ub294 \uacbd\ud5d8\uc774 \uc5c6\uc9c0\ub9cc \ub098\uc774 \ub4e0 \uac00\uc871 \uad6c\uc131\uc6d0\uc744 \uc704\ud574 \uadf8\ub7f0 \uacb0\uc815\uc744 \ub0b4\ub9ac\ub294 \ub370 \uc5b4\ub824\uc6c0\uc744 \uacaa\uace0 \uc788\ub294 \uba87\uba87 \uc0ac\ub78c\ub4e4\uc744 \uc544\ub294 \uac83\uc774 \uc788\uc2b5\ub2c8\ub2e4. \ub0b4\uac00 \uc774\ud574\ud55c \ubc14\ub85c\ub294 \uadf8 \uacb0\uc815\uc744 \ub0b4\ub9ac\ub294 \ub3d9\uc548 \uac1c\uc778\uc758 \ud544\uc694\uc640 \uc120\ud638\ub3c4\ub97c \uc6b0\uc120\uc73c\ub85c \uc5ec\uaca8\uc57c \ud55c\ub2e4\ub294 \uac83\uc774 \uc911\uc694\ud558\ub2e4."
+    ],
+    [
+      "ParticipantA",
+      "Yes, it's important to prioritize the individual's needs and preferences when making such a decision. What are some of the things that someone should consider when deciding whether or not to send an elderly family member to a nursing home?\n\n\ubc88\uc5ed\uacb0\uacfc  \n\uc608, \uadf8\ub7f0 \uacb0\uc815\uc744 \ub0b4\ub9ac\ub294 \ub370 \uc788\uc5b4 \uac1c\uc778\uc758 \ud544\uc694\uc640 \uc120\ud638\ub3c4\ub97c \uc6b0\uc120\uc73c\ub85c \uc5ec\uaca8\uc57c \ud55c\ub2e4\ub294 \uac83\uc740 \uc911\uc694\ud569\ub2c8\ub2e4. \ub178\uc778 \uac00\uc871 \ud68c\uc6d0\uc744 \ub178\uc778 \uc6d0\uc5d0 \ubcf4\ub0b4\ub294 \uac83\uc774 \uc88b\uc740\uc9c0 \uc5ec\ubd80\ub97c \uacb0\uc815\ud560 \ub54c \uace0\ub824\ud574\uc57c \ud560 \uc77c\uc774 \uba87 \uac00\uc9c0 \uc788\uc2b5\ub2c8\uae4c?"
+    ],
+    [
+      "ParticipantB",
+      "When deciding whether or not to send an elderly family member to a nursing home, it's important to consider their physical and mental health needs, as well as their personal preferences and social connections. It's also important to consider the level of care and attention the nursing home can provide, as well as the overall environment and atmosphere of the facility. Additionally, it's important to have open and honest communication with the elderly family member and involve them in the decision-making process as much as possible.\n\n\ubc88\uc5ed\uacb0\uacfc  \n\ub178\uc778 \uac00\uc871 \ud68c\uc6d0\uc744 \ub178\uc778 \uc6d0\uc5d0 \ubcf4\ub0b4\ub294 \uac83\uc774 \uc88b\uc740\uc9c0 \uc5ec\ubd80\ub97c \uacb0\uc815\ud560 \ub54c \ub098\uc774 \ub4e0 \uac00\uc871 \uad6c\uc131\uc6d0\uc758 \uc2e0\uccb4 \ubc0f \uc815\uc2e0 \uac74\uac15 \uc694\uad6c \uc0ac\ud56d\uacfc \uac1c\uc778\uc801\uc778 \uc120\ud638\ub3c4 \ubc0f \uc0ac\ud68c\uc801 \uc5f0\uacb0\uc744 \uace0\ub824\ud558\ub294 \uac83\uc774 \uc911\uc694\ud569\ub2c8\ub2e4. \ub610\ud55c \ub178\uc778 \uc6d0\uc5d0\uc11c \uc81c\uacf5\ud560 \uc218 \uc788\ub294 \uce58\ub8cc \ubc0f \uad00\uc2ec \uc218\uc900\uacfc \uc2dc\uc124\uc758 \uc804\ubc18\uc801\uc778 \ud658\uacbd\uacfc \ubd84\uc704\uae30\ub3c4 \uace0\ub824\ud574\uc57c \ud569\ub2c8\ub2e4. \ub610\ud55c \ub178\uc778 \uac00\uc871 \ud68c\uc6d0\uacfc \uc5f4\ub9b0 \ubc0f \uc9c4\uc2e4\ud55c \uc758\uc0ac\uc18c\ud1b5\uc744 \ud1b5\ud574 \uac00\ub2a5\ud55c \ud55c \uacb0\uc815 \ud504\ub85c\uc138\uc2a4\uc5d0 \uadf8\ub4e4\uc744 \ucc38\uc5ec\uc2dc\ud0a4\ub294 \uac83\uc774 \uc911\uc694\ud569\ub2c8\ub2e4."
+    ],
+    [
+      "ParticipantA",
+      "Those are all great points. It's important to make sure that the nursing home can provide the necessary care and attention for the elderly family member, and to involve them in the decision-making process as much as possible. Do you have any other thoughts on this topic?\n\n\ubc88\uc5ed\uacb0\uacfc  \n\ubaa8\ub4e0 \uc88b\uc740 \ud3ec\uc778\ud2b8. \ub178\uc778 \uc6d0\uc774 \ud544\uc694\ud55c \uac04\ubcd1\uacfc \uad00\uc2ec\uc744 \uc81c\uacf5\ud560 \uc218 \uc788\ub294\uc9c0 \ud655\uc778\ud558\uace0 \uac00\ub2a5\ud55c \ud55c \ub178\uc778 \uac00\uc871 \ud68c\uc6d0\uacfc \uacb0\uc815 \ud504\ub85c\uc138\uc2a4\uc5d0 \ucc38\uc5ec\uc2dc\ud0a4\ub294 \uac83\uc774 \uc911\uc694\ud569\ub2c8\ub2e4. \uc774 \uc8fc\uc81c\uc5d0 \ub300\ud574 \ub610 \uc5b4\ub5a4 \uc0dd\uac01\uc774 \uc788\uc2b5\ub2c8\uae4c?"
+    ],
+    [
+      "ParticipantB",
+      "One other important consideration is the cost of the nursing home. It's important to research and compare costs among different facilities to find the most affordable option that still meets the individual's needs. It's also important to consider any potential changes in financial circumstances, such as a decrease in income or an increase in medical expenses.\n\n\ubc88\uc5ed\uacb0\uacfc  \n\ub610 \ub2e4\ub978 \uc911\uc694\ud55c \uace0\ub824 \uc0ac\ud56d\uc740 \ub178\uc778\uc6d0 \ube44\uc6a9\uc785\ub2c8\ub2e4. \ub178\uc778 \uc6d0 \ube44\uc6a9\uc744 \uc870\uc0ac\ud558\uace0 \ub2e4\ub978 \uc2dc\uc124 \ube44\uc6a9\uc744 \ube44\uad50\ud558\uc5ec \uac1c\uc778\uc758 \uc694\uad6c \uc0ac\ud56d\uc744 \ucda9\uc871\ud558\ub294 \uac00\uc7a5 \uc800\ub834\ud55c \uc635\uc158\uc744 \ucc3e\ub294 \uac83\uc774 \uc911\uc694\ud569\ub2c8\ub2e4. \ub610\ud55c \uc18c\ub4dd \uac10\uc18c \ub610\ub294 \uc758\ub8cc \ube44\uc6a9 \uc99d\uac00\uc640 \uac19\uc740 \uae08\uc735\uc801 \uc0c1\ud669\uc758 \uc7a0\uc7ac\uc801\uc778 \ubcc0\ud654\ub97c \uace0\ub824\ud558\ub294 \uac83\uc774 \uc911\uc694\ud569\ub2c8\ub2e4."
+    ],
+    [
+      "ParticipantA",
+      "Yes, the cost is definitely an important consideration. It's important to make sure that the nursing home is affordable while still providing the necessary care and attention for the elderly family member. Thank you for sharing your thoughts on this topic. It's been great discussing this with you.\n\n\ubc88\uc5ed\uacb0\uacfc  \n\uc608, \ube44\uc6a9\uc740 \ud655\uc2e4\ud788 \uc911\uc694\ud55c \uace0\ub824 \uc0ac\ud56d\uc785\ub2c8\ub2e4. \ub178\uc778 \uc6d0\uc774 \uc800\ub834\ud558\uba74\uc11c\ub3c4 \ub098\uc774 \ub4e0 \uac00\uc871 \ud68c\uc6d0\uc5d0\uac8c \ud544\uc694\ud55c \uac04\ubcd1\uacfc \uad00\uc2ec\uc744 \uc81c\uacf5\ud558\ub294 \uac83\uc774 \uc911\uc694\ud569\ub2c8\ub2e4. \uc774 \uc8fc\uc81c\uc5d0 \ub300\ud574 \uc544\uc774\ub514\uc5b4\ub97c \uacf5\uc720\ud574 \uc8fc\uc154\uc11c \uac10\uc0ac\ud569\ub2c8\ub2e4. \uc774\uac83\uc744 \ud568\uaed8 \ud1a0\ub860\ud558\ub294 \uac83\uc740 \ud6cc\ub96d\ud588\uc2b5\ub2c8\ub2e4."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome, it was my pleasure to discuss this with you. Don't hesitate to reach out if you have any further questions or if you need any additional information on this topic.\n\n\ubc88\uc5ed\uacb0\uacfc  \n\ub2f9\uc2e0\uc774 \uc774 \uc8fc\uc81c\uc5d0 \ub300\ud55c \ucd94\uac00 \uc9c8\ubb38\uc774 \uc788\uac70\ub098 \ud544\uc694\ud55c \ucd94\uac00 \uc815\ubcf4\uac00 \uc788\ub294 \uacbd\uc6b0 \uc8fc\uc800\ud558\uc9c0 \ub9d0\uace0 \uc5f0\ub77d\ud558\uc138\uc694. \ub2f9\uc2e0\uacfc \ud568\uaed8 \uc774 \uc8fc\uc81c\uc5d0 \ub300\ud574 \ub17c\uc758\ud55c \uac83\uc774 \uae30\uc068\uc774\uc5c8\uc2b5\ub2c8\ub2e4."
+    ],
+    [
+      "ParticipantA",
+      "Thank you, I will definitely keep that in mind. Have a great day!\n\n\ubc88\uc5ed\uacb0\uacfc  \n\ucc9c\ub9cc\uc5d0\uc694, \ud655\uc2e4\ud788 \uae30\uc5b5\ud558\uaca0\uc2b5\ub2c8\ub2e4. \uc990\uac70\uc6b4 \ud558\ub8e8 \ub418\uc138\uc694!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome, and have a great day as well!\n\n\ubc88\uc5ed\uacb0\uacfc  \n\ucc9c\ub9cc\uc5d0\uc694, \uc990\uac70\uc6b4 \ud558\ub8e8 \ub418\uc138\uc694!"
+    ]
+  ],
+  "n_turns": 22,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2,
+    "dup_kept": 2
+  }
+}

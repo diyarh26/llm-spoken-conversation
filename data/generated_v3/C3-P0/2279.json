@@ -1,0 +1,130 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2279,
+  "topic": "Family Life",
+  "sb_prompt": "IF YOU HAVE CHILDRENY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 37,
+    "education": "a high-school education",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, have you had any children yet?"
+    ],
+    [
+      "ParticipantB",
+      "No, I haven't had any children yet."
+    ],
+    [
+      "ParticipantA",
+      "Oh, well when are you planning on having them?"
+    ],
+    [
+      "ParticipantB",
+      "Honestly, I haven't really thought about it too much. I'm still trying to figure out what I want to do with my life first."
+    ],
+    [
+      "ParticipantA",
+      "That makes sense. You know, it's important to be ready for children and have your life in order before having them."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I totally agree. I think it's important to have a stable job and a solid support system in place before bringing a child into the world."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. And have you thought about what kind of parenting style you would want to have?"
+    ],
+    [
+      "ParticipantB",
+      "Not really, to be honest. I haven't even thought that far ahead. But I do believe in being a hands-on parent and being involved in my child's life as much as possible."
+    ],
+    [
+      "ParticipantA",
+      "That's great to hear. Being involved in your child's life is very important, and it's great that you're thinking about it already. Have you thought about any names for your future children?"
+    ],
+    [
+      "ParticipantB",
+      "No, I haven't really thought about names yet. But I do like the name Ethan, it's simple yet strong."
+    ],
+    [
+      "ParticipantA",
+      "Ethan is a great name! I know a few people with that name and they are all very nice and strong individuals."
+    ],
+    [
+      "ParticipantB",
+      "Yes, I like the sound of it too. I think it would be a good fit for my child."
+    ],
+    [
+      "ParticipantA",
+      "Well, we'll see. It's always good to have a name in mind, but sometimes things don't always go as planned."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, you're right. I guess we'll just have to see what happens and go with the flow."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. Life is unpredictable and you never know what's going to happen. But as long as you're prepared and ready for anything, you'll be just fine."
+    ],
+    [
+      "ParticipantB",
+      "Thanks for the advice. I'll definitely keep that in mind."
+    ],
+    [
+      "ParticipantA",
+      "Of course! It was great talking to you. Take care!"
+    ],
+    [
+      "ParticipantB",
+      "You too! Have a good day!"
+    ]
+  ],
+  "n_turns": 20,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

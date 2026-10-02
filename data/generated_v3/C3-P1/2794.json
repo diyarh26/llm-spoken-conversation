@@ -1,0 +1,118 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2794,
+  "topic": "Federal Budget",
+  "sb_prompt": "WHAT SHORT AND LONG-TERM STEPS DO YOU AND THE OTHER CALLER THINK SHOULD BE TAKEN TO IMPROVE THE US BUDGET?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a librarian",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what are your thoughts on the federal budget?"
+    ],
+    [
+      "ParticipantB",
+      "I think there are a few things that could be done to improve it."
+    ],
+    [
+      "ParticipantA",
+      "Like what?"
+    ],
+    [
+      "ParticipantB",
+      "Well, for short-term steps, I think we need to focus on reducing wasteful spending and finding ways to increase revenue."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. What about long-term steps?"
+    ],
+    [
+      "ParticipantB",
+      "In the long-term, I think we need to address the growing entitlement programs and find ways to make them more sustainable."
+    ],
+    [
+      "ParticipantA",
+      "That's a good point. Have you heard of any specific proposals for how to do that?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, there have been talks about changing the way Social Security and Medicare are funded, as well as reducing the cost of healthcare overall."
+    ],
+    [
+      "ParticipantA",
+      "Interesting. I also heard about the idea of implementing a national sales tax or value-added tax."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's definitely something that's been discussed. I think it could be a good way to increase revenue, but it would have to be done carefully to avoid hurting low-income families."
+    ],
+    [
+      "ParticipantA",
+      "Definitely. Well, it's a complex issue, but I think it's important that we continue to have these conversations and find ways to improve the budget."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely, it's important that we all stay informed and engage in the conversation. Thanks for chatting with me about this!\n\n\nThe conversation was about 16 turns long."
+    ],
+    [
+      "ParticipantA",
+      "Thanks for chatting with me about this too! It's been great discussing this with you."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was nice talking to you about this important topic. Take care!"
+    ],
+    [
+      "ParticipantA",
+      "You too! Have a great day!"
+    ]
+  ],
+  "n_turns": 17,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

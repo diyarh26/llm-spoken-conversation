@@ -1,0 +1,74 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of lawn and garden work do you do?"
+    ],
+    [
+      "ParticipantB",
+      "I don't really do much gardening to be honest. I work as a pharmacist and it takes up most of my time. But I do try to keep my lawn neat and tidy, mostly by mowing it regularly."
+    ],
+    [
+      "ParticipantA",
+      "I see. I actually really enjoy gardening and I'm a grocery store manager, so I don't have as much time for it as I would like. But I make sure to take care of my plants and flowers whenever I can. I also like to do some landscaping and plant new things every once in a while."
+    ],
+    [
+      "ParticipantB",
+      "That sounds great! I'm a bit envious of your gardening skills. I wish I had more time to do it myself. What kind of plants and flowers do you like to grow?"
+    ]
+  ],
+  "n_turns": 6,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 1,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1
+  }
+}

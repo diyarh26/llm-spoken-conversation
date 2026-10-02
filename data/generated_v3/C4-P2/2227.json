@@ -1,0 +1,86 @@
+{
+  "condition": "C4-P2",
+  "architecture": "C4",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 2227,
+  "topic": "Tv Programs",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER'S FAVORITE TV SHOWS ARE AND WHY.  ARE YOUR INTERESTS SIMILAR OR DIFFERENT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 16,
+    "education": "a high-school education",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your favorite TV show and why do you like it?"
+    ],
+    [
+      "ParticipantB",
+      "Well, my favorite TV show is \"The Office.\" I like it because it's relatable and makes me laugh. The characters are quirky and the situations they find themselves in are often absurd but still realistic. It's a nice distraction from the day-to-day grind of life. How about you? What's your favorite show and why?"
+    ],
+    [
+      "ParticipantA",
+      "I've been watching a lot of \"Breaking Bad\" lately. I really enjoy the complex characters and the intense storylines. It's a drama that keeps me on the edge of my seat. It's also interesting to see the morality play out in the show, with the protagonist starting out as a \"bad guy\" but gradually evolving into someone more sympathetic. What do you think of \"Breaking Bad\"?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, I've heard great things about \"Breaking Bad\"! I haven't seen it myself but I've always meant to. The morality aspect sounds really intriguing. I can see how the complex characters and intense storylines would keep you engaged. I'll have to check it out sometime. Do you have any recommendations for where I should start? And what other shows do you enjoy besides \"Breaking Bad\"?"
+    ],
+    [
+      "ParticipantA",
+      "Sure! I would recommend starting with the first episode of the first season. It's definitely a show that you need to watch from the beginning to fully understand the story and the characters. In terms of other shows, I also enjoy \"Mad Men\" a lot. It's a period drama set in the 1960s and it's just visually stunning. The writing is also top-notch and the characters are well-developed. Have you seen \"Mad Men\"? What do you think of it?"
+    ],
+    [
+      "ParticipantB",
+      "I've actually heard of \"Mad Men\" before but haven't had the chance to watch it yet. From what I've heard, it sounds like a really well-written and visually appealing show. I'll definitely add it to my list. I'm always on the lookout for new shows to watch and I appreciate your recommendations. Let me know if there's anything else you'd like to talk about or if we should just leave it at that for now. It's been nice chatting with you!"
+    ],
+    [
+      "ParticipantA",
+      "It's been great chatting with you too! Before we go, do you have any favorite movies or books you'd like to recommend? I'm always looking for new things to watch or read."
+    ]
+  ],
+  "n_turns": 9,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
