@@ -1,0 +1,118 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3013,
+  "topic": "Recipes/food/cooking",
+  "sb_prompt": "PLEASE DISCUSS FOOD AND COOKING.  WHAT FOODS WOULD YOU INCLUDE IN THE MENU FOR A DINNER PARTY?  SHARE THE RECIPE FOR ONE OF THESE FOODS WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of foods do you like to make for a dinner party?"
+    ],
+    [
+      "ParticipantB",
+      "I love making a good pasta dish. I make a really good spaghetti carbonara."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that sounds delicious! Can you share the recipe with me?"
+    ],
+    [
+      "ParticipantB",
+      "Of course! You need 8 oz of spaghetti, 4 oz of pancetta or bacon, 4 large eggs, 1 cup of grated Parmesan cheese, 1/2 cup of heavy cream, 1 tsp of black pepper, and salt to taste. Cook the spaghetti in a large pot of boiling salted water until al dente. Drain and set aside. In a large skillet, cook the pancetta or bacon over medium heat until crispy. Remove from heat and chop finely. In a medium bowl, whisk together the eggs, Parmesan cheese, cream, pepper, and a pinch of salt. Mix the spaghetti with the pancetta mixture and pour the egg mixture over the top. Toss until everything is well combined and serve immediately."
+    ],
+    [
+      "ParticipantA",
+      "That sounds amazing! I love the combination of spaghetti and bacon."
+    ],
+    [
+      "ParticipantB",
+      "Me too! It's one of my favorite dishes. Have you ever made spaghetti carbonara before?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I have actually! It's a staple in my house. My family loves it."
+    ],
+    [
+      "ParticipantB",
+      "That's great to hear! Do you have any tips or tricks for making it?"
+    ],
+    [
+      "ParticipantA",
+      "Well, I find that using a good quality Parmesan cheese really makes a difference in the flavor. And I always make sure to cook the spaghetti al dente, so it's not too soft or too hard. How about you? Do you have any tips for making spaghetti carbonara?"
+    ],
+    [
+      "ParticipantB",
+      "I agree, good quality Parmesan is key. And I always make sure to cook the pancetta or bacon until it's crispy, because it really adds a lot of flavor to the dish. I also find that using a little bit of cream helps to make the sauce creamy and smooth. But overall, I think it's just a matter of finding the right balance of flavors and textures."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. Balance is definitely key when it comes to cooking. Have you ever tried any variations on the recipe?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I've tried a few variations. One time I added some chopped garlic to the pancetta mixture, and it added a nice depth of flavor. Another time, I added some chopped chili flakes to the egg mixture for some extra heat. And I've also experimented with different types of cheese, like using a mix of Parmesan and Romano instead of just Parmesan."
+    ],
+    [
+      "ParticipantA",
+      "Those sound like great variations! I might have to try them out next time I make spaghetti carbonara. Thanks for sharing!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! I'm glad I could help. It was nice talking to you about food and cooking. Do you have any other favorite dishes you like to make for dinner parties?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I love making a good roasted chicken. It's always a crowd pleaser. Do you have a favorite way to roast chicken?"
+    ]
+  ],
+  "n_turns": 17,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 1,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1
+  }
+}
