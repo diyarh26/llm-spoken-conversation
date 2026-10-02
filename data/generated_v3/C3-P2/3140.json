@@ -1,0 +1,94 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3140,
+  "topic": "Social Change",
+  "sb_prompt": "DISCUSS RECENT SOCIAL CHANGES.  HOW IS LIFE IN AMERICA DIFFERENT TODAY COMPARED TO LIVING TEN YEARS AGO?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about recent social changes? How is life in America different today compared to living ten years ago?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think there have been a lot of changes in the past decade. For one, technology has advanced so much that it's easier to stay connected with people no matter where you are in the world. Additionally, social movements such as Black Lives Matter and #MeToo have brought important issues to the forefront and helped to create positive change. However, I also think that there is still a lot of work to be done in terms of addressing income inequality and access to healthcare. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I agree that technology has definitely changed the way we live our lives. I think it's great that we can connect with people from all over the world with just a few clicks, but at the same time, it can be overwhelming and make it harder to disconnect and have some privacy. I also think that social movements like Black Lives Matter and #MeToo have been important in raising awareness about important issues and creating change, but I also worry that these movements might lose steam if they don't keep pushing for real action. I think there's still a lot of work to be done in terms of creating a more equitable society."
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. While technology has brought us many benefits, it can also have negative effects on our mental health and privacy. And it's important for these social movements to continue pushing for real change and not just settle for lip service. We need to keep the momentum going and continue working towards a more just and equitable society for all."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. I think it's important for all of us to do our part in creating a better society. Whether that means supporting social movements, volunteering in our communities, or simply being mindful of the ways in which we can help others, every little bit counts. We need to keep pushing for change and working towards a better future for everyone."
+    ],
+    [
+      "ParticipantB",
+      "I couldn't agree more. Everyone has a role to play in creating a better society, and it's important that we all do our part. Whether it's through activism, volunteering, or simply being kind to others, we can all make a difference. It's up to us to create the change we want to see in the world."
+    ],
+    [
+      "ParticipantA",
+      "That's a great attitude to have. By working together and supporting each other, we can create a better society for everyone. Thank you for talking with me today. It was great to hear your thoughts on this topic."
+    ],
+    [
+      "ParticipantB",
+      "Thank you for speaking with me as well. It was a pleasure to chat with you and hear your perspective on this important topic. Take care!"
+    ],
+    [
+      "ParticipantA",
+      "You too! Have a great day!"
+    ]
+  ],
+  "n_turns": 11,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

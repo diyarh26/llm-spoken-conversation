@@ -1,0 +1,130 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3691,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of pets do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have a dog and a cat."
+    ],
+    [
+      "ParticipantA",
+      "Nice! What kind of dog do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have a golden retriever."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I love golden retrievers! What's your cat's name?"
+    ],
+    [
+      "ParticipantB",
+      "My cat's name is Whiskers."
+    ],
+    [
+      "ParticipantA",
+      "That's such a cute name for a cat! Do you have any funny stories about your pets?"
+    ],
+    [
+      "ParticipantB",
+      "Well, my dog loves to play fetch, even with his toys, and my cat loves to hide and seek, even with me. It's so funny to see them playing together."
+    ],
+    [
+      "ParticipantA",
+      "That sounds adorable! Do you have any pictures of them that you can share with me?"
+    ],
+    [
+      "ParticipantB",
+      "Unfortunately, I don't have my phone with me right now, but I can send you some pictures later if you'd like?"
+    ],
+    [
+      "ParticipantA",
+      "That would be great! Can you tell me about your favorite pet-related memory?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite pet-related memory is when I took my dog to the beach for the first time. He loved running around in the sand and playing fetch with the waves. It was so much fun to see him enjoying himself so much and it was a great day for me too."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a wonderful memory. I'm glad you had a great time with your dog. What are some of the challenges you've faced in taking care of your pets?"
+    ],
+    [
+      "ParticipantB",
+      "One of the challenges I've faced is making sure my dog gets enough exercise and mental stimulation since he tends to get bored easily. Also, making sure my cat has enough space to play and move around since she can be quite active."
+    ],
+    [
+      "ParticipantA",
+      "I can imagine that would be a challenge. Do you have any tips for other pet owners on how to keep their pets happy and healthy?"
+    ],
+    [
+      "ParticipantB",
+      "My tip would be to make sure to spend quality time with your pets, whether it's playing with them, taking them for a walk, or just cuddling with them. It's important to show them love and attention and make sure they're getting the care they need. Also, to provide them with toys and activities that suit their individual personalities."
+    ],
+    [
+      "ParticipantA",
+      "That's great advice. I completely agree. Well, it was nice talking to you about pets. Thanks for sharing your experiences and insights with me."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was great talking to you too. Have a good day!"
+    ]
+  ],
+  "n_turns": 20,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 1,
+    "multi_turn_emissions": 0
+  }
+}
