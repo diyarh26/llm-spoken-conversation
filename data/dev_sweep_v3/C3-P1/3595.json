@@ -1,0 +1,114 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "How are you doing today?"
+    ],
+    [
+      "ParticipantB",
+      "I'm doing well, thanks for asking. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm doing alright, just busy with work lately. So, do you have any favorite books or authors you enjoy reading?"
+    ],
+    [
+      "ParticipantB",
+      "I do have a few favorites. I really enjoy Jane Austen's works, especially \"Pride and Prejudice.\" Have you read any of her books?"
+    ],
+    [
+      "ParticipantA",
+      "I actually haven't read any of her books yet, but I've heard great things about her writing. What do you like about her works?"
+    ],
+    [
+      "ParticipantB",
+      "I love how she creates these complex characters and situations that are relatable even today. Her writing is also very witty and humorous, which I appreciate. What about you? Do you have any favorite authors or books?"
+    ],
+    [
+      "ParticipantA",
+      "I do enjoy reading, but I wouldn't say I have a specific favorite author. I've been reading more non-fiction lately, like \"The Power of Now\" by Eckhart Tolle and \"Quiet\" by Susan Cain. They've been really interesting and helpful in understanding myself and the world around me better. Have you read any non-fiction that you found impactful?"
+    ],
+    [
+      "ParticipantB",
+      "I have read some non-fiction that has impacted me. \"The Alchemist\" by Paulo Coelho is one of my favorites. It's a fictional story, but it has a lot of wisdom and insight that has stuck with me. Have you read any books that have made a significant impact on you?"
+    ],
+    [
+      "ParticipantA",
+      "I haven't read \"The Alchemist\" yet, but I've heard it's a great book. I think the last book that made a significant impact on me was \"Man's Search for Meaning\" by Viktor Frankl. It's a non-fiction book about his experiences in a concentration camp and the lessons he learned about finding meaning in life. It really put things into perspective for me. Do you have any books that have had a lasting impact on you?"
+    ],
+    [
+      "ParticipantB",
+      "I have read a book that has had a lasting impact on me. \"The Art of Happiness\" by the Dalai Lama and Howard Cutler is a book that has really changed my perspective on life. It's a collection of conversations between the Dalai Lama and a psychologist, and it offers valuable insights on how to cultivate happiness and well-being. Have you read any books that offer guidance on leading a fulfilling life?"
+    ],
+    [
+      "ParticipantA",
+      "I haven't read \"The Art of Happiness\" yet, but it sounds interesting. I've been trying to focus on self-improvement and personal growth lately, so I've been reading books like \"The 7 Habits of Highly Effective People\" by Stephen Covey and \"Atomic Habits\" by James Clear. They offer practical advice on how to make positive changes in your life. Have you read any books that have helped you with personal growth?"
+    ],
+    [
+      "ParticipantB",
+      "I have read a book that has helped me with personal growth. \"The Four Agreements\" by Don Miguel Ruiz is a book that I found very insightful. It offers four agreements that can help us live a better life, and it has helped me to be more mindful and intentional in my actions. Have you read any books that offer practical advice for living a better life?"
+    ],
+    [
+      "ParticipantA",
+      "I haven't read \"The Four Agreements\" yet, but it sounds like a good book. I think it's important to continually work on personal growth, and reading books that offer guidance can be really helpful. Well, I should get back to work soon. It was nice talking with you!"
+    ],
+    [
+      "ParticipantB",
+      "It was great talking with you too! I hope you have a great day at work. Take care!"
+    ]
+  ],
+  "n_turns": 16,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

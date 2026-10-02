@@ -1,0 +1,126 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of pets do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have a dog named Max."
+    ],
+    [
+      "ParticipantA",
+      "That's great! What breed is Max?"
+    ],
+    [
+      "ParticipantB",
+      "Max is a Golden Retriever."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I love Golden Retrievers! What's Max like as a pet?"
+    ],
+    [
+      "ParticipantB",
+      "Max is such a loving and loyal companion. He's very playful and always up for a game of fetch or a walk. He's also very protective of our family, which makes me feel safe."
+    ],
+    [
+      "ParticipantA",
+      "Sounds like Max is a great companion. I used to have a Golden Retriever when I was younger. His name was Buddy and he was my best friend."
+    ],
+    [
+      "ParticipantB",
+      "Oh, that's so cool! What happened to Buddy? Did he pass away?"
+    ],
+    [
+      "ParticipantA",
+      "No, we had to give him away to my grandparents when I went away to college. It was a tough decision, but I knew I wouldn't be able to give him the attention he deserved while I was in school."
+    ],
+    [
+      "ParticipantB",
+      "That must have been a tough decision. I'm sure Buddy is happy and well taken care of with your grandparents. Do you have any other pets now?"
+    ],
+    [
+      "ParticipantA",
+      "No, just Max. He's been such a great companion and I don't think I could handle having another pet at the moment. How about you? Do you have any other pets besides Max?"
+    ],
+    [
+      "ParticipantB",
+      "No, just Max. I do love dogs, though. I grew up with a family that always had dogs, so they will always hold a special place in my heart. What about you? Do you have any other pets besides the Golden Retriever you had as a child?"
+    ],
+    [
+      "ParticipantA",
+      "No, just Max. He's been my only pet for the past few years. I do love dogs and hope to have more in the future, but for now, I'm happy with just Max."
+    ],
+    [
+      "ParticipantB",
+      "I completely understand. Max sounds like a great pet and I'm sure he's happy with just you. Thanks for sharing about Max with me. It's always great to talk to someone who loves dogs as much as I do!"
+    ],
+    [
+      "ParticipantA",
+      "Of course, it was my pleasure! Thanks for sharing about Max with me too. I'm sure he's a great companion for you."
+    ],
+    [
+      "ParticipantB",
+      "Thanks, I appreciate that. It was nice talking to you about our pets. Have a great day!"
+    ],
+    [
+      "ParticipantA",
+      "You too, take care!"
+    ]
+  ],
+  "n_turns": 19,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

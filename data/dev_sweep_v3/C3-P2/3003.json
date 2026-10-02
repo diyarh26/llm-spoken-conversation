@@ -1,0 +1,110 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been considering getting a truck. I work as a car mechanic and sometimes I need to transport larger parts or tools, so a truck would be very practical for me. What about you? What kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantA",
+      "That makes sense. I've been thinking about getting a compact car for my daily commute to work. I've been looking at the Toyota Yaris and the Honda Fit. How about you? Have you thought about any specific models?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've actually been looking at the Ford F-150 and the Chevy Silverado. I'm a mechanic and I've worked on both of those models before, so I'm pretty familiar with them. Plus, they're both very reliable and have good towing capacity. What do you think about the Toyota Yaris and the Honda Fit?"
+    ],
+    [
+      "ParticipantA",
+      "I think they're both great options for a compact car. The Toyota Yaris is known for its fuel efficiency and reliability, while the Honda Fit has a spacious interior and versatile cargo area. It really depends on your specific needs and preferences. Have you had any experience with either of those models?"
+    ],
+    [
+      "ParticipantB",
+      "No, I haven't had any direct experience with either of those models, but I've worked on a lot of different cars over the years and I've heard good things about both the Yaris and the Fit. It sounds like they're both solid choices for a compact car.\n\nSo, what are the most important factors you're considering when it comes to buying a car?"
+    ],
+    [
+      "ParticipantA",
+      "For me, fuel efficiency, reliability, and safety are the most important factors. I also want a car that's comfortable to drive and has a good infotainment system. How about you? What are your top priorities when it comes to buying a car?"
+    ],
+    [
+      "ParticipantB",
+      "I agree with you on all of those factors. Fuel efficiency, reliability, safety, comfort, and a good infotainment system are all important to me too. I also like to look for a car that has good towing capacity, since I sometimes need to haul larger items. And of course, I want something that fits my budget.\n\nHave you thought about test driving any of the cars you're considering?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I've actually test driven the Toyota Yaris and the Honda Fit, and I was really impressed with both of them. The Yaris was very comfortable and had a smooth ride, while the Fit had a lot of cargo space and was very easy to maneuver. I'm still trying to decide which one is the best fit for me. Have you test driven any of the trucks you're considering?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I've test driven both the Ford F-150 and the Chevy Silverado, and they both handled well and had a smooth ride. The F-150 had a little more towing capacity, while the Silverado had a slightly more comfortable interior. It's really a tough decision, but I think I'm leaning towards the F-150 just because of the towing capacity.\n\nWhat's your final decision on which car you're going to buy?"
+    ],
+    [
+      "ParticipantA",
+      "I'm still deciding between the Yaris and the Fit, but I think I'm going to go with the Yaris. It has great fuel efficiency, reliability, and safety ratings, and it's a little bit cheaper than the Fit. I'm also really impressed with the interior space and the infotainment system. How about you? Have you made a final decision on which truck you're going to buy?"
+    ],
+    [
+      "ParticipantB",
+      "I think I'm going to go with the Ford F-150. It has a great towing capacity, and it handles well. I also really like the interior and the infotainment system. Plus, I'm familiar with the model and know it's reliable. So, that's my final decision.\n\nIt was nice talking to you!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was great chatting with you too! Good luck with your car search and let me know if you have any questions or need any help."
+    ]
+  ],
+  "n_turns": 15,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}
