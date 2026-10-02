@@ -97,6 +97,7 @@ oh/okay/uh-huh marker rates for P2** (circular). Words/turn and alignment are fi
 | 27.9 → ~2.10 | Full C1 + C2 run on the VM; A/B test on `data/dev_sweep_v2`; B starts poster |
 | **by 30.9** | **Decide C3/C4 GPU:** tutor's V100, or Diyar rents one; C3/C4 run ~30.9 → ~4.10 |
 | ~2.10 → 5.10 | Run all analysis on `data/generated_v3`; final figures |
+| ~6.10 checkpoint | **Only if ahead of schedule:** tiny "listener decides" turn-taking pilot (speaker generates in chunks; after each chunk the listener chooses stay silent / backchannel / take the floor) as one extra poster panel. Otherwise it is the poster's "future work". |
 | 5.10 → 9.10 | Poster |
 | 10.10 | Buffer |
 | **11.10** | **Poster presentation** |
