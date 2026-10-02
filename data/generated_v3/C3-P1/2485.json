@@ -1,0 +1,110 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2485,
+  "topic": "Family Reunions",
+  "sb_prompt": "DISCUSS PLANNING A FAMILY REUNION.  DRAW ON YOUR EXPERIENCES AND THOSE OF THE OTHER CALLER FOR MAKING THE NEXT GET-TOGETHER SUCCESSFUL AND MEMORABLE.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 45,
+    "education": "a high-school education",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, have you ever planned a family reunion before?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I have! My family has one every few years."
+    ],
+    [
+      "ParticipantA",
+      "That's great! What was the most memorable part of your last family reunion?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, I think it was just seeing everyone together and catching up. It's not often we're all in the same place."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's so true. I feel the same way. The last time I planned a family reunion, I made sure we had a bunch of activities for everyone to do together, like a family photo session and a big picnic."
+    ],
+    [
+      "ParticipantB",
+      "That sounds great! I think my family likes to play games together. We've had some really fun trivia contests and board game tournaments."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that sounds like a lot of fun! Maybe we could have some kind of game night at our next family reunion. What do you think?"
+    ],
+    [
+      "ParticipantB",
+      "Definitely! I think that's a great idea. And we could also have some of our favorite family recipes available for everyone to try."
+    ],
+    [
+      "ParticipantA",
+      "That's a great idea too! I'll have to remember that for our next family reunion. Do you have any other suggestions for making it a successful and memorable event?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's important to have a good location that's easily accessible for everyone. And maybe we could have a theme or dress up in costumes to add some extra fun to the event."
+    ],
+    [
+      "ParticipantA",
+      "Those are both great suggestions. I'll have to keep those in mind for the next time we plan a family reunion. Thanks for the ideas!"
+    ],
+    [
+      "ParticipantB",
+      "No problem! It was nice chatting with you."
+    ],
+    [
+      "ParticipantA",
+      "You too! Have a great day!"
+    ]
+  ],
+  "n_turns": 15,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

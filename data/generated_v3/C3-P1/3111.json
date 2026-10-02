@@ -1,0 +1,106 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3111,
+  "topic": "Crime",
+  "sb_prompt": "DISCUSS CRIME IN AMERICAN CITIES TODAY.  WHAT ARE YOUR CONCERNS AND THE CONCERNS OF THE OTHER CALLER?  WHAT STEPS CAN BE TAKEN TO REDUCE CRIME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 45,
+    "education": "a college degree",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 31,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what are your thoughts on crime in American cities today?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's a really complex issue. On the one hand, I think there are definitely people who commit crimes and need to be held accountable for their actions. But on the other hand, I think there are also a lot of systemic issues that contribute to crime, like poverty and lack of access to education and job opportunities."
+    ],
+    [
+      "ParticipantA",
+      "I totally agree. I think it's important to acknowledge that there are a lot of underlying issues that can lead people to turn to crime. In my experience, a lot of people who commit crimes come from difficult backgrounds and don't have many other options."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think that's a really important point. I also think that we need to look at the role that law enforcement plays in all of this. There are definitely cases where the police are doing a great job of keeping communities safe, but there are also cases where they're not doing enough, or they're even contributing to the problem."
+    ],
+    [
+      "ParticipantA",
+      "That's a really good point. I think it's really important for law enforcement to be held accountable for their actions, and for there to be transparency and oversight when it comes to their actions. There have definitely been cases where the police have abused their power and caused more harm than good."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. And I think it's also important for us as a society to have open and honest conversations about these issues. It can be easy to just demonize people who commit crimes, but I think we need to take a more nuanced approach and try to understand the underlying causes of crime."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. I think it's important to remember that everyone deserves compassion and understanding, regardless of their past actions. And I also think that by working together and addressing the root causes of crime, we can create safer and more just communities for everyone."
+    ],
+    [
+      "ParticipantB",
+      "Yes, I completely agree. It's important that we work together to create a society where everyone has access to the resources they need to thrive, and where everyone is treated with respect and dignity. Thank you for having this conversation with me. It's been really enlightening."
+    ],
+    [
+      "ParticipantA",
+      "Of course, thank you for having this conversation with me too! I think it's really important that we keep these conversations going and work towards creating a more just and equitable society for everyone."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. I think it's really important that we keep talking about these issues and working towards solutions. It's going to take a lot of hard work and dedication, but I believe that we can create a better future for everyone. Thank you for your time."
+    ],
+    [
+      "ParticipantA",
+      "You're welcome. Take care!"
+    ],
+    [
+      "ParticipantB",
+      "You too!"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 1,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1
+  }
+}

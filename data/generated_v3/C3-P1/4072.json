@@ -1,0 +1,220 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 4072,
+  "topic": "News Media",
+  "sb_prompt": "DISCUSS HOW YOU AND THE OTHER CALLER KEEP UP ON CURRENT EVENTS.      DO YOU GET MOST OF YOUR NEWS FROM TVOR PEOPLE YOU KNOW?  ARE YOU SATISFIED WITH THE QUALITY OF COVERAGE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 24,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 25,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how do you usually keep up with current events?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly through online news sources and social media."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, same here. Do you find the coverage to be satisfactory?"
+    ],
+    [
+      "ParticipantB",
+      "It's hit or miss, but overall I think it's decent. What about you?"
+    ],
+    [
+      "ParticipantA",
+      "I agree, it can be hit or miss. I try to get a mix of perspectives from different sources. I also ask people I know what they're reading and hearing about."
+    ],
+    [
+      "ParticipantB",
+      "That's a good approach. I should probably do that more often."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think it's important to get a variety of perspectives. Do you have any particular news sources that you trust or enjoy more than others?"
+    ],
+    [
+      "ParticipantB",
+      "Not really, I just kind of go with whatever source I happen to come across first. What about you?"
+    ],
+    [
+      "ParticipantA",
+      "I have a few sources that I trust and try to stick to them as much as possible. I find that it helps me avoid getting too biased by only reading sources that agree with me."
+    ],
+    [
+      "ParticipantB",
+      "That's a good point. I should probably try to be more intentional about the sources I choose."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think it's important to be intentional about the sources we choose. It can really affect how we perceive the world."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. It's easy to get caught up in a bubble if we only read sources that confirm our existing beliefs."
+    ],
+    [
+      "ParticipantA",
+      "Exactly. It's important to challenge ourselves and read sources that have different perspectives. That way, we can have a more well-rounded understanding of the news."
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. It's easy to get stuck in our own bubbles and forget that there are other perspectives out there."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's easy to get stuck in our own bubbles. But I think if we make an effort to seek out different perspectives, it can really broaden our understanding of the world."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. It's important to keep an open mind and be willing to listen to different perspectives, even if they don't align with our own."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. And I think it's also important to recognize that different sources may have different biases, so it's important to be aware of that and try to read sources that have different biases."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's a good point. It's important to be aware of the biases of different sources and try to read sources that have different biases."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's important to be aware of the biases of different sources and try to read sources that have different biases. That way, we can get a more well-rounded understanding of the news."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. It's easy to get caught up in a single source that aligns with our own beliefs, but it's important to seek out different perspectives and sources."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's easy to get caught up in a single source that aligns with our own beliefs, but it's important to seek out different perspectives and sources. That way, we can have a more well-rounded understanding of the news."
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. It's important to be intentional about the sources we choose and seek out different perspectives."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's important to be intentional about the sources we choose and seek out different perspectives. That way, we can have a more well-rounded understanding of the news."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. It's important to challenge ourselves and read sources that have different perspectives."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's important to challenge ourselves and read sources that have different perspectives. That way, we can have a more well-rounded understanding of the news."
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. It's easy to get caught up in a single source that aligns with our own beliefs, but it's important to be aware of different biases and seek out sources with different perspectives."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. It's important to be aware of different biases and seek out sources with different perspectives. That way, we can have a more well-rounded understanding of the news."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. And it's important to be open-minded and willing to listen to different perspectives, even if they don't align with our own."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's important to be open-minded and willing to listen to different perspectives, even if they don't align with our own. That way, we can have a more nuanced understanding of the news."
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. And it's important to recognize that different sources may have different biases, so it's important to be aware of that and try to read sources that have different biases."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. It's important to recognize that different sources may have different biases, so it's important to be aware of that and try to read sources that have different biases. That way, we can have a more nuanced understanding of the news."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. And it's important to be intentional about the sources we choose and seek out different perspectives."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's important to be intentional about the sources we choose and seek out different perspectives. That way, we can have a more nuanced understanding of the news."
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. And it's important to challenge ourselves and read sources that have different perspectives."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. It's important to challenge ourselves and read sources that have different perspectives. That way, we can have a more nuanced understanding of the news."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. And it's important to recognize that different sources may have different biases, so it's important to be aware of that and try to read sources that have different biases."
+    ],
+    [
+      "ParticipantA",
+      "Yes, that's right. It's important to be aware of the biases of different sources and try to read sources that have different biases. That way, we can have a more nuanced understanding of the news."
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. And it's important to be open-minded and willing to listen to different perspectives, even if they don't align with our own."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. It's important to be open-minded and willing to listen to different perspectives, even if they don't align with our own. That way, we can have a more nuanced understanding of the news.\n\nThis conversation has reached its 40-turn limit. Is there anything else you would like to discuss before we end the call?"
+    ],
+    [
+      "ParticipantB",
+      "No, I think we covered everything. Thanks for the conversation!"
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 9,
+    "dup_kept": 5
+  }
+}
