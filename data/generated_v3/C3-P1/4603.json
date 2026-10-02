@@ -1,0 +1,123 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 4603,
+  "topic": "Universal Pblic Serv",
+  "sb_prompt": "SEE HOW THE OTHER CALLER FEELS ABOUT THE PROPOSAL THAT ALL YOUNG AMERICANS SHOULD SPEND A YEAR OR TWO DOING SOME KIND OF PUBLIC SERVICE",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 51,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about the idea of young Americans doing public service for a year or two?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's a good idea in theory, but I'm not sure how practical it would be."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can see that. What do you think would make it practical or not?"
+    ],
+    [
+      "ParticipantB",
+      "I think one of the biggest challenges would be finding enough opportunities for everyone who wanted to do public service. And then there's the question of whether people would be willing to take time off from their careers to do it."
+    ],
+    [
+      "ParticipantA",
+      "That's a good point. I hadn't thought of that. I wonder if there would be enough opportunities if everyone wanted to do it."
+    ],
+    [
+      "ParticipantB",
+      "It's hard to say. I think it would depend on how many organizations were willing to take on volunteers, and whether there was enough funding to support those organizations."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, funding is definitely a big issue. I wonder if there would be enough resources to make it work."
+    ],
+    [
+      "ParticipantB",
+      "That's a good question. I'm not sure. But I do think that it could be a valuable experience for young people, and it could help them develop skills that would be useful in their careers."
+    ],
+    [
+      "ParticipantA",
+      "I agree, I think it could be a great way to learn new things and help others. But I also wonder if it would be mandatory or if people would be able to choose to do it."
+    ],
+    [
+      "ParticipantB",
+      "I'm not sure. I think it would depend on how the program was designed. But I think it would be important for it to be optional, so that people could choose whether or not they wanted to do it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's important. You shouldn't be forced to do something if you don't want to. So, have you ever done any kind of public service before?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I actually worked as a school bus driver for a few years. It was a public service job, and it was really rewarding. I enjoyed being able to help children get to school safely every day."
+    ],
+    [
+      "ParticipantA",
+      "That's great! I'm sure you made a big difference in their lives. Have you noticed any benefits from doing that kind of work?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I think it helped me develop a sense of responsibility and reliability. It also gave me a chance to give back to my community in a small way. And of course, it was rewarding to know that I was making a difference in the lives of those children."
+    ],
+    [
+      "ParticipantA",
+      "That's really wonderful. I can see how it would be a valuable experience. I myself haven't done any kind of public service, but I can see the benefits of it."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think it's definitely something that more young people should consider. It's a great way to learn new skills, make a difference, and gain a sense of purpose.\n\n(This conversation ended after"
+    ]
+  ],
+  "n_turns": 18,
+  "seed_turns": 2,
+  "ended_by": "empty_turn",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "empty_retries": 1
+  }
+}
