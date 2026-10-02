@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what kind of car are you thinking of buying next?\nParticipantB: Oh, I've been thinking about getting a truck.\nParticipantA: A truck, huh? What kind of truck?\nParticipantB: Probably a pickup. Something with a good towing capacity.\nParticipantA: Yeah, those are nice. What do you plan on using it for?\nParticipantB: Mostly for hauling stuff around, like furniture or building supplies.\nParticipantA: Yeah, those are good uses for a truck. What kind of engine do you want?\nParticipantB: I'm thinking about a V8. Something with some power.\nParticipantA: Yeah, that sounds good. I've always liked V8 engines. What color do you want?\nParticipantB: I'm thinking about something with a black exterior and a grey interior.\nParticipantA: That sounds nice. I had a truck like that a few years back.\nParticipantB: Oh, really? What kind of truck was it?\nParticipantA: It was a Ford F-150. I loved that truck.\nParticipantB: Yeah, those are great trucks. I've worked on a few of them in my job as a mechanic.\nParticipantA: Yeah, they're built tough. I had a few issues with it, but overall it was a great vehicle.\nParticipantB: Yeah, they're known for their reliability. What made you get rid of it?\nParticipantA: Well, it was getting pretty old and the repairs were getting too expensive. Plus, I needed something with better fuel economy for my daily commute.\nParticipantB: Yeah, I hear you. I'm thinking about getting a smaller car for my daily drive and keeping the truck for weekend projects.\nParticipantA: That's a good idea. I might do something similar. What kind of car are you thinking of getting?\nParticipantB: I'm thinking about a Honda Civic. Something with good fuel economy and reliable.\nParticipantA: Those are great cars. I had a Honda Accord a few years ago and it was a great car.\nParticipantB: Yeah, Hondas are known for their reliability. What made you get rid of it?\nParticipantA: It was getting a little old and the repair costs were adding up. Plus, I needed something with better fuel economy for my daily commute.\nParticipantB: Yeah, I hear you. Well, it sounds like we're both looking for reliable and fuel-efficient cars.\nParticipantA: Yeah, definitely. It's important to find a car that fits your needs and budget.\nParticipantB: Yeah, absolutely. Well, thanks for chatting with me about cars. It's been nice talking to you.\nParticipantA: Yeah, likewise. Thanks for the conversation.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 697,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

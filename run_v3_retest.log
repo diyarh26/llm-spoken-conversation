@@ -880,3 +880,173 @@ loading mistralai/Mistral-7B-Instruct-v0.2 for ParticipantB
   saved 3595  turns=42  counters={'hit_token_cap': 8, 'multi_turn_emissions': 3, 'dup_resamples': 1}
   saved 4333  turns=15  counters={'hit_token_cap': 0, 'multi_turn_emissions': 3}
   saved 3657  turns=42  counters={'hit_token_cap': 48, 'multi_turn_emissions': 1, 'dup_resamples': 13, 'dup_kept': 8}
+WARN: push failed after c4 (continuing)
+=== degeneration score ===
+
+== data/dev_sweep_v2/C1-P0 ==
+  conversations                5
+  dup_turn_rate                0.0
+  turn_cap_rate                0.0
+  token_cap_rate               0.0
+  dup_kept                     0
+  empty_retries                0
+  degeneration_per_conv        0.0
+  n_turns_mean                 23.2
+  words_per_turn_mean          15.31
+  words_per_turn_median        14.0
+  short_turn_rate              0.0259
+  multi_turn_emission_rate     0.0
+  ended_by                     {'n/a': 5}
+
+== data/dev_sweep_v2/C1-P1 ==
+  conversations                5
+  dup_turn_rate                0.0
+  turn_cap_rate                0.0
+  token_cap_rate               0.0
+  dup_kept                     0
+  empty_retries                0
+  degeneration_per_conv        0.0
+  n_turns_mean                 18.6
+  words_per_turn_mean          15.85
+  words_per_turn_median        16
+  short_turn_rate              0.0108
+  multi_turn_emission_rate     0.0
+  ended_by                     {'n/a': 5}
+
+== data/dev_sweep_v2/C1-P2 ==
+  conversations                5
+  dup_turn_rate                0.0
+  turn_cap_rate                0.0
+  token_cap_rate               0.0
+  dup_kept                     0
+  empty_retries                0
+  degeneration_per_conv        0.0
+  n_turns_mean                 25
+  words_per_turn_mean          16.3
+  words_per_turn_median        15
+  short_turn_rate              0.096
+  multi_turn_emission_rate     0.0
+  ended_by                     {'n/a': 5}
+
+== data/dev_sweep_v2/C2-P0 ==
+  conversations                5
+  dup_turn_rate                0.1702
+  turn_cap_rate                0.6
+  token_cap_rate               0.0
+  dup_kept                     24
+  empty_retries                0
+  degeneration_per_conv        10.2
+  n_turns_mean                 30.2
+  words_per_turn_mean          61.79
+  words_per_turn_median        58
+  short_turn_rate              0.0
+  multi_turn_emission_rate     0.0993
+  ended_by                     {'turn_cap': 3, 'closing': 2}
+
+== data/dev_sweep_v2/C3-P0 ==
+  conversations                5
+  dup_turn_rate                0.0088
+  turn_cap_rate                0.0
+  token_cap_rate               0.0088
+  dup_kept                     1
+  empty_retries                0
+  degeneration_per_conv        0.6
+  n_turns_mean                 24.6
+  words_per_turn_mean          37.48
+  words_per_turn_median        32
+  short_turn_rate              0.0088
+  multi_turn_emission_rate     0.5221
+  ended_by                     {'closing': 1, 'mutual_closing': 4}
+
+== data/dev_sweep_v2/C3-P1 ==
+  conversations                5
+  dup_turn_rate                0.0
+  turn_cap_rate                0.0
+  token_cap_rate               0.0
+  dup_kept                     0
+  empty_retries                0
+  degeneration_per_conv        0.0
+  n_turns_mean                 16.4
+  words_per_turn_mean          32.82
+  words_per_turn_median        20.5
+  short_turn_rate              0.0139
+  multi_turn_emission_rate     0.6806
+  ended_by                     {'mutual_closing': 4, 'closing': 1}
+
+== data/dev_sweep_v2/C3-P2 ==
+  conversations                5
+  dup_turn_rate                0.1649
+  turn_cap_rate                0.2
+  token_cap_rate               0.5876
+  dup_kept                     16
+  empty_retries                0
+  degeneration_per_conv        18.0
+  n_turns_mean                 21.4
+  words_per_turn_mean          60.93
+  words_per_turn_median        67
+  short_turn_rate              0.0
+  multi_turn_emission_rate     0.3196
+  ended_by                     {'mutual_closing': 4, 'turn_cap': 1}
+
+== data/dev_sweep_v2/C4-P0 ==
+  conversations                5
+  dup_turn_rate                0.006
+  turn_cap_rate                0.6
+  token_cap_rate               0.1677
+  dup_kept                     1
+  empty_retries                0
+  degeneration_per_conv        6.6
+  n_turns_mean                 35.4
+  words_per_turn_mean          145.8
+  words_per_turn_median        158
+  short_turn_rate              0.0
+  multi_turn_emission_rate     0.1796
+  ended_by                     {'mutual_closing': 2, 'turn_cap': 3}
+
+== data/dev_sweep_v2/C4-P1 ==
+  conversations                5
+  dup_turn_rate                0.0
+  turn_cap_rate                0.2
+  token_cap_rate               0.0729
+  dup_kept                     0
+  empty_retries                0
+  degeneration_per_conv        1.6
+  n_turns_mean                 21.2
+  words_per_turn_mean          111.92
+  words_per_turn_median        134.0
+  short_turn_rate              0.0104
+  multi_turn_emission_rate     0.25
+  ended_by                     {'mutual_closing': 3, 'closing': 1, 'turn_cap': 1}
+
+== data/dev_sweep_v2/C4-P2 ==
+  conversations                5
+  dup_turn_rate                0.0727
+  turn_cap_rate                0.4
+  token_cap_rate               0.5091
+  dup_kept                     8
+  empty_retries                0
+  degeneration_per_conv        14.8
+  n_turns_mean                 24
+  words_per_turn_mean          138.16
+  words_per_turn_median        131.5
+  short_turn_rate              0.0
+  multi_turn_emission_rate     0.1
+  ended_by                     {'closing': 1, 'mutual_closing': 2, 'turn_cap': 2}
+=== did-it-improve report (short turns + backchannels vs human) ===
+condition      convs mean_wpt med_wpt  <=3w % bckchnl % med_turns
+-----------------------------------------------------------------
+HUMAN (SB)       300     12.8       6   39.7%     30.8%        82
+-----------------------------------------------------------------
+C1-P0              5     15.4      14    1.7%      0.0%        25
+C1-P1              5     15.8      16    1.1%      1.1%        18
+C1-P2              5     17.6      16    4.3%      1.7%        23
+C2-P0              5     61.8      58    0.0%      0.0%        40
+C3-P0              5     37.5      32    1.8%      0.0%        18
+C3-P1              5     32.8      20    1.4%      1.4%        15
+C3-P2              5     60.9      67    0.0%      0.0%        15
+C4-P0              5    145.8     158    0.0%      0.0%        40
+C4-P1              5    111.9     134    1.0%      0.0%        18
+C4-P2              5    138.2     132    0.0%      0.0%        13
+
+Read: P1/P2 should move '<=3w %' and 'bckchnl %' UP toward the HUMAN row vs P0. If P0 ~ P1 on backchannels, the prompt still isn't letting them emerge.
+SWEEP DONE — (1) degeneration: dup_turn_rate < 0.05 and degeneration_per_conv < 1.0; (2) dev_report: P1/P2 backchannel% and <=3w% should rise toward HUMAN; (3) read 2-3 transcripts per condition. Then freeze config.py.
