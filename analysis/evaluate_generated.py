@@ -54,6 +54,34 @@ BACKCHANNEL_PRESENCE = re.compile(
     r"\b(uh-?huh|okay|ok|mm-?hm)\b", re.I
 )
 
+# Expanded listener-feedback lexicon -- "Improving Backchannel Analysis": the original
+# paper only tracked oh/okay/uh-huh; these additional forms (yeah, right, mm-hmm, i see,
+# sure) are also common backchannel/continuer tokens and were previously invisible to
+# the rate/standalone/diversity metrics below. Each entry is (name, bare-phrase-regex);
+# the bare phrase (no \b wrapping, no flags) is reused to build both the per-token
+# detector and the whole-turn "is this JUST a backchannel" check.
+BACKCHANNEL_PHRASES: list[tuple[str, str]] = [
+    ("uh_huh", r"uh-?\s?huh"),
+    ("okay",   r"(?:okay|ok)"),
+    ("oh",     r"oh"),
+    ("yeah",   r"yeah"),
+    ("right",  r"right"),
+    ("mm_hmm", r"mm+[\s-]?hmm?"),
+    ("i_see",  r"i see"),
+    ("sure",   r"sure"),
+]
+BACKCHANNEL_LEXICON: dict[str, re.Pattern] = {
+    name: re.compile(rf"\b{phrase}\b", re.I) for name, phrase in BACKCHANNEL_PHRASES
+}
+
+# A turn counts as a "standalone" backchannel turn if, once trimmed, it consists of one
+# or more lexicon tokens only (joined by light punctuation/conjunctions) -- i.e. the turn
+# carries no additional propositional content beyond the listener signal itself.
+_BC_TOKEN_ALT = "|".join(phrase for _, phrase in BACKCHANNEL_PHRASES)
+BACKCHANNEL_STANDALONE_FULL = re.compile(
+    rf"^\s*(?:(?:{_BC_TOKEN_ALT})[\s,.!]*(?:and\s+)?)+$", re.I
+)
+
 REPAIR_REPEATS_RE = re.compile(r"\b(\w+)\s+\1\b", re.I)
 REPAIR_MARKERS_RE = re.compile(r"-\s|I mean\b|or rather\b", re.I)
 
@@ -124,12 +152,27 @@ def load_conversations(data_dir: pathlib.Path) -> list[dict]:
 # Metric functions (all take `turns: list[tuple[str, str]]`)
 # ---------------------------------------------------------------------------
 
+def _quartiles(values: list[int]) -> tuple[float, float]:
+    """Q1, Q3 via the same method as statistics.quantiles(n=4, method='exclusive')."""
+    if len(values) < 2:
+        v = values[0] if values else 0
+        return v, v
+    q1, _, q3 = statistics.quantiles(values, n=4)
+    return q1, q3
+
+
 def m1_turn_length(turns):
     wpt = [len(txt.split()) for _, txt in turns]
+    q1, q3 = _quartiles(wpt) if wpt else (0, 0)
     return {
         "mean_words_per_turn": round(statistics.mean(wpt), 3) if wpt else 0,
         "median_words_per_turn": round(statistics.median(wpt), 3) if wpt else 0,
         "stdev_words_per_turn": round(statistics.stdev(wpt), 3) if len(wpt) > 1 else 0,
+        # Turn-length variability as IQR (Q3 - Q1), robust to the long-tail outlier turns
+        # that inflate stdev -- see "Improving Turn Length Analysis" slide.
+        "q1_words_per_turn": round(q1, 3),
+        "q3_words_per_turn": round(q3, 3),
+        "iqr_words_per_turn": round(q3 - q1, 3),
         "n_turns": len(wpt),
         "words_per_turn_list": wpt,
     }
@@ -208,6 +251,48 @@ def m5_backchannel_standalone(turns):
         "backchannel_standalone_ratio": round(len(standalone) / len(has_bc), 4),
         "n_backchannel_turns": len(has_bc),
         "n_standalone": len(standalone),
+    }
+
+
+def m_backchannel_analysis(turns):
+    """"Improving Backchannel Analysis": rate, standalone rate, and diversity of listener
+    feedback tokens, over the expanded BACKCHANNEL_LEXICON (not just oh/okay/uh-huh).
+
+    1. backchannel_rate_per_100w : Rate(token) = (#occurrences / total words) * 100,
+       summed across the whole lexicon -- generalizes the paper's single-token rate
+       formula to "any listener signal", per the slide's stated purpose.
+    2. backchannel_standalone_rate : of the TURNS that contain a lexicon token, what
+       fraction are brief, independent turns (the turn IS the backchannel, not a
+       backchannel glued onto a longer sentence).
+    3. backchannel_diversity : how many distinct lexicon types (out of 8) actually
+       appear at least once -- a conversation using only "okay" scores low even if
+       its raw rate is high; one using 5 different forms scores higher.
+    """
+    texts = [txt for _, txt in turns]
+    full_text = " ".join(texts)
+    total_words = max(len(full_text.split()), 1)
+
+    per_token_counts = {
+        name: len(pat.findall(full_text)) for name, pat in BACKCHANNEL_LEXICON.items()
+    }
+    total_occurrences = sum(per_token_counts.values())
+    rate_per_100w = 100.0 * total_occurrences / total_words
+
+    has_bc = [t for t in texts if any(pat.search(t) for pat in BACKCHANNEL_LEXICON.values())]
+    standalone = [t for t in has_bc if BACKCHANNEL_STANDALONE_FULL.match(t.strip())]
+    standalone_rate = len(standalone) / len(has_bc) if has_bc else None
+
+    types_used = sum(1 for count in per_token_counts.values() if count > 0)
+    diversity_ratio = types_used / len(BACKCHANNEL_LEXICON)
+
+    return {
+        "backchannel_rate_per_100w": round(rate_per_100w, 4),
+        "n_backchannel_occurrences": total_occurrences,
+        "backchannel_standalone_rate": round(standalone_rate, 4) if standalone_rate is not None else None,
+        "n_backchannel_turns_any": len(has_bc),
+        "backchannel_diversity_types": types_used,
+        "backchannel_diversity_ratio": round(diversity_ratio, 4),
+        "backchannel_type_counts": per_token_counts,
     }
 
 
@@ -326,6 +411,7 @@ def evaluate_conversation(conv: dict) -> dict:
     metrics.update(m3_alignment_trajectory(turns))
     metrics.update(m4_turn_taking_economy(turns))
     metrics.update(m5_backchannel_standalone(turns))
+    metrics.update(m_backchannel_analysis(turns))
     metrics.update(m6_oh_epistemic(turns))
     metrics.update(m7_self_repair(turns))
     metrics.update(m8_closing_sequence(turns))
@@ -342,11 +428,15 @@ def evaluate_conversation(conv: dict) -> dict:
 
 NUMERIC_KEYS = [
     "mean_words_per_turn", "median_words_per_turn", "stdev_words_per_turn",
+    "q1_words_per_turn", "q3_words_per_turn", "iqr_words_per_turn",
     "n_turns",
     "rate_oh", "rate_okay", "rate_uh_huh",
     "alignment_earlier", "alignment_later", "alignment_delta",
     "pct_short_turns",
     "backchannel_standalone_ratio", "n_backchannel_turns",
+    "backchannel_rate_per_100w", "n_backchannel_occurrences",
+    "backchannel_standalone_rate", "n_backchannel_turns_any",
+    "backchannel_diversity_types", "backchannel_diversity_ratio",
     "oh_epistemic_ratio", "n_oh",
     "self_repair_per_100",
     "closing_order_correct",
@@ -439,6 +529,8 @@ def main():
     for cond, stats in sorted(summary.items()):
         print(f"\n{cond}  (n={stats['n']})")
         print(f"  mean words/turn          : {stats.get('mean_words_per_turn_mean', '—')}")
+        print(f"  median words/turn        : {stats.get('median_words_per_turn_mean', '—')}")
+        print(f"  IQR words/turn (Q3-Q1)   : {stats.get('iqr_words_per_turn_mean', '—')}")
         print(f"  % turns <5 words         : {stats.get('pct_short_turns_mean', '—')}")
         print(f"  oh/100w                  : {stats.get('rate_oh_mean', '—')}")
         print(f"  okay/100w                : {stats.get('rate_okay_mean', '—')}")
@@ -447,6 +539,9 @@ def main():
         print(f"  alignment later          : {stats.get('alignment_later_mean', '—')}")
         print(f"  alignment delta          : {stats.get('alignment_delta_mean', '—')}")
         print(f"  backchannel standalone   : {stats.get('backchannel_standalone_ratio_mean', '—')}")
+        print(f"  backchannel rate/100w    : {stats.get('backchannel_rate_per_100w_mean', '—')}")
+        print(f"  backchannel standalone % : {stats.get('backchannel_standalone_rate_mean', '—')}")
+        print(f"  backchannel diversity    : {stats.get('backchannel_diversity_types_mean', '—')} / 8 types")
         print(f"  oh epistemic ratio       : {stats.get('oh_epistemic_ratio_mean', '—')}")
         print(f"  self-repair/100w         : {stats.get('self_repair_per_100_mean', '—')}")
         print(f"  closing order correct    : {stats.get('closing_order_correct_mean', '—')}")
