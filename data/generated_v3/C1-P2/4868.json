@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4868,
+  "topic": "Family Finance",
+  "sb_prompt": "DOES YOUR FAMILY KEEP A MONTHLY BUDGETCAN YOU GIVE A GENERAL DESCRIPTION OF YOUR PROCEDURES",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a farmer",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, how are you doing today?\nParticipantB: I'm doing well, thank you. And yourself?\nParticipantA: I'm doing good. So, I heard we're going to talk about family finance today. Is that correct?\nParticipantB: Yes, that's right.\n\nParticipantA: Okay. Well, my family and I have been keeping a budget for a while now. We like to keep track of our expenses and income to make sure we're staying on track.\nParticipantB: That's good. We've been trying to do something similar, but it's been a bit of a challenge.\nParticipantA: Yeah, I can imagine. What's been the biggest challenge for you?\nParticipantB: Well, I think it's just trying to keep track of everything. We have a lot of bills and expenses, and it can be hard to keep up with everything.\nParticipantA: I know what you mean. We use a spreadsheet to keep track of everything, and it's helped a lot.\nParticipantB: Oh, that's a good idea. We've been trying to use a notebook, but it's easy to lose track of things.\nParticipantA: Yeah, a spreadsheet is a great tool for that. It's also helpful to set financial goals and track progress towards those goals.\nParticipantB: That's a good point. We've been trying to save for a new tractor, but it's been slow going.\nParticipantA: I can understand that. We've been trying to save for a vacation, but it's hard to put money away when there are always other expenses coming up.\nParticipantB: Exactly. It seems like there's always something that comes up and eats away at our savings.\nParticipantA: Yeah, that's definitely been our experience too. But we've found that having a budget and sticking to it has helped us stay on track and make progress towards our goals.\nParticipantB: That's good to hear. We've been struggling with that a bit.\nParticipantA: Well, I hope we've been able to help. Do you have any other questions or thoughts on the topic?\nParticipantB: No, I think that's all for now. Thanks for the conversation and the advice!\nParticipantA: You're welcome. It was nice talking to you. Have a great day!\nParticipantB: You too. Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 602,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

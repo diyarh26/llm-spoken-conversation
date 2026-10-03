@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello! How can I help you today?\n\nParticipantA: Well, I've been thinking about getting a new car, and I was hoping you could give me some advice.\nParticipantB: Sure, I'd be happy to help. What kind of car are you considering?\n\nParticipantA: I'm not sure yet. I was thinking maybe a pickup truck, but I'm open to other options. What about you?\nParticipantB: I'm also considering a new car, but I'm leaning towards a sedan. I like the space and fuel efficiency.\n\nParticipantA: Yeah, I can see how that would be nice. So what factors are you considering when making your decision?\nParticipantB: Well, I'm looking for something reliable, with good safety features and good fuel economy. I also want something that's comfortable and easy to drive.\n\nParticipantA: Those are all good points. I'm mostly just looking for something that's affordable and gets the job done. I don't need all the bells and whistles.\nParticipantB: I understand. Have you thought about any specific brands or models?\n\nParticipantA: Not really. I haven't done much research yet. I just know I want something that can handle a lot of weight and towing.\nParticipantB: That makes sense. Have you considered any specific brands or models?\n\nParticipantA: Not really. I haven't done much research yet. I just know I want something that can handle a lot of weight and towing.\nParticipantB: That makes sense. Have you considered any specific brands or models?\n\nParticipantA: Not really. I haven't done much research yet. I just know I want something that can handle a lot of weight and towing.\n\nParticipantB: I see. Well, there are a lot of great pickup trucks out there. Have you considered looking at the Ford F-150 or the Ram 1500?\n\nParticipantA: I haven't looked at those specifically, no. I'll have to do some research and see how they compare to other options.\n\nParticipantB: Definitely. And don't forget to look at safety ratings and fuel efficiency, too. Those are important factors to consider.\n\nParticipantA: Yeah, I'll keep that in mind. Thanks for your help!\nParticipantB: You're welcome. Good luck with your search!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 583,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

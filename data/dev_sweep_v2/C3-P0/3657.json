@@ -1,0 +1,166 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "How's it going?"
+    ],
+    [
+      "ParticipantB",
+      "It's going well, thanks for asking."
+    ],
+    [
+      "ParticipantA",
+      "That's great to hear. So, what are your thoughts on personal computers?"
+    ],
+    [
+      "ParticipantB",
+      "I think they're a game changer. They've revolutionized the way we work and play."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. I'm particularly interested in gaming PCs. What about you?"
+    ],
+    [
+      "ParticipantB",
+      "I'm not much of a gamer, but I do appreciate the power and capabilities of a good gaming PC."
+    ],
+    [
+      "ParticipantA",
+      "That's cool. I'm a big fan of gaming PCs, especially for first-person shooters and strategy games. How about you?"
+    ],
+    [
+      "ParticipantB",
+      "I'm more of a word processing and browsing kind of guy, but I can definitely appreciate the appeal of gaming PCs for avid gamers."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, they're definitely not just for gaming. I use mine for everything from programming to watching movies. What's your favorite thing to do on your PC?"
+    ],
+    [
+      "ParticipantB",
+      "I mostly use my PC for email, browsing the web, and keeping up with news and current events."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a good use of your time. I mostly use my PC for work and gaming, but I also enjoy streaming movies and TV shows. What's your go-to game?"
+    ],
+    [
+      "ParticipantB",
+      "I don't play many games, but I do enjoy a good puzzle game or two from time to time."
+    ],
+    [
+      "ParticipantA",
+      "Puzzle games can be a lot of fun. I'm a big fan of puzzle games like Portal and The Talos Principle. Have you played any of those?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't played those specifically, but I do enjoy a good puzzle game from time to time."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, those are some great games. I think they're a great way to challenge your brain and have fun at the same time. What's your favorite type of computer?"
+    ],
+    [
+      "ParticipantB",
+      "I prefer laptops because they're portable and convenient for travel, but I also appreciate the power and capabilities of a good desktop PC."
+    ],
+    [
+      "ParticipantA",
+      "I hear you. I think laptops are great for travel and working on the go, but there's something to be said for the raw power and potential of a good desktop PC."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. And with advancements in technology, it's becoming harder to tell the difference between a high-end gaming PC and a high-end workstation."
+    ],
+    [
+      "ParticipantA",
+      "That's definitely true. With the rise of CPUs and GPUs, it's becoming more and more difficult to differentiate between a gaming PC and a workstation."
+    ],
+    [
+      "ParticipantB",
+      "Exactly. And with the rise of cloud computing, the need for a powerful PC is becoming less and less necessary for everyday tasks."
+    ],
+    [
+      "ParticipantA",
+      "That's a good point. With cloud computing, you can access the power of a supercomputer from anywhere with an internet connection."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. And with the advancements in mobile technology, it's possible to access that power from a smartphone or tablet as well."
+    ],
+    [
+      "ParticipantA",
+      "That's true. It's amazing to think about how far technology has come in just a few short years."
+    ],
+    [
+      "ParticipantB",
+      "It really is. And it's exciting to think about what the future holds for personal computing and technology as a whole.\n\n(The conversation has reached 30 turns of talk, and both participants seem to have a mutual respect and interest in personal computers.)"
+    ],
+    [
+      "ParticipantA",
+      "I agree. It's always exciting to think about what the future holds for technology and how it can improve our lives. Thanks for the conversation!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was great talking to you."
+    ],
+    [
+      "ParticipantA",
+      "Likewise! Have a great day!"
+    ]
+  ],
+  "n_turns": 29,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 20,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 20
+  }
+}

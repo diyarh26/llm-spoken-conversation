@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4346,
+  "topic": "Public Education",
+  "sb_prompt": "DISCUSS WITH THE OTHER CALLER WHETHER THERE IS SOMETHING SERIOUSLY WRONG WITH OUR PUBLIC SCHOOL SYSTEMS TODAYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a high-school education",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello! How are you?\nParticipantA: I'm good, thanks. What about you?\nParticipantB: I'm okay, just a little tired. What brings you to call?\nParticipantA: I was asked to talk to a stranger about public education.\nParticipantB: Oh, that's interesting. I was asked the same thing.\nParticipantA: Yeah, it's a hot topic these days.\nParticipantB: Definitely. What do you think is wrong with the public school systems?\nParticipantA: I think there are a lot of problems.\nParticipantB: Same here. Do you have any specific examples?\nParticipantA: Yeah, I think there's too much emphasis on standardized testing.\nParticipantB: That's definitely a problem. What else?\nParticipantA: I think there's not enough funding for schools.\nParticipantB: That's definitely true. What else?\nParticipantA: I think there's too much bureaucracy and not enough teacher autonomy.\nParticipantB: I agree with that. What about you?\nParticipantA: I think there's not enough support for students with special needs.\nParticipantB: That's a big problem. What else?\nParticipantA: I think there's a lack of resources for schools in low-income areas.\nParticipantB: Definitely. What do you think the solution is?\nParticipantA: I think we need to invest more in public education and reduce the emphasis on standardized testing.\nParticipantB: I agree. How about you?\nParticipantA: I think we need to prioritize funding for schools and give teachers more autonomy.\nParticipantB: Definitely. It's good to talk to someone who agrees. Thanks for the conversation.\nParticipantA: You too.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 452,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

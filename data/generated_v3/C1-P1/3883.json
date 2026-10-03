@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3883,
+  "topic": "Clothing And Dress",
+  "sb_prompt": "THE TOPIC IS CLOTHING.  PLEASE FIND OUT HOW THE OTHER CALLER TYPICALLY DRESSES FOR WORK.  HOW MUCH VARIATION IS THERE FROM DAY TO DAY?  HOW MUCH VARIATION IS THERE FROM SEASON TO SEASON?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 57,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: How's it going?\nParticipantB: Oh, you know. Same old. How about you?\nParticipantA: Same here. So, what do you usually wear to work?\nParticipantB: Mostly scrubs. Sometimes a nice top or something if we're going out for a special event. Why, what do you usually wear?\nParticipantA: I usually wear a polo shirt or a button-up shirt with slacks. Sometimes a dress shirt if it's a really important day. How about you? Do you ever change it up?\nParticipantB: Not really. Scrubs are scrubs, you know? And we're not really allowed to wear anything too fancy. How about you? Do you switch it up?\nParticipantA: Oh, definitely. I like to mix it up. Sometimes I'll wear a dress or a skirt, depending on the day and the mood. What about you? Do you dress differently for different seasons?\nParticipantB: Not really. I mean, we don't really have a big change in temperature here, so it's not like we need to dress differently for the cold or anything. How about you?\nParticipantA: Definitely. I love changing up my outfits depending on the season. In the summer, I love wearing bright colors and light fabrics. In the winter, I go for more muted tones and heavier fabrics. Do you have a favorite season to dress for?\nParticipantB: To be honest, I don't really have a favorite. I mean, I like the idea of dressing for the season, but I don't really have the opportunity to do so at work. How about you?\nParticipantA: Oh, I love dressing for the season. I think it's so much fun to play around with different styles and colors. And I have a friend who's a fashion designer, so I always have someone to bounce ideas off of. Do you have any fashion-related hobbies?\nParticipantB: Not really. I mean, I like to look presentable, but I'm not really into fashion or anything. Do you have any favorite clothing stores or designers?\nParticipantA: Oh, I love this one store in the mall called \"Chic Boutique.\" They have the cutest clothes and accessories. And I'm a big fan of this designer called \"Alexander McQueen.\" Have you heard of them?\nParticipantB: No, I haven't. But that's okay. I'm not really into designer clothes or anything like that. I like to keep it simple and practical. Do you ever have trouble finding clothes that fit well?\nParticipantA: Oh, absolutely. I'm not exactly a size zero, so finding clothes that fit well can be a struggle sometimes. Do you have any tips for me?\nParticipantB: Not really. I mean, I'm not really an expert on fashion or anything. But I do try to stick to clothes that fit me well and are comfortable. That's really all I care about. How about you?\nParticipantA: Yeah, definitely. Comfort is key for me too. But sometimes I just can't resist a cute outfit, even if it doesn't fit me perfectly. Do you have any advice for me on that?\nParticipantB: Just go for it. If it's cute and you like it, wear it. Who cares if it doesn't fit perfectly? That's my philosophy anyway. What about you?\nParticipantA: That's a good philosophy. I definitely try to stick to that too. And I think it's important to wear clothes that make you happy, even if they don't fit perfectly. What do you think?\nParticipantB: I think that's a good",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 867,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

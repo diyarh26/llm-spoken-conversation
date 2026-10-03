@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3573,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 67,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "I'm looking for a new car, and I'm thinking about getting a truck."
+    ],
+    [
+      "ParticipantB",
+      "That's interesting."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been thinking about it for a while now."
+    ],
+    [
+      "ParticipantB",
+      "What kind of truck are you considering?"
+    ],
+    [
+      "ParticipantA",
+      "A full-size pickup."
+    ],
+    [
+      "ParticipantB",
+      "I've been considering a smaller SUV."
+    ],
+    [
+      "ParticipantA",
+      "I've been looking at the Ford F-150."
+    ],
+    [
+      "ParticipantB",
+      "I've considered the Toyota 4Runner."
+    ],
+    [
+      "ParticipantA",
+      "I like the F-150 because it has a lot of cargo space and good towing capacity."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I like the 4Runner for its reliability and off-road capabilities."
+    ],
+    [
+      "ParticipantA",
+      "I've also been thinking about gas mileage, though."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's important too."
+    ],
+    [
+      "ParticipantA",
+      "How about you? What are your main concerns when it comes to choosing a car?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I'm looking for something that's comfortable and has good safety ratings."
+    ],
+    [
+      "ParticipantA",
+      "I've been researching different models and comparing their fuel efficiency ratings."
+    ],
+    [
+      "ParticipantB",
+      "I think it's important to have good safety ratings too, you know?"
+    ],
+    [
+      "ParticipantA",
+      "What about you? Have you test-driven any cars yet?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've test-driven a few cars."
+    ],
+    [
+      "ParticipantA",
+      "What are some of the safety features you're looking for in a car?"
+    ],
+    [
+      "ParticipantB",
+      "I want a car with good braking and handling, you know?"
+    ],
+    [
+      "ParticipantA",
+      "So, what are some of the safety features you're looking for in a car?"
+    ],
+    [
+      "ParticipantB",
+      "I also want a car with good visibility and good crash test ratings."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting a truck because I need something that can haul heavy loads for work."
+    ],
+    [
+      "ParticipantB",
+      "And what kind of work do you do that requires heavy hauling?"
+    ],
+    [
+      "ParticipantA",
+      "I drive a truck for a living, so I need something that can handle a heavy load."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can see how that would be important for your job."
+    ],
+    [
+      "ParticipantA",
+      "I've also been thinking about getting a car with a good infotainment system."
+    ],
+    [
+      "ParticipantB",
+      "I agree, an infotainment system is definitely important."
+    ],
+    [
+      "ParticipantA",
+      "What are your thoughts on electric cars?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I haven't really considered an electric car yet, but I'm open to it."
+    ],
+    [
+      "ParticipantA",
+      "Have you test-driven any electric cars yet?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't test-driven any electric cars yet, but I'm open to it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been doing some research on electric cars, and they seem to have a lot of advantages, like better fuel efficiency and lower maintenance costs."
+    ],
+    [
+      "ParticipantB",
+      "I'm not sure about the range on electric cars yet."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, range is definitely a concern with electric cars."
+    ],
+    [
+      "ParticipantB",
+      "I'm also worried about charging infrastructure."
+    ],
+    [
+      "ParticipantA",
+      "Well, I think the charging infrastructure is definitely something that's improving."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can see that being a concern."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been thinking about getting a truck that can handle a heavy load for work, but I also want something that's comfortable and efficient on long trips."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'm also looking for something that's comfortable on long trips."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2,
+    "dup_kept": 1
+  }
+}

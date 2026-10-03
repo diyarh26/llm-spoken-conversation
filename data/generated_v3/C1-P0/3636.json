@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3636,
+  "topic": "Camping",
+  "sb_prompt": "FIND OUT FROM THE OTHER CALLER WHAT KIND OF CAMPING THEY HAVE DONE.  HOW DOES IT COMPARE WITH YOUR OWN EXPERIENCES?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: How are you doing today?\nParticipantB: I'm doing well, thanks for asking. How about you?\nParticipantA: I'm doing pretty good too. So, what brings you to call today?\nParticipantB: Well, I was hoping to talk to someone about their camping experiences. Have you done much camping in your life?\nParticipantA: Yes, I have done quite a bit of camping over the years. I used to go on camping trips with my family when I was younger and I still enjoy it today.\nParticipantB: That's great! I've done some camping too, but not as much as you it seems. I've only gone on a few camping trips with my family, but I really enjoyed it.\nParticipantA: What kind of camping have you done? Have you tried any specific type of camping?\nParticipantB: Most of my camping experiences have been tent camping. We would usually set up our tents in a state park and spend the weekend hiking and exploring the area.\nParticipantA: I've done a lot of tent camping too, but I also enjoy going on more extreme camping trips like backpacking and rock climbing.\nParticipantB: Wow, that sounds really adventurous! I've never tried anything like that before, but I would love to.\nParticipantA: Yeah, it can be a bit intense, but it's also a lot of fun. What kind of camping do you prefer?\nParticipantB: I think I prefer the more relaxed style of camping, like tent camping. I enjoy the peace and quiet of being out in nature and just relaxing.\nParticipantA: Yeah, that's definitely a great way to experience camping. I also enjoy the peacefulness of being out in nature, but I also love the adrenaline rush of doing something more extreme.\nParticipantB: I can see how that would be exciting. Maybe I'll have to try something more extreme next time I go camping.\nParticipantA: Definitely! It's always good to push yourself out of your comfort zone and try new things.\nParticipantB: Yes, I agree. Thanks for talking to me about your camping experiences. It was really interesting to hear about your adventures.\nParticipantA: No problem, it was great talking to you too. Have a great day!\nParticipantB: You too!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 586,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

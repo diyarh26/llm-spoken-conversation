@@ -1,0 +1,106 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 4363,
+  "topic": "Football",
+  "sb_prompt": "PLEASE DISCUSS PROFESSIONAL FOOTBALL.  FIND OUT THE OTHER CALLER'S FAVORITE PRO FOOTBALL TEAM AND WHERE IT'S HEADED THIS YEAR.       DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 27,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, have you been following the football season this year?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've been watching some of the games. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I definitely have. It's been a great season so far, with some surprising upsets and exciting match-ups."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. I've been rooting for the New England Patriots this year. They've been playing really well."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, they've been doing really well. I think they have a good chance of making it to the playoffs this year. How about you, who do you like?"
+    ],
+    [
+      "ParticipantB",
+      "I'm actually a big fan of the Kansas City Chiefs. They've got some great players and a solid team overall."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, the Chiefs have been playing really well this season too. I think they're a strong contender for the playoffs as well. I'm not sure if they'll make it to the Super Bowl, but they definitely have a shot."
+    ],
+    [
+      "ParticipantB",
+      "I totally agree. It's hard to predict who will make it to the Super Bowl this year, but both the Patriots and the Chiefs have been playing really well and have a good chance of making it."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. There are a lot of great teams this year, and it's anyone's game. It's going to be exciting to see how it all plays out."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. I can't wait to see what happens in the upcoming games. It's always unpredictable, but that's what makes it so fun to watch."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. It's always exciting to see how things unfold. Thanks for chatting with me about football. It was great talking with you!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was great chatting with you too. Have a great day!"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

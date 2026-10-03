@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3186,
+  "topic": "Restaurants",
+  "sb_prompt": "WHAT KIND OF DINING OUT DO YOU ENJOY? WHAT THINGS DO YOU LOOK FOR IN A RESTAURANT THAT WOULD GET YOU TO GO BACK AGAIN?  SEE WHETHER THE OTHER CALLER'S PREFERENCES ARE SIMILAR TO YOURS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 58,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "an insurance adjuster",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What kind of restaurants do you usually go to?"
+    ],
+    [
+      "ParticipantB",
+      "I usually go to a mix of different types of restaurants."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm the same. I like trying out different types of food."
+    ],
+    [
+      "ParticipantB",
+      "I especially love finding hidden gems that serve unique, flavorful dishes."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, me too. I love discovering new, interesting places to eat at."
+    ],
+    [
+      "ParticipantB",
+      "I also appreciate when the service is great and the ambiance is comfortable."
+    ],
+    [
+      "ParticipantA",
+      "I agree, good service and ambiance make a big difference."
+    ],
+    [
+      "ParticipantB",
+      "And what about you, what do you usually look for in a restaurant?"
+    ],
+    [
+      "ParticipantA",
+      "I also like it when the prices are reasonable and the portions are generous."
+    ],
+    [
+      "ParticipantB",
+      "I also like it when the restaurant has a good selection of drinks, especially if they have a good craft beer selection."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can definitely appreciate a good craft beer selection."
+    ],
+    [
+      "ParticipantB",
+      "What about you, do you have a favorite type of cuisine?"
+    ],
+    [
+      "ParticipantA",
+      "Italian."
+    ],
+    [
+      "ParticipantB",
+      "I'm a big fan of Italian cuisine too, especially the pasta dishes."
+    ],
+    [
+      "ParticipantA",
+      "Italian food is just so delicious, you know?"
+    ],
+    [
+      "ParticipantB",
+      "I know, the smells and flavors are just amazing."
+    ],
+    [
+      "ParticipantA",
+      "I love a good pizza."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, me too. There's just something about a perfectly cooked pizza that's hard to beat."
+    ],
+    [
+      "ParticipantA",
+      "I also like it when the restaurant has a cozy, welcoming atmosphere."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, a cozy atmosphere is definitely important to me too."
+    ],
+    [
+      "ParticipantA",
+      "What kind of pizza do you like?"
+    ],
+    [
+      "ParticipantB",
+      "I like classic margherita pizza, but I also enjoy trying out new toppings and flavors."
+    ],
+    [
+      "ParticipantA",
+      "What about you, do you have any favorite pizza toppings?"
+    ],
+    [
+      "ParticipantB",
+      "I like trying new toppings too, but I have a soft spot for pepperoni and mushroom."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I like pepperoni too, but I also enjoy getting creative with my toppings."
+    ],
+    [
+      "ParticipantB",
+      "I'm glad I found someone else who shares my love for Italian food and creative pizza toppings."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever tried making your own pizza at home?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've tried making pizza at home before. It's a lot of fun, but it's hard to replicate the perfect crispy crust you get at a good pizzeria."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, me too."
+    ],
+    [
+      "ParticipantB",
+      "I also like it when the restaurant has a great selection of wines to pair with the food."
+    ],
+    [
+      "ParticipantA",
+      "I usually stick to beer, but I've been meaning to try more wines."
+    ],
+    [
+      "ParticipantB",
+      "Have you ever been to a wine tasting event?"
+    ],
+    [
+      "ParticipantA",
+      "No, I haven't been to a wine tasting event yet."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a great way to discover new wines and pairings."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, maybe I'll have to check out a wine tasting event sometime."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely worth checking out."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever had any standout wine pairings at a restaurant?"
+    ],
+    [
+      "ParticipantB",
+      "I had a great wine pairing at a small Italian restaurant in the city."
+    ],
+    [
+      "ParticipantA",
+      "What kind of wine was it paired with?"
+    ],
+    [
+      "ParticipantB",
+      "It was a rich, full-bodied red wine paired with a hearty lasagna."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  }
+}

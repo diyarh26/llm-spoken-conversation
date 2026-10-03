@@ -3,6 +3,75 @@
 Owner of this file: **VM side** (do not edit on local). Append; keep history.
 Local side reads this to decide the next tasks.
 
+## GPU diagnosis (2026-09-26)
+
+Full requested diagnostic output before making changes:
+
+```text
+Sat Sep 26 14:51:46 IDT 2026
+ 14:51:46 up 41 min,  0 users,  load average: 0.16, 0.10, 0.11
+6.8.0-1059-azure
+vmSize: Standard_NV24s_v3 | name: dpmlgpuNC6sv32025s-0006 | location: westus
+0001:00:00.0 VGA compatible controller: NVIDIA Corporation GM204GL [Tesla M60] (rev a1)
+0002:00:00.0 VGA compatible controller: NVIDIA Corporation GM204GL [Tesla M60] (rev a1)
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+exit=9
+NVRM version: NVIDIA UNIX x86_64 Kernel Module  535.309.01  Wed Mar 25 15:26:15 UTC 2026
+GCC version:
+nvidia_uvm           1773568  0
+nvidia_drm             94208  0
+nvidia_modeset       1314816  1 nvidia_drm
+video                  77824  1 nvidia_modeset
+nvidia              56922112  2 nvidia_uvm,nvidia_modeset
+[dkms status produced no output]
+6.8.0-1029-azure
+6.8.0-1059-azure
+SecureBoot disabled
+[sudo dmesg unavailable: sudo requires a terminal/password in this execution environment]
+[apt history grep produced no output]
+[unattended-upgrades log grep produced no output]
+cuda-drivers-fabricmanager-535 535.247.01-0ubuntu0.22.04.1
+nvidia-driver-535 535.309.01-0ubuntu0.22.04.1
+nvidia-kernel-common-535 535.309.01-0ubuntu0.22.04.1
+nvidia-kernel-common-570 570.133.07-0ubuntu0.22.04.1
+nvidia-kernel-source-535 535.309.01-0ubuntu0.22.04.1
+/dev/root       146G  138G  7.3G  96% /
+models--lmsys--vicuna-13b-v1.5-16k
+models--mistralai--Mistral-7B-Instruct-v0.2
+```
+
+Additional driver-state checks:
+
+```text
+nvidia package/library/userspace version: 535.309.01
+nvidia kernel module version: 535.309.01
+vermagic: 6.8.0-1059-azure SMP mod_unload modversions
+libnvidia-ml.so.1 -> /usr/lib/x86_64-linux-gnu/libnvidia-ml.so.535.309.01
+Both Tesla M60 PCI devices report: Kernel driver in use: nvidia
+Both GPUs are present under /proc/driver/nvidia/gpus and have device minors 0 and 1.
+ls: cannot access '/dev/nvidia*': No such file or directory
+```
+
+Diagnosis: Azure reports `Standard_NV24s_v3`, exposing two Tesla M60 GPUs. The installed
+535.309.01 userspace library, kernel module, and running kernel all match, Secure Boot is
+disabled, and the module sees both GPUs, so this is not a branch/library mismatch or an
+unbuilt DKMS module. The immediate failure is that all `/dev/nvidia*` device nodes are
+missing, preventing NVML/`nvidia-smi` from opening the GPUs. Following TASK 1, the first
+repair attempt is a reboot so normal NVIDIA/udev startup can recreate those nodes.
+
+### TASK 1 repair result
+
+**Not fixed; stopped before generation.** The prescribed first action, `sudo reboot`,
+could not execute because `sudo` prompted for the `student` account password, which is not
+available to this session (`sudo: a password is required`). The standard setuid
+`nvidia-modprobe` node-initialization helper is also not installed, so the missing device
+nodes cannot be recreated unprivileged. The later prescribed actions (`dkms autoinstall`,
+driver-package reinstall, reboot, and package holds) likewise require sudo access. No
+driver packages, branches, kernel modules, prompts, data, or generation settings were
+changed. `nvidia-smi` remains broken, so the CUDA `True 2` verification cannot pass and,
+as instructed, TASK 2 was not started.
+
 ---
 
 ## Environment (TASK 1)
@@ -135,6 +204,393 @@ magnitude of conceptual alignment. The ALIGN phase-1 gate is cleared.
   4. ✓ C2 pilot reveals Vicuna CAN do turn-by-turn (multi_turn_emissions=0 all 10 convs)
 - **HOLDING** — not starting Phase 2 until local lead reviews this report and issues
   updated VM_TASKS.md. No C3/C4 generators yet; no scaling to 50/condition.
+
+---
+
+## M60 stopgap resume — manually stopped after one additional C3-P0 (2026-07-24)
+
+The resumable sweep was relaunched from `897e748` with the exact TASK 1 environment:
+`PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True`,
+`C4_DEVICE_A=cuda:0`, and `C4_DEVICE_B=cuda:1`. Syntax, the 10-excerpt few-shot
+pool, CUDA, and both M60s passed preflight. C1/C2 and the existing C3 files were
+skipped correctly.
+
+After about 2 hours 20 minutes, only one additional C3-P0 conversation had been
+saved (C3-P0 increased from 2/5 to 3/5). The next conversation was still in
+flight. The run was stopped on user instruction because the two M60s remained
+impractically slow. The interrupted conversation was not written. C4 was never
+reached.
+
+Stop verification:
+
+- tmux session `devsweep`: stopped.
+- Generation processes: none.
+- GPU 0 and GPU 1 after stop: 0 MiB, 0% utilization.
+- Preserved output: all C1/C2 conditions (5 each), C3-P0 (3), C3-P1 (1).
+
+### Dev report on all preserved output
+
+| condition | convs | mean WPT | median WPT | <=3w % | backchannel % | median turns |
+|---|---:|---:|---:|---:|---:|---:|
+| HUMAN (SB) | 300 | 12.8 | 6 | 39.7% | 30.8% | 82 |
+| C1-P0 | 5 | 17.5 | 18 | 0.9% | 0.0% | 21 |
+| C1-P1 | 5 | 18.6 | 16 | 1.3% | 2.5% | 17 |
+| C1-P2 | 5 | 17.9 | 19 | 0.9% | 1.8% | 24 |
+| C2-P0 | 5 | 58.8 | 56 | 0.0% | 0.0% | 42 |
+| C2-P1 | 5 | 11.1 | 11 | 3.5% | 4.0% | 42 |
+| C2-P2 | 5 | 11.7 | 10 | 4.5% | 2.0% | 42 |
+| C3-P0 | 3 | 45.4 | 60 | 1.4% | 0.0% | 26 |
+| C3-P1 | 1 | 41.9 | 34 | 0.0% | 0.0% | 17 |
+| C3-P2 | 0 | — | — | — | — | — |
+
+### Degeneration score on all preserved output
+
+| condition | convs | dup turn rate | turn cap rate | token cap rate | degeneration / conv | mean words/turn | multi-turn emission rate |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| C1-P0 | 5 | 0.0270 | 0.0000 | 0.0000 | 0.600 | 17.16 | 0.0000 |
+| C1-P1 | 5 | 0.0000 | 0.0000 | 0.0000 | 0.000 | 17.72 | 0.0000 |
+| C1-P2 | 5 | 0.0000 | 0.0000 | 0.0000 | 0.000 | 16.81 | 0.0000 |
+| C2-P0 | 5 | 0.1000 | 0.8000 | 0.0444 | 9.600 | 58.81 | 0.0889 |
+| C2-P1 | 5 | 0.0000 | 1.0000 | 0.0000 | 1.000 | 11.14 | 0.0000 |
+| C2-P2 | 5 | 0.0050 | 1.0000 | 0.0000 | 1.400 | 11.70 | 0.0050 |
+| C3-P0 | 3 | 0.0139 | 0.3333 | 0.5278 | 13.667 | 45.43 | 0.7083 |
+| C3-P1 | 1 | 0.0000 | 0.0000 | 0.6000 | 9.000 | 41.87 | 0.8667 |
+| C3-P2 | 0 | — | — | — | — | — | — |
+
+### Representative C2-P1 transcripts
+
+#### C2-P1 / 3325
+
+```text
+A: Hello!
+B: Hello!
+A: So, do you have any pets?
+B: Yes, I have a cat.
+A: That's great! What's your cat's name?
+B: Her name is Whiskers.
+A: Oh, that's such a cute name!
+B: She's a real character.
+A: What kind of personality does she have?
+B: She's very independent and aloof, but also loving when she wants to be.
+A: What kind of cat breed is Whiskers?
+B: She's a rescue cat, so we're not sure what breed she is exactly.
+A: That's so cool that you rescued her.
+B: Yeah, it was a great experience. We found her at a shelter and she's been such a good companion.
+A: That's wonderful. I'm glad she found a good home with you.
+B: Do you have any pets, too?
+A: Yeah, I have a dog.
+B: What kind of dog do you have?
+A: A: She's a Labrador Retriever mix.
+B: Oh, that's such a popular breed. What's her name?
+A: I: Her name is Bella.
+B: What's Bella like as a pet?
+A: I: She's very friendly and loves to play fetch.
+B: What kind of personality does Bella have?
+A: What kind of activities do you like to do with your cat?
+B: Do you have any favorite pet memories you'd like to share with me?
+A: I love taking her to the park and watching her run around.
+B: That sounds like so much fun!
+A: I: I also enjoy taking her to the beach and watching her swim in the ocean.
+B: That sounds like a great time for both of you.
+A: I: What about you? Do you have any favorite activities to do with your cat?
+B: I take her on little adventures around the neighborhood and she always seems to enjoy it.
+A: I: That sounds like a fun way to spend time with your cat.
+B: It's great to hear how much you enjoy spending time with your pets. What's the most memorable moment you've shared with Bella?
+A: I: The most memorable moment with Bella was when she helped me recover from a difficult breakup.
+B: That's really sweet of her.
+A: I: Yeah, she really helped me get through a tough time.
+B: That's really great that your pet could help you through a difficult time.
+A: What about you, do you have any memorable moments with your cat?
+B: Yeah, there was a time when she was really sick, and I was so worried about her, but she pulled through and it was a big relief.
+A: I'm sorry to hear that your cat was sick, but I'm glad she pulled through.
+B: Yeah, it was a really scary time, but she's doing much better now.
+```
+
+#### C2-P1 / 4333
+
+```text
+A: Hello!
+B: Hello!
+A: So, what's your take on taxes?
+B: I think they're necessary, but they can be frustrating.
+A: Yeah, I agree.
+B: I've had some personal experience with taxes that's made me appreciate their importance.
+A: Can you tell me more about your personal experience with taxes?
+B: Well, I had a friend who had to deal with some serious tax issues and it really opened my eyes to how important they are in making sure everyone pays their fair share.
+A: I'm sorry to hear that your friend had to deal with tax issues.
+B: Yeah, it was really tough for him to navigate through the system on his own.
+A: I can understand how that would be difficult for your friend and also how it would make you appreciate the importance of taxes.
+B: It just seems like there should be a better way to make sure everyone is paying their fair share without putting people through so much stress.
+A: Yeah, I agree.
+B: Do you think there are any ways we could make the tax system more fair and efficient?
+A: I think there could be a way to simplify the tax code and make it more accessible to people who aren't tax experts.
+B: Maybe we could also look into implementing a more progressive tax system.
+A: I think so too.
+B: It would also be helpful to have more transparency in how the tax revenue is used.
+A: I agree, transparency is important.
+B: Maybe we could also look into having more support for those who are struggling to navigate the tax system.
+A: Yeah, that would definitely be helpful.
+B: Yeah, having more support for those who are struggling would be really beneficial.
+A: And maybe more education on taxes for everyone, so people can understand how the system works and what their responsibilities are.
+B: Definitely, education is key.
+A: It seems like there are a lot of potential solutions to make the tax system more fair and efficient.
+B: Exactly.
+A: So, what do you think would be the best way to implement some of these changes?
+B: Well, I think we should start by raising awareness and advocating for these changes.
+A: I agree, raising awareness and advocating for these changes is a good starting point.
+B: Maybe we could also push for more government transparency in how tax revenue is allocated.
+A: I think that's a great idea.
+B: I think we should also push for more support for those who are struggling with the tax system.
+A: And maybe more resources for small business owners to ensure they are compliant with the tax code.
+B: I agree, more resources for small business owners would be really helpful.
+A: So, what are your thoughts on the current tax system?
+B: And there are some specific areas where I think we could make improvements, like simplifying the tax code and making it more accessible for non-experts.
+A: Yeah, I think we're on the same page about the need for improvement in the tax system.
+B: I think we should also advocate for more oversight to prevent tax fraud and evasion.
+A: I think that's a great point.
+B: And maybe we could also work on making the tax filing process more user-friendly for everyone.
+A: I think all those ideas are great, and I hope we can work towards implementing some of them.
+B: Yeah, I agree, making the tax filing process more user-friendly would be a great improvement.
+```
+
+### Representative C2-P2 transcripts
+
+#### C2-P2 / 3657
+
+```text
+A: Hello!
+B: Hello!
+A: So, do you have a computer at home?
+B: Yes, I do.
+A: What kind of computer do you have at home?
+B: It's a desktop computer.
+A: What do you use your computer for?
+B: I use it mostly for work and personal stuff, like browsing the internet and checking email.
+A: What do you like about your computer?
+B: I like that it's pretty reliable and has a lot of storage space.
+A: I use my computer mostly for work too, but I also like to play games on it in my free time.
+B: And how about you? What kind of computer do you have?
+A: I have a laptop.
+B: What kind of games do you like to play on your laptop?
+A: Mostly strategy and puzzle games, but I'm open to trying new things.
+B: I'm mostly into reading and research on my computer.
+A: I also use my laptop for work sometimes, but I prefer using it for entertainment and staying connected with friends and family.
+B: I also like to keep up with current events and news on my computer.
+A: I like to stay informed too, but I usually use my phone for that.
+B: And what about you? Do you have any favorite websites or apps that you like to use on your laptop?
+A: I mostly use social media and streaming services.
+B: I also use the library's online resources for research and reading.
+A: I've been thinking about getting a new laptop, but I'm not sure which one to get.
+B: What kind of features are you looking for in a new laptop?
+A: I'm not sure yet, I'm still trying to decide.
+B: I've been using my current laptop for a few years now and it's still functional, but I'm sure there are some newer models out there that would be more efficient.
+A: I'm also considering getting a tablet to use for work, but I'm not sure if it would be more convenient or just another device to carry around.
+B: Well, I think a tablet could be useful for work if you find the right apps and accessories for it.
+A: I'm not really familiar with tablets, so I'll have to do some research and see if it would be worth the investment.
+B: I've found that a good case or cover can make a big difference in protecting the tablet and making it more convenient to use.
+A: What kind of accessories do you recommend for a tablet?
+B: I would recommend getting a stylus pen and a good case or cover that can also serve as a stand.
+A: How about you? Have you ever tried using a tablet for work?
+B: Yeah, I've used a tablet for work a few times, and it can be quite convenient for certain tasks.
+A: I'll have to look into that.
+B: Yeah, I've found that a stylus pen can be quite useful for interacting with the screen and avoiding fingerprints.
+A: Thanks for the advice, I'll have to keep that in mind if I end up getting a tablet.
+B: I've also found that it's important to get a tablet with a good display and enough processing power to handle the tasks you'll be using it for.
+A: Thanks for the advice.
+B: Yeah, and make sure you get one with a long battery life if you'll be using it for extended periods of time.
+A: Thanks for the advice, I'll definitely keep all that in mind.
+B: Do you have any other questions about computers or anything else you'd like to talk about?
+```
+
+#### C2-P2 / 4333
+
+```text
+A: Hello!
+B: Hello!
+A: So, what do you think about taxes?
+B: Well, I think they're necessary for the functioning of society, but I also think they could be better managed.
+A: Yeah, I agree that they're necessary, but sometimes it feels like the system is rigged against certain groups.
+B: Yeah, I know what you mean.
+A: It's frustrating to see how the wealthy can avoid paying their fair share.
+B: I have a friend who's a accountant, and he says the same thing.
+A: And it seems like the burden always falls on the middle class and the poor.
+B: Yeah, it's like they're paying for the benefits that the wealthy are enjoying.
+A: It's hard to feel like our voices are heard when it comes to tax reform.
+B: Yeah, and it's even harder when the government is not transparent about how they spend our taxes.
+A: What are your thoughts on how the tax system could be improved?
+B: I think they should make the tax system more progressive so that the wealthy pay a higher percentage of their income in taxes.
+A: I think so too.
+B: Yeah, and also make sure that corporations are paying their fair share.
+A: And I think there should be more transparency in how the government spends our taxes.
+B: And also, have a more streamlined process for filing taxes.
+A: Yeah, and I think there should be more funding for social programs like education and healthcare.
+B: Yeah, it's definitely important to make sure that the tax system is fair and efficient.
+A: I also think that there should be more incentives for people to give back to their communities through charitable donations.
+B: I agree, giving back to the community is important.
+A: I think we should also consider how taxes affect small businesses and entrepreneurs, as they are a vital part of the economy.
+B: Yeah, I think small businesses should be given a break in terms of taxes to encourage growth and job creation.
+A: Yeah, and I think there should be more incentives for people to give back to their communities through charitable donations.
+B: Yeah, it's definitely important to support small businesses and entrepreneurs.
+A: What do you think would be the best way to ensure that small businesses are not negatively impacted by taxes?
+B: I think they should be given tax breaks or incentives for creating jobs and contributing to the local economy.
+A: Yeah, I think that would be a good way to support small businesses and entrepreneurs.
+B: And also, maybe have a simplified tax system that's easier for everyone to understand and navigate.
+A: Yeah, that sounds like a good idea.
+B: Yeah, and maybe have a system where people can easily file their taxes online.
+A: And I think there should be more education about the tax system so that people can understand how it works and how they can participate in making it better.
+B: Yeah, I think education about the tax system is important for everyone to understand how it works.
+A: Do you think that education should start at a younger age so that people can understand the tax system better?
+B: Yeah, I think that's a good idea.
+A: Yeah, I think that's a good idea.
+B: I also think that people should have more say in how their taxes are spent.
+A: Yeah, I agree that people should have more say in how their taxes are spent.
+B: And maybe have more transparency in the government's spending so that people can see how their taxes are being used.
+A: Yeah, I think that's a good idea too.
+B: Well, I think there should be more oversight to make sure that taxes are being used effectively.
+```
+
+### Interpretation
+
+P1/P2 moved C2 strongly toward HUMAN on turn length and raised short-turn and
+backchannel rates relative to P0, but the gains remain small in absolute terms:
+3.5–4.5% short turns and 2–4% backchannels versus HUMAN at 39.7% and 30.8%.
+All C2-P1/P2 conversations hit the turn cap, and P2 has mild duplicate
+degeneration. C3 remains severely degenerate: the additional P0 conversation
+raised token-cap rate to 52.8%, multi-turn-emission rate to 70.8%, and
+degeneration to 13.667 per conversation. The M60 stopgap did not produce enough
+new evidence to clear the dev-sweep gate; C3/C4 should wait for the V100.
+
+---
+
+## v3 dev sweep — STOPPED after abnormal runtime (2026-07-24)
+
+### Executive finding
+
+The requested sweep was stopped on user instruction after approximately 15 hours with
+33/60 JSON files complete. This is **not normal sweep performance**. Two conditions in the
+current environment/design interact badly:
+
+1. The current VM has **two Tesla M60 GPUs with 7,680 MiB each**, not the 16-GB V100
+   described earlier in this report and assumed by the model-loading comments. Vicuna-13B
+   is therefore split across both old GPUs by `device_map="auto"`. The M60 is much slower
+   for this workload, cross-GPU execution adds overhead, and each card has little memory
+   headroom for long contexts.
+2. Turn-wise generation permits `max_new_tokens=300` with
+   `stop_at_sentence=False`. Vicuna frequently ignores the one-turn instruction and
+   generates a continuation containing multiple dialogue turns. `clean_single_turn()`
+   discards everything after the first detected role/speaker marker, but only **after**
+   all tokens have been generated. The run therefore pays for up to 300 tokens while
+   retaining only the first short portion. Duplicate detection can pay for a second
+   300-token generation.
+
+This produced increasing per-turn latency as context grew, frequent full-token-cap
+emissions, multi-turn emissions, turn-cap endings, and eventually CUDA OOM in C3.
+
+### Stop verification
+
+- tmux session `devsweep`: stopped.
+- Python generation processes: none.
+- GPU state after stop: GPU 0 = 0 MiB / 0%; GPU 1 = 0 MiB / 0%.
+- Completed files preserved: 33.
+- The interrupted in-flight C3-P2 conversation was not written, as intended by the
+  write-on-completion design.
+- No NVML driver/library mismatch occurred, so the VM was not rebooted.
+
+### Preflight results
+
+- `git pull --ff-only`: updated `main` from `34beae3` to `26ce48d`.
+- Python compilation: `SYNTAX OK`.
+- Few-shot pool: all 10 excerpts reconstructed:
+  `FISHING`, `HOME REPAIRS`, `ETHICS IN GOVERNMENT`, `VIETNAM WAR`,
+  `CONSUMER GOODS`, `IMMIGRATION`, `WOODWORKING`, `POLITICS`,
+  `SOVIET UNION`, `GOLF`.
+- CUDA available: `True`.
+- Actual GPU: 2 × Tesla M60, 7,680 MiB each.
+
+### Completed output by condition
+
+| Condition | Completed / 5 |
+|---|---:|
+| C1-P0 | 5 |
+| C1-P1 | 5 |
+| C1-P2 | 5 |
+| C2-P0 | 5 |
+| C2-P1 | 5 |
+| C2-P2 | 5 |
+| C3-P0 | 2 |
+| C3-P1 | 1 |
+| C3-P2 | 0 |
+| C4-P0/P1/P2 | 0 |
+
+### Failure evidence
+
+C3 failed twice with CUDA OOM after saving partial outputs:
+
+- C3-P0 saved 3325 and 3003, then failed trying to allocate 124 MiB on GPU 1;
+  only about 120 MiB was free.
+- C3-P1 saved 3325, then failed trying to allocate 124 MiB on GPU 1;
+  only about 102 MiB was free.
+- The shell correctly advanced to the next condition because the generator output is
+  piped through `tee` and the script does not enable `pipefail`; `set -e` therefore sees
+  `tee` succeed even when Python fails. This is why the sweep did not stop at the first
+  OOM.
+
+### Partial degeneration readout
+
+These values are diagnostic only because C3 is incomplete and C4 is absent.
+
+| Condition | convs | dup turn rate | turn cap rate | token cap rate | degeneration / conv | mean words/turn | multi-turn emission rate |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| C2-P0 | 5 | 0.100 | 0.800 | 0.0444 | 9.6 | 58.81 | 0.0889 |
+| C2-P1 | 5 | 0.000 | 1.000 | 0.0000 | 1.0 | 11.14 | 0.0000 |
+| C2-P2 | 5 | 0.005 | 1.000 | 0.0000 | 1.4 | 11.70 | 0.0050 |
+| C3-P0 | 2 | 0.000 | 0.000 | 0.4688 | 7.5 | 19.19 | 0.7812 |
+| C3-P1 | 1 | 0.000 | 0.000 | 0.6000 | 9.0 | 41.87 | 0.8667 |
+
+C2-P0 also retained 18 duplicate turns and four of five conversations ended at the
+turn cap. All five C2-P1 and all five C2-P2 conversations ended at the turn cap.
+
+### Partial dev report
+
+| condition | convs | mean WPT | median WPT | <=3w % | backchannel % | median turns |
+|---|---:|---:|---:|---:|---:|---:|
+| HUMAN (SB) | 300 | 12.8 | 6 | 39.7% | 30.8% | 82 |
+| C1-P0 | 5 | 17.5 | 18 | 0.9% | 0.0% | 21 |
+| C1-P1 | 5 | 18.6 | 16 | 1.3% | 2.5% | 17 |
+| C1-P2 | 5 | 17.9 | 19 | 0.9% | 1.8% | 24 |
+| C2-P0 | 5 | 58.8 | 56 | 0.0% | 0.0% | 42 |
+| C2-P1 | 5 | 11.1 | 11 | 3.5% | 4.0% | 42 |
+| C2-P2 | 5 | 11.7 | 10 | 4.5% | 2.0% | 42 |
+| C3-P0 | 2 | 19.2 | 16 | 3.1% | 0.0% | 18 |
+| C3-P1 | 1 | 41.9 | 34 | 0.0% | 0.0% | 17 |
+
+### Interpretation
+
+- P1/P2 clearly shortened C2 relative to P0 and produced a small rise in short/reactive
+  turns and backchannels, but they remain far below HUMAN (<=3 words 3.5–4.5% versus
+  39.7%; backchannels 2–4% versus 30.8%).
+- C1 changed only marginally.
+- The available C3 results are severely degenerate and incomplete.
+- The rebuilt prompting did **not** produce enough short/reactive structure to justify a
+  full run in the current setup.
+
+### Decisions needed before another sweep
+
+1. **Use suitable hardware first.** Prefer the intended single V100 16 GB or a newer GPU
+   with at least 16 GB. C4 must fit Vicuna plus Mistral as designed; two 7.5-GB M60s are
+   not a credible target for this run.
+2. **Add `set -o pipefail`** to the sweep runner so a Python OOM stops the sweep instead
+   of silently advancing.
+3. **Reconsider the per-turn stopping strategy.** A 300-token hard cap with no early
+   turn-boundary stopping is empirically not just a safety net. A speaker/role-marker
+   stopping criterion could terminate when the model begins another turn without forcing
+   sentence-final punctuation and therefore without suppressing abandoned turns.
+4. **Run a tiny timing/cap smoke test** (one ID per turn-wise architecture) and require
+   acceptable token-cap/multi-turn rates before launching another 60-file sweep.
+5. Do not freeze `config.py` or begin the full generation run until the corrected sweep
+   passes.
+
+No prompt, pool, manifest, decoding configuration, or full-run output was changed.
 
 ---
 
@@ -622,3 +1078,11 @@ Help-desk/service notes:
   ["ParticipantB", "Thank you for your advice! I'll definitely consider visiting some of the child care services that I'm interested in and maybe even prioritize finding a safe and nurturing environment for my child. I appreciate your help and advice, and I'll keep looking for the right fit for my child."]
 ]
 ```
+
+## 2026-07-04T07:35:41+03:00 C2/C3 regeneration report
+C2-P0 JSON files: 50
+C3-P0 JSON files: 50
+C3 files inspected: 50
+C3 "(End of conversation)" padding: NO (0/50 files)
+C3 hit 32-turn cap: YES (32/50 files)
+C3 turn count range: min=10, max=32

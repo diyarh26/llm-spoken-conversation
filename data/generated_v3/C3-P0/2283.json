@@ -1,0 +1,102 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of work do you do in the way of lawn and garden?"
+    ],
+    [
+      "ParticipantB",
+      "I'm actually a software engineer, so I don't do any lawn or garden work myself. But I do enjoy spending time outdoors and working on landscaping projects."
+    ],
+    [
+      "ParticipantA",
+      "That's great! I actually do a lot of lawn and garden work myself. I find it to be very calming and therapeutic."
+    ],
+    [
+      "ParticipantB",
+      "That's great to hear! I can see how it would be therapeutic. What kind of lawn and garden work do you do?"
+    ],
+    [
+      "ParticipantA",
+      "I mostly do yard maintenance and landscaping for my clients. I love being able to create beautiful outdoor spaces for people to enjoy."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a great job! I'm sure your clients appreciate your hard work. Do you have a favorite plant or garden design?"
+    ],
+    [
+      "ParticipantA",
+      "I do have a favorite plant, actually. I really love succulents because they're so easy to care for and they come in so many different shapes and colors.\n\nAs for garden design, I really like incorporating native plants into a landscape design. It's not only good for the environment, but it also creates a beautiful, natural-looking space."
+    ],
+    [
+      "ParticipantB",
+      "That's great! I've heard succulents are a great option for people who don't have a lot of time to devote to gardening. And incorporating native plants is a great way to support the local ecosystem. Do you have a favorite native plant in your area?\n\n(This is the last turn of talk, so the conversation will have to end here.)"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I do! One of my favorite native plants in my area is the California poppy. It's a beautiful, bright orange flower that blooms in the spring and adds a pop of color to any garden."
+    ],
+    [
+      "ParticipantB",
+      "I've heard of the California poppy, but I haven't seen it in person. It sounds like a beautiful plant. Thank you for sharing your knowledge with me. It was nice talking with you!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It was nice talking with you too. Take care!"
+    ]
+  ],
+  "n_turns": 13,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

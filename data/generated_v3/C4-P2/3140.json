@@ -1,0 +1,82 @@
+{
+  "condition": "C4-P2",
+  "architecture": "C4",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3140,
+  "topic": "Social Change",
+  "sb_prompt": "DISCUSS RECENT SOCIAL CHANGES.  HOW IS LIFE IN AMERICA DIFFERENT TODAY COMPARED TO LIVING TEN YEARS AGO?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about recent social changes?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think technology has really taken over the past ten years. With smartphones and social media, we're more connected than ever. And I've seen it firsthand on my farm. We use apps to manage irrigation and track crop yields. It's amazing. But I also worry about the impact on face-to-face interaction and privacy.\n\nHow about you? What changes have you noticed?"
+    ],
+    [
+      "ParticipantA",
+      "Oh, absolutely. I've noticed that people are more open to discussing social issues and taking a stand for what they believe in. And I think that's a great thing. It's a sign of progress. I've also seen changes in how people view gender and sexuality, which I think is fantastic. But at the same time, there's still so much work to be done. We're not there yet.\n\nWhat are your thoughts on how people are addressing social issues?\n\n(This is your last turn. Please finish with a closing statement or question.)"
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. It's inspiring to see people using their platforms to raise awareness and bring about change. But it's also important to remember that progress doesn't always come easily or without resistance. We need to keep pushing forward and stay engaged in the conversation.\n\nDo you have any final thoughts or questions before we wrap up this conversation?"
+    ],
+    [
+      "ParticipantA",
+      "No, I don't think so. This was a great conversation. It's been lovely talking to you. Thank you for sharing your thoughts.\n\nSame here. I'm glad we got to talk about this. Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "You too! Take care. Bye for now!"
+    ]
+  ],
+  "n_turns": 8,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

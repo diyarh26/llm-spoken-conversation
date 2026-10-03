@@ -1,0 +1,106 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3294,
+  "topic": "Right To Privacy",
+  "sb_prompt": "FIND OUT WHAT EVERYDAY OCCURRENCES THE OTHER CALLER CONSIDERS TO BE AN INTRUSION OF PRIVACY.  WHAT CAN BE DONE TO PREVENT THEM?  DO YOU AGREE OR DISAGREE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 48,
+    "education": "a college degree",
+    "occupation": "a nurse",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a librarian",
+    "stance": 2,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what everyday occurrences do you consider to be an intrusion of privacy?"
+    ],
+    [
+      "ParticipantB",
+      "One example of an everyday occurrence that I consider an intrusion of privacy is when someone is listening in on my conversations without my consent."
+    ],
+    [
+      "ParticipantA",
+      "That can be quite bothersome. What can be done to prevent that kind of intrusion?"
+    ],
+    [
+      "ParticipantB",
+      "One way to prevent that kind of intrusion is to have conversations in private spaces, or to make sure that any devices or technology being used to communicate are properly secured. Additionally, being mindful of who you're talking to and where you are can help prevent unwanted listeners."
+    ],
+    [
+      "ParticipantA",
+      "I agree, those are some good measures to take. What about other everyday occurrences that you consider an intrusion of privacy?"
+    ],
+    [
+      "ParticipantB",
+      "Another example is when my personal information is shared without my consent, such as my address, phone number, or email. This can lead to unsolicited calls, emails, or even stalking."
+    ],
+    [
+      "ParticipantA",
+      "That's definitely a concern. What can be done to prevent this kind of intrusion?"
+    ],
+    [
+      "ParticipantB",
+      "To prevent this kind of intrusion, we can be cautious about who we give our personal information to and avoid sharing it unless it's absolutely necessary. Additionally, we can take steps to protect our personal information, such as being careful about what we share online, using privacy settings on social media, and keeping sensitive documents secure."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. It's important to be mindful of our personal information and to take steps to protect it. Thanks for sharing your thoughts on this!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was great discussing this topic with you."
+    ],
+    [
+      "ParticipantA",
+      "Likewise, it was great speaking with you too!"
+    ],
+    [
+      "ParticipantB",
+      "Have a great day!"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

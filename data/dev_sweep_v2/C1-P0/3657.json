@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing well, thank you. What about you?\nParticipantA: I'm doing pretty good too. What brings you to call today?\nParticipantB: I'm actually calling to find out more about personal computers. I'm interested in getting one, but I'm not sure which one to get.\nParticipantA: That's great! I'm also very interested in personal computers. What kind of things are you looking for in a personal computer?\nParticipantB: I'm looking for something that's fast and reliable, with a big screen and a lot of storage.\nParticipantA: That sounds like a good idea. I'm also looking for a computer that's fast and reliable, but I also want something that's portable and easy to use.\nParticipantB: I see. I'm not too concerned about portability, but I do want something that's easy to use.\nParticipantA: Yeah, I think that's important. It's hard to use a computer if it's too complicated. What kind of tasks do you plan on using your personal computer for?\nParticipantB: I plan on using it for work and for browsing the internet.\nParticipantA: That's pretty much what I use my personal computer for too. I also use it for gaming and watching movies.\nParticipantB: Oh, that's interesting. I haven't really thought about using my computer for gaming.\nParticipantA: Yeah, it's a lot of fun. There are so many great games out there. What kind of games are you interested in?\nParticipantB: I'm not really sure yet. I haven't really explored the gaming world too much.\nParticipantA: Well, there are a lot of great games out there to choose from. Maybe we can talk more about it later. For now, do you have any specific brands or models in mind that you're interested in?\nParticipantB: Not really, I'm still doing research on what's out there. How about you?\nParticipantA: I've been looking at the new MacBook Air. It's pretty light and portable, but it's also really powerful.\nParticipantB: That sounds like a good option. I've been looking at the Dell XPS 13. It's also pretty portable, and I've heard good things about it.\nParticipantA: Yeah, I've heard good things about that one too. It's hard to decide which one to go with, isn't it?\nParticipantB: Yeah, there are so many good options out there. It's hard to choose just one.\nParticipantA: Well, I think it's important to do your research and find something that fits your needs and budget. Have you set a budget for your personal computer yet?\nParticipantB: Not yet, I'm still figuring out what I can afford. How about you?\nParticipantA: I'm planning on spending around $1,500.\nParticipantB: That sounds like a good price range. I think I'll be spending around the same amount.\nParticipantA: Yeah, it's important to get something that's high quality and will last for a while, but you don't want to spend more than you have to.\nParticipantB: Exactly. Well, I think we've talked about personal computers long enough. Is there anything else you wanted to talk about?\nParticipantA: Not really, I just wanted to find out more about your interests and preferences in personal computers. It's been nice talking to you.\nParticipantB: Yeah, it's been nice talking to you too. Thanks for the",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 874,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

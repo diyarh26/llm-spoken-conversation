@@ -15,8 +15,35 @@ progress:
 
 See: .planning/PROJECT.md
 
-**Core value:** Isolate the effect of generation architecture on conversational realism vs Switchboard
-**Current focus:** Phase 2 — main generation (12 conditions), RESUMING after a GPU-driver crash
+**Core value (reframed 2026-07-14):** Characterize how the *interactional structure* of LLM-generated
+conversation differs from human conversation (Switchboard), using **dialogue acts** as the instrument,
+with generation architecture (C1–C4) × prompt (P0–P2) as the manipulated levers. (Earlier framing —
+"isolate architecture effect on realism / assistant-drift" — is now just one component.)
+**Current focus:** two parallel tracks (see `RESEARCH_DIALOGUE_ACTS.md`).
+
+## DIRECTION UPDATE (2026-07-14) — read this first
+
+After a harsh supervisor review of analysis rigor, the project was **reframed** and the
+**headline extension changed** to a **dialogue-act structural comparison** (human vs LLM).
+Full detail + the two-task plan live in **`RESEARCH_DIALOGUE_ACTS.md`**. Summary:
+
+- **Question:** how does LLM conversation differ *structurally/interactionally* from human
+  conversation, and what narrows the gap? Dialogue acts (distribution + transition grammar,
+  compared by JSD) are the instrument. Assistant-drift is demoted to one component.
+- **Headline metric:** dialogue-act signature vs Switchboard's **gold DAMSL `act_tag`s**
+  (free human ground truth, already in `data/switchboard/**/*.utt.csv`). Secondary:
+  alignment trajectory (over-alignment + slope). TSI/CAS/CED demoted to supporting.
+- **Stats decided:** human reference = FULL 1,155 corpus; each LLM condition = its 50;
+  significance via a bootstrap **noise floor** (50 random humans vs full reference); plus a
+  **topic-matched** comparison. Report distributions, not just means.
+- **Sampling decided:** replace the "first-50" convenience sample with a **seeded,
+  topic-stratified random** sample of `conversation_no`s (change `target_conversations`).
+- **Two tracks:** T1 regeneration = **design DECIDED + implemented locally (2026-07-14)**,
+  ball is now with the VM (dev sweep → freeze → regen, see `VM_TASKS.md` +
+  `generation/GENERATION_SPEC.md`); T2 measurement (local) = can start now with the human
+  dialogue-act baseline.
+- **Prior `data/generated_v2` is a draft** — superseded by `data/generated_v3` once T1
+  reruns. The generation history below is retained for context.
 
 ## Current Position
 
@@ -27,15 +54,30 @@ Done & safe on the VM (committed locally `b0ab7a0`, NOT yet pushed): **C1-P0, C2
 each (150 conversations)**. C4-P0 has 1. The P1 set and all of P2 were not started.
 Last activity: 2026-06-24 — crash diagnosed; resume plan written to VM_TASKS.md.
 
-## NEXT STEPS (resume)
+## NEXT STEPS
 
-1. **VM: push the 150 already-committed conversations** (b0ab7a0) so the local side gets them.
-2. **VM: reboot** (fixes the NVML driver mismatch). Verify `nvidia-smi` + `torch.cuda.is_available()`.
-3. **VM: re-run the generation loop** (resumable; do NOT delete data/generated). Then the 4 **P2** conditions. Push.
-4. **Local: analyze.** `python analysis/analyze.py` (per-condition table) and `python analysis/stats.py`
-   (mixed-effects + Independence Gradient + markers). Produce the ALIGN CSV on the VM (schema below).
+**Track 2 — measurement (local, can start now):**
+1. Compute the **human dialogue-act signature** across all 1,155 SwDA conversations from the
+   gold `act_tag` columns (no tagger/GPU). This is the reference chart — a real artifact.
+2. Tag LLM conversations (DialogTag), build distribution + transition JSD, add the bootstrap
+   noise floor and the topic-matched comparison.
+3. In parallel: **real main-body replication** (topic-initiation extraction → reproduce the
+   paper's 0.57 conceptual alignment + marker rates properly) to close the validation gap.
 
-See VM_TASKS.md for the exact VM commands.
+**Track 1 — regeneration (design DONE 2026-07-14; next actor = VM):**
+1. ~~Design~~ DECIDED: P1 = register + brevity + seeded persona cards (never name a measured
+   behavior); N = 50; Vicuna kept; decoding made DV-safe (the old settings *suppressed the
+   headline DV by construction*: min_new_tokens=16 forbade backchannels, sentence-stop
+   forbade abandoned turns, context-wide rep-penalty suppressed repeated acknowledgments).
+   Turn countdown added to turn-wise prompts (supervisor fix for non-natural endings).
+2. ~~Sampling~~ IMPLEMENTED: committed manifest `generation/target_ids.json` (seed 20260714,
+   topic-proportional over all 1,155; 5-id disjoint dev set; P2 excerpt excluded from both).
+3. VM: dev sweep (`generation/run_v3_devsweep.sh`) → freeze `generation/config.py` →
+   full regen (`generation/run_v3_regen.sh`) into `data/generated_v3` → re-run Track-2
+   metrics on it.
+
+Full detail: `generation/GENERATION_SPEC.md` (design), `RESEARCH_DIALOGUE_ACTS.md`
+(metric), `VM_TASKS.md` (VM commands).
 
 ## Local-session work done (2026-06-24, later)
 
@@ -67,5 +109,13 @@ See VM_TASKS.md for the exact VM commands.
 
 ## Session Continuity
 
-Last session ended with generation crashed at C4-P0. Resume via VM_TASKS.md (reboot → resume loop → P2).
-Resume files: VM_TASKS.md (VM steps), analysis/analyze.py (metrics), .planning/PROJECT.md & ROADMAP.md (design).
+Last session (2026-07-14, later): **Track-1 generation design decided AND implemented
+locally.** Decisions: P1 = register + brevity + seeded persona cards; N = 50; DV-safe
+decoding (penalties off, procedural duplicate-resample guard, no token floor/sentence-stop);
+seeded topic-stratified manifest `generation/target_ids.json`; turn countdown in turn-wise
+prompts (supervisor request). All four generators rewritten to shared modules; sanity checks
+passed locally (no-GPU paths). Next actor: **VM** — dev sweep → freeze config → regen v3
+(`VM_TASKS.md`). Local can start Track 2 (human DA baseline) in parallel.
+Resume files: `generation/GENERATION_SPEC.md` (design + caveats), `RESEARCH_DIALOGUE_ACTS.md`
+(metric + plan), `VM_TASKS.md` (VM steps). Auto-memory: [[project-metric-dialogue-acts]],
+[[project-status-phase2-generation]].

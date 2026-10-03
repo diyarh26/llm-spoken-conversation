@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: So, what do you do for a living?\nParticipantB: I'm a landscape architect. What about you?\nParticipantA: I work in a garden center. We sell plants and gardening supplies.\nParticipantB: That's cool. I used to work in a garden center when I was in college. What do you like about working in a garden center?\nParticipantA: I love being around plants and helping people choose the right plants for their garden. What do you like about being a landscape architect?\nParticipantB: I love designing and creating outdoor spaces that are both beautiful and functional. It's a great feeling to see a project come to life. What do you do for fun outside of work?\nParticipantA: I love gardening in my own garden and taking care of my houseplants. I also like hiking and spending time outdoors. What about you?\nParticipantB: I enjoy hiking and camping, but I also like to work on my own garden at home. It's a great way to relax and be creative. Do you enjoy gardening?\nParticipantA: Yes, I do. It's very therapeutic for me. How did you get into gardening?\nParticipantB: I've always been interested in plants and the outdoors. My parents were both gardeners, so I grew up with a love for gardening. How about you?\nParticipantA: My grandmother was a master gardener, so I grew up learning from her. She taught me how to plant, prune, and take care of plants. What kind of plants do you like to work with?\nParticipantB: I love working with native plants and designing drought-tolerant landscapes. What kind of plants do you like to work with?\nParticipantA: I enjoy working with perennials and succulents. They're so easy to care for and they come in so many different varieties. What's your favorite native plant?\nParticipantB: My favorite native plant is California poppy. It's so bright and cheery, and it attracts so many pollinators. What's your favorite plant?\nParticipantA: My favorite plant is a bird of paradise. It's such a statement plant, and it's so easy to care for. What's your favorite thing about working in the gardening industry?\nParticipantB: My favorite thing about working in the gardening industry is meeting new people and learning about their gardening experiences. What's your favorite thing about working in a garden center?\nParticipantA: My favorite thing about working in a garden center is seeing the joy on people's faces when they find the perfect plant for their garden. It's so rewarding. What do you think is the most important aspect of landscape design?\nParticipantB: I think the most important aspect of landscape design is creating a space that's both functional and beautiful. It's important to consider the needs of the clients and the environment, and to create a space that's both practical and visually appealing. What do you think is the most important aspect of working in a garden center?\nParticipantA: I think the most important aspect of working in a garden center is educating customers on how to care for their plants and providing them with the right tools and products to do so. It's important to help people succeed in their gardening endeavors. What's your favorite outdoor activity besides gardening?\nParticipantB: My favorite outdoor activity besides gardening is hiking. I love exploring new trails and seeing the beauty of nature up close. What's your favorite outdoor activity besides gardening?\nParticipantA: My favorite outdoor activity besides gardening is biking. I love exploring new trails and getting some exercise at the same time. It's a great way to clear my mind and enjoy the outdoors. What's your favorite way to relax",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 895,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

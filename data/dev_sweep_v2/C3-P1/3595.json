@@ -1,0 +1,94 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of books do you like to read for enjoyment or self-improvement?\n\nI mostly read fiction books, like thrillers and mysteries. What about you?"
+    ],
+    [
+      "ParticipantB",
+      "I enjoy reading a mix of fiction and non-fiction. I recently finished a memoir and found it very inspiring. What was the last book you read that made an impact on you?"
+    ],
+    [
+      "ParticipantA",
+      "The last book that made an impact on me was \"The Alchemist\" by Paulo Coelho. It's a beautiful story about following your dreams and finding your personal legend. How about you?\n\nI'm curious, what's the memoir you just finished that inspired you?"
+    ],
+    [
+      "ParticipantB",
+      "The memoir I recently finished is called \"Educated\" by Tara Westover. It's about her journey growing up in a survivalist family and how she managed to get an education despite the challenges she faced. It's a remarkable story of perseverance and the power of knowledge. I'm sure you've read a lot of books too, what's the last book that left an impression on you?"
+    ],
+    [
+      "ParticipantA",
+      "The last book that left an impression on me was \"The Kite Runner\" by Khaled Hosseini. It's a heart-wrenching story about the relationship between two boys growing up in Afghanistan and the consequences of their actions.\n\nWhat's your favorite genre of books? Do you have a go-to author or series that you always come back to?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite genre of books is mystery and suspense. I love how they keep me on the edge of my seat and guessing until the very end. My go-to author is Gillian Flynn, I really enjoy her writing style and the complexity of her characters. I've read all of her books, including \"Gone Girl\" and \"The Girl on the Train.\" What about you, do you have a favorite author or series that you always come back to?\n\n(The conversation ends here, it reached 40 turns)"
+    ],
+    [
+      "ParticipantA",
+      "I really enjoy reading science fiction and fantasy. My favorite author is Brandon Sanderson, I love the depth and intricacy of his world-building and the way he crafts his stories. I've read almost all of his books, including the \"Mistborn\" series and \"The Stormlight Archive.\"\n\nIt's great to hear about different genres and authors that people enjoy. I think it's important to explore different types of books to find what resonates with you.\n\nThanks for chatting with me about books! It was great to hear about your experiences and recommendations.\n\n(The conversation ends here, it reached 40 turns)"
+    ],
+    [
+      "ParticipantB",
+      "Absolutely, it was great chatting with you too! I'm glad we could share our love for books and discuss our favorite authors. I'll definitely have to check out Brandon Sanderson's books, they sound amazing.\n\nThanks for the chat, have a great day!\n\n(The conversation ends here, it reached 40 turns)"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! I'm sure you'll enjoy his books. I hope you have a great day as well! Take care!\n\n(The conversation ends here, it reached 40 turns)"
+    ]
+  ],
+  "n_turns": 11,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 3,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 3
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2469,
+  "topic": "Hobbies And Crafts",
+  "sb_prompt": "WHAT HOBBIES DO YOU HAVE IN YOUR SPARE TIME?  DO THEY INCLUDE ANY HANDICRAFTSWOODWORKING?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of hobbies do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I enjoy reading and doing puzzles in my spare time."
+    ],
+    [
+      "ParticipantA",
+      "That sounds great! I love reading too, what kind of books do you like to read?"
+    ],
+    [
+      "ParticipantB",
+      "I like to read a variety of books, but lately I've been reading a lot of mystery novels. What about you?"
+    ],
+    [
+      "ParticipantA",
+      "I enjoy reading non-fiction books, particularly about history and science. Have you read any good mystery novels lately that you would recommend?"
+    ],
+    [
+      "ParticipantB",
+      "I just finished a book called \"The Woman in the Window\" by A.J. Finn and really enjoyed it. Have you read anything by Gillian Flynn?"
+    ],
+    [
+      "ParticipantA",
+      "I have read \"Gone Girl\" by Gillian Flynn, it was really interesting and kept me on the edge of my seat the whole time. I might have to check out \"The Woman in the Window\" now!"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I highly recommend it! What other hobbies do you have besides reading?"
+    ],
+    [
+      "ParticipantA",
+      "I also enjoy knitting and crocheting. I find it to be a very relaxing hobby and it's great for making gifts for friends and family."
+    ],
+    [
+      "ParticipantB",
+      "That's really cool! I've always wanted to learn how to knit or crochet, but I haven't had the chance yet. Do you have any recommendations for a beginner?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I would suggest starting with a simple project like a scarf or a dishcloth. There are many online tutorials and resources for beginners. Also, you can join a local knitting or crochet group to meet other people who share your interest."
+    ],
+    [
+      "ParticipantB",
+      "Thanks for the advice! I'll definitely have to try it out sometime. Do you have any other hobbies besides knitting and crocheting?"
+    ],
+    [
+      "ParticipantA",
+      "I also enjoy cooking and baking. I find it to be a fun and creative outlet, and it's always rewarding to make something delicious."
+    ],
+    [
+      "ParticipantB",
+      "That sounds great! I love to cook and bake too. What kind of dishes do you like to make?"
+    ],
+    [
+      "ParticipantA",
+      "I like to make a variety of dishes, but lately I've been experimenting with new vegetarian recipes. I also enjoy baking cakes and cookies."
+    ],
+    [
+      "ParticipantB",
+      "That all sounds really tasty! I'm a big fan of baking cookies too. Do you have a favorite recipe that you like to make?"
+    ],
+    [
+      "ParticipantA",
+      "One of my favorite recipes is for chocolate chip cookies. I like to use a recipe that calls for brown sugar and melted butter, it makes for a really delicious and chewy cookie."
+    ],
+    [
+      "ParticipantB",
+      "Oh, that sounds amazing! I'll have to try that recipe out. Thanks for sharing."
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It was great chatting with you."
+    ],
+    [
+      "ParticipantB",
+      "Yes, it was really nice talking to you too. Take care!"
+    ]
+  ],
+  "n_turns": 22,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

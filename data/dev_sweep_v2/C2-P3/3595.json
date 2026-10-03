@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P3",
+  "architecture": "C2",
+  "prompt_level": "P3",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of books do you like to read for enjoyment or self-improvement?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, I really enjoy reading classics like \"Pride and Prejudice\" and \"To Kill a Mockingbird\"."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I love those too. Have you read any modern literature that you found particularly interesting?"
+    ],
+    [
+      "ParticipantB",
+      "And recently, I read \"The Great Gatsby\" and it was amazing."
+    ],
+    [
+      "ParticipantA",
+      "What was the last book you read that had a strong impact on you?"
+    ],
+    [
+      "ParticipantB",
+      "Actually, the last book that really impacted me was \"The Alchemist\" by Paulo Coelho."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I've heard of that one. It's supposed to be quite inspiring."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it really is."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been meaning to read that one myself."
+    ],
+    [
+      "ParticipantB",
+      "And have you read any non-fiction books that you found particularly insightful?"
+    ],
+    [
+      "ParticipantA",
+      "I recently read \"The Power of Now\" by Eckhart Tolle and it changed my perspective on life."
+    ],
+    [
+      "ParticipantB",
+      "That's interesting, I've heard a lot of great things about that book."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's a must-read."
+    ],
+    [
+      "ParticipantB",
+      "What about you? What kind of books do you enjoy reading?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's a must-read."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've heard of \"The Power of Now\"."
+    ],
+    [
+      "ParticipantA",
+      "And what about you? Do you have any favorite authors or genres?"
+    ],
+    [
+      "ParticipantB",
+      "I love reading mystery novels, especially those by Agatha Christie and Sherlock Holmes."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that sounds interesting."
+    ],
+    [
+      "ParticipantB",
+      "Do you have a favorite mystery novel or author?"
+    ],
+    [
+      "ParticipantA",
+      "I've read a few Agatha Christie books, but I think my favorite mystery author is John Grisham."
+    ],
+    [
+      "ParticipantB",
+      "Oh, really? That's interesting."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I love John Grisham's writing style."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I love the way he builds the suspense in his novels."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, and his attention to detail is just amazing."
+    ],
+    [
+      "ParticipantB",
+      "What was the last book you read by John Grisham?"
+    ],
+    [
+      "ParticipantA",
+      "The last book I read by John Grisham was \"The Whistler\"."
+    ],
+    [
+      "ParticipantB",
+      "I haven't read \"The Whistler\" yet, but I'll have to check it out."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's a thrilling read."
+    ],
+    [
+      "ParticipantB",
+      "Well, I should probably check it out too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was a great read."
+    ],
+    [
+      "ParticipantB",
+      "Well, I should probably check it out too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was a great read."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'll have to add it to my reading list."
+    ],
+    [
+      "ParticipantA",
+      "What was the last non-fiction book you read that had an impact on you?"
+    ],
+    [
+      "ParticipantB",
+      "I recently read a book about the history of banking, and it was really interesting to learn about how the industry has evolved over time."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's really fascinating to learn about how things have changed over time."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it really is."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I find history and politics really interesting too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I also enjoy reading books about personal finance and investing."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2,
+    "dup_kept": 1
+  }
+}

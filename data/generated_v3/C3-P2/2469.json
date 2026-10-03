@@ -1,0 +1,114 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2469,
+  "topic": "Hobbies And Crafts",
+  "sb_prompt": "WHAT HOBBIES DO YOU HAVE IN YOUR SPARE TIME?  DO THEY INCLUDE ANY HANDICRAFTSWOODWORKING?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what hobbies do you have in your spare time?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I love to read books and watch movies. I also enjoy cooking and baking. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I enjoy reading and watching movies too. I also like to knit and crochet, and I've been trying to get into woodworking."
+    ],
+    [
+      "ParticipantB",
+      "That's great! I've always wanted to learn how to knit, but I've never really gotten the hang of it. Have you taken any classes or taught yourself?"
+    ],
+    [
+      "ParticipantA",
+      "I taught myself how to knit a few years ago and it's been a fun hobby ever since. I found some tutorials online and just kept practicing until I got the hang of it."
+    ],
+    [
+      "ParticipantB",
+      "That's impressive! I might have to try that out myself. I've also been interested in learning woodworking for a while now. Have you done any projects you're particularly proud of?"
+    ],
+    [
+      "ParticipantA",
+      "I made a little wooden box a few months ago and it turned out really well. I'm also planning on building a bookshelf soon. It's a great feeling to create something with your own hands."
+    ],
+    [
+      "ParticipantB",
+      "Oh, that sounds awesome! I'm sure it's a great feeling to have something you made with your own hands. I'm more of a reader and movie person, but I've been thinking about taking up a craft or something. Maybe I'll try knitting or woodworking too. Have you found any challenges with your hobbies that you had to overcome?"
+    ],
+    [
+      "ParticipantA",
+      "One of the challenges I've faced with knitting is that my hands can get tired easily, especially if I'm working on a big project. But I've found that taking breaks and stretching my hands helps a lot. With woodworking, I've had to learn how to use some of the tools and it can be a bit intimidating at first, but I enjoy the challenge."
+    ],
+    [
+      "ParticipantB",
+      "That's a great approach to taking breaks and stretching your hands. I can imagine that using some of the tools in woodworking might be intimidating, but it's great that you enjoy the challenge. I've never really tried any crafts before, so I'm not sure where to start. Do you have any recommendations?"
+    ],
+    [
+      "ParticipantA",
+      "I would suggest starting with something small and simple, like a knitting or crochet project. There are a lot of tutorials online that can walk you through the basics. As for woodworking, you might want to start with a small project like a picture frame or a birdhouse. It's also a good idea to take a class or workshop to learn the basics and get some hands-on experience."
+    ],
+    [
+      "ParticipantB",
+      "Thanks for the advice! I'll definitely look into taking a class or workshop to learn the basics. And maybe I'll start with something small like a knitting or crochet project. I appreciate your help!\n\nEnd of conversation."
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! I hope you have fun exploring your new hobby. Goodbye!"
+    ],
+    [
+      "ParticipantB",
+      "Goodbye! Thanks for chatting with me. It was nice speaking with you."
+    ]
+  ],
+  "n_turns": 16,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

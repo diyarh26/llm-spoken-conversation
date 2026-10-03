@@ -1,0 +1,142 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2405,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 28,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your favorite type of personal computer?"
+    ],
+    [
+      "ParticipantB",
+      "I prefer laptops because they're portable and I can take them with me wherever I go."
+    ],
+    [
+      "ParticipantA",
+      "That's cool! I actually prefer desktop computers because they have more power and are better for gaming. What about you?"
+    ],
+    [
+      "ParticipantB",
+      "I agree that desktops can be great for gaming, but I still prefer laptops for their portability."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can see why. So, what kind of activities do you use your computer for?"
+    ],
+    [
+      "ParticipantB",
+      "I use my computer mainly for work and school, as well as for entertainment like watching movies and listening to music."
+    ],
+    [
+      "ParticipantA",
+      "Nice! I use my computer for similar things, but I also enjoy playing video games and doing some programming in my free time."
+    ],
+    [
+      "ParticipantB",
+      "That's great! I've been thinking about learning how to program, but I haven't had the chance to start yet."
+    ],
+    [
+      "ParticipantA",
+      "You should definitely give it a try! There are many free resources online that can help you get started. What kind of programming are you interested in?"
+    ],
+    [
+      "ParticipantB",
+      "I'm interested in learning web development, specifically HTML, CSS, and JavaScript."
+    ],
+    [
+      "ParticipantA",
+      "That's a great choice! HTML and CSS are essential for building websites, and JavaScript is a powerful language for adding interactivity and functionality to your site."
+    ],
+    [
+      "ParticipantB",
+      "Yes, I'm excited to start learning and see what I can create!"
+    ],
+    [
+      "ParticipantA",
+      "It's always exciting to start learning something new and see what you can achieve with it. Best of luck with your web development journey!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you! I'm looking forward to it."
+    ],
+    [
+      "ParticipantA",
+      "Same here! It's always great to learn new things and improve ourselves. Let's keep in touch and share our progress."
+    ],
+    [
+      "ParticipantB",
+      "Definitely! I'd love to hear about your progress and share my own."
+    ],
+    [
+      "ParticipantA",
+      "Sounds good! Let's exchange contact information so we can keep in touch."
+    ],
+    [
+      "ParticipantB",
+      "Sure, my email is [email protected] Let me know when you're free to chat again and we can exchange contact information."
+    ],
+    [
+      "ParticipantA",
+      "Great, I'll let you know when I'm free to chat again and we can exchange contact information. Thanks for the conversation!"
+    ],
+    [
+      "ParticipantB",
+      "No problem, have a great day!"
+    ],
+    [
+      "ParticipantA",
+      "You too!"
+    ]
+  ],
+  "n_turns": 23,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

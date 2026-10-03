@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3636,
+  "topic": "Camping",
+  "sb_prompt": "FIND OUT FROM THE OTHER CALLER WHAT KIND OF CAMPING THEY HAVE DONE.  HOW DOES IT COMPARE WITH YOUR OWN EXPERIENCES?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: How are you doing today?\nParticipantB: I'm doing okay, thanks for asking. How about you?\nParticipantA: I'm doing well, thanks. So, what kind of camping have you done?\nParticipantB: Well, I've gone camping a few times with my family when I was younger. We mostly stuck to state parks and did some hiking and fishing.\nParticipantA: That sounds great. I've done a lot of camping too, mostly in national parks out west. I've done some backpacking and even a few multi-day river trips.\nParticipantB: Wow, that sounds like a lot of fun. Have you ever encountered any challenges while camping?\nParticipantA: Yeah, there have been a few times where we've had to deal with bad weather or unexpected injuries, but it's all part of the adventure. I've also noticed that some people can be pretty careless with their campfires, which can cause a lot of damage to the environment.\nParticipantB: That's definitely something to be aware of. I agree that camping can be a lot of fun, but it's important to be respectful of the environment. So, have you ever had any particularly memorable camping experiences?\nParticipantA: Yeah, there was one time when I was camping in Yellowstone and I saw a grizzly bear wandering around my campsite. It was pretty scary, but also incredibly exciting. Another time, I went on a multi-day river trip in the Grand Canyon and it was just breathtaking. The scenery was so beautiful and the experience was unforgettable.\nParticipantB: That sounds amazing. I've never been to Yellowstone or the Grand Canyon, but I'd love to visit some day. Have you ever camped in a tent or a camper?\nParticipantA: Mostly in tents, but I've also done a few trips in a small camper. I find that tent camping can be more adventurous and rewarding, but it can also be more challenging and uncomfortable at times.\nParticipantB: I agree, I prefer tent camping too. It just feels more like you're really out in nature and experiencing the great outdoors. Have you ever encountered any wildlife while camping?\nParticipantA: Yeah, I've seen all sorts of wildlife while camping, from bears and wolves to elk and deer. It's always a reminder of how beautiful and untouched nature can be.\nParticipantB: That's so cool. I've seen a few deer and raccoons, but nothing too exciting. I'm glad to hear that you've had such great experiences camping. It sounds like a wonderful way to connect with nature and appreciate the beauty of the world around us.\nParticipantA: Absolutely, it's a great way to get away from it all and reconnect with what's important. Thanks for chatting with me about camping. It's been great talking to you.\nParticipantB: No, thank you too. It was nice talking to you.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 756,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

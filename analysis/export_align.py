@@ -11,18 +11,13 @@ This mirrors the SB pipeline already validated on the VM (see VM_REPORT.md "ALIG
        using the same pretrained word2vec-google-news-300 vectors as the validated SB run
 
 Needs the `ALIGN` package + NLTK data (punkt_tab, wordnet, averaged_perceptron_tagger[_eng])
-+ the pretrained word2vec file (~1.7GB, word2vec-google-news-300). None of these are installed
-yet in this environment -- see the setup commands in this file's module docstring companion,
-or install with:
-    pip install ALIGN
-    python -c "import nltk; nltk.download('punkt_tab'); nltk.download('wordnet'); nltk.download('averaged_perceptron_tagger_eng')"
-    python -c "import gensim.downloader; gensim.downloader.load('word2vec-google-news-300')"
---pretrained-vectors then points at wherever gensim cached that file
-(~/gensim-data/word2vec-google-news-300/word2vec-google-news-300.gz by default).
++ the pretrained word2vec file. All three exist already in the VM's `convsim` env per
+VM_REPORT.md -- run this there. `--pretrained-vectors` defaults to the path VM_REPORT.md
+recorded (~/gensim-data/word2vec-google-news-300/word2vec-google-news-300.gz).
 
 Usage:
-    python analysis/export_align.py --data-dir data/generated --include-sb --n-sb 50
-    python analysis/export_align.py --data-dir data/generated --conditions C2-P0 C2-P1
+    python analysis/export_align.py --data-dir data/generated_v2 --include-sb --n-sb 50
+    python analysis/export_align.py --data-dir data/generated_v2 --conditions C2-P0 C2-P1
 """
 
 from __future__ import annotations
@@ -46,8 +41,8 @@ ALIGN_OUT = ROOT / "data" / "align"
 def generated_records(data_dir: pathlib.Path, conditions: list[str] | None):
     """(condition, conv_id, turns) for every data_dir/<condition>/*.json.
 
-    Skips any condition directory whose name doesn't look like a real condition (e.g. any
-    `.broken` backups left behind by a failed regeneration) unless explicitly requested.
+    Skips any condition directory whose name doesn't look like a real condition (e.g. the
+    `.broken` backups left behind by the C1 regeneration) unless explicitly requested.
     """
     for cond_dir in sorted(p for p in data_dir.glob("*") if p.is_dir()):
         cond = cond_dir.name
@@ -128,7 +123,7 @@ def run_align(raw_dir: pathlib.Path, work_dir: pathlib.Path, pretrained_vectors:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data-dir", default="data/generated")
+    ap.add_argument("--data-dir", default="data/generated_v2")
     ap.add_argument("--conditions", nargs="*", default=None,
                     help="restrict to these condition dirs (default: all non-.broken dirs)")
     ap.add_argument("--include-sb", action="store_true", help="also export the Switchboard baseline")
@@ -160,8 +155,8 @@ def main() -> None:
     # Sub-measure columns ALIGN's calculate_alignment() emits (Duran et al., 2019). The paper
     # (and its released AlignAnalyseOSF.R) aggregates the tok2/tok3/lem2/lem3 sub-measures into
     # one "syntax_stan" and one "lexical" column because the sub-measures correlated r > .6 --
-    # replicated here as a plain mean, in case a later analysis wants the same mixed models the
-    # paper ran on syntactic/lexical alignment, not just conceptual (cosine_semanticL).
+    # replicated here as a plain mean so analysis/original_paper_analysis.py can run the exact
+    # same mixed models the paper did, not just on conceptual (cosine_semanticL) alignment.
     SYNTAX_COLS = ["syntax_stan_tok2", "syntax_stan_lem2", "syntax_stan_tok3", "syntax_stan_lem3"]
     LEXICAL_COLS = ["lexical_tok2", "lexical_lem2", "lexical_tok3", "lexical_lem3"]
 

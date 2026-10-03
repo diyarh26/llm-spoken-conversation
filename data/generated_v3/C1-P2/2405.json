@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2405,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 28,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, do you consider yourself a bit of a tech enthusiast?\nParticipantB: Oh, I'd say I'm pretty interested in computers and tech in general. What about you?\nParticipantA: Same here. I think it's such an important part of our lives now, and it's fascinating to see how it's evolving.\nParticipantB: Definitely. I mean, I work in the restaurant industry, but I'm always keeping up with new developments in tech.\nParticipantA: Yeah, same here. It's hard to avoid, really. I work as a bank teller and there's always something new to learn.\nParticipantB: Oh, that's interesting. Do you find that your job requires you to have a lot of knowledge about computers?\nParticipantA: It does, actually. We have to be pretty familiar with the systems we use, and sometimes we even help customers troubleshoot issues.\nParticipantB: That's cool. I've had to do that before, and it can be a real headache.\nParticipantA: Yeah, for sure. But it's also really rewarding when you're able to help someone out.\nParticipantB: Definitely. I mean, I don't know if you've ever had to deal with a computer issue that was really frustrating, but it can be so satisfying to figure it out.\nParticipantA: Oh, absolutely. I actually have a friend who's a software developer, and he's always talking about how much he loves the challenge of solving problems with code.\nParticipantB: That's awesome. I think it's great when people find something they're really passionate about in the tech world.\nParticipantA: Yeah, I totally agree. So, what about you? Do you have any particular interests when it comes to computers?\nParticipantB: Well, I'd say I'm pretty into gaming. I love playing all sorts of games on my computer, and I'm always looking for new ones to try out.\nParticipantA: That's cool. I've been meaning to get back into gaming myself. What kind of games do you like to play?\nParticipantB: Oh, all sorts of things. I love RPGs, but I also enjoy first-person shooters and strategy games.\nParticipantA: That's a pretty broad range. I'm more into puzzle games and adventure games, myself.\nParticipantB: Oh, cool. I haven't really tried out many puzzle games, but I might have to give some of them a shot.\nParticipantA: Yeah, for sure. I'd recommend checking out some of the ones that are available on mobile devices, too. They're a lot of fun to play when you're on the go.\nParticipantB: Oh, I'll have to do that. Thanks for the suggestion!\nParticipantA: No problem. So, do you have any other interests when it comes to computers, or is gaming pretty much it for you?\nParticipantB: Honestly, gaming is pretty much it. But I do think it's amazing how computers can be used to create these incredible worlds and stories.\nParticipantA: Yeah, absolutely. I think that's one of the things that makes computers so fascinating \u2013 the fact that they can be used for so many different things.\nParticipantB: Definitely. It's",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 819,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

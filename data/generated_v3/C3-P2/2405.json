@@ -1,0 +1,130 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2405,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 28,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your favorite type of computer?"
+    ],
+    [
+      "ParticipantB",
+      "I'd say my favorite type of computer is a MacBook. I love how user-friendly they are and how they can handle a lot of tasks without slowing down. How about you? What's your go-to computer?"
+    ],
+    [
+      "ParticipantA",
+      "I'm actually more of a PC person. I like how customizable they are and how they can handle really intense tasks like gaming or video editing. But, I have to admit, MacBooks are pretty nice too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, MacBooks are definitely nice. I've used one before, and it was pretty smooth. But I've also used a PC for work, and I found it pretty easy to use too. It's just a matter of preference, really. I think both have their pros and cons. What do you think?"
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. I think it really just depends on what you need the computer for. If you're a gamer or a heavy-duty video editor, a PC might be better for you. But if you just need something for basic tasks like browsing the internet and checking emails, a MacBook would probably suffice. It's all about finding the right fit for your needs."
+    ],
+    [
+      "ParticipantB",
+      "Exactly! And I think both MacBooks and PCs have a lot of great features that can benefit different users. It really just depends on what you're looking for in a computer and what you're comfortable using. Do you have any personal experience with both MacBooks and PCs?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I do. I've used both MacBooks and PCs in the past, and I have to say that I prefer PCs just because I'm more familiar with them. But I do think MacBooks are great too, especially for people who are looking for a more user-friendly experience."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can definitely see why you'd prefer PCs if you're more familiar with them. It's always good to stick with what you know. And I agree that MacBooks are great for people who want a more user-friendly experience. They're pretty easy to navigate, especially for people who aren't as tech-savvy. What do you think is the most important factor when choosing a computer?"
+    ],
+    [
+      "ParticipantA",
+      "I think the most important factor when choosing a computer is figuring out what you'll be using it for. If you're a gamer, you'll want a computer with a good graphics card and plenty of storage. If you're a programmer, you'll want a computer with a lot of RAM. And if you're just using a computer for basic tasks, something like a MacBook or a Chromebook might be a good fit."
+    ],
+    [
+      "ParticipantB",
+      "That's a great point. Knowing what you'll be using the computer for is definitely key when it comes to choosing the right one. It's important to make sure that the computer you choose has the right specs to handle what you need it to do. What do you think is the most challenging part about owning a computer?"
+    ],
+    [
+      "ParticipantA",
+      "I think the most challenging part about owning a computer is keeping it updated and protected against viruses and malware. With new software and operating systems coming out all the time, it can be tough to keep up with all the updates and patches. And with new threats emerging all the time, it's important to have good antivirus software installed to protect your computer."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's definitely a challenge. Keeping your computer up to date and protected is important to ensure that it's running smoothly and securely. Have you ever had any issues with viruses or malware on your computer?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, unfortunately, I have had issues with malware on my computer in the past. It was pretty frustrating to deal with, but I learned my lesson and now I make sure to keep my antivirus software up to date and to be more cautious about clicking on suspicious links or downloading strange files."
+    ],
+    [
+      "ParticipantB",
+      "That's great to hear that you learned from your experience and are taking steps to protect your computer. It's always important to be vigilant when it comes to online security. Is there anything else you think people should know about computers or technology in general?"
+    ],
+    [
+      "ParticipantA",
+      "I think it's important for people to stay up to date with the latest technology and to be willing to learn new things. Technology is always changing and evolving, and it's important to keep up with those changes if you want to stay ahead of the curve. And even if you're not interested in technology or don't use a computer for work, it's still important to have a basic understanding of how they work and how to use them."
+    ],
+    [
+      "ParticipantB",
+      "That's a great point. Technology is always changing, and it's important to stay up to date with the latest trends and advancements. Even if you're not a tech expert, having a basic understanding of how computers and technology work can be really helpful in everyday life. Thanks for chatting with me about this! It was great to hear your perspective."
+    ],
+    [
+      "ParticipantA",
+      "No problem, it was great chatting with you too! Thanks for sharing your thoughts and experiences. I hope you have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "You too! Have a great day!"
+    ]
+  ],
+  "n_turns": 20,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

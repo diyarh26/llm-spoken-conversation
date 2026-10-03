@@ -1,0 +1,90 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2794,
+  "topic": "Federal Budget",
+  "sb_prompt": "WHAT SHORT AND LONG-TERM STEPS DO YOU AND THE OTHER CALLER THINK SHOULD BE TAKEN TO IMPROVE THE US BUDGET?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a librarian",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about the federal budget?"
+    ],
+    [
+      "ParticipantB",
+      "Honestly, it's a bit of a mess. The government needs to prioritize spending and find ways to increase revenue, like closing tax loopholes for big corporations and the wealthy. And we need to invest in infrastructure and education to boost the economy in the long term."
+    ],
+    [
+      "ParticipantA",
+      "I agree. We also need to address entitlement programs like Social Security and Medicare, as they are a significant part of the budget and will become unsustainable if we don't find a way to address their growth. What are your thoughts on that?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, absolutely. We should look into ways to sustain those programs without cutting benefits for people who rely on them. Maybe we can find ways to increase revenue or make the programs more efficient. We can't just let them collapse, it would be a disaster for millions of Americans."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. And I think we need to have a comprehensive approach to the budget that addresses both short-term and long-term issues. In the short term, we can cut wasteful spending and prioritize areas like infrastructure and education. In the long term, we need to focus on growing the economy and creating jobs, so we can increase tax revenue and address the long-term issues with entitlement programs. What do you think?"
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. We need a balanced approach that addresses both short-term and long-term concerns. We can't just focus on one area without considering the other, or we'll end up with a messy situation like we have now. We need to work together to find solutions that benefit everyone."
+    ],
+    [
+      "ParticipantA",
+      "I couldn't agree more. It's important that we all do our part to help the country and work together to find solutions to these complex issues. Thank you for sharing your thoughts on this. It was great speaking with you."
+    ],
+    [
+      "ParticipantB",
+      "No problem, thank you too. It was really interesting to hear your perspective on this. Take care!"
+    ]
+  ],
+  "n_turns": 10,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

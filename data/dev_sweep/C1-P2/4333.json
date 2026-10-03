@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4333,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 25,
+    "education": "a college degree",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 27,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what do you think about taxes?\nParticipantB: Uh, well, I think they're necessary, but I don't like paying them.\nParticipantA: Yeah, I know what you mean. I work in healthcare, so I see how taxes fund important programs like Medicare and Medicaid.\nParticipantB: Yeah, that's true. But sometimes it feels like the government just wastes the money.\nParticipantA: I can see why you might think that. But I also think there are a lot of good things the government does with tax money that we might not appreciate as much if we didn't have them.\nParticipantB: Yeah, I guess you're right. I know someone close who's dealt with the tax system, and it was a real hassle for them.\nParticipantA: Yeah, I can imagine. I've been skeptical about the tax system for a long time, but I've never really sat down to figure out why.\nParticipantB: Yeah, it can be complicated. I think there should be more transparency in how the government spends the money.\nParticipantA: I agree. I think if people could see more clearly how their taxes were being used, they might feel better about paying them.\nParticipantB: Yeah, that would be nice. I mean, I don't mind paying my fair share, but I don't want to feel like I'm being taken advantage of.\nParticipantA: I hear you. I think a lot of people feel that way. But I also think it's important to remember that taxes are what make our society function.\nParticipantB: Yeah, that's true. I guess I'm just a little frustrated with the government right now, but I know that's not really the fault of the tax system.\nParticipantA: Yeah, I can understand that. It's definitely a complicated issue. But I think if we all did our part and paid our taxes, we could make a real difference in our communities.\nParticipantB: Yeah, I agree. I just hope that the government can find a way to make the tax system more fair and efficient.\nParticipantA: Me too. Thanks for talking with me about this. It's been interesting to hear your perspective.\nParticipantB: Yeah, likewise. Take care.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 563,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

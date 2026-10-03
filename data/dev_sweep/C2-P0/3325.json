@@ -1,0 +1,136 @@
+{
+  "condition": "C2-P0",
+  "architecture": "C2",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have a dog named Max. He's a golden retriever and he's about 2 years old. He's very friendly and loves to play fetch. How about you? Do you have any pets?"
+    ],
+    [
+      "ParticipantA",
+      "Oh, that sounds like so much fun! I don't have a dog, but I do have a cat named Whiskers. She's a beautiful calico and she's about 6 years old. She's very playful and loves to chase toys, especially balls. Do you like dogs or cats better?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, that's great! I'm more of a dog person, but I do love cats too. What kind of cat is Whiskers? Is she friendly?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, Whiskers is very friendly. She loves to be petted and she's always eager to play with her toys. She's also very vocal, so she'll let you know if she wants some attention or if she's hungry. What about you and Max? Do you do any special activities together?"
+    ],
+    [
+      "ParticipantB",
+      "Max loves to go for runs and hikes with me, and we also play fetch in the park. He's such a good boy and I love spending time with him. I'm sure Whiskers is just as wonderful as Max. Have you and Whiskers done any fun activities together?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, Whiskers and I love to snuggle up on the couch together and watch TV. She also likes to sit on my lap while I work on my laptop. It's so nice to have her company while I'm doing things around the house. How about you and Max? Do you have any favorite activities to do together?"
+    ],
+    [
+      "ParticipantB",
+      "Max and I also enjoy spending time together indoors. We like to cuddle on the couch and watch movies, and sometimes we even play some games together. It's great to have a companion like him."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a great bond between you and Max. Do you have any other pets besides Max?"
+    ],
+    [
+      "ParticipantB",
+      "No, unfortunately Max is our only pet right now. We would love to have another pet someday, but for now we're happy with just him. How about you and Whiskers? Do you have any plans to get another pet in the future?"
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's too bad that you don't have any other pets right now. But I'm sure Max is a great companion for you. As for me and Whiskers, we're happy with just her for now. But who knows, maybe we'll get another pet in the future. It's always nice to have a furry friend around."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, Max is definitely a great companion for me. And you're right, it's always nice to have a furry friend around. Maybe someday we'll have another pet, but for now we're happy with just Max."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's great to have a furry friend to come home to. Maybe someday we'll have another pet too, but for now, Whiskers keeps us happy and entertained."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's great to have a furry friend to come home to. I agree, pets are such a wonderful addition to any home. They bring so much joy and companionship, and it's clear that both you and Whiskers are very happy together. It's always nice to hear about people and their pets, so thank you for sharing about Whiskers with me."
+    ],
+    [
+      "ParticipantA",
+      "You're absolutely right, pets are such a wonderful addition to any home. I'm glad we both have furry friends to come home to. It's always nice to hear about people and their pets, so thank you for sharing about Max with me."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome, it's always nice to talk about our pets and the joy they bring to our lives. I'm glad we had the chance to share about our furry friends with each other. Do you have any other favorite activities you like to do with Whiskers?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, Whiskers and I also like to go on little adventures together, like exploring the nearby park or going for a walk around the neighborhood. It's always fun to have a little buddy to explore with."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like so much fun! I'm sure Max would love to explore the park and go on walks with you too. Maybe someday we'll have the chance to explore together with our furry friends."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it would be great to go on adventures together with our furry friends someday. For now, Whiskers and I will keep enjoying our time together and maybe plan some more fun activities to do with her. Thank you for sharing your love for Max with me, it's been great talking about our pets with you."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome too, it's always nice to talk about our furry friends and the joy they bring to our lives. I'm glad we had the chance to share about our pets with each other, and I look forward to hearing more about your adventures with Whiskers in the future."
+    ]
+  ],
+  "n_turns": 22,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  }
+}

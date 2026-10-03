@@ -1,0 +1,130 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car do you think you might buy next?"
+    ],
+    [
+      "ParticipantB",
+      "I'm actually not sure yet. I'm still doing some research and considering my options."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's important to do your research before making such a big purchase. What sort of things are you looking for in a car?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I want something that's fuel efficient, has good safety ratings, and has enough space for my family and our belongings. I also prefer a car with advanced technology and entertainment features."
+    ],
+    [
+      "ParticipantA",
+      "Those are all great points. I'm looking for a car that's reliable, has good fuel economy, and plenty of space for my family and our belongings too. I also want something with modern technology and entertainment features."
+    ],
+    [
+      "ParticipantB",
+      "It sounds like we have similar requirements for a car. What type of car are you currently considering?"
+    ],
+    [
+      "ParticipantA",
+      "I'm considering a few different options, but I'm really interested in the new Toyota Prius. I've heard great things about its fuel efficiency and safety features."
+    ],
+    [
+      "ParticipantB",
+      "The Prius is definitely a great choice for fuel efficiency and safety. I've actually considered it as well. What other cars are you looking at?"
+    ],
+    [
+      "ParticipantA",
+      "I'm also considering the Honda Accord and the Nissan Leaf. I'm trying to decide which one will best meet my needs and fit within my budget."
+    ],
+    [
+      "ParticipantB",
+      "Those are all great options. The Honda Accord is a reliable car with good fuel economy, and the Nissan Leaf is a great choice if you're looking for an electric vehicle. Have you test driven any of these cars yet?"
+    ],
+    [
+      "ParticipantA",
+      "Not yet, but I plan on doing that soon. I want to get a feel for each car and see which one is the best fit for me."
+    ],
+    [
+      "ParticipantB",
+      "That's a great idea. Test driving is a great way to get a sense of how the car handles and if it's comfortable for you. Good luck with your search!"
+    ],
+    [
+      "ParticipantA",
+      "Thanks! I appreciate the advice. It sounds like we both have similar priorities when it comes to choosing a car."
+    ],
+    [
+      "ParticipantB",
+      "Yes, it does. It's important to find a car that fits your needs and budget. Let me know if you have any other questions or if there's anything else I can help with."
+    ],
+    [
+      "ParticipantA",
+      "Thanks, I appreciate that. I'll definitely keep that in mind as I continue my search."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome. Feel free to reach out if you have any more questions or if you want to bounce off some ideas. I'm always here to help."
+    ],
+    [
+      "ParticipantA",
+      "Thanks, I appreciate that. Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "You too!"
+    ]
+  ],
+  "n_turns": 20,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 11,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 11
+  }
+}

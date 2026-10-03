@@ -1,0 +1,126 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what can you tell me about your home?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I live in a small apartment in the city. It's not too big, but it's cozy and comfortable. I love the location because it's close to my job and there are plenty of restaurants and shops nearby. What about you? What's your home like?"
+    ],
+    [
+      "ParticipantA",
+      "I actually live in a small house in a suburban area. It's not too far from the city, but it's far enough that it's quiet and peaceful. I love having a yard and being able to garden, and I also enjoy the sense of community here. What do you like most about your apartment?"
+    ],
+    [
+      "ParticipantB",
+      "I love the convenience of my apartment, and the fact that I don't have to worry about maintenance or repairs. I also enjoy the social aspects of living in the city, with lots of people and activities to choose from. But sometimes I do miss having a yard or outdoor space. How do you feel about having a yard?"
+    ],
+    [
+      "ParticipantA",
+      "I actually really enjoy having a yard! I like being able to garden and grow my own fruits and vegetables. It's a great way to relax and get some fresh air. What kind of gardening do you do?"
+    ],
+    [
+      "ParticipantB",
+      "I actually don't have a green thumb, so I don't do much gardening myself. But I do enjoy spending time outdoors, whether it's taking a walk or sitting in a park. I do have a small balcony, though, so I try to keep a few potted plants there to bring some greenery into my life. Do you have any favorite plants or flowers you like to grow?"
+    ],
+    [
+      "ParticipantA",
+      "I actually love growing roses! I find them to be quite elegant and beautiful. I also have a small vegetable garden where I grow tomatoes, cucumbers, and peppers. It's a great way to get some exercise and enjoy the outdoors. What kind of activities do you like to do outdoors?"
+    ],
+    [
+      "ParticipantB",
+      "I love taking walks or going for a run in the park. I also enjoy cycling, although I don't do it as often as I'd like. And of course, there are always new restaurants and cafes to explore in the city, which can be a fun way to spend an afternoon. How do you like to spend your time outdoors?"
+    ],
+    [
+      "ParticipantA",
+      "I enjoy taking walks and going for bike rides too. It's a great way to stay active and enjoy the outdoors. I also like to fish sometimes, although I haven't had much luck lately! What are some of your favorite outdoor activities?"
+    ],
+    [
+      "ParticipantB",
+      "I love hiking and camping, although I don't get to do them as often as I'd like. I also enjoy going to music festivals or outdoor concerts in the summer. It's such a great feeling to be surrounded by nature and good music. What's your favorite outdoor activity?"
+    ],
+    [
+      "ParticipantA",
+      "I've never been camping or hiking before, but it sounds like a great adventure! I think I would enjoy it, especially if I could do it with some friends. What's the most memorable outdoor activity you've ever done?"
+    ],
+    [
+      "ParticipantB",
+      "One of the most memorable outdoor activities I've ever done was going on a multi-day hike through the mountains with some friends. We had an amazing time exploring the wilderness, camping under the stars, and enjoying each other's company. It was a true adventure and a great way to reconnect with nature. Have you ever done anything like that?"
+    ],
+    [
+      "ParticipantA",
+      "Unfortunately, I haven't had the chance to go on a multi-day hike yet. But I'm definitely open to the idea and hope to do it someday. Maybe we could even plan a trip together sometime?"
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a great idea! I would love to go on a hike or camping trip with you sometime. It's always more fun to explore new places with a friend. Let's keep in touch and make plans for the future."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely, let's do that! It's always great to meet new people with similar interests. And who knows, maybe we can even plan a trip together and explore some beautiful outdoor locations. Thanks for chatting with me!"
+    ],
+    [
+      "ParticipantB",
+      "My pleasure! It was great chatting with you too. Take care and stay in touch!"
+    ],
+    [
+      "ParticipantA",
+      "You too! Goodbye!"
+    ]
+  ],
+  "n_turns": 19,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

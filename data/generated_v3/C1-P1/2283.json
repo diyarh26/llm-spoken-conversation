@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: How are you today?\nParticipantB: I'm doing well, thank you. How about you?\nParticipantA: I'm good, thanks. So, what kind of lawn and garden work do you do?\nParticipantB: I'm a pharmacist, but I also enjoy gardening in my free time. I like to grow vegetables and herbs in my backyard.\nParticipantA: That's cool. I manage a grocery store, so I'm always around plants and gardening products. But I don't have much time to garden myself.\nParticipantB: Yeah, I can imagine that's busy work. What kind of gardening do you do in your spare time, if any?\nParticipantA: I have a small garden in my backyard where I grow some flowers and herbs. It's a nice way to relax after work.\nParticipantB: I totally agree. Gardening is a great way to unwind and connect with nature. Do you have any favorite plants or techniques you like to use?\nParticipantA: I really like growing basil. It's easy to care for and adds great flavor to homemade pasta sauce. As for techniques, I'm still learning. I've recently started using compost to improve the soil in my garden.\nParticipantB: That's a great idea. Composting is a great way to improve soil health and reduce waste. I've been trying to incorporate more native plants in my garden to attract pollinators and support local ecosystems.\nParticipantA: That's interesting. I've heard of native plants, but I haven't had much experience with them. What are some common native plants in your area?\nParticipantB: In my area, we have a lot of native wildflowers, like coneflowers and black-eyed Susans, that are great for attracting pollinators. We also have a lot of prairie grasses that are drought-resistant and provide great erosion control.\nParticipantA: Wow, that sounds like a beautiful garden. I'll have to look into native plants for my area too. What do you think is the most important aspect of gardening?\nParticipantB: I think the most important aspect of gardening is enjoying it. It's a great hobby that can be as simple or complex as you want it to be. As long as you're having fun and learning something new, that's what matters most.\nParticipantA: I completely agree. Thanks for chatting with me about gardening. It's been great to hear about your experiences and learn something new.\nParticipantB: No problem, it was nice talking to you too. Have a great day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 630,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

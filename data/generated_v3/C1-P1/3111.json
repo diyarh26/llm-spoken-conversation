@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3111,
+  "topic": "Crime",
+  "sb_prompt": "DISCUSS CRIME IN AMERICAN CITIES TODAY.  WHAT ARE YOUR CONCERNS AND THE CONCERNS OF THE OTHER CALLER?  WHAT STEPS CAN BE TAKEN TO REDUCE CRIME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 45,
+    "education": "a college degree",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 31,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what's on your mind?\nParticipantB: Oh, just the usual stuff, you know?\n\nParticipantA: Yeah, same here. So, what do you do for a living?\nParticipantB: I'm a bank teller. How about you?\nParticipantA: I'm an electrician.\nParticipantB: Nice. So, what brought you to talk about crime today?\nParticipantA: Well, I have a friend who's a cop, and he's been dealing with a lot of crime in the city.\nParticipantB: Yeah, it's a tough job. What concerns do you have about crime in American cities today?\nParticipantA: I think the biggest concern is the rise in violent crime. It seems like everywhere you go, there are stories of shootings and robberies.\nParticipantB: Yeah, I agree. It's definitely a problem. I have a friend who's a victim of crime, and it's not a good feeling.\nParticipantA: I can imagine. What steps do you think can be taken to reduce crime?\nParticipantB: I think more funding for police departments would help. And also, we need to address the root causes of crime, like poverty and lack of education.\nParticipantA: I agree that addressing the root causes is important, but I think we also need to hold criminals accountable for their actions.\nParticipantB: Yeah, I think a combination of both would be best. What's your opinion on gun control?\nParticipantA: I think we need to do something about it. It's too easy for people to get their hands on guns, and that's a big part of the problem.\nParticipantB: I see your point, but I also think that we need to focus on mental health and addressing the causes of violence, rather than just gun control.\nParticipantA: I understand where you're coming from, but I think that gun control is a big piece of the puzzle. What's your take on the death penalty?\nParticipantB: I think it's a complex issue. I'm not sure it's a deterrent, but I also think that some people deserve to pay the ultimate price for their crimes.\nParticipantA: I can understand that, but I also think that the risk of executing an innocent person is too high. What do you think we can do to prevent crime in our own communities?\nParticipantB: I think we need to be more involved in our neighborhoods and watch out for each other. We can also support community programs that help at-risk youth.\nParticipantA: I agree. It's important to work together to make our communities safer. Well, it was nice talking to you.\nParticipantB: Yeah, you too. Thanks for the chat.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 673,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

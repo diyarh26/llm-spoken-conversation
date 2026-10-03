@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2145,
+  "topic": "Women's Roles",
+  "sb_prompt": "DISCUSS THE CHANGES IN THE ROLES OF WOMEN IN AMERICAN SOCIETY OVER THE PAST GENERATION OR TWO.  WHICH CHANGES HAVE BEEN THE MOST SIGNIFICANT? DO YOU HAVE AN OPINION ON WHAT FURTHER CHANGES WILL TAKE PLACE OVER THE NEXT GENERATION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 44,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 45,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hi, how are you doing today?\nParticipantB: I'm good, thanks. How about you?\nParticipantA: I'm doing okay. So, I understand we're supposed to talk about the changes in the roles of women in American society over the past generation or two. What are your thoughts on that?\nParticipantB: Yeah, I think there have been some significant changes, especially in the workforce. Women are now in positions of power and leadership that were once predominantly held by men.\nParticipantA: Absolutely, and I think that's great. I know someone close who's benefited from these changes, and it's really opened doors for her. But, I also think there's still a long way to go, especially when it comes to equal pay.\nParticipantB: Yeah, I agree. I think we've made some progress, but there are still issues that need to be addressed. And, to be honest, I'm not sure what the next generation will bring. I'm a bit skeptical, but I'm also hopeful.\nParticipantA: I can understand that. I think the next generation will continue to push for progress, but it's hard to predict what will happen. I just hope that we keep moving in the right direction.\nParticipantB: Yeah, I hope so too. It's important that we keep the conversation going and continue to make progress.\nParticipantA: Absolutely, and I think it's important for both men and women to be a part of that conversation. It's not just a women's issue, it's a societal issue.\nParticipantB: Definitely. Well, I think that's about all I have to say on the matter. Thanks for the chat.\nParticipantA: No problem, it was great talking to you. Take care.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 424,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

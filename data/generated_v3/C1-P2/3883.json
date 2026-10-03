@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3883,
+  "topic": "Clothing And Dress",
+  "sb_prompt": "THE TOPIC IS CLOTHING.  PLEASE FIND OUT HOW THE OTHER CALLER TYPICALLY DRESSES FOR WORK.  HOW MUCH VARIATION IS THERE FROM DAY TO DAY?  HOW MUCH VARIATION IS THERE FROM SEASON TO SEASON?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 57,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello! How are you today?\n\nParticipantA: I'm doing well, thanks. How about you?\nParticipantB: I'm okay. I'm just a bit tired after work. How was your day?\n\nParticipantA: It was good. I work at a factory as a supervisor. It can be stressful, but I enjoy it. How about you? Do you work in a dental office?\n\nParticipantB: Yes, I'm a dental hygienist. It can be quite interesting, but some days can be tiring too. So, what do you typically wear to work?\n\nParticipantA: I usually wear business casual clothes, like khakis and a nice shirt or blouse. Sometimes I dress a bit more formally if we have important visitors. How about you?\n\nParticipantB: I usually wear scrubs to work. They're comfortable and easy to move around in. Plus, they're practical for my job. Do you have any variation in your outfits from day to day or season to season?\n\nParticipantA: Sometimes I'll switch up my shirt or shoes, but overall, my work attire is pretty consistent. I do like to add a pop of color or pattern to my outfit sometimes, though. What about you?\n\nParticipantB: I try to mix things up a bit, but I stick to the basics. I might change the color of my scrubs or add a fun necklace. I do find that people's attire can reflect their personality, what do you think?\n\nParticipantA: Absolutely. I think it's important to express yourself through your clothing choices. I have a friend who's really into vintage fashion, and she always looks so unique and stylish. What about you? Do you have any personal style that you like to showcase?\n\nParticipantB: I try to keep things simple and professional. I don't want my clothing to be a distraction from my job. But, I do appreciate nice fabrics and good quality clothes. Do you have a favorite clothing item or brand?\n\nParticipantA: I love blazers. They're so versatile and can be dressed up or down. I also really like the brand J.Crew, they have really nice and comfortable clothes. What about you?\n\nParticipantB: I'm not really into brand names, but I do like nice fabrics. I find that cotton and polyester blends are the most comfortable for me. So, what do you think about sustainable fashion?\n\nParticipantA: I think it's a great idea. I try to be conscious of my environmental impact, and buying sustainable clothing is one way to do that. Do you have any experience with sustainable fashion?\n\nParticipantB: I haven't really explored it yet, but I'm open to the idea. I'll have to look into it more. Thanks for sharing your thoughts.\n\nParticipantA: Of course. It was nice chatting with you.\nParticipantB: Yes, likewise. Have a good day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 726,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

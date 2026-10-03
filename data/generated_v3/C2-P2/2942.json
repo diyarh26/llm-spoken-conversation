@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2942,
+  "topic": "Choosing A College",
+  "sb_prompt": "WHAT ADVICE OR EXPERIENCE CAN YOU OFFER TO A PARENT ON HOW TO HELP A SON OR DAUGHTER CHOOSE A COLLEGE TO ATTEND?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 44,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what advice do you have for parents helping their child choose a college?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think it's important for parents to support their child's decision and not pressure them into something they're not interested in."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's a good point."
+    ],
+    [
+      "ParticipantB",
+      "I think it's also important for the student to do their own research and visit campuses to get a feel for the place."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's definitely important."
+    ],
+    [
+      "ParticipantB",
+      "And to consider factors like cost, location, and program offerings when making a decision."
+    ],
+    [
+      "ParticipantA",
+      "And talking to current students or alumni can also give a good insight into the college experience."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely."
+    ],
+    [
+      "ParticipantA",
+      "My sister went through a similar process last year, and she found it helpful to talk to a college counselor."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's a great suggestion."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, and she also found it helpful to look into the college's career services and internship opportunities."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's important too."
+    ],
+    [
+      "ParticipantA",
+      "And don't forget to consider the campus culture and whether it aligns with the student's personality and interests."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's definitely important."
+    ],
+    [
+      "ParticipantA",
+      "What about financial aid and scholarship opportunities?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, financial aid and scholarship opportunities are definitely important to consider as well."
+    ],
+    [
+      "ParticipantA",
+      "Have you or anyone close to you dealt with financial aid and scholarship opportunities while choosing a college?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I have a friend who had a lot of debt after college and it really affected her ability to start her career."
+    ],
+    [
+      "ParticipantA",
+      "That's a great point."
+    ],
+    [
+      "ParticipantB",
+      "And it's important to also look at the graduation rates and job placement rates for the programs they're interested in."
+    ],
+    [
+      "ParticipantA",
+      "And what about the size of the school and the classroom experience?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's definitely something to consider."
+    ],
+    [
+      "ParticipantA",
+      "And what about the campus resources and support systems for students?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, those are all good points."
+    ],
+    [
+      "ParticipantA",
+      "Have you or anyone close to you dealt with financial aid and scholarship opportunities while choosing a college?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's also important to consider the student's future career goals and how the college can help them achieve those goals."
+    ],
+    [
+      "ParticipantA",
+      "And how about the social life on campus and the activities available to students?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, there are a lot of things to consider."
+    ],
+    [
+      "ParticipantA",
+      "And what about the diversity of the student body and how it can impact the college experience?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, diversity can definitely add to the college experience and provide different perspectives."
+    ],
+    [
+      "ParticipantA",
+      "And how about the campus environment and the surrounding community?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and it's important to keep in mind that what might be a good fit for one person might not be the same for another."
+    ],
+    [
+      "ParticipantA",
+      "What about the reputation of the college and its programs in the job market?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, that's definitely something to keep in mind."
+    ],
+    [
+      "ParticipantA",
+      "And what about the college's alumni network and how it can benefit the student after graduation?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's a good point."
+    ],
+    [
+      "ParticipantA",
+      "And how about the college's academic resources and support systems?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think it's important to also consider the student's learning style and how it aligns with the teaching methods at the college."
+    ],
+    [
+      "ParticipantA",
+      "And what about the college's campus culture and extracurricular activities?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and it's important to keep in mind that the college experience is not just about academics, but also about personal growth and development."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1,
+    "dup_kept": 1
+  }
+}

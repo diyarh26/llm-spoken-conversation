@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3810,
+  "topic": "Music",
+  "sb_prompt": "PLEASE DISCUSS MUSIC.  CAN YOU FIND MUSICIANSOR TYPES OF MUSIC THAT BOTH YOU AND THE OTHER CALLER LIKE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of music do you like?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, I like a bit of everything."
+    ],
+    [
+      "ParticipantA",
+      "I'm really into indie music at the moment."
+    ],
+    [
+      "ParticipantB",
+      "That's cool, I used to be into indie music too, but these days I've been listening to a lot of classic rock."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite classic rock band?"
+    ],
+    [
+      "ParticipantB",
+      "I really like Led Zeppelin."
+    ],
+    [
+      "ParticipantA",
+      "I've been listening to a lot of Fleetwood Mac lately too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, they're a great band."
+    ],
+    [
+      "ParticipantA",
+      "Do you have a favorite song from them?"
+    ],
+    [
+      "ParticipantB",
+      "I really like 'The Chain'."
+    ],
+    [
+      "ParticipantA",
+      "I love 'The Chain' too, but my favorite song from them is 'Landslide'."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a great song."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have a favorite Fleetwood Mac album?"
+    ],
+    [
+      "ParticipantB",
+      "Rumours is definitely one of my favorites."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's a classic."
+    ],
+    [
+      "ParticipantB",
+      "What about you? Any favorite indie bands?"
+    ],
+    [
+      "ParticipantA",
+      "I really like the band Arcade Fire."
+    ],
+    [
+      "ParticipantB",
+      "I saw them live a few years ago, it was amazing."
+    ],
+    [
+      "ParticipantA",
+      "Have you seen them live too?"
+    ],
+    [
+      "ParticipantB",
+      "What about you?"
+    ],
+    [
+      "ParticipantA",
+      "I haven't had a chance to see them yet, but I really want to."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, they're incredible live."
+    ],
+    [
+      "ParticipantA",
+      "I've been wanting to check out their new album too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I heard their new stuff is really good."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have a favorite indie album?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'd say my favorite indie album is probably 'The Suburbs' by Arcade Fire."
+    ],
+    [
+      "ParticipantA",
+      "What about you?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think it's a really well-done album."
+    ],
+    [
+      "ParticipantA",
+      "What do you think about the state of the music industry today?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's really interesting to see how technology has changed the way music is created and distributed, but at the same time, it's also had a major impact on the way musicians are paid."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely a double-edged sword."
+    ],
+    [
+      "ParticipantB",
+      "And, you know, it's hard for musicians to make a living these days."
+    ],
+    [
+      "ParticipantA",
+      "I totally agree."
+    ],
+    [
+      "ParticipantB",
+      "And, you know, it's hard for musicians to make a living these days.\n\n(ParticipantA's next turn would be a response to this, such as \"Definitely.\" or \"I agree.\")"
+    ],
+    [
+      "ParticipantA",
+      "Yeah."
+    ],
+    [
+      "ParticipantB",
+      "I think it's also great to see how technology has made it easier for independent musicians to get their music out there and build a following."
+    ],
+    [
+      "ParticipantA",
+      "I totally agree."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, there are so many talented musicians out there that wouldn't have had a chance to be heard before."
+    ],
+    [
+      "ParticipantA",
+      "What about you?"
+    ],
+    [
+      "ParticipantB",
+      "What about you?"
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

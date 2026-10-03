@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2993,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what kind of car are you thinking of buying next?\n\nParticipantB: Well, I'm not really sure yet. I've been considering a few different options.\n\nParticipantA: Same here. I've been thinking about getting a new car for a while now, but I'm not sure what kind I want.\n\nParticipantB: What kind of features are you looking for in a car?\n\nParticipantA: I'm looking for something that's reliable and has good gas mileage. I also want something that's comfortable to drive and has plenty of space for my family and all our stuff.\n\nParticipantB: Sounds like you're looking for a practical car. I'm looking for something similar. I want something that's good on gas, but also has some power so I can take it on the highway when I need to.\n\nParticipantA: Yeah, I can relate to that. I don't want to have to fill up my tank too often, but I also want to be able to drive on the highway if I need to.\n\nParticipantB: Have you considered electric cars?\n\nParticipantA: I have, but I'm not sure if they're practical for my lifestyle. I drive a lot for work and I'm not sure if I'd be able to find charging stations often enough.\n\nParticipantB: Yeah, that's a valid concern. I've been considering an electric car too, but I'm worried about the same thing.\n\nParticipantA: It's definitely something to think about. What about safety features? Are you looking for a car with good safety ratings?\n\nParticipantB: Absolutely. Safety is a top priority for me. I want a car that's going to keep me and my family safe in case of an accident.\n\nParticipantA: Me too. I want something that has good safety ratings and also has features like blind spot monitoring and lane departure warning.\n\nParticipantB: Those are great features. Have you considered used cars?\n\nParticipantA: I have, but I'm not sure if I want to go that route. I don't want to have to worry about potential problems with a used car.\n\nParticipantB: I totally understand. I'm actually thinking about buying a used car myself. I've been looking at some certified pre-owned cars that come with warranties.\n\nParticipantA: That's a good idea. I'll have to look into that option too.\n\nParticipantB: Yeah, it's definitely something to consider. So, what kind of car do you currently have?\n\nParticipantA: I have a Honda Accord. It's been a great car, but it's getting older and I'm starting to have some issues with it.\n\nParticipantB: Nice. I have a Ford Fusion. It's been a good car for me, but I'm starting to think it's time for an upgrade.\n\nParticipantA: Well, it sounds like we're both in the same boat. It can be tough to decide on a new car, but I'm sure we'll find something that works for us.\n\nParticipantB: Definitely. Thanks for chatting with me about this. It's been helpful to get another person's perspective.\n\nParticipantA: Of course. It was nice talking to you. Good luck with your car search!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 818,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

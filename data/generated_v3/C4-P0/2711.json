@@ -1,0 +1,106 @@
+{
+  "condition": "C4-P0",
+  "architecture": "C4",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 2711,
+  "topic": "Vacation Spots",
+  "sb_prompt": "PLEASE DISCUSS TYPES OF VACATIONS AND TRIPS YOU ENJOY.  FIND OUT WHETHER THE OTHER CALLER CAN INTEREST YOU IN A VACATION SPOT YOU HAVEN'T VISITED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 25,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what types of vacations and trips do you usually enjoy?"
+    ],
+    [
+      "ParticipantB",
+      "I really enjoy adventurous trips, like hiking and camping in national parks. But I also enjoy relaxing beach vacations where I can unwind and soak up the sun. How about you? What kind of trips do you prefer?"
+    ],
+    [
+      "ParticipantA",
+      "I love exploring new cities and immersing myself in their culture and history. I also enjoy taking road trips to discover hidden gems and beautiful landscapes. Have you ever been to any of the national parks in the western United States? I've been wanting to plan a trip out there for a while now."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I've been to a few national parks in the western US, and I absolutely loved them! The scenery is breathtakingly beautiful. Have you considered visiting Yosemite National Park in California? I've heard incredible things about it. Have you heard of it?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I have heard of Yosemite National Park, and I've been wanting to visit for a while now! The pictures I've seen online are stunning, and I've heard the hiking trails are incredible. I've also been interested in visiting the Grand Tetons National Park in Wyoming. Have you been there?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I've been to the Grand Tetons National Park as well! It's another beautiful and awe-inspiring place. The mountains are absolutely stunning, and there are some great hiking trails there too. I would definitely recommend both Yosemite and the Grand Tetons if you're looking for adventure and breathtaking scenery. Do you have a time frame in mind for your trip out west? I can help you plan it out if you'd like!"
+    ],
+    [
+      "ParticipantA",
+      "That's very kind of you! I'm actually planning to take a few weeks off next month, so I was hoping to plan a trip out west during that time. I'm excited to hear more about your recommendations for Yosemite and the Grand Tetons. Any tips on where to stay or what to do during my visit?"
+    ],
+    [
+      "ParticipantB",
+      "Absolutely! For Yosemite, I would recommend staying in the valley if you can, as it's the most convenient location for accessing the park's many attractions. Some popular things to do in Yosemite include hiking the Mist Trail, exploring the Mariposa Grove of giant sequoias, and taking a scenic drive through the park.\n\nAs for the Grand Tetons, I would recommend staying in Jackson or Kelly, which are both close to the park. Some must-see attractions in the Grand Tetons include the Teton Range, Jenny Lake, and Schoots Falls. You can also take a scenic drive through the park and stop at the various viewpoints to take in the stunning views.\n\nI hope this information helps you plan your trip! Let me know if you have any other questions or if there's anything else I can help you with."
+    ],
+    [
+      "ParticipantA",
+      "Thank you so much for the information! I'm looking forward to planning my trip out west and exploring these beautiful national parks. If you don't mind, I might have some more questions for you later. Do you mind if I reach out to you again if I have any other questions?"
+    ],
+    [
+      "ParticipantB",
+      "Not at all! I'd be happy to help you with any questions you might have. Feel free to reach out to me whenever you have a question or need some advice. Have a great trip when you go out west, and I hope you have an amazing experience in Yosemite and the Grand Tetons!"
+    ],
+    [
+      "ParticipantA",
+      "Thank you so much for your help! I appreciate it. Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! I'm glad I could help. I hope you have a fantastic trip to Yosemite and the Grand Tetons. If you have any other questions, don't hesitate to reach out to me. Have a great day yourself!"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "I'm not really sure yet. I'm open to suggestions and I want to find something that fits my needs and budget."
+    ],
+    [
+      "ParticipantA",
+      "That makes sense. What kind of features are you looking for in a car?"
+    ],
+    [
+      "ParticipantB",
+      "I'm looking for something that is fuel efficient, has good safety ratings, and has enough space for my family and our belongings."
+    ],
+    [
+      "ParticipantA",
+      "Those are all important factors to consider. Have you thought about any specific car models or brands that you might be interested in?"
+    ],
+    [
+      "ParticipantB",
+      "I've been considering the Honda Accord and the Toyota Camry, but I'm also open to other suggestions."
+    ],
+    [
+      "ParticipantA",
+      "Both the Honda Accord and the Toyota Camry are great options. They have good safety ratings and are known for their fuel efficiency. What is your budget for the car?"
+    ],
+    [
+      "ParticipantB",
+      "My budget is around $25,000."
+    ],
+    [
+      "ParticipantA",
+      "Both the Honda Accord and the Toyota Camry fall within that price range, so they could be good options for you. Have you test driven any cars yet?"
+    ],
+    [
+      "ParticipantB",
+      "No, I haven't had a chance to test drive any cars yet. I'm still in the early stages of the process."
+    ],
+    [
+      "ParticipantA",
+      "It's a good idea to test drive a few different cars to see which one feels the best to you. Have you thought about any other factors that might influence your decision, such as the car's style or the dealership's location?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't really thought about the car's style yet, but I would prefer to buy from a dealership that is close to my home."
+    ],
+    [
+      "ParticipantA",
+      "Finding a dealership that is conveniently located can be important. Have you done any research on dealerships in your area?"
+    ],
+    [
+      "ParticipantB",
+      "I have looked up a few dealerships online, but I haven't made any decisions yet."
+    ],
+    [
+      "ParticipantA",
+      "It's a good idea to do some research and read reviews before making a decision. Have you considered any other factors that might influence your decision, such as the car's warranty or the dealership's financing options?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't really thought about the car's warranty or financing options yet, but those could be important factors to consider as well."
+    ],
+    [
+      "ParticipantA",
+      "Both the car's warranty and financing options are important factors to consider. Have you talked to any friends or family members who have recently bought a car?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't talked to anyone about this yet, but I might reach out to some friends or family members for advice."
+    ],
+    [
+      "ParticipantA",
+      "It's always a good idea to get advice from people you trust. Have you thought about any other factors that might influence your decision, such as the car's environmental impact or its technology features?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't really thought about the car's environmental impact or technology features yet, but those could be important factors to consider as well."
+    ],
+    [
+      "ParticipantA",
+      "Both the car's environmental impact and technology features can be important factors to consider for some people. Is there anything else you're looking for in a car?"
+    ],
+    [
+      "ParticipantB",
+      "Not really, I just want something that is reliable, practical, and fits my needs and budget."
+    ],
+    [
+      "ParticipantA",
+      "Those are all important factors to consider. Have you set a timeline for when you want to purchase a new car?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't set a specific timeline yet, but I would like to buy a new car within the next few months."
+    ],
+    [
+      "ParticipantA",
+      "That's a reasonable timeline. Have you thought about any other factors that might influence your decision, such as the car's maintenance costs or its resale value?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't really thought about the car's maintenance costs or resale value yet, but those could be important factors to consider as well."
+    ],
+    [
+      "ParticipantA",
+      "Both the car's maintenance costs and resale value are important factors to consider. Is there anything else you're looking for in a car?"
+    ],
+    [
+      "ParticipantB",
+      "No, I think we've covered everything. Thank you for your help!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! I hope you find the perfect car for your needs and budget. Good luck with your search!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you, I appreciate it!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "You too!"
+    ]
+  ],
+  "n_turns": 34,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

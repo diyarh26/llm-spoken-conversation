@@ -1,0 +1,110 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2533,
+  "topic": "Baseball",
+  "sb_prompt": "FIND OUT THE OTHER CALLER'S FAVORITE PRO BASEBALL TEAM AND WHERE IT'S HEADED THIS YEAR.  DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hi, how's it going?"
+    ],
+    [
+      "ParticipantB",
+      "It's going pretty good. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm doing well, thank you. So, do you have a favorite pro baseball team?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'm a big fan of the New York Yankees. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm actually a fan of the Boston Red Sox. What do you think about their chances this year?"
+    ],
+    [
+      "ParticipantB",
+      "I think the Red Sox have a good chance of doing well this year. They have a strong lineup and a solid pitching staff. Plus, they have a lot of talented young players."
+    ],
+    [
+      "ParticipantA",
+      "I agree, the Red Sox do have a lot of young talent. But I'm a little more skeptical about their pitching staff. I think it's gonna be a close race between the Red Sox and the Yankees this year."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, the Yankees also have a great pitching staff and a lot of experience. It's definitely gonna be a tough competition between the two teams. But I think the Red Sox have a good chance of winning it all this year."
+    ],
+    [
+      "ParticipantA",
+      "That's a fair point. I've been a Red Sox fan for a long time, so I guess I'm just a little biased. But it's always exciting to see two great teams compete against each other."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it definitely is. Baseball is such a great sport because it's all about strategy and execution. I can't wait to see how everything plays out this season."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely, I love the strategic aspect of baseball. And you're right, it's always exciting to see two great teams compete against each other. It's gonna be a great season."
+    ],
+    [
+      "ParticipantB",
+      "Agreed. Well, it was great talking to you about baseball. Have a good day!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, you too! Thanks for the conversation."
+    ]
+  ],
+  "n_turns": 15,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

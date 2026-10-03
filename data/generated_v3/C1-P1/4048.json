@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4048,
+  "topic": "Drug Testing",
+  "sb_prompt": "HOW DO YOU FEEL ABOUT THE PRACTICE OF SOME COMPANIES OR GOVERNMENT AGENCIES TESTING EMPLOYEES OR PROSPECTIVE EMPLOYEES FOR DRUGS?  IS RANDOM SPOT TESTING JUSTIFIED?  WHAT LIMITS SHOULD THERE BE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 28,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 40,
+    "education": "a college degree",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hey, what's up?\nParticipantB: Not much, you?\nParticipantA: Just working on some stuff. You know how it is.\nParticipantB: Yeah, totally. I'm actually supposed to be grading papers, but I'm taking a little break.\nParticipantA: Ha, I can relate. I'm an accountant, so it's always crunch time.\nParticipantB: Oh, cool. I'm a high school teacher. We're definitely at opposite ends of the education spectrum.\nParticipantA: Yeah, I bet. So, I heard we're supposed to talk about drug testing today. What's your take on it?\nParticipantB: Yeah, I have some thoughts on that. I think it's a tricky topic.\nParticipantA: Yeah, I feel the same way. I've never really had a strong opinion on it one way or the other.\nParticipantB: I've actually had someone close to me go through it, and it really opened my eyes to the potential consequences of drug testing.\nParticipantA: Oh, I see. That must have been tough for them.\nParticipantB: Definitely. I think it's a violation of privacy, but at the same time, I can understand why companies or government agencies might want to do it.\nParticipantA: Yeah, I get that too. I guess it's just hard for me to have a strong opinion on it without knowing more about the specifics.\nParticipantB: Exactly. I think it depends on the situation. For example, if it's a safety-sensitive job, I can see how it might be necessary to ensure everyone's safety.\nParticipantA: Yeah, that makes sense. I guess I just feel like there should be some limits on it, you know? Like, it shouldn't be done randomly or without cause.\nParticipantB: I agree. I think there should be some kind of protocol in place to ensure that it's being done fairly and without discrimination.\nParticipantA: Yeah, I think that's important too. I don't know, it's just a tough topic for me.\nParticipantB: Yeah, I get that. I think it's definitely something that needs to be discussed more openly.\nParticipantA: Agreed. Well, thanks for chatting with me about it. It's been interesting to hear your perspective.\nParticipantB: Of course, likewise. Have a good day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 583,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

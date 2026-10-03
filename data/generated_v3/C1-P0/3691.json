@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3691,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing well, thank you. How about you?\nParticipantA: I'm doing pretty good too. So, what kind of pets do you have?\nParticipantB: I have a dog.\nParticipantA: Oh, that's great! What kind of dog do you have?\nParticipantB: I have a golden retriever.\nParticipantA: I love golden retrievers! I have one too.\nParticipantB: That's great! What's your dog's name?\nParticipantA: Her name is Bella.\nParticipantB: That's a beautiful name. What kind of other pets do you have?\nParticipantA: I don't have any other pets, just Bella.\nParticipantB: That's too bad. I have three cats.\nParticipantA: Oh, that's great! I'm actually allergic to cats, so I can't have any.\nParticipantB: I'm sorry to hear that. What kind of other pets do you have then?\nParticipantA: I don't have any other pets, just Bella.\nParticipantB: That's too bad. I love all animals. What kind of other animals do you like?\nParticipantA: I like all animals too, but I'm mostly a dog person.\nParticipantB: I can understand that. I love dogs too, but I also have a soft spot for cats.\nParticipantA: Yeah, cats are great too. What's your dog's name?\nParticipantB: His name is Max.\nParticipantA: That's a great name. Does Max like to play fetch?\nParticipantB: Oh, yes! He loves to play fetch and go for walks.\nParticipantA: That's great! Bella loves to play fetch too.\nParticipantB: That's great! Do you have any funny stories about Bella?\nParticipantA: Well, she likes to steal my socks and run around with them in her mouth.\nParticipantB: That's too funny! My Max does the same thing with my shoes.\nParticipantA: Haha, it's amazing how dogs can be so playful. What do you like to do in your free time?\nParticipantB: I like to read books and watch movies.\nParticipantA: That's great! I like to read books too and watch sports.\nParticipantB: Oh, I don't really watch sports, but I do enjoy reading books.\nParticipantA: Yeah, books are great. Do you have any favorite books or authors?\nParticipantB: I love Jane Austen books. Have you read any of her books?\nParticipantA: Yes, I've read Pride and Prejudice. It's a great book.\nParticipantB: Oh, I love that book too. It's one of my favorites.\nParticipantA: Yeah, it's a classic. What's your favorite Jane Austen book?\nParticipantB: My favorite is probably Sense and Sensibility.\nParticipantA: That's a great book too. I haven't read that one yet, but I will have to check it out.\nParticipantB: Yes, you should definitely read it. It's a great book.\nParticipantA: Okay, I will have to do that. Well, it was nice talking to you.\nParticipantB: Yes, it was great talking to you too.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 850,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

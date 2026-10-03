@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What's your experience with houses?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've lived in a few different houses over the years, but I'm currently renting an apartment."
+    ],
+    [
+      "ParticipantA",
+      "What kind of houses have you lived in?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly just the standard apartments and houses you'd expect to find in the area."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite type of house to live in?"
+    ],
+    [
+      "ParticipantB",
+      "I don't know if I have a favorite type, but I do like having a yard and outdoor space."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can relate to that."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can relate to that."
+    ],
+    [
+      "ParticipantA",
+      "What kind of house do you have now?"
+    ],
+    [
+      "ParticipantB",
+      "A small apartment."
+    ],
+    [
+      "ParticipantA",
+      "What do you like most about having a yard?"
+    ],
+    [
+      "ParticipantB",
+      "I like being able to have a garden and just enjoy some fresh air and sunlight."
+    ],
+    [
+      "ParticipantA",
+      "I used to live in a house with a big yard too, but I had to move out because of some issues."
+    ],
+    [
+      "ParticipantB",
+      "I'm sorry to hear that."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was a great place, but I had some problems with the landlord and had to leave."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a bummer when you have to leave a good place like that."
+    ],
+    [
+      "ParticipantA",
+      "What kind of garden do you like to grow in your yard?"
+    ],
+    [
+      "ParticipantB",
+      "I like to grow herbs and some vegetables, but I'm not very good at keeping them alive."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I used to have a pretty good garden going, but it's hard to keep up with when you're always on the road for work."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can imagine it would be tough to maintain a garden with a job like yours."
+    ],
+    [
+      "ParticipantA",
+      "What's the apartment like?"
+    ],
+    [
+      "ParticipantB",
+      "What's the apartment like?"
+    ],
+    [
+      "ParticipantA",
+      "Do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "No, I don't have any pets right now."
+    ],
+    [
+      "ParticipantA",
+      "What kind of neighborhood is the apartment in?"
+    ],
+    [
+      "ParticipantB",
+      "It's a pretty nice neighborhood, close to the city center."
+    ],
+    [
+      "ParticipantA",
+      "How long have you been renting the apartment?"
+    ],
+    [
+      "ParticipantB",
+      "I've been renting it for about a year now."
+    ],
+    [
+      "ParticipantA",
+      "What do you like most about living in the city center?"
+    ],
+    [
+      "ParticipantB",
+      "I like being able to walk to different shops and restaurants."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite thing to do in the city?"
+    ],
+    [
+      "ParticipantB",
+      "I like going to the park and reading a book."
+    ],
+    [
+      "ParticipantA",
+      "What do you do for fun in the city when you're not working or reading?"
+    ],
+    [
+      "ParticipantB",
+      "I also like going to the movies."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite movie theater in the city?"
+    ],
+    [
+      "ParticipantB",
+      "I also like going to the theater."
+    ],
+    [
+      "ParticipantA",
+      "What kind of plays do they put on at the theater?"
+    ],
+    [
+      "ParticipantB",
+      "Uh, there's a mix of everything. They have some more serious plays, like dramas and things, but they also have some more light-hearted comedies and musicals."
+    ],
+    [
+      "ParticipantA",
+      "What kind of outdoor activities do you like to do in the city?"
+    ],
+    [
+      "ParticipantB",
+      "I also enjoy going for walks and exploring different neighborhoods."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3810,
+  "topic": "Music",
+  "sb_prompt": "PLEASE DISCUSS MUSIC.  CAN YOU FIND MUSICIANSOR TYPES OF MUSIC THAT BOTH YOU AND THE OTHER CALLER LIKE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what kind of music do you like?\nParticipantB: I'm a big fan of classic rock. What about you?\nParticipantA: I like a lot of different types of music, but I especially love indie rock and folk music.\nParticipantB: Oh, I love indie rock too! Do you have any favorite artists or bands?\nParticipantA: Yeah, I really like the band Fleet Foxes. They have a really unique sound. How about you?\nParticipantB: I'm a huge fan of Led Zeppelin. I think they're one of the best rock bands of all time.\nParticipantA: I can definitely see why. I'm not as familiar with them, but I'll have to check them out. Do you like any newer artists?\nParticipantB: I do! I'm really into the band Arctic Monkeys right now. They have a great sound. How about you?\nParticipantA: I actually just saw them in concert a few months ago and they were amazing. I also really like the band The Head and the Heart.\nParticipantB: Oh, I've heard of them. I'll have to give them a listen. Do you have any favorite genres of music?\nParticipantA: I really like indie folk and indie pop. How about you?\nParticipantB: I love classic rock and I also enjoy some pop and hip hop.\nParticipantA: That's cool. I've been getting into some hip hop lately too. Do you have any favorite artists or albums?\nParticipantB: I really like Kendrick Lamar's album \"good kid, m.A.A.d city\". It's one of my all-time favorites.\nParticipantA: Oh, I've heard great things about that album. I'll have to give it a listen. Do you like any other genres of music?\nParticipantB: I also really like jazz. Do you listen to any jazz?\nParticipantA: I don't listen to a lot of jazz, but I do enjoy some classic jazz songs.\nParticipantB: That's great. Do you have a favorite jazz artist or band?\nParticipantA: I really like the band Vulfpeck. They have a great fusion of jazz and funk.\nParticipantB: Oh, I've never heard of them. I'll have to give them a listen.\nParticipantA: Yeah, they're definitely worth checking out.\nParticipantB: This has been a great conversation. It's been really fun talking to you about music.\nParticipantA: Yeah, me too! It's always great to talk to someone who shares your interests.\nParticipantB: Definitely. Let's do it again soon!\nParticipantA: Sure, that sounds great!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 674,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

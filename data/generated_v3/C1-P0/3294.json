@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3294,
+  "topic": "Right To Privacy",
+  "sb_prompt": "FIND OUT WHAT EVERYDAY OCCURRENCES THE OTHER CALLER CONSIDERS TO BE AN INTRUSION OF PRIVACY.  WHAT CAN BE DONE TO PREVENT THEM?  DO YOU AGREE OR DISAGREE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 48,
+    "education": "a college degree",
+    "occupation": "a nurse",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a librarian",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: So, what brings you to call today?\nParticipantB: Well, I was wondering if we could discuss something that's been bothering me lately.\nParticipantA: Sure, what's been on your mind?\nParticipantB: It's just that I've been feeling like my privacy is being invaded more and more lately, and I wanted to know if you experience the same thing.\nParticipantA: Yes, I can definitely relate. There are a few things that come to mind when I think about intrusions of privacy.\nParticipantB: Like what?\nParticipantA: Well, for example, I find it really frustrating when my phone starts buzzing with notifications or calls when I'm trying to focus on work or something important.\nParticipantB: I know what you mean. I feel the same way when I'm trying to concentrate on something and my phone keeps buzzing or ringing.\nParticipantA: Another thing that bugs me is when companies or organizations start sending me unsolicited emails or phone calls. I didn't give them permission to contact me, so it feels like an invasion of my privacy.\nParticipantB: Yes, I agree. That's why I have a spam folder and I always decline those kinds of calls.\nParticipantA: Another thing that bothers me is when I'm in public places and people start talking loudly or on their phones, without any regard for the people around them. It feels like they're invading my personal space.\nParticipantB: I can definitely relate to that. I find it really rude when people are talking loudly on their phones in public places, and it can be really distracting.\nParticipantA: So, what do you think we can do to prevent these kinds of intrusions of privacy?\nParticipantB: Well, I think we can start by being more mindful of our own behaviors. For example, if we're in a public place and we need to make a call, we can step away from other people and find a quieter spot.\nParticipantA: That's a good point. I also think we can be more proactive in protecting our own privacy. For example, we can use tools like spam filters and call blocking to reduce unwanted interruptions.\nParticipantB: Yes, I agree. And I think we can also be more careful about what we share online. It's important to be mindful of what we post and who we share it with, to avoid giving away too much personal information.\nParticipantA: That's a good point. I think we can also educate ourselves about our rights to privacy, and be more assertive in standing up for them.\nParticipantB: Yes, that's a good idea. I think we can all benefit from being more aware of our own privacy rights and learning how to protect them.\nParticipantA: Well, thank you for having this conversation with me. It's been really insightful to hear your perspective on this.\nParticipantB: Yes, likewise. I think it's important to keep these conversations going, so that we can all be more aware of our own privacy and how to protect it.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 738,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4363,
+  "topic": "Football",
+  "sb_prompt": "PLEASE DISCUSS PROFESSIONAL FOOTBALL.  FIND OUT THE OTHER CALLER'S FAVORITE PRO FOOTBALL TEAM AND WHERE IT'S HEADED THIS YEAR.       DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 27,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: So, do you enjoy watching professional football?\nParticipantB: Yeah, I love it! What about you?\nParticipantA: I do too! What's your favorite team?\nParticipantB: My favorite team is the Dallas Cowboys. How about you?\nParticipantA: I'm actually a big fan of the New England Patriots.\nParticipantB: Nice! I'm not too surprised about your choice. They've had a lot of success over the years.\nParticipantA: Definitely. I think they're going to have a great season this year, don't you?\nParticipantB: I'm not too sure. While they have a strong team, I think they'll face some tough competition this year.\nParticipantA: Yeah, it's always hard to predict how a team will do. But I think they'll do well.\nParticipantB: I see your point, but I'm not as confident. I think they'll have a solid season, but maybe not as successful as some people expect.\nParticipantA: Well, we'll just have to wait and see, I suppose. But what about the other teams in the league? Who do you think will do well this year?\nParticipantB: I think the Kansas City Chiefs are going to have a great season. They have a strong offense and a solid defense.\nParticipantA: That's a good pick. I agree that they'll do well this year.\nParticipantB: Do you think any other teams have a chance at the Super Bowl?\nParticipantA: It's hard to say. There are always a few surprises each year. But I think the Patriots have a good chance, as well as the Chiefs.\nParticipantB: I see your point, but I'm not sure about the Patriots. I think they'll have a strong season, but not quite good enough to make it to the Super Bowl.\nParticipantA: Well, we'll just have to wait and see, I suppose. It's always exciting to see how everything plays out.\nParticipantB: Definitely. I'm looking forward to the season starting. Are you planning on attending any games this year?\nParticipantA: Unfortunately, I won't be able to attend any games this year. But I'll definitely be watching on TV.\nParticipantB: Same here. It's not quite the same as being there in person, but it's still exciting to watch on TV.\nParticipantA: Yeah, definitely. Well, it was nice talking with you about football. Thanks for the conversation!\nParticipantB: No problem, it was great talking with you too!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 623,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "condition": "C4-P1",
+  "architecture": "C4",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 2226,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 44,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 27,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What kind of books do you enjoy reading for fun?"
+    ],
+    [
+      "ParticipantB",
+      "I mostly enjoy reading mystery novels. They keep me engaged and guessing till the end. How about you? What kind of books do you prefer?"
+    ],
+    [
+      "ParticipantA",
+      "I also enjoy reading mystery novels, but I also like to read self-help books. They help me improve my skills and knowledge in different areas of my life."
+    ],
+    [
+      "ParticipantB",
+      "Oh, interesting! I've dabbled in self-help books before, but I find that I mostly gravitate towards fiction. It's a nice escape from reality for me. Do you have a favorite self-help book or author?\n\nAlso, have you read any good mystery novels lately that you'd recommend? I'm always on the lookout for a new author or series to try out."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I really like the works of Bren\u00e9 Brown and Adam Grant. They have some great insights on topics like vulnerability, empathy, and productivity.\n\nAs for mystery novels, I recently finished a series called \"The Lincoln Rhyme\" by Jeffery Deaver. It's a bit different from the usual murder mystery novels because the main character is a quadriplegic detective. The stories are really well written and keep you guessing until the end. Have you read any books by John Grisham?\n\nThe call is already over."
+    ],
+    [
+      "ParticipantB",
+      "No, I haven't read \"The Lincoln Rhyme\" series yet, but I'll definitely add it to my list after our conversation. And yes, I've read quite a few books by John Grisham. He's a great storyteller and his legal thrillers are always intriguing. Thanks for sharing your recommendations! Have a great day!\n\n[Call ends]"
+    ],
+    [
+      "ParticipantA",
+      "You too! Thanks for chatting with me."
+    ]
+  ],
+  "n_turns": 9,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

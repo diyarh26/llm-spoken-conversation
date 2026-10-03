@@ -1,0 +1,142 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2501,
+  "topic": "Painting",
+  "sb_prompt": "HAVE YOU DONE ANY PAINTING PROJECTS RECENTLYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 50,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "How's it going?"
+    ],
+    [
+      "ParticipantB",
+      "It's going well, thanks for asking. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm doing pretty good, thanks. So, you asked about painting projects. Anything interesting lately?"
+    ],
+    [
+      "ParticipantB",
+      "I actually just finished a painting project last week. It was a still life of some fruit."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that sounds nice. How did it turn out?"
+    ],
+    [
+      "ParticipantB",
+      "It turned out pretty well, I'm pretty happy with it. It was a fun project to work on. How about you? Have you done any painting projects recently?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I actually just finished a landscape painting of a mountain range. It was a challenging project, but I'm pretty happy with how it turned out."
+    ],
+    [
+      "ParticipantB",
+      "That sounds amazing! I've always wanted to try a landscape painting. Have you done many of them before?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've done a few landscapes before. They can be tough, but I find them really rewarding to work on. Have you done much painting before?"
+    ],
+    [
+      "ParticipantB",
+      "I've done some painting in the past, but not recently. I mostly focus on teaching now. It's been a while since I've had the time to work on a painting project."
+    ],
+    [
+      "ParticipantA",
+      "Ah, I see. Well, if you ever want to get back into it, I'd say just go for it. It can be a great way to relax and express yourself."
+    ],
+    [
+      "ParticipantB",
+      "Thank you for the encouragement. I might have to try it again sometime. What's your favorite type of painting to do?"
+    ],
+    [
+      "ParticipantA",
+      "Hmm, that's a tough question. I really enjoy still life painting, but I also love doing landscapes. They're both so different, but both can be really rewarding in their own ways."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can imagine. I think I would enjoy still life painting too. There's something about arranging objects and playing with light that I find really interesting."
+    ],
+    [
+      "ParticipantA",
+      "Definitely! Still life painting can be really fun. You have so much control over the composition and the lighting, and it can be really satisfying to see it all come together."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. It's like creating a little world in a canvas. I can see why it would be so rewarding."
+    ],
+    [
+      "ParticipantA",
+      "Exactly! It's like creating a little world in a canvas. I think that's why I love it so much. It's a way to express myself and create something beautiful."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can totally relate to that. It's a way to express yourself and create something that's uniquely yours. It's a really special feeling."
+    ],
+    [
+      "ParticipantA",
+      "Definitely! It's a way to express yourself and create something that's uniquely yours. It's a really special feeling."
+    ],
+    [
+      "ParticipantB",
+      "Well, it was great talking to you about painting. I've really enjoyed our conversation."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was really nice talking to you too! I'm glad we got to chat about something we're both passionate about. Take care!"
+    ]
+  ],
+  "n_turns": 23,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

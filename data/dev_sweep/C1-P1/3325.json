@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hi, how are you doing today?\nParticipantB: I'm doing pretty good, thanks. How about you?\nParticipantA: I'm doing well, thanks. So, I was wondering, what kind of pets do you have?\nParticipantB: Oh, I actually don't have any pets right now.\nParticipantA: Oh, that's too bad. I have a cat at home.\nParticipantB: Yeah, I used to have a cat years ago, but she passed away.\nParticipantA: I'm sorry to hear that. Losing a pet is really hard.\nParticipantB: Yeah, it really is. But, I have a friend who has a dog and I help take care of him sometimes.\nParticipantA: Oh, that's nice of you. What kind of dog does your friend have?\nParticipantB: He has a golden retriever. He's such a sweet dog and loves to play fetch.\nParticipantA: That sounds like a lot of fun. I've always been more of a cat person, but I can see how a dog could be really enjoyable too.\nParticipantB: Yeah, I think so too. I've always been more of a dog person, but I think cats are pretty great too.\nParticipantA: Agreed. Do you have any other pets in mind that you would like to have in the future?\nParticipantB: Honestly, I've been thinking about getting a second dog, but I'm not sure yet.\nParticipantA: Yeah, getting a new pet can be a big decision. I'm happy with just my one cat for now.\nParticipantB: Yeah, I feel the same way. Well, it was nice talking to you.\nParticipantA: Yes, likewise. Have a great day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 430,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

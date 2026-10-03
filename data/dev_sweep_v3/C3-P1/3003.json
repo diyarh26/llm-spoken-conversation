@@ -1,0 +1,138 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "Hmm, I've been thinking about getting a truck."
+    ],
+    [
+      "ParticipantA",
+      "Oh, nice! What kind of truck are you interested in?"
+    ],
+    [
+      "ParticipantB",
+      "I'm thinking about a Ford F-150."
+    ],
+    [
+      "ParticipantA",
+      "A Ford F-150, that's a great choice! What are some of the things that you're looking for in a truck?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I'm looking for something that's reliable and has good towing capacity. I also want it to be comfortable and have plenty of features."
+    ],
+    [
+      "ParticipantA",
+      "Those are all great things to look for! What are some of the features that you're particularly interested in?"
+    ],
+    [
+      "ParticipantB",
+      "I'm really interested in a truck with a good infotainment system and plenty of safety features. I also want something that's fuel efficient."
+    ],
+    [
+      "ParticipantA",
+      "Those are great priorities! What kind of infotainment system are you looking for?"
+    ],
+    [
+      "ParticipantB",
+      "I'm really interested in a system that has Apple CarPlay and Android Auto integration, so I can easily connect my phone and access my music and navigation."
+    ],
+    [
+      "ParticipantA",
+      "I can definitely understand that! What about safety features? What are you looking for in terms of safety?"
+    ],
+    [
+      "ParticipantB",
+      "I'm looking for a truck with a good set of safety features, including lane departure warning, blind spot monitoring, and automatic emergency braking."
+    ],
+    [
+      "ParticipantA",
+      "Those are all really important safety features! Have you had any experience with a truck before?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I used to have a truck and I loved it. It was really reliable and had plenty of towing capacity, which came in handy when I needed to haul large items."
+    ],
+    [
+      "ParticipantA",
+      "That sounds great! Have you considered looking at any other trucks, or is the Ford F-150 your top choice?"
+    ],
+    [
+      "ParticipantB",
+      "I have considered looking at other trucks, but the Ford F-150 is definitely at the top of my list. I've heard great things about its reliability and towing capacity, and I'm really interested in the infotainment and safety features."
+    ],
+    [
+      "ParticipantA",
+      "I can definitely understand why! It sounds like you've done a lot of research and have a good idea of what you're looking for in a truck. Good luck with your search!"
+    ],
+    [
+      "ParticipantB",
+      "Thanks, you too!"
+    ],
+    [
+      "ParticipantA",
+      "Bye!"
+    ],
+    [
+      "ParticipantB",
+      "Bye!"
+    ]
+  ],
+  "n_turns": 22,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

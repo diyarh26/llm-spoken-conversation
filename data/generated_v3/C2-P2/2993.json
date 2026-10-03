@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2993,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "I'm thinking about getting a new car, and I'm not sure what to get."
+    ],
+    [
+      "ParticipantB",
+      "What kind of car are you looking for?"
+    ],
+    [
+      "ParticipantA",
+      "I'm not really sure yet, I just know I want something reliable and fuel efficient."
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been thinking about getting a new truck, but I'm not sure yet."
+    ],
+    [
+      "ParticipantA",
+      "I'm thinking about getting a sedan or a small SUV."
+    ],
+    [
+      "ParticipantB",
+      "What kind of features are you looking for in the car?"
+    ],
+    [
+      "ParticipantA",
+      "I want something that's good on gas, has good safety ratings, and isn't too expensive."
+    ],
+    [
+      "ParticipantB",
+      "I'm looking for something with a good towing capacity, but I don't know if I'll need that."
+    ],
+    [
+      "ParticipantA",
+      "I'm also thinking about getting something with a good warranty, in case something goes wrong."
+    ],
+    [
+      "ParticipantB",
+      "I know someone who had a lot of problems with their car's warranty."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I don't want to end up with a lemon."
+    ],
+    [
+      "ParticipantB",
+      "I've heard that some brands have better warranties than others."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been researching different brands and models to see which ones have the best warranties."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've been looking at Toyota and Honda, they seem to have good reputations."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been considering those brands too."
+    ],
+    [
+      "ParticipantB",
+      "What about the new Prius?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been considering the new Prius too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've heard good things about it."
+    ],
+    [
+      "ParticipantA",
+      "I'm also thinking about getting something with a good infotainment system, so I can listen to music and navigate easily."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I like the idea of having a good infotainment system in my car."
+    ],
+    [
+      "ParticipantA",
+      "I'm also considering the new Honda Accord."
+    ],
+    [
+      "ParticipantB",
+      "I've also been thinking about safety features, like lane departure warning and blind spot monitoring."
+    ],
+    [
+      "ParticipantA",
+      "I've been looking at the safety ratings for different cars too, and the new Honda Accord has great ratings."
+    ],
+    [
+      "ParticipantB",
+      "I've heard the new Honda Accord has a lot of advanced safety features."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about test driving a few different options to see which one feels the best."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, test driving is a good idea."
+    ],
+    [
+      "ParticipantA",
+      "I've heard the new Toyota Camry also has great safety features."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think test driving is a good idea too."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Have you test driven any cars yet?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've test driven a few trucks but I haven't found one that really fits what I'm looking for yet."
+    ],
+    [
+      "ParticipantA",
+      "So, what are your main priorities when it comes to choosing a car?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I want something with a good towing capacity, but I'm also looking for something that's reliable and won't break the bank."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think I'll probably narrow it down to a few options and test drive them before making a decision."
+    ],
+    [
+      "ParticipantB",
+      "I've also been thinking about getting something with a good engine, so it can handle the wear and tear of daily driving."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think it's important to have a car that can handle daily driving without breaking down."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'm definitely gonna need something that can handle the wear and tear of my job."
+    ],
+    [
+      "ParticipantA",
+      "What are your thoughts on electric cars?"
+    ],
+    [
+      "ParticipantB",
+      "I'm open to it, but I'm not sure if the technology is advanced enough yet."
+    ],
+    [
+      "ParticipantA",
+      "I've been considering electric cars too, but I'm not sure about the range yet."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'm still doing some research on that."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

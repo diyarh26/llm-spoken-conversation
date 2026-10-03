@@ -1,0 +1,134 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have a dog."
+    ],
+    [
+      "ParticipantA",
+      "That's great! What kind of dog do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have a golden retriever."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I love golden retrievers! We used to have one when I was growing up. What's your dog's name?"
+    ],
+    [
+      "ParticipantB",
+      "Her name is Bella."
+    ],
+    [
+      "ParticipantA",
+      "Bella, that's such a beautiful name for a dog. How old is she?"
+    ],
+    [
+      "ParticipantB",
+      "She's about 2 years old."
+    ],
+    [
+      "ParticipantA",
+      "Oh, she's still a young dog. What's she like? Is she energetic or more laid back?"
+    ],
+    [
+      "ParticipantB",
+      "She's very energetic and playful, but also loving and loyal."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a great combination! Do you have any funny or memorable stories about her?"
+    ],
+    [
+      "ParticipantB",
+      "Well, there was that time when she stole a pair of my shoes and ran around the house with them in her mouth. It was pretty funny."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's hilarious! Dogs can be so silly sometimes. What do you and Bella like to do together?"
+    ],
+    [
+      "ParticipantB",
+      "We like to go for walks, play fetch, and cuddle on the couch. She's a great companion."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a wonderful relationship. I miss having a dog around sometimes. Do you have any other pets?"
+    ],
+    [
+      "ParticipantB",
+      "No, just Bella. She's my only pet, but she's a good one."
+    ],
+    [
+      "ParticipantA",
+      "Well, Bella sounds like a great pet to have. Thanks for sharing about her!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome. It was nice talking about my pet."
+    ],
+    [
+      "ParticipantA",
+      "Yes, it was nice talking to you too. Take care!"
+    ]
+  ],
+  "n_turns": 21,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 15,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 15
+  }
+}

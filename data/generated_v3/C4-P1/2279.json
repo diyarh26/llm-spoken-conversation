@@ -1,0 +1,98 @@
+{
+  "condition": "C4-P1",
+  "architecture": "C4",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 2279,
+  "topic": "Family Life",
+  "sb_prompt": "IF YOU HAVE CHILDRENY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 37,
+    "education": "a high-school education",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about having children?"
+    ],
+    [
+      "ParticipantB",
+      "I have two of my own, and it's been quite a ride. They keep you on your toes, but it's worth it in the end. How about you? Do you have kids or are you planning on having any?"
+    ],
+    [
+      "ParticipantA",
+      "I haven't had any yet, but I've been thinking about it for a while now. I'm not sure if it's the right choice for me, but I can't deny the thought of having a little one of my own is exciting."
+    ],
+    [
+      "ParticipantB",
+      "I can understand that. Having children is a big responsibility, but the joy and love they bring is unmatched. My wife and I were unsure at first too, but now we wouldn't trade our experiences for anything. What are some concerns or doubts you have? Maybe we can share some perspectives and help each other out."
+    ],
+    [
+      "ParticipantA",
+      "I worry about being able to provide for them financially, and being able to balance work and family life. I also wonder if I'd be a good parent, since I don't have a lot of experience with children."
+    ],
+    [
+      "ParticipantB",
+      "Those are valid concerns. It's important to make sure you can financially support a family, but keep in mind that it's not always about the money. There are ways to make it work, like budgeting and saving. As for experience, being a good parent isn't just about having raised children before. It's about being there for them, loving them, and teaching them the skills they need to succeed in life. I'm sure you'll be an amazing parent. What do you think?"
+    ],
+    [
+      "ParticipantA",
+      "Thank you for your encouragement. I appreciate it. I guess I just need to weigh the pros and cons and make a decision. Maybe it's time for me to take the next step and see where it leads me."
+    ],
+    [
+      "ParticipantB",
+      "That's a great attitude to have. It's important to consider all aspects of having a child, but ultimately, it's a personal decision that only you can make. And remember, it's okay if you don't have everything figured out right now. Life is a journey, and parenthood is just one part of it. Best of luck to you in whatever decision you make! If you have any other thoughts or questions, feel free to share."
+    ],
+    [
+      "ParticipantA",
+      "Thank you for your support. I'll definitely keep that in mind and take my time with the decision. It's nice to talk to someone who understands and can offer helpful insights. Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! I'm here if you have any questions or need someone to talk to. Take care and have a great day yourself! Good luck with your decision."
+    ]
+  ],
+  "n_turns": 12,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

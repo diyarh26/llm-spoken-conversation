@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2546,
+  "topic": "Capital Punishment",
+  "sb_prompt": "COMPARE YOUR OPINIONS AND THOSE OF THE OTHER CALLER ON CAPITAL PUNISHMENT.  DO EITHER OF YOU THINK IT SHOULD BE RESTRICTED TO CERTAIN CRIMES OR CIRCUMSTANCES?  HOW DO THE POLICIES AND PRACTICES OF YOUR STATE FIT WITH YOUR OPINIONS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 38,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what are your thoughts on capital punishment?\nParticipantB: Well, I think it's a necessary form of punishment for certain crimes, but it should be used sparingly.\nParticipantA: I agree. I think it should only be used for the most heinous crimes, like murder or treason.\nParticipantB: Yeah, I think that's a good way to approach it. I also think that the death penalty should only be used if there's no doubt about the person's guilt.\nParticipantA: Absolutely. I think it's important to make sure that the person being sentenced is actually guilty before putting them to death.\nParticipantB: Definitely. And I also think that the process should be fair and unbiased.\nParticipantA: That's a good point. I think it's important to make sure that the person being sentenced receives a fair trial.\nParticipantB: Definitely. And I think it's also important to consider the potential for error in the justice system.\nParticipantA: Yeah, that's a good point. I think it's important to have safeguards in place to prevent wrongful convictions and executions.\nParticipantB: Definitely. And I also think that the death penalty should only be used in cases where the crime is particularly heinous, like if the person committed multiple murders or something like that.\nParticipantA: Yeah, I agree. I think it's important to reserve the death penalty for the most serious crimes.\nParticipantB: So, do you think your state's policies and practices regarding capital punishment align with your opinions?\nParticipantA: I'm not sure. I haven't really looked into it. But I do know that my state allows for the death penalty in certain circumstances.\nParticipantB: Yeah, I think it's important to know what your state's policies are when it comes to the death penalty. I know that in my state, the death penalty is only allowed for certain crimes and under certain circumstances.\nParticipantA: That's good to know. I think it's important for states to have clear guidelines when it comes to capital punishment.\nParticipantB: Definitely. And I also think that it's important for the public to be informed about the death penalty and the justice system in general.\nParticipantA: Yeah, I agree. I think it's important for people to be educated about these issues and to be able to have discussions like this one.\nParticipantB: Definitely. Well, it was nice talking to you about this.\nParticipantA: Yeah, it was good to discuss this with you. Thanks for the conversation.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 641,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

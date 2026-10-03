@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2993,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I'm actually not sure yet."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting a new car too, so I'm interested to hear what you're considering."
+    ],
+    [
+      "ParticipantB",
+      "I've been looking at some SUVs, but I'm also considering a sedan or a coupe."
+    ],
+    [
+      "ParticipantA",
+      "What's been your experience with SUVs so far?"
+    ],
+    [
+      "ParticipantB",
+      "I like the space and height they offer, but I'm also worried about the fuel economy."
+    ],
+    [
+      "ParticipantA",
+      "I've had a mixed experience with SUVs, to be honest. I've driven them before, and they do offer a lot of space, but I've found them to be quite expensive to maintain and insure."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've noticed that too. It's definitely something to consider."
+    ],
+    [
+      "ParticipantA",
+      "I'm leaning more towards a sedan or a coupe myself, just because of the cost."
+    ],
+    [
+      "ParticipantB",
+      "Have you considered any specific models or brands?"
+    ],
+    [
+      "ParticipantA",
+      "I've been looking at the Honda Accord and the Toyota Camry, but I'm also open to other options."
+    ],
+    [
+      "ParticipantB",
+      "I've also been considering the Honda Civic."
+    ],
+    [
+      "ParticipantA",
+      "I've heard good things about the reliability of Honda cars."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've had a Honda Civic in the past and it was pretty reliable."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Have you owned a Honda before?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I had a Civic for a few years and it was great."
+    ],
+    [
+      "ParticipantA",
+      "Have you considered any other brands or models besides Honda and Toyota?"
+    ],
+    [
+      "ParticipantB",
+      "I've also looked into Mazda and Subaru, but I haven't ruled out other options either."
+    ],
+    [
+      "ParticipantA",
+      "I haven't really explored other brands much, but I'm open to suggestions."
+    ],
+    [
+      "ParticipantB",
+      "Well, I think it really depends on your priorities and what you value in a car."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's definitely true."
+    ],
+    [
+      "ParticipantB",
+      "I think it's important to test drive a few different options and see which one feels the best to you."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. Test driving is definitely important."
+    ],
+    [
+      "ParticipantB",
+      "Definitely."
+    ],
+    [
+      "ParticipantA",
+      "I think that's a good idea."
+    ],
+    [
+      "ParticipantB",
+      "What about you? Have you had any favorite cars in the past?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've had a few favorites in the past, but nothing too recent."
+    ],
+    [
+      "ParticipantB",
+      "What about you? Have you had any recent experiences with cars that have stood out to you?"
+    ],
+    [
+      "ParticipantA",
+      "I think it's important to think about the long-term costs too, not just the initial purchase price."
+    ],
+    [
+      "ParticipantB",
+      "I agree, it's important to consider all the costs involved."
+    ],
+    [
+      "ParticipantA",
+      "What about you? What have you been driving recently?"
+    ],
+    [
+      "ParticipantB",
+      "I've been driving my Honda Civic for the past few years and it's been great."
+    ],
+    [
+      "ParticipantA",
+      "Have you had any issues with maintenance or repairs on your Civic?"
+    ],
+    [
+      "ParticipantB",
+      "Not really, it's been pretty reliable."
+    ],
+    [
+      "ParticipantA",
+      "I'm glad to hear that your Civic has been reliable."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's been a good car for me."
+    ],
+    [
+      "ParticipantA",
+      "So, have you decided on a specific model or brand yet?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't fully made up my mind yet, but I'm leaning towards a Honda or a Toyota."
+    ],
+    [
+      "ParticipantA",
+      "I'm also considering a Toyota, but I haven't decided on a specific model yet."
+    ],
+    [
+      "ParticipantB",
+      "Well, it really depends on my budget and what I can afford."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 3
+  }
+}

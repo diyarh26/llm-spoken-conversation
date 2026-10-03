@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2279,
+  "topic": "Family Life",
+  "sb_prompt": "IF YOU HAVE CHILDRENY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 37,
+    "education": "a high-school education",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hi there! How are you doing today?\nParticipantB: I'm doing well, thank you. How about you?\nParticipantA: I'm doing pretty good, just got done with work. What do you do for work?\nParticipantB: I'm a school bus driver. How about you?\nParticipantA: I'm an electrician. It's a tough job but it pays the bills.\nParticipantB: That's cool. Do you have any kids?\nParticipantA: Yeah, I have two boys. They're 10 and 12.\nParticipantB: Nice. Do they keep you busy?\nParticipantA: Oh, yeah. They keep me on my toes. But I love it. What about you? Do you have any kids?\nParticipantB: I don't have any kids yet, but I hope to have some someday.\nParticipantA: Yeah, it's a big responsibility but it's also really rewarding. What's your take on having kids?\nParticipantB: I'm a bit skeptical about it all, to be honest. I know someone close who's dealt with it and it hasn't been easy for them.\nParticipantA: Yeah, it's not always easy. But it's definitely worth it. What's your opinion on that?\nParticipantB: I'm not sure yet. I'm still figuring it out. But it's good to hear different perspectives on it.\nParticipantA: Yeah, definitely. It's a big decision and there's no right or wrong answer. I made up my mind about it years ago but I can't quite say why.\nParticipantB: Yeah, I get that. I'm still trying to figure out what I want for my own life. But it's good to talk about it with someone who has experience with it.\nParticipantA: Yeah, it's always good to hear other people's perspectives. Well, it was nice talking to you.\nParticipantB: Likewise, it was good to chat with you. Have a good day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 507,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

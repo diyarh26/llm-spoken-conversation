@@ -1,0 +1,98 @@
+{
+  "condition": "C4-P2",
+  "architecture": "C4",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3573,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 67,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, have you thought about what kind of car you might buy next?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have. I've been considering getting an SUV. Something with good ground clearance and four-wheel drive for the winter months here. How about you? What kind of car are you thinking about?"
+    ],
+    [
+      "ParticipantA",
+      "Well, I've been considering getting a sedan. I want something that's fuel-efficient and easy to drive in the city. I do a lot of commuting for work, so something with good mileage and good handling would be ideal for me."
+    ],
+    [
+      "ParticipantB",
+      "I see. Well, an SUV might not be the best choice for you then, since they tend to have lower mileage and are typically less fuel-efficient than sedans. Have you thought about looking into some of the newer hybrid or electric sedan models? They offer good mileage and are becoming more and more common these days.\n\nPersonally, I've had good experiences with Honda and Toyota sedans in the past, but I'd recommend checking out some of the newer models from companies like Hyundai, Kia, and Volkswagen as well. Have you had any particular make or model in mind?\n\nAlso, have you considered things like safety features, reliability, and maintenance costs when making your decision? Those can be important factors to consider as well."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I have considered safety features and reliability. I want something that's safe and reliable, and won't break the bank to maintain. I'm definitely interested in looking into some of the newer hybrid and electric sedans. I haven't had any particular make or model in mind yet, but I'll definitely do some research and test drive a few different ones to see which one is the best fit for me. Thanks for the suggestion!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! I'm glad I could help. I'd be happy to answer any questions you might have as you research and consider different models. And if you come across any specific makes or models that you're interested in, feel free to give me a call and we can discuss them further.\n\nBest of luck in your car shopping journey! Let me know if there's anything else I can help you with."
+    ],
+    [
+      "ParticipantA",
+      "Thank you, I appreciate it! I'll definitely keep that in mind if I have any questions or if I come across any specific models that I want to know more about. Thanks again for your help!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! I'm here to help. Good luck with your car shopping and feel free to give me a call if you have any questions or need any advice. Safe travels on your journey to find the perfect car for you!"
+    ],
+    [
+      "ParticipantA",
+      "Thank you! I'll definitely keep that in mind. Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "You too! Have a fantastic day! And remember, don't hesitate to give me a call if you have any questions or need any advice on car shopping. Take care and drive safely!"
+    ]
+  ],
+  "n_turns": 12,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4333,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 25,
+    "education": "a college degree",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 27,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: So, what can I do for you today?\nParticipantB: Well, I was hoping to talk to someone about American politics.\nParticipantA: Sure, I'm more than happy to chat about that. What's on your mind?\nParticipantB: I'm just really worried about the state of our country right now. I feel like everything is so divided and there's so much anger and hatred.\nParticipantA: Yeah, it can be pretty overwhelming. But I also think it's important to remember that there are still a lot of good people out there who care about making a difference.\nParticipantB: I hope so. It just feels like the bad apples are making all the noise and drowning out the rest of us.\nParticipantA: I know what you mean, but I really do believe that the majority of people are good and want what's best for their community and country.\nParticipantB: That's nice to hear. I just feel like I'm not doing enough to make a difference.\nParticipantA: Well, there are a lot of ways to get involved. You can volunteer, donate to causes you care about, or even just educate yourself and others on the issues.\nParticipantB: That's a good point. I've been meaning to get more involved, but I just don't know where to start.\nParticipantA: Maybe we can brainstorm some ideas together. What issues are you most passionate about?\nParticipantB: I'm really concerned about climate change and income inequality.\nParticipantA: Those are definitely important issues. Have you looked into any local organizations or groups that are working on those issues?\nParticipantB: Not yet, but I'll definitely look into it. Thanks for the suggestion.\nParticipantA: No problem. I think it's really important for people to come together and work towards a common goal.\nParticipantB: Definitely. It's just hard to stay positive when there's so much negativity out there.\nParticipantA: I know, but I really believe that we can make a difference if we all work together.\nParticipantB: That's a nice thought. Thanks for chatting with me.\nParticipantA: Of course, anytime. Let's stay in touch and continue the conversation.\nParticipantB: Sounds good. Take care.\nParticipantA: You too.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 560,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

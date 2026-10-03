@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2794,
+  "topic": "Federal Budget",
+  "sb_prompt": "WHAT SHORT AND LONG-TERM STEPS DO YOU AND THE OTHER CALLER THINK SHOULD BE TAKEN TO IMPROVE THE US BUDGET?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a librarian",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hey, how's it going?\nParticipantB: Pretty good, thanks. How about you?\nParticipantA: I'm doing alright. So, I heard we're supposed to talk about the federal budget today.\nParticipantB: Yeah, that's right. I think it's really important to focus on this issue.\nParticipantA: Agree. So, what do you think should be done to improve it?\nParticipantB: Well, I think we need to prioritize investing in infrastructure and education.\nParticipantA: That sounds good. I've heard that investing in infrastructure can create jobs and boost the economy.\nParticipantB: Exactly. And education is key to building a strong workforce and competing in the global market.\nParticipantA: Yeah, I've also heard that. I've actually seen firsthand how important education is. I grew up in a low-income area and went to a school that didn't have enough resources.\nParticipantB: That's really tough. I grew up in a small town and went to a well-funded school. I feel lucky to have had that opportunity.\nParticipantA: Yeah, it really made a difference in my life. But, I also think we need to look at cutting unnecessary spending.\nParticipantB: I agree. I think there's a lot of waste in the federal budget.\nParticipantA: Yeah, I've seen that too. I once worked on a project where we found a lot of redundancies in government spending.\nParticipantB: That's interesting. I think we also need to consider raising revenue.\nParticipantA: Hmm, that's a tough one. I'm not sure if I'm in favor of raising taxes.\nParticipantB: Yeah, I get that. But I think we need to consider all options. We can't just cut our way to prosperity.\nParticipantA: True. I guess we'll have to see what happens with the budget in the coming years.\nParticipantB: Yeah, it's definitely something to keep an eye on. Thanks for the conversation!\nParticipantA: No problem, it was nice talking to you. Have a good day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 525,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

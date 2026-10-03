@@ -1,0 +1,122 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3636,
+  "topic": "Camping",
+  "sb_prompt": "FIND OUT FROM THE OTHER CALLER WHAT KIND OF CAMPING THEY HAVE DONE.  HOW DOES IT COMPARE WITH YOUR OWN EXPERIENCES?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of camping have you done?"
+    ],
+    [
+      "ParticipantB",
+      "I've done a mix of car camping and backpacking. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I've done mostly car camping, but I've also done a few backpacking trips. What kind of car camping have you done?"
+    ],
+    [
+      "ParticipantB",
+      "Most of my car camping has been at state parks or national parks. I love finding a nice spot by the lake or river and spending time outdoors with my family. What about you?"
+    ],
+    [
+      "ParticipantA",
+      "Same here! I love finding a nice spot by the lake or river and spending time outdoors with my family. Have you done any backpacking trips?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I've done a few backpacking trips in the mountains. It's a bit more challenging, but the scenery and experience are unforgettable. Have you done any backpacking trips?"
+    ],
+    [
+      "ParticipantA",
+      "I have done a few backpacking trips too, mostly in the mountains as well. The scenery and experience are truly unforgettable. Have you had any favorite camping spots or trips?"
+    ],
+    [
+      "ParticipantB",
+      "One of my favorite trips was a backpacking trip to a remote lake in the mountains. The view was breathtaking, and the peacefulness of the place was unforgettable. What about you? Do you have any favorite camping spots or trips?"
+    ],
+    [
+      "ParticipantA",
+      "I have a few favorite camping spots as well. One of them was a secluded campsite by a river in a national park. The sound of the river and the tranquility of the area made it an unforgettable experience. Have you ever faced any challenges while camping?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I've faced my fair share of challenges while camping. One time, we had a sudden rainstorm in the middle of our backpacking trip, and our tent leaked. We had to find a way to make it through the night, which was quite an adventure. Have you ever faced any challenging situations while camping?"
+    ],
+    [
+      "ParticipantA",
+      "I've had a few challenging situations too. One time, we had a storm roll in while we were car camping, and the wind was so strong that it blew over our camper trailer. We had to quickly secure everything before it got damaged. Have you done any winter camping?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't done much winter camping, but I would love to give it a try someday. Have you done any winter camping?"
+    ],
+    [
+      "ParticipantA",
+      "I have done some winter camping, and it's a whole different experience. It can be challenging, but the beauty of the snow-covered landscape is worth it. What are your thoughts on winter camping?"
+    ],
+    [
+      "ParticipantB",
+      "I think winter camping would be an exciting challenge. The idea of experiencing the beauty of a snow-covered landscape is intriguing. I might have to give it a try someday. Thanks for sharing your experiences with me!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It's always great to share camping experiences with fellow campers. I hope you get a chance to try winter camping soon. Take care, and happy camping!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you! I appreciate your thoughts and experiences. Have a great day, and happy camping to you too!"
+    ]
+  ],
+  "n_turns": 18,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

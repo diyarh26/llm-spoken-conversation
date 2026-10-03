@@ -1,0 +1,90 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hi! So, do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "I used to have a cat, but she passed away a few years ago."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I'm so sorry to hear that. Did you have any other pets besides the cat?"
+    ],
+    [
+      "ParticipantB",
+      "No, just the cat. She was my beloved companion for many years."
+    ],
+    [
+      "ParticipantA",
+      "That's so sweet. I'm sure she will always hold a special place in your heart."
+    ],
+    [
+      "ParticipantB",
+      "Yes, she will. Thank you for understanding."
+    ],
+    [
+      "ParticipantA",
+      "Of course, I know how much it hurts to lose a pet. I've had to say goodbye to a few of my own furry friends over the years."
+    ],
+    [
+      "ParticipantB",
+      "Yes, it's never easy. But I'm glad to hear that you have had pets in your life too. What kind of pets do you have now?"
+    ]
+  ],
+  "n_turns": 10,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 7,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 4,
+    "multi_turn_emissions": 7
+  }
+}

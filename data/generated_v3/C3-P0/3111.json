@@ -1,0 +1,154 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3111,
+  "topic": "Crime",
+  "sb_prompt": "DISCUSS CRIME IN AMERICAN CITIES TODAY.  WHAT ARE YOUR CONCERNS AND THE CONCERNS OF THE OTHER CALLER?  WHAT STEPS CAN BE TAKEN TO REDUCE CRIME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 45,
+    "education": "a college degree",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 31,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about crime in American cities today?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's a major concern. It seems like violence and crime are on the rise in many cities, which is worrisome for everyone's safety."
+    ],
+    [
+      "ParticipantA",
+      "Yes, I agree. It's not just the violence, but also the property crimes that can affect people's daily lives."
+    ],
+    [
+      "ParticipantB",
+      "That's true. Property crimes can be just as disruptive and costly for individuals and communities."
+    ],
+    [
+      "ParticipantA",
+      "Exactly. And I think one of the main concerns is the underlying issues that contribute to crime, such as poverty, lack of education and job opportunities, and social inequality."
+    ],
+    [
+      "ParticipantB",
+      "Those are definitely major concerns. Addressing those underlying issues could help to reduce crime rates."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. In addition to addressing the underlying issues, I think increasing community engagement and support programs can also help."
+    ],
+    [
+      "ParticipantB",
+      "Yes, community involvement and support are essential in preventing crime and promoting safety."
+    ],
+    [
+      "ParticipantA",
+      "And what about the role of law enforcement? Do you think it plays a significant role in reducing crime?"
+    ],
+    [
+      "ParticipantB",
+      "I think law enforcement can play a role in reducing crime, but it's important to approach it in a way that promotes community trust and relationships."
+    ],
+    [
+      "ParticipantA",
+      "Yes, trust and relationships between law enforcement and the community are crucial for effective crime prevention."
+    ],
+    [
+      "ParticipantB",
+      "Agreed. Building trust and relationships between law enforcement and the community can help to create a safer environment for everyone."
+    ],
+    [
+      "ParticipantA",
+      "And finally, I think we need to address the root causes of crime, such as poverty and lack of education, to truly make a lasting impact on reducing crime rates."
+    ],
+    [
+      "ParticipantB",
+      "I couldn't agree more. Addressing the root causes of crime is essential for creating a safer and more equitable society for everyone."
+    ],
+    [
+      "ParticipantA",
+      "Well said. It's clear that we both share similar concerns and ideas on how to address crime in American cities today."
+    ],
+    [
+      "ParticipantB",
+      "Thank you. It's great to hear that we share similar concerns and ideas. Working together and collaborating on solutions can help make a real difference."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. Collaboration and working together are key to addressing any complex issue like crime in American cities."
+    ],
+    [
+      "ParticipantB",
+      "Agreed. Collaboration and working together are essential for finding effective solutions to reduce crime rates and promote safety in our communities."
+    ],
+    [
+      "ParticipantA",
+      "And that's why it's so important for all of us to stay informed and engaged in the issue of crime in our communities, and work together to find solutions that promote safety and equity for all."
+    ],
+    [
+      "ParticipantB",
+      "Yes, staying informed and engaged is crucial for promoting change and creating a safer and more equitable society for everyone."
+    ],
+    [
+      "ParticipantA",
+      "Well said. I think we've had a great discussion and I look forward to continuing the conversation in the future."
+    ],
+    [
+      "ParticipantB",
+      "Thank you, likewise. It was great discussing this important issue with you."
+    ],
+    [
+      "ParticipantA",
+      "Goodbye for now. Take care."
+    ],
+    [
+      "ParticipantB",
+      "Goodbye. Take care."
+    ]
+  ],
+  "n_turns": 26,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

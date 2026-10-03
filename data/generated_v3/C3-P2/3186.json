@@ -1,0 +1,138 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3186,
+  "topic": "Restaurants",
+  "sb_prompt": "WHAT KIND OF DINING OUT DO YOU ENJOY? WHAT THINGS DO YOU LOOK FOR IN A RESTAURANT THAT WOULD GET YOU TO GO BACK AGAIN?  SEE WHETHER THE OTHER CALLER'S PREFERENCES ARE SIMILAR TO YOURS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 58,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "an insurance adjuster",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of dining out do you enjoy?"
+    ],
+    [
+      "ParticipantB",
+      "I enjoy trying new restaurants that offer unique and creative dishes."
+    ],
+    [
+      "ParticipantA",
+      "That sounds great! What do you usually look for in a restaurant that would make you come back again?"
+    ],
+    [
+      "ParticipantB",
+      "I look for excellent food quality, great service, and a comfortable and enjoyable atmosphere."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely! What's the most memorable dining experience you've had?"
+    ],
+    [
+      "ParticipantB",
+      "I had a memorable dining experience at a small Italian restaurant where the pasta was handmade, the wine was perfectly paired, and the atmosphere was cozy and romantic."
+    ],
+    [
+      "ParticipantA",
+      "That sounds wonderful! Have you ever tried a restaurant that was out of your comfort zone, but ended up pleasantly surprising you?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I tried a sushi restaurant once and was pleasantly surprised by how delicious the food was. I had never had sushi before and was hesitant to try it, but I ended up enjoying it and going back multiple times."
+    ],
+    [
+      "ParticipantA",
+      "That's great to hear! Do you have any favorite cuisines or types of food that you always order?"
+    ],
+    [
+      "ParticipantB",
+      "I love trying new types of cuisine, but I do have a weakness for Italian food. I always order pasta or pizza when I go to an Italian restaurant."
+    ],
+    [
+      "ParticipantA",
+      "Pizza and pasta are always great choices! What do you think about restaurant chains vs. independent restaurants?"
+    ],
+    [
+      "ParticipantB",
+      "I prefer independent restaurants because they often have more unique and creative dishes that you can't find anywhere else. Plus, the atmosphere is usually more authentic and charming."
+    ],
+    [
+      "ParticipantA",
+      "I totally agree with you. What's the most expensive restaurant you've ever been to, and was it worth the price?"
+    ],
+    [
+      "ParticipantB",
+      "I went to a fancy French restaurant once that was very expensive, but the food and service were both exceptional. The atmosphere was also very elegant and romantic. I would say it was worth the price."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a memorable and special experience. Do you have any food allergies or dietary restrictions that make dining out more challenging?"
+    ],
+    [
+      "ParticipantB",
+      "I don't have any major food allergies, but I do follow a gluten-free diet for health reasons. It can be challenging to find restaurants that offer gluten-free options, but I always ask the server for recommendations and they've always been helpful in finding something that works for me."
+    ],
+    [
+      "ParticipantA",
+      "That's great that you can find gluten-free options at most restaurants. What do you think about food delivery services and their impact on the restaurant industry?"
+    ],
+    [
+      "ParticipantB",
+      "I think food delivery services have had a significant impact on the restaurant industry, both positive and negative. On one hand, they've made it easier for people to get food from their favorite restaurants delivered to their door, but on the other hand, they've also hurt some restaurants' profit margins."
+    ],
+    [
+      "ParticipantA",
+      "That's a valid point. Thank you for sharing your thoughts on dining out. It was great talking with you!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you, it was nice chatting with you too!"
+    ]
+  ],
+  "n_turns": 22,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

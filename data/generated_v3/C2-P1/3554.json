@@ -1,0 +1,215 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3554,
+  "topic": "Exercise And Fitness",
+  "sb_prompt": "DO YOU DO ANY EXERCISE REGULARLY TO MAINTAIN YOUR HEALTH OR FITNESS LEVEL?  IF SOOR DO IT AS A TASK?  COMPARE YOUR HABITS AND YOUR MOTIVES",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you do for exercise?"
+    ],
+    [
+      "ParticipantB",
+      "I try to go for a run a few times a week."
+    ],
+    [
+      "ParticipantA",
+      "That sounds good."
+    ],
+    [
+      "ParticipantB",
+      "How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I used to go to the gym, but I haven't been consistent with it lately."
+    ],
+    [
+      "ParticipantB",
+      "What do you miss the most about going to the gym?"
+    ],
+    [
+      "ParticipantA",
+      "I miss the sense of community and the feeling of accomplishment after a workout."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, those things can be really motivating."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about trying a new workout class, but I'm not sure which one to choose."
+    ],
+    [
+      "ParticipantB",
+      "Have you considered looking into local fitness groups or classes?"
+    ],
+    [
+      "ParticipantA",
+      "I actually have a friend who just started going to a yoga class and loves it."
+    ],
+    [
+      "ParticipantB",
+      "That sounds great."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I might try that out."
+    ],
+    [
+      "ParticipantB",
+      "That's great, I hope you find something you enjoy and that motivates you."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think it's important to find something you enjoy, otherwise it becomes a chore."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely better to find something you enjoy rather than forcing yourself to do something you don't like."
+    ],
+    [
+      "ParticipantA",
+      "So, what do you do for exercise?"
+    ],
+    [
+      "ParticipantB",
+      "I also try to do some weightlifting and strength training at home."
+    ],
+    [
+      "ParticipantA",
+      "That sounds good."
+    ],
+    [
+      "ParticipantB",
+      "And I also try to do some cardio exercises, like jumping jacks or jogging in place."
+    ],
+    [
+      "ParticipantA",
+      "Do you find it hard to fit exercise into your daily routine?"
+    ],
+    [
+      "ParticipantB",
+      "It can be challenging at times, but I try to make it a priority and schedule it into my day."
+    ],
+    [
+      "ParticipantA",
+      "I think it's great that you've found a way to make it a priority in your day."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's important to make time for self-care and exercise."
+    ],
+    [
+      "ParticipantA",
+      "I agree."
+    ],
+    [
+      "ParticipantB",
+      "What do you think is the most challenging part of maintaining an exercise routine?"
+    ],
+    [
+      "ParticipantA",
+      "I think it's just finding the time and motivation to do it consistently."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it can be tough."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about trying to get back into a regular exercise routine, but it's hard to find the time and motivation."
+    ],
+    [
+      "ParticipantB",
+      "You know, I find that having a workout buddy helps keep me accountable and motivated."
+    ],
+    [
+      "ParticipantA",
+      "Maybe I should try to find a workout buddy too."
+    ],
+    [
+      "ParticipantB",
+      "It can be really helpful."
+    ],
+    [
+      "ParticipantA",
+      "Maybe I'll try to find a workout buddy and give it a shot."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a great idea."
+    ],
+    [
+      "ParticipantA",
+      "Do you have any tips for finding a workout buddy?"
+    ],
+    [
+      "ParticipantB",
+      "You could try joining a local fitness group or class, or asking a friend or coworker if they want to workout together."
+    ],
+    [
+      "ParticipantA",
+      "Maybe I'll start by asking some of my friends if they want to join me."
+    ],
+    [
+      "ParticipantB",
+      "That's a great idea, it's always good to have support and accountability."
+    ],
+    [
+      "ParticipantA",
+      "I'll also try to look into some local fitness groups or classes."
+    ],
+    [
+      "ParticipantB",
+      "Definitely, let me know how it goes."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

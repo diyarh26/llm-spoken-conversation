@@ -1,0 +1,110 @@
+{
+  "condition": "C4-P1",
+  "architecture": "C4",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of pets do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have a dog named Max. He's a Labrador Retriever mix. How about you?\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "I used to have a cat named Whiskers. She was a beautiful calico cat."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I love cats! I had a cat growing up. Her name was Daisy, and she was a lovely Siamese. Max is a great companion, but I do miss having a cat around sometimes.\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, cats are pretty special. I still have my cat, Whiskers. She's getting up there in age, but she's still a sweetheart. I worry about her sometimes, but she's a tough little cat."
+    ],
+    [
+      "ParticipantB",
+      "I'm sure she is. My Max is a real character, always getting into something new. It's nice to have the companionship of a pet.\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "Definitely. I can't imagine life without my cat. She's been such a loyal companion, and I love coming home to her after a long day."
+    ],
+    [
+      "ParticipantB",
+      "I completely understand. My Max greets me at the door every time I come home, and it's the best feeling in the world. Pets have a way of making even the toughest days better.\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. I always say that pets are the best therapy. They don't judge you, they just love you unconditionally. I'm so grateful for my cat and all the joy she brings to my life."
+    ],
+    [
+      "ParticipantB",
+      "I couldn't agree more. My Max is there for me no matter what, and he always makes me laugh with his antics. It's amazing how much happiness a pet can bring into our lives.\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "Yes, it's incredible. Pets have a way of putting things into perspective and helping us relax. I'm so glad I have my cat in my life. How long have you had Max?\n\nThe conversation has ended."
+    ],
+    [
+      "ParticipantB",
+      "I've had Max for about three years now. He's been a great addition to our family. It's been a pleasure talking to you about pets. Have a wonderful day!"
+    ],
+    [
+      "ParticipantA",
+      "It's been a pleasure talking to you too. Take care, and have a great day!"
+    ]
+  ],
+  "n_turns": 15,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

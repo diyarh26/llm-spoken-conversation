@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2533,
+  "topic": "Baseball",
+  "sb_prompt": "FIND OUT THE OTHER CALLER'S FAVORITE PRO BASEBALL TEAM AND WHERE IT'S HEADED THIS YEAR.  DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "How's your day going so far?"
+    ],
+    [
+      "ParticipantB",
+      "It's been pretty good, thanks. How about yours?"
+    ],
+    [
+      "ParticipantA",
+      "I've been busy at work, but it's been okay."
+    ],
+    [
+      "ParticipantB",
+      "So, have you been following the baseball season so far?"
+    ],
+    [
+      "ParticipantA",
+      "I've been trying to keep up with it, but it's hard to keep track of everything."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it can be tough to stay up to date with everything going on."
+    ],
+    [
+      "ParticipantA",
+      "I actually have a friend who's a huge baseball fan, and he's been really excited about this season."
+    ],
+    [
+      "ParticipantB",
+      "Who's your favorite team?"
+    ],
+    [
+      "ParticipantA",
+      "The New York Yankees."
+    ],
+    [
+      "ParticipantB",
+      "I'm actually a big fan of the Boston Red Sox."
+    ],
+    [
+      "ParticipantA",
+      "I think they're doing pretty well this year."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, they've been playing really well."
+    ],
+    [
+      "ParticipantA",
+      "I think they have a good chance of making it to the playoffs this year."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think they have a good chance too."
+    ],
+    [
+      "ParticipantA",
+      "What do you think about the recent controversy surrounding the use of performance-enhancing drugs in baseball?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's definitely a problem, but it's hard to know how to fully address it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely frustrating."
+    ],
+    [
+      "ParticipantB",
+      "I know someone who used to play professionally and he's very against the use of PEDs."
+    ],
+    [
+      "ParticipantA",
+      "I agree."
+    ],
+    [
+      "ParticipantB",
+      "I think it's important to keep the sport clean and fair for everyone."
+    ],
+    [
+      "ParticipantA",
+      "What do you think the league should do to address the issue?"
+    ],
+    [
+      "ParticipantB",
+      "I think they should be stricter with their testing and penalties for players who test positive for PEDs."
+    ],
+    [
+      "ParticipantA",
+      "I think they should also focus on education and prevention, to help players make the right choices."
+    ],
+    [
+      "ParticipantB",
+      "Definitely."
+    ],
+    [
+      "ParticipantA",
+      "What do you think the impact of PEDs is on the players' health in the long run?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's a serious concern, especially since players are using them at younger and younger ages."
+    ],
+    [
+      "ParticipantA",
+      "Do you think that there's enough being done to educate and prevent players from using PEDs?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think there needs to be more done in terms of education and prevention."
+    ],
+    [
+      "ParticipantA",
+      "I think it's really important for the league to take a stand against PEDs and prioritize the health and fairness of the game."
+    ],
+    [
+      "ParticipantB",
+      "I agree, it's important for the league to take a stand against PEDs."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think so too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a complex issue."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, for sure."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, for sure."
+    ],
+    [
+      "ParticipantA",
+      "So what do you think about the recent trades and signings in the offseason?"
+    ],
+    [
+      "ParticipantB",
+      "I think the trades and signings this offseason have really shaken things up in the league."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely made things interesting."
+    ],
+    [
+      "ParticipantB",
+      "I think the new players will make a big impact this season."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite team and how do you think they'll do this year?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite team is the Los Angeles Angels."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 3
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2514,
+  "topic": "Latin America",
+  "sb_prompt": "WHAT DO YOU THINK ABOUT CURRENT OR RECENT AMERICAN ACTIONS IN LATIN AMERICA",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a plumber",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hey, how's it going?\nParticipantB: Pretty good, just got off work. How about you?\nParticipantA: I just got home from my shift at the restaurant. Long day, you know how it is.\nParticipantB: Yeah, totally. So, what brings you to call a stranger about Latin America?\nParticipantA: Well, I've been following the news about American actions in the region, and it's been on my mind a lot lately. What about you?\nParticipantB: Same here. I've been thinking about it for years, but it's hard to put into words.\nParticipantA: Yeah, it's a complex topic. I have a personal connection to it, actually. My family is from Mexico, and I've seen firsthand how American policies have impacted them.\nParticipantB: Oh, that's interesting. I don't have any personal connection to it, but I've always been fascinated by the region. I think it's important for us to be informed about what's going on down there.\nParticipantA: Definitely. I think a lot of people in the US don't realize the impact our actions have on Latin America. It's not just a far-off place, it's our neighbor.\nParticipantB: Yeah, and it's not just about politics. It's about people's lives and families. It's easy to forget that.\nParticipantA: Exactly. So, what are your thoughts on recent American actions in Latin America?\nParticipantB: Honestly, I think it's a mixed bag. I think there are some positive steps being taken, but there's also a lot of room for improvement.\nParticipantA: Yeah, I agree. I think it's important to have a nuanced view of it, and not just paint it as all good or all bad.\nParticipantB: Definitely. I think it's important to listen to people from the region and understand their perspectives.\nParticipantA: Absolutely. I think we have a lot to learn from each other.\nParticipantB: Yeah, for sure. It's always good to have these conversations and learn from each other.\nParticipantA: Definitely. Well, it was nice talking to you.\nParticipantB: Likewise, it was good to chat with you.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 552,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

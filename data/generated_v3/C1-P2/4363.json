@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4363,
+  "topic": "Football",
+  "sb_prompt": "PLEASE DISCUSS PROFESSIONAL FOOTBALL.  FIND OUT THE OTHER CALLER'S FAVORITE PRO FOOTBALL TEAM AND WHERE IT'S HEADED THIS YEAR.       DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 27,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hey, so what's your favorite pro football team?\nParticipantB: Oh, man, I'm a big fan of the Dallas Cowboys. How about you?\nParticipantA: Uh, I'm actually more of a college football guy myself. But, yeah, I know a lot of people who love the Cowboys.\nParticipantB: Yeah, they've had some ups and downs over the years, but I've always been a fan. What do you think about their chances this year?\nParticipantA: Honestly, I haven't really been following them that closely. I mean, I know they've had some talented players over the years, but it seems like they always end up falling short in the playoffs.\nParticipantB: Yeah, it's definitely been a bit of a rollercoaster ride for them. But I think they've got a good shot at making it to the Super Bowl this year. I mean, they've got some great talent on both offense and defense.\nParticipantA: Yeah, I can see that. I just think it's tough for any team to consistently perform at a high level over the course of a whole season.\nParticipantB: Definitely. But I think the Cowboys have what it takes to make a deep playoff run. What about you? Who do you root for?\nParticipantA: Uh, I don't really have a favorite pro team, to be honest. I'm more into college football. But if I had to pick an NFL team, I'd probably go with the New England Patriots.\nParticipantB: Nice choice. I've always been a bit of a Patriots fan myself. They've got a great head coach and a solid roster. I think they're going to be tough to beat this year.\nParticipantA: Yeah, I can definitely see that. I mean, they've got a lot of talent on both sides of the ball and a great quarterback in Tom Brady. It's hard not to root for a team like that.\nParticipantB: Yeah, exactly. I mean, I think they're definitely one of the top teams in the league this year. Do you think they'll win the Super Bowl?\nParticipantA: Honestly, I think they're definitely a contender. But it's tough to predict what's going to happen in the playoffs. Anything can happen when you get to that level.\nParticipantB: Yeah, absolutely. It's all about matchups and who's playing well at the right time. But I think the Patriots have what it takes to make a run at the title this year.\nParticipantA: Yeah, I could definitely see that. Well, it was nice talking with you about football. Thanks for the conversation.\nParticipantB: No problem, it was great talking with you too. Have a good day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 670,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

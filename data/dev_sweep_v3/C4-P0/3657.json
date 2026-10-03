@@ -1,0 +1,94 @@
+{
+  "condition": "C4-P0",
+  "architecture": "C4",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your preference when it comes to personal computers? Do you have a favorite brand or type?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've always been a fan of Apple products, but I understand that there are many other great options out there. What about you? Do you have a preferred brand or type of personal computer?"
+    ],
+    [
+      "ParticipantA",
+      "Personally, I've been using both Windows and Mac computers and have found advantages to each. I think it ultimately depends on your specific needs and preferences. What about you? Do you have a preference between Windows and Mac?"
+    ],
+    [
+      "ParticipantB",
+      "That's an interesting perspective! I've primarily used Windows computers in the past, but I've been considering giving a Mac a try. I've heard great things about their user-friendly interface and the seamless integration of their devices. Have you found that to be the case in your experience?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I have definitely noticed the user-friendly interface on Macs, and the integration between their devices is quite seamless. However, I do appreciate some of the unique features and customizability options available on Windows computers. Ultimately, it's great to have options and choose the one that best fits your needs."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely! It's important to find the computer that suits your specific requirements. For me, I value the affordability and flexibility of Windows computers, but I'm intrigued by the sleek design and ease of use of Macs. It's a tough decision, but I think I'll stick with my Windows computer for now, but keep an eye on Macs for future possibilities. How about you? Have you made a decision on your preference?"
+    ],
+    [
+      "ParticipantA",
+      "I think I'll continue to use both Windows and Mac computers, depending on the specific tasks and projects I'm working on. Both platforms have their strengths and can be very useful in different situations. It's always good to have options and be able to choose the best tool for the job. What about you? Have you made a decision on your preference?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I agree. Having the flexibility to use both platforms can be very beneficial. I'll continue to use my Windows computer for its affordability and customizability, but I'll definitely explore the Mac platform further in the future. It's great to learn about new options and make informed decisions based on our specific needs. Have a good day!"
+    ],
+    [
+      "ParticipantA",
+      "Sounds like a plan! It's always good to be open to different options and explore what works best for you. Have a great day too!"
+    ]
+  ],
+  "n_turns": 11,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

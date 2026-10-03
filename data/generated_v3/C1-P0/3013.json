@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3013,
+  "topic": "Recipes/food/cooking",
+  "sb_prompt": "PLEASE DISCUSS FOOD AND COOKING.  WHAT FOODS WOULD YOU INCLUDE IN THE MENU FOR A DINNER PARTY?  SHARE THE RECIPE FOR ONE OF THESE FOODS WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello! How are you doing today?\nParticipantA: I'm doing well, thank you. What about you?\nParticipantB: I'm doing good too. So, what brings you to call today?\nParticipantA: I was thinking about having a dinner party soon and I wanted to know what dishes you would recommend for the menu.\nParticipantB: Oh, that sounds like a fun idea! What kind of cuisine are you looking to serve?\nParticipantA: I was thinking about serving a mix of different cuisines, maybe some Italian, Mexican, and Asian dishes.\nParticipantB: That sounds like a great idea! How many dishes were you planning on serving?\nParticipantA: I was thinking about serving around five dishes.\nParticipantB: Okay, well let's see. For Italian, I would recommend spaghetti carbonara, it's a classic dish that everyone loves.\nParticipantA: That sounds great. Can you share the recipe with me?\nParticipantB: Sure! Here's the recipe:\n\nIngredients:\n\n* 8 oz spaghetti\n* 3 large eggs\n* 1/2 cup grated Parmesan cheese\n* 1/4 cup chopped pancetta or bacon\n* 1/4 cup chopped onion\n* 2 cloves garlic, minced\n* Salt and pepper to taste\n* Freshly ground black pepper to taste\n\nInstructions:\n\n1. Cook spaghetti in boiling salted water until al dente.\n2. While the pasta cooks, heat the pancetta or bacon in a large skillet over medium heat until crispy.\n3. Add the onion and cook until softened, about 5 minutes.\n4. Add the garlic and cook for another minute.\n5. Beat the eggs, Parmesan cheese, salt, pepper, and 1/4 cup of the pasta cooking water in a small bowl.\n6. Drain the spaghetti and add it to the skillet with the pancetta, onion, and garlic mixture.\n7. Pour the egg mixture over the spaghetti and toss until the pasta is coated and the eggs are cooked.\n8. Serve immediately with grated Parmesan cheese on top.\n\nParticipantA: Thank you so much for sharing that recipe with me. What about Mexican cuisine?\nParticipantB: My pleasure! For Mexican, I would recommend chicken enchiladas.\nParticipantA: That sounds great. Can you share the recipe with me?\nParticipantB: Sure! Here's the recipe:\n\nIngredients:\n\n* 1 1/2 pounds boneless, skinless chicken breasts\n* 1 tablespoon olive oil\n* 1 teaspoon ground cumin\n* 1 teaspoon smoked paprika\n* 1 teaspoon chili powder\n* 1/2 teaspoon garlic powder\n* Salt and pepper to taste\n* 8 corn tortillas\n* 2 cups enchilada sauce\n* 1 cup shredded cheese\n* 1/4 cup chopped fresh cilantro\n\nInstructions:\n\n1. Heat the olive oil in a large skillet over medium heat.\n2. Season the chicken with cumin, smoked paprika, chili powder, garlic powder, salt, and pepper.\n3. Add the seasoned chicken to the skillet and cook until browned on both sides and cooked through, about 8-10 minutes.\n4. While the chicken cooks, warm the enchilada sauce in a separate pot.\n5. Cut the chicken into bite-sized pieces and place a few pieces in each tortilla.\n6. Roll the tortillas up and place them seam-side down in a large baking dish.\n7. Pour the enchilada sauce over the tortillas and sprinkle with shredded cheese.\n8. Bake at 350\u00b0F for 20-25 minutes, or until the cheese is melted and bubbly.\n9. Garnish with chopped fresh cilantro and serve with rice and beans.\n\nParticipantA: Thank you for the",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 1031,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

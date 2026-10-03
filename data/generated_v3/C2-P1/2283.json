@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of gardening do you do?"
+    ],
+    [
+      "ParticipantB",
+      "I enjoy working on my lawn and garden quite a bit."
+    ],
+    [
+      "ParticipantA",
+      "What kind of plants do you usually grow in your garden?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly I grow vegetables and herbs."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite vegetable to grow?"
+    ],
+    [
+      "ParticipantB",
+      "I really like growing tomatoes."
+    ],
+    [
+      "ParticipantA",
+      "I used to grow tomatoes too, but I found that they were too susceptible to disease."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've had some issues with that in the past, but I've found that using organic methods and keeping the area around the plants clean has helped a lot."
+    ],
+    [
+      "ParticipantA",
+      "That's great to hear. I've been considering trying organic methods myself."
+    ],
+    [
+      "ParticipantB",
+      "Definitely give it a try, it's worth it."
+    ],
+    [
+      "ParticipantA",
+      "I have a small herb garden on my balcony, it's really fun to experiment with different flavors."
+    ],
+    [
+      "ParticipantB",
+      "What kind of herbs do you grow in your balcony garden?"
+    ],
+    [
+      "ParticipantA",
+      "I grow basil, oregano, and thyme mostly."
+    ],
+    [
+      "ParticipantB",
+      "That sounds interesting."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever tried growing any fruits in your garden?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've grown strawberries and blueberries in my garden before."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite fruit to grow?"
+    ],
+    [
+      "ParticipantB",
+      "I really like growing blueberries, they're very flavorful and easy to maintain."
+    ],
+    [
+      "ParticipantA",
+      "I've never tried growing blueberries before, maybe I'll give it a shot next season."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a great idea."
+    ],
+    [
+      "ParticipantA",
+      "What's the most challenging thing you've encountered while gardening?"
+    ],
+    [
+      "ParticipantB",
+      "Pest control."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I know what you mean. I've had issues with slugs and snails in my garden before."
+    ],
+    [
+      "ParticipantB",
+      "Have you found any effective methods for dealing with those pests?"
+    ],
+    [
+      "ParticipantA",
+      "I've tried beer traps and salt around the base of the plants, but I've heard that coffee grounds can also help repel them."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, coffee grounds can definitely help."
+    ],
+    [
+      "ParticipantA",
+      "I also heard that companion planting can help with pest control."
+    ],
+    [
+      "ParticipantB",
+      "That's a good point, I should try companion planting next season."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, companion planting can definitely help with pest control."
+    ],
+    [
+      "ParticipantB",
+      "What about you, do you have any favorite plants or techniques you like to use in your gardening?"
+    ],
+    [
+      "ParticipantA",
+      "I also enjoy using raised garden beds, it makes it easier for me to maintain the soil and keep it healthy."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a good idea."
+    ],
+    [
+      "ParticipantA",
+      "I also like using natural fertilizers like compost and manure to keep the soil healthy."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've heard that raised garden beds can be really helpful for maintaining the soil."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, using natural fertilizers is definitely a sustainable way to keep the soil healthy."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a great way to maintain the soil."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever had any issues with weeds in your garden?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've had to deal with weeds before."
+    ],
+    [
+      "ParticipantA",
+      "What methods have you found to be effective in controlling weeds?"
+    ],
+    [
+      "ParticipantB",
+      "I use a hoe to keep them under control."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

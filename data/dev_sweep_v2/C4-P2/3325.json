@@ -1,0 +1,98 @@
+{
+  "condition": "C4-P2",
+  "architecture": "C4",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of pets do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have a Golden Retriever named Max. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I have a cat named Whiskers. What's Max like?"
+    ],
+    [
+      "ParticipantB",
+      "Max is a friendly and energetic dog. He loves going for walks and fetching balls. I take him to the dog park sometimes where he can run around and socialize with other dogs. Have you had any interesting experiences with Whiskers?"
+    ],
+    [
+      "ParticipantA",
+      "Well, Whiskers is a bit of a loner. She likes to spend most of her time napping and grooming herself. But every now and then, she'll surprise me by jumping up on the couch to snuggle. It's always a welcome surprise. What about Max? Does he have any quirks?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, Max has a few quirks. For instance, he hates having his paws touched and will often paw at the air when I try to inspect his paws. He's also very protective of our home and will bark loudly at strangers, but once they're inside, he becomes very friendly. It's quite a sight to see! Do cats typically have any specific quirks? I've always found them to be quite mysterious creatures.\n\n(End of conversation.)"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, cats can be quite mysterious. My Whiskers is also a bit of a loner, but she does have a few quirks. She loves to watch birds outside the window and will often stare at them for hours on end. And she has this strange habit of knocking things off tables and shelves, like she's trying to catch them. It's quite amusing to watch. What about Max? Does he have any other quirks?\n\n(End of conversation.)"
+    ],
+    [
+      "ParticipantB",
+      "Yes, Max has a few other quirks as well. One of them is his fascination with certain textures. For instance, he loves to roll in the grass and rub his back against tree bark. He also enjoys chewing on certain toys or objects, such as old shoes or socks. It keeps him entertained for hours! I've always found it fascinating how different pets have their unique quirks.\n\n(End of conversation.)"
+    ],
+    [
+      "ParticipantA",
+      "Absolutely! It's amazing how each pet can have its own unique personality and quirks. It's part of what makes them so special and lovable. I'm glad we could share our experiences and opinions on pets. It was nice talking to you!\n\n(End of conversation.)"
+    ],
+    [
+      "ParticipantB",
+      "Yes, absolutely! I couldn't agree more. It was great hearing about Whiskers and her quirks. I'm glad we could have this conversation and learn from each other. I'll be sure to keep an eye out for any new quirks Max might develop. Have a great day!\n\n(End of conversation.)"
+    ]
+  ],
+  "n_turns": 12,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 2,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 2
+  }
+}

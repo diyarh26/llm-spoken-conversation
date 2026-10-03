@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4603,
+  "topic": "Universal Pblic Serv",
+  "sb_prompt": "SEE HOW THE OTHER CALLER FEELS ABOUT THE PROPOSAL THAT ALL YOUNG AMERICANS SHOULD SPEND A YEAR OR TWO DOING SOME KIND OF PUBLIC SERVICE",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 51,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what do you think about the idea of young Americans doing some kind of public service for a year or two?\n\nParticipantB: I'm not really sure. I haven't really thought about it too much.\n\nParticipantA: Yeah, I'm kind of the same way. I've always been a bit skeptical about it, but I'm not really sure why.\n\nParticipantB: Yeah, me too. I think it's a good idea in theory, but I'm not sure how it would work in practice.\n\nParticipantA: Yeah, I think that's probably true. I mean, I've been a grocery store manager for years, and I've seen a lot of people come and go, but I'm not sure if a year or two of public service would really make that much of a difference.\n\nParticipantB: Yeah, I can see that. I mean, I drive a school bus, and I see a lot of kids every day, but I'm not sure how a year or two of public service would really help them or the community.\n\nParticipantA: Yeah, exactly. I mean, I think it's important to give back to the community and all that, but I'm not sure if a year or two of public service is the best way to do it.\n\nParticipantB: Yeah, I agree. I think there are probably better ways to make a real difference in people's lives.\n\nParticipantA: Yeah, I think that's probably true. I mean, I've always tried to do my part and give back to the community, but I'm not sure if a year or two of public service is the best way to do it.\n\nParticipantB: Yeah, me too. I think it's important to find ways to make a real difference, but I'm not sure if a year or two of public service is the best way to do it.\n\nParticipantA: Yeah, I think that's probably true. I mean, I've always tried to be a good person and help out where I can, but I'm not sure if a year or two of public service is the best way to do it.\n\nParticipantB: Yeah, I agree. I think it's important to find ways to make a real difference, but I'm not sure if a year or two of public service is the best way to do it.\n\nParticipantA: Yeah, I think that's probably true. I mean, I've always tried to be a good person and help out where I can, but I'm not sure if a year or two of public service is the best way to do it.\n\nParticipantB: Yeah, me too. I think it's important to find ways to make a real difference, but I'm not sure if a year or two of public service is the best way to do it.\n\nParticipantA: Yeah, I think that's probably true. I mean, I've always tried to be a good person and help out where I can, but I'm not sure if a year or two of public service is the best way to do it.\n\nParticipantB: Yeah, I agree. I think it's important to find ways to make a real difference, but I'm not sure if a year or two of public service is the best way to do it.\n\nParticipantA: Well, it was nice talking to you.\n\nParticipantB: Yeah, it was nice talking to you too.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 819,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

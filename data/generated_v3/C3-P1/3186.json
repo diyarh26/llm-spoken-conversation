@@ -1,0 +1,106 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3186,
+  "topic": "Restaurants",
+  "sb_prompt": "WHAT KIND OF DINING OUT DO YOU ENJOY? WHAT THINGS DO YOU LOOK FOR IN A RESTAURANT THAT WOULD GET YOU TO GO BACK AGAIN?  SEE WHETHER THE OTHER CALLER'S PREFERENCES ARE SIMILAR TO YOURS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 58,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "an insurance adjuster",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "How are you doing today?"
+    ],
+    [
+      "ParticipantB",
+      "I'm doing well, thank you. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm doing pretty good too. So, what kind of dining out do you enjoy?"
+    ],
+    [
+      "ParticipantB",
+      "I enjoy trying out new restaurants and different types of cuisine. I especially love trying out local and ethnic restaurants."
+    ],
+    [
+      "ParticipantA",
+      "Same here, I love trying out new restaurants and experiencing different types of food. What do you look for in a restaurant that would get you to go back again?"
+    ],
+    [
+      "ParticipantB",
+      "Good food, friendly service, and a comfortable atmosphere are the most important things to me when it comes to going back to a restaurant. And if it's a unique or one-of-a-kind experience, that's even better."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. Good food, friendly service, and a comfortable atmosphere are all important factors for me as well. And I also appreciate a unique or one-of-a-kind experience. Have you been to any particularly memorable restaurants recently?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, actually I went to a small Thai restaurant in the city last weekend and it was amazing. The food was so flavorful and fresh, and the service was great too. It was definitely one of the best Thai meals I've had in a while."
+    ],
+    [
+      "ParticipantA",
+      "That sounds amazing! I'll have to check that place out next time I'm in the city. Have you ever been to any particularly memorable restaurants in your area?"
+    ],
+    [
+      "ParticipantB",
+      "Actually, there's a great Italian restaurant in my neighborhood that I really love. The pasta is always cooked to perfection and the atmosphere is cozy and inviting. It's definitely a place I go back to often."
+    ],
+    [
+      "ParticipantA",
+      "That sounds great! I love a good Italian restaurant. I'll have to check that place out next time I'm in your neighborhood. Well, it was nice talking to you. Thanks for sharing your thoughts on dining out!"
+    ],
+    [
+      "ParticipantB",
+      "You too, it was great talking to you! Thanks for sharing your thoughts on dining out as well."
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

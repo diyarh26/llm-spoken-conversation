@@ -1,0 +1,106 @@
+{
+  "condition": "C4-P0",
+  "architecture": "C4",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3691,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "How are you doing today?"
+    ],
+    [
+      "ParticipantB",
+      "I'm doing well, thank you. And you? How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm doing great, thanks for asking. So, I heard you have pets. What kind of pets do you have?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I do. I have a Golden Retriever named Max and a couple of Siamese cats, Ming and Lea. How about you? What kind of pets do you have?"
+    ],
+    [
+      "ParticipantA",
+      "I don't have any pets at the moment, but I used to have a parakeet named Tweety. It was such a delightful little bird. What kind of dog do you have again?"
+    ],
+    [
+      "ParticipantB",
+      "I have a Golden Retriever named Max. He's a lovely and friendly dog. I'm sure Tweety was a charming parakeet. What kind of cats do you have, if you don't mind me asking?"
+    ],
+    [
+      "ParticipantA",
+      "I have two Siamese cats named Ming and Lea. They are both quite independent, but they can be very affectionate at times. Have you had any fun experiences with Max lately?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, Max has been a great companion during these past few weeks. We went on a hike in the local park not too long ago, and he had a blast sniffing around and chasing squirrels. How about Ming and Lea? Have they been up to any mischief lately?"
+    ],
+    [
+      "ParticipantA",
+      "Ming and Lea have been keeping me entertained with their playful antics. Just the other day, I caught Lea trying to steal Ming's favorite toy. They can be quite the comedians sometimes. Do you have any plans for a fun outing with Max soon?"
+    ],
+    [
+      "ParticipantB",
+      "That sounds delightful! Cats can indeed be quite entertaining. As for Max, we're planning to take him to the dog park next weekend. He enjoys socializing with other dogs and running around freely. It's always fun to see him play and make new friends. I'm sure Ming and Lea will have some amusing reactions to Max's adventures."
+    ],
+    [
+      "ParticipantA",
+      "I can only imagine! I'm sure they'll have a great time watching Max interact with other dogs. It's always nice to have a well-socialized pet. Speaking of which, have you ever considered getting another pet to keep Ming and Lea company?"
+    ],
+    [
+      "ParticipantB",
+      "That's a great idea! Max gets along well with other dogs, and I've thought about adopting another pet to keep Ming and Lea company. I've been considering adopting a cat or a rabbit. Have you had any experience with those pets? What are some of the pros and cons you've encountered?"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

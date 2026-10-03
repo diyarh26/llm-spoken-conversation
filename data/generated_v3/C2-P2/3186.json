@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3186,
+  "topic": "Restaurants",
+  "sb_prompt": "WHAT KIND OF DINING OUT DO YOU ENJOY? WHAT THINGS DO YOU LOOK FOR IN A RESTAURANT THAT WOULD GET YOU TO GO BACK AGAIN?  SEE WHETHER THE OTHER CALLER'S PREFERENCES ARE SIMILAR TO YOURS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 58,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "an insurance adjuster",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of restaurants do you usually go to?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I usually go to places that have a good atmosphere and good food, of course."
+    ],
+    [
+      "ParticipantA",
+      "I like places that have a good variety of options on the menu."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, me too."
+    ],
+    [
+      "ParticipantA",
+      "I also like restaurants that have a good selection of wines."
+    ],
+    [
+      "ParticipantB",
+      "And I also appreciate it when the staff is friendly and attentive."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, a good wine list definitely makes a difference for me too."
+    ],
+    [
+      "ParticipantB",
+      "And I usually look for reviews online before deciding on a place to go."
+    ],
+    [
+      "ParticipantA",
+      "I also pay attention to the ambiance and decor of the restaurant."
+    ],
+    [
+      "ParticipantB",
+      "What about you? Do you have any particular preferences when it comes to ambiance?"
+    ],
+    [
+      "ParticipantA",
+      "I like places with a cozy and comfortable feel to them."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think ambiance is important too."
+    ],
+    [
+      "ParticipantA",
+      "Do you have any favorite cuisines or types of food that you usually order at restaurants?"
+    ],
+    [
+      "ParticipantB",
+      "I usually order Italian or seafood dishes."
+    ],
+    [
+      "ParticipantA",
+      "I prefer classic American or comfort food."
+    ],
+    [
+      "ParticipantB",
+      "I've been wanting to try that new sushi place in town."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've heard good things about it too."
+    ],
+    [
+      "ParticipantB",
+      "Have you been there before?"
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite Italian dish?"
+    ],
+    [
+      "ParticipantB",
+      "I like pasta dishes."
+    ],
+    [
+      "ParticipantA",
+      "I usually stick to the basics, like spaghetti or lasagna."
+    ],
+    [
+      "ParticipantB",
+      "I think I'm going to try that new sushi place soon."
+    ],
+    [
+      "ParticipantA",
+      "What made you decide to try the new sushi place?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been hearing good things about it from friends and online reviews, so I think it's worth checking out."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think it's always good to try new places and see what they have to offer."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantB",
+      "Do you have any other favorite types of cuisine or dishes you like to order at restaurants?"
+    ],
+    [
+      "ParticipantA",
+      "I also enjoy ordering steaks or burgers."
+    ],
+    [
+      "ParticipantB",
+      "I'm also a fan of burgers."
+    ],
+    [
+      "ParticipantA",
+      "Have you been to any new restaurants lately that you would recommend?"
+    ],
+    [
+      "ParticipantB",
+      "No, I haven't been to any new restaurants lately."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Have you been to any new restaurants lately that you would recommend?"
+    ],
+    [
+      "ParticipantB",
+      "I've been meaning to try that new Thai place in town."
+    ],
+    [
+      "ParticipantA",
+      "What's the atmosphere like at that new Thai place?"
+    ],
+    [
+      "ParticipantB",
+      "It's supposed to have a really authentic and modern feel to it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that sounds interesting."
+    ],
+    [
+      "ParticipantB",
+      "I think I'm going to stick with the Italian and seafood dishes for now."
+    ],
+    [
+      "ParticipantA",
+      "I haven't been to a Thai restaurant in a while."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'm always looking for new places to try out."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  }
+}

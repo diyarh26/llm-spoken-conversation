@@ -1,0 +1,106 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2485,
+  "topic": "Family Reunions",
+  "sb_prompt": "DISCUSS PLANNING A FAMILY REUNION.  DRAW ON YOUR EXPERIENCES AND THOSE OF THE OTHER CALLER FOR MAKING THE NEXT GET-TOGETHER SUCCESSFUL AND MEMORABLE.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 45,
+    "education": "a high-school education",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, have you thought about where to hold the family reunion?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I was thinking maybe we could rent a big house or cabin in the mountains for a weekend."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a great idea! Do you have any particular mountains in mind?"
+    ],
+    [
+      "ParticipantB",
+      "Not yet, but I was thinking maybe we could look into places like Lake Tahoe or Mt. Shasta."
+    ],
+    [
+      "ParticipantA",
+      "Those are both beautiful places, but have you considered asking around to see if anyone has a big backyard or a park nearby that we could use for the reunion?"
+    ],
+    [
+      "ParticipantB",
+      "That's a great idea! I'll definitely reach out to some family members to see if they have any suggestions or if they're willing to host the event at their home or in a nearby park."
+    ],
+    [
+      "ParticipantA",
+      "Excellent! And what about activities? Do you have any ideas for things to do at the reunion?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I was thinking we could have a potluck dinner on the first night, followed by a family game night with board games and card games. And maybe on the second day, we could go on a group hike or have a picnic in a nearby park."
+    ],
+    [
+      "ParticipantA",
+      "Those are all great ideas! And what about the third day? Do you have any other activities in mind?"
+    ],
+    [
+      "ParticipantB",
+      "Well, we could have a family talent show where everyone can show off their skills or share a funny story from their past. And then we could end the reunion with a big brunch or breakfast before everyone heads home."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a fantastic lineup! I'm sure everyone will have a great time. And don't forget to take lots of pictures and create a family scrapbook to remember the reunion by."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely, I'll make sure to document everything so we can look back on the memories and keep in touch with family members we may not have seen in a while. Thanks for all your great suggestions!"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

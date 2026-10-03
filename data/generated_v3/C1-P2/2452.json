@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2452,
+  "topic": "Middle East",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THINKS ABOUT CURRENT US POLICY IN THE MIDDLE EAST. SHOULD US POLICY BE CHANGED OR NOT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: How are you doing today?\nParticipantB: I'm doing okay, thanks. How about you?\nParticipantA: I'm good, thanks for asking. So, I heard we're supposed to talk about US policy in the Middle East. What do you think about it?\nParticipantB: Yeah, that's the topic. I don't really have a strong opinion on it, to be honest.\nParticipantA: Really? That's surprising. I've always had strong feelings about it.\nParticipantB: Yeah, I've just never really thought about it that much. I mean, it's not something that directly affects me.\nParticipantA: I see. Well, I think we should change our policy.\nParticipantB: Really? Why do you think that?\nParticipantA: I think we've been interfering in the region for too long, and it's only caused more problems.\nParticipantB: That's a valid point. I've had some personal experience with that, actually.\nParticipantA: Oh, really? What happened?\nParticipantB: Well, I was working on a construction project in Iraq a few years ago. It was a nightmare, honestly.\nParticipantA: Oh no, that must have been tough.\nParticipantB: Yeah, it was. And I think a lot of the problems we're having over there are because of our interference.\nParticipantA: I agree. It's not our place to try to impose our values on other cultures.\nParticipantB: Exactly. We need to respect their way of life and let them handle their own problems.\nParticipantA: I couldn't agree more. It's not like we have a perfect track record in the region.\nParticipantB: No, definitely not. And I think we need to be more mindful of the consequences of our actions.\nParticipantA: Absolutely. It's not just about us, it's about the people who live there and how our actions affect them.\nParticipantB: Exactly. I think if we change our policy and start focusing on diplomacy instead of intervention, we might see some real progress.\nParticipantA: I completely agree. It's not about winning or losing, it's about finding a way to coexist peacefully.\nParticipantB: Yeah, that's a good way to put it. So, what do you think we should do next?\nParticipantA: I think we should start by acknowledging our mistakes and then work towards finding a solution that benefits everyone involved.\nParticipantB: Yeah, that's a good idea. It's important to be open to other perspectives and find common ground.\nParticipantA: Definitely. Well, it was nice talking to you.\nParticipantB: Same to you. Thanks for the conversation.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 690,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

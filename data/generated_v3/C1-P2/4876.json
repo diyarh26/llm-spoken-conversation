@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4876,
+  "topic": "Child Care",
+  "sb_prompt": "FIND OUT WHAT CRITERIA THE OTHER CALLER WOULD USE IN SELECTING CHILD CARE SERVICES FOR A PRESCHOOLER.  IS IT EASY OR DIFFICULT TO FIND SUCH CARE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello! How are you doing today?\nParticipantA: I'm doing okay, thanks. How about you?\nParticipantB: I'm doing pretty good, considering it's Monday.\nParticipantA: Yeah, Mondays can be tough. So, what brings you to give a stranger a call today?\nParticipantB: Well, I was asked to find someone to talk to about child care. And since you're the first person I've reached, I thought I'd give it a shot.\nParticipantA: Oh, interesting. So, you work in child care or something?\nParticipantB: Not exactly. I work as a grocery store manager, but I have a friend who's a daycare provider and I've seen how important quality child care is.\nParticipantA: Yeah, I get that. I work as an insurance adjuster, but I have a personal experience with child care too.\nParticipantB: Oh, what's your experience with child care?\nParticipantA: Well, my daughter went to a daycare center when she was younger, and it was a mixed experience for me. Some parts were fine, but others weren't so great.\nParticipantB: I can understand that. What made it difficult for you?\nParticipantA: Just some of the things they were doing there, like how they handled the kids' meals or how they kept the place clean. But overall, it was pretty good.\nParticipantB: That makes sense. So, what criteria would you use to select child care services for a preschooler?\nParticipantA: For me, it would be cleanliness, good nutrition, and a safe environment.\nParticipantB: I agree with those. I'd also look for a good teacher-to-child ratio, quality activities, and a warm and nurturing environment.\nParticipantA: Those are all good points. It can be difficult to find child care that meets all those criteria, though.\nParticipantB: Yeah, it can be. But it's worth the effort to find the right place for your child.\nParticipantA: Absolutely. So, have you had any personal experience with child care yourself?\nParticipantB: Yes, actually. My sister has a daughter who's around the same age as my friend's kids, and she's been struggling to find good child care.\nParticipantA: I see. Well, it sounds like you have a good handle on what to look for.\nParticipantB: Thank you. It's been helpful talking to you.\nParticipantA: Same here. Thanks for the conversation.\nParticipantB: You too. Have a great day.\nParticipantA: You too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 644,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2227,
+  "topic": "Tv Programs",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER'S FAVORITE TV SHOWS ARE AND WHY.  ARE YOUR INTERESTS SIMILAR OR DIFFERENT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 16,
+    "education": "a high-school education",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite TV show?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, I don't know if I have a favorite."
+    ],
+    [
+      "ParticipantA",
+      "Well, do you have any shows that you usually watch?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I usually watch The Walking Dead and Game of Thrones."
+    ],
+    [
+      "ParticipantA",
+      "What do you like about those shows?"
+    ],
+    [
+      "ParticipantB",
+      "The Walking Dead has really great special effects and action scenes."
+    ],
+    [
+      "ParticipantA",
+      "What do you think about the characters in The Walking Dead?"
+    ],
+    [
+      "ParticipantB",
+      "I like how they develop the characters over time."
+    ],
+    [
+      "ParticipantA",
+      "What about Game of Thrones?"
+    ],
+    [
+      "ParticipantB",
+      "And the political intrigue is really interesting too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I used to watch Game of Thrones too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's really well done."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have any favorite TV shows?"
+    ],
+    [
+      "ParticipantB",
+      "I like The Good Place and Brooklyn Nine-Nine."
+    ],
+    [
+      "ParticipantA",
+      "What do you like about The Good Place?"
+    ],
+    [
+      "ParticipantB",
+      "I like the humor in it."
+    ],
+    [
+      "ParticipantA",
+      "Do you like the characters in The Good Place?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, they're all really likable."
+    ],
+    [
+      "ParticipantA",
+      "What about Brooklyn Nine-Nine?"
+    ],
+    [
+      "ParticipantB",
+      "I like the characters too, especially Jake."
+    ],
+    [
+      "ParticipantA",
+      "I used to watch Brooklyn Nine-Nine too."
+    ],
+    [
+      "ParticipantB",
+      "Do you have any other shows that you like?"
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite episode of The Good Place?"
+    ],
+    [
+      "ParticipantB",
+      "Not really, no."
+    ],
+    [
+      "ParticipantA",
+      "What about you?"
+    ],
+    [
+      "ParticipantB",
+      "I don't know, I guess I just really like comedy shows."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, me too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, me too."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite type of comedy show?"
+    ],
+    [
+      "ParticipantB",
+      "I like shows that make me laugh a lot."
+    ],
+    [
+      "ParticipantA",
+      "I like shows that make me laugh a lot too."
+    ],
+    [
+      "ParticipantB",
+      "Oh, and I also like reality TV shows."
+    ],
+    [
+      "ParticipantA",
+      "Have you watched any reality shows lately?"
+    ],
+    [
+      "ParticipantB",
+      "I just finished watching The Bachelorette."
+    ],
+    [
+      "ParticipantA",
+      "I haven't watched that one in a while."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a pretty addictive show."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I used to watch it too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a pretty addictive show."
+    ],
+    [
+      "ParticipantA",
+      "What do you like about reality TV shows in general?"
+    ],
+    [
+      "ParticipantB",
+      "I just like seeing people's lives and relationships play out on TV."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

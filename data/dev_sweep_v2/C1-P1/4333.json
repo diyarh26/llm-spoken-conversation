@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4333,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 25,
+    "education": "a college degree",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 27,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing alright, thanks. How about you?\nParticipantA: I'm good. So, I heard we're supposed to talk about taxes today.\nParticipantB: Yeah, that's what I heard. I'm not the biggest fan of taxes, to be honest.\nParticipantA: Same here. I remember taking a tax class in college and it just didn't click with me.\nParticipantB: Yeah, I've had a similar experience. I took a class in high school and it just didn't make sense to me.\nParticipantA: I feel like it's just taking money out of our pockets without any real benefit.\nParticipantB: I agree, but I also think that there are some necessary expenses that taxes help to cover.\nParticipantA: Like what?\nParticipantB: Well, things like infrastructure and social programs.\nParticipantA: Yeah, I guess that's true. I just wish they could find a way to make the system more efficient.\nParticipantB: I know what you mean. I think we could all benefit from a more transparent and fair tax system.\nParticipantA: Absolutely. I feel like there's a lot of room for improvement.\nParticipantB: Yeah, and I think we could all do our part by staying informed and engaging with our elected officials.\nParticipantA: That's a good point. I've been meaning to look into ways to get more involved in my community.\nParticipantB: I think that's a great idea. We can't just sit back and complain, we need to take action.\nParticipantA: Definitely. Well, it was nice talking to you.\nParticipantB: Yeah, you too. Take care.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 428,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

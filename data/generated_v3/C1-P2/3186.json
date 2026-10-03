@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3186,
+  "topic": "Restaurants",
+  "sb_prompt": "WHAT KIND OF DINING OUT DO YOU ENJOY? WHAT THINGS DO YOU LOOK FOR IN A RESTAURANT THAT WOULD GET YOU TO GO BACK AGAIN?  SEE WHETHER THE OTHER CALLER'S PREFERENCES ARE SIMILAR TO YOURS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 58,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "an insurance adjuster",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what kind of dining out do you enjoy?\nParticipantB: Oh, I like a good sit-down restaurant with good food and service.\n\nParticipantA: Yeah, I agree. What do you look for in a restaurant to make you go back?\nParticipantB: Well, I like a place that has a good atmosphere, good food, and good service.\n\nParticipantA: Yeah, I feel the same way. What kind of cuisine do you usually go for?\nParticipantB: I like a variety of cuisines, but I'm especially fond of Italian and Mexican food.\n\nParticipantA: Yeah, me too. I really like Italian food, especially when they make their pasta fresh.\nParticipantB: Absolutely. And I love Mexican food, especially when they have good salsa and guacamole.\n\nParticipantA: Yeah, I'm a big fan of guacamole. So, what kind of dining out do you enjoy?\nParticipantB: Well, I like a good sit-down restaurant with good food and service.\n\nParticipantA: Yeah, I agree. What do you look for in a restaurant to make you go back?\nParticipantB: Well, I like a place that has a good atmosphere, good food, and good service.\n\nParticipantA: Yeah, I feel the same way. What kind of cuisine do you usually go for?\nParticipantB: I like a variety of cuisines, but I'm especially fond of Italian and Mexican food.\n\nParticipantA: Yeah, me too. I really like Italian food, especially when they make their pasta fresh.\nParticipantB: Absolutely. And I love Mexican food, especially when they have good salsa and guacamole.\n\nParticipantA: Yeah, I'm a big fan of guacamole. So, what's your favorite restaurant?\nParticipantB: My favorite restaurant is a Mexican place down the street from my office. The food is always great, and they have the best margaritas.\n\nParticipantA: Oh, I'll have to check that out. I've been looking for a good Mexican restaurant in the area. What's your favorite thing on the menu there?\nParticipantB: I love their chicken fajitas. The chicken is always cooked to perfection, and the fajitas come with the best salsa and guacamole.\n\nParticipantA: That sounds amazing. I'll have to try that next time I'm in the area. So, what do you usually order when you go out to eat?\nParticipantB: I usually order whatever the special of the day is, or if there's something specific I want, I'll ask for that.\n\nParticipantA: Yeah, I usually do the same. Do you have any pet peeves when it comes to dining out?\nParticipantB: Yeah, I don't like it when the service is slow, or when the food is cold.\n\nParticipantA: Agreed. That can really ruin the experience. So, what's your favorite thing to do after a good meal?\nParticipantB: I like to take a walk, or maybe go see a movie.\n\nParticipantA: That sounds nice. I usually like to take a walk too, or maybe just head home and relax.\n\nParticipantB: Yeah, sometimes I just like to go home and watch some TV.\n\nParticipantA: Yeah, I can see that. Well, it was nice talking to you about restaurants.\nParticipantB: Yeah, you too. Thanks for the conversation.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 868,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 4072,
+  "topic": "News Media",
+  "sb_prompt": "DISCUSS HOW YOU AND THE OTHER CALLER KEEP UP ON CURRENT EVENTS.      DO YOU GET MOST OF YOUR NEWS FROM TVOR PEOPLE YOU KNOW?  ARE YOU SATISFIED WITH THE QUALITY OF COVERAGE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 24,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 25,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how do you stay informed about current events?"
+    ],
+    [
+      "ParticipantB",
+      "I mostly get my news from online sources and social media. I find that it's a good way to stay updated on what's happening in the world."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. Social media can be a great source of news, especially for younger people who are more comfortable with technology."
+    ],
+    [
+      "ParticipantB",
+      "Exactly. I also like to watch the news on TV sometimes, but it can be a bit biased and not always accurate."
+    ],
+    [
+      "ParticipantA",
+      "Definitely. It's important to be critical of the news we consume and not just accept everything we hear or read without questioning it."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. And I think it's also important to seek out different perspectives and sources of information to get a more well-rounded understanding of what's going on."
+    ],
+    [
+      "ParticipantA",
+      "I couldn't agree more. It's easy to get stuck in a echo chamber and only hear from people who agree with us, but it's important to challenge our own beliefs and be open to different viewpoints."
+    ],
+    [
+      "ParticipantB",
+      "That's a great point. And I think it's especially important now, with so much misinformation and fake news out there. We have to be diligent about fact-checking and not spreading false information."
+    ],
+    [
+      "ParticipantA",
+      "Yes, it's definitely a challenge to sort through all the information out there and find the truth. But I think it's important to try our best and not give up."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. And it's also important to stay engaged and informed, even if it can be overwhelming at times. It's our responsibility as citizens to stay informed and make a difference in our communities."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. It can be overwhelming at times, but it's important to stay engaged and make a difference where we can. Thank you for sharing your thoughts on this topic!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was great discussing this with you."
+    ],
+    [
+      "ParticipantA",
+      "Thank you, it was great speaking with you too! Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "You too!"
+    ]
+  ],
+  "n_turns": 16,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

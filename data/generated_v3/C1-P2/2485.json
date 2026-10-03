@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2485,
+  "topic": "Family Reunions",
+  "sb_prompt": "DISCUSS PLANNING A FAMILY REUNION.  DRAW ON YOUR EXPERIENCES AND THOSE OF THE OTHER CALLER FOR MAKING THE NEXT GET-TOGETHER SUCCESSFUL AND MEMORABLE.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 45,
+    "education": "a high-school education",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: Hi, how are you doing today?\nParticipantB: I'm doing well, thanks for asking. How about you?\nParticipantA: I'm doing okay, just had a long day at work. How about you? What do you do for a living?\nParticipantB: I'm a school bus driver. What about you?\nParticipantA: I work as an office receptionist. So, have you ever planned a family reunion before?\nParticipantB: Yeah, I have. My family has a tradition of getting together every couple of years.\nParticipantA: That's great! What makes it memorable for you?\nParticipantB: Well, we usually plan it around a holiday, like Thanksgiving or Christmas. We have a big dinner, exchange gifts, and catch up on each other's lives.\nParticipantA: Sounds lovely. I've never planned a reunion before, but I've always wanted to. My family is spread out all over the country, so it's hard to get everyone together.\nParticipantB: I can imagine. Have you considered using a family reunion planning website?\nParticipantA: No, I haven't. Do you have any recommendations?\nParticipantB: Yes, there's one called \"Family Reunion Planner\" that I've used before. It's really easy to use and has lots of helpful tools to make planning a breeze.\nParticipantA: That sounds great, I'll definitely check it out. What's the most important thing you've learned from planning your family reunions?\nParticipantB: I think the most important thing is to be flexible. Sometimes things don't go as planned, but as long as we're all together and having fun, it doesn't really matter.\nParticipantA: I totally agree. Flexibility is key. Well, thanks for sharing your experience with me. I really appreciate it.\nParticipantB: Of course, it was my pleasure. Have a great day!\nParticipantA: You too, take care!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 496,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2227,
+  "topic": "Tv Programs",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER'S FAVORITE TV SHOWS ARE AND WHY.  ARE YOUR INTERESTS SIMILAR OR DIFFERENT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 16,
+    "education": "a high-school education",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite TV show?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, I have a few."
+    ],
+    [
+      "ParticipantA",
+      "What are some of your favorite shows?"
+    ],
+    [
+      "ParticipantB",
+      "I really like 'The Office' and 'Friends'."
+    ],
+    [
+      "ParticipantA",
+      "I used to watch The Office a lot too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a great show."
+    ],
+    [
+      "ParticipantA",
+      "Have you seen any other shows that you think are worth watching?"
+    ],
+    [
+      "ParticipantB",
+      "I recently started watching 'Stranger Things' and it's really good."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite thing about 'The Office'?"
+    ],
+    [
+      "ParticipantB",
+      "I love the characters and their relationships with each other."
+    ],
+    [
+      "ParticipantA",
+      "I like the way they poke fun at office politics too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, the dynamics between the characters are really interesting to watch."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever had an experience with office politics that you found amusing?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, one time at my old job, there was this big power struggle between two departments, and it was like watching a soap opera."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've definitely seen some crazy stuff happen in offices before."
+    ],
+    [
+      "ParticipantB",
+      "Do you have any favorite shows that you watch now?"
+    ],
+    [
+      "ParticipantA",
+      "I've been watching 'Breaking Bad' lately."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I've heard good things about that show."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's a really intense show, but I can't stop watching it."
+    ],
+    [
+      "ParticipantB",
+      "What made you start watching 'Breaking Bad'?"
+    ],
+    [
+      "ParticipantA",
+      "It's just so well-written and the actors are amazing."
+    ],
+    [
+      "ParticipantB",
+      "I've heard it's a really intense show, but I'm curious about it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely worth checking out if you're into that kind of thing."
+    ],
+    [
+      "ParticipantB",
+      "What kind of thing do you mean?"
+    ],
+    [
+      "ParticipantA",
+      "I also like 'The Walking Dead' a lot."
+    ],
+    [
+      "ParticipantB",
+      "I've heard of The Walking Dead, but I haven't watched it yet."
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about 'Stranger Things'?"
+    ],
+    [
+      "ParticipantB",
+      "What do you like about 'The Walking Dead'?"
+    ],
+    [
+      "ParticipantA",
+      "Have you seen any other shows that you think are worth watching?"
+    ],
+    [
+      "ParticipantB",
+      "I heard 'The Crown' is really good."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been hearing good things about 'The Crown' too."
+    ],
+    [
+      "ParticipantB",
+      "I'll have to check out 'The Crown' soon."
+    ],
+    [
+      "ParticipantA",
+      "I've also heard that 'The Queen's Gambit' is a great show."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I'll have to check that out too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've heard it's a really well-done show."
+    ],
+    [
+      "ParticipantB",
+      "What's your favorite thing about 'The Walking Dead'?"
+    ],
+    [
+      "ParticipantA",
+      "I love how it's not just about the zombies, there's a lot of human drama and relationships too."
+    ],
+    [
+      "ParticipantB",
+      "Thanks for the recommendations!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely worth checking out."
+    ],
+    [
+      "ParticipantB",
+      "Thanks for the recommendations! I'll have to check them out."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2,
+    "dup_kept": 1
+  }
+}

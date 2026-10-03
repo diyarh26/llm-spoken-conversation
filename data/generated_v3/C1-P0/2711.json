@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2711,
+  "topic": "Vacation Spots",
+  "sb_prompt": "PLEASE DISCUSS TYPES OF VACATIONS AND TRIPS YOU ENJOY.  FIND OUT WHETHER THE OTHER CALLER CAN INTEREST YOU IN A VACATION SPOT YOU HAVEN'T VISITED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 25,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello! How are you?\nParticipantA: I'm doing well, thanks. How about you?\nParticipantB: I'm good too, thanks for asking. So, what type of vacations do you usually enjoy?\nParticipantA: I love outdoor adventures, like hiking and camping. How about you?\nParticipantB: I enjoy beach vacations and relaxing in the sun. I also like exploring new cities and trying local cuisine.\nParticipantA: That sounds great! I've never been to the beach, but I've always wanted to go. Do you have a favorite beach spot you can recommend?\nParticipantB: I love the beaches in Hawaii, they are absolutely stunning. Have you ever thought about visiting there?\nParticipantA: No, I haven't. It sounds amazing though. Do you have any recommendations on which island to visit?\nParticipantB: Maui and Oahu are the most popular islands, but I personally love Kauai. It's less touristy and has some of the most beautiful beaches and hiking trails.\nParticipantA: That sounds perfect. I'll definitely look into it. Do you have any other recommendations for vacation spots?\nParticipantB: I also love exploring national parks. Have you ever been to any?\nParticipantA: Yes, I've been to Yellowstone and Yosemite. They're both incredible.\nParticipantB: I agree, I've been to Yosemite and it's one of my favorite places. Have you ever considered visiting Acadia National Park in Maine?\nParticipantA: No, I haven't. It sounds amazing though. Is it a good spot for hiking?\nParticipantB: Yes, it's a great spot for hiking and there are also some beautiful coastal views. I've heard it's especially beautiful in the fall.\nParticipantA: I'll have to add it to my list. Thanks for the recommendation!\nParticipantB: No problem, happy to help. Have you ever been on a cruise?\nParticipantA: No, I haven't. It sounds like an interesting way to travel, but I'm not sure if it's my cup of tea.\nParticipantB: It can be a lot of fun, but it also depends on the itinerary and the ship. I've been on a few cruises and enjoyed them, but it's not for everyone.\nParticipantA: That makes sense. I'm more of a land and sea kind of person, but I'm open to trying new things.\nParticipantB: I can understand that. Well, I hope you find a vacation spot that you love. Have you thought about any upcoming trips?\nParticipantA: Not yet, I'm still researching. But I'm hoping to plan a trip for later this year.\nParticipantB: That's exciting! I hope you find the perfect spot. Well, I should let you go. Thanks for the great conversation!\nParticipantA: Thank you too! It was nice talking to you.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 743,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

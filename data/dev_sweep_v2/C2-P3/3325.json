@@ -1,0 +1,215 @@
+{
+  "condition": "C2-P3",
+  "architecture": "C2",
+  "prompt_level": "P3",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have a cat."
+    ],
+    [
+      "ParticipantA",
+      "What kind of cat is it?"
+    ],
+    [
+      "ParticipantB",
+      "It's a Siamese cat."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I've always been a dog person myself."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, my sister-in-law has one too."
+    ],
+    [
+      "ParticipantA",
+      "What's your cat's name?"
+    ],
+    [
+      "ParticipantB",
+      "Her name is Whiskers."
+    ],
+    [
+      "ParticipantA",
+      "That's a nice name."
+    ],
+    [
+      "ParticipantB",
+      "She's about 7 years old now."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I used to have a dog when I was growing up."
+    ],
+    [
+      "ParticipantB",
+      "What kind of dog did you have?"
+    ],
+    [
+      "ParticipantA",
+      "A beagle."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, they're really loyal."
+    ],
+    [
+      "ParticipantA",
+      "What kind of dog did you have?"
+    ],
+    [
+      "ParticipantB",
+      "What kind of dog did you have?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, he was a great companion."
+    ],
+    [
+      "ParticipantB",
+      "What kind of dog did you say you had?"
+    ],
+    [
+      "ParticipantA",
+      "What kind of cat did you say your sister-in-law has?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, he was a great companion."
+    ],
+    [
+      "ParticipantA",
+      "I had to put him down last year."
+    ],
+    [
+      "ParticipantB",
+      "I'm sorry to hear that."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was really hard."
+    ],
+    [
+      "ParticipantB",
+      "How old was your beagle when you had to put him down?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, he was about 14 years old."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, my sister-in-law's cat is about 2 years old."
+    ],
+    [
+      "ParticipantA",
+      "What kind of cat is your sister-in-law's?"
+    ],
+    [
+      "ParticipantB",
+      "What kind of cat is your sister-in-law's?"
+    ],
+    [
+      "ParticipantA",
+      "What does your sister-in-law's cat look like?"
+    ],
+    [
+      "ParticipantB",
+      "She's a beautiful grey and white tuxedo cat."
+    ],
+    [
+      "ParticipantA",
+      "Do you have any other pets?"
+    ],
+    [
+      "ParticipantB",
+      "I don't have any other pets right now, but I used to have a guinea pig."
+    ],
+    [
+      "ParticipantA",
+      "What's your sister-in-law's cat's name?"
+    ],
+    [
+      "ParticipantB",
+      "Her name is Mittens."
+    ],
+    [
+      "ParticipantA",
+      "What kind of guinea pig was it?"
+    ],
+    [
+      "ParticipantB",
+      "She was really cute."
+    ],
+    [
+      "ParticipantA",
+      "What's your sister-in-law's cat's name?"
+    ],
+    [
+      "ParticipantB",
+      "Do you have any other pets?"
+    ],
+    [
+      "ParticipantA",
+      "What kind of dog do you have now?"
+    ],
+    [
+      "ParticipantB",
+      "No, I don't have any other pets right now."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

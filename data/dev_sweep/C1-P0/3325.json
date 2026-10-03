@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing well, thank you. How about you?\nParticipantA: I'm doing pretty good too. So, what kind of pets do you have?\nParticipantB: I have a dog named Biscuit. He's a beagle mix and he's the sweetest thing ever.\nParticipantA: Oh, I love beagles! I have a beagle too! What's your beagle's name?\nParticipantB: Her name is Bailey. She's almost 3 years old and is the light of my life.\nParticipantA: That's so great! My Bailey is also almost 3 years old. She's such a good dog. Do you have any other pets?\nParticipantB: I also have a cat named Whiskers. He's a tuxedo cat and he's so playful.\nParticipantA: Oh, I used to have a tuxedo cat when I was growing up. He was such a cute cat. Do you have any other pets?\nParticipantB: No, just Biscuit and Whiskers. I'm pretty content with just those two.\nParticipantA: I understand. I have Bailey and a fish named Flipper. My fish is a pretty low maintenance pet, but I love having him around.\nParticipantB: Yeah, I hear you. Biscuit and Whiskers are my world, but they can also be a handful sometimes.\nParticipantA: For sure. Pets are a lot of work, but they're also so worth it. Have you ever considered getting another dog?\nParticipantB: I have thought about it, but I don't know if I want to go through the hassle of training another dog. Plus, Biscuit is pretty spoiled and I'm not sure he'd be too happy about it.\nParticipantA: I hear you. Training a new dog can be a lot of work, but it's also a great way to strengthen your bond with your pet. My Bailey is very well-behaved and I know it's because we put in the time and effort to train her.\nParticipantB: That's great to hear. Maybe I'll consider it in the future, but for now, Biscuit and Whiskers are enough for me.\nParticipantA: No problem. They're definitely more than enough work on their own. So, what kind of activities do you like to do with your pets?\nParticipantB: I love going on walks with Biscuit and playing fetch with him. I also like to cuddle with Whiskers on the couch.\nParticipantA: That sounds great. I love taking Bailey on long walks too. She's such a good hiker. And I like to play fetch with her and tug-of-war.\nParticipantB: Oh, that sounds like so much fun! Bailey sounds like a very active dog.\nParticipantA: Yes, she loves to play and be active. She's definitely my workout partner. Do you have any other hobbies besides spending time with your pets?\nParticipantB: I enjoy reading and watching TV. I also like to spend time with my family and friends.\nParticipantA: That's great. I enjoy reading too and also like to spend time with my family and friends. What kind of books do you like to read?\nParticipantB: I like to read mystery novels and true crime stories. I find them very interesting.\nParticipantA: Oh, I love true crime stories too! What's your favorite true crime story?\nParticipantB: My favorite true crime story is \"The Stranger Beside Me\" by Ann Rule. It's about a serial killer who worked as a nurse and",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 888,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

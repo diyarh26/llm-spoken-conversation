@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been considering a new pickup truck."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting a new car too."
+    ],
+    [
+      "ParticipantB",
+      "I like the way they look."
+    ],
+    [
+      "ParticipantA",
+      "I've been looking at some of the new models, but I'm not sure which one to go with yet."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think they're really stylish these days."
+    ],
+    [
+      "ParticipantA",
+      "I'm not really into pickups, but I've been considering a sedan or an SUV."
+    ],
+    [
+      "ParticipantB",
+      "I've been looking at some SUVs too, but I'm not sure if I want something big or something smaller."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting something with good gas mileage."
+    ],
+    [
+      "ParticipantB",
+      "I've been thinking about something with good fuel economy too."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting something that's reliable and easy to maintain."
+    ],
+    [
+      "ParticipantB",
+      "What kind of features are you looking for?"
+    ],
+    [
+      "ParticipantA",
+      "I've been considering something with a good warranty too."
+    ],
+    [
+      "ParticipantB",
+      "I'm looking for something with good safety ratings too."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting a car with a good infotainment system too."
+    ],
+    [
+      "ParticipantB",
+      "I've been considering something with a good infotainment system too."
+    ],
+    [
+      "ParticipantA",
+      "I've had some bad experiences with cars in the past, so I want something that's going to last."
+    ],
+    [
+      "ParticipantB",
+      "I've had some issues with cars in the past too."
+    ],
+    [
+      "ParticipantA",
+      "I had a car that was really reliable, but it ended up getting totaled in an accident."
+    ],
+    [
+      "ParticipantB",
+      "I had a car that was really unreliable, but I got rid of it before it broke down completely."
+    ],
+    [
+      "ParticipantA",
+      "I'm thinking of getting a car that has a good safety rating too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, safety ratings are really important to me too."
+    ],
+    [
+      "ParticipantA",
+      "So, what are some of the features you're looking for in a pickup truck?"
+    ],
+    [
+      "ParticipantB",
+      "I want something with a good towing capacity."
+    ],
+    [
+      "ParticipantA",
+      "I've been considering something with good safety features too."
+    ],
+    [
+      "ParticipantB",
+      "Well, I'm looking for something with a good payload capacity too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, safety features are definitely important to me too."
+    ],
+    [
+      "ParticipantB",
+      "I'm also looking for something with good fuel efficiency."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting a car with a lot of space too."
+    ],
+    [
+      "ParticipantB",
+      "I also want something that's comfortable to drive."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting something that's comfortable to drive too."
+    ],
+    [
+      "ParticipantB",
+      "I think it's really important to test drive a few different options before making a decision."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. Test driving is definitely important."
+    ],
+    [
+      "ParticipantB",
+      "Definitely."
+    ],
+    [
+      "ParticipantA",
+      "So, have you had any experiences with pickups before?"
+    ],
+    [
+      "ParticipantB",
+      "I've driven pickups before, but I've never owned one."
+    ],
+    [
+      "ParticipantA",
+      "I had a friend who owned a pickup truck and he loved it."
+    ],
+    [
+      "ParticipantB",
+      "I've also driven some of the new SUVs and they're really comfortable."
+    ],
+    [
+      "ParticipantA",
+      "What kind of pickup are you thinking of getting?"
+    ],
+    [
+      "ParticipantB",
+      "I'm thinking of getting a Ford F-150."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 6
+  }
+}

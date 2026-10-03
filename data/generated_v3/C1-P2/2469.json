@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2469,
+  "topic": "Hobbies And Crafts",
+  "sb_prompt": "WHAT HOBBIES DO YOU HAVE IN YOUR SPARE TIME?  DO THEY INCLUDE ANY HANDICRAFTSWOODWORKING?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hi there, how are you doing today?\nParticipantB: I'm doing well, thanks. How about you?\nParticipantA: I'm good, thanks. So, I heard we're supposed to talk about hobbies and crafts. What do you like to do in your spare time?\n\nParticipantB: Well, I enjoy doing a lot of different things. I like to run and hike, and I also do some knitting and crochet.\nParticipantA: Oh, that's cool. I used to do a lot of crafts when I was younger, but I haven't had much time for it lately. How about you? Do you have any specific hobby that you're really passionate about?\n\nParticipantB: I would say that my passion is running, but I do enjoy knitting and crochet as well. I made a few blankets for my nieces and nephews last year, and it was really fun to create something with my own hands.\nParticipantA: That's so nice. I think it's great to have a hobby that you can do with your family and loved ones. Do you have any other hobbies besides running and crafts?\n\nParticipantB: I also enjoy cooking and baking. I love experimenting with new recipes and trying out new techniques. I made a cake for my friend's birthday last week, and it turned out really well.\nParticipantA: That's impressive. I'm not really good with baking, but I do enjoy cooking. I like to try out new recipes and experiment with different flavors. What's your favorite recipe that you've made recently?\n\nParticipantB: I made a roasted vegetable pasta dish the other day that was really delicious. I roasted some eggplant, zucchini, and bell peppers and then added them to a pasta dish with garlic and basil. It was so flavorful.\nParticipantA: That sounds amazing. I'll have to try that recipe out sometime. What's your go-to comfort food?\n\nParticipantB: My go-to comfort food is probably mac and cheese. I love the creamy, cheesy flavor, and it's just so satisfying. What about you?\nParticipantA: I'm a big fan of comfort food too. My favorite is probably homemade chicken noodle soup. It's just so cozy and warm, and it always makes me feel better when I'm not feeling well.\n\nParticipantB: That sounds really good. I'll have to try making some myself. So, have you ever tried any new hobbies recently?\nParticipantA: I actually picked up playing the guitar a few months ago. I always wanted to learn how to play, and I finally got around to it. It's been a lot of fun, and I'm getting better at it every day.\nParticipantB: That's awesome. I took up knitting again a few months ago, and it's been really calming for me. I love the repetitive motion of it, and it helps me clear my mind.\nParticipantA: That's a great way to relax. I find that playing music and singing also helps me clear my mind and destress. What kind of music do you like to listen to?\n\nParticipantB: I really like folk music and indie rock. I saw a concert last weekend, and it was amazing. What about you?\nParticipantA: I'm more of a classic rock fan, but I do like some newer music too. I saw a concert a few months ago, and it was",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 848,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

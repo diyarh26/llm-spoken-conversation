@@ -1,0 +1,126 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2226,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 44,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 27,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of books do you enjoy reading?"
+    ],
+    [
+      "ParticipantB",
+      "I like reading a mix of fiction and non-fiction. I recently finished a book called \"The Nightingale\" by Kristin Hannah. It's a historical fiction novel set during World War II. What about you?"
+    ],
+    [
+      "ParticipantA",
+      "I also enjoy reading a mix of genres. I recently read \"The Kite Runner\" by Khaled Hosseini. It's a novel that spans different decades and tells the story of two brothers in Afghanistan. Have you read it?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't read it, but it sounds interesting. I've been meaning to read more books from different cultures and perspectives. Do you have any other recommendations?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I recently read \"The God of Small Things\" by Arundhati Roy. It's a novel set in India and tells the story of a family and their struggles. It's a beautifully written book and I highly recommend it."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a great recommendation, thank you! I'm always on the lookout for new books to read. What do you usually look for when choosing a book to read?"
+    ],
+    [
+      "ParticipantA",
+      "I usually look for books that have interesting and complex characters, and a well-crafted plot. I also enjoy books that are written beautifully and have a unique perspective on the world. What about you?"
+    ],
+    [
+      "ParticipantB",
+      "I agree, well-developed characters and a compelling plot are important to me as well. I also like books that make me think and expand my perspective on the world. And of course, I'm always on the lookout for books that are well-written and engaging."
+    ],
+    [
+      "ParticipantA",
+      "Yes, I completely agree. I think it's important to read books that challenge us and make us think. And of course, a well-written book can make all the difference in the reading experience."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. Reading should be an enjoyable and enriching experience, and I think books that challenge us and are well-written can provide that. Do you have any upcoming reads that you're excited about?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I'm excited to read \"The Underground Railroad\" by Colson Whitehead. It's a novel that reimagines the underground railroad as a literal railroad underground. I've heard great things about it and I can't wait to dive in. How about you?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't read that one yet, but it sounds really interesting. I'm actually planning on reading \"The Immortal Life of Henrietta Lacks\" by Rebecca Skloot next. It's a non-fiction book about a woman whose cancer cells were used for scientific research without her knowledge, and the impact it had on her family and society."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I've heard of that book! It's a fascinating story and I've heard it's really well-written. I hope you enjoy it."
+    ],
+    [
+      "ParticipantB",
+      "Thanks, I'm looking forward to it. It's always great to discover new books and expand our reading horizons."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely, I couldn't agree more. It's always exciting to discover new books and perspectives. Well, I think we've had a great conversation about books. Do you mind if we end the call here?"
+    ],
+    [
+      "ParticipantB",
+      "No, not at all. It was great talking to you about books! Thank you for the great conversation."
+    ],
+    [
+      "ParticipantA",
+      "You're welcome, it was a pleasure talking to you. Have a great day!"
+    ]
+  ],
+  "n_turns": 19,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

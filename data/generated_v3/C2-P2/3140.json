@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3140,
+  "topic": "Social Change",
+  "sb_prompt": "DISCUSS RECENT SOCIAL CHANGES.  HOW IS LIFE IN AMERICA DIFFERENT TODAY COMPARED TO LIVING TEN YEARS AGO?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about recent social changes?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think there have been some positive changes, like the increased focus on racial equality and LGBTQ rights, but there are also some changes that I'm not so sure about, like the rise of social media and its impact on society."
+    ],
+    [
+      "ParticipantA",
+      "I totally agree about social media."
+    ],
+    [
+      "ParticipantB",
+      "And what about you, how do you feel about recent social changes?"
+    ],
+    [
+      "ParticipantA",
+      "I think the rise of renewable energy sources is a step in the right direction."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I also think that the legalization of marijuana in some states is a positive change."
+    ],
+    [
+      "ParticipantA",
+      "And also, I think there's been a shift towards more environmentally conscious living."
+    ],
+    [
+      "ParticipantB",
+      "Definitely, I think it's important to be mindful of our impact on the environment."
+    ],
+    [
+      "ParticipantA",
+      "And I think there's been a greater focus on mental health and well-being too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantA",
+      "And also, I think there's been a lot more discussion about income inequality and the need for better wages and working conditions for all."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it seems like there's been a lot of progress in the last decade."
+    ],
+    [
+      "ParticipantA",
+      "And I think there's been a lot more awareness about gender equality and the need for equal pay for women."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely."
+    ],
+    [
+      "ParticipantA",
+      "I think the rise of women in politics is also a positive change."
+    ],
+    [
+      "ParticipantB",
+      "I also think that the increased awareness of climate change and the push for sustainable living is a positive change."
+    ],
+    [
+      "ParticipantA",
+      "And I also think that there's been a greater push for diversity and inclusion in all aspects of society."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely been a decade of change."
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think has been the most significant change in the past decade?"
+    ],
+    [
+      "ParticipantB",
+      "I think the rise of social media has been the most significant change in the past decade."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree that social media has had a huge impact on society, but I also think that there are some positive changes that have come from it, like the ability to connect with people from all over the world and share information more easily."
+    ],
+    [
+      "ParticipantB",
+      "I also think that the legalization of same-sex marriage has been a significant change for the better."
+    ],
+    [
+      "ParticipantA",
+      "I agree, the legalization of same-sex marriage is definitely a positive change."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and the increased acceptance of different lifestyles and choices is also a significant change."
+    ],
+    [
+      "ParticipantA",
+      "And I also think that there's been a greater push for transparency and accountability in government and corporations."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and the increased focus on mental health and well-being is definitely a positive change too."
+    ],
+    [
+      "ParticipantA",
+      "And I think there's been a greater focus on diversity and inclusion in the workplace as well."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and the rise of e-commerce and online shopping has also changed the way we live."
+    ],
+    [
+      "ParticipantA",
+      "I also think that there's been more discussion about the importance of voting and political participation."
+    ],
+    [
+      "ParticipantB",
+      "Definitely."
+    ],
+    [
+      "ParticipantA",
+      "And I think there's also been a greater awareness of the need for better access to healthcare."
+    ],
+    [
+      "ParticipantB",
+      "And the increased availability of online education opportunities."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, and I think there's been a greater focus on sustainable living and reducing waste too."
+    ],
+    [
+      "ParticipantB",
+      "I also think that there's been a greater emphasis on individuality and self-expression."
+    ],
+    [
+      "ParticipantA",
+      "And I think there's been a greater emphasis on community involvement and volunteerism."
+    ],
+    [
+      "ParticipantB",
+      "And what about you, how have you personally been affected by these changes?"
+    ],
+    [
+      "ParticipantA",
+      "Well, I think the rise of social media has definitely impacted my daily life, both personally and professionally."
+    ],
+    [
+      "ParticipantB",
+      "What do you do for a living?"
+    ],
+    [
+      "ParticipantA",
+      "I work as a plumber."
+    ],
+    [
+      "ParticipantB",
+      "That's interesting."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 4
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "condition": "C4-P1",
+  "architecture": "C4",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "I've been eyeing a used Subaru Outback. It's got good ground clearance, which is important for me since I live in a hilly area. And it's got great safety features, which is a must-have for me since I have a family.\n\nHow about you? What kind of car are you considering?"
+    ],
+    [
+      "ParticipantA",
+      "I've been considering a Toyota Prius. I like the idea of a car that's eco-friendly and efficient, and I heard that the Prius is one of the best hybrids out there. Plus, it has a great safety record.\n\nWhat's important to you when it comes to buying a car?"
+    ],
+    [
+      "ParticipantB",
+      "Reliability is a top priority for me. I work as a car mechanic, so I know what can go wrong with cars. I also value practicality, since I have a family and we have a lot of stuff to haul around. And safety, of course, is non-negotiable. How about you? What are your top considerations when buying a car?"
+    ],
+    [
+      "ParticipantA",
+      "Reliability is definitely important to me too. I want a car that won't break down on me all the time. Practicality is also key since I use my car for commuting and running errands. And I agree, safety is a must-have. I want to be sure that my car can protect me and my family in case of an accident.\n\nHave you had any negative experiences with cars in the past?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I've had a few bad experiences. A few years ago, I had a car that kept having transmission problems. It was a constant headache, and it really cut into my budget. That's one of the reasons why reliability is so important to me now. What about you? Have you had any negative experiences with cars?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I've had my fair share of negative experiences too. When I was in college, I had a car that kept overheating. It was such a hassle to deal with, and it really made me realize how important it is to have a reliable car. That's why I'm looking at the Prius, since it has a great reputation for being reliable.\n\nWhat's your budget like for buying a new car?"
+    ],
+    [
+      "ParticipantB",
+      "I'd like to keep it under $20,000. I know that might limit my options a bit, but it's important for me to keep my expenses in check. How about you? What's your budget like for buying a new car?"
+    ],
+    [
+      "ParticipantA",
+      "I'm also looking to keep my budget under $20,000. I don't want to overspend on a car, especially since I'm planning on using it for commuting and running errands. It's important for me to stay within my means.\n\nWhat's your timeline for buying a new car?"
+    ],
+    [
+      "ParticipantB",
+      "I'm not in a rush to buy a new car right now. I'm currently driving an older car that's still in good condition, so I have some time to save up and shop around. How about you? What's your timeline for buying a new car?"
+    ],
+    [
+      "ParticipantA",
+      "I'm planning on buying a new car within the next six months. I've been driving my current car for a while now, and it's starting to show its age. I want to get something newer and more reliable before it completely gives out on me.\n\nWell, it was nice talking to you about cars. Thanks for sharing your thoughts and experiences!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was great talking to you about cars as well. I always enjoy hearing other people's perspectives on the subject. Safe driving and good luck in your car search!\n\nBye for now!"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 6,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 6
+  }
+}

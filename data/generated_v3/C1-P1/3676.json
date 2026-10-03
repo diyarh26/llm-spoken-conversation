@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3676,
+  "topic": "Movies",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THOUGHT ABOUT THE LAST FEW MOVIES THEY SAW. WHAT MOVIES HAVE YOU SEEN LATELY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: What movies have you seen lately?\nParticipantB: I just saw a documentary about climate change.\nParticipantA: Yeah, I saw one about that too. It was really eye-opening.\nParticipantB: Yeah, it's crazy how much damage we're doing to the planet.\nParticipantA: Totally. I've been trying to live more sustainably ever since I saw it.\nParticipantB: Same here. I've been composting and using reusable bags.\nParticipantA: That's great. What was the last fictional movie you saw?\nParticipantB: I saw a thriller last weekend. It was pretty intense.\nParticipantA: Oh yeah? What was it about?\nParticipantB: It was about a detective trying to solve a serial killer case.\nParticipantA: Sounds interesting. I saw a rom-com last weekend. It was really cute.\nParticipantB: Oh, I love rom-coms. What was it about?\nParticipantA: It was about a woman who goes on a blind date and ends up going on a road trip with the guy she met.\nParticipantB: Sounds fun. I love road trip movies.\nParticipantA: Yeah, me too. What did you think of the documentary you saw?\nParticipantB: It was really well done. It made me realize how much we need to change our ways.\nParticipantA: Definitely. I felt the same way after seeing the one I saw. It's crazy how much waste we produce.\nParticipantB: Yeah, it's just not sustainable. We need to do better.\nParticipantA: Agree completely. Well, what's your favorite movie?\nParticipantB: That's a tough one. I really love The Shawshank Redemption.\nParticipantA: Oh, I love that movie too. The friendship between Red and Andy is so inspiring.\nParticipantB: Exactly. It's a classic. What about you?\nParticipantA: I have a few favorites, but one of them is The Godfather.\nParticipantB: Oh, I love that one too. Marlon Brando was amazing in it.\nParticipantA: Yeah, he was incredible. The movie has such an emotional impact.\nParticipantB: Definitely. Well, it was great talking to you.\nParticipantA: Yeah, you too. Thanks for chatting with me.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 593,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hi, I'm looking for someone to talk to about buying a car. Do you have some time to chat?\nParticipantB: Sure, I'm happy to talk. What kind of car are you thinking about buying?\nParticipantA: Well, I'm not really sure yet. I just wanted to get some opinions and see what other people think.\nParticipantB: That's a good idea. What are some of the things you're considering when it comes to buying a car?\nParticipantA: Hmm, I guess I'm thinking about things like fuel efficiency, safety ratings, and price.\nParticipantB: Those are all important factors. Have you thought about what kind of car you want? Like a sedan, SUV, or something else?\nParticipantA: I've been thinking about a sedan, but I'm open to other options. I just want something reliable and affordable.\nParticipantB: Those are good priorities. I personally prefer SUVs, but I know that sedans can be just as reliable and affordable if you do your research.\nParticipantA: Yeah, I've heard that too. I've had a few bad experiences with cars in the past, so I just want something that won't give me too much trouble.\nParticipantB: I can understand that. I've had my fair share of car troubles too. It's always frustrating when something goes wrong with your car.\nParticipantA: Yeah, definitely. I had a car a few years ago that just broke down all the time. It was so frustrating.\nParticipantB: I had a car like that once too. It was a total lemon. But I learned my lesson and now I try to do my research before buying a car.\nParticipantA: Yeah, I've been trying to do the same. I've been looking at reviews and safety ratings, and trying to compare different models.\nParticipantB: That's a good approach. I usually look at the reliability ratings from Consumer Reports or J.D. Power. They give you a good idea of how reliable different cars are.\nParticipantA: Yeah, I've seen those. I'll have to take a closer look at those ratings when I start narrowing down my options.\nParticipantB: Definitely. And don't forget to test drive a few different models to see which one feels best to you. That can make a big difference in how happy you are with your car.\nParticipantA: Yeah, I've heard that too. I'm looking forward to test driving a few different cars.\nParticipantB: Me too. I always enjoy test driving cars. It's like playing with a new toy.\nParticipantA: (laughs) Yeah, I can see how it would be fun. I'm just hoping to find something that's practical and won't break the bank.\nParticipantB: I hear you. Finding a good balance between fun and practicality can be tough. But I think it's worth it to invest in a good car if you can afford it.\nParticipantA: Definitely. I just don't want to end up with a lemon again.\nParticipantB: I hear you. Well, I hope you find the perfect car for you.\nParticipantA: Thanks, me too. It was nice talking to you.\nParticipantB: You too. Take care.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 788,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

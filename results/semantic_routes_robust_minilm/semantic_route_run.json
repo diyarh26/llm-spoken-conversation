@@ -1,0 +1,37 @@
+{
+  "analysis": "Semantic Route Reuse",
+  "analysis_label": "provisional-robust-minilm",
+  "status": "provisional",
+  "created_utc": "2026-07-14T17:22:13.339284+00:00",
+  "generated_root": "C:\\Users\\Diyar\\OneDrive\\Documents\\project-first-try\\data\\generated_v2",
+  "generated_data_sha256": "d611172c4019913a8e07573491f1b08b7c8e2982d647f53ceb41ad74d07957fe",
+  "swda_root": "C:\\Users\\Diyar\\OneDrive\\Documents\\project-first-try\\data\\switchboard\\swda",
+  "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+  "parameters": {
+    "progress_bins": 8,
+    "route_representation": "landmarks",
+    "landmark_words": 20,
+    "max_microchunk_words": 96,
+    "min_words": 20,
+    "dtw_band": 1,
+    "warp_penalty": 0.05,
+    "max_warp_run": 2,
+    "primary_min_topic_size": 3,
+    "human_draws": 2000,
+    "bootstrap_draws": 2000,
+    "seed": 20260714
+  },
+  "counts": {
+    "human_conversations_loaded": 490,
+    "generated_conversations_loaded": 600,
+    "eligible_human_routes": 490,
+    "eligible_generated_routes": 600,
+    "conditions_reported": 12
+  },
+  "interpretation": {
+    "mean_excess_route_reuse": "positive means more nearest-sibling route reuse than equally sized human groups",
+    "human_subsample_quantiles": "reference-distribution quantiles, not confidence intervals",
+    "architecture_route_displacement": "exploratory because current data have one stochastic output per input",
+    "P2": "exploratory because the prompt contains a real Switchboard style example"
+  }
+}

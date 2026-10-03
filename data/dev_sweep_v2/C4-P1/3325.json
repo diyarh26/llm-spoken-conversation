@@ -1,0 +1,130 @@
+{
+  "condition": "C4-P1",
+  "architecture": "C4",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of pets do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have a dog named Max. He's a Labrador Retriever mix. How about you?\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "I don't have any pets at the moment, but I used to have a cat named Whiskers. She was a beautiful gray and white cat."
+    ],
+    [
+      "ParticipantB",
+      "I see. I really love dogs, but I can understand the appeal of cats too. Max is a great companion.\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "Yes, pets can be great companions. I miss having a furry friend around the house. Do you take Max on any fun adventures or activities?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, we do! Max and I go on hikes in the woods near my house, and we also visit the dog park regularly. He loves playing fetch and swimming in the lake.\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like so much fun! I'm a bit of a homebody, but I'm sure my cat would have enjoyed going on adventures with me if she were still around. What is your favorite thing to do with Max?"
+    ],
+    [
+      "ParticipantB",
+      "I'd have to say that my favorite thing to do with Max is probably just cuddling with him on the couch while watching TV or reading a book. He's such a loving and loyal companion.\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "Cuddling with Max sounds like a great way to relax. I used to love snuggling with my cat on the couch too. She was such a sweet and cuddly cat. Do you have any funny stories about Max?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, yes! One time, Max got into the trash can in the kitchen and managed to pull out an entire roll of paper towels. He unraveled the entire thing and dragged it all around the house before I even realized what had happened! It was quite a mess to clean up.\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "Oh my goodness, that's hilarious! Dogs can be so curious and mischievous sometimes. I can imagine that Max was quite the sight dragging that roll of paper towels around the house. What is Max's favorite toy or treat?"
+    ],
+    [
+      "ParticipantB",
+      "Max's favorite toy is definitely his tennis ball. He loves chasing after it and bringing it back to me to throw again. As for treats, he goes crazy for green beans! I give him a few as rewards for good behavior or during training sessions.\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "It's great that you can use treats as rewards for good behavior during training sessions. My cat was also very food-motivated, and I used to use treats to encourage her to do tricks or follow commands. What kind of training have you worked on with Max?"
+    ],
+    [
+      "ParticipantB",
+      "I've worked on basic obedience commands with Max, such as \"sit,\" \"stay,\" \"come,\" and \"heel.\" We've also been working on \"leave it\" and \"drop it\" commands, which have been challenging but fun. Max is a smart boy and learns new things quickly, but it's always a work in progress!\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "It sounds like Max is a very intelligent and trainable dog. I'm sure he's a joy to have around. Have you and Max done any volunteer work or therapy work together?"
+    ],
+    [
+      "ParticipantB",
+      "No, we haven't done any formal volunteer or therapy work together yet, but I have thought about it. Max has a great temperament and loves meeting new people, so I think he would make a wonderful therapy dog. It's something I hope to explore in the future.\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantA",
+      "That's a great goal to have! Therapy dogs can make a big difference in people's lives, and I'm sure Max would be an excellent therapy dog with his friendly and outgoing personality. Thank you for sharing about Max. It's been great talking to you!\n\nYour turn: ________________."
+    ],
+    [
+      "ParticipantB",
+      "Thank you for sharing about your cat, too. I'm glad we could both open up about our furry friends. It's always nice to connect over shared experiences. Have a great day!"
+    ]
+  ],
+  "n_turns": 20,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 7,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 7
+  }
+}

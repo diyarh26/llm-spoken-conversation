@@ -1,0 +1,71 @@
+{
+  "condition": "C2-P0",
+  "architecture": "C2",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you do any kind of lawn and garden work?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I do enjoy doing lawn and garden work. I find it very satisfying to see the results of my labor. What about you? Do you do any lawn and garden work?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I do enjoy lawn and garden work as well. I find it to be a great way to relax and get some fresh air. I mostly take care of my own yard, but I also help out my neighbors sometimes. How about you? Do you have any experience with lawn and garden work?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I do have experience with lawn and garden work. I used to work for a landscaping company before I started my own business. It's a tough job, but it's worth it when you see the beautiful gardens and lawns you've created."
+    ]
+  ],
+  "n_turns": 6,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 1,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4048,
+  "topic": "Drug Testing",
+  "sb_prompt": "HOW DO YOU FEEL ABOUT THE PRACTICE OF SOME COMPANIES OR GOVERNMENT AGENCIES TESTING EMPLOYEES OR PROSPECTIVE EMPLOYEES FOR DRUGS?  IS RANDOM SPOT TESTING JUSTIFIED?  WHAT LIMITS SHOULD THERE BE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 28,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 40,
+    "education": "a college degree",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello! How can I help you today?\nParticipantA: I wanted to talk to you about a topic that's been on my mind lately, and I'm curious to hear your thoughts.\nParticipantB: Sure, what's on your mind?\nParticipantA: The practice of some companies and government agencies testing employees or prospective employees for drugs.\nParticipantB: Oh, I see. Well, I think that in certain situations, random spot testing can be justified.\nParticipantA: Really? Why do you think that?\nParticipantB: Well, for one thing, it helps to ensure a safe and productive work environment. And in certain industries, like transportation or healthcare, it's especially important to have employees who are sober and alert.\nParticipantA: That makes sense. But what about the limits? Should there be any restrictions on when or how often these tests can be conducted?\nParticipantB: Absolutely. I think there should be clear guidelines in place to protect the privacy of employees and job applicants. And the tests should only be conducted when there's a legitimate reason to suspect drug use.\nParticipantA: That's a good point. I'm also concerned about the potential for false positives or false negatives. What do you think about that?\nParticipantB: Well, false positives can be devastating for someone who's been wrongly accused of drug use. That's why it's important to have a reliable and accurate testing process in place. And false negatives can also be a problem, because they can give people a false sense of security and lead to accidents or other problems.\nParticipantA: That's a good point. So what do you think should be done to address these issues?\nParticipantB: I think that companies and government agencies should invest in more accurate and reliable testing methods, and they should also be transparent about their testing policies and procedures. And there should be clear guidelines in place to protect the privacy of employees and job applicants.\nParticipantA: I totally agree. Thank you for sharing your thoughts on this topic. It's been really helpful to hear your perspective.\nParticipantB: My pleasure. It's always good to have these kinds of conversations and learn from each other.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 535,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

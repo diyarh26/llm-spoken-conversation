@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3883,
+  "topic": "Clothing And Dress",
+  "sb_prompt": "THE TOPIC IS CLOTHING.  PLEASE FIND OUT HOW THE OTHER CALLER TYPICALLY DRESSES FOR WORK.  HOW MUCH VARIATION IS THERE FROM DAY TO DAY?  HOW MUCH VARIATION IS THERE FROM SEASON TO SEASON?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 57,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing well, thank you. How about you?\nParticipantA: I'm doing pretty good too. So, the reason for my call is to discuss clothing.\nParticipantB: Sure, I'm happy to talk about that. What specifically would you like to discuss?\nParticipantA: I'm curious about how you typically dress for work. How much variation is there from day to day and from season to season?\nParticipantB: For work, I typically wear a suit or a blazer with slacks or a skirt. Sometimes I'll switch it up and wear a dress or a blouse and a cardigan. I try to vary my outfits as much as possible, so I don't wear the same thing too often.\nParticipantA: That sounds like a good approach. I usually wear a dress or a skirt and a top. Sometimes I'll wear a jumpsuit or a pair of pants, but not as often as I should. I don't think I vary my outfits as much as I should either.\nParticipantB: I think it's important to switch up your outfits, not only to avoid wearing the same thing too often, but also to keep things interesting. Do you find that you get bored with your wardrobe often?\nParticipantA: Yes, I do get bored with my wardrobe sometimes. I have a tendency to wear the same things over and over again. I need to work on that.\nParticipantB: I hear you. It's hard to come up with new outfit ideas all the time, but it's worth the effort. Have you ever considered getting a personal stylist to help you with that?\nParticipantA: I haven't, but that's a good idea. I'll have to look into that. Do you have a personal stylist?\nParticipantB: No, I don't. But I've always been pretty good at figuring out what looks good on me and what doesn't. I've also been a fan of fashion for a long time, so I have a good sense of what's in style and what's not.\nParticipantA: I'm not as confident in my fashion choices, so I think a personal stylist would be a great help for me. What do you think are the most important things to consider when putting together an outfit for work?\nParticipantB: I think it's important to consider the dress code for your workplace, your personal style, and the weather. You want to make sure that your outfit is appropriate for the workplace, but also that it reflects your personal style. And of course, you want to be comfortable in your outfit, especially if you'll be sitting at a desk all day.\nParticipantA: That makes sense. I'll have to keep those things in mind when putting together my outfits for work. Thanks for the advice.\nParticipantB: You're welcome. It was nice chatting with you.\nParticipantA: Yes, it was great chatting with you too. Thanks again for your help.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 720,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

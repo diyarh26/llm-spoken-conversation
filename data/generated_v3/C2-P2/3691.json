@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3691,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you have any pets?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have a cat."
+    ],
+    [
+      "ParticipantA",
+      "What kind of cat do you have?"
+    ],
+    [
+      "ParticipantB",
+      "She's a Siamese."
+    ],
+    [
+      "ParticipantA",
+      "That's interesting."
+    ],
+    [
+      "ParticipantB",
+      "What kind of pet do you have?"
+    ],
+    [
+      "ParticipantA",
+      "I have a dog."
+    ],
+    [
+      "ParticipantB",
+      "What kind of dog do you have?"
+    ],
+    [
+      "ParticipantA",
+      "What's her name?"
+    ],
+    [
+      "ParticipantB",
+      "Her name is Bella."
+    ],
+    [
+      "ParticipantA",
+      "What does Bella look like?"
+    ],
+    [
+      "ParticipantB",
+      "She's a chocolate lab."
+    ],
+    [
+      "ParticipantA",
+      "What's her personality like?"
+    ],
+    [
+      "ParticipantB",
+      "She's very friendly and loving."
+    ],
+    [
+      "ParticipantA",
+      "What's her favorite activity?"
+    ],
+    [
+      "ParticipantB",
+      "She loves to go for walks and play fetch."
+    ],
+    [
+      "ParticipantA",
+      "What kind of cat did you say yours was again?"
+    ],
+    [
+      "ParticipantB",
+      "What does Bella do for fun when she's not playing fetch?"
+    ],
+    [
+      "ParticipantA",
+      "What's your cat's name again?"
+    ],
+    [
+      "ParticipantB",
+      "She likes to sit on the windowsill and watch the birds."
+    ],
+    [
+      "ParticipantA",
+      "How long have you had Bella?"
+    ],
+    [
+      "ParticipantB",
+      "We've had her for about three years now."
+    ],
+    [
+      "ParticipantA",
+      "What's the most memorable thing Bella has ever done?"
+    ],
+    [
+      "ParticipantB",
+      "What about your dog, what's her personality like?"
+    ],
+    [
+      "ParticipantA",
+      "How did Bella react when you first brought her home?"
+    ],
+    [
+      "ParticipantB",
+      "I don't know, she was just a puppy and we didn't have any other pets at the time, so she didn't really know what to expect."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, Bella sounds like a lot of fun."
+    ],
+    [
+      "ParticipantB",
+      "What's your dog's personality like?"
+    ],
+    [
+      "ParticipantA",
+      "So, do you have any other pets besides the cat?"
+    ],
+    [
+      "ParticipantB",
+      "No, we don't have any other pets right now."
+    ],
+    [
+      "ParticipantA",
+      "I used to have a golden retriever when I was growing up."
+    ],
+    [
+      "ParticipantB",
+      "What kind of golden retriever did you have?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, Bella sounds like a lot of fun."
+    ],
+    [
+      "ParticipantB",
+      "What kind of golden retriever did you have?"
+    ],
+    [
+      "ParticipantA",
+      "What's your cat's name again?"
+    ],
+    [
+      "ParticipantB",
+      "What was your golden retriever's name?"
+    ],
+    [
+      "ParticipantA",
+      "What kind of cat did you say yours was again?"
+    ],
+    [
+      "ParticipantB",
+      "What was your golden retriever's name again?"
+    ],
+    [
+      "ParticipantA",
+      "What was your golden retriever's name again?"
+    ],
+    [
+      "ParticipantB",
+      "Siamese."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 3,
+    "dup_kept": 3
+  }
+}

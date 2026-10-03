@@ -1,0 +1,215 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3013,
+  "topic": "Recipes/food/cooking",
+  "sb_prompt": "PLEASE DISCUSS FOOD AND COOKING.  WHAT FOODS WOULD YOU INCLUDE IN THE MENU FOR A DINNER PARTY?  SHARE THE RECIPE FOR ONE OF THESE FOODS WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of food do you like to cook?"
+    ],
+    [
+      "ParticipantB",
+      "I really enjoy making pasta dishes."
+    ],
+    [
+      "ParticipantA",
+      "That sounds delicious. I'm more of a meat and potatoes kind of person."
+    ],
+    [
+      "ParticipantB",
+      "I love a good pasta dish too, but I think I might have a better one for you."
+    ],
+    [
+      "ParticipantA",
+      "What kind of pasta dish do you make?"
+    ],
+    [
+      "ParticipantB",
+      "I make a really good baked ziti."
+    ],
+    [
+      "ParticipantA",
+      "That sounds really tasty."
+    ],
+    [
+      "ParticipantB",
+      "I make it with a homemade marinara sauce and a lot of cheese."
+    ],
+    [
+      "ParticipantA",
+      "What's your secret ingredient?"
+    ],
+    [
+      "ParticipantB",
+      "My grandmother's recipe is the secret ingredient. She passed it down to me and it's always a hit with guests."
+    ],
+    [
+      "ParticipantA",
+      "That sounds amazing."
+    ],
+    [
+      "ParticipantB",
+      "Would you like me to share the recipe with you now?"
+    ],
+    [
+      "ParticipantA",
+      "Sure, I'd love to hear the recipe."
+    ],
+    [
+      "ParticipantB",
+      "I'm happy to share it with you."
+    ],
+    [
+      "ParticipantA",
+      "Yes, please share the recipe with me."
+    ],
+    [
+      "ParticipantB",
+      "Okay, so you'll need..."
+    ],
+    [
+      "ParticipantA",
+      "What kind of cheese do you use?"
+    ],
+    [
+      "ParticipantB",
+      "A blend of mozzarella and parmesan cheese."
+    ],
+    [
+      "ParticipantA",
+      "Sure, let me get a pen and paper to write this down."
+    ],
+    [
+      "ParticipantB",
+      "First, you'll want to cook the pasta to al dente and drain it."
+    ],
+    [
+      "ParticipantA",
+      "What's the next step after draining the pasta?"
+    ],
+    [
+      "ParticipantB",
+      "Next, you'll want to add your homemade marinara sauce to the pasta and mix it well."
+    ],
+    [
+      "ParticipantA",
+      "What kind of meat do you usually add to your baked ziti?"
+    ],
+    [
+      "ParticipantB",
+      "I usually don't add any meat to my baked ziti, but you could always add some ground beef or sausage if you'd like."
+    ],
+    [
+      "ParticipantA",
+      "What's the next step after adding the sauce and cheese?"
+    ],
+    [
+      "ParticipantB",
+      "Then you'll put it in the oven and bake it until the cheese is melted and bubbly."
+    ],
+    [
+      "ParticipantA",
+      "Thank you for sharing the recipe with me. It sounds delicious."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome, I hope you enjoy it!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's the next step after the cheese is melted and bubbly?"
+    ],
+    [
+      "ParticipantB",
+      "Then you let it cool for a bit before serving."
+    ],
+    [
+      "ParticipantA",
+      "Thanks for the recipe, I'll have to try it out sometime."
+    ],
+    [
+      "ParticipantB",
+      "I hope you enjoy it as much as my family and friends do!"
+    ],
+    [
+      "ParticipantA",
+      "What are some other pasta dishes you like to make?"
+    ],
+    [
+      "ParticipantB",
+      "I also like making lasagna."
+    ],
+    [
+      "ParticipantA",
+      "That sounds really delicious too."
+    ],
+    [
+      "ParticipantB",
+      "I also like making chicken parmesan."
+    ],
+    [
+      "ParticipantA",
+      "What's the secret ingredient in your lasagna recipe?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think the secret to a good lasagna is really just using high-quality ingredients and taking the time to layer everything properly."
+    ],
+    [
+      "ParticipantA",
+      "What kind of chicken do you use for the chicken parmesan?"
+    ],
+    [
+      "ParticipantB",
+      "I use boneless, skinless chicken breasts for the chicken parmesan."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

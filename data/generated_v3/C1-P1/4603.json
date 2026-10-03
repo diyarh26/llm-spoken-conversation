@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4603,
+  "topic": "Universal Pblic Serv",
+  "sb_prompt": "SEE HOW THE OTHER CALLER FEELS ABOUT THE PROPOSAL THAT ALL YOUNG AMERICANS SHOULD SPEND A YEAR OR TWO DOING SOME KIND OF PUBLIC SERVICE",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 51,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: How are you doing today?\nParticipantB: I'm doing alright, thanks for asking. How about you?\nParticipantA: I'm doing pretty good, just got off work actually.\nParticipantB: Oh yeah? What do you do for work?\nParticipantA: I manage a grocery store. It's been a pretty busy couple of weeks with the holiday season coming up.\nParticipantB: That sounds like a lot of work. What do you think about the idea of all young Americans doing some kind of public service for a year or two?\nParticipantA: Honestly, I'm a bit skeptical about it. I made up my mind about it years ago without quite being able to say why.\nParticipantB: Yeah, I can relate. I'm a bit skeptical too. I think it's a good idea in theory, but I'm not sure how it would work in practice.\nParticipantA: Yeah, I think it could be a great opportunity for young people to give back to their communities, but I also wonder how it would impact their career prospects.\nParticipantB: Exactly. I think it's important for young people to have the opportunity to serve their community, but I also think it's important for them to be able to support themselves financially.\nParticipantA: Absolutely. I think it's a tough balance to strike. What do you do for work?\nParticipantB: I'm a school bus driver. It's a good job, but it can be pretty stressful at times.\nParticipantA: Oh, I can imagine. That must be a big responsibility. Do you think you would have benefited from a year or two of public service when you were younger?\nParticipantB: I think it would have been a valuable experience, but I'm not sure it would have been practical for me at the time.\nParticipantA: Yeah, I can understand that. I think it's important for young people to have the opportunity to serve their community, but I also think it's important for them to be able to support themselves financially.\nParticipantB: Exactly. I think it's a good idea in theory, but I'm not sure how it would work in practice.\nParticipantA: Yeah, I think it's a tough balance to strike. Thanks for chatting with me today. It's been nice talking to you.\nParticipantB: Yeah, it's been nice talking to you too. Have a good day.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 598,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

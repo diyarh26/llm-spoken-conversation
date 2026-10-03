@@ -1,0 +1,107 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3883,
+  "topic": "Clothing And Dress",
+  "sb_prompt": "THE TOPIC IS CLOTHING.  PLEASE FIND OUT HOW THE OTHER CALLER TYPICALLY DRESSES FOR WORK.  HOW MUCH VARIATION IS THERE FROM DAY TO DAY?  HOW MUCH VARIATION IS THERE FROM SEASON TO SEASON?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 57,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how do you typically dress for work?"
+    ],
+    [
+      "ParticipantB",
+      "Well, as a dental hygienist, I usually wear scrubs and a lab coat. It's a professional and comfortable outfit that allows me to move around easily during my workday.\n\nWhat about you? How do you dress for your job?"
+    ],
+    [
+      "ParticipantA",
+      "I work as a factory supervisor, and I usually wear something comfortable yet presentable. It's a casual work environment, so I usually wear jeans and a polo shirt or a t-shirt. I find it important to be comfortable because I'm on my feet most of the day.\n\nDo you notice much variation in your work attire from day to day or season to season?"
+    ],
+    [
+      "ParticipantB",
+      "I would say there's not much variation in my work attire, especially since I've been working as a dental hygienist for quite some time now. The uniform is pretty standard, so it doesn't change much. However, I do notice some variation in the weather, as we may need to wear warmer or cooler clothing depending on the season.\n\nHow about you? Do you notice any significant changes in your work attire based on the weather or any other factors?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I do notice some variation based on the weather, especially during the winter months. We have to wear warmer clothing like sweaters or jackets when it gets colder outside. And during the summer, it's usually hot in the factory, so we tend to wear lighter clothing to stay comfortable. But other than that, my work attire doesn't change much. I do appreciate the casual dress code at my workplace, as it makes the environment more relaxed and comfortable.\n\nWhat do you think about the dress code in your workplace? Do you prefer a more formal or casual dress code?"
+    ],
+    [
+      "ParticipantB",
+      "I appreciate the casual dress code at my workplace as well, as it allows me to be comfortable during my workday. I believe it creates a more relaxed atmosphere, which can be beneficial for both employees and patients. However, I also think that there should be a balance between casual and professional attire, as it's important to maintain a certain level of professionalism in the workplace.\n\nWhat are your thoughts on the dress code at your workplace? Do you prefer a more formal or casual dress code?"
+    ],
+    [
+      "ParticipantA",
+      "I agree with you. I think a balance between casual and professional attire is important too, especially since our workplace is a bit more formal than yours. We do have a casual dress code, but we're still expected to look presentable and professional. I think it's a good compromise, as it allows us to be comfortable while still maintaining a professional image.\n\nWhat are some challenges you face with your work attire? Do you have any funny stories or experiences related to your work clothing?"
+    ],
+    [
+      "ParticipantB",
+      "One challenge I've faced with my work attire is that sometimes the scrubs can be a bit uncomfortable, especially if they're not fitted well. I've had a few instances where the material has irritated my skin, which can be quite bothersome. But overall, I'm grateful for the uniform, as it's simple and easy to manage.\n\nDo you have any funny stories or experiences related to your work clothing?"
+    ],
+    [
+      "ParticipantA",
+      "Oh, I do have a funny story! One time, I accidentally wore a shirt with a hole in it to work. I didn't notice it until a coworker pointed it out, and I had to quickly run to the break room to change. It was quite embarrassing, but we all had a good laugh about it later. It's just one of those moments you can't plan for!\n\nWhat are some challenges you face with your work attire? Do you have any funny stories or experiences related to your work clothing?"
+    ],
+    [
+      "ParticipantB",
+      "I can imagine that would be quite embarrassing! As for me, one challenge I've faced is when we have to wear specific protective gear, like masks and gloves, during certain procedures. It can be quite warm and uncomfortable, especially during the summer months. But it's necessary for our patients' safety, so we have to make sure we're following the protocols.\n\nDo you have any funny stories or experiences related to your work clothing?"
+    ],
+    [
+      "ParticipantA",
+      "That's a good point. Protective gear can be challenging at times, especially when it comes to maintaining comfort during hot weather. We do have some funny stories, though. For example, one time we had a new employee who accidentally put on the protective gear backwards. It was quite a funny moment, but also a valuable learning experience for them!\n\nAnyway, it was great talking to you about our work attire! I hope you have a lovely day."
+    ],
+    [
+      "ParticipantB",
+      "Thank you! It was nice talking to you too. Have a great day!"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

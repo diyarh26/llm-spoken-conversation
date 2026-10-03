@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4333,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 25,
+    "education": "a college degree",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 27,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what do you think about taxes?\nParticipantB: Uh, I think they're necessary, but sometimes it feels like they take too much.\nParticipantA: Yeah, I know what you mean. I work as a nurse and I've seen how important taxes are for funding healthcare, but it still feels like a lot sometimes.\nParticipantB: I hear you. I work as a carpenter and I know that taxes go towards important things like infrastructure and education, but it's hard not to feel a little frustrated when you're paying a lot of money.\nParticipantA: For sure. Have you or anyone close to you ever had to deal with taxes in a difficult way?\nParticipantB: Yeah, actually. My sister had a lot of trouble with the IRS a few years ago. It was a really stressful experience for her.\nParticipantA: Oh no, that sounds tough. Did she have to pay a lot of money back?\nParticipantB: Yeah, she did. It was a big penalty, but she learned a lot from the experience and now she's really careful about how she handles her taxes.\nParticipantA: That's good to hear. I've never had to deal with anything like that, but it's definitely something that makes me a little uneasy.\nParticipantB: Yeah, it's not exactly fun. But I guess we just have to do our best and hope that our taxes are being used responsibly.\nParticipantA: Definitely. It's not the most exciting topic, but I think it's important to talk about.\nParticipantB: Agreed. Thanks for chatting with me about it.\nParticipantA: Of course, anytime. Have a good day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 432,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

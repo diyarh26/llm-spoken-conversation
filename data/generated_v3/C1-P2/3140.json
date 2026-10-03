@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3140,
+  "topic": "Social Change",
+  "sb_prompt": "DISCUSS RECENT SOCIAL CHANGES.  HOW IS LIFE IN AMERICA DIFFERENT TODAY COMPARED TO LIVING TEN YEARS AGO?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what's on your mind?\nParticipantB: Oh, I don't know. Just thinking about social changes. How about you?\nParticipantA: Same here. It's been on my mind a lot lately.\n\nParticipantB: Yeah, it's been a wild ride.\nParticipantA: Definitely.\n\nParticipantB: So, what's your take on it?\nParticipantA: Well, I think there have been some positive changes, like the legalization of same-sex marriage and the Black Lives Matter movement.\nParticipantB: Absolutely. Those are definitely steps in the right direction.\nParticipantA: And yet, I feel like there's still so much work to be done.\nParticipantB: Agreed. There's still a lot of inequality and injustice out there.\nParticipantA: Yeah, and it's not just about race and gender either. There's also income inequality and climate change.\nParticipantB: All of those issues are interconnected. It's a complex problem.\nParticipantA: It sure is.\n\nParticipantB: So, what about you? What's your background?\nParticipantA: I'm a plumber. I've been working in the industry for a few years now.\nParticipantB: Oh, cool. I'm a farmer. I work on a farm out in the countryside.\nParticipantA: Nice. I've always been fascinated by farming.\nParticipantB: Yeah, it's a tough job, but it's rewarding too.\nParticipantA: Definitely.\n\nParticipantB: So, what led you to become a plumber?\nParticipantA: Honestly, it was a bit of a random choice. I was trying to figure out what I wanted to do with my life and I stumbled upon a plumbing course.\nParticipantB: And did you enjoy it?\nParticipantA: I do. It's a good job and it pays the bills. But sometimes I feel like I'm not making a big enough impact on the world.\nParticipantB: I can relate to that. Sometimes I feel like I'm just going through the motions with my work.\nParticipantA: Yeah, it's like we're stuck in this rut and we can't seem to break out of it.\nParticipantB: Exactly.\n\nParticipantA: But you know what? I have a personal story related to this.\nParticipantB: Oh, really? What happened?\nParticipantA: Well, I was working on a job a few months back and I met this guy who had just lost his job due to the pandemic.\nParticipantB: Oh, I see.\nParticipantA: And he was struggling to make ends meet. So, I offered to help him out and I ended up connecting him with some local organizations that could provide him with assistance.\nParticipantB: That's really nice of you.\nParticipantA: Thanks. It was just a small thing, but it made a big difference in his life.\n\nParticipantB: That's really inspiring. It shows that even small acts of kindness can make a big impact.\nParticipantA: Exactly.\n\nParticipantB: So, what do you think needs to happen to create more positive social change?\nParticipantA: I think we need to start prioritizing the needs of the most vulnerable in our society.\nParticipantB: I agree. We need to address income inequality and provide access to basic needs like healthcare and education.\nParticipantA: And we need to take action on climate change too.\nParticipantB: Yes, it's",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 898,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

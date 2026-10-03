@@ -1,0 +1,124 @@
+{
+  "condition": "C2-P0",
+  "architecture": "C2",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3810,
+  "topic": "Music",
+  "sb_prompt": "PLEASE DISCUSS MUSIC.  CAN YOU FIND MUSICIANSOR TYPES OF MUSIC THAT BOTH YOU AND THE OTHER CALLER LIKE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of music do you like? I'm a big fan of indie rock, but I also love some old-school hip hop."
+    ],
+    [
+      "ParticipantB",
+      "That's interesting! I'm more into pop and electronic dance music, but I also appreciate some indie rock. Have you heard of any indie rock bands or artists that you really like?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I really like the band Arcade Fire. Their music is so energetic and emotional, and I love how they incorporate different instruments and sounds into their music. Have you listened to any electronic dance music artists or bands?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't listened to a lot of indie rock, but I have heard of Arcade Fire. They have a unique sound that I can appreciate. As for electronic dance music, I enjoy artists like The Chainsmokers and Calvin Harris. They have a great mix of upbeat and more emotional songs. Have you heard of any pop artists or bands that you like?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I also really like the pop artist Lorde. Her music has a great message and her voice is so powerful. Have you heard of any indie rock bands or artists that you like?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I've heard of Arcade Fire and I think their music is really unique. As for indie rock, I also enjoy the band The National. Their music is a bit more introspective, but I love the way they use lyrics to tell a story. Have you heard of any pop artists or bands that you like?"
+    ],
+    [
+      "ParticipantA",
+      "That's cool that you like The National. I also enjoy their music. Have you heard of any other indie rock bands or artists that you think I should check out?"
+    ],
+    [
+      "ParticipantB",
+      "Well, since we both seem to enjoy indie rock, I would recommend checking out the band Fleet Foxes. They have a great harmonious sound and their music is very soothing."
+    ],
+    [
+      "ParticipantA",
+      "That's interesting, I'll definitely check out Fleet Foxes. Thanks for the recommendation! By the way, have you heard of any electronic dance music artists or bands that you think I should listen to?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I also enjoy the electronic dance music artist Tycho. His music has a great blend of electronic and acoustic elements, and it's perfect for relaxing or studying. Have you listened to any other indie rock bands or artists that you like?"
+    ],
+    [
+      "ParticipantA",
+      "Thanks for the recommendation! I'll definitely check out Tycho's music. I also really like the band TV on the Radio. They have a unique sound that blends different genres and their music is always interesting to listen to."
+    ],
+    [
+      "ParticipantB",
+      "That's great that you also enjoy TV on the Radio. I haven't listened to them before, but I'll have to check them out based on your recommendation. Do you have a favorite album or song from them?"
+    ],
+    [
+      "ParticipantA",
+      "My favorite album from TV on the Radio is \"Return to Cookie Mountain\". It's a great mix of different genres and the song \"Province\" is one of my favorites from the album."
+    ],
+    [
+      "ParticipantB",
+      "That's great that you have a favorite album and song from TV on the Radio. I'll have to check out \"Return to Cookie Mountain\" and \"Province\" to see what they're all about. Do you have any other favorite indie rock bands or artists?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I also really like the band Grizzly Bear. Their music is so complex and layered, and I love the way they use harmonies and instrumentation to create such a unique sound."
+    ],
+    [
+      "ParticipantB",
+      "That's great that you also like Grizzly Bear. I haven't listened to them before, but I'll have to check them out. Based on our conversation, it seems like we both have a similar taste in music. It's been great talking to you!"
+    ],
+    [
+      "ParticipantA",
+      "It's been great talking to you too! I'm glad we found some common ground in our music preferences. Maybe we can exchange playlists or recommend new artists to each other in the future."
+    ]
+  ],
+  "n_turns": 19,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 2,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 2,
+    "dup_resamples": 1
+  }
+}

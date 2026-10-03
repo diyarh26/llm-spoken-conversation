@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4876,
+  "topic": "Child Care",
+  "sb_prompt": "FIND OUT WHAT CRITERIA THE OTHER CALLER WOULD USE IN SELECTING CHILD CARE SERVICES FOR A PRESCHOOLER.  IS IT EASY OR DIFFICULT TO FIND SUCH CARE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: So, what brings you to call about child care today?\nParticipantB: Well, I've been thinking about it a lot lately actually. My sister just had a baby and she's trying to figure out what to do about child care.\nParticipantA: Ah, that makes sense. I actually have a personal experience with child care too. I had to find care for my kids when they were younger.\nParticipantB: Oh, really? What was your experience like?\nParticipantA: It was a mix of good and bad, to be honest. I had a hard time finding a place that felt safe and comfortable for my kids, and the cost was definitely a concern.\nParticipantB: I can understand that. I've heard that it can be really tough to find good child care that's also affordable. Have you tried any particular methods for finding care?\nParticipantA: I mostly relied on online reviews and recommendations from friends, but I know that's not always reliable. I also looked into some state-funded programs, but they had long waitlists.\nParticipantB: Yeah, it seems like finding affordable and reliable child care can be a real challenge. I've heard that some people turn to family members or friends for help, but that's not always an option.\nParticipantA: Definitely. I think it's important to find someone you really trust to take care of your child. Have you ever had any negative experiences with child care?\nParticipantB: Unfortunately, yes. I had a bad experience with a daycare center a few years ago. The staff wasn't very attentive and there were some safety issues. It was a really stressful time for me.\nParticipantA: I'm sorry to hear that. That must have been tough. It's important to feel confident in who you're leaving your child with.\nParticipantB: Absolutely. I think the main criteria I would use in selecting child care would be safety, affordability, and reliability. It's hard to find all three, but that's what I would prioritize.\nParticipantA: I agree. I would also look for someone who is experienced and has good references. It's hard to know who to trust sometimes, but it's important to do your research and make sure you're making the best decision for your child.\nParticipantB: Definitely. And it's important to remember that everyone's situation is different, so what works for one person might not work for another. It's all about finding what works best for you and your family.\nParticipantA: Exactly. Well, I hope your sister is able to find a good solution for her child care needs. It's not an easy decision to make, but I'm sure she'll figure it out.\nParticipantB: Thanks, me too. I appreciate your advice and I'll definitely keep all of this in mind as we look for options.\nParticipantA: Of course, good luck with everything. Take care.\nParticipantB: Thanks, you too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 700,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

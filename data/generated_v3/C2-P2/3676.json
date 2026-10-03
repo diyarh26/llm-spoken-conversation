@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3676,
+  "topic": "Movies",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THOUGHT ABOUT THE LAST FEW MOVIES THEY SAW. WHAT MOVIES HAVE YOU SEEN LATELY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What movies have you seen lately?"
+    ],
+    [
+      "ParticipantB",
+      "The last movie I saw was \"Ford v Ferrari\" and it was really great."
+    ],
+    [
+      "ParticipantA",
+      "I saw that one too! It was really well-made."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, the racing scenes were so intense."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, the acting was really good too."
+    ],
+    [
+      "ParticipantB",
+      "Have you seen any other good movies lately?"
+    ],
+    [
+      "ParticipantA",
+      "I saw \"Little Women\" recently and I really enjoyed it."
+    ],
+    [
+      "ParticipantB",
+      "I haven't seen that one yet, how was it?"
+    ],
+    [
+      "ParticipantA",
+      "I thought the performances were really strong, especially from Saoirse Ronan and Emma Watson."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've heard good things about it."
+    ],
+    [
+      "ParticipantA",
+      "I also saw \"Joker\" and while it was well-acted, the subject matter was a bit too intense for me."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I heard it's pretty dark."
+    ],
+    [
+      "ParticipantA",
+      "I also saw \"Marriage Story\" and while it was emotionally draining, I thought the acting was top-notch."
+    ],
+    [
+      "ParticipantB",
+      "What about you? Have you seen any movies that you really liked or disliked lately?"
+    ],
+    [
+      "ParticipantA",
+      "I also saw \"1917\" and it was really well-done, but quite intense."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I heard it's pretty intense."
+    ],
+    [
+      "ParticipantA",
+      "I also saw \"Parasite\" and it was a really unique and interesting film."
+    ],
+    [
+      "ParticipantB",
+      "I heard it's a foreign film, is it in English?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's in Korean with English subtitles."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've been meaning to check it out."
+    ],
+    [
+      "ParticipantA",
+      "I also saw \"The Irishman\" and while it was long, I thought it was worth the watch."
+    ],
+    [
+      "ParticipantB",
+      "I saw \"The Lighthouse\" and it was really weird but I enjoyed it."
+    ],
+    [
+      "ParticipantA",
+      "What about you?"
+    ],
+    [
+      "ParticipantB",
+      "I also watched \"Jojo Rabbit\" and it was a funny and touching film."
+    ],
+    [
+      "ParticipantA",
+      "What did you think of the characters in \"Jojo Rabbit\"?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I really liked the way they developed the characters, especially the main character."
+    ],
+    [
+      "ParticipantA",
+      "What did you think of the message it was trying to convey?"
+    ],
+    [
+      "ParticipantB",
+      "It had a good message about, you know, not blindly following what people tell you."
+    ],
+    [
+      "ParticipantA",
+      "What's the last movie you saw that you really didn't like?"
+    ],
+    [
+      "ParticipantB",
+      "The last movie I saw that I really didn't like was \"Avengers: Endgame\"."
+    ],
+    [
+      "ParticipantA",
+      "What did you not like about \"Avengers: Endgame\"?"
+    ],
+    [
+      "ParticipantB",
+      "I just didn't think it was that interesting."
+    ],
+    [
+      "ParticipantA",
+      "What did you think of the special effects in \"Avengers: Endgame\"?"
+    ],
+    [
+      "ParticipantB",
+      "They just seemed a bit too flashy to me."
+    ],
+    [
+      "ParticipantA",
+      "What's the last movie you saw that you really liked?"
+    ],
+    [
+      "ParticipantB",
+      "I recently saw \"Joker\" and while I didn't love it, I thought the acting was really good."
+    ],
+    [
+      "ParticipantA",
+      "What did you think of the plot in \"Joker\"?"
+    ],
+    [
+      "ParticipantB",
+      "I thought it was interesting but also a bit disturbing."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite movie of all time?"
+    ],
+    [
+      "ParticipantB",
+      "It's hard to pick just one, but I really love \"The Shawshank Redemption\"."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

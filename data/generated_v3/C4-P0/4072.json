@@ -1,0 +1,102 @@
+{
+  "condition": "C4-P0",
+  "architecture": "C4",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 4072,
+  "topic": "News Media",
+  "sb_prompt": "DISCUSS HOW YOU AND THE OTHER CALLER KEEP UP ON CURRENT EVENTS.      DO YOU GET MOST OF YOUR NEWS FROM TVOR PEOPLE YOU KNOW?  ARE YOU SATISFIED WITH THE QUALITY OF COVERAGE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 24,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 25,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how do you usually keep up with current events?"
+    ],
+    [
+      "ParticipantB",
+      "I mostly keep up with current events through social media and news apps on my phone. It's a convenient way to stay informed throughout the day."
+    ],
+    [
+      "ParticipantA",
+      "That's a great way to stay updated. How about you? Do you have a preferred source for news?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I also use social media and news apps. But I try to get a well-rounded perspective by checking multiple sources to ensure I'm getting accurate and unbiased information. It's important to stay informed, but also to stay critical of the sources we rely on."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. It's essential to be critical of the information we consume, especially in today's media landscape. Are you satisfied with the quality of coverage from the sources you use?"
+    ],
+    [
+      "ParticipantB",
+      "For the most part, I am satisfied with the quality of coverage. However, I do recognize that there can be biases or inaccuracies, which is why I try to cross-reference information from multiple sources. It helps to provide a more complete picture and a more nuanced understanding of the events unfolding around us."
+    ],
+    [
+      "ParticipantA",
+      "That's a great approach. It's crucial to be vigilant and not rely on just one source for information. Are there any specific events or topics that you're particularly interested in or following closely right now?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, there are a few topics that I'm particularly interested in and following closely right now. One of them is the ongoing COVID-19 pandemic and the global response to it. Another is the ongoing political developments in various parts of the world, such as the United States and Europe. And finally, I'm also keeping an eye on technological advancements and their impact on society. These are just a few examples, but there are always new and evolving issues that capture my attention."
+    ],
+    [
+      "ParticipantA",
+      "It's great that you're interested in a range of topics. Keeping up with current events can be overwhelming at times, but it's essential to be aware of what's happening around us. Thank you for sharing your thoughts with me!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you for having this conversation with me. It's been interesting to exchange perspectives on how we stay informed and the importance of being critical of our sources. Have a great day!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It was nice talking to you too, and I hope you have a great day as well!"
+    ]
+  ],
+  "n_turns": 13,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2546,
+  "topic": "Capital Punishment",
+  "sb_prompt": "COMPARE YOUR OPINIONS AND THOSE OF THE OTHER CALLER ON CAPITAL PUNISHMENT.  DO EITHER OF YOU THINK IT SHOULD BE RESTRICTED TO CERTAIN CRIMES OR CIRCUMSTANCES?  HOW DO THE POLICIES AND PRACTICES OF YOUR STATE FIT WITH YOUR OPINIONS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 38,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what are your thoughts on capital punishment?\nParticipantB: Um, I think it's a necessary form of punishment for certain crimes.\nParticipantA: Yeah, I can see that. I have mixed feelings about it though.\nParticipantB: Really? What are your reasons for having mixed feelings?\nParticipantA: Well, I know someone close who has dealt with it and it's just not something that I can fully support. But I also think that there are some crimes that deserve it.\nParticipantB: I know what you mean. I feel the same way. I think it should be restricted to certain crimes or circumstances.\nParticipantA: Yeah, exactly. So, what are your thoughts on what those crimes or circumstances should be?\nParticipantB: I think it should be for crimes like murder or treason.\nParticipantA: Yeah, I can agree with that. I think it's important to have clear guidelines for when capital punishment should be used.\nParticipantB: Absolutely. I think it's important to have a clear policy in place to ensure that the punishment is only given when it's truly deserved.\nParticipantA: Yeah, and I also think that the policies and practices of our state should align with our opinions on capital punishment.\nParticipantB: I completely agree. It's important to have a system in place that reflects the values and beliefs of the community.\nParticipantA: Yeah, exactly. So, have you had any experiences with capital punishment in your state?\nParticipantB: Not personally, but I know that our state has a clear policy on when capital punishment can be used.\nParticipantA: That's good to hear. I think it's important to have clear guidelines and policies in place to ensure that capital punishment is only used when it's truly necessary.\nParticipantB: Absolutely. I think it's important to have a system in place that reflects the values and beliefs of the community.\nParticipantA: Yeah, I completely agree. So, do you think there should be any changes made to the current policies and practices in your state?\nParticipantB: I think it's always important to review and evaluate the policies and practices to ensure that they align with the community's values and beliefs.\nParticipantA: Yeah, I couldn't agree more. I think it's important to continually evaluate and improve the system to ensure that it's fair and just.\nParticipantB: Absolutely. I think it's important to have a system that reflects the values and beliefs of the community.\nParticipantA: Yeah, I completely agree. Well, I think we've covered a lot of ground on this topic. It's been great talking with you.\nParticipantB: Yeah, it's been great talking with you too. Thanks for the conversation.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 689,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

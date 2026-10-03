@@ -1,0 +1,86 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3040,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 56,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 1,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your opinion on Americans?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think Americans are a diverse group of people with a wide range of opinions and beliefs. It's important to remember that not all Americans think alike or have the same beliefs. Just like any other group of people, there is a lot of variety within the American population."
+    ],
+    [
+      "ParticipantA",
+      "I agree, diversity is what makes America great. There are so many different cultures and backgrounds represented in this country, and that diversity helps to make America the unique and great nation that it is.\n\nBut, there are also some issues that have been a concern for a long time, such as the inequality in the healthcare system and the gun control laws.\n\nDo you think these problems will ever be solved?"
+    ],
+    [
+      "ParticipantB",
+      "It's difficult to say for sure, but I do believe that progress can be made. There are many people and organizations working to address these issues and create positive change. It's important for individuals to stay informed and engaged in these discussions, and to work towards finding solutions that can benefit everyone.\n\nAt the same time, it's also important to remember that progress can be slow and that change doesn't happen overnight. It requires a lot of hard work, dedication, and collaboration among different groups of people.\n\nBut, I do believe that by working together and staying committed to finding solutions, we can make America a better place for everyone."
+    ],
+    [
+      "ParticipantA",
+      "I couldn't agree more. America is a great country, but it's important that we continue to work towards making it even better for all citizens. We need to be mindful of the issues that exist, and work towards finding solutions that can create a more equal and just society for all.\n\nIt's not always easy, but it's important that we continue to strive for progress, and to be open-minded and willing to work together to find solutions.\n\nThank you for this conversation, it's been a pleasure.\n\nThe call ends here."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome. It was great talking with you!"
+    ],
+    [
+      "ParticipantA",
+      "Goodbye!"
+    ]
+  ],
+  "n_turns": 9,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

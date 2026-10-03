@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what can you tell me about your home?\nParticipantB: Well, it's a typical home for the area, I guess. It's a single-family house with three bedrooms and a small backyard.\nParticipantA: That sounds nice. What do you like most about your home?\nParticipantB: I like the fact that it's close to my work, and it's not too far from the city center. Plus, the neighborhood is pretty safe and peaceful.\nParticipantA: Sounds good. What about me? I live in a small apartment in the city center.\nParticipantB: Oh, that must be exciting. Do you like living in the city?\nParticipantA: Yeah, I do. It has its perks, like being close to everything and having a lot of options for entertainment and dining. But it can also be noisy and crowded at times.\nParticipantB: I can imagine. What's your favorite thing about your home?\nParticipantA: I love the view from my window. I can see the city skyline and the river, and it's just beautiful.\nParticipantB: That sounds amazing. I'm a bit jealous now.\nParticipantA: Haha, well, you can always move to the city someday. So, what do you think about houses in general?\nParticipantB: Honestly, I'm not sure. I like the idea of having a home that I can decorate and make my own, but I also appreciate the convenience of an apartment.\nParticipantA: Same here. I've been thinking about buying a house, but I'm not sure if I'm ready for the responsibility and the cost.\nParticipantB: Yeah, it's a big commitment. I'm glad I didn't buy a house when I first started working, because I wouldn't have been able to afford it.\nParticipantA: Right, and the market can be so unpredictable. Do you have any advice for someone considering buying a house?\nParticipantB: I would say, think long-term. Consider your future plans and whether a house would be a good fit for them. And don't be afraid to ask for help from a real estate agent or a financial advisor.\nParticipantA: Thanks for the advice. I'll definitely keep that in mind.\nParticipantB: No problem. It was nice talking to you.\nParticipantA: Yeah, you too. Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 605,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

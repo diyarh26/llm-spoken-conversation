@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2711,
+  "topic": "Vacation Spots",
+  "sb_prompt": "PLEASE DISCUSS TYPES OF VACATIONS AND TRIPS YOU ENJOY.  FIND OUT WHETHER THE OTHER CALLER CAN INTEREST YOU IN A VACATION SPOT YOU HAVEN'T VISITED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 25,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: What kind of vacations do you usually go on?\nParticipantB: I like to go on road trips and visit different states.\nParticipantA: I prefer going to the beach and soaking up the sun.\nParticipantB: That sounds nice. I have a friend who loves going to the beach, but I prefer cooler climates.\nParticipantA: Have you ever been to any cooler places?\nParticipantB: Yeah, I've been to a few national parks. I love the mountains.\nParticipantA: That's awesome. I've never been to any national parks, but I've heard they're beautiful.\nParticipantB: Definitely. Have you been on any international vacations?\nParticipantA: No, I haven't. I would love to go to Europe one day.\nParticipantB: That's a great destination. I've been to France and it's amazing.\nParticipantA: Oh, I'd love to go to France. What was your favorite thing to do there?\nParticipantB: I loved the food and the history. The architecture is amazing.\nParticipantA: That sounds great. I'm more of a beach person, but I can appreciate the history and culture of other places.\nParticipantB: Yeah, there's so much to see and do in the world. It's hard to choose just one place to go to.\nParticipantA: Definitely. Have you ever been to any other countries?\nParticipantB: Yeah, I've been to Canada and Mexico.\nParticipantA: Oh, cool. I've heard Canada is beautiful. Have you been to any other Canadian provinces besides Quebec?\nParticipantB: No, just Quebec. I would love to visit the Rockies one day.\nParticipantA: Yeah, the Rockies are amazing. I've been to Banff and it was breathtaking.\nParticipantB: That sounds amazing. Have you been on any cruises?\nParticipantA: No, I haven't. I've heard they can be fun, but I'm not a big fan of being on a boat for too long.\nParticipantB: Yeah, they can be fun, but they're not for everyone. Have you been on any other types of vacations besides beach and road trips?\nParticipantA: No, those are my favorites. I've been to a few big cities, but I prefer to stay in one place when I'm on vacation.\nParticipantB: Yeah, I get that. I like to move around and see different places.\nParticipantA: Well, it was nice talking to you.\nParticipantB: Yeah, you too. Have a great day.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 640,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

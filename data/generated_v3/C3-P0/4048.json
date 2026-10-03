@@ -1,0 +1,90 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 4048,
+  "topic": "Drug Testing",
+  "sb_prompt": "HOW DO YOU FEEL ABOUT THE PRACTICE OF SOME COMPANIES OR GOVERNMENT AGENCIES TESTING EMPLOYEES OR PROSPECTIVE EMPLOYEES FOR DRUGS?  IS RANDOM SPOT TESTING JUSTIFIED?  WHAT LIMITS SHOULD THERE BE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 28,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 40,
+    "education": "a college degree",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how do you feel about the practice of some companies or government agencies testing employees or prospective employees for drugs? Do you think it's fair or justified?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's a complex issue. On one hand, it can help to ensure a safe and productive work environment. On the other hand, it can also be seen as an invasion of privacy and a potential barrier to employment for those who use drugs recreationally or for medical reasons.\n\nI think it's important to have clear policies and procedures in place, and to ensure that the testing is done fairly and without discrimination. It's also important to consider the potential consequences of the testing, such as the impact on morale and the potential for false positives."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. I think random spot testing can be justified in certain situations, such as when it's necessary for safety-sensitive positions or in industries where drug use could have serious consequences. However, I also think there should be clear guidelines and limits in place to ensure that the testing is conducted fairly and without discrimination.\n\nAdditionally, I think it's important to consider the privacy rights of employees and prospective employees, and to make sure that the testing is conducted in a way that respects those rights. It's also important to ensure that the testing is accurate and reliable, and to consider the potential consequences of false positives.\n\nOverall, I think it's a complex issue that requires a balanced approach. What about you? How do you feel about the practice of testing for drugs in the workplace?"
+    ],
+    [
+      "ParticipantB",
+      "I completely agree. I think it's important to have clear guidelines and limits in place to ensure fair and non-discriminatory testing. I also think it's important to consider the potential consequences of the testing, such as the impact on morale and the potential for false positives.\n\nIn general, I think that drug testing can be justified in certain situations, such as when it's necessary for safety-sensitive positions or in industries where drug use could have serious consequences. However, I also think that it's important to balance the need for a safe and productive work environment with the privacy rights of employees and prospective employees.\n\nOverall, I believe that the practice of drug testing in the workplace is a complex issue that requires a balanced approach."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely, I think that's a great way to approach the issue. It's important to strike a balance between ensuring a safe and productive work environment and respecting the privacy rights of employees and prospective employees.\n\nDo you have any other thoughts or questions about this topic? I'm happy to continue the conversation."
+    ],
+    [
+      "ParticipantB",
+      "No, I don't have any other questions or thoughts about this topic. Thanks for the conversation!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It was great talking with you. Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you, you too!"
+    ]
+  ],
+  "n_turns": 10,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

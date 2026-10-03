@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4072,
+  "topic": "News Media",
+  "sb_prompt": "DISCUSS HOW YOU AND THE OTHER CALLER KEEP UP ON CURRENT EVENTS.      DO YOU GET MOST OF YOUR NEWS FROM TVOR PEOPLE YOU KNOW?  ARE YOU SATISFIED WITH THE QUALITY OF COVERAGE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 24,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 25,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: How are you doing today?\nParticipantB: I'm doing well, thanks. How about you?\nParticipantA: I'm doing alright. So, what brings you to call a stranger?\nParticipantB: Well, I was asked to call a stranger and talk about news media. How about you?\nParticipantA: Same here. I was asked to talk about how I keep up with current events.\nParticipantB: That's interesting. So, do you get most of your news from TV or from people you know?\nParticipantA: Both, I guess. I try to keep up with the news on TV, but I also like to hear what people I know have to say about it.\nParticipantB: Same here. I mainly get my news from TV and online sources.\nParticipantA: Have you ever felt like the news coverage wasn't satisfactory?\nParticipantB: Sometimes, yeah. I feel like they only show what they want to show and not what's really going on.\nParticipantA: I know what you mean. I have a friend who's dealt with that, and it really affected their view of the news.\nParticipantB: Yeah, it can be frustrating. But, overall, I'm satisfied with the quality of coverage.\nParticipantA: That's good to hear. I've been on the fence about it for a while now.\nParticipantB: Well, what are your thoughts on the news in general?\nParticipantA: I think it's important to stay informed, but sometimes it can be overwhelming.\nParticipantB: Yeah, it can be. But I find it genuinely interesting and I try to keep up with it as much as I can.\nParticipantA: That's cool. I think it's important to have different perspectives on things.\nParticipantB: Definitely. So, what do you think is the most important issue right now?\nParticipantA: I think there are a lot of important issues, but I think the pandemic is still at the forefront of everyone's minds.\nParticipantB: Agreed. It's been a challenging time for everyone.\nParticipantA: Yeah, for sure. Well, it was nice talking to you.\nParticipantB: Same here. Thanks for the conversation.\nParticipantA: You too. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 581,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "condition": "C4-P1",
+  "architecture": "C4",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 4876,
+  "topic": "Child Care",
+  "sb_prompt": "FIND OUT WHAT CRITERIA THE OTHER CALLER WOULD USE IN SELECTING CHILD CARE SERVICES FOR A PRESCHOOLER.  IS IT EASY OR DIFFICULT TO FIND SUCH CARE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what criteria do you use when selecting child care services for a preschooler?"
+    ],
+    [
+      "ParticipantB",
+      "Well, for me, safety is a top priority. I'd want to make sure the child care center has a secure facility and that the staff are properly trained and qualified. I'd also consider the curriculum they offer and how it aligns with my child's developmental needs. What about you?\n\nI had a friend who struggled with finding child care because she prioritized affordability over safety and her child ended up in a dangerous situation. It's a tough balance to find a service that fits both the budget and the needs of the child. How about you? What criteria do you consider important?"
+    ],
+    [
+      "ParticipantA",
+      "I totally agree with you on safety being a top priority. I think it's essential for the child care center to have a safe and secure environment. I also agree with you about the curriculum and how it aligns with the child's developmental needs. I think it's important for children to have a well-rounded educational experience.\n\nAs for me, I also prioritize affordability. I know it's a delicate balance, but I want to make sure I can provide for my child without breaking the bank. I also consider the location and accessibility of the child care center. It's important for me to be able to drop off and pick up my child with ease.\n\nI had a personal experience where I struggled to find child care that met all of my criteria, and it was a challenge. It took a lot of research and legwork to find a place that was both safe and affordable. How about you? Have you faced any challenges in finding the right child care service?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have. I remember when I was looking for child care for my first child, I was really stressed out about finding a place that was both safe and affordable. I visited several centers and did a lot of research online. I also talked to other parents and asked for recommendations. In the end, I found a center that met most of my criteria, but it was a bit of a commute. It wasn't ideal, but I felt that the safety and affordability were worth it.\n\nHave you found a child care center that meets all of your criteria? Or are you still searching?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I have found a child care center that meets most of my criteria, but I'm still searching for one that meets all of them. I've been looking for a center that's close to my workplace and has a good reputation, but it's been difficult to find one that's both affordable and meets my other criteria. It's a challenge, but I'm determined to find the right place for my child.\n\nHow about you? Have you found a child care center that meets all of your criteria?"
+    ],
+    [
+      "ParticipantB",
+      "I'm happy to report that I have found a child care center that meets most of my criteria. It's a safe and secure environment, and the curriculum aligns well with my child's developmental needs. It's also affordable and conveniently located, which was important to me. I'm grateful to have found a place where my child can learn and grow in a nurturing environment.\n\nI wish you the best of luck in your search for the right child care center. It can be a challenging process, but I believe that it's worth it to find a place that meets all of your criteria and provides a safe and nurturing environment for your child."
+    ],
+    [
+      "ParticipantA",
+      "Thank you so much for your kind words and good luck to you too! I know it can be a challenging process, but I'm determined to find the right place for my child. And thank you for sharing your experience. It's always helpful to hear from others who have been through the process."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely! I'm glad I could help in some way. I know how important it is to find the right child care center for our children, and it can be a relief to know that others have gone through the same experience. If you have any other questions or if there's anything else I can help you with, don't hesitate to ask. Take care!"
+    ],
+    [
+      "ParticipantA",
+      "Thank you so much for your offer. I really appreciate it. I'll definitely keep that in mind if I have any other questions or concerns. And thank you again for sharing your experience and for the well wishes. Take care!"
+    ]
+  ],
+  "n_turns": 11,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2942,
+  "topic": "Choosing A College",
+  "sb_prompt": "WHAT ADVICE OR EXPERIENCE CAN YOU OFFER TO A PARENT ON HOW TO HELP A SON OR DAUGHTER CHOOSE A COLLEGE TO ATTEND?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 44,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hi there, I'm looking for some advice on how to help my son choose a college to attend.\nParticipantB: Sure, I can definitely help you out with that. I have some experience in that area.\nParticipantA: Great, that's exactly what I'm looking for. I've been trying to figure out how to help my son make the right choice, but I'm not sure where to start.\nParticipantB: Well, I think the first thing you should do is talk to your son about what he wants to do in life. What are his interests? What does he want to study?\nParticipantA: That's a good point. I haven't really had that conversation with him yet, but I should. He's pretty set on going to college, but he's not sure what he wants to major in.\nParticipantB: Well, that's definitely a good place to start. I would recommend taking a look at different colleges and their programs, and seeing which ones have the best fit for your son's interests.\nParticipantA: Yeah, I've been doing some research on that. But I'm not sure how to evaluate the different options.\nParticipantB: Well, I would recommend looking at things like the school's reputation, the program's accreditation, and the success of graduates in the field.\nParticipantA: That's helpful. I didn't even think about the success of graduates in the field.\nParticipantB: Yeah, that's important. You want your son to go to a school that will give him the best chance at success after he graduates.\nParticipantA: Definitely. And what about financial aid and scholarships? How do I help him navigate that?\nParticipantB: That's a great question. I would recommend starting early and doing your research. Look into different scholarships and financial aid options, and see which ones your son is eligible for.\nParticipantA: I didn't know there were so many different options out there.\nParticipantB: Yeah, there are a lot of options out there. And it's important to start early, because some scholarships and financial aid have deadlines.\nParticipantA: Okay, that makes sense. And what about campus life? How do I help him choose a school with the right campus environment for him?\nParticipantB: Well, that's definitely something to consider. I would recommend taking a look at the school's student life, and seeing if it's a good fit for your son.\nParticipantA: That's a good point. I didn't even think about that.\nParticipantB: Yeah, it's important to find a school that your son will feel comfortable at.\nParticipantA: Definitely. And what about the location? Should we consider that too?\nParticipantB: Yes, definitely. You want your son to be happy and comfortable, and that includes the location of the school.\nParticipantA: Okay, that makes sense. I think I have a better idea of what to look for now. Thanks for your help!\nParticipantB: You're welcome! I'm glad I could help. Good luck with your son's college search!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 735,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

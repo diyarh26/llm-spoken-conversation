@@ -1,0 +1,146 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2615,
+  "topic": "Auto Repairs",
+  "sb_prompt": "WHAT WAS THE LAST AUTO REPAIR YOU PERFORMED OR HAD DONE ON YOUR CAR? ARE THERE SOME TYPES OF REPAIRS OR MAINTENANCE TASKS YOU PREFER TO DO YOURSELF?  DISCUSS YOUR EXPERIENCES IN THIS AREA WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 50,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what was the last auto repair you had done on your car?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I had my oil changed about a month ago."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I did that myself last weekend. It's so satisfying to do it yourself, isn't it?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it definitely is. I usually change my own oil too, but I let a mechanic handle it that time because I was in a rush and didn't have the time to do it myself."
+    ],
+    [
+      "ParticipantA",
+      "I totally understand. I usually do all my own repairs and maintenance, but sometimes it's just easier to let a professional handle it."
+    ],
+    [
+      "ParticipantB",
+      "Exactly, and I prefer doing it myself most of the time, but sometimes it's necessary to let professionals handle it."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. I find that some repairs are easier to do yourself, like changing your oil or replacing your air filters, while others are best left to the professionals."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I agree. I prefer doing brake jobs and tire changes myself, but I let professionals handle the more complex repairs like engine replacements."
+    ],
+    [
+      "ParticipantA",
+      "That's smart. Engine replacements can be pretty tricky, and it's always better to have a professional handle it if you're not experienced with it."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. And it's always better to be safe than sorry."
+    ],
+    [
+      "ParticipantA",
+      "So, what type of car do you have, and do you have any problems with it that you need to repair?"
+    ],
+    [
+      "ParticipantB",
+      "I have a Honda Accord, and I haven't had any major issues with it. Just the usual wear and tear stuff."
+    ],
+    [
+      "ParticipantA",
+      "That's great! Hondas are known for being reliable cars. I have a Toyota, and it's been really good to me too."
+    ],
+    [
+      "ParticipantB",
+      "Yes, Hondas and Toyotas are known for their reliability. I've had mine for a few years now, and it's been running smoothly."
+    ],
+    [
+      "ParticipantA",
+      "That's great! I'm glad to hear that. So, do you have any plans for future auto repairs or maintenance on your car?"
+    ],
+    [
+      "ParticipantB",
+      "I'm due for a tire rotation soon, so I'll probably get that done soon. Other than that, I don't have any immediate plans for repairs or maintenance."
+    ],
+    [
+      "ParticipantA",
+      "Oh, I just had my tires rotated last week. It's important to keep up with those types of maintenance tasks to ensure your car is running smoothly."
+    ],
+    [
+      "ParticipantB",
+      "Definitely, and I like to keep up with all the recommended maintenance tasks to keep my car running well."
+    ],
+    [
+      "ParticipantA",
+      "That's smart. It's always better to be proactive with maintenance tasks rather than waiting until something goes wrong."
+    ],
+    [
+      "ParticipantB",
+      "Exactly, and it helps to keep the car running well and saves money in the long run."
+    ],
+    [
+      "ParticipantA",
+      "I totally agree. Well, it was great talking with you about auto repairs and maintenance. Thanks for sharing your experiences with me!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome, it was great talking with you too! Take care!"
+    ]
+  ],
+  "n_turns": 24,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

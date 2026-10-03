@@ -1,0 +1,86 @@
+{
+  "condition": "C4-P2",
+  "architecture": "C4",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car do you think you might buy next?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been eyeing a Subaru Outback for a while now. I really like the versatility it offers with its spacious interior, good fuel economy, and all-wheel drive. Plus, it's reliable and great for long road trips. What about you? What kind of car are you considering?"
+    ],
+    [
+      "ParticipantA",
+      "I've been considering getting a Honda CR-V. It's also a versatile car that offers great fuel economy, a spacious interior, and good safety ratings. Plus, it's reliable and has a comfortable ride. I'm looking for a car that can handle all kinds of weather and road conditions, and I think the CR-V would be a great fit for my needs."
+    ],
+    [
+      "ParticipantB",
+      "That's a great choice too! I've heard wonderful things about the CR-V's safety features and reliability. I think both the Outback and the CR-V are excellent options for someone who values versatility, reliability, and good fuel economy. Ultimately, the decision comes down to personal preference and specific requirements, like cargo space or driving dynamics. Have you taken either car for a test drive yet?\n\nEdit: I realize I've gone over the turn limit for the conversation, I'll keep it short from now on.\n\nTest drive either of them? That can make a big difference in making a final decision. Have you considered factors like cargo space and driving dynamics?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I have test driven both the Outback and the CR-V, and they both feel great to drive. In terms of cargo space, the Outback has a slightly larger cargo area, but the CR-V has a more spacious interior overall. As for driving dynamics, both cars handle well and have great safety features, so it's a tough choice. Ultimately, I think it will come down to which one feels more comfortable to you."
+    ],
+    [
+      "ParticipantB",
+      "That's a good point. Comfort and personal preference are crucial factors when making such a big decision. For me, I think the Outback's slightly larger cargo area and versatility, such as its all-wheel drive, tips the scale for me. However, the CR-V's spacious interior and great safety ratings are also compelling factors. It might be worth considering factors like insurance costs, maintenance costs, and resale value as well.\n\nI've enjoyed our conversation about cars! Do you have any other interests or hobbies you'd like to chat about? It's been a pleasure talking to you.\n\nI'd love to learn more about your hobbies or interests! It's been great talking about cars with you."
+    ],
+    [
+      "ParticipantA",
+      "Sure, I enjoy hiking and exploring the outdoors. I also enjoy reading books and watching movies. What about you? What are some of your hobbies or interests?"
+    ]
+  ],
+  "n_turns": 9,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 2,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 2
+  }
+}

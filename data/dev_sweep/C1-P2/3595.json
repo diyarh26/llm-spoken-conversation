@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: How are you doing today?\nParticipantB: I'm doing well, thank you. How about you?\nParticipantA: I'm doing okay. Just got off work for the day. How about you?\nParticipantB: I just finished my shift at the bank.\nParticipantA: Oh, cool. What do you like to read in your free time?\nParticipantB: I really enjoy mysteries and thrillers. Do you have a favorite genre?\nParticipantA: I like to read non-fiction, especially books about history or science.\nParticipantB: Oh, that's interesting. I haven't read much non-fiction, but I've been meaning to pick up a book about the history of the Civil Rights Movement.\nParticipantA: Oh, that's a great topic. Have you read \"The Warmth of Other Suns\" by Isabel Wilkerson?\nParticipantB: No, I haven't. I'll have to check that out. What did you think of it?\nParticipantA: I thought it was an incredible book. It really gives you a sense of the struggles that African Americans faced during that time.\nParticipantB: That sounds like a powerful read. I've been trying to read more diverse books, so I'll definitely add that to my list.\nParticipantA: Definitely. What about self-improvement books? Do you have any favorites?\nParticipantB: I've been trying to read more self-improvement books lately. I really enjoyed \"The 7 Habits of Highly Effective People\" by Stephen Covey.\nParticipantA: I've heard great things about that book. I haven't read it yet, but I plan to soon. Have you read any other books in that genre that you would recommend?\nParticipantB: I also really liked \"Atomic Habits\" by James Clear. It's all about how to change your habits and create a better life for yourself.\nParticipantA: Okay, I'll have to check that out. Thanks for the recommendation. Do you have any other favorite books or authors?\nParticipantB: I'm a big fan of Agatha Christie's mystery novels. Have you read any of her books?\nParticipantA: I actually haven't read any of her books, but I've seen many of her stories adapted into movies and TV shows. I might have to give her work a try.\nParticipantB: Definitely. She's a great writer, and her books are really engaging.\nParticipantA: Well, thanks for chatting with me about books. It's been great talking to you.\nParticipantB: Yes, it's been really fun. Take care!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 657,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

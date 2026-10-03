@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3124,
+  "topic": "Weather Climate",
+  "sb_prompt": "DISCUSS THE WEATHER.   WHAT HAS IT BEEN LIKE IN YOUR AREA?   HAS IT BEEN TYPICAL FOR THIS TIME OF YEAR?  COMPARE IT WITH THE OTHER CALLER'S WEATHER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 38,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "It's been pretty mild here, haven't really had any extreme weather."
+    ],
+    [
+      "ParticipantB",
+      "Same here, pretty mild."
+    ],
+    [
+      "ParticipantA",
+      "How about you?"
+    ],
+    [
+      "ParticipantB",
+      "It's been pretty consistent with what we'd expect for this time of year."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I haven't really noticed anything out of the ordinary either."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's been pretty typical."
+    ],
+    [
+      "ParticipantA",
+      "Do you think climate change has anything to do with it?"
+    ],
+    [
+      "ParticipantB",
+      "I think so, yes."
+    ],
+    [
+      "ParticipantA",
+      "What's your opinion on that?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think it's definitely a real issue."
+    ],
+    [
+      "ParticipantA",
+      "I know someone close who's been affected by it."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a real issue."
+    ],
+    [
+      "ParticipantA",
+      "What do you think we can do to help?"
+    ],
+    [
+      "ParticipantB",
+      "I think we should all make an effort to reduce our carbon footprint."
+    ],
+    [
+      "ParticipantA",
+      "What are some ways you try to reduce your carbon footprint?"
+    ],
+    [
+      "ParticipantB",
+      "I try to carpool when I can, and I also use energy-efficient light bulbs in my home."
+    ],
+    [
+      "ParticipantA",
+      "I try to recycle as much as possible too."
+    ],
+    [
+      "ParticipantB",
+      "And I also try to support environmentally-friendly companies and products whenever possible."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's a good idea."
+    ],
+    [
+      "ParticipantB",
+      "And I also try to reduce my water usage as much as I can."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about installing solar panels on my roof."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's a great idea."
+    ],
+    [
+      "ParticipantA",
+      "What are some other ways people can reduce their carbon footprint?"
+    ],
+    [
+      "ParticipantB",
+      "Planting trees."
+    ],
+    [
+      "ParticipantA",
+      "What about you?"
+    ],
+    [
+      "ParticipantB",
+      "We could also switch to using public transportation more often instead of driving."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've been thinking about doing that too."
+    ],
+    [
+      "ParticipantB",
+      "We could also reduce our meat consumption and choose more plant-based diets."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about composting too."
+    ],
+    [
+      "ParticipantB",
+      "And also, I think it's important to support policies and initiatives that promote sustainability and reduce carbon emissions."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "Have you heard about any local initiatives in your area to promote sustainability?"
+    ],
+    [
+      "ParticipantA",
+      "I haven't really."
+    ],
+    [
+      "ParticipantB",
+      "What about you?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I have heard about some community gardens and initiatives to promote sustainable living in my area."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds great."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's a great idea too."
+    ],
+    [
+      "ParticipantB",
+      "So, what do you think is the most important step we can take to address climate change?"
+    ],
+    [
+      "ParticipantA",
+      "Well, I think educating people about the importance of sustainable living and encouraging them to make small changes in their daily lives can make a big difference."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I agree."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}

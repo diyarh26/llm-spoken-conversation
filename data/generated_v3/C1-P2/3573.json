@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3573,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 67,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what kind of car are you thinking of buying next?\nParticipantB: Well, I'm not really sure yet. I've been thinking about getting a new car for a while now, but I haven't made up my mind.\n\nParticipantA: Yeah, I know what you mean. I've been thinking about it too. I'm actually in the process of buying a new car right now.\nParticipantB: Oh, that's great! What kind of car are you getting?\nParticipantA: I'm thinking of getting a pickup truck. I've been a truck driver for years, and I've come to realize that a pickup truck is the most practical vehicle for my job.\nParticipantB: Hmm, I see. I've been a factory supervisor for most of my life, and I've always found that a reliable sedan is the best fit for me. I don't really need anything fancy, just something that gets me from point A to point B.\n\nParticipantA: Yeah, I hear you. I've actually been considering getting a used pickup truck. I've been doing some research online and found some great deals on used trucks.\nParticipantB: That's a good idea. I've always believed that buying a new car is not the best option, especially when you can find a reliable used car at a fraction of the cost.\n\nParticipantA: Absolutely. I've been looking at some trucks online, and I've found that some models hold their value better than others. For example, the Toyota Tacoma seems to be a popular choice among truck owners.\nParticipantB: Yes, I've heard that the Tacoma is a great truck. I've also heard that the Honda Ridgeline is a good choice, too. It's known for its comfort and reliability.\n\nParticipantA: Yeah, I've actually considered the Ridgeline. I've heard that it's a great truck, but I've always been partial to the Tacoma.\nParticipantB: Well, it's great that you've done your research and have a good idea of what you want. I'm still in the early stages of my search, so I'm open to any recommendations you might have.\n\nParticipantA: Absolutely. I'd be happy to share my experience and opinions with you. It's always helpful to hear other people's perspectives when making a big purchase like this.\n\nParticipantB: Thanks, that's very kind of you. I appreciate it. I'm sure we'll find the right cars for our needs eventually.\n\nParticipantA: For sure. It's always good to take your time and make a well-informed decision. Well, I wish you the best of luck in your search, and I hope you find the perfect car for you.\n\nParticipantB: Thank you, you too. It was nice talking to you.\n\nParticipantA: You too. Take care.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 728,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

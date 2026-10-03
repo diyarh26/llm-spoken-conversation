@@ -1,0 +1,122 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2546,
+  "topic": "Capital Punishment",
+  "sb_prompt": "COMPARE YOUR OPINIONS AND THOSE OF THE OTHER CALLER ON CAPITAL PUNISHMENT.  DO EITHER OF YOU THINK IT SHOULD BE RESTRICTED TO CERTAIN CRIMES OR CIRCUMSTANCES?  HOW DO THE POLICIES AND PRACTICES OF YOUR STATE FIT WITH YOUR OPINIONS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 38,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 1,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what are your thoughts on capital punishment?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's a necessary form of punishment in certain circumstances."
+    ],
+    [
+      "ParticipantA",
+      "I see. And which circumstances do you think it's appropriate for?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's appropriate for crimes such as murder, treason, and terrorism."
+    ],
+    [
+      "ParticipantA",
+      "I can understand where you're coming from. I've also had someone close to me go through the justice system, and it's definitely made me consider the importance of punishment."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I can understand how that would impact your perspective. It's important to have punishments that fit the crime."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely. And do you think there should be any restrictions on capital punishment, such as age or mental capacity?"
+    ],
+    [
+      "ParticipantB",
+      "I think there should be restrictions on the mentally ill or those under a certain age."
+    ],
+    [
+      "ParticipantA",
+      "I agree with that. It's important to make sure that the punishment fits the person and the crime."
+    ],
+    [
+      "ParticipantB",
+      "Exactly. It's not fair to punish someone who can't fully understand what they're doing."
+    ],
+    [
+      "ParticipantA",
+      "That's true. And do you think your state's policies and practices around capital punishment align with your opinions?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I think so. Our state has strict guidelines for who is eligible for capital punishment, and I think that's important."
+    ],
+    [
+      "ParticipantA",
+      "That's good to hear. I think it's important for states to have clear guidelines to ensure that capital punishment is used appropriately."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. It's a serious matter and should be treated as such."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. Well, it was nice talking to you about this. Thanks for sharing your thoughts."
+    ],
+    [
+      "ParticipantB",
+      "You too, it was nice chatting with you."
+    ]
+  ],
+  "n_turns": 18,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

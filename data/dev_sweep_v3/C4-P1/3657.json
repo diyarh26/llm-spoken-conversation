@@ -1,0 +1,78 @@
+{
+  "condition": "C4-P1",
+  "architecture": "C4",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3657,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 52,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your opinion on personal computers?"
+    ],
+    [
+      "ParticipantB",
+      "I think they're great. I use one at work every day and it makes my job so much easier. What about you?\n\nPersonally, I find them very convenient and versatile. But I'm curious, do you have a favorite type or brand of personal computer?\n\nI've had a few different models over the years, but my current one is a MacBook Pro. How about you?\n\nOh, and by the way, I'm a librarian. It's not my only hobby, but I do enjoy working with technology.\n\nWhat about you? What do you use a personal computer for and what do you like most about it?"
+    ],
+    [
+      "ParticipantA",
+      "I think they're great too. I mostly use mine for work as a nurse, but I also use it for personal stuff like playing games and watching movies.\n\nAs for brands, I've tried both Mac and PC and I prefer PC. I've been using a Dell laptop for a few years now and I'm happy with it.\n\nI've always found it interesting how technology can be used to help people in so many ways, like in healthcare. I think it's amazing what you librarians do with technology too, it's such a useful tool for learning.\n\nWhat about you? What kind of work do you do as a librarian and how do you use your personal computer for it?"
+    ],
+    [
+      "ParticipantB",
+      "That's really interesting. I agree that technology can be a game changer in many fields, including healthcare and education.\n\nAs for my work as a librarian, I help people find information and resources. A lot of that involves using a computer and the internet. I check out books and other materials, process returns, and manage the library's digital collections.\n\nMy personal computer comes in handy for tasks like managing the library's databases, creating and editing documents, and communicating with colleagues and patrons. I also use it to access online resources, like e-books and academic articles.\n\nIt's always great to learn about other people's experiences and perspectives. I think we can both agree that personal computers are an essential tool for many aspects of modern life.\n\nWell, it's been nice talking to you. I hope you have a great day!\n\nTake care and have a good one!"
+    ],
+    [
+      "ParticipantA",
+      "Same to you!\n\nIt was really interesting to hear about your work and how you use your personal computer as a librarian. It's great to see how technology can be used to help people in so many different ways.\n\nI totally agree that personal computers are an essential tool for modern life. They make our lives so much easier and help us stay connected to the world around us.\n\nThanks for chatting with me today. I hope you have a great rest of your day!\n\nGoodbye for now!"
+    ]
+  ],
+  "n_turns": 7,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

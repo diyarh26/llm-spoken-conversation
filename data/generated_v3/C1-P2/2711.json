@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2711,
+  "topic": "Vacation Spots",
+  "sb_prompt": "PLEASE DISCUSS TYPES OF VACATIONS AND TRIPS YOU ENJOY.  FIND OUT WHETHER THE OTHER CALLER CAN INTEREST YOU IN A VACATION SPOT YOU HAVEN'T VISITED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 25,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what kind of vacations do you like to take?\n\nParticipantB: I usually like to take road trips. I find it's a great way to see a lot of different places without having to worry about airports and stuff.\n\nParticipantA: Yeah, I can definitely understand that. I've done a few road trips myself and they're always a lot of fun.\n\nParticipantB: Have you been to any really cool places on your road trips?\n\nParticipantA: One time I went on a road trip out to California and it was amazing. We drove along the coast and saw some of the most beautiful beaches and scenery I've ever seen.\n\nParticipantB: That sounds awesome. I've been thinking about taking a road trip out to the Pacific Northwest.\n\nParticipantA: Oh, that's a great idea. There are so many beautiful places to see out there.\n\nParticipantB: Yeah, I've heard that there are some amazing national parks and forests in that area.\n\nParticipantA: Definitely. I've been to a few of them and they're all incredible.\n\nParticipantB: So, do you have any other types of vacations that you like to take?\n\nParticipantA: Well, I also love going on cruises. It's such a relaxing way to see different places without having to worry about logistics.\n\nParticipantB: I've never been on a cruise before, but it sounds like a lot of fun.\n\nParticipantA: Yeah, it's a great way to see a lot of different places in a short amount of time. Plus, you get to enjoy all the amenities on the ship.\n\nParticipantB: That sounds really nice. I've heard that some of the cruises can be pretty fancy though.\n\nParticipantA: Yeah, there are definitely some high-end cruises out there, but there are also more affordable options.\n\nParticipantB: I'll have to look into that. Do you have any recommendations for a good cruise line?\n\nParticipantA: I've always had a good experience with Royal Caribbean. They have a lot of different itineraries to choose from.\n\nParticipantB: Thanks for the recommendation. I'll definitely look into it.\n\nParticipantA: No problem. So, have you been on any other types of vacations that you really enjoyed?\n\nParticipantB: Yeah, I've actually been on a few backpacking trips. It's a great way to really experience the outdoors and see some amazing scenery.\n\nParticipantA: That sounds like a lot of fun. I've never been backpacking before, but I've always wanted to try it.\n\nParticipantB: Definitely recommend it. Just make sure you're in good shape before you go, because it can be pretty strenuous at times.\n\nParticipantA: Yeah, I can imagine. I'm not the most athletic person, but I'm willing to try anything once.\n\nParticipantB: Well, if you ever want to give it a try, let me know. I'd be happy to give you some tips.\n\nParticipantA: Thanks, I appreciate that. I'll definitely keep that in mind.\n\nParticipantB: No problem. It was great talking to you.\n\nParticipantA: Yeah, you too. Have a great day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 828,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3691,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hey there, how's it going?\nParticipantB: Pretty good, thanks. How about you?\nParticipantA: I'm doing okay, just got off work. What about you?\nParticipantB: I'm actually on my lunch break right now.\nParticipantA: Oh, what do you do?\nParticipantB: I'm a bank teller. How about you?\nParticipantA: I'm a real estate agent.\nParticipantB: Oh, cool. What kind of pets do you have?\nParticipantA: Well, I have a dog.\nParticipantB: Nice. What kind of dog is it?\nParticipantA: It's a golden retriever.\nParticipantB: I love golden retrievers. I used to have one when I was a kid.\nParticipantA: Yeah, they're great dogs. What about you now? Do you have any pets?\nParticipantB: Yeah, I actually have a cat.\nParticipantA: Oh, that's great. What kind of cat is it?\nParticipantB: It's a gray and white tabby.\nParticipantA: I've always been more of a dog person, but I love cats too.\nParticipantB: Yeah, they're great pets. What kind of things do you usually do with your dog?\nParticipantA: Well, we go for walks a lot, and sometimes we play fetch in the park.\nParticipantB: That sounds fun. My cat likes to play with toys, but she also likes to just lay around and nap.\nParticipantA: Yeah, cats are pretty lazy, but I love them anyway.\nParticipantB: Yeah, they're so cute and cuddly.\nParticipantA: So, what kind of things do you do with your cat?\nParticipantB: Well, I play with her toys, and sometimes I'll just sit on the floor and let her climb all over me.\nParticipantA: That sounds fun. I bet she likes that.\nParticipantB: Yeah, she loves it. What kind of things do you do with your dog to keep him entertained?\nParticipantA: Well, we play a lot of different games, like tug-of-war and hide and seek.\nParticipantB: Oh, that sounds like fun. I've never tried hide and seek with my cat before.\nParticipantA: Yeah, it's a great game. You hide and then the cat has to find you.\nParticipantB: Oh, that sounds like a fun game to try with my cat.\nParticipantA: Yeah, it's a lot of fun. Well, it was nice talking to you.\nParticipantB: Yeah, it was nice talking to you too.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 666,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2533,
+  "topic": "Baseball",
+  "sb_prompt": "FIND OUT THE OTHER CALLER'S FAVORITE PRO BASEBALL TEAM AND WHERE IT'S HEADED THIS YEAR.  DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what's your favorite pro baseball team?\nParticipantB: Uh, the Yankees.\nParticipantA: Oh, I'm a fan of the Red Sox.\nParticipantB: Yeah, that's a tough rivalry.\nParticipantA: Yeah, for sure. So, what do you think about the Yankees' chances this year?\nParticipantB: Well, I think they're looking pretty good. They've got a strong lineup and a solid pitching staff.\nParticipantA: Yeah, I can see that. But I heard they're dealing with some injuries too.\nParticipantB: Yeah, that's true. But they've got some good depth on the bench, so I think they'll be okay.\nParticipantA: Yeah, that's true. I know someone who's a diehard Yankees fan, and he's hoping they'll make it to the World Series this year.\nParticipantB: Yeah, they've got a good shot at it. I think they'll definitely make it to the playoffs.\nParticipantA: Yeah, I can see that. So, what about you? Who's your favorite team?\nParticipantB: Oh, I'm a big fan of the Dodgers.\nParticipantA: Nice! I've heard they're doing pretty well this season too.\nParticipantB: Yeah, they're definitely a force to be reckoned with. But I think the Padres are looking pretty strong this year too.\nParticipantA: Really? I haven't heard too much about them.\nParticipantB: Well, they've got a great pitching staff, and their offense is pretty solid too.\nParticipantA: That's good to know. So, do you think the Dodgers have a good shot at the World Series this year?\nParticipantB: Honestly, it's hard to say. It's such a tough competition this year. But I think they've got a good chance.\nParticipantA: Yeah, I can see that. So, what do you think about the MLB's new rules this season?\nParticipantB: Oh, you mean the pitch clock? Yeah, I think it's a good idea. It's definitely sped up the game a bit.\nParticipantA: Yeah, I've noticed that too. I think it's good for the game, but I wonder how the players feel about it.\nParticipantB: Well, some of them might not be too happy about it, but I think it's good for the sport in the long run.\nParticipantA: Yeah, I agree. Well, it was nice talking to you about baseball.\nParticipantB: Yeah, you too! Thanks for the chat.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 674,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

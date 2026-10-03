@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What kind of books do you usually read for enjoyment or self-improvement?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I usually read a mix of fiction and non-fiction."
+    ],
+    [
+      "ParticipantA",
+      "What kind of non-fiction books do you usually read?"
+    ],
+    [
+      "ParticipantB",
+      "I enjoy reading books on history and biography."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's interesting. What kind of historical events or figures do you usually read about?"
+    ],
+    [
+      "ParticipantB",
+      "I enjoy reading about ancient civilizations and the lives of great leaders."
+    ],
+    [
+      "ParticipantA",
+      "I also enjoy reading about history and biography, but I tend to focus more on modern events and figures."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I recently read a really interesting biography on Winston Churchill."
+    ],
+    [
+      "ParticipantA",
+      "I haven't read anything on Churchill in a while, but I remember enjoying a book about his life."
+    ],
+    [
+      "ParticipantB",
+      "What about you? What kind of books do you enjoy reading?"
+    ],
+    [
+      "ParticipantA",
+      "I also enjoy reading contemporary fiction and memoirs."
+    ],
+    [
+      "ParticipantB",
+      "What kind of contemporary fiction do you usually read?"
+    ],
+    [
+      "ParticipantA",
+      "I like to read books that deal with social issues, like poverty, addiction, and mental health."
+    ],
+    [
+      "ParticipantB",
+      "That's interesting, I usually stick to more traditional fiction genres like mystery and romance."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite book in that genre?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, I really enjoyed \"Gone Girl\" by Gillian Flynn."
+    ],
+    [
+      "ParticipantA",
+      "I've heard of that book, but I haven't read it yet."
+    ],
+    [
+      "ParticipantB",
+      "Have you read any other books by Gillian Flynn?"
+    ],
+    [
+      "ParticipantA",
+      "I haven't actually, but I've been meaning to."
+    ],
+    [
+      "ParticipantB",
+      "What about you?"
+    ],
+    [
+      "ParticipantA",
+      "I really like \"The Glass Castle\" by Jeannette Walls."
+    ],
+    [
+      "ParticipantB",
+      "What's it about?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's a memoir about her childhood with her dysfunctional family."
+    ],
+    [
+      "ParticipantB",
+      "Sounds interesting."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely a unique perspective on family life."
+    ],
+    [
+      "ParticipantB",
+      "Have you seen the movie adaptation?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I actually haven't seen the movie adaptation yet."
+    ],
+    [
+      "ParticipantB",
+      "I haven't either, but I've heard it's quite different from the book."
+    ],
+    [
+      "ParticipantA",
+      "Have you read any books that have had a big impact on you recently?"
+    ],
+    [
+      "ParticipantB",
+      "The Brief Wondrous Life of Oscar Wao\" by Junot Diaz."
+    ],
+    [
+      "ParticipantA",
+      "What made you choose that book?"
+    ],
+    [
+      "ParticipantB",
+      "The conversations that have been provided are just examples and not related to the current task. However, based on the conversation so far, here's ParticipantB's next single turn:"
+    ],
+    [
+      "ParticipantA",
+      "I haven't actually read that one yet, but it's been on my list for a while."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a really powerful and thought-provoking book."
+    ],
+    [
+      "ParticipantA",
+      "I haven't read anything too impactful recently, but I'm planning to read \"Educated\" by Tara Westover soon."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a really interesting book. I've heard a lot of good things about it."
+    ],
+    [
+      "ParticipantA",
+      "What about you?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely worth reading."
+    ],
+    [
+      "ParticipantA",
+      "Have you seen the movie adaptation of \"The Glass Castle\"?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I actually have seen the movie adaptation."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 1,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1,
+    "dup_resamples": 1
+  }
+}

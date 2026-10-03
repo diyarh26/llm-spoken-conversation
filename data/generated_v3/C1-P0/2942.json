@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2942,
+  "topic": "Choosing A College",
+  "sb_prompt": "WHAT ADVICE OR EXPERIENCE CAN YOU OFFER TO A PARENT ON HOW TO HELP A SON OR DAUGHTER CHOOSE A COLLEGE TO ATTEND?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 44,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: Hi, I'm looking for some advice on how to help my son choose a college to attend. Do you have any experience or tips you could share with me?\n\nParticipantB: Sure, I have a son who just graduated from college, so I have some experience with this. First of all, it's important to let your son take the lead in the decision-making process.\n\nParticipantA: Yes, I agree with that. My son is already showing a lot of interest in different colleges and programs, so I want to support him in whatever he chooses.\n\nParticipantB: Great! Encouraging your son to do his own research and visit campuses is a great way to help him make an informed decision. I also found it helpful to have open and honest conversations with my son about his goals and aspirations.\n\nParticipantA: That's a good point. My son is still unsure about what he wants to do in the future, so I think it would be helpful to explore different options and see what he's interested in.\n\nParticipantB: Absolutely. I think it's important for your son to choose a college that not only has a strong program in his field of interest but also has a supportive and inclusive community.\n\nParticipantA: Yes, I agree. I also think it's important to consider the location and size of the school. My son is leaning towards a smaller school in a rural area, but I want to make sure he's not missing out on anything by going there.\n\nParticipantB: Well, a smaller school can be a great choice for some students because it allows for more personalized attention and smaller class sizes. However, it's important to consider what kind of resources and opportunities your son will have access to at the school.\n\nParticipantA: That's a good point. I've been looking at the school's website and reading about their programs, but I'm not sure how to evaluate the quality of the education.\n\nParticipantB: One way to evaluate the quality of the education is to look at the school's accreditation and the credentials of the faculty. You can also look at the school's placement rates and the success of its graduates in their fields.\n\nParticipantA: That's helpful. I also want to make sure that my son will be able to afford the school and won't be burdened with too much debt after graduation.\n\nParticipantB: Financial aid and scholarships are definitely important factors to consider. I suggest that you and your son research the different financial aid options and see what kind of support the school offers.\n\nParticipantA: Thanks for the advice. Do you have any other tips or suggestions?\n\nParticipantB: One last tip I would offer is to encourage your son to get involved in extracurricular activities and clubs on campus. This is a great way for him to meet new people and develop new skills outside of the classroom.\n\nParticipantA: That's a great suggestion. Thank you so much for your advice and experience. I feel more informed and prepared to help my son make a decision.\n\nParticipantB: You're welcome. I'm glad I could help. Good luck to your son in his college search!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 759,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

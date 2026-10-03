@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4363,
+  "topic": "Football",
+  "sb_prompt": "PLEASE DISCUSS PROFESSIONAL FOOTBALL.  FIND OUT THE OTHER CALLER'S FAVORITE PRO FOOTBALL TEAM AND WHERE IT'S HEADED THIS YEAR.       DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 27,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hey, how's it going?\nParticipantB: Pretty good, thanks. You?\nParticipantA: I'm doing well. So, what's your favorite pro football team?\nParticipantB: I'm a big fan of the New England Patriots. How about you?\nParticipantA: I've always been a Cowboys fan. It's been a bit of a rollercoaster for them lately, but I still have hope for this season.\nParticipantB: Yeah, the Cowboys have had their ups and downs. I think they'll make it to the playoffs this year, but I'm not sure they'll go all the way.\nParticipantA: Yeah, it's definitely been a struggle for them. I'm not sure about their chances either, but I hope they prove me wrong.\nParticipantB: Absolutely. It's always great to see an underdog team come out on top.\nParticipantA: Yeah, I love an underdog story. It's what makes sports so interesting, I think.\nParticipantB: Definitely. It's not just about the game, it's about the story behind it.\nParticipantA: So true. I think that's why I've always been drawn to football. There's so much history and tradition behind the game.\nParticipantB: Exactly. And there's always something new to learn about the sport, whether it's a new strategy or a new player to watch.\nParticipantA: Yeah, I love learning about the different aspects of the game. It's really fascinating.\nParticipantB: Absolutely. So, do you have any predictions for this season?\nParticipantA: I think the Cowboys will make it to the playoffs, but I'm not sure about their chances after that. It's a tough call.\nParticipantB: Yeah, it's always hard to predict how a team will do. But I think the Patriots have a good shot at making it to the Super Bowl this year.\nParticipantA: Really? I'm not sure about that. They've had some tough losses in the past.\nParticipantB: Yeah, but they've also had some incredible comebacks. And they have a great coach and a solid team.\nParticipantA: I see your point. It's definitely possible.\nParticipantB: Yeah, it's always tough to predict how a team will do. But that's what makes it so exciting.\nParticipantA: Absolutely. It's the uncertainty that keeps us on the edge of our seats.\nParticipantB: Definitely. So, what do you think about the new rules they're implementing this season?\nParticipantA: I think they're trying to make the game safer for the players, which is important. But I'm not sure how some of these changes will affect the game overall.\nParticipantB: Yeah, it's definitely a tough balance. But I think they'll figure it out. They always do.\nParticipantA: Yeah, I agree. The NFL always finds a way to adapt and keep the game interesting.\nParticipantB: Absolutely. It's what makes it such a great sport.\nParticipantA: Well, it was great chatting with you. Thanks for sharing your thoughts on football.\nParticipantB: No problem, it was great talking with you too. Have a good day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 812,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

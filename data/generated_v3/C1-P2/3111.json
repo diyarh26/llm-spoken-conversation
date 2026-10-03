@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3111,
+  "topic": "Crime",
+  "sb_prompt": "DISCUSS CRIME IN AMERICAN CITIES TODAY.  WHAT ARE YOUR CONCERNS AND THE CONCERNS OF THE OTHER CALLER?  WHAT STEPS CAN BE TAKEN TO REDUCE CRIME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 45,
+    "education": "a college degree",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 31,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what's on your mind?\nParticipantB: I heard you wanted to talk about crime in American cities.\nParticipantA: Yeah, it's a topic that's been on my mind lately.\nParticipantB: Same here. I work in a bank and see a lot of people who have been victims of crime.\nParticipantA: That's tough. I have a friend who was mugged a few months back.\nParticipantB: I'm sorry to hear that. It's scary to think that something like that could happen to you or someone you know.\nParticipantA: Definitely. It made me realize how much crime affects us all.\nParticipantB: Agreed. What are your concerns about crime in American cities?\nParticipantA: I think it's the violence that really worries me. The shootings and stabbings that seem to be happening more often.\nParticipantB: Yeah, that's definitely a concern. It's hard to feel safe when there's so much violence around.\nParticipantA: Do you think there's anything that can be done to reduce crime?\nParticipantB: I think there are some steps we can take. Like, increasing police presence in high-crime areas and providing more opportunities for young people to stay out of trouble.\nParticipantA: That makes sense. I think we also need to address the root causes of crime, like poverty and lack of education.\nParticipantB: Absolutely. It's not just about putting more cops on the street. We need to address the systemic issues that contribute to crime.\nParticipantA: What about you? Do you have any concerns about crime in American cities?\nParticipantB: I have mixed feelings about it. On one hand, I think we need to do something about the violence. On the other hand, I worry about the impact of increased police presence on communities of color.\nParticipantA: Yeah, that's a valid concern. I think we need to make sure that any efforts to reduce crime don't disproportionately affect certain communities.\nParticipantB: Definitely. We need to find a way to address crime that doesn't perpetuate systemic racism.\nParticipantA: Agreed. Well, thanks for talking with me about this. It's been interesting to hear your perspective.\nParticipantB: Same here. Thanks for the conversation.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 577,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

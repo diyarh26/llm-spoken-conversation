@@ -13,6 +13,12 @@ Mayor, Bietti & Bangerter (2025), whose design confounded model, prompt, and arc
 Cleanly isolate the effect of **generation architecture** on conversational realism - the
 confound the original paper could not separate - measured against the Switchboard corpus.
 
+**Reframe (2026-07-14):** the headline question is now broader — **characterize how the
+*interactional structure* of LLM-generated conversation differs from human conversation**,
+using **dialogue acts** as the instrument, with architecture (C1–C4) × prompt (P0–P2) as the
+manipulated levers. Isolating the architecture effect and detecting assistant-drift are now
+*components* of that, not the whole point. See `RESEARCH_DIALOGUE_ACTS.md`.
+
 ## Requirements
 
 ### Validated
@@ -25,10 +31,10 @@ confound the original paper could not separate - measured against the Switchboar
 ### Active
 
 - [x] Final Phase 2 condition matrix confirmed: 12 conditions = C1-C4 × P0/P1/P2, 50 convs each (P2 = non-lexical metrics only)
-- [ ] Generate conversations across the final architecture/prompt matrix, 50 per condition
+- [ ] Regenerate conversations across the matrix (fixed prompts/decoding; **seeded topic-stratified sample**, not first-50), 50+ per condition
 - [ ] Compute turn length, ALIGN alignment, and marker rates per condition vs Switchboard
 - [ ] Test the Independence Gradient hypothesis statistically (C1 >= C2 >= C3 >= C4 -> SB)
-- [ ] Novel extension: LLM-as-judge humanness rating, or qualitative failure-mode coding
+- [ ] **Novel extension (headline): dialogue-act structural signature** — human vs LLM DA distribution + transition grammar (JSD) vs Switchboard gold DAMSL tags; secondary: alignment trajectory. See `RESEARCH_DIALOGUE_ACTS.md`. (Old TSI/CAS/CED demoted to supporting.)
 - [ ] Final poster / presentation
 
 ### Out of Scope
@@ -65,6 +71,11 @@ confound the original paper could not separate - measured against the Switchboar
 | Headline = Independence Gradient hypothesis | Explains the paper's unexplained Vicuna result; one falsifiable prediction | Pending |
 | Vicuna-13B as primary generator | Matches the paper, fits the VM | Good - C2 pilot had `multi_turn_emissions=0` |
 | Validate-before-generate | Pipeline correctness before spending compute | Good |
+| **Reframe to structural human↔LLM difference (2026-07-14)** | Assistant-drift was a fixable artifact, not the point; the deep question is the interactional-structure gap | Headline = dialogue acts; architecture/prompt are levers |
+| **Dialogue-act signature = headline metric** | Proven technique + free gold DAMSL baseline + measures interactional structure directly; goes beyond Mayor's 3 markers | TSI/CAS/CED demoted to supporting; see `RESEARCH_DIALOGUE_ACTS.md` |
+| **Full 1,155 corpus = human reference; bootstrap noise floor; topic-matched comparison** | Bigger reference is more precise; JSD is sample-size sensitive; topic (not count) is the real confound | Never shrink the baseline to 50 |
+| **Topic-stratified random sampling replaces "first-50"** | First-N is a convenience sample, not representative of the corpus | Implement in `target_conversations` at regeneration |
+| **Keep Vicuna-13b-v1.5-16k as primary** | Per the paper, stronger models are *further* from human; Vicuna is the right object and matches the paper exactly | Scope claims to "within Vicuna"; modern model only an optional stretch |
 
 ## Evolution
 

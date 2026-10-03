@@ -1,0 +1,215 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2485,
+  "topic": "Family Reunions",
+  "sb_prompt": "DISCUSS PLANNING A FAMILY REUNION.  DRAW ON YOUR EXPERIENCES AND THOSE OF THE OTHER CALLER FOR MAKING THE NEXT GET-TOGETHER SUCCESSFUL AND MEMORABLE.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 45,
+    "education": "a high-school education",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's been on your mind lately?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been thinking about planning a family reunion."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that sounds interesting!"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think it's about time we got everyone together."
+    ],
+    [
+      "ParticipantA",
+      "I had a family reunion last year, it was a lot of fun, but it was also a lot of work."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'm sure it will be too."
+    ],
+    [
+      "ParticipantA",
+      "What's your plan for the reunion?"
+    ],
+    [
+      "ParticipantB",
+      "I'm thinking of having it at a park near my house."
+    ],
+    [
+      "ParticipantA",
+      "Have you thought about invitations and how you'll send them out?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't decided yet, but I'm thinking of sending out email invitations."
+    ],
+    [
+      "ParticipantA",
+      "I actually used a website to create and send out invitations for my last reunion, it was really easy and convenient."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a good idea."
+    ],
+    [
+      "ParticipantA",
+      "I also made a family tree to include everyone and their contact information."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that could be helpful."
+    ],
+    [
+      "ParticipantA",
+      "What's the size of your family?"
+    ],
+    [
+      "ParticipantB",
+      "It's about twenty people, including cousins and extended family."
+    ],
+    [
+      "ParticipantA",
+      "I also made a list of activities and games for everyone to enjoy during the reunion."
+    ],
+    [
+      "ParticipantB",
+      "What kind of activities and games did you have at your reunion?"
+    ],
+    [
+      "ParticipantA",
+      "We had a photo scavenger hunt, a trivia game about family history, and a picnic lunch."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a lot of fun."
+    ],
+    [
+      "ParticipantA",
+      "We also had a family talent show where everyone performed something they were good at."
+    ],
+    [
+      "ParticipantB",
+      "We should definitely do something like that too."
+    ],
+    [
+      "ParticipantA",
+      "And we also had a potluck dinner where everyone brought a dish to share."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think we should definitely do a potluck too."
+    ],
+    [
+      "ParticipantA",
+      "Have you thought about what you'll serve for food at the reunion?"
+    ],
+    [
+      "ParticipantB",
+      "I was thinking of having burgers and hot dogs for the main meal, but I'm open to other suggestions."
+    ],
+    [
+      "ParticipantA",
+      "Maybe we could also have a dessert contest where everyone brings their best homemade dessert to share."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds like a good idea."
+    ],
+    [
+      "ParticipantA",
+      "Have you thought about a date and time for the reunion yet?"
+    ],
+    [
+      "ParticipantB",
+      "Actually, my cousin mentioned that she's free that weekend, so I was thinking about scheduling it for then."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a good time for everyone to come together."
+    ],
+    [
+      "ParticipantB",
+      "I think that sounds good."
+    ],
+    [
+      "ParticipantA",
+      "What are some of the activities and games you're planning to include at the reunion?"
+    ],
+    [
+      "ParticipantB",
+      "We could also have a family history quiz and a game of trivia about our ancestors."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a great idea."
+    ],
+    [
+      "ParticipantB",
+      "We could also have a game of cornhole."
+    ],
+    [
+      "ParticipantA",
+      "What about a family photo scavenger hunt?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds like fun too."
+    ],
+    [
+      "ParticipantA",
+      "Have you thought about decorations or any special touches for the reunion?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I was thinking of decorating the picnic area with balloons and streamers."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

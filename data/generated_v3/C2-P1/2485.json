@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2485,
+  "topic": "Family Reunions",
+  "sb_prompt": "DISCUSS PLANNING A FAMILY REUNION.  DRAW ON YOUR EXPERIENCES AND THOSE OF THE OTHER CALLER FOR MAKING THE NEXT GET-TOGETHER SUCCESSFUL AND MEMORABLE.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 45,
+    "education": "a high-school education",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what brings you to the phone today?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I was asked to plan a family reunion for my cousin's 50th birthday."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that sounds like a big milestone! Congrats to your cousin."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's quite an achievement."
+    ],
+    [
+      "ParticipantA",
+      "That's great! When are you planning to have it?"
+    ],
+    [
+      "ParticipantB",
+      "We're thinking of having it in the fall, probably October."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a good time for a reunion."
+    ],
+    [
+      "ParticipantB",
+      "I'm just a bit worried about the weather, though."
+    ],
+    [
+      "ParticipantA",
+      "I hear you. What's your plan for the reunion?"
+    ],
+    [
+      "ParticipantB",
+      "We're thinking of having it in a park with a picnic area and some indoor facilities in case of bad weather."
+    ],
+    [
+      "ParticipantA",
+      "Have you thought about inviting other family members?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, we've already started making a list of who to invite."
+    ],
+    [
+      "ParticipantA",
+      "That's great. Have you thought about any activities or games to do during the reunion?"
+    ],
+    [
+      "ParticipantB",
+      "Not yet, we're still brainstorming ideas."
+    ],
+    [
+      "ParticipantA",
+      "I've planned a few family reunions before, so if you need any advice or suggestions, feel free to ask."
+    ],
+    [
+      "ParticipantB",
+      "That would be great, thank you."
+    ],
+    [
+      "ParticipantA",
+      "Well, for our last reunion, we did a family photo scavenger hunt, which was a big hit. We also had a potluck dinner and awards for different categories like best dish and most creative presentation. You could consider doing something similar or come up with your own unique activities."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a great idea, thank you for sharing. We'll definitely consider that for our reunion."
+    ],
+    [
+      "ParticipantA",
+      "You know, I also think it's important to have a clear schedule or agenda for the reunion, so everyone knows what to expect and can plan their time accordingly."
+    ],
+    [
+      "ParticipantB",
+      "That's a good point."
+    ],
+    [
+      "ParticipantA",
+      "And don't forget to create a family tree or a timeline of important events in your family's history to display during the reunion."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, we'll definitely keep that in mind."
+    ],
+    [
+      "ParticipantA",
+      "Also, consider sending out invitations early enough so everyone can make plans to attend."
+    ],
+    [
+      "ParticipantB",
+      "Thanks for all the great advice, I really appreciate it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, and make sure to include a deadline for RSVPs so you can get an accurate headcount for planning purposes."
+    ],
+    [
+      "ParticipantB",
+      "Definitely."
+    ],
+    [
+      "ParticipantA",
+      "Have you thought about hiring a professional photographer to capture the reunion memories?"
+    ],
+    [
+      "ParticipantB",
+      "Thanks for the suggestion, I'll keep that in mind."
+    ],
+    [
+      "ParticipantA",
+      "Well, I hope your cousin's 50th birthday reunion turns out to be a great success and a memorable day for everyone."
+    ],
+    [
+      "ParticipantB",
+      "Thank you so much for all your advice, I feel more confident about planning the reunion now."
+    ],
+    [
+      "ParticipantA",
+      "You're welcome, happy to help."
+    ],
+    [
+      "ParticipantB",
+      "Thanks again for all your help."
+    ],
+    [
+      "ParticipantA",
+      "No problem, happy to help."
+    ],
+    [
+      "ParticipantB",
+      "I'll definitely keep all of this in mind and let you know how it goes."
+    ],
+    [
+      "ParticipantA",
+      "Well, I hope everything goes smoothly for your cousin's reunion. Let me know if you need any more advice or suggestions."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I will. Thanks again for everything."
+    ],
+    [
+      "ParticipantA",
+      "Sure, let me know how it goes."
+    ],
+    [
+      "ParticipantB",
+      "Thank you again for everything."
+    ],
+    [
+      "ParticipantA",
+      "It was great speaking with you, have a good day!"
+    ],
+    [
+      "ParticipantB",
+      "Thanks again for everything, you've been a great help."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 3
+  }
+}

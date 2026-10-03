@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2279,
+  "topic": "Family Life",
+  "sb_prompt": "IF YOU HAVE CHILDRENY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 37,
+    "education": "a high-school education",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "How many kids do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have one."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's nice."
+    ],
+    [
+      "ParticipantB",
+      "He's five now, so it's been a busy few years."
+    ],
+    [
+      "ParticipantA",
+      "I have two kids, they're both teenagers now."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it definitely keeps you on your toes."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's been a wild ride so far."
+    ],
+    [
+      "ParticipantA",
+      "You know, it's funny, but I always thought I'd have more kids than I do."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's been a wild ride so far."
+    ],
+    [
+      "ParticipantA",
+      "What's your kid like?"
+    ],
+    [
+      "ParticipantB",
+      "He's a real live wire."
+    ],
+    [
+      "ParticipantA",
+      "It's great to hear about his energy and curiosity."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, he's always getting into something."
+    ],
+    [
+      "ParticipantA",
+      "So, what's the most challenging thing you've faced as a parent so far?"
+    ],
+    [
+      "ParticipantB",
+      "It's definitely the whole balancing act of work and family life."
+    ],
+    [
+      "ParticipantA",
+      "I hear you."
+    ],
+    [
+      "ParticipantB",
+      "And trying to make sure he's getting a good education while still having time for him."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's tough."
+    ],
+    [
+      "ParticipantB",
+      "I've been lucky in that respect."
+    ],
+    [
+      "ParticipantA",
+      "I hear you."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a juggling act."
+    ],
+    [
+      "ParticipantA",
+      "My kids are already teenagers and I've been working on that balance for a while now."
+    ],
+    [
+      "ParticipantB",
+      "It's definitely a challenge, but I wouldn't trade it for the world."
+    ],
+    [
+      "ParticipantA",
+      "I hear you on that."
+    ],
+    [
+      "ParticipantB",
+      "And trying to make sure he's not getting into too much trouble."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I know what you mean."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a juggling act."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely a juggling act."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a juggling act."
+    ],
+    [
+      "ParticipantA",
+      "So, how do you manage to keep up with everything?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I try to prioritize my time and focus on what's really important."
+    ],
+    [
+      "ParticipantA",
+      "What do you mean by \"really important\"?"
+    ],
+    [
+      "ParticipantB",
+      "Work and family."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I know what you mean. It's like, you have to be there for your family, but you also have to provide for them, you know?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and I think it's important to set a good example for him and show him the value of hard work and responsibility."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "And I think it's important to spend quality time with him and be involved in his life."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's really important too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and I try to make sure he has a good balance between school work and play time."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 3,
+    "dup_kept": 1
+  }
+}

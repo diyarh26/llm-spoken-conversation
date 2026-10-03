@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2155,
+  "topic": "Care Of The Elderly",
+  "sb_prompt": "PLEASE DISCUSS CARE OF THE ELDERLY.  FIND OUT HOW THE OTHER CALLER FEELS ABOUT SENDING AN ELDERLY FAMILY MEMBER TO A NURSING HOME.  WHAT SHOULD ONE KNOW ABOUT THE NURSING HOME ENVIRONMENT WHEN MAKING THIS DECISION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hi, how are you doing today?\nParticipantB: I'm doing okay, thanks for asking. What about you?\nParticipantA: I'm alright, just got off work. So, what brings you to call a stranger?\nParticipantB: I was asked to talk about care of the elderly with someone. How about you?\nParticipantA: Same here. I work at a grocery store, but I used to work in healthcare.\nParticipantB: Ah, interesting. I'm an electrician, but I have a personal experience related to elderly care.\nParticipantA: Oh, what's your experience like?\nParticipantB: My grandma was in a nursing home for a while before she passed away.\nParticipantA: I'm sorry to hear that. How was her experience there?\nParticipantB: It was mixed. She had some good days, but some not so good days too.\nParticipantA: Yeah, I can understand that. I have mixed feelings about sending elderly family members to nursing homes.\nParticipantB: What are your thoughts on it?\nParticipantA: I think it's a difficult decision to make, and it depends on the specific situation.\nParticipantB: Definitely. What should someone know about the nursing home environment before making that decision?\nParticipantA: Well, I think it's important to visit the facility and see how the staff interacts with the residents.\nParticipantB: That's a good point. And what should one look for in the staff?\nParticipantA: I think it's important that the staff is kind, patient, and attentive to the residents' needs.\nParticipantB: Absolutely. I think it's also important to consider the size of the facility and the ratio of staff to residents.\nParticipantA: Yeah, that's a good point. It can make a big difference in the quality of care.\nParticipantB: Definitely. And what's your experience with nursing homes?\nParticipantA: I haven't had any personal experience, but I've seen firsthand how important it is to have a good support system in place.\nParticipantB: Yeah, that's so important. I think it's also important to remember that nursing homes aren't the only option.\nParticipantA: Definitely. There are other options like in-home care or assisted living communities.\nParticipantB: Exactly. It's important to weigh all the options and make the best decision for the specific situation.\nParticipantA: Yeah, it's definitely a personal decision that requires a lot of thought and consideration.\nParticipantB: Absolutely. Well, it was nice talking with you.\nParticipantA: Same here, thanks for the conversation.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 658,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

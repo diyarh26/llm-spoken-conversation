@@ -1,0 +1,86 @@
+{
+  "condition": "C4-P2",
+  "architecture": "C4",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3186,
+  "topic": "Restaurants",
+  "sb_prompt": "WHAT KIND OF DINING OUT DO YOU ENJOY? WHAT THINGS DO YOU LOOK FOR IN A RESTAURANT THAT WOULD GET YOU TO GO BACK AGAIN?  SEE WHETHER THE OTHER CALLER'S PREFERENCES ARE SIMILAR TO YOURS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 58,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "an insurance adjuster",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of dining out do you enjoy?"
+    ],
+    [
+      "ParticipantB",
+      "I usually go for Italian food. I find that the pasta dishes are really satisfying and I enjoy the flavors. What about you? What's your favorite kind of dining out?"
+    ],
+    [
+      "ParticipantA",
+      "I actually prefer Mexican food. I love the variety of dishes and the spicy flavors. Plus, it's always a fun experience with friends and family. How about you? Do you have a favorite Mexican restaurant?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've got a few Mexican places that I like. One of them is this place called El Ranchero. They have great burritos and tacos. The atmosphere is really lively and the staff is always friendly. Have you been there before?\n\nOh, and I also like trying out new places. I've heard good things about this place called La Hacienda that just opened up. I might check it out soon. Do you have any new Mexican places that you'd recommend?"
+    ],
+    [
+      "ParticipantA",
+      "I haven't been to El Ranchero yet, but it sounds like a great spot. I'll have to give it a try. And yes, I agree that trying out new places is always fun. I haven't heard of La Hacienda, but I'll definitely look into it. Thanks for the suggestion!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It's always nice to discover new places. If you end up going to La Hacienda, let me know how it is. I'm sure we'll both enjoy trying out some new dishes. Have a great day!"
+    ],
+    [
+      "ParticipantA",
+      "Will do! Thanks for the conversation, it was nice chatting with you. Enjoy your day too!"
+    ]
+  ],
+  "n_turns": 9,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

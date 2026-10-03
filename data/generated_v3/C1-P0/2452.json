@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2452,
+  "topic": "Middle East",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THINKS ABOUT CURRENT US POLICY IN THE MIDDLE EAST. SHOULD US POLICY BE CHANGED OR NOT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what's on your mind today?\nParticipantB: Well, I've been thinking about the current US policy in the Middle East. What about you?\nParticipantA: Yes, I've been thinking about that too. What do you think about it?\nParticipantB: I think it's a mess. I think we've been involved in too many conflicts in the region and it's time for a change.\nParticipantA: I agree. I think we need to reevaluate our approach and figure out what's really in our best interest.\nParticipantB: Exactly. I think we need to take a step back and assess the situation before making any moves.\nParticipantA: I think that's a good idea. It seems like we've been reacting to things without really thinking them through.\nParticipantB: Yes, and it's caused a lot of problems. I think if we take a more thoughtful approach, we can avoid making mistakes in the future.\nParticipantA: Definitely. It's important that we consider the long-term consequences of our actions.\nParticipantB: Absolutely. I think it's time for a change in our policy towards the Middle East.\nParticipantA: I couldn't agree more. I think it's time for a new approach.\nParticipantB: Great, I'm glad we're on the same page.\nParticipantA: Yeah, it's nice to have someone to agree with.\nParticipantB: So, do you have any specific ideas on how we could change our policy?\nParticipantA: Well, I think we should focus more on diplomacy and less on military intervention.\nParticipantB: Yes, I think that's a good idea. I think we should try to find peaceful solutions to the conflicts in the region.\nParticipantA: Exactly. And I think we need to listen to the concerns of the people in the Middle East and work with them to find solutions.\nParticipantB: Definitely. I think it's important that we respect the culture and traditions of the people in the region.\nParticipantA: Agreed. I think if we show respect and understanding, we can build better relationships and find lasting solutions.\nParticipantB: Absolutely. I think it's time for a change in our policy towards the Middle East.\nParticipantA: I couldn't agree more. I think it's time for a new approach.\nParticipantB: Great, I'm glad we're on the same page.\nParticipantA: Yeah, it's nice to have someone to agree with.\nParticipantB: Well, it was good talking to you.\nParticipantA: You too. Thanks for the conversation.\nParticipantB: Of course, anytime. Have a good day.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 673,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

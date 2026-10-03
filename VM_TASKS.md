@@ -1,52 +1,38 @@
-# VM Tasks — RESUME after the GPU-driver crash (2026-06-24)
+# VM Tasks — v3 full run (updated 2026-09-27)
 
-Owner: local side. Read `CLAUDE.md` and `.planning/STATE.md` first.
+Owner: local side. Diyar now launches runs by hand in tmux (the VM agent's sandbox cannot
+see the GPU). This file is the record of what runs, in what order, with which command.
 
-## What happened
-The full generation run (12 conditions, 50 each) was running in `tmux` but **crashed at C4-P0**
-because of an NVIDIA **NVML driver/library version mismatch** (C4 loads two models; torch's
-CUDA allocator called `nvmlInit` and it asserted). Safe on disk on the VM:
-`C1-P0`, `C2-P0`, `C3-P0` = 50 each (150 conversations). `C4-P0` has 1. The P1 set and all of
-P2 were not started. (These 150 are committed locally on the VM as `b0ab7a0` but NOT pushed.)
+## Status
+| Condition | Status |
+|---|---|
+| C1-P0 / P1 / P2 | ✅ 50 each, on `main` |
+| C2-P1 | ✅ 50, on `main` |
+| C2-P2 | ⏳ running (tmux `regen`/`regen2`) |
+| C2-P0 | next — same frozen code (tested in `data/dev_sweep_v2/C2-P0`) |
+| C3 (P0/P1/P2) | after C2 — **5-conversation test first** (the M60 fits one Vicuna) |
+| C4 (P0/P1/P2) | needs the V100 or a rented GPU (two models) |
 
-## TASK 1 — Reboot to fix the GPU driver
-Reboot the VM (Azure portal → your VM → **Restart**, or `sudo reboot`). This is the correct
-fix now that nothing is running. After it returns, verify:
+Generation code is FROZEN for the whole study. Do not change prompts, decoding, or the loop
+guard — every architecture must run identical code. Loops are handled in analysis.
+
+## Next: C2-P0 (start when C2-P2 is done; ~50 h on the M60)
 ```bash
-nvidia-smi
-cd ~/llm-spoken-conversation && conda activate convsim
-python -c "import torch; print('cuda', torch.cuda.is_available())"
-```
-Expect `nvidia-smi` to work and `cuda True`.
-
-## TASK 2 — Resume generation (DO NOT delete data/generated — it is resumable)
-```bash
-tmux new -s gen
-conda activate convsim
-for LV in P0 P1; do
-  python generation/generate_c1.py --prompt $LV --n 50
-  python generation/generate_c2.py --prompt $LV --n 50 --max-turns 30
-  python generation/generate_c3.py --prompt $LV --n 50 --max-turns 30
-  python generation/generate_c4.py --prompt $LV --n 50 --max-turns 30
-done
-```
-It skips C1/C2/C3-P0 (done), finishes C4-P0, then does the whole P1 set. Detach: Ctrl-b then d.
-
-## TASK 3 — P2 few-shot conditions (after TASK 2)
-```bash
-python generation/generate_c1.py --prompt P2 --n 50
-python generation/generate_c2.py --prompt P2 --n 50 --max-turns 30
-python generation/generate_c3.py --prompt P2 --n 50 --max-turns 30
-python generation/generate_c4.py --prompt P2 --n 50 --max-turns 30
+cd ~/llm-spoken-conversation && tmux new-session -d -s regen 'cd ~/llm-spoken-conversation && PY=/anaconda/envs/convsim/bin/python PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CONDS="C2-P0" bash generation/run_v3_regen.sh'
 ```
 
-## TASK 4 — Push + report
+## Then: C3 5-conversation test (same 5 dev ids, all three prompts)
 ```bash
-git add data/generated && git commit -m "data: full Phase 2 generation (12 conditions)" && git push
+cd ~/llm-spoken-conversation && tmux new-session -d -s c3test 'cd ~/llm-spoken-conversation && PY=/anaconda/envs/convsim/bin/python OUT_ROOT=data/dev_sweep_v2 LOG=run_v3_retest.log PUSH_EACH=1 ARCHS="c3" bash generation/run_v3_devsweep.sh'
 ```
-If push is rejected: `git pull --rebase origin main` then push again. Then tell the local lead
-to run `python analysis/analyze.py` and the ALIGN + stats analysis.
+Local reviews it (speed, multi-turn emissions, token caps, transcripts) before the full C3 run.
 
-## Note
-If the NVML mismatch recurs after reboot, it's an unattended NVIDIA driver update; a reboot
-re-syncs it. Generators are resumable, so no finished conversation is ever lost.
+## Check progress (any time, read-only)
+```bash
+cd ~/llm-spoken-conversation && tmux ls; for d in data/generated_v3/*; do echo "$d $(ls $d | wc -l)"; done; tail -n 2 run_v3_regen.log | cut -c1-120
+```
+
+## Do NOT
+- Do NOT `git pull` while a run is active (the running script pulls by itself after each condition).
+- Do NOT change prompts, the manifest, `generation/config.py`, or decoding.
+- Do NOT commit Switchboard source data or model weights.

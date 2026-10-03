@@ -1,0 +1,130 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2993,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "I'm considering getting a mid-size sedan with good fuel economy and safety ratings."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a practical choice. What are some specific features or brands that you're considering?"
+    ],
+    [
+      "ParticipantB",
+      "I'm looking at the Honda Accord and Toyota Camry, both have great reputations for reliability and safety. I also want a car with advanced technology features, like lane departure warning and adaptive cruise control."
+    ],
+    [
+      "ParticipantA",
+      "Those are both great choices. I've heard great things about the Honda Accord's reliability and safety features. How important is the price to you?"
+    ],
+    [
+      "ParticipantB",
+      "Price is definitely a consideration, but I'm willing to pay a bit more for a reliable and safe car with the features I want."
+    ],
+    [
+      "ParticipantA",
+      "I understand. It's always good to prioritize safety and reliability. Have you test driven any of these cars yet?"
+    ],
+    [
+      "ParticipantB",
+      "I have test driven the Honda Accord, and it felt very comfortable and had all the features I was looking for. I'm planning on test driving the Toyota Camry soon as well."
+    ],
+    [
+      "ParticipantA",
+      "That's great to hear. It's always important to test drive the car before making a decision. What color are you considering?"
+    ],
+    [
+      "ParticipantB",
+      "I'm leaning towards a silver or grey color, as those tend to look good on most cars and are easy to keep clean."
+    ],
+    [
+      "ParticipantA",
+      "That's a wise choice. I personally love the look of a silver or grey car. What are your thoughts on buying a car that's a few years old versus buying a brand new one?"
+    ],
+    [
+      "ParticipantB",
+      "I'm considering buying a car that's a few years old, as long as it's in good condition and has low miles. I'm not too worried about having the latest model, as long as it has the features I want and is reliable."
+    ],
+    [
+      "ParticipantA",
+      "That's a smart approach. Used cars can often be a great value, and you can save a lot of money by purchasing one that's a few years old. Have you thought about getting a warranty or an extended maintenance plan for your new car?"
+    ],
+    [
+      "ParticipantB",
+      "I have considered getting a warranty or an extended maintenance plan, as it can provide peace of mind and save money on repairs and maintenance in the long run. I'm still researching my options and weighing the costs."
+    ],
+    [
+      "ParticipantA",
+      "That's a good idea. It's always better to be safe than sorry, especially when it comes to something as important as a car. Do you have any other questions or concerns that I can help with?"
+    ],
+    [
+      "ParticipantB",
+      "No, I think that covers it. Thanks for the conversation, it was helpful to hear someone else's perspective on what to consider when buying a car."
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It was nice talking with you. Good luck with your car search!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you, you too!"
+    ]
+  ],
+  "n_turns": 20,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

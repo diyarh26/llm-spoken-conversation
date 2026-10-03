@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2924,
+  "topic": "Trial By Jury",
+  "sb_prompt": "DISCUSS POSSIBLE CHANGES IN THE WAY TRIALS BY JURY ARE CONDUCTED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 26,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So what do you think about the trial by jury system?"
+    ],
+    [
+      "ParticipantB",
+      "Um, I think it's important, but there are some issues with it."
+    ],
+    [
+      "ParticipantA",
+      "I've always been a bit unsure about it, to be honest."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, what are your concerns about it?"
+    ],
+    [
+      "ParticipantA",
+      "I think it's important for people to have their day in court and be judged by a jury of their peers, but at the same time, I worry that the system can be flawed and biased."
+    ],
+    [
+      "ParticipantB",
+      "Well, I think it's important to have a fair and impartial jury, but I also think that the system could be improved."
+    ],
+    [
+      "ParticipantA",
+      "I think that the jury selection process could be improved to ensure a more diverse and representative jury."
+    ],
+    [
+      "ParticipantB",
+      "And I know someone who went through a trial by jury and it was a really difficult experience for them."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can see how that could be really tough."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was really tough for them."
+    ],
+    [
+      "ParticipantA",
+      "I think that the process of selecting a jury should be more thorough and comprehensive to ensure that the jury is truly impartial and unbiased."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's really important to have a fair and impartial jury."
+    ],
+    [
+      "ParticipantA",
+      "So do you think that the way trials by jury are conducted needs to change?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think there needs to be some changes."
+    ],
+    [
+      "ParticipantA",
+      "What do you think would be the most effective way to improve the jury selection process?"
+    ],
+    [
+      "ParticipantB",
+      "I think there should be more education and awareness about the importance of a fair and impartial jury."
+    ],
+    [
+      "ParticipantA",
+      "I agree, more education and awareness would definitely help."
+    ],
+    [
+      "ParticipantB",
+      "And maybe some kind of juror diversity training to help ensure that the jury is truly representative of the community."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that sounds like a good idea."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think that would be really effective."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that would be really important."
+    ],
+    [
+      "ParticipantB",
+      "And, you know, perhaps some kind of system to prevent bias from seeping into the jury selection process."
+    ],
+    [
+      "ParticipantA",
+      "And what about you? Have you had any personal experiences with the jury system that have shaped your view on it?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I know someone close who's dealt with it, which shaped my view."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's really important too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and it's just really difficult to ignore how race and socioeconomic status can affect the outcome of a trial."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's definitely an issue that needs to be addressed."
+    ],
+    [
+      "ParticipantB",
+      "Well, I think that's something that needs to be addressed in the jury selection process."
+    ],
+    [
+      "ParticipantA",
+      "I think it's really important to address those issues."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a complex issue."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think it's definitely a complex issue."
+    ],
+    [
+      "ParticipantB",
+      "It's definitely a complex issue."
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think is the biggest challenge facing the jury system today?"
+    ],
+    [
+      "ParticipantB",
+      "I think the biggest challenge is finding ways to ensure that the jury selection process is truly fair and impartial."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a complex issue."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely a complex issue."
+    ],
+    [
+      "ParticipantB",
+      "So, what do you think is the biggest challenge facing the jury system today?"
+    ],
+    [
+      "ParticipantA",
+      "I think there needs to be more investment in education and training for jurors."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I agree that education and training for jurors is important."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 5,
+    "dup_kept": 1
+  }
+}

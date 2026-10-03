@@ -1,0 +1,138 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3573,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 67,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "I'm considering a hybrid or electric vehicle."
+    ],
+    [
+      "ParticipantA",
+      "That's great! What are some of the factors you're considering when making your decision?"
+    ],
+    [
+      "ParticipantB",
+      "I'm looking at the car's range, fuel efficiency, safety features, and price."
+    ],
+    [
+      "ParticipantA",
+      "Those are all important factors to consider. What about you? What are you looking for in a car?"
+    ],
+    [
+      "ParticipantB",
+      "I'm also focused on safety features, fuel efficiency, and a comfortable ride. However, I'm also interested in finding a car with the latest technology and advanced features."
+    ],
+    [
+      "ParticipantA",
+      "It sounds like we're both looking for similar things in a car. What brands or models have you considered so far?"
+    ],
+    [
+      "ParticipantB",
+      "I've been looking at the Toyota Prius, Honda Clarity, and Tesla Model 3. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "Those are all great choices! I've been considering the Honda Accord, Toyota Camry, and the Tesla Model S."
+    ],
+    [
+      "ParticipantB",
+      "The Honda Accord and Toyota Camry are both excellent choices. I've heard great things about their reliability and performance. And the Tesla Model S is a fantastic car with cutting-edge technology."
+    ],
+    [
+      "ParticipantA",
+      "Yes, the Model S is a luxury car with top-notch technology, but it's also quite expensive. What is your budget like for a new car?"
+    ],
+    [
+      "ParticipantB",
+      "My budget is around $30,000, but I'm willing to pay more for a car with better features and performance."
+    ],
+    [
+      "ParticipantA",
+      "That's a good budget to work with. The Honda Accord and Toyota Camry are both within that price range, and they offer great value for the money. The Tesla Model S, on the other hand, can cost over $100,000."
+    ],
+    [
+      "ParticipantB",
+      "Yes, the Model S can be quite expensive, but it's definitely worth it for the technology and performance it offers."
+    ],
+    [
+      "ParticipantA",
+      "That's true. It's important to prioritize what features and characteristics are most important to you and your budget. Have you test-driven any of the cars you're considering?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I've test-driven the Toyota Prius, and it was a great experience. The car was comfortable, and it had a smooth ride."
+    ],
+    [
+      "ParticipantA",
+      "That's good to hear. I've also test-driven the Honda Accord, and it was very comfortable and had a smooth ride as well. I haven't test-driven the Tesla Model 3 yet, but I've heard great things about it."
+    ],
+    [
+      "ParticipantB",
+      "Yes, the Tesla Model 3 is also an excellent car. It's a bit smaller than the other cars we've been discussing, but it offers great performance and advanced technology."
+    ],
+    [
+      "ParticipantA",
+      "That's right. It's a great option for those who prioritize technology and performance over a larger car. Well, it was great speaking with you about cars. I hope we both find the perfect car for our needs."
+    ],
+    [
+      "ParticipantB",
+      "Yes, it was nice speaking with you too. I hope we both find the car of our dreams soon. Goodbye!"
+    ]
+  ],
+  "n_turns": 22,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

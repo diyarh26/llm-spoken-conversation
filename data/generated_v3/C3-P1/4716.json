@@ -1,0 +1,118 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 4716,
+  "topic": "Gun Control",
+  "sb_prompt": "DISCUSS GUN CONTROL.  WHERE DO YOU AND THE OTHER CALLER STAND ON A SCALE FROM 1 TO 10",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what are your thoughts on gun control?"
+    ],
+    [
+      "ParticipantB",
+      "I'd say I'm a 6. I think there should be some regulations in place, but I also believe in the right to bear arms."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can understand that. I'm actually more on the side of stronger regulations. I think we need to make it harder for people with violent histories or mental illnesses to get their hands on guns."
+    ],
+    [
+      "ParticipantB",
+      "That's a valid point. I think we need to find a balance between protecting citizens' rights and keeping guns out of the wrong hands."
+    ],
+    [
+      "ParticipantA",
+      "Exactly. And do you think there should be any specific measures put in place, like background checks or waiting periods?"
+    ],
+    [
+      "ParticipantB",
+      "I think background checks are important, and waiting periods could be useful for people who might be making a impulsive decision. But I don't think these measures alone will solve the problem."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree that these measures alone won't solve the problem. We need to have a comprehensive approach that also includes better mental health care and addressing the root causes of violence."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. It's not just about the guns, it's about addressing the underlying issues that can lead to violence."
+    ],
+    [
+      "ParticipantA",
+      "Exactly. And what about the Second Amendment? Do you think it should be taken into consideration when discussing gun control?"
+    ],
+    [
+      "ParticipantB",
+      "Of course, the Second Amendment is an important aspect of the discussion. I think it's possible to respect the Second Amendment while also implementing common sense regulations to keep guns out of the wrong hands."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. It's important to respect the rights of law-abiding citizens while also ensuring the safety of our communities."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a delicate balance, but I think it's possible to find a solution that respects both sides.\n\nThe conversation ends naturally."
+    ],
+    [
+      "ParticipantA",
+      "Well, I think that's a great point to end on. Thank you for sharing your thoughts on this topic. It was great to have this conversation with you."
+    ],
+    [
+      "ParticipantB",
+      "Thank you, it was great talking to you too."
+    ],
+    [
+      "ParticipantA",
+      "You're welcome. Take care!"
+    ]
+  ],
+  "n_turns": 17,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

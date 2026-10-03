@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2924,
+  "topic": "Trial By Jury",
+  "sb_prompt": "DISCUSS POSSIBLE CHANGES IN THE WAY TRIALS BY JURY ARE CONDUCTED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 26,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: So, what brings you to call a stranger about trial by jury?\nParticipantB: Oh, well I'm an accountant, and I was asked to participate in a focus group about the trial process.\nParticipantA: Ah, I see. I work as a bank teller and was asked to participate as well. I've always had mixed feelings about the topic.\nParticipantB: Yeah, I can relate. I know someone close who had to go through the trial process, and it really opened my eyes to some of the flaws in the system.\nParticipantA: Yeah, I've had similar experiences. I feel like some parts of the trial process are fair and just, but other parts just don't sit right with me.\nParticipantB: Definitely. I think some changes could be made to the way trials are conducted to make the process more efficient and fair for all parties involved.\nParticipantA: Agreed. I've been thinking about this a lot lately, and I think one possible change could be to make the jury selection process more diverse.\nParticipantB: Yes, that's a good point. I think it's important to have a jury that represents the community and can relate to the case being tried.\nParticipantA: Exactly. And I think there could also be more emphasis on education for jurors. I think a lot of people don't fully understand the role they play in the trial process.\nParticipantB: Yeah, I've definitely seen that in my own experience. I think if people had a better understanding of the trial process, they would be more likely to take it seriously and not take it lightly.\nParticipantA: Absolutely. And I think there could also be more emphasis on alternative dispute resolution methods, like mediation or arbitration.\nParticipantB: Yes, I think that's a great idea. I think it could help reduce the backlog of cases and make the process more efficient.\nParticipantA: Exactly. And I think it's important to remember that the trial process is not just about punishment, but also about finding the truth and ensuring justice is served.\nParticipantB: Agreed. Well, it was nice talking to you about this.\nParticipantA: Yeah, likewise. It's always good to hear other people's perspectives.\nParticipantB: Take care!\nParticipantA: You too!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 556,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

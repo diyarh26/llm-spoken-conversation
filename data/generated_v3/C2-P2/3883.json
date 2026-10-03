@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3883,
+  "topic": "Clothing And Dress",
+  "sb_prompt": "THE TOPIC IS CLOTHING.  PLEASE FIND OUT HOW THE OTHER CALLER TYPICALLY DRESSES FOR WORK.  HOW MUCH VARIATION IS THERE FROM DAY TO DAY?  HOW MUCH VARIATION IS THERE FROM SEASON TO SEASON?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 57,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how do you typically dress for work?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I usually wear scrubs and a lab coat."
+    ],
+    [
+      "ParticipantA",
+      "What kind of scrubs do you usually wear?"
+    ],
+    [
+      "ParticipantB",
+      "They're usually a light blue color."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that sounds comfortable."
+    ],
+    [
+      "ParticipantB",
+      "And how about you? How do you usually dress for work?"
+    ],
+    [
+      "ParticipantA",
+      "I usually wear something comfortable too, but it depends on the day. Sometimes I wear jeans and a t-shirt, other times I'll wear a dress or a nice top with pants."
+    ],
+    [
+      "ParticipantB",
+      "Oh, that's nice."
+    ],
+    [
+      "ParticipantA",
+      "Do you have a preferred outfit you wear most days?"
+    ],
+    [
+      "ParticipantB",
+      "I don't really have a preference, I just wear what's clean."
+    ],
+    [
+      "ParticipantA",
+      "I usually stick to a certain style too, but I like to mix it up and wear different things."
+    ],
+    [
+      "ParticipantB",
+      "I guess it's important to feel comfortable at work."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantA",
+      "Do you have any favorite clothing items that you like to wear more than others?"
+    ],
+    [
+      "ParticipantB",
+      "I do have a favorite pair of scrubs that I like to wear."
+    ],
+    [
+      "ParticipantA",
+      "What kind of scrubs do you like to wear the most?"
+    ],
+    [
+      "ParticipantB",
+      "They're just really soft and comfortable."
+    ],
+    [
+      "ParticipantA",
+      "Do you have any clothing items you wear for special occasions or events?"
+    ],
+    [
+      "ParticipantB",
+      "I have a nice suit that I wear to dental conferences."
+    ],
+    [
+      "ParticipantA",
+      "That sounds nice."
+    ],
+    [
+      "ParticipantB",
+      "And how about you? Do you have any special occasion clothing?"
+    ],
+    [
+      "ParticipantA",
+      "I actually have a dress that I wore to my cousin's wedding last year."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a nice suit."
+    ],
+    [
+      "ParticipantA",
+      "What kind of suit does your cousin wear to conferences?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a nice suit."
+    ],
+    [
+      "ParticipantA",
+      "What kind of fabric is the suit made of?"
+    ],
+    [
+      "ParticipantB",
+      "It's made of wool."
+    ],
+    [
+      "ParticipantA",
+      "What do you usually wear to conferences?"
+    ],
+    [
+      "ParticipantB",
+      "I usually wear a lab coat and scrubs to conferences."
+    ],
+    [
+      "ParticipantA",
+      "I actually have a suit that I wear to job interviews."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a nice suit."
+    ],
+    [
+      "ParticipantA",
+      "What kind of events do you usually attend with that suit on?"
+    ],
+    [
+      "ParticipantB",
+      "I usually attend job interviews and important meetings with that suit on."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have a go-to outfit for special occasions?"
+    ],
+    [
+      "ParticipantB",
+      "And how about you? Do you have a go-to outfit for special occasions?"
+    ],
+    [
+      "ParticipantA",
+      "I don't really have a go-to outfit for special occasions, but I usually wear something nice like a dress or a skirt and a nice top."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I usually wear something professional but comfortable."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 3
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4363,
+  "topic": "Football",
+  "sb_prompt": "PLEASE DISCUSS PROFESSIONAL FOOTBALL.  FIND OUT THE OTHER CALLER'S FAVORITE PRO FOOTBALL TEAM AND WHERE IT'S HEADED THIS YEAR.       DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 27,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you enjoy watching football?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I do. I think it's a great sport. What about you?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've always liked it too."
+    ],
+    [
+      "ParticipantB",
+      "Who's your favorite team?"
+    ],
+    [
+      "ParticipantA",
+      "I'm a big fan of the New England Patriots."
+    ],
+    [
+      "ParticipantB",
+      "I'm a fan of the Dallas Cowboys."
+    ],
+    [
+      "ParticipantA",
+      "I used to live in Dallas for a while, so I have a soft spot for the Cowboys."
+    ],
+    [
+      "ParticipantB",
+      "That's cool."
+    ],
+    [
+      "ParticipantA",
+      "I'm not too sure about their chances this year though."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, me neither."
+    ],
+    [
+      "ParticipantA",
+      "I think they've got a good chance this season."
+    ],
+    [
+      "ParticipantB",
+      "Why do you think that?"
+    ],
+    [
+      "ParticipantA",
+      "I think they have a strong roster and a solid coaching staff."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I agree about the coaching staff, but I'm not sure about their offensive line."
+    ],
+    [
+      "ParticipantA",
+      "I think their offensive line will improve as the season goes on."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I hope so."
+    ],
+    [
+      "ParticipantA",
+      "What about the Cowboys' defense?"
+    ],
+    [
+      "ParticipantB",
+      "I think they'll be solid on defense too."
+    ],
+    [
+      "ParticipantA",
+      "What are your thoughts on the Cowboys' quarterback situation?"
+    ],
+    [
+      "ParticipantB",
+      "I think Dak Prescott is doing a good job, but I'm excited to see how the new draft picks will perform."
+    ],
+    [
+      "ParticipantA",
+      "I'm also interested to see how some of the other teams in the league are going to perform this year."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'm curious about the Browns too."
+    ],
+    [
+      "ParticipantA",
+      "Do you have any favorite players on the Cowboys?"
+    ],
+    [
+      "ParticipantB",
+      "Ezekiel Elliott."
+    ],
+    [
+      "ParticipantA",
+      "Who's your favorite player on the Patriots?"
+    ],
+    [
+      "ParticipantB",
+      "Tom Brady."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, Tom Brady's still got it."
+    ],
+    [
+      "ParticipantB",
+      "I'm a big fan of the Dallas Cowboys."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think he's still one of the best quarterbacks in the league."
+    ],
+    [
+      "ParticipantB",
+      "And how about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm also a fan of Rob Gronkowski."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, he's a beast on the field."
+    ],
+    [
+      "ParticipantA",
+      "What about the Cowboys' wide receiver situation?"
+    ],
+    [
+      "ParticipantB",
+      "I think they have some good receivers, but I'm not sure if they'll be able to replace Dez Bryant's production."
+    ],
+    [
+      "ParticipantA",
+      "I agree, it'll be tough for them to replace Dez Bryant's production."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, he's definitely going to be missed."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, he was definitely one of their key players."
+    ],
+    [
+      "ParticipantB",
+      "What about the Patriots' defense?"
+    ],
+    [
+      "ParticipantA",
+      "I think they've made some good acquisitions in the offseason."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think they've made some good moves to improve their defense."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3636,
+  "topic": "Camping",
+  "sb_prompt": "FIND OUT FROM THE OTHER CALLER WHAT KIND OF CAMPING THEY HAVE DONE.  HOW DOES IT COMPARE WITH YOUR OWN EXPERIENCES?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of camping have you done before?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've gone on a few camping trips with my family when I was younger, and we mostly stuck to camping in tents.\n\nBut I also went on a backpacking trip with some friends a few years ago, and that was a whole different experience. We hiked for several miles into the wilderness and set up our tent in a beautiful spot by a river. It was so peaceful and serene, and I loved the feeling of being out in nature like that.\n\nWhat about you? Have you done any camping before?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've done quite a bit of camping in my time. When I was in college, I used to go on camping trips with some friends all the time. We mostly stuck to car camping, where we would drive out to a campsite and set up our tents there.\n\nBut I've also done some backpacking trips, which were definitely more challenging but also more rewarding. One time, I hiked up to a lake in the mountains and spent a few days fishing and exploring the area. It was a great experience, and I really enjoyed being out in the wilderness like that.\n\nSo, what kind of camping do you usually do now?"
+    ],
+    [
+      "ParticipantB",
+      "Nowadays, I don't get to go camping as often as I would like, but when I do, it's usually with my family. We mostly stick to car camping or renting a cabin, as we have young kids and it's easier to have some comforts like beds and running water.\n\nBut I do miss the backpacking trips and the sense of adventure and freedom that comes with it. Maybe someday, I'll be able to do more of those types of trips again.\n\nWhat about you? Do you still do a lot of camping?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I still enjoy going on camping trips whenever I can. I try to do at least one or two backpacking trips every year, and I also like to car camp with my family during the summer.\n\nI think it's important to get out and explore nature and disconnect from the stresses of everyday life. And camping is a great way to do that.\n\nSo, do you have any favorite camping spots or memories that you like to look back on?\n\n(This is the last turn of talk, as the conversation cannot go past 40 turns.)"
+    ],
+    [
+      "ParticipantB",
+      "Yes, there are a few camping spots that hold special memories for me. One time, my family and I went to a state park and rented a cabin by a lake. We spent our days swimming, fishing, and hiking around the area, and it was just so peaceful and beautiful.\n\nAnother time, I went on a backpacking trip with some friends to a remote area in the mountains. We hiked for several miles to get there, and it was so secluded and quiet that we could hear nothing but the sound of the wind and the birds. We spent our days exploring and hiking, and it was such a unique and memorable experience.\n\nWhat about you? Do you have any favorite camping memories or spots that you like to look back on?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, there are a few camping trips that stand out to me as well. One time, I went on a backpacking trip with some friends to a remote area in the mountains. We hiked for several miles to get there, and it was so secluded and quiet that we could hear nothing but the sound of the wind and the birds. We spent our days exploring and hiking, and it was such a unique and memorable experience.\n\nAnother time, I went car camping with my family to a state park by a lake. We spent our days swimming, fishing, and hiking around the area, and it was just so peaceful and beautiful.\n\nIt's experiences like these that make camping so special to me, and I'm always looking forward to the next adventure."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely, I completely agree. There's something special about being out in nature and disconnecting from the stresses of everyday life. And even though every camping trip is different, they all hold a special place in our memories.\n\nThanks for chatting with me about camping! It's been great to hear about your experiences and compare them to my own."
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It was great to chat with you and hear about your camping experiences. I'm glad we could share our love for camping and the outdoors. Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you! You too, have a great day!"
+    ]
+  ],
+  "n_turns": 12,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

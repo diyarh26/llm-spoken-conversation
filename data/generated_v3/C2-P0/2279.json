@@ -1,0 +1,127 @@
+{
+  "condition": "C2-P0",
+  "architecture": "C2",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2279,
+  "topic": "Family Life",
+  "sb_prompt": "IF YOU HAVE CHILDRENY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 37,
+    "education": "a high-school education",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you have any kids?"
+    ],
+    [
+      "ParticipantB",
+      "Not yet, but I'm definitely looking forward to it in the future. How about you? Do you have any kids?"
+    ],
+    [
+      "ParticipantA",
+      "No, I don't have any kids yet. I'm still trying to figure out how to balance work and personal life. But I'm looking forward to it in the future. How about you? Do you have any kids?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have a 3-year-old son who keeps me on my toes. It's a lot of work, but it's also the most rewarding thing I've ever done. How about you? Do you have any siblings or other family members you're close with?"
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's great! I don't have any siblings, but I'm very close with my parents. My mom is always there for me, and my dad is like a hero to me. I'm lucky to have them in my life. Do you have a big family?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I have a big family. I'm one of five kids, and we're all very close. It's great to have a big family because there's always someone to hang out with or talk to. Do you have a big family too?"
+    ],
+    [
+      "ParticipantA",
+      "That's great to hear that you have a big family and that you're close with them. I wish I had more siblings, but I'm grateful for my parents and their support. Do you live close to your family?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I live close to my family. We're all based in the same city, which is great because we can all hang out and spend time together often. Do you live close to your family too?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I'm lucky to live close to my parents too. They're always there for me and my nieces and nephews are like my own kids. It's great to have a big family support system."
+    ],
+    [
+      "ParticipantB",
+      "Yes, I'm also lucky to have a close family. It's great to have a support system like that. What do you like to do for fun when you're not working or spending time with family?"
+    ],
+    [
+      "ParticipantA",
+      "Well, I enjoy reading books and watching movies when I have some free time. I also like to go for walks and listen to music. What about you? What do you like to do for fun?"
+    ],
+    [
+      "ParticipantB",
+      "I enjoy playing sports like basketball and soccer, and I also like to go hiking and camping with my family. I find that spending time in nature and being active helps me recharge and enjoy life to the fullest. What about you? Do you have any favorite hobbies or activities that you enjoy in your free time?"
+    ],
+    [
+      "ParticipantA",
+      "I also enjoy spending time in nature, but I haven't gone camping in a while. I used to love it when I was a kid. Maybe I'll plan a camping trip with my nieces and nephews soon. It's always fun to spend time with family and create new memories. What about you? Do you like to travel or go on vacations with your family?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, I love to travel and go on vacations with my family. We've been to some amazing places like Hawaii and Costa Rica, and it's always so much fun to explore new places and experience different cultures together. What about you? Have you gone on any memorable vacations or trips with your family?"
+    ],
+    [
+      "ParticipantA",
+      "That sounds amazing! I haven't been on many vacations with my family, but I would love to plan one soon. Maybe we could even try camping together for the first time in a while. It'll be great to create new memories with them."
+    ],
+    [
+      "ParticipantB",
+      "Oh, that sounds like a great idea! I'm sure you'll all have a blast on the camping trip. It's always special when you can create new memories with loved ones. As for me, I'm also looking forward to planning more trips and adventures with my family in the future."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think it's important to make time for family and create new memories together. It's something that I really value and look forward to. I'm glad we had this conversation and got to know each other a little better. It was nice talking to you!"
+    ],
+    [
+      "ParticipantB",
+      "It was nice talking to you too, ParticipantA! I'm glad we had this conversation and got to know each other a little better. It's always great to connect with someone who values family and creating new memories together. Take care, and hopefully, we can plan a camping trip with our families in the future!"
+    ]
+  ],
+  "n_turns": 20,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

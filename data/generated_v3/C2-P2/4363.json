@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4363,
+  "topic": "Football",
+  "sb_prompt": "PLEASE DISCUSS PROFESSIONAL FOOTBALL.  FIND OUT THE OTHER CALLER'S FAVORITE PRO FOOTBALL TEAM AND WHERE IT'S HEADED THIS YEAR.       DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 27,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what team do you root for in pro football?"
+    ],
+    [
+      "ParticipantB",
+      "I'm a big fan of the New England Patriots."
+    ],
+    [
+      "ParticipantA",
+      "That's an interesting choice."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've been a fan since I was a kid."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've always been more of a college football fan myself."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I used to play football in high school, that's probably why."
+    ],
+    [
+      "ParticipantA",
+      "What do you think of the Patriots' chances this year?"
+    ],
+    [
+      "ParticipantB",
+      "I think they're looking pretty strong this year."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I saw their draft picks and they seemed to have made some solid choices."
+    ],
+    [
+      "ParticipantB",
+      "I'm excited to see how their new quarterback, Mac Jones, will perform this season."
+    ],
+    [
+      "ParticipantA",
+      "What do you think sets them apart from other teams?"
+    ],
+    [
+      "ParticipantB",
+      "Their consistency in winning seasons and ability to adapt to different playing styles."
+    ],
+    [
+      "ParticipantA",
+      "I think it's their dedication to the sport and the team, and their ability to stay focused on winning."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely impressive how they've been able to maintain such a high level of play for so long."
+    ],
+    [
+      "ParticipantA",
+      "I used to live in New England, so I've seen a lot of their games."
+    ],
+    [
+      "ParticipantB",
+      "I'm glad they're doing well this year too."
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about the other teams in the league this year?"
+    ],
+    [
+      "ParticipantB",
+      "I think the Kansas City Chiefs are also looking strong this year."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, they have a great team too."
+    ],
+    [
+      "ParticipantB",
+      "I think the Los Angeles Rams have a good chance of doing well this season too."
+    ],
+    [
+      "ParticipantA",
+      "I agree, the Rams have a lot of talent on their team."
+    ],
+    [
+      "ParticipantB",
+      "And I'm interested to see how the Dallas Cowboys will perform this year too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, the Cowboys have a lot of potential."
+    ],
+    [
+      "ParticipantB",
+      "I think they have a lot of potential too, but I'm not sure if they'll be able to live up to it this season."
+    ],
+    [
+      "ParticipantA",
+      "I used to live in Dallas for a few years, so I have a soft spot for the Cowboys."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, they've had some issues with their coaching staff in the past."
+    ],
+    [
+      "ParticipantA",
+      "I think their new coach will make a big difference."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think they'll be able to get their act together this year."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it'll be interesting to see how they do this season."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely going to be an interesting season."
+    ],
+    [
+      "ParticipantA",
+      "I'm looking forward to seeing how the season unfolds."
+    ],
+    [
+      "ParticipantB",
+      "Definitely."
+    ],
+    [
+      "ParticipantA",
+      "So, do you have a favorite player on the Patriots?"
+    ],
+    [
+      "ParticipantB",
+      "Tom Brady."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I used to be a big fan of his too."
+    ],
+    [
+      "ParticipantB",
+      "I think he's one of the best to ever play the game."
+    ],
+    [
+      "ParticipantA",
+      "I'm glad to see the team in good hands with Mac Jones."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, he's got some big shoes to fill, but I think he's up for the challenge."
+    ],
+    [
+      "ParticipantA",
+      "What do you think sets Brady apart from other players?"
+    ],
+    [
+      "ParticipantB",
+      "His work ethic and ability to read the game."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 3
+  }
+}

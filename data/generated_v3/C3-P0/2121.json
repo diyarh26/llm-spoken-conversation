@@ -1,0 +1,106 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2121,
+  "topic": "Air Pollution",
+  "sb_prompt": "PLEASE DISCUSS AIR POLLUTION.  FIND OUT WHAT SUBSTANCES THE OTHER CALLER THINKS CONTRIBUTE THE MOST TO AIR POLLUTION TODAY.  WHAT CAN INDIVIDUALS OR SOCIETY DO TO IMPROVE AIR QUALITY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 54,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 1,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think contributes the most to air pollution today?"
+    ],
+    [
+      "ParticipantB",
+      "I think that cars and factories are the biggest contributors to air pollution."
+    ],
+    [
+      "ParticipantA",
+      "That's a good point. Cars and factories do release a lot of harmful substances into the air. But did you know that even household cleaning products and pesticides can also contribute to air pollution?"
+    ],
+    [
+      "ParticipantB",
+      "No, I didn't know that. That's interesting to know."
+    ],
+    [
+      "ParticipantA",
+      "Yes, it's important to be aware of all the different sources of air pollution. So, what do you think individuals or society can do to improve air quality?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think that individuals can start by reducing their own carbon footprint by using public transportation, biking or walking instead of driving a car. And society can implement stricter regulations on factories and other large polluters, and incentivize companies to adopt more environmentally friendly practices."
+    ],
+    [
+      "ParticipantA",
+      "Those are great suggestions. Reducing our own carbon footprint is an important step that we can all take to help reduce air pollution. And implementing stricter regulations on factories and other large polluters can also have a significant impact. It's important that we all work together to improve air quality and protect our environment."
+    ],
+    [
+      "ParticipantB",
+      "Yes, absolutely. It's important that we all take responsibility for our actions and do our part to protect the environment. Together, we can make a real difference in reducing air pollution and creating a healthier, more sustainable future."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. It's important that we all work together and take responsibility for our actions. Small changes can make a big difference, and by working together, we can create a healthier and more sustainable future for all. Thank you for discussing this important topic with me."
+    ],
+    [
+      "ParticipantB",
+      "You're welcome. It was great discussing this topic with you too. Thank you for bringing awareness to such an important issue."
+    ],
+    [
+      "ParticipantA",
+      "Thank you as well. It was great talking to you."
+    ],
+    [
+      "ParticipantB",
+      "Have a great day!"
+    ]
+  ],
+  "n_turns": 14,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

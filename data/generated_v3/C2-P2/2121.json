@@ -1,0 +1,215 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2121,
+  "topic": "Air Pollution",
+  "sb_prompt": "PLEASE DISCUSS AIR POLLUTION.  FIND OUT WHAT SUBSTANCES THE OTHER CALLER THINKS CONTRIBUTE THE MOST TO AIR POLLUTION TODAY.  WHAT CAN INDIVIDUALS OR SOCIETY DO TO IMPROVE AIR QUALITY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 54,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 1,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about air pollution?"
+    ],
+    [
+      "ParticipantB",
+      "I think it's a big problem."
+    ],
+    [
+      "ParticipantA",
+      "What substances do you think contribute the most to air pollution today?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think cars and factories are big contributors."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree. Cars and factories are definitely big culprits."
+    ],
+    [
+      "ParticipantB",
+      "And power plants too."
+    ],
+    [
+      "ParticipantA",
+      "And what about individual actions? Do you think there's anything we can do as individuals to help improve air quality?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think we can make a difference by driving less and using public transportation."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, and also being mindful of our energy usage at home."
+    ],
+    [
+      "ParticipantB",
+      "And also, reducing, reducing the use of plastic bags."
+    ],
+    [
+      "ParticipantA",
+      "And what about recycling?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, recycling is important too."
+    ],
+    [
+      "ParticipantA",
+      "I also think that supporting companies that prioritize environmental sustainability can make a difference."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever noticed any changes in air quality in your area?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've noticed a difference in air quality since I started using public transportation."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think it's great that you're using public transportation."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely made a difference."
+    ],
+    [
+      "ParticipantA",
+      "And also, supporting politicians who prioritize environmental policies."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and also supporting politicians who prioritize environmental policies."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever experienced any health issues related to air pollution?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't personally, but I've heard it can cause respiratory problems."
+    ],
+    [
+      "ParticipantA",
+      "I also think that supporting politicians who prioritize environmental policies can make a difference."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and it can also affect the environment negatively."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's definitely important to take action on both an individual and societal level to improve air quality."
+    ],
+    [
+      "ParticipantB",
+      "Definitely."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Have you noticed any changes in air quality where you live?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've noticed that too."
+    ],
+    [
+      "ParticipantA",
+      "What are some of the specific environmental policies you think are important to support?"
+    ],
+    [
+      "ParticipantB",
+      "I think investing in renewable energy sources is important."
+    ],
+    [
+      "ParticipantA",
+      "And reducing the use of pesticides and herbicides in agriculture."
+    ],
+    [
+      "ParticipantB",
+      "And also, supporting legislation to reduce emissions from transportation and industry."
+    ],
+    [
+      "ParticipantA",
+      "And also, promoting sustainable urban planning."
+    ],
+    [
+      "ParticipantB",
+      "Promoting sustainable agriculture practices."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantB",
+      "So, what can be done to improve air quality?"
+    ],
+    [
+      "ParticipantA",
+      "And also, encouraging the use of electric vehicles."
+    ],
+    [
+      "ParticipantB",
+      "And also, reducing the amount of waste that ends up in landfills."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever thought about installing a air purifier at home?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've thought about it."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

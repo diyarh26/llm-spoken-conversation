@@ -1,0 +1,158 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2405,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 28,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your preference when it comes to personal computers? Are you a fan of Mac or PC?"
+    ],
+    [
+      "ParticipantB",
+      "I'm actually more of a PC person, I've always found them to be more user-friendly and cost-effective."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can see where you're coming from. I actually work as a bank teller and I've seen people with both Mac and PC issues. While Macs tend to have fewer problems, PCs are generally more customizable."
+    ],
+    [
+      "ParticipantB",
+      "Definitely, and I find that to be one of the biggest advantages of using a PC. I like being able to tweak and modify my system to fit my needs."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely, and I think that's one of the reasons why PCs are so popular. People like having that level of control over their system. What about you, do you use your computer mostly for work or for personal use?"
+    ],
+    [
+      "ParticipantB",
+      "Both, really. I work as a restaurant server, but I also use my computer for personal stuff like checking emails and keeping in touch with friends and family."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's great. I used to work in a restaurant too, it's a tough job but it's also a lot of fun. I'm sure you'll agree that having a reliable computer is essential for your work, right?"
+    ],
+    [
+      "ParticipantB",
+      "Absolutely. In my line of work, a computer malfunction can cause a lot of problems, so it's important for me to have a reliable and efficient system."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can imagine. I think it's great that you take your computer use so seriously, it shows that you value your work and your time. I think that's something that's really important in life."
+    ],
+    [
+      "ParticipantB",
+      "Definitely. I think that being passionate about your work and taking it seriously is the key to success. It's also important to have balance in your life and take time to enjoy the things you love outside of work."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. I think it's important to have a good work-life balance, and to take time to do the things that make you happy. What do you like to do outside of work and computer use?"
+    ],
+    [
+      "ParticipantB",
+      "I love spending time with my family and friends, going for walks and hikes, and reading books. What about you, what do you enjoy doing outside of work and computer use?"
+    ],
+    [
+      "ParticipantA",
+      "I enjoy reading books and watching movies, but my favorite thing to do outside of work is to play the guitar. It's a great way for me to relax and unwind after a long day."
+    ],
+    [
+      "ParticipantB",
+      "That sounds amazing! I've always wanted to learn how to play the guitar, maybe I'll have to give it a try sometime."
+    ],
+    [
+      "ParticipantA",
+      "I highly recommend it! It's a great way to express yourself and relieve stress. Have you ever tried any other musical instruments before?"
+    ],
+    [
+      "ParticipantB",
+      "I used to play the flute in middle school, but I haven't really played any other instruments since then. Maybe I should give it another try."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a great idea! Learning a new instrument can be a lot of fun, and it's a great way to challenge yourself and improve your skills."
+    ],
+    [
+      "ParticipantB",
+      "Definitely, and I think it's important to challenge yourself and try new things. It's a great way to keep your mind and body active and healthy."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. I think that's one of the most important things we can do for ourselves, to keep learning and growing as individuals. It's important to always be open to new experiences and challenges."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely, and I think that's something that can benefit us in all areas of our lives, not just in terms of personal growth, but also in terms of career and relationships."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. I think being open to new experiences and challenges is essential for success in all areas of life, and it's something that we should all strive for."
+    ],
+    [
+      "ParticipantB",
+      "Definitely, and I think it's something that we should all try to incorporate into our daily lives, whether it's through learning a new skill or just trying something new and different."
+    ],
+    [
+      "ParticipantA",
+      "I couldn't agree more. It's important to always be open to new experiences and challenges, and to never stop growing and learning. Thank you for this great conversation, it was really enjoyable talking with you!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you, it was great talking with you too! I hope we can talk again sometime in the future."
+    ],
+    [
+      "ParticipantA",
+      "I would love that, it was great talking with you too! Let's keep in touch and maybe we can have another conversation about computers or anything else that interests us."
+    ]
+  ],
+  "n_turns": 27,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

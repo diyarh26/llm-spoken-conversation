@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4868,
+  "topic": "Family Finance",
+  "sb_prompt": "DOES YOUR FAMILY KEEP A MONTHLY BUDGETCAN YOU GIVE A GENERAL DESCRIPTION OF YOUR PROCEDURES",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a farmer",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hi, how are you doing today?\nParticipantB: I'm doing okay, thank you. How about you?\nParticipantA: I'm doing well, thanks. So, I heard we're supposed to talk about family finances today. Do you keep a monthly budget?\nParticipantB: Yeah, we do. It's important for us to keep track of our expenses and make sure we're staying within our means.\nParticipantA: That's good to hear. We used to keep a budget too, but we kind of fell off the wagon.\nParticipantB: Yeah, it's easy to do that. But I find that having a budget helps us stay focused on our financial goals.\nParticipantA: Definitely. I think I might need to revisit the idea of budgeting again. It's been a while.\nParticipantB: I think that's a good idea. You might find it helpful to sit down and take a look at your expenses and income, and see where you can make some adjustments.\nParticipantA: Yeah, that's a good idea. I think I'll do that. So, how do you go about creating your budget?\nParticipantB: Well, we start by listing all of our monthly expenses, like bills and groceries, and then we make a list of our income. From there, we try to balance the two and see where we can cut back.\nParticipantA: That makes sense. We used to do something similar, but I think we might need to reevaluate our expenses and see if there's anything we can cut back on.\nParticipantB: Yeah, I think that's a good idea. It's important to regularly review your expenses and see if there are any areas where you can save money.\nParticipantA: Definitely. Well, thanks for chatting with me about this. It's been helpful to get your perspective.\nParticipantB: Of course, happy to help. It was nice talking with you.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 467,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 2485,
+  "topic": "Family Reunions",
+  "sb_prompt": "DISCUSS PLANNING A FAMILY REUNION.  DRAW ON YOUR EXPERIENCES AND THOSE OF THE OTHER CALLER FOR MAKING THE NEXT GET-TOGETHER SUCCESSFUL AND MEMORABLE.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 45,
+    "education": "a high-school education",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's the last family reunion you attended like?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, it was pretty great! We rented a big park and had a picnic, with games for the kids and food for everyone. We even had a family photo booth set up! It was a lot of fun, and it was great to see everyone. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "That sounds amazing! The last family reunion I attended was pretty small, just my immediate family. We went to a local park and had a potluck, it was nice to spend time with everyone, but it was a bit low-key compared to what you described."
+    ],
+    [
+      "ParticipantB",
+      "Oh, that sounds lovely too! Intimate gatherings can be just as special as big events. What made your last family reunion special for you?"
+    ],
+    [
+      "ParticipantA",
+      "Well, it was special because it was the first time we had all been together in a while. My sister had just had her first child, and it was great to meet him and see how everyone was doing. It was also a time for us to catch up and share stories about our lives, which was really heartwarming."
+    ],
+    [
+      "ParticipantB",
+      "That's beautiful. Family reunions are a great opportunity to connect and strengthen those bonds. For the next reunion, have you thought about any activities or themes that would be meaningful for your family?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I have! I think it would be great to have a family talent show where everyone can showcase their talents. It would be a fun way to see the different skills and interests everyone has. Plus, it would be a memorable experience for everyone involved. What about you? Do you have any ideas for the next reunion?"
+    ],
+    [
+      "ParticipantB",
+      "That's a fantastic idea! A talent show would be a great way to bring everyone together and showcase our unique skills. As for me, I've been thinking about organizing a family scavenger hunt. It could be a fun way to explore a new place together and create lasting memories. What do you think about that?"
+    ],
+    [
+      "ParticipantA",
+      "I think that's a fantastic idea! A scavenger hunt could be a great way to bring everyone together and encourage teamwork. It could be a great way to discover new places and create lasting memories. We could even divide the family into teams and have a small prize for the winning team. It sounds like a fun and engaging activity for everyone."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely! A scavenger hunt would be an excellent way to bring the family together and create lasting memories. We could even make it a yearly tradition and explore new places each time. It's great to hear that you like the idea too. I'm excited to plan the next family reunion now!"
+    ],
+    [
+      "ParticipantA",
+      "Me too! It's always great to have something to look forward to and plan for. I can't wait to see what the next reunion will bring, and I'm sure it will be a memorable and special experience for everyone."
+    ],
+    [
+      "ParticipantB",
+      "Agreed! Family reunions are a fantastic opportunity to strengthen bonds and make lasting memories. I'm excited to plan and see what the next reunion will bring. Let's keep in touch and start planning!"
+    ],
+    [
+      "ParticipantA",
+      "Absolutely! Let's exchange contact information and start planning. I can't wait to see what the next reunion will bring, and I'm sure it will be a memorable and special experience for everyone."
+    ],
+    [
+      "ParticipantB",
+      "Great idea! Let's exchange contact information so we can start planning. I'm looking forward to hearing from you and working together on the next family reunion."
+    ],
+    [
+      "ParticipantA",
+      "Sounds good! Let's exchange contact information, and I'll reach out soon to start planning. I'm looking forward to it!"
+    ],
+    [
+      "ParticipantB",
+      "Perfect! Let's do that. I'll give you my contact information, and you can reach out to me whenever you're ready to start planning. I'm excited to hear from you and work together on the next family reunion."
+    ],
+    [
+      "ParticipantA",
+      "Sounds great! I'll reach out to you soon with more details and we can start planning. Thanks for sharing your ideas and let's make the next family reunion a memorable one!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! I'm excited to hear from you and work together on the next family reunion. Let's make it a memorable and special experience for everyone. I'll be waiting for your call!"
+    ],
+    [
+      "ParticipantA",
+      "Me too! I'll be in touch soon to start planning. Thanks for a great conversation, and I'm looking forward to our next call!"
+    ],
+    [
+      "ParticipantB",
+      "My pleasure! It was great to talk with you and share ideas about family reunions. I'm looking forward to our next call and hearing more about your plans. Take care!"
+    ],
+    [
+      "ParticipantA",
+      "You too! It was a pleasure talking with you, and I'm looking forward to hearing more about your plans. Take care and have a great day!"
+    ]
+  ],
+  "n_turns": 23,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  }
+}

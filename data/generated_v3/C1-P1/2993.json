@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2993,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hey, so I heard we're supposed to talk about buying a car.\nParticipantB: Yeah, that's the idea. What kind of car are you thinking of buying next?\nParticipantA: Honestly, I haven't really thought about it. I've been pretty happy with my current car, but I guess it's getting a bit old.\nParticipantB: Yeah, I can relate. I'm definitely in the market for a new car, but I don't know what I want yet.\nParticipantA: What's your main concern when it comes to buying a car?\nParticipantB: Well, I have a friend who's dealt with some pretty serious health issues, so I want to make sure the car is big enough to accommodate a wheelchair if needed.\nParticipantA: That's a good point. I've never really thought about that before.\nParticipantB: Yeah, it's definitely something to consider. What about you? What are your main requirements?\nParticipantA: I think I just want something reliable and fuel efficient. I commute to work every day, so I'm always looking for ways to save money on gas.\nParticipantB: That makes sense. I've been thinking about getting a hybrid or an electric car, but I'm worried about the cost.\nParticipantA: Yeah, I've heard that electric cars can be pretty expensive.\nParticipantB: Definitely. But I also hear they're pretty low maintenance, so it might be worth it in the long run.\nParticipantA: That's true. I guess it just depends on what you value more, saving money upfront or saving money over time.\nParticipantB: Exactly. And then there's the question of range and charging stations. It's not like we have a lot of options around here.\nParticipantA: Yeah, that's definitely a concern. I wouldn't want to have to worry about running out of power on the way to work.\nParticipantB: Agreed. I'm just trying to weigh all my options and figure out what's best for me and my friend.\nParticipantA: I can definitely understand that. It's a big decision, and you want to make sure you're making the right choice.\nParticipantB: Yeah, it's not something you want to rush into. Thanks for chatting with me about it. It's good to get another perspective.\nParticipantA: Of course, it was nice talking with you. Good luck with your search!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 596,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

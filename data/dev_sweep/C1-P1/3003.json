@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: I'm looking to buy a new car, and I'm not sure what kind I want. What about you?\nParticipantB: Well, I'm a car mechanic, so I'm pretty interested in cars. I'm actually in the market for a new car too.\nParticipantA: That's cool. What kind of car are you thinking of getting?\nParticipantB: I'm thinking about getting a hybrid. I like the idea of saving on gas and reducing my environmental impact.\nParticipantA: That's a good idea. I've been thinking about getting an SUV. I like the idea of having more space for my family.\nParticipantB: Yeah, SUVs are great for families. I test-drove one last week, and it was really comfortable.\nParticipantA: That's good to know. What made you decide to get a hybrid instead of a regular car?\nParticipantB: I've been working on cars for a while, and I've seen how much damage emissions can do to the environment. I want to do my part to reduce that damage.\nParticipantA: That's a good point. I used to work at a bank, and I remember seeing a lot of people taking out loans to buy cars. It made me wonder if buying a car is really worth it.\nParticipantB: Yeah, cars can be a big expense. But they're also really important for getting around, especially if you live in a place where public transportation isn't great.\nParticipantA: That's true. I've been thinking about getting a used car instead of a new one, just to save some money.\nParticipantB: That's a good idea. I've got a friend who bought a used hybrid, and he says it's been really reliable.\nParticipantA: That's good to know. I'm still not sure which type of car I want to get. Do you have any recommendations?\nParticipantB: Well, it really depends on your needs. If you need a lot of space, an SUV is a good choice. If you're looking to save on gas, a hybrid or electric car might be a good choice. And if you're on a tight budget, a used car might be the way to go.\nParticipantA: That makes sense. I'll have to think about it some more. Thanks for the advice.\nParticipantB: No problem. Good luck with your search for a new car.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 575,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

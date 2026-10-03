@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2469,
+  "topic": "Hobbies And Crafts",
+  "sb_prompt": "WHAT HOBBIES DO YOU HAVE IN YOUR SPARE TIME?  DO THEY INCLUDE ANY HANDICRAFTSWOODWORKING?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hi, I'm a librarian and I'm really interested in hobbies and crafts. What about you?\nParticipantB: I'm a pharmacist and I've been kind of mixed on it. I know someone close who's dealt with it.\nParticipantA: Oh, I'm sorry to hear that. But, tell me, what hobbies do you have in your spare time?\nParticipantB: I've been into knitting for a while now. It's really relaxing and I love the end product.\nParticipantA: That's cool. I tried knitting once, but I couldn't get the hang of it. What kind of things do you knit?\nParticipantB: Mostly scarves and mittens. I'm working on a blanket now. It's a big project, but I'm enjoying it.\nParticipantA: That sounds nice. I've been trying to get into woodworking lately. I made a bookshelf, but it's not exactly perfect.\nParticipantB: Oh, that's great! I've never tried woodworking, but it sounds interesting. What kind of woodworking do you do?\nParticipantA: Just the basics for now. I'm trying to figure out how to use the tools and whatnot. It's been a fun challenge.\nParticipantB: Yeah, I can imagine. I've been thinking about taking up a new hobby, but I don't know what to try.\nParticipantA: Well, woodworking is fun, but it can be a bit messy. Maybe you could try painting or drawing instead?\nParticipantB: Hmm, that's a good idea. I've always wanted to try painting, but I'm not sure where to start.\nParticipantA: There are a lot of online tutorials and classes you can take. It's a great way to learn new skills.\nParticipantB: That's a good point. Thanks for the suggestion.\nParticipantA: No problem. What kind of things do you like to paint?\nParticipantB: Mostly landscapes and still life. I've been trying to improve my technique lately.\nParticipantA: That's awesome. I've always been more of a fan of abstract art, but I admire people who can do realistic paintings.\nParticipantB: Thanks, I appreciate that. It's something I've been working on.\nParticipantA: Well, we've chatted for a while now. Thanks for sharing your hobbies with me!\nParticipantB: Thanks for talking with me! It was nice to chat with someone who shares an interest in crafts.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 630,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

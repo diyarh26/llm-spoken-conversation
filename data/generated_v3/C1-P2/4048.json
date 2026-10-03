@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4048,
+  "topic": "Drug Testing",
+  "sb_prompt": "HOW DO YOU FEEL ABOUT THE PRACTICE OF SOME COMPANIES OR GOVERNMENT AGENCIES TESTING EMPLOYEES OR PROSPECTIVE EMPLOYEES FOR DRUGS?  IS RANDOM SPOT TESTING JUSTIFIED?  WHAT LIMITS SHOULD THERE BE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 28,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 40,
+    "education": "a college degree",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what do you think about drug testing in the workplace?\nParticipantB: Well, I think it's a necessary evil. I mean, it's important to maintain a safe and productive work environment, but it does invade people's privacy.\nParticipantA: Yeah, I agree. I think it's a bit extreme, especially for companies that don't deal with safety-sensitive positions.\nParticipantB: I can see where you're coming from, but I think it's important for all companies to have some kind of drug testing policy in place.\nParticipantA: I guess so, but I still think it's a bit invasive. What about random spot testing? Do you think that's justified?\nParticipantB: I think random spot testing is necessary to ensure that everyone is held to the same standards. It's not fair to only test certain people based on suspicion.\nParticipantA: Yeah, I see your point. But I still think it's a bit much. I mean, what if someone tests positive for a legal substance? What happens then?\nParticipantB: Well, that's why it's important to have clear guidelines and consequences in place. If someone tests positive for a legal substance, it should be handled on a case-by-case basis.\nParticipantA: I agree. I think there should be limits on the frequency of drug testing and clear guidelines for what constitutes a positive test.\nParticipantB: Absolutely. And I think it's important for companies to be transparent with their employees about their drug testing policies.\nParticipantA: Yeah, that's definitely important. So, have you ever had to deal with drug testing in your workplace?\nParticipantB: Yes, I have. I work in a school district and we have to do random drug testing for all employees.\nParticipantA: Oh, I see. That makes sense. Do you think it's had a positive impact on the workplace?\nParticipantB: I do. I think it helps to create a safe and drug-free environment for students and staff.\nParticipantA: Yeah, I can see that. I guess I'm just a bit skeptical about the practice in general.\nParticipantB: I understand. But I think it's important to have some kind of drug testing policy in place to ensure a safe and productive work environment for everyone.\nParticipantA: Yeah, I get that. Thanks for sharing your thoughts on this.\nParticipantB: Of course, it was great talking with you.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 607,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

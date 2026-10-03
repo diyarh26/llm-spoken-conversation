@@ -1,0 +1,215 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2226,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 44,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 27,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What kind of books do you enjoy reading for fun?"
+    ],
+    [
+      "ParticipantB",
+      "Umm, I like reading thrillers and mysteries."
+    ],
+    [
+      "ParticipantA",
+      "I usually prefer non-fiction books, especially biographies and memoirs."
+    ],
+    [
+      "ParticipantB",
+      "Oh, that's interesting."
+    ],
+    [
+      "ParticipantA",
+      "Have you read any particularly good thrillers or mysteries lately?"
+    ],
+    [
+      "ParticipantB",
+      "The Last Throne by Michael Jecks was really gripping."
+    ],
+    [
+      "ParticipantA",
+      "That sounds intriguing. Have you read any other books by that author?"
+    ],
+    [
+      "ParticipantB",
+      "No, that was the only one I've read by him so far."
+    ],
+    [
+      "ParticipantA",
+      "I've been meaning to read more fiction lately, maybe I'll give that one a try."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was really well-written."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Have you read any books recently that you found particularly insightful or thought-provoking?"
+    ],
+    [
+      "ParticipantB",
+      "I recently finished \"The Power of Now\" by Eckhart Tolle."
+    ],
+    [
+      "ParticipantA",
+      "I've heard a lot of good things about that book, have you found it to be helpful in your daily life?"
+    ],
+    [
+      "ParticipantB",
+      "It definitely made me think about living in the present moment more."
+    ],
+    [
+      "ParticipantA",
+      "I've been trying to do that too, it's not always easy."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely something I'm working on."
+    ],
+    [
+      "ParticipantA",
+      "What have you found to be the most helpful aspect of the book?"
+    ],
+    [
+      "ParticipantB",
+      "It's helped me to be more mindful and conscious of my thoughts and actions."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a really valuable lesson to learn."
+    ],
+    [
+      "ParticipantB",
+      "I think it's really made a difference in my daily life."
+    ],
+    [
+      "ParticipantA",
+      "What's the most challenging aspect you've found in practicing mindfulness?"
+    ],
+    [
+      "ParticipantB",
+      "It's definitely a process, but I find it easier with practice."
+    ],
+    [
+      "ParticipantA",
+      "What got you interested in practicing mindfulness?"
+    ],
+    [
+      "ParticipantB",
+      "I've been interested in it for a while now, ever since I first heard about it."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about practicing mindfulness too, but haven't quite gotten around to it yet."
+    ],
+    [
+      "ParticipantB",
+      "It's definitely worth giving a try."
+    ],
+    [
+      "ParticipantA",
+      "I'll have to check out \"The Power of Now\" then."
+    ],
+    [
+      "ParticipantB",
+      "It's definitely worth it."
+    ],
+    [
+      "ParticipantA",
+      "What got you interested in becoming an electrician?"
+    ],
+    [
+      "ParticipantB",
+      "I've always been interested in hands-on work and problem-solving, and I liked the idea of being able to build and create things."
+    ],
+    [
+      "ParticipantA",
+      "That sounds really rewarding."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a fulfilling career."
+    ],
+    [
+      "ParticipantA",
+      "How long have you been working as an electrician?"
+    ],
+    [
+      "ParticipantB",
+      "It's been about four years now."
+    ],
+    [
+      "ParticipantA",
+      "What kind of projects have you worked on as an electrician?"
+    ],
+    [
+      "ParticipantB",
+      "Mostly residential and commercial construction projects."
+    ],
+    [
+      "ParticipantA",
+      "What kind of challenges have you faced as an electrician?"
+    ],
+    [
+      "ParticipantB",
+      "It's definitely had its challenges, but it's also been really rewarding."
+    ],
+    [
+      "ParticipantA",
+      "What do you enjoy doing in your free time when you're not working?"
+    ],
+    [
+      "ParticipantB",
+      "I like to go hiking and spend time with my dog."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

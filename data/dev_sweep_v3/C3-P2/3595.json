@@ -1,0 +1,82 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, do you have any favorite books that you enjoy reading for fun or personal growth?"
+    ],
+    [
+      "ParticipantB",
+      "I do! One of my favorite books for fun is \"The Catcher in the Rye\" by J.D. Salinger. It's a classic coming-of-age story that I can relate to even though it was written in the 1950s. For personal growth, I've been reading a lot of self-help books lately, like \"The 7 Habits of Highly Effective People\" by Stephen Covey. It's helped me prioritize my goals and focus on what's truly important in life. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "That sounds interesting! I haven't read \"The Catcher in the Rye\" yet, but I've heard great things about it. I'm more into fiction and thrillers, like \"Gone Girl\" by Gillian Flynn and \"The Girl with the Dragon Tattoo\" by Stieg Larsson. For self-help, I've been reading \"Daring Greatly\" by Bren\u00e9 Brown. It's helped me become more vulnerable and embrace my imperfections. It's fascinating how different books can impact us differently."
+    ],
+    [
+      "ParticipantB",
+      "Absolutely! It's amazing how a book can resonate with one person but not with another. I love that \"Gone Girl\" and \"The Girl with the Dragon Tattoo\" are both thrillers, but they're still different in their own ways. And \"Daring Greatly\" sounds like a powerful self-help book. I'm a big believer in embracing our imperfections and being kind to ourselves, so I can definitely relate to that. Thanks for sharing your favorites!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It's always great to discover new books and connect over our shared love for literature. I'm glad we both appreciate the importance of self-improvement and embracing our imperfections. Who knows, maybe we'll find our next favorite book through a recommendation from each other. Have a great day!"
+    ],
+    [
+      "ParticipantB",
+      "I couldn't agree more! I'm looking forward to discovering more books to add to my reading list, and hopefully, we can continue this conversation again sometime. Thank you for the lovely chat, and have a fantastic day!"
+    ]
+  ],
+  "n_turns": 8,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

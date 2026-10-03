@@ -1,0 +1,110 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3595,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of books do you enjoy reading?"
+    ],
+    [
+      "ParticipantB",
+      "I love reading classic literature, like Jane Austen and the Bronte sisters. I also enjoy self-help books and biographies. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm more of a fan of modern fiction and memoirs. I enjoy works by authors like David Sedaris, Toni Morrison, and Ta-Nehisi Coates."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I've heard of David Sedaris, but I haven't read any of his work yet. I'll have to give it a try. What's your favorite memoir that you've read recently?"
+    ],
+    [
+      "ParticipantA",
+      "I recently read \"Educated\" by Tara Westover, which was absolutely incredible. It's a memoir about her experiences growing up in a rural Idaho family that was very isolated from mainstream society. It's a powerful story about overcoming adversity and the importance of education."
+    ],
+    [
+      "ParticipantB",
+      "That sounds really interesting. I love stories about resilience and overcoming challenges. I'll have to add that to my reading list. What's your favorite self-help book that you've read recently?"
+    ],
+    [
+      "ParticipantA",
+      "I recently read \"Atomic Habits\" by James Clear, which is a fantastic book about how to create good habits and break bad ones. It's packed with practical advice and scientific research, which I found really helpful."
+    ],
+    [
+      "ParticipantB",
+      "I've heard great things about that book! I'm always looking for ways to improve my habits and become a better version of myself. Thanks for the recommendation! Do you have any other book recommendations?"
+    ],
+    [
+      "ParticipantA",
+      "Sure, I recently read \"The Vanishing Half\" by Brit Bennett, which is a powerful work of fiction that explores themes of race, identity, and family. It's a beautifully written book that really gets you thinking.\n\nAnd if you're in the mood for a classic, I highly recommend \"To Kill a Mockingbird\" by Harper Lee. It's a timeless story about justice, compassion, and the struggle against racism in the American South."
+    ],
+    [
+      "ParticipantB",
+      "Those both sound like really interesting books. I'll definitely have to check them out. Thanks for the recommendations! Do you have any favorite self-help books or memoirs that you've read multiple times?\n\n(This is the last turn of talk for this conversation.)"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I've read \"The Power of Now\" by Eckhart Tolle multiple times. It's a book about spiritual enlightenment and finding peace in the present moment. I find it really helpful for staying grounded and centered, especially during stressful times."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a really valuable book. I've heard of Eckhart Tolle, but I haven't read any of his work yet. Thanks for the recommendation! It was great chatting with you."
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It was great chatting with you too. Have a great day!"
+    ]
+  ],
+  "n_turns": 15,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

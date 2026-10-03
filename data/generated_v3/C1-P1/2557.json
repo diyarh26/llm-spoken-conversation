@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2557,
+  "topic": "Recycling",
+  "sb_prompt": "WHAT IS BEING DONE IN YOUR COMMUNITY OR AREA ABOUT RECYCLING WASTE MATERIALS?  DO YOU THINK MORE SHOULD BE DONE?  DO YOU HAVE ANY IDEAS ON HOW TO ENCOURAGE MORE RECYCLING OR ON WHAT OTHER MATERIALS SHOULD BE INCLUDED?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 55,
+    "education": "a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 46,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hi there! How's it going?\nParticipantB: Good, thanks. How about you?\nParticipantA: I'm doing okay. So, what brings you to call a stranger about recycling?\nParticipantB: I've been interested in it for a while now. My uncle works in the recycling industry, and it's fascinating to see what can be done with waste materials.\nParticipantA: That's cool. So, what's being done in your community about recycling?\nParticipantB: Well, there are recycling bins at the park and some public spaces, and the city encourages people to recycle. But I think there should be more done.\nParticipantA: Yeah, I agree. I work at a bank, and we have a recycling program. But I know someone close who had to deal with a lot of waste when they worked at a factory.\nParticipantB: Oh, that must have been tough. But what do you think should be done to encourage more recycling?\nParticipantA: I think education is key. People should know what they can and can't recycle. And I think they should include more materials, like plastic bags.\nParticipantB: I agree. I think we should be more conscious of what we throw away. And I think we should focus on reusing things too.\nParticipantA: Yeah, that's a good point. We should try to find ways to use things more than once before recycling or throwing them away.\nParticipantB: Absolutely. And I think we should all make an effort to reduce the amount of waste we produce in the first place.\nParticipantA: Definitely. It's all about being mindful of our impact on the environment.\nParticipantB: Exactly. Well, it was great talking to you about this.\nParticipantA: Yeah, you too. Thanks for sharing your thoughts.\nParticipantB: No problem. Have a great day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 463,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3124,
+  "topic": "Weather Climate",
+  "sb_prompt": "DISCUSS THE WEATHER.   WHAT HAS IT BEEN LIKE IN YOUR AREA?   HAS IT BEEN TYPICAL FOR THIS TIME OF YEAR?  COMPARE IT WITH THE OTHER CALLER'S WEATHER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 38,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, how's the weather been in your area lately?\nParticipantB: Oh, it's been quite mild. A bit of rain here and there, but nothing too extreme.\nParticipantA: Hmm, that sounds nice. What about you? How has the weather been in your area?\nParticipantB: It's been a bit of a rollercoaster here. We've had some intense heatwaves followed by heavy rain and thunderstorms.\nParticipantA: Wow, that sounds intense. I haven't experienced anything like that where I live.\nParticipantB: Yeah, it can be pretty wild. But overall, I think it's been pretty typical for this time of year.\nParticipantA: That's good to hear. I've been worried about the climate changing and all the extreme weather events happening lately.\nParticipantB: Yeah, it's definitely something to be concerned about. I have a friend who's a meteorologist, and she says that we're seeing more intense weather patterns than ever before.\nParticipantA: Oh, that's interesting. I know someone who's a climate scientist, and they've been saying the same thing.\nParticipantB: It's definitely something we should all be paying attention to. I try to do my part by reducing my carbon footprint and supporting sustainable initiatives.\nParticipantA: Same here. I try to do my best to reduce my impact on the environment.\nParticipantB: It's important that we all do our part. I think if we all work together, we can make a real difference.\nParticipantA: Definitely. Well, it was nice talking to you about this.\nParticipantB: Yes, likewise. It's always good to connect with someone who shares similar concerns.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 442,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

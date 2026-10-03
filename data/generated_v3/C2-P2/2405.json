@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2405,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 28,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what's your opinion on personal computers?"
+    ],
+    [
+      "ParticipantB",
+      "I think they're great."
+    ],
+    [
+      "ParticipantA",
+      "What kind of experience do you have with them?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been working with them for a few years now as a restaurant server and they've really helped me stay organized and on top of things."
+    ],
+    [
+      "ParticipantA",
+      "That's great to hear."
+    ],
+    [
+      "ParticipantB",
+      "And what about you, have you had any experience with them?"
+    ],
+    [
+      "ParticipantA",
+      "I've also worked with them at my job as a bank teller and I find them to be very useful for keeping track of financial transactions and customer information."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, they're pretty convenient."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, they definitely make things easier."
+    ],
+    [
+      "ParticipantB",
+      "I also use them at home for entertainment and staying connected with friends and family."
+    ],
+    [
+      "ParticipantA",
+      "What kind of personal computer do you use at home?"
+    ],
+    [
+      "ParticipantB",
+      "I use a laptop."
+    ],
+    [
+      "ParticipantA",
+      "What kind of laptop do you have?"
+    ],
+    [
+      "ParticipantB",
+      "It's a Dell."
+    ],
+    [
+      "ParticipantA",
+      "What do you use your laptop for when you're not working or using it for entertainment?"
+    ],
+    [
+      "ParticipantB",
+      "I mostly use it for browsing the internet and checking my emails."
+    ],
+    [
+      "ParticipantA",
+      "I use my computer mostly for work-related tasks, but I also like to play games and keep in touch with friends on social media."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I find that I can get a lot done on my laptop, especially when I'm at home."
+    ],
+    [
+      "ParticipantA",
+      "What kind of games do you like to play on your laptop?"
+    ],
+    [
+      "ParticipantB",
+      "I mostly play puzzle games and some word games to keep my mind sharp."
+    ],
+    [
+      "ParticipantA",
+      "What kind of puzzle games do you like to play?"
+    ],
+    [
+      "ParticipantB",
+      "I like Sudoku and crossword puzzles."
+    ],
+    [
+      "ParticipantA",
+      "Do you have any favorite computer or tech-related websites that you like to visit?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I like to visit tech blogs and websites to keep up with the latest news and trends in the industry."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have a favorite website or blog that you visit for tech news and trends?"
+    ],
+    [
+      "ParticipantB",
+      "I also like to read reviews and articles about new tech products before making a purchase."
+    ],
+    [
+      "ParticipantA",
+      "What kind of tech products are you usually interested in buying?"
+    ],
+    [
+      "ParticipantB",
+      "I'm usually interested in buying laptops and smartphones."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm usually interested in buying laptops and smartphones too."
+    ],
+    [
+      "ParticipantB",
+      "I also like to keep up with the latest software updates and security measures to ensure that my computer is protected."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's important too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's important to stay protected from viruses and other online threats."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantB",
+      "What about you, do you have any favorite websites or blogs for tech news?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I usually read reviews and articles on tech websites like CNET and Wired."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's important to stay protected from viruses and other online threats."
+    ],
+    [
+      "ParticipantA",
+      "What kind of smartphone do you usually go for?"
+    ],
+    [
+      "ParticipantB",
+      "I usually go for iPhones."
+    ],
+    [
+      "ParticipantA",
+      "I've been thinking about getting an iPhone too, what do you like about it?"
+    ],
+    [
+      "ParticipantB",
+      "I like how user-friendly they are and the variety of apps and features available."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 3,
+    "dup_kept": 1
+  }
+}

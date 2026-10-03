@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2993,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: So, what kind of car are you thinking of buying next?\nParticipantB: Well, I've been considering a few options. I'm looking for something that's reliable and fuel-efficient.\n\nParticipantA: Those are definitely important factors to consider. What about safety features? Are you looking for a car with a good safety rating?\nParticipantB: Definitely. Safety is a top priority for me.\n\nParticipantA: I agree. I'm also looking for a car with good safety features. What about price range? Are you looking to spend a certain amount?\nParticipantB: I'm hoping to stay within a certain budget, but safety is my main concern, so I'm willing to pay a little more for a car with good safety ratings.\n\nParticipantA: I understand. I'm willing to spend a bit more for safety features as well, but I also want a car that's comfortable and has enough space for my family.\n\nParticipantB: Yes, that's important too. I'm looking for a car that has enough space for my family as well.\n\nParticipantA: What about fuel efficiency? Are you looking for a car that has good gas mileage?\nParticipantB: Definitely. I want a car that's easy on gas, so I can save money in the long run.\n\nParticipantA: I agree. Fuel efficiency is also a big factor for me. I want a car that's environmentally friendly and has low emissions.\n\nParticipantB: That's important too. I want to make sure the car I buy is good for the environment.\n\nParticipantA: Have you considered electric or hybrid cars?\nParticipantB: I have, but I'm still a little hesitant about the technology. I'm not sure if I'm ready to make the switch just yet.\n\nParticipantA: I understand. I've been considering electric or hybrid cars as well, but I'm not sure if they're the right choice for me.\n\nParticipantB: What about style? Do you have a certain look in mind?\nParticipantA: Yes, I'm looking for a car that looks sleek and stylish. I don't want something that's too boxy or boring.\n\nParticipantB: I agree. I want a car that looks good and stands out a bit.\n\nParticipantA: What about color? Do you have a preference?\nParticipantB: I like cars that are a bit more bold. I'm thinking about getting a car in a bright color like red or yellow.\n\nParticipantA: I'm more of a traditionalist when it comes to color. I prefer something a bit more subdued like black or gray.\n\nParticipantB: That's totally understandable. It's all about personal preference.\n\nParticipantA: Have you considered test driving any cars yet?\nParticipantB: I have, but I haven't found one that really stands out to me yet. I'm still open to trying more options.\n\nParticipantA: Same here. I've test driven a few cars, but none of them have really caught my eye yet.\n\nParticipantB: Well, maybe we'll both find the perfect car soon.\nParticipantA: I hope so! It's definitely a big decision.\n\nParticipantB: Definitely. It's important to find the right car for your needs.\n\nParticipantA: Well, thank you for chatting with me about this. It's been",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 841,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

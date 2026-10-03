@@ -1,0 +1,217 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2557,
+  "topic": "Recycling",
+  "sb_prompt": "WHAT IS BEING DONE IN YOUR COMMUNITY OR AREA ABOUT RECYCLING WASTE MATERIALS?  DO YOU THINK MORE SHOULD BE DONE?  DO YOU HAVE ANY IDEAS ON HOW TO ENCOURAGE MORE RECYCLING OR ON WHAT OTHER MATERIALS SHOULD BE INCLUDED?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 55,
+    "education": "a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 46,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about recycling in your community?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think we have a pretty good program going here."
+    ],
+    [
+      "ParticipantA",
+      "That's good to hear."
+    ],
+    [
+      "ParticipantB",
+      "I mean, I know we could always do more, but I think we're doing a decent job."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "But I do think we could expand the types of materials that are accepted."
+    ],
+    [
+      "ParticipantA",
+      "What types of materials do you think should be included?"
+    ],
+    [
+      "ParticipantB",
+      "I think we should be recycling more plastics."
+    ],
+    [
+      "ParticipantA",
+      "I know someone who works at the recycling plant and they're always looking for more plastics to recycle."
+    ],
+    [
+      "ParticipantB",
+      "I also think we should start looking into recycling more electronics."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "And I think we could also do more to educate people on what can and cannot be recycled."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's a good idea."
+    ],
+    [
+      "ParticipantB",
+      "And maybe even have some kind of incentive program to encourage people to recycle more."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've heard that some places have programs where you can get discounts on shopping or something for recycling."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think that could be really effective."
+    ],
+    [
+      "ParticipantA",
+      "What do you think is the biggest challenge in getting more people to recycle?"
+    ],
+    [
+      "ParticipantB",
+      "I think some people just don't know how to recycle properly or don't have access to the right resources."
+    ],
+    [
+      "ParticipantA",
+      "I agree, education is definitely key."
+    ],
+    [
+      "ParticipantB",
+      "And maybe some people just don't care enough about the environment to make an effort to recycle."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it can be hard to get people to care about something that doesn't directly affect them."
+    ],
+    [
+      "ParticipantB",
+      "I think that's definitely a challenge, but if we can make it more convenient and accessible for people, it might help."
+    ],
+    [
+      "ParticipantA",
+      "And what about you? Do you have any ideas on how to improve recycling in your community?"
+    ],
+    [
+      "ParticipantB",
+      "I think we could also look into partnering with local businesses to promote recycling and reduce waste."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's a great idea."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think that's a great idea."
+    ],
+    [
+      "ParticipantA",
+      "What do you think about partnering with local schools to teach kids about recycling and the importance of protecting the environment?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think that's a great idea too."
+    ],
+    [
+      "ParticipantA",
+      "I think that's a great idea too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think that would be really effective."
+    ],
+    [
+      "ParticipantA",
+      "So, what do you think about partnering with local businesses to promote recycling and reduce waste?"
+    ],
+    [
+      "ParticipantB",
+      "I think that could definitely help raise awareness and encourage more people to recycle."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantB",
+      "I think that would be a great way to get more people involved in recycling and making a positive impact on the environment."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I agree."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and maybe even offer incentives to businesses that make a significant effort to reduce waste and promote recycling."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's a good idea too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and maybe even offer incentives to businesses that make a significant effort to reduce waste and promote recycling."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that could work really well."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and maybe even offer incentives to businesses that make a significant effort to reduce waste and promote recycling."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 5,
+    "dup_kept": 2
+  }
+}

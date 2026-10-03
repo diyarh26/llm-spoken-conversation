@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2469,
+  "topic": "Hobbies And Crafts",
+  "sb_prompt": "WHAT HOBBIES DO YOU HAVE IN YOUR SPARE TIME?  DO THEY INCLUDE ANY HANDICRAFTSWOODWORKING?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: How are you doing today?\nParticipantB: I'm doing pretty good, thanks for asking. How about you?\nParticipantA: I'm doing well, thanks. So, what do you like to do in your spare time?\nParticipantB: Well, I enjoy hiking and reading books. What about you?\nParticipantA: I love hiking too! And I also like to do some handicrafts and woodworking in my free time.\nParticipantB: That's really interesting! I've always wanted to learn woodworking, but I never had the chance to. Do you have any tips for someone just starting out?\nParticipantA: Sure! I would recommend starting with some basic tools and then gradually building up your collection as you gain more experience. It's also important to always wear safety gear and be careful when using power tools.\nParticipantB: Great advice, thank you. So, what kind of handicrafts do you like to make?\nParticipantA: I enjoy making jewelry and sewing my own clothes. What about you? Do you have any hobbies that involve handicrafts?\nParticipantB: I've always been interested in knitting and crocheting. I made a scarf last winter that turned out really well.\nParticipantA: That's awesome! I've never tried knitting or crocheting before, but I've been thinking about giving it a try. Do you have any recommendations for someone who's new to it?\nParticipantB: Of course! There are a lot of great tutorials on YouTube, and it's always a good idea to start with a simple pattern. Once you get the hang of it, you can start experimenting with more complex designs.\nParticipantA: Thanks for the advice! I'll definitely have to check out some of those tutorials. So, what kind of books do you like to read?\nParticipantB: I really enjoy fantasy and science fiction. What about you?\nParticipantA: I love reading mysteries and thrillers. Have you read any good books lately?\nParticipantB: Actually, I just finished reading \"The Wheel of Time\" series by Robert Jordan. It's a really long series, but it's definitely worth the read.\nParticipantA: That sounds interesting! I'll have to check it out. Well, it was nice talking to you. Thanks for the conversation!\nParticipantB: You too! Have a great day!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 571,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

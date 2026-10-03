@@ -1,0 +1,98 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3124,
+  "topic": "Weather Climate",
+  "sb_prompt": "DISCUSS THE WEATHER.   WHAT HAS IT BEEN LIKE IN YOUR AREA?   HAS IT BEEN TYPICAL FOR THIS TIME OF YEAR?  COMPARE IT WITH THE OTHER CALLER'S WEATHER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 38,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how has the weather been in your area lately?"
+    ],
+    [
+      "ParticipantB",
+      "It's been pretty nice actually. We've been having some sunny days and mild temperatures, which is quite typical for this time of year."
+    ],
+    [
+      "ParticipantA",
+      "That sounds nice! How does the weather compare to what you would expect for this time of year?"
+    ],
+    [
+      "ParticipantB",
+      "It's been pretty typical for this time of year. We usually have some mild temperatures and sunny days around this time, so it's been pretty much what we would expect."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it sounds like we've both been having similar weather. Have you noticed any changes in the weather patterns recently?"
+    ],
+    [
+      "ParticipantB",
+      "Not really, the weather patterns have been pretty consistent for the past few years. We haven't noticed any significant changes."
+    ],
+    [
+      "ParticipantA",
+      "That's good to hear. I've been hearing about some extreme weather events happening in other parts of the world, but thankfully, we haven't had any major weather disruptions here."
+    ],
+    [
+      "ParticipantB",
+      "Yes, it's been pretty lucky for us. But we do have to be prepared for any sudden changes in the weather, especially with the recent natural disasters happening worldwide."
+    ],
+    [
+      "ParticipantA",
+      "Definitely. It's always important to be prepared for any kind of weather, no matter where you are. Well, it was great talking to you about the weather. Thanks for sharing your experiences!"
+    ],
+    [
+      "ParticipantB",
+      "You're welcome! It was nice talking to you too. Take care!"
+    ]
+  ],
+  "n_turns": 12,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

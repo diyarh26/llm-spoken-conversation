@@ -1,0 +1,110 @@
+{
+  "condition": "C3-P1",
+  "architecture": "C3",
+  "prompt_level": "P1",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3140,
+  "topic": "Social Change",
+  "sb_prompt": "DISCUSS RECENT SOCIAL CHANGES.  HOW IS LIFE IN AMERICA DIFFERENT TODAY COMPARED TO LIVING TEN YEARS AGO?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what are your thoughts on recent social changes?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I think there have been some positive changes in terms of racial and social justice, but there's still a lot of work to be done."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. What changes have you personally seen in your own community or in your own life?"
+    ],
+    [
+      "ParticipantB",
+      "In my small town, there's been a greater awareness and discussion around issues of race and inequality. I think people are more aware and more willing to have these conversations than they were 10 years ago."
+    ],
+    [
+      "ParticipantA",
+      "That's great to hear. I've also noticed the same thing in my community. In terms of my personal life, I've become more aware of the ways in which systemic racism and inequality affect my own life and the lives of those around me. It's been an eye-opening experience.\n\nWhat about you? Have you noticed any changes in your own life or community?"
+    ],
+    [
+      "ParticipantB",
+      "Definitely. I've also become more aware of the ways in which systemic racism and inequality affect my own life and the lives of those around me. It's made me more conscious of my own privilege and the role that I can play in creating change.\n\nI've also seen a shift in the way that people talk about and approach mental health. It's become more normalized to talk about mental health struggles and seek help, which is a positive change in my opinion."
+    ],
+    [
+      "ParticipantA",
+      "Yes, I've definitely noticed that shift as well. It's important that we destigmatize mental health issues and make it easier for people to access the resources they need.\n\nWhat are your thoughts on the current state of politics and the government's response to these social changes?"
+    ],
+    [
+      "ParticipantB",
+      "I think the current political climate is very divisive and it can be difficult to find common ground on these issues. I also think that the government's response has been inconsistent and sometimes even counterproductive.\n\nFor example, while there have been some positive policy changes, there have also been instances where the government has rolled back progress or failed to take meaningful action on important issues."
+    ],
+    [
+      "ParticipantA",
+      "That's definitely been my experience as well. I think it's important for us as individuals to continue pushing for change and holding our elected officials accountable, even when it feels like progress is slow or nonexistent.\n\nWhat do you think are some tangible ways that we can create change and move towards a more just and equitable society?"
+    ],
+    [
+      "ParticipantB",
+      "I think one of the most important things we can do is to educate ourselves and others on these issues. It's also important to use our privilege and platform to amplify the voices of those who are marginalized and to actively work towards dismantling systems of oppression.\n\nWe can also support organizations and initiatives that are working towards social justice, whether that's through donations or volunteering our time. And of course, we can continue to engage in respectful dialogue with those who may have different opinions, in order to foster greater understanding and empathy."
+    ],
+    [
+      "ParticipantA",
+      "I completely agree. Education and awareness are key, as well as using our resources and privileges to uplift marginalized voices and causes. And it's so important to keep the conversation going and to continue pushing for change, even when it feels like progress is slow or difficult to come by.\n\nThank you for this conversation. It's been great to connect with someone who shares similar views and experiences."
+    ],
+    [
+      "ParticipantB",
+      "Thank you too! It's been a pleasure talking with you and I appreciate the opportunity to share our thoughts and experiences on this important topic."
+    ],
+    [
+      "ParticipantA",
+      "You're welcome. Take care!"
+    ]
+  ],
+  "n_turns": 15,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

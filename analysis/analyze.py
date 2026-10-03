@@ -30,17 +30,44 @@ GEN_ROOT = pathlib.Path(__file__).resolve().parent.parent / "data" / "generated"
 
 
 def conversation_turns(rec: dict) -> list[tuple[str, str]]:
-    """(speaker, text) turns for a generated record — parses C1 raw_output if needed."""
+    """(speaker, text) turns for a generated record — parses C1 raw_output if needed.
+
+    Drops the scripted opening greetings (v3 records carry `seed_turns`): at most that many
+    LEADING turns, and only while they are literally the scripted "Hello!". C2/C3/C4 store
+    the seeds in `turns`; C1 only has them in its prompt, so its raw_output may or may not
+    echo them — a model-written opener is never dropped. Records without `seed_turns`
+    (v2 and earlier) are unchanged.
+    """
     if rec.get("turns"):
-        return [(t[0], t[1]) for t in rec["turns"]]
-    turns = []
-    for line in rec.get("raw_output", "").split("\n"):
-        line = line.strip()
-        if ":" in line:
-            spk, txt = line.split(":", 1)
-            if txt.strip():
-                turns.append((spk.strip(), txt.strip()))
-    return turns
+        turns = [(t[0], t[1]) for t in rec["turns"]]
+    else:
+        turns = []
+        for line in rec.get("raw_output", "").split("\n"):
+            line = line.strip()
+            if ":" in line:
+                spk, txt = line.split(":", 1)
+                if txt.strip():
+                    turns.append((spk.strip(), txt.strip()))
+    n_seed = 0
+    while (n_seed < int(rec.get("seed_turns", 0)) and n_seed < len(turns)
+           and turns[n_seed][1].strip().strip('"').lower() == "hello!"):
+        n_seed += 1
+    turns = turns[n_seed:]
+    # P3 shows examples with "[backchannel]"-style labels; if the model copies one into its
+    # own turn, strip it (only our exact label vocabulary, so ordinary text is untouched).
+    turns = [(s, _P3_LABEL_RE.sub("", t).strip()) for s, t in turns]
+    return [(s, t) for s, t in turns if t]
+
+
+def _p3_label_re():
+    import re
+    from analysis.swda import ACT_NAMES
+    names = sorted(set(ACT_NAMES.values()) | {"other"}, key=len, reverse=True)
+    alt = "|".join(re.escape(n) for n in names)
+    return re.compile(rf"\s*\[(?:{alt})(?:,\s*(?:{alt}))*\]", re.I)
+
+
+_P3_LABEL_RE = _p3_label_re()
 
 
 def switchboard_baseline(n: int = 50) -> dict:

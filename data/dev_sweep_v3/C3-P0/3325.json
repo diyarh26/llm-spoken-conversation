@@ -1,0 +1,142 @@
+{
+  "condition": "C3-P0",
+  "architecture": "C3",
+  "prompt_level": "P0",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3325,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hi! What kind of pets do you have?"
+    ],
+    [
+      "ParticipantB",
+      "I have a cat named Whiskers."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that's so cute! What kind of cat is Whiskers?"
+    ],
+    [
+      "ParticipantB",
+      "Whiskers is a fluffy gray and white cat with bright green eyes."
+    ],
+    [
+      "ParticipantA",
+      "That sounds adorable! Does Whiskers like to play with toys?"
+    ],
+    [
+      "ParticipantB",
+      "Yes, Whiskers loves to play with toys, especially catnip mice."
+    ],
+    [
+      "ParticipantA",
+      "That's great! I used to have a cat that loved catnip mice too."
+    ],
+    [
+      "ParticipantB",
+      "That's interesting! Do you have any pets now?"
+    ],
+    [
+      "ParticipantA",
+      "No, I don't have any pets at the moment, but I'm thinking about getting a dog soon."
+    ],
+    [
+      "ParticipantB",
+      "That's exciting! What kind of dog are you thinking about getting?"
+    ],
+    [
+      "ParticipantA",
+      "I'm thinking about getting a golden retriever. They're such friendly and loving dogs."
+    ],
+    [
+      "ParticipantB",
+      "Golden retrievers are definitely great dogs! Do you have any favorite dog breeds?"
+    ],
+    [
+      "ParticipantA",
+      "Yes, I also love bulldogs. They're so cute and adorable with their wrinkly faces and big eyes."
+    ],
+    [
+      "ParticipantB",
+      "Bulldogs are definitely unique and lovable. Have you owned a bulldog before?"
+    ],
+    [
+      "ParticipantA",
+      "No, I've never owned a bulldog before, but I've always wanted one. Maybe someday I'll get one."
+    ],
+    [
+      "ParticipantB",
+      "That's great! Owning a pet can be such a rewarding experience. What do you think is the best thing about having a pet?"
+    ],
+    [
+      "ParticipantA",
+      "I think the best thing about having a pet is the unconditional love and companionship they provide. It's just so comforting to have a furry friend by your side."
+    ],
+    [
+      "ParticipantB",
+      "I completely agree! Pets can bring so much joy and happiness to our lives. What do you usually do with your cat, Whiskers?"
+    ],
+    [
+      "ParticipantA",
+      "We usually play with toys together, take walks around the neighborhood, and cuddle on the couch. Whiskers is such a loving and affectionate cat."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like so much fun! I'm sure Whiskers enjoys spending time with you too. Well, it was nice talking to you about our pets. Thank you for sharing!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It was nice talking to you too. Thank you for sharing about your cat, Whiskers."
+    ]
+  ],
+  "n_turns": 23,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

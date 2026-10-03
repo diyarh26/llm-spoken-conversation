@@ -1,0 +1,38 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 3186,
+  "topic": "Restaurants",
+  "sb_prompt": "WHAT KIND OF DINING OUT DO YOU ENJOY? WHAT THINGS DO YOU LOOK FOR IN A RESTAURANT THAT WOULD GET YOU TO GO BACK AGAIN?  SEE WHETHER THE OTHER CALLER'S PREFERENCES ARE SIMILAR TO YOURS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 58,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "an insurance adjuster",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\n\nParticipantA: What kind of dining out do you enjoy?\nParticipantB: I like trying new restaurants and cuisines. What about you?\n\nParticipantA: I enjoy going to restaurants with a good atmosphere and good service.\n\nParticipantB: I agree, atmosphere is important. Do you have any particular cuisine you like to eat?\n\nParticipantA: I like Italian food and seafood. What about you?\nParticipantB: I enjoy trying different types of Asian cuisine, particularly Japanese and Korean.\n\nParticipantA: That's interesting. I've never tried Korean food. Is there anything I should definitely try?\nParticipantB: Yes, you should definitely try bibimbap. It's a Korean dish with rice, vegetables, and meat, all mixed together.\n\nParticipantA: That sounds interesting. What do you look for in a restaurant that would get you to go back again?\nParticipantB: I look for good food, good service, and a clean environment.\n\nParticipantA: I agree, those are important. Do you prefer going to a restaurant with a dress code or casual attire?\n\nParticipantB: I prefer casual attire, but I don't mind dressing up if the occasion calls for it.\n\nParticipantA: Same here. I don't like to feel too dressed up or too casual. What's your favorite type of restaurant to go to?\nParticipantB: I like going to upscale steakhouses or sushi restaurants.\n\nParticipantA: Those sound nice. I haven't been to a good steakhouse in a while. What's your favorite steakhouse in the area?\nParticipantB: I like going to the Capital Grille. They have great steaks and a great atmosphere.\n\nParticipantA: I've heard of that place. I'll have to try it out. Thanks for the recommendation!\n\nParticipantB: No problem, happy to help. Have you been to any new restaurants lately that you would recommend?\n\nParticipantA: I went to a new Italian place called Osteria that was really good. The pasta was freshly made and the service was great.\n\nParticipantB: That sounds good. I'll have to check it out. Thanks for the recommendation!\n\nParticipantA: No problem, happy to help. Well, it was nice speaking with you.\nParticipantB: Same here, it was nice talking with you.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 598,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  }
+}

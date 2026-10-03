@@ -1,0 +1,90 @@
+{
+  "condition": "C4-P2",
+  "architecture": "C4",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "mistralai/Mistral-7B-Instruct-v0.2"
+  },
+  "conversation_no": 3883,
+  "topic": "Clothing And Dress",
+  "sb_prompt": "THE TOPIC IS CLOTHING.  PLEASE FIND OUT HOW THE OTHER CALLER TYPICALLY DRESSES FOR WORK.  HOW MUCH VARIATION IS THERE FROM DAY TO DAY?  HOW MUCH VARIATION IS THERE FROM SEASON TO SEASON?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 57,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how do you typically dress for work?\n\n(Remember, the conversation should feel casual and uneven, as if you were just two people chatting on the phone.)"
+    ],
+    [
+      "ParticipantB",
+      "I usually wear a lab coat over a pair of scrubs. There's not much variation day to day since I'm in the dental clinic all the time. As for season to season, I might switch out my scrub tops for long-sleeved ones during colder months, but that's about it. How about you?"
+    ],
+    [
+      "ParticipantA",
+      "I'm a factory supervisor, so I usually wear a polo shirt and slacks or jeans. There's a bit more variation from day to day since I move around the factory, but I try to keep it professional. In the colder months, I might wear a sweater or a hoodie under my polo shirt."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I see. That sounds quite different from my work attire. Do you find that you need to dress differently depending on what tasks you're supervising that day?\n\nI don't really have that issue since I'm mostly stationary at the dental chair, but I've heard from my coworkers in other departments that they have to adjust their clothing based on their work. It must be interesting!\n\nAs for the seasonal changes, do you find that you need to layer up significantly during the winter months? I can't imagine working in a factory wearing just a hoodie!"
+    ],
+    [
+      "ParticipantA",
+      "Oh, definitely! I have to dress according to the tasks I'm supervising that day. Sometimes I'm on the production floor, and other times I'm in the office. It's important to be comfortable and professional, depending on the situation. And yeah, winters can get pretty chilly in the factory, so layering up is necessary. We even have heaters on the production floor to keep things from freezing over! But it's all part of the job, you know? You gotta do what you gotta do!\n\nSo, what about you? Do you find that you have to adapt your work attire based on your duties?"
+    ],
+    [
+      "ParticipantB",
+      "No, not really. As a dental hygienist, my role is quite consistent, and I stay in one place for the most part. I'm mostly focused on cleaning and maintaining patients' teeth, so my attire doesn't need to change much.\n\nI can see how things would be different for someone like you, though. Supervising various tasks on the factory floor must require a lot of adaptability, especially when it comes to dressing for the job.\n\nIt's fascinating how different our workdays can be, even if we're just having a casual chat on the phone!"
+    ],
+    [
+      "ParticipantA",
+      "Absolutely! It's so interesting to hear about different professions and the unique challenges they present. I can only imagine what it's like to work in a dental clinic, where it's all about keeping patients comfortable and focused on their oral health.\n\nI guess it just goes to show that every job has its own set of demands, and it's important to be able to adapt and meet those expectations. And who knows, maybe someday we'll get a chance to visit each other's workplaces and see firsthand what it's like!\n\nIt's been great chatting with you about our jobs and work attire!"
+    ],
+    [
+      "ParticipantB",
+      "It's been a pleasure talking to you as well! I'm glad we could share our experiences and learn about the unique challenges of our respective workplaces. And who knows, maybe one day we'll have the opportunity to visit each other's workplaces and gain a deeper understanding of what we do.\n\nUntil then, I hope you have a great day, and take care!\n\nBye for now!"
+    ]
+  ],
+  "n_turns": 10,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  }
+}

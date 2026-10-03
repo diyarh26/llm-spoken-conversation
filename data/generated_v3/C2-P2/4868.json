@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 4868,
+  "topic": "Family Finance",
+  "sb_prompt": "DOES YOUR FAMILY KEEP A MONTHLY BUDGETCAN YOU GIVE A GENERAL DESCRIPTION OF YOUR PROCEDURES",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a farmer",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, how about your family finances? Do you keep a budget?"
+    ],
+    [
+      "ParticipantB",
+      "Well, we try to, but it's not always easy."
+    ],
+    [
+      "ParticipantA",
+      "What do you find the most challenging about budgeting?"
+    ],
+    [
+      "ParticipantB",
+      "It's hard to stick to it sometimes."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can relate to that."
+    ],
+    [
+      "ParticipantB",
+      "And sometimes unexpected expenses come up that throw everything off."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that can definitely be a challenge."
+    ],
+    [
+      "ParticipantB",
+      "And it's hard to prioritize what to spend money on sometimes."
+    ],
+    [
+      "ParticipantA",
+      "Have you found any strategies that help you stay on track?"
+    ],
+    [
+      "ParticipantB",
+      "We've been trying to prioritize paying off debts and saving for the future."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's important."
+    ],
+    [
+      "ParticipantB",
+      "And we try to make a list of everything we spend money on each month to keep track of it."
+    ],
+    [
+      "ParticipantA",
+      "Have you considered using a budgeting app to help with tracking expenses?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've been considering it actually."
+    ],
+    [
+      "ParticipantA",
+      "Do you find that using cash or debit cards helps you stick to your budget?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think it could be helpful."
+    ],
+    [
+      "ParticipantA",
+      "I've also found that putting away a certain amount of money each month into a separate savings account can help with staying on track."
+    ],
+    [
+      "ParticipantB",
+      "That's a good idea."
+    ],
+    [
+      "ParticipantA",
+      "What are some of the most unexpected expenses you've encountered?"
+    ],
+    [
+      "ParticipantB",
+      "We had some big vet bills last year."
+    ],
+    [
+      "ParticipantA",
+      "What was the reason for the vet bills?"
+    ],
+    [
+      "ParticipantB",
+      "It was for our dog. He got really sick and needed a lot of care."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, vet bills can be really expensive."
+    ],
+    [
+      "ParticipantB",
+      "And we also had some unexpected car repairs."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, car repairs can add up too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it can be tough to prepare for those kinds of expenses."
+    ],
+    [
+      "ParticipantA",
+      "Have you found any ways to cut back on expenses?"
+    ],
+    [
+      "ParticipantB",
+      "We've been trying to cut back on eating out and cooking at home more often."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, we try to do that too."
+    ],
+    [
+      "ParticipantB",
+      "And we're trying to be more mindful of our energy usage too."
+    ],
+    [
+      "ParticipantA",
+      "Have you found any ways to increase your income?"
+    ],
+    [
+      "ParticipantB",
+      "We've also been considering renting out a room on our property."
+    ],
+    [
+      "ParticipantA",
+      "What do you think about the possibility of renting out a room on your property?"
+    ],
+    [
+      "ParticipantB",
+      "Well, it's something we're considering, but we haven't done it yet."
+    ],
+    [
+      "ParticipantA",
+      "What are your thoughts on renting out a room on your property?"
+    ],
+    [
+      "ParticipantB",
+      "We've also been thinking about starting a small business on the side."
+    ],
+    [
+      "ParticipantA",
+      "What kind of business were you thinking of starting?"
+    ],
+    [
+      "ParticipantB",
+      "We've been thinking about starting a small business selling homemade goods."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a great idea, starting a small business selling homemade goods."
+    ],
+    [
+      "ParticipantB",
+      "We're still in the early stages of exploring that idea."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  }
+}

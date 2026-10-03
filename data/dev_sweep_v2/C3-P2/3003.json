@@ -1,0 +1,126 @@
+{
+  "condition": "C3-P2",
+  "architecture": "C3",
+  "prompt_level": "P2",
+  "models": {
+    "ParticipantA": "lmsys/vicuna-13b-v1.5-16k",
+    "ParticipantB": "lmsys/vicuna-13b-v1.5-16k"
+  },
+  "conversation_no": 3003,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "less than a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, what kind of car are you thinking of buying next?"
+    ],
+    [
+      "ParticipantB",
+      "Well, I've been considering a pickup truck. I work as a car mechanic, so I'm always hauling around equipment and parts. A pickup would make my life a lot easier."
+    ],
+    [
+      "ParticipantA",
+      "That makes sense. What are your requirements for the pickup truck?"
+    ],
+    [
+      "ParticipantB",
+      "I'm looking for something with good fuel efficiency, plenty of cargo space, and a comfortable ride. I also want something that's reliable and can handle tough terrain."
+    ],
+    [
+      "ParticipantA",
+      "Those are all important factors. I've been considering a small SUV. I like the extra space and comfort, but I also want something that's fuel efficient and reliable."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, an SUV can be a great choice for comfort and space. What are your main criteria for the SUV?"
+    ],
+    [
+      "ParticipantA",
+      "My main criteria are fuel efficiency, safety ratings, and a comfortable interior with plenty of tech features. I also want something that's reliable and has a good resale value."
+    ],
+    [
+      "ParticipantB",
+      "Those are all important considerations. It sounds like you're looking for a well-rounded vehicle. What's your budget for the SUV?"
+    ],
+    [
+      "ParticipantA",
+      "I'm hoping to stay around $30,000 or under, but I'm willing to pay more if I find the right vehicle that fits all my criteria. How about you? What's your budget for the pickup truck?"
+    ],
+    [
+      "ParticipantB",
+      "I'm hoping to stay around $25,000 or under, but I'm also willing to pay more if I find the right truck that fits all my needs. It's important for me to stay within my budget, but I don't want to compromise on quality and reliability."
+    ],
+    [
+      "ParticipantA",
+      "I completely understand. It's important to balance cost and quality. Well, I think we have similar requirements and budgets for our next car purchases. Have you narrowed down any specific models or brands yet?"
+    ],
+    [
+      "ParticipantB",
+      "Not yet, but I've been looking at the Toyota Tacoma and the Ford Ranger. I like how they have a good reputation for reliability and resale value, and they both meet my requirements for cargo space and off-road capabilities. How about you and the SUV? Have you narrowed down any specific models or brands?"
+    ],
+    [
+      "ParticipantA",
+      "I've been looking at the Honda CR-V and the Toyota RAV4. Both have a great reputation for safety, reliability, and resale value. They also offer plenty of cargo space and tech features that I'm looking for. Have you considered any of these models or brands for your pickup truck?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't considered the Honda CR-V or the Toyota RAV4 for my pickup truck, but they both sound like great options. I'll definitely do some more research on those models and see if they meet my requirements. Thanks for the suggestion!"
+    ],
+    [
+      "ParticipantA",
+      "You're welcome! It's always good to do some research and compare different models before making a decision. I'm sure you'll find the perfect vehicle that fits your needs and budget. Thanks for talking with me!"
+    ],
+    [
+      "ParticipantB",
+      "Thank you too! It was great to talk with you and share our thoughts on car buying. I'm sure we'll both find the right vehicle for our needs. Have a great day!"
+    ],
+    [
+      "ParticipantA",
+      "You too! Take care!"
+    ]
+  ],
+  "n_turns": 19,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 10,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 10
+  }
+}

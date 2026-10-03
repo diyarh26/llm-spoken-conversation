@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2226,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 44,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 27,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "What kind of books do you enjoy reading?"
+    ],
+    [
+      "ParticipantB",
+      "I usually read thrillers and crime novels."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite thriller or crime novel?"
+    ],
+    [
+      "ParticipantB",
+      "James Patterson is a good author for that."
+    ],
+    [
+      "ParticipantA",
+      "I'm more into non-fiction books, like self-help and biographies."
+    ],
+    [
+      "ParticipantB",
+      "I haven't read any biographies lately, but I've heard good things about \"The Immortal Life of Henrietta Lacks\" by Rebecca Skloot."
+    ],
+    [
+      "ParticipantA",
+      "That sounds really interesting."
+    ],
+    [
+      "ParticipantB",
+      "Have you read any of the books in the Harry Potter series?"
+    ],
+    [
+      "ParticipantA",
+      "I have, I enjoyed them a lot."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I heard it's a really well-written book."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's a great series."
+    ],
+    [
+      "ParticipantB",
+      "I haven't had a chance to read it yet."
+    ],
+    [
+      "ParticipantA",
+      "Have you read any other books that you would recommend?"
+    ],
+    [
+      "ParticipantB",
+      "Not really."
+    ],
+    [
+      "ParticipantA",
+      "What about you? Do you have any favorite authors or books that you would recommend?"
+    ],
+    [
+      "ParticipantB",
+      "I'm not really a big reader."
+    ],
+    [
+      "ParticipantA",
+      "Do you have a favorite genre or type of book you like to read?"
+    ],
+    [
+      "ParticipantB",
+      "I usually just stick to thrillers and crime novels."
+    ],
+    [
+      "ParticipantA",
+      "I find it interesting that you're into thrillers and crime novels, but not a big reader overall. What do you usually do in your free time?"
+    ],
+    [
+      "ParticipantB",
+      "I usually watch TV or movies."
+    ],
+    [
+      "ParticipantA",
+      "I enjoy watching movies too, but I find that reading is a more relaxing and enjoyable activity for me."
+    ],
+    [
+      "ParticipantB",
+      "I guess I just haven't found the right book to really get into it."
+    ],
+    [
+      "ParticipantA",
+      "I understand."
+    ],
+    [
+      "ParticipantB",
+      "I should probably try to find a book that interests me more."
+    ],
+    [
+      "ParticipantA",
+      "Maybe you could start by reading some classic thriller or crime novels, like \"The Maltese Falcon\" by Dashiell Hammett or \"The Big Sleep\" by Raymond Chandler."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe I'll give that a try."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever considered reading some biographies or memoirs?"
+    ],
+    [
+      "ParticipantB",
+      "Maybe I'll look into those."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, biographies can be really interesting and informative."
+    ],
+    [
+      "ParticipantB",
+      "Thanks for the suggestions."
+    ],
+    [
+      "ParticipantA",
+      "Have you read any books that have had a significant impact on you or changed your perspective on something?"
+    ],
+    [
+      "ParticipantB",
+      "I haven't really read any books that have done that for me."
+    ],
+    [
+      "ParticipantA",
+      "Well, for me, there's a book that really changed my life."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'm not really sure why."
+    ],
+    [
+      "ParticipantA",
+      "I read this book called \"The Alchemist\" by Paulo Coelho."
+    ],
+    [
+      "ParticipantB",
+      "Oh, I haven't heard of that one."
+    ],
+    [
+      "ParticipantA",
+      "It's a really inspiring book about following your dreams and finding your purpose in life."
+    ],
+    [
+      "ParticipantB",
+      "That sounds interesting."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever thought about what you want to do with your life?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've been thinking about it a lot lately."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  }
+}

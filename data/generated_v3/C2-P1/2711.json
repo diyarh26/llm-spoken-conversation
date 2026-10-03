@@ -1,0 +1,216 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "lmsys/vicuna-13b-v1.5-16k",
+  "conversation_no": 2711,
+  "topic": "Vacation Spots",
+  "sb_prompt": "PLEASE DISCUSS TYPES OF VACATIONS AND TRIPS YOU ENJOY.  FIND OUT WHETHER THE OTHER CALLER CAN INTEREST YOU IN A VACATION SPOT YOU HAVEN'T VISITED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 25,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "I'm a big fan of beach vacations."
+    ],
+    [
+      "ParticipantB",
+      "I love the mountains."
+    ],
+    [
+      "ParticipantA",
+      "I've always wanted to visit Hawaii for the perfect beach vacation."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've heard it's really beautiful there."
+    ],
+    [
+      "ParticipantA",
+      "Did you go on any trips last year?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I went to Colorado last year."
+    ],
+    [
+      "ParticipantA",
+      "What was your favorite part about your trip to Colorado?"
+    ],
+    [
+      "ParticipantB",
+      "Hiking in the Rocky Mountains was amazing."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever considered visiting the Pacific Northwest?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've heard it's really beautiful there too."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever been to the Pacific Northwest?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've always wanted to visit the Oregon coast."
+    ],
+    [
+      "ParticipantA",
+      "I love the Oregon coast too."
+    ],
+    [
+      "ParticipantB",
+      "There's also a lot of great hiking trails in Oregon."
+    ],
+    [
+      "ParticipantA",
+      "What kind of hiking trails do you recommend in Oregon?"
+    ],
+    [
+      "ParticipantB",
+      "There's the Oregon Coast Trail which is a great multi-day hike."
+    ],
+    [
+      "ParticipantA",
+      "Have you done any of the multi-day hikes on the Oregon Coast Trail?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I hiked a section of it last year."
+    ],
+    [
+      "ParticipantA",
+      "What was your favorite part of the hike?"
+    ],
+    [
+      "ParticipantB",
+      "The scenic views were breathtaking."
+    ],
+    [
+      "ParticipantA",
+      "What kind of scenery did you see during your hike on the Oregon Coast Trail?"
+    ],
+    [
+      "ParticipantB",
+      "It was really peaceful being by the ocean."
+    ],
+    [
+      "ParticipantA",
+      "What's your favorite spot on the Oregon coast?"
+    ],
+    [
+      "ParticipantB",
+      "My favorite spot would have to be Cape Perpetua."
+    ],
+    [
+      "ParticipantA",
+      "Have you been to any other spots along the Oregon coast that you would recommend?"
+    ],
+    [
+      "ParticipantB",
+      "There's also the Siuslaw National Forest which is a beautiful spot to visit."
+    ],
+    [
+      "ParticipantA",
+      "That sounds amazing."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, the Siuslaw National Forest is really beautiful and peaceful."
+    ],
+    [
+      "ParticipantA",
+      "Have you ever visited any other national parks in the US?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've also been to Yellowstone National Park."
+    ],
+    [
+      "ParticipantA",
+      "That sounds amazing."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely worth visiting."
+    ],
+    [
+      "ParticipantA",
+      "Have you been to any other national parks in the US?"
+    ],
+    [
+      "ParticipantB",
+      "I've also been to Acadia National Park in Maine."
+    ],
+    [
+      "ParticipantA",
+      "What made you want to visit Acadia National Park?"
+    ],
+    [
+      "ParticipantB",
+      "The scenery there is just breathtaking."
+    ],
+    [
+      "ParticipantA",
+      "I've never been to Acadia National Park, but it sounds like a great spot to visit."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's definitely a must-see spot."
+    ],
+    [
+      "ParticipantA",
+      "What are some of your favorite activities to do in Yellowstone National Park?"
+    ],
+    [
+      "ParticipantB",
+      "Hiking and wildlife watching are my favorites."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 300,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  }
+}
