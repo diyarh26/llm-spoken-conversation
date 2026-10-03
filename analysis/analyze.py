@@ -60,6 +60,9 @@ def conversation_turns(rec: dict) -> list[tuple[str, str]]:
 
 
 def _p3_label_re():
+    """Build the regex that matches P3's bracketed gold-label tags, e.g. "[backchannel]"
+    or "[statement, opinion]" — used by conversation_turns() to strip them if a model
+    echoes one of its own shown examples back into a turn instead of just the dialogue."""
     import re
     from analysis.swda import ACT_NAMES
     names = sorted(set(ACT_NAMES.values()) | {"other"}, key=len, reverse=True)
@@ -71,6 +74,8 @@ _P3_LABEL_RE = _p3_label_re()
 
 
 def switchboard_baseline(n: int = 50) -> dict:
+    """Words/turn and oh/okay/uh-huh marker rates for the first `n` Switchboard
+    conversations — the human reference the generated conditions get compared against."""
     wpt, rates = [], {"oh": [], "okay": [], "uh-huh": []}
     for fp in list(iter_conversation_files())[:n]:
         turns = parse_conversation(fp)
@@ -82,6 +87,9 @@ def switchboard_baseline(n: int = 50) -> dict:
 
 
 def main() -> None:
+    """CLI entry point: load every generated conversation under GEN_ROOT, compute
+    per-condition mean words/turn and oh/okay/uh-huh rates, and print a table of
+    all conditions alongside the Switchboard baseline for a quick side-by-side read."""
     conds: dict[str, dict] = {}
     for f in sorted(glob.glob(str(GEN_ROOT / "*" / "*.json"))):
         rec = json.load(open(f, encoding="utf-8"))
