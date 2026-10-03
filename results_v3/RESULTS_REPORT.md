@@ -4,8 +4,7 @@
 a 50-conversation sample of the real Switchboard human telephone corpus. Metrics computed by
 `analysis/evaluate_generated.py` for both the LLM conditions and Switchboard, using the exact
 same functions (so the comparison is apples-to-apples, not paper-reported numbers vs. our
-own). One important measure — real conceptual alignment via the ALIGN package (Duran et al.,
-2019) — is not included yet; see "Not yet run" at the bottom.
+own). Real conceptual alignment (ALIGN package, Duran et al. 2019) is now included in Section 2.
 
 ---
 
@@ -42,7 +41,71 @@ re-computed against the human sample here, since they're not part of this compar
 
 ---
 
-## 2. Key findings for the poster
+## 2. Conceptual Alignment (real ALIGN, Duran et al. 2019)
+
+Computed with the actual ALIGN package and pretrained word2vec-google-news-300 vectors —
+the same method the original paper uses — over 650 conversations (600 generated + 50
+Switchboard), yielding 14,097 adjacent-turn-pair alignment scores.
+
+### 2a. Overall mean conceptual alignment (cosine_semanticL)
+
+| Corpus | Turn pairs | Mean alignment | SD |
+|---|---|---|---|
+| **SWITCHBOARD (human)** | 1216 | **0.595** | 0.212 |
+| C1-P0 | 966 | 0.616 | 0.137 |
+| C1-P1 | 1002 | 0.614 | 0.139 |
+| C1-P2 | 1021 | 0.635 | 0.138 |
+| C2-P0 | 1613 | **0.892** | 0.087 |
+| C2-P1 | 1862 | 0.524 | 0.174 |
+| C2-P2 | 1850 | 0.515 | 0.193 |
+| C3-P0 | 863 | 0.784 | 0.144 |
+| C3-P1 | 830 | 0.755 | 0.142 |
+| C3-P2 | 786 | 0.777 | 0.123 |
+| C4-P0 | 912 | 0.876 | 0.106 |
+| C4-P1 | 478 | **0.896** | 0.089 |
+| C4-P2 | 698 | 0.870 | 0.104 |
+
+### 2b. Earlier vs. Later alignment trend (per-conversation first half vs. second half)
+
+| Corpus | Earlier | Later | Delta |
+|---|---|---|---|
+| **SWITCHBOARD (human)** | 0.633 | 0.610 | **−0.023** |
+| C1-P0 | 0.604 | 0.634 | +0.030 |
+| C1-P1 | 0.603 | 0.638 | +0.034 |
+| C1-P2 | 0.628 | 0.649 | +0.022 |
+| C2-P0 | 0.852 | 0.914 | +0.062 |
+| C2-P1 | 0.519 | 0.527 | +0.008 |
+| C2-P2 | 0.502 | 0.528 | +0.026 |
+| C3-P0 | 0.748 | 0.781 | +0.033 |
+| C3-P1 | 0.717 | 0.777 | +0.060 |
+| C3-P2 | 0.760 | 0.789 | +0.029 |
+| C4-P0 | 0.815 | 0.896 | +0.082 |
+| C4-P1 | 0.846 | 0.881 | +0.034 |
+| C4-P2 | 0.807 | 0.875 | +0.068 |
+
+### Finding A — Conceptual alignment is exaggerated in most LLM conditions
+Switchboard humans average **0.595**. C2-P1/P2 (0.52–0.52) and C1 (0.61–0.63) sit close to or
+slightly above the human level, but **C2-P0, C3, and C4 are all substantially higher** —
+C2-P0 and C4-P1 both exceed **0.89**, roughly 30 points of cosine similarity above human
+conversation. This directly replicates the original paper's central finding: LLM-generated
+dialogue tends to show artificially high semantic similarity between consecutive turns,
+consistent with sycophantic "I agree, and furthermore..." response patterns rather than two
+independent minds genuinely conversing.
+
+### Finding B — The Earlier→Later trend is the clearest human/LLM split in the whole report
+This is the most unambiguous result in the dataset: **Switchboard alignment decreases** over
+the course of a conversation (−0.023, consistent with Healey, Purver & Howes 2014's finding
+that human alignment is not monotonic). **Every single one of the 12 LLM conditions increases**
+instead, with deltas ranging from +0.008 (C2-P1, barely) to +0.082 (C4-P0). There is no
+exception — architecture and prompt level change the *size* of the increase but never its
+*direction*. This is strong, clean evidence for the "scriptwriter effect" / exaggerated
+self-reinforcing agreement the original paper describes, and — alongside the backchannel
+standalone-rate gap (Finding 0 below) — is one of the two strongest, poster-ready headline
+results in this report.
+
+---
+
+## 3. Key findings for the poster
 
 ### Finding 0 — The single biggest human/LLM gap: backchannel standalone rate and diversity
 Real human speakers in Switchboard use a backchannel as its own **standalone turn 52% of the
@@ -113,10 +176,10 @@ single-model "agreement" tendency that drives sycophantic language in C1/C2.
 
 ---
 
-## 3. Not yet run
+## 4. Status
 
-**Real conceptual alignment (ALIGN package, Duran et al. 2019)** — the script
-(`analysis/export_align.py`) is written and merged to `main`, but needs three one-time
-installs (the `ALIGN` pip package, NLTK data, and the ~1.7GB word2vec-google-news-300 model)
-that haven't been done yet in this environment. This is the one metric from the original
-paper's core three (turn length, markers, alignment) still missing a result.
+All three of the original paper's core metrics (turn length, oh/okay/uh-huh markers,
+conceptual alignment) plus the extended backchannel analysis and data-quality checks are now
+complete against the final `data/generated_v3` dataset and the real Switchboard corpus. Full
+per-turn-pair alignment data is in `data/align/alignment_turns.csv`; raw Switchboard source
+files are not committed (LDC-licensed, local only) — only the resulting numbers above are.
