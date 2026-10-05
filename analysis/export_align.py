@@ -103,15 +103,9 @@ def write_input_files(records, raw_dir: pathlib.Path) -> dict[str, tuple[str, st
                 text_clean = _sanitize_for_align_tsv(text)
                 if text_clean:
                     f.write(f"{speaker}\t{text_clean}\n")
-                    TURN_WORDS.setdefault(fname, []).append(len(text_clean.split()))
         meta[fname] = (condition, conv_id, len(turns))
     return meta
 
-
-# basename -> word count of each written turn; used to attach words1/words2 (numbers only) to
-# each turn pair, for length-controlled alignment. Only attached when ALIGN kept every turn
-# (rows == turns - 1), so pair t is exactly (turn t, turn t+1).
-TURN_WORDS: dict[str, list[int]] = {}
 
 
 def run_align(raw_dir: pathlib.Path, work_dir: pathlib.Path, pretrained_vectors: str | None):
@@ -190,7 +184,6 @@ def main() -> None:
     out_rows = []
     fieldnames = (["condition", "conv_id", "turn_index", "n_turns", "cosine_semanticL"]
                   + SYNTAX_COLS + LEXICAL_COLS + ["syntax_stan", "lexical", "words1", "words2"])
-    rows_per_file = turn_df["condition_info"].value_counts().to_dict()
     for _, row in turn_df.iterrows():
         fname = row["condition_info"]
         if fname not in meta:
@@ -209,12 +202,10 @@ def main() -> None:
         }
         for c in SYNTAX_COLS + LEXICAL_COLS:
             out_row[c] = row.get(c, "")
-        words = TURN_WORDS.get(fname, [])
-        t = int(row["time"])
-        if rows_per_file.get(fname) == len(words) - 1 and 0 <= t < len(words) - 1:
-            out_row["words1"], out_row["words2"] = words[t], words[t + 1]
-        else:
-            out_row["words1"] = out_row["words2"] = ""
+        # ALIGN's own token counts for the two turns of this pair (after its cleaning and
+        # merging), so they match exactly the turns the cosine was computed on.
+        out_row["words1"] = row.get("utterance_length1", "")
+        out_row["words2"] = row.get("utterance_length2", "")
         out_rows.append(out_row)
 
     out_path = pathlib.Path(args.out)
