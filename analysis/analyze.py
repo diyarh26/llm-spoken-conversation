@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import glob
 import json
+import re
 import pathlib
 import statistics
 import sys
@@ -56,7 +57,28 @@ def conversation_turns(rec: dict) -> list[tuple[str, str]]:
     # P3 shows examples with "[backchannel]"-style labels; if the model copies one into its
     # own turn, strip it (only our exact label vocabulary, so ordinary text is untouched).
     turns = [(s, _P3_LABEL_RE.sub("", t).strip()) for s, t in turns]
+    # Agents sometimes echo the turn countdown back as a stage direction — "(Turn 14)",
+    # "(Conversation ends here)", "[Your turn to respond. This conversation has 7 turns so
+    # far…]". Not speech: strip any bracketed note mentioning turn(s)/conversation. Same rule
+    # for every condition, applied in analysis only (generation stays frozen).
+    turns = [(s, _META_NOTE_RE.sub("", t).strip()) for s, t in turns]
+    # Language drift (10 C3/C4 conversations): Vicuna appends "번역결과" ("translation
+    # result") + a Korean translation, and the session then fills with Korean. Keep the
+    # English speech before the first non-Latin character; see has_language_drift().
+    turns = [(s, _cut_language_drift(t)) for s, t in turns]
     return [(s, t) for s, t in turns if t]
+
+
+def _cut_language_drift(text: str) -> str:
+    text = text.replace("�", "")          # undecodable-byte debris ("�����")
+    m = _NON_LATIN_RE.search(text)
+    return text[:m.start()].strip() if m else text
+
+
+def has_language_drift(rec: dict) -> bool:
+    """Does the raw record contain non-Latin script (the drift flag for sensitivity runs)?"""
+    texts = [t[1] for t in rec.get("turns") or []] or [rec.get("raw_output", "")]
+    return any(_NON_LATIN_RE.search(t.replace("�", "")) for t in texts)
 
 
 def _p3_label_re():
@@ -71,6 +93,15 @@ def _p3_label_re():
 
 
 _P3_LABEL_RE = _p3_label_re()
+
+_META_NOTE_RE = re.compile(
+    r"\s*(?:\([^()\[\]]{0,400}?\b(?:turns?|conversation)\b[^()\[\]]{0,400}?\)"
+    r"|\[[^()\[\]]{0,400}?\b(?:turns?|conversation)\b[^()\[\]]{0,400}?\])",
+    re.I,
+)
+
+# Anything outside Latin script + general punctuation (€, ™) — Hangul, CJK, Hebrew, …
+_NON_LATIN_RE = re.compile(r"[^\x00-ɏ -⁯€™\s]")
 
 
 def switchboard_baseline(n: int = 50) -> dict:

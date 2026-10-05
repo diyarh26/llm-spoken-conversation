@@ -133,21 +133,36 @@ def parse_turns(raw_output: str) -> list[tuple[str, str]]:
 
 
 def load_conversations(data_dir: pathlib.Path) -> list[dict]:
+    """Generated records with turns from the shared cleaner (analysis.analyze.conversation_turns):
+    scripted "Hello!" seeds dropped, stage directions and language drift removed — the same
+    turns every other metric (dialogue acts, ALIGN, stats) sees."""
+    from analysis.analyze import conversation_turns
     convs = []
     for json_file in sorted(data_dir.rglob("*.json")):
         with json_file.open(encoding="utf-8") as f:
             data = json.load(f)
-        # C2/C3/C4 store turns as [["Speaker", "text"], ...] directly
-        if "turns" in data and isinstance(data["turns"], list) and data["turns"]:
-            raw = data["turns"]
-            if isinstance(raw[0], (list, tuple)) and len(raw[0]) == 2:
-                turns = [(str(spk), str(txt).strip()) for spk, txt in raw if str(txt).strip()]
-            else:
-                turns = parse_turns(data.get("raw_output", ""))
-        else:
-            turns = parse_turns(data.get("raw_output", ""))
+        turns = conversation_turns(data)
         if turns:
-            convs.append({**data, "turns": turns, "file": str(json_file)})
+            convs.append({**data, "turns": turns,
+                          "file": json_file.relative_to(data_dir).as_posix()})
+    return convs
+
+
+def load_switchboard_reference() -> list[dict]:
+    """The 50 real Switchboard conversations whose topics the LLM conditions were given
+    (generation/target_ids.json) — a topic-matched human reference, computed with the exact
+    same metric functions. Only numbers are written out, never Switchboard text."""
+    from analysis.swda import conversation_no_of, iter_conversation_files, parse_conversation
+    from generation.sampling import load_target_ids
+    targets = set(load_target_ids())
+    convs = []
+    for fp in iter_conversation_files():
+        no = conversation_no_of(fp)
+        if no in targets:
+            convs.append({"condition": "SB", "architecture": "human", "prompt_level": "-",
+                          "conversation_no": no, "turns": parse_conversation(fp), "file": None})
+    if len(convs) != len(targets):
+        raise RuntimeError(f"found {len(convs)}/{len(targets)} target Switchboard conversations")
     return convs
 
 
@@ -448,6 +463,8 @@ def main():
     ap = argparse.ArgumentParser(description="Evaluate generated conversations")
     ap.add_argument("--data_dir", default="data/generated")
     ap.add_argument("--out_dir", default="results")
+    ap.add_argument("--switchboard", action="store_true",
+                    help="also score the 50 topic-matched Switchboard conversations (condition SB)")
     args = ap.parse_args()
 
     base = pathlib.Path(__file__).resolve().parent.parent
@@ -457,6 +474,8 @@ def main():
 
     print(f"Loading conversations from {data_dir} …")
     convs = load_conversations(data_dir)
+    if args.switchboard:
+        convs += load_switchboard_reference()
     print(f"  {len(convs)} conversations found")
     if not convs:
         print("Nothing to evaluate.")

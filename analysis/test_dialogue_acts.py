@@ -6,7 +6,7 @@ import unittest
 
 import numpy as np
 
-from analysis.analyze import conversation_turns
+from analysis.analyze import conversation_turns, has_language_drift
 from analysis.dialogue_acts import (
     COARSE_LABELS,
     DIALOGTAG_TO_FINE,
@@ -107,6 +107,30 @@ class SeedTurnTests(unittest.TestCase):
     def test_records_without_seed_field_unchanged(self) -> None:
         rec = {"turns": [["A", "Hello!"], ["B", "Hello!"]]}
         self.assertEqual(len(conversation_turns(rec)), 2)
+
+
+class ArtifactCleaningTests(unittest.TestCase):
+    def test_meta_notes_are_stripped_and_speech_kept(self):
+        rec = {"turns": [
+            ["A", "I like fishing. (This is turn 14)"],
+            ["B", "Me too. What about you?\n\n(End of turn)\n\n[The conversation cannot go past 40 turns.]"],
+            ["A", "(Conversation ends here)"],
+            ["B", "I put it in my 401(k) and talked (briefly) about it."],
+        ]}
+        self.assertEqual(conversation_turns(rec), [
+            ("A", "I like fishing."),
+            ("B", "Me too. What about you?"),
+            ("B", "I put it in my 401(k) and talked (briefly) about it."),
+        ])
+
+    def test_language_drift_is_cut_and_flagged(self):
+        rec = {"turns": [["A", "Do you garden?\n\n번역결과 \n안녕"],
+                         ["B", "안녕하세요"],
+                         ["A", "Café au lait, Bren� Brown."]]}
+        self.assertEqual(conversation_turns(rec),
+                         [("A", "Do you garden?"), ("A", "Café au lait, Bren Brown.")])
+        self.assertTrue(has_language_drift(rec))
+        self.assertFalse(has_language_drift({"turns": [["A", "Café, naïve — 50€ ™"]]}))
 
 
 class LoopFilterTests(unittest.TestCase):

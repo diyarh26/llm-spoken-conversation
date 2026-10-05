@@ -93,9 +93,9 @@ def _rows_from_turns(turns, *, conv_id, condition, architecture, prompt_level, c
     return rows
 
 
-def generated_rows() -> list[dict]:
+def generated_rows(gen_root: pathlib.Path = GEN_ROOT) -> list[dict]:
     rows: list[dict] = []
-    for f in sorted(glob.glob(str(GEN_ROOT / "*" / "*.json"))):
+    for f in sorted(glob.glob(str(gen_root / "*" / "*.json"))):
         rec = json.load(open(f, encoding="utf-8"))
         turns = conversation_turns(rec)
         if not turns:
@@ -111,9 +111,19 @@ def generated_rows() -> list[dict]:
     return rows
 
 
-def switchboard_rows(n: int = 50) -> list[dict]:
+def switchboard_rows(n: int = 50, topic_matched: bool = True) -> list[dict]:
+    """Human baseline. Default: the 50 Switchboard conversations whose topics the LLM
+    conditions were given (generation/target_ids.json) — the same reference as
+    evaluate_generated.py --switchboard. topic_matched=False: the first `n` files."""
     rows: list[dict] = []
-    for fp in list(iter_conversation_files())[:n]:
+    files = list(iter_conversation_files())
+    if topic_matched:
+        from generation.sampling import load_target_ids
+        targets = set(load_target_ids())
+        files = [fp for fp in files if conversation_no_of(fp) in targets]
+    else:
+        files = files[:n]
+    for fp in files:
         turns = parse_conversation(fp)
         if not turns:
             continue
@@ -183,7 +193,9 @@ def words_mixedlm(rows: list[dict], architecture: str, prompt_level: str) -> str
     df["section"] = pd.Categorical(df["section"], categories=["Earlier", "Later"])
     try:
         md = smf.mixedlm("words ~ C(corpus) * C(section)", df, groups=df["conv_id"])
-        res = md.fit(reml=True, method="lbfgs")
+        # Default optimizer: method="lbfgs" silently stalls at beta=0, p=1 on these data
+        # (verified 2026-10-05 on C2-P1/C4-P0 vs SB); the default converges correctly.
+        res = md.fit(reml=True)
     except Exception as e:                                    # singular fits, tiny n, etc.
         return f"  (mixed model failed for {architecture}-{prompt_level}: {e})"
     lines = [f"  {architecture}-{prompt_level} vs SB  -  words ~ Corpus*Section + (1|ConvID)"]
@@ -323,11 +335,16 @@ def make_figures(conv_rows: list[dict]) -> bool:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--n-sb", type=int, default=50, help="Switchboard convs for the baseline")
+    ap.add_argument("--n-sb", type=int, default=50,
+                    help="with --sb-first-n: number of Switchboard convs for the baseline")
+    ap.add_argument("--sb-first-n", action="store_true",
+                    help="use the first N Switchboard files instead of the topic-matched 50")
     ap.add_argument("--figures", action="store_true", help="also write PNGs to analysis/figures/")
+    ap.add_argument("--data-dir", type=pathlib.Path, default=GEN_ROOT,
+                    help="generated condition folders (final data: data/generated_v3)")
     args = ap.parse_args()
 
-    rows = generated_rows() + switchboard_rows(args.n_sb)
+    rows = generated_rows(args.data_dir) + switchboard_rows(args.n_sb, topic_matched=not args.sb_first_n)
     if not any(r["corpus"] == "LLM" for r in rows):
         print("No generated conversations found under data/generated/. Nothing to analyze.")
         return
@@ -394,8 +411,8 @@ def main() -> None:
         ok = make_figures(convs)
         print(f"\n[figures] {'written to ' + str(FIG_DIR.relative_to(ROOT)) if ok else 'matplotlib not installed - skipped'}")
 
-    print("\nNote: each condition uses whatever convs are present (C4-P0 and the P1/P2 sets "
-          "are not yet fully generated). Markers for P2 are omitted as circular.")
+    print("\nNote: each condition uses whatever convs are present. Markers for P2 are omitted "
+          "as circular.")
 
 
 if __name__ == "__main__":

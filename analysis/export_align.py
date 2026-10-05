@@ -38,7 +38,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 ALIGN_OUT = ROOT / "data" / "align"
 
 
-def generated_records(data_dir: pathlib.Path, conditions: list[str] | None):
+def generated_records(data_dir: pathlib.Path, conditions: list[str] | None,
+                      exclude_loops: bool = False, tag: str = ""):
     """(condition, conv_id, turns) for every data_dir/<condition>/*.json.
 
     Skips any condition directory whose name doesn't look like a real condition (e.g. the
@@ -53,12 +54,24 @@ def generated_records(data_dir: pathlib.Path, conditions: list[str] | None):
         for fp in sorted(cond_dir.glob("*.json")):
             rec = json.load(open(fp, encoding="utf-8"))
             turns = conversation_turns(rec)
+            if exclude_loops:      # sensitivity: drop echo-loop turns (same rule as dialogue_acts)
+                from analysis.dialogue_acts import drop_loop_turns
+                turns = drop_loop_turns(turns)
             if len(turns) >= 4:  # ALIGN needs turn pairs; too-short convs aren't useful anyway
-                yield cond, fp.stem, turns
+                yield cond + tag, fp.stem, turns
 
 
-def switchboard_records(n: int):
-    for fp in list(iter_conversation_files())[:n]:
+def switchboard_records(n: int, topic_matched: bool = True):
+    """Human baseline. Default: the 50 topic-matched Switchboard conversations
+    (generation/target_ids.json), the same reference as stats.py / evaluate_generated.py."""
+    files = list(iter_conversation_files())
+    if topic_matched:
+        from generation.sampling import load_target_ids
+        targets = set(load_target_ids())
+        files = [fp for fp in files if conversation_no_of(fp) in targets]
+    else:
+        files = files[:n]
+    for fp in files:
         turns = parse_conversation(fp)
         if len(turns) >= 4:
             yield "SB", str(conversation_no_of(fp)), turns
@@ -90,8 +103,15 @@ def write_input_files(records, raw_dir: pathlib.Path) -> dict[str, tuple[str, st
                 text_clean = _sanitize_for_align_tsv(text)
                 if text_clean:
                     f.write(f"{speaker}\t{text_clean}\n")
+                    TURN_WORDS.setdefault(fname, []).append(len(text_clean.split()))
         meta[fname] = (condition, conv_id, len(turns))
     return meta
+
+
+# basename -> word count of each written turn; used to attach words1/words2 (numbers only) to
+# each turn pair, for length-controlled alignment. Only attached when ALIGN kept every turn
+# (rows == turns - 1), so pair t is exactly (turn t, turn t+1).
+TURN_WORDS: dict[str, list[int]] = {}
 
 
 def run_align(raw_dir: pathlib.Path, work_dir: pathlib.Path, pretrained_vectors: str | None):
@@ -127,7 +147,11 @@ def main() -> None:
     ap.add_argument("--conditions", nargs="*", default=None,
                     help="restrict to these condition dirs (default: all non-.broken dirs)")
     ap.add_argument("--include-sb", action="store_true", help="also export the Switchboard baseline")
-    ap.add_argument("--n-sb", type=int, default=50)
+    ap.add_argument("--n-sb", type=int, default=50, help="with --sb-first-n only")
+    ap.add_argument("--sb-first-n", action="store_true",
+                    help="use the first N Switchboard files instead of the topic-matched 50")
+    ap.add_argument("--loop-sensitivity", nargs="*", default=[],
+                    help="also export these conditions with echo-loop turns dropped, as '<cond>-noloop'")
     ap.add_argument("--pretrained-vectors", default=None,
                     help="path to word2vec-google-news-300(.gz); matches the validated SB run. "
                          "Omit to build a from-corpus model instead (NOT comparable to the SB "
@@ -137,8 +161,11 @@ def main() -> None:
     args = ap.parse_args()
 
     records = list(generated_records(pathlib.Path(args.data_dir), args.conditions))
+    if args.loop_sensitivity:
+        records += list(generated_records(pathlib.Path(args.data_dir), args.loop_sensitivity,
+                                          exclude_loops=True, tag="-noloop"))
     if args.include_sb:
-        records += list(switchboard_records(args.n_sb))
+        records += list(switchboard_records(args.n_sb, topic_matched=not args.sb_first_n))
     if not records:
         print(f"No conversations found under {args.data_dir} (n_turns>=4).")
         return
@@ -162,7 +189,8 @@ def main() -> None:
 
     out_rows = []
     fieldnames = (["condition", "conv_id", "turn_index", "n_turns", "cosine_semanticL"]
-                  + SYNTAX_COLS + LEXICAL_COLS + ["syntax_stan", "lexical"])
+                  + SYNTAX_COLS + LEXICAL_COLS + ["syntax_stan", "lexical", "words1", "words2"])
+    rows_per_file = turn_df["condition_info"].value_counts().to_dict()
     for _, row in turn_df.iterrows():
         fname = row["condition_info"]
         if fname not in meta:
@@ -181,6 +209,12 @@ def main() -> None:
         }
         for c in SYNTAX_COLS + LEXICAL_COLS:
             out_row[c] = row.get(c, "")
+        words = TURN_WORDS.get(fname, [])
+        t = int(row["time"])
+        if rows_per_file.get(fname) == len(words) - 1 and 0 <= t < len(words) - 1:
+            out_row["words1"], out_row["words2"] = words[t], words[t + 1]
+        else:
+            out_row["words1"] = out_row["words2"] = ""
         out_rows.append(out_row)
 
     out_path = pathlib.Path(args.out)

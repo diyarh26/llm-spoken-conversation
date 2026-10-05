@@ -35,7 +35,7 @@ import numpy as np
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from analysis.analyze import conversation_turns  # noqa: E402
+from analysis.analyze import conversation_turns, has_language_drift  # noqa: E402
 from analysis.swda import (  # noqa: E402
     DATA_ROOT as SWDA_ROOT,
     clean_text,
@@ -336,11 +336,14 @@ def drop_loop_turns(turns: list[tuple[str, str]]) -> list[tuple[str, str]]:
 
 
 def load_generated(root: pathlib.Path = GEN_ROOT,
-                   exclude_loops: bool = False) -> list[Conversation]:
+                   exclude_loops: bool = False,
+                   exclude_drift: bool = False) -> list[Conversation]:
     conversations: list[Conversation] = []
     for path in sorted(root.glob("*/*.json")):
         with path.open(encoding="utf-8") as handle:
             record = json.load(handle)
+        if exclude_drift and has_language_drift(record):
+            continue
         turns = conversation_turns(record)
         if exclude_loops:
             turns = drop_loop_turns(turns)
@@ -496,6 +499,44 @@ def _validation_texts(sample: Sequence[Conversation]) -> tuple[list[str], list[s
     return texts, labels
 
 
+def _unit_key(text: str) -> str:
+    return hashlib.sha1(text.encode("utf-8")).hexdigest()
+
+
+def _load_partial_cache(
+    cache_path: pathlib.Path,
+    gold: Sequence[Conversation],
+    model_name: str,
+) -> tuple[list[Conversation], ValidationResult, dict[str, str]] | None:
+    """Reuse what is still valid when the generated side changed (e.g. a sensitivity run):
+    the human labels (if the human fingerprint matches) and a memo of generated-unit labels
+    keyed by a SHA-1 of the unit text. Returns None if the human side is stale."""
+    if not cache_path.exists():
+        return None
+    try:
+        with cache_path.open(encoding="utf-8") as handle:
+            cache = json.load(handle)
+        expected_ids = [conversation.conversation_no for conversation in gold]
+        if (cache.get("version") != CACHE_VERSION or cache.get("model_name") != model_name
+                or cache.get("human_ids") != expected_ids
+                or cache.get("human_fingerprint") != fingerprint_conversations(gold)):
+            return None
+        human_by_id = {int(row["conversation_no"]): row["fine_labels"] for row in cache["human"]}
+        tagged_human: list[Conversation] = []
+        confusion: Counter[tuple[str, str]] = Counter()
+        for conversation in gold:
+            labels = list(human_by_id[conversation.conversation_no])
+            if len(labels) != len(conversation.texts) or any(label not in FINE_LABELS for label in labels):
+                return None
+            tagged_human.append(Conversation("SB", "SB-tagger", conversation.conversation_no,
+                                             list(conversation.speakers), [], labels))
+            confusion.update(zip(conversation.fine_labels, labels))
+        memo = {k: v for k, v in cache.get("generated_unit_labels", {}).items() if v in FINE_LABELS}
+        return tagged_human, ValidationResult(expected_ids, confusion), memo
+    except (KeyError, TypeError, ValueError, json.JSONDecodeError):
+        return None
+
+
 def _load_cache(
     cache_path: pathlib.Path,
     generated: Sequence[Conversation],
@@ -553,9 +594,19 @@ def _write_cache(
     model_name: str,
     validation: ValidationResult,
 ) -> None:
+    memo: dict[str, str] = {}
+    if cache_path.exists():
+        try:
+            with cache_path.open(encoding="utf-8") as handle:
+                memo = dict(json.load(handle).get("generated_unit_labels", {}))
+        except (OSError, ValueError, AttributeError):
+            memo = {}
+    for conversation in generated:
+        memo.update({_unit_key(t): label for t, label in zip(conversation.texts, conversation.fine_labels)})
     payload = {
         "version": CACHE_VERSION,
         "model_name": model_name,
+        "generated_unit_labels": memo,
         "generated_fingerprint": fingerprint_conversations(generated),
         "human_ids": [conversation.conversation_no for conversation in gold],
         "human_fingerprint": fingerprint_conversations(gold),
@@ -602,6 +653,22 @@ def tag_both_sides(
         cached = _load_cache(cache_path, generated, gold, model_name)
         if cached is not None:
             return cached[0], cached[1], True
+        partial = _load_partial_cache(cache_path, gold, model_name)
+        if partial is not None:
+            tagged_human, validation, memo = partial
+            missing = sorted({t for c in generated for t in c.texts if _unit_key(t) not in memo})
+            print(f"Reusing cached human labels and {len(memo):,} generated-unit labels; "
+                  f"tagging {len(missing):,} new generated units...")
+            if missing:
+                tagger = DialogTagAdapter(model_name)
+                predicted = tagger.predict_many(missing, batch_size=batch_size)
+                if len(predicted) != len(missing):
+                    raise RuntimeError("DialogTag returned the wrong number of predictions")
+                memo.update({_unit_key(t): dialogtag_to_fine(lab) for t, lab in zip(missing, predicted)})
+            for conversation in generated:
+                conversation.fine_labels = [memo[_unit_key(t)] for t in conversation.texts]
+            _write_cache(cache_path, generated, gold, tagged_human, model_name, validation)
+            return tagged_human, validation, True
 
     llm_texts = [text for conversation in generated for text in conversation.texts]
     human_texts, gold_labels = _validation_texts(gold)
@@ -1394,6 +1461,10 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--exclude-loops", action="store_true",
         help="sensitivity analysis: drop echo-loop turns (near-verbatim repeats) before tagging",
     )
+    parser.add_argument(
+        "--exclude-drift", action="store_true",
+        help="sensitivity analysis: drop whole conversations with language drift (non-Latin script)",
+    )
     return parser.parse_args(argv)
 
 
@@ -1457,7 +1528,8 @@ def main(argv: Sequence[str] | None = None) -> None:
         print(f"Wrote gold outputs to {output_dir}")
         return
 
-    generated = load_generated(args.generated_root, exclude_loops=args.exclude_loops)
+    generated = load_generated(args.generated_root, exclude_loops=args.exclude_loops,
+                               exclude_drift=args.exclude_drift)
     generated_groups = grouped_by_condition(generated)
     print(
         f"Loaded {len(generated):,} generated conversations across "
