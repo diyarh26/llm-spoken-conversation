@@ -54,7 +54,11 @@ def main() -> None:
     tagger, shared = {}, {}
     missing = 0
     for a in sorted({int(k["annotator"]) for k in key}):
-        ws = load_workbook(pathlib.Path(args.sheets) / f"annotator_{a}.xlsx")["Label these"]
+        path = pathlib.Path(args.sheets) / f"annotator_{a}.xlsx"
+        if not path.exists():
+            print(f"(annotator {a}: no sheet yet — skipped)")
+            continue
+        ws = load_workbook(path)["Label these"]
         answers = {int(r[0]): (r[4] or "").strip() for r in ws.iter_rows(min_row=2, values_only=True)}
         for k in (k for k in key if int(k["annotator"]) == a):
             lab = answers.get(int(k["row"]), "")
