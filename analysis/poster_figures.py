@@ -155,7 +155,7 @@ def fig3_distance() -> None:
     prompt_legend(ax)
     ax.add_artist(ax.get_legend())
     ax.legend([l1, l2], [f"tagger's own error on human talk ({calib:.3f})",
-                         f"two random samples of human calls ({floor:.3f})"],
+                         f"sampling noise: random human samples of the same size ({floor:.3f})"],
               loc="upper right", fontsize=12)
     ax.set_ylim(0, max(vals.values()) * 1.25)
     save(fig, "fig3_distance")

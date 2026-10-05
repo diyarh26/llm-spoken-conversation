@@ -46,7 +46,7 @@ conversations, and does any architecture bring it closer to real human talk?
 speaker · P2 = P1 + a real Switchboard excerpt as an example.
 
 **Data:** 12 conditions × 50 conversations = **600 LLM calls**, on the same 50 topics as
-**50 real Switchboard telephone calls** (human reference). Same models (Vicuna-13B v1.5,
+**50 real Switchboard telephone calls** (human reference; the dialogue-act analysis uses all 1,155 Switchboard calls). Same models (Vicuna-13B v1.5,
 Mistral-7B-Instruct, 4-bit) and the same sampling settings in every condition, so only the
 architecture and the prompt change.
 
@@ -72,7 +72,7 @@ Opinions: humans 14% of units, LLMs 21–38% (architecture averages). Questions:
 The LLM speakers take turns *presenting* rather than *listening*.
 
 ### ③ Separate agents do not make it more human; they make it less → **Figs 3, 4**
-- Closest to human structure: **C1, all at once** (distance 0.12–0.13; humans vs humans ≈ 0.002).
+- Closest to human structure: **C1, all at once** (distance 0.12–0.13; sampling noise ≈ 0.002).
 - Two-agent setups (C3, C4) are further away (0.15–0.22) and talk in long, message-like
   turns: **39–47 words** (C3) and **95–109 words** (C4) per turn, vs **14** for humans.
 - Prompting helps less than the choice of architecture: P1 is usually the best prompt, but
@@ -129,7 +129,7 @@ and languages.
 - **Fig 2.** What the talk is made of: dialogue-act mix, humans vs each architecture
   (mean over prompts).
 - **Fig 3.** Distance of each condition's dialogue-act mix from humans. Dashed: the tagger's
-  own error on human talk; dotted: two random samples of human calls.
+  own error on human talk; dotted: sampling noise (random human samples of the same size).
 - **Fig 4.** Mean words per turn (±95% CI); dashed line = humans.
 - **Fig 5.** (a) Alignment in the first vs second half of a conversation (prompt P1);
   (b) the gap from humans before (outline) and after (filled) controlling for turn length.
