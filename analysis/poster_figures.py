@@ -25,8 +25,10 @@ DA = RES / "dialogue_acts"
 OUT = RES / "figures"
 
 ARCHS = ["C1", "C2", "C3", "C4"]
-ARCH_NAME = {"C1": "C1\nall at once", "C2": "C2\nturn by turn", "C3": "C3\n2 agents\n(same model)",
-             "C4": "C4\n2 agents\n(2 models)"}
+# Display names follow the poster (supervisor's naming): agent architectures are A3/A4. The
+# data keeps its condition ids (C3-P0 ...); only the labels change.
+ARCH_NAME = {"C1": "C1\nall at once", "C2": "C2\nturn by turn", "C3": "A3\n2 agents\n(same model)",
+             "C4": "A4\n2 agents\n(2 models)"}
 ARCH_COLOR = {"C1": "#4C72B0", "C2": "#55A868", "C3": "#DD8452", "C4": "#C44E52"}
 PROMPTS = ["P0", "P1", "P2"]
 PROMPT_ALPHA = {"P0": 0.45, "P1": 0.75, "P2": 1.0}
@@ -218,7 +220,48 @@ def fig5_alignment() -> None:
     save(fig, "fig5_alignment")
 
 
+def poster_fig1b_listener() -> None:
+    """Fig 1(b) alone, compact: stand-alone listener units, humans vs all LLM conditions."""
+    rule = by(DA / "da_rule_crosscheck.csv")
+    llm = [100 * float(rule[c]["rule_backchannel_rate"]) for c in rule if c != "SB"]
+    hb = 100 * float(rule["SB"]["rule_backchannel_rate"])
+    fig, ax = plt.subplots(figsize=(6.2, 5.4))
+    ax.bar([0, 1], [hb, max(llm)], 0.6, color=[HUMAN, "#999"])
+    ax.text(0, hb, f"{hb:.0f}%", ha="center", va="bottom", fontsize=22, fontweight="bold")
+    ax.text(1, max(llm) + 0.3, f"{min(llm):.1f}–{max(llm):.1f}%", ha="center", va="bottom",
+            fontsize=22, fontweight="bold")
+    ax.set_xticks([0, 1], ["Humans", "All 12 LLM\nconditions"], fontsize=16)
+    ax.set_ylabel("% of talk units that are ONLY\n'uh-huh / yeah / right'")
+    ax.set_ylim(0, hb * 1.25)
+    ax.set_title("LLM conversations are\nmissing the listener", fontweight="bold", fontsize=19)
+    save(fig, "poster_fig1b_listener")
+
+
+def poster_fig5a_alignment() -> None:
+    """Fig 5(a) alone: alignment in the first vs second half of a conversation (prompt P1)."""
+    el = {r["condition"]: r for r in rows(RES / "alignment_earlier_later.csv") if r["variant"] == "all_pairs"}
+    fig, ax = plt.subplots(figsize=(8.2, 5.6))
+
+    def line(cond, color, label, lw=2.8):
+        e, l = float(el[cond]["earlier"]), float(el[cond]["later"])
+        ax.plot([0, 1], [e, l], "-o", color=color, lw=lw, ms=9, label=label)
+
+    line("SB", HUMAN, f"Humans (p = {float(el['SB']['wilcoxon_p']):.2f}, no change)", lw=4)
+    for a in ARCHS:
+        p = float(el[a + "-P1"]["wilcoxon_p"])
+        line(a + "-P1", ARCH_COLOR[a], ARCH_NAME[a].replace("\n", " ")
+             + (f" (p = {p:.3f})" if p >= 0.001 else " (p < 0.001)"))
+    ax.set_xticks([0, 1], ["first half\nof the call", "second half\nof the call"])
+    ax.set_xlim(-0.15, 1.15)
+    ax.set_ylabel("conceptual alignment\n(ALIGN, adjacent turns)")
+    ax.set_title("Humans stay flat; LLM speakers converge", fontweight="bold")
+    ax.legend(fontsize=11.5, loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2)
+    save(fig, "poster_fig5a_alignment")
+
+
 if __name__ == "__main__":
+    poster_fig1b_listener()
+    poster_fig5a_alignment()
     fig1_backchannels()
     fig2_act_mix()
     fig3_distance()
