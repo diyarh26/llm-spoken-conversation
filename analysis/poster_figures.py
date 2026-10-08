@@ -278,6 +278,24 @@ def poster_fig1_sized(width_cm: float, height_cm: float, name: str) -> None:
     save(fig, name)
 
 
+def poster_fig1b_vertical(width_cm: float, height_cm: float, name: str) -> None:
+    """Single-panel stand-alone backchannel figure, vertical bars, sized for a Canva slot (cm)."""
+    rule = by(DA / "da_rule_crosscheck.csv")
+    llm = [100 * float(rule[c]["rule_backchannel_rate"]) for c in rule if c != "SB"]
+    hb = 100 * float(rule["SB"]["rule_backchannel_rate"])
+    fig, ax = plt.subplots(figsize=(width_cm / 2.54, height_cm / 2.54))
+    ax.bar([0, 1], [hb, max(llm)], 0.6, color=[HUMAN, "#999"])
+    ax.text(0, hb, f"{hb:.0f}%", ha="center", va="bottom", fontsize=24, fontweight="bold")
+    ax.text(1, max(llm) + 0.3, f"{min(llm):.1f}–\n{max(llm):.1f}%", ha="center", va="bottom",
+            fontsize=22, fontweight="bold")
+    ax.set_xticks([0, 1], ["Humans", "All 12 LLM\nconditions"], fontsize=16)
+    ax.set_ylabel("% of talk units that are ONLY\n'uh-huh / yeah / right'", fontsize=16)
+    ax.set_ylim(0, hb * 1.2)
+    ax.set_title("LLM conversations are\nmissing the listener", fontweight="bold", fontsize=20)
+    fig.tight_layout()
+    save(fig, name)
+
+
 def poster_fig5a_alignment() -> None:
     """Fig 5(a) alone: alignment in the first vs second half of a conversation (prompt P1)."""
     el = {r["condition"]: r for r in rows(RES / "alignment_earlier_later.csv") if r["variant"] == "all_pairs"}
