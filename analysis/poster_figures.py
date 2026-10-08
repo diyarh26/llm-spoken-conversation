@@ -225,15 +225,16 @@ def poster_fig1b_listener() -> None:
     rule = by(DA / "da_rule_crosscheck.csv")
     llm = [100 * float(rule[c]["rule_backchannel_rate"]) for c in rule if c != "SB"]
     hb = 100 * float(rule["SB"]["rule_backchannel_rate"])
-    fig, ax = plt.subplots(figsize=(6.2, 5.4))
-    ax.bar([0, 1], [hb, max(llm)], 0.6, color=[HUMAN, "#999"])
-    ax.text(0, hb, f"{hb:.0f}%", ha="center", va="bottom", fontsize=22, fontweight="bold")
-    ax.text(1, max(llm) + 0.3, f"{min(llm):.1f}–{max(llm):.1f}%", ha="center", va="bottom",
+    fig, ax = plt.subplots(figsize=(10, 3.6))           # horizontal: fits a wide poster slot
+    ax.barh([1, 0], [hb, max(llm)], 0.6, color=[HUMAN, "#999"])
+    ax.text(hb + 0.3, 1, f"{hb:.0f}%", va="center", fontsize=22, fontweight="bold")
+    ax.text(max(llm) + 0.3, 0, f"{min(llm):.1f}–{max(llm):.1f}%", va="center",
             fontsize=22, fontweight="bold")
-    ax.set_xticks([0, 1], ["Humans", "All 12 LLM\nconditions"], fontsize=16)
-    ax.set_ylabel("% of talk units that are ONLY\n'uh-huh / yeah / right'")
-    ax.set_ylim(0, hb * 1.25)
-    ax.set_title("LLM conversations are\nmissing the listener", fontweight="bold", fontsize=19)
+    ax.set_yticks([1, 0], ["Humans", "All 12 LLM\nconditions"], fontsize=16)
+    ax.set_xlabel("% of talk units that are ONLY 'uh-huh / yeah / right'")
+    ax.set_xlim(0, hb * 1.3)
+    ax.set_ylim(-0.6, 1.6)
+    ax.set_title("LLM conversations are missing the listener", fontweight="bold", fontsize=19)
     save(fig, "poster_fig1b_listener")
 
 
