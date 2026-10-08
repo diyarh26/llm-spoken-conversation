@@ -56,7 +56,7 @@ def save(fig, name: str) -> None:
     print("wrote", OUT / f"{name}.png")
 
 
-def grouped(ax, values: dict[str, float], errors: dict[str, float] | None = None, fmt: str = "{:.0f}"):
+def grouped(ax, values: dict[str, float], errors: dict[str, float] | None = None, fmt: str = "{:.0f}", label_size: float = 10.5):
     """Bars grouped by architecture, one bar per prompt level; returns x centers."""
     width, centers = 0.26, []
     for i, a in enumerate(ARCHS):
@@ -67,7 +67,7 @@ def grouped(ax, values: dict[str, float], errors: dict[str, float] | None = None
             ax.bar(x, values[c], width * 0.92, color=ARCH_COLOR[a], alpha=PROMPT_ALPHA[p],
                    yerr=None if errors is None else errors[c], capsize=3, ecolor="#555")
             ax.text(x, values[c] + (0 if errors is None else errors[c]), fmt.format(values[c]),
-                    ha="center", va="bottom", fontsize=10.5)
+                    ha="center", va="bottom", fontsize=label_size)
     return centers
 
 
@@ -236,6 +236,46 @@ def poster_fig1b_listener() -> None:
     ax.set_ylim(-0.6, 1.6)
     ax.set_title("LLM conversations are missing the listener", fontweight="bold", fontsize=19)
     save(fig, "poster_fig1b_listener")
+
+
+def poster_fig1_sized(width_cm: float, height_cm: float, name: str) -> None:
+    """Original two-panel backchannel figure, laid out for a given Canva slot (cm).
+    Tall slots stack (a) over (b); wide slots put them side by side."""
+    dist = by(DA / "da_distribution_coarse_by_condition.csv")
+    rule = by(DA / "da_rule_crosscheck.csv")
+    tall = height_cm > width_cm
+    fig, (a1, a2) = plt.subplots(
+        2 if tall else 1, 1 if tall else 2, figsize=(width_cm / 2.54, height_cm / 2.54),
+        gridspec_kw={"height_ratios": [1.5, 1]} if tall else {"width_ratios": [1.6, 1]})
+
+    vals = {c: 100 * float(dist[c]["Backchannel"]) for c in dist if c[0] == "C"}
+    centers = grouped(a1, vals, fmt="{:.0f}", label_size=10)
+    hum = 100 * float(dist["SB-tagger"]["Backchannel"])
+    a1.bar(0, hum, 0.6, color=HUMAN)
+    a1.text(0, hum, f"{hum:.0f}", ha="center", va="bottom", fontsize=13, fontweight="bold")
+    # short labels: the poster's design boxes already explain C1/C2/A3/A4
+    a1.set_xticks([0] + centers, ["Humans"] + [ARCH_NAME[a].split("\n")[0] for a in ARCHS],
+                  fontsize=13)
+    a1.set_ylabel("% of talk units\ntagged backchannel")
+    a1.set_ylim(0, hum * 1.15)
+    a1.set_title("(a) Backchannels, per condition", fontsize=15)
+    prompt_legend(a1, loc="upper right")
+
+    llm = [100 * float(rule[c]["rule_backchannel_rate"]) for c in rule if c != "SB"]
+    hb = 100 * float(rule["SB"]["rule_backchannel_rate"])
+    a2.barh([1, 0], [hb, max(llm)], 0.6, color=[HUMAN, "#999"])
+    a2.text(hb + 0.3, 1, f"{hb:.0f}%", va="center", fontsize=20, fontweight="bold")
+    a2.text(max(llm) + 0.3, 0, f"{min(llm):.1f}–{max(llm):.1f}%", va="center", fontsize=20,
+            fontweight="bold")
+    a2.set_yticks([1, 0], ["Humans", "All 12 LLM\nconditions"], fontsize=13)
+    a2.set_xlabel("% of talk units that are ONLY\n'uh-huh / yeah / right'")
+    a2.set_xlim(0, hb * 1.35)
+    a2.set_ylim(-0.6, 1.6)
+    a2.set_title("(b) Stand-alone listener turns", fontsize=15)
+    fig.suptitle("LLM conversations are\nmissing the listener" if tall else
+                 "LLM conversations are missing the listener", fontsize=19, fontweight="bold")
+    fig.tight_layout()
+    save(fig, name)
 
 
 def poster_fig5a_alignment() -> None:
