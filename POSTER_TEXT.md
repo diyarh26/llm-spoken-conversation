@@ -94,9 +94,11 @@ to +0.02–0.04.
 - **Robust to data problems:** removing echo-loop turns or the 10 conversations that drifted
   into Korean changes every distance by ≤ 0.01.
 - **Tagger checked by hand:** 4 annotators labelled 100 LLM sentences. The tagger matches
-  them **[X]%** of the time (annotators agree with each other **[Y]%**); on human speech it
-  is 72%. Its main error (calling opinions plain statements) makes our opinion gap
-  *conservative*.
+  them **77%** of the time (95% CI 67–84%), at least as well as on human speech (72%).
+  The annotators agree with each other 83% of the time (Fleiss' κ = 0.67), and on the shared
+  sentences the tagger matches their majority label 15/18 times (83%), as often as they
+  match each other. Its main error (calling opinions plain statements) makes our opinion
+  gap *conservative*.
 - **Replication anchor:** our human reference reproduces the paper's numbers (14.4 vs 13.97
   words/turn; uh-huh 1.03 vs 1.03).
 

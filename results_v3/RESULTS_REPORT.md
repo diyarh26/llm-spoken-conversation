@@ -67,8 +67,15 @@ usually best, and P0 is worst for C2/C3.
 
 **Robustness:** without echo-loop turns, and without the 10 language-drift conversations,
 every score moves by ≤0.01 (`dialogue_acts_no_loops/`, `dialogue_acts_no_drift/`).
-**Caveat:** the tagger is 72% accurate against the human gold labels (coarse). A team
-hand-check of ~100 LLM units is still pending.
+**Tagger validity on LLM text** (`results_v3/tagger_handcheck.txt`, `annotation/`): 4
+annotators labelled 100 random LLM units (8–9 per condition; 20 shared by all four). The
+tagger matches the human label on **77%** (75/98 scored; 95% Wilson CI 67–84%), vs 72% on
+human Switchboard speech. The annotators agree with each other 83% pairwise (Fleiss' κ =
+0.67), and on the shared units the tagger matches their majority on 15/18 (two ties
+excluded). Main confusions: Opinion→Statement (7), Answer→Statement (5; the tagger sees no
+context, so we make no claim about Answers), Open→Yes/No question (4; the question total
+is unaffected). The tagger therefore *under*-counts LLM opinions (humans 37 vs tagger 32),
+so the opinion gap reported above is conservative.
 
 ---
 
