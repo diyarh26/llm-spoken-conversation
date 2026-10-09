@@ -102,6 +102,14 @@ An open-source Python package: **DistilBERT** (a smaller, distilled version of B
 `distilbert-base-uncased`) fine-tuned to classify a sentence into the 42 Switchboard
 dialogue-act labels.
 
+**Q: Did you fine-tune it?**
+**No.** We used it **off-the-shelf** (`pip install DialogTag`). Its authors fine-tuned
+DistilBERT on Switchboard; we only mapped its 42 output labels to our 10 categories. Instead
+of training it we **validated** it: 72% on human speech, 77% on LLM text (hand-check).
+*Why not fine-tune it ourselves?* Fine-tuning on LLM text would need thousands of hand-labelled
+LLM sentences, which don't exist. Fine-tuning on Switchboard again would just reproduce the
+same model.
+
 **Q: Does it use context?**
 **No.** Each unit is labelled on its own. Consequence: it can't recognise an *answer* (that
 needs the previous question). That's why we make **no claims about Answers**. Our claims
