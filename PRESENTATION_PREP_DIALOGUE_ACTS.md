@@ -5,53 +5,60 @@ cheat sheet of numbers. Every number comes from `results_v3/`.
 
 ---
 
-# PART 1: The 4-minute talk (~520 words)
+# PART 1: The talk (~480 words, 3.5–4 minutes; Diyar's own version)
 
-**[Opening: 20 s]**
-"My part is the **structure** of the conversations: not *what* the speakers talk about, but
-*what each sentence does*. For that we used **dialogue acts**."
+"One of the things we measured is the **difference in structure** between LLM and human
+conversations. To do this we used **dialogue acts**: the purpose of each sentence in the
+conversation, for example a statement, an opinion, a question, or a **backchannel** like
+'uh-huh', where the listener signals 'I'm with you'.
 
-**[What a dialogue act is: 30 s]**
-"A dialogue act is the job a sentence does in a conversation. 'I live in Texas' is a
-**statement**, 'I think taxes are too high' is an **opinion**, 'Do you have kids?' is a
-**question**, and 'uh-huh' is a **backchannel**: the listener signalling 'I'm with you, keep
-going'. The mix of these acts is the skeleton of a conversation, and that's what our research
-question is about."
+We got the idea from the **Switchboard** corpus, where every sentence was labelled by
+professional annotators. To label our own conversations we used **DialogTag**, a DistilBERT
+model that was already trained on Switchboard. We used it as-is, and we grouped its labels
+into **10 main classes**.
 
-**[How we measured it: 50 s]**
-"To label 260,000 sentences we used **DialogTag**, a DistilBERT model trained on the
-Switchboard corpus with its standard dialogue-act labels. We grouped them into **10 categories**.
-The important design choice is that we ran the **same tagger on the humans and on the LLMs**,
-so we compare like with like, and any systematic error of the tagger hits both sides.
-Is the tagger reliable? On human speech it agrees with the expert labels **72%** of the time.
-LLM text is different, so we checked that too: the four of us labelled 100 random LLM
-sentences, and the tagger agreed with us **77%** of the time, about as often as we agreed
-with each other (83%)."
+We ran the tagger on the **human conversations too**, not only on the LLMs, so that the
+tagger's errors affect both sides in the same way. Then we checked how accurate it is. On the
+human corpus it agrees with the professional labels **72%** of the time. On LLM text we
+labelled **100 LLM sentences by hand**, and the tagger agreed with us **77%** of the time.
+Between ourselves we agreed **83%** of the time.
 
-**[How we compared: 40 s]**
-"Each condition gives us a distribution: what percent of the talk is statements, opinions,
-backchannels, and so on. To measure how far that is from humans we used the
-**Jensen–Shannon divergence**: 0 means identical distributions, 1 means completely different.
-To know what counts as 'far', we added two reference lines: the **sampling noise**, about
-0.002, and the **tagger's own error** on human talk, 0.035."
+After running the tagger we have a **distribution of acts for each condition**. To measure
+how far each one is from the human distribution, we used the **Jensen–Shannon divergence**,
+a measure from information theory of how different two distributions are. It goes from **0**,
+identical, to **1**, completely different.
 
-**[Results: 80 s]**
-"Three findings.
-**One: the listener is missing.** A quarter of human talk is backchannels, and 19% of all
-human units are *only* 'uh-huh / yeah / right'. In all 12 LLM conditions that is between 0
-and 0.4%. A simple word rule confirms this without the tagger.
-**Two: the listener's space is filled with opinions and questions.** Humans: 14% opinions
-and 5% questions. LLMs: 21–38% opinions and about 15% questions.
-**Three: architecture matters, but not the way we expected.** Generating the whole
-conversation at once, C1, is the **closest** to humans, with a distance of 0.12–0.13. Giving
-each speaker its own agent, A3 and A4, moves it **further away**, to 0.15–0.22. Resampling
-whole conversations, C1 was closer than every other architecture in **100% of 2,000
-resamples**. All the distances are far above both reference lines, and removing looping turns
-or off-language conversations changes them by at most 0.01."
+To know what counts as 'far', we added **two baselines**:
+- **Sampling noise:** for each condition, we drew the same number of units it has from the
+  human distribution, 1,000 times, and took the 95th percentile of the JSD. This is how far
+  'human vs human' gets just by chance, and it was at most **0.002**.
+- **The tagger's own error:** on the same human sentences, the tagger's labels vs the
+  professional labels give **0.035**.
 
-**[Takeaway: 20 s]**
-"So, LLM conversations are missing the listener, and making the speakers more independent
-doesn't bring it back; it makes the talk *less* conversational."
+*(point to the poster)*
+
+What did we find?
+
+**First, backchannels are almost completely missing in the LLMs.** In human calls, a quarter
+of the talk is backchannels, and **19%** is stand-alone 'uh-huh / yeah / right'. In all 12
+LLM conditions that's only **0 to 0.4%**. We counted the 19% with a simple word rule, without
+the tagger, and it agrees with what the tagger found.
+
+**Second, LLMs fill the backchannel hole with opinions and questions.** Humans: **14%**
+opinions and **5%** questions. LLMs: **21–38%** opinions and about **15%** questions.
+
+**Third, the architecture does matter, but not in the direction we expected.** We expected
+giving each speaker its own agent to be more human-like. Instead, the closest architecture was
+**all-at-once**, with a JSD of **0.12–0.13**. The other architectures were further away,
+**0.15–0.24**. This is not chance: when we resampled whole conversations, all-at-once was
+closer in **100% of 2,000 resamples**.
+
+**In conclusion:** LLM conversations are missing the listening part, and separating the
+speakers doesn't bring it back; it makes things worse."
+
+**Careful:** don't say "the more separation, the worse" as a strict ladder (A3 0.15–0.20 is
+sometimes better than C2 0.17–0.24). Say: "all-at-once is the closest; every other
+architecture is further away."
 
 ---
 
