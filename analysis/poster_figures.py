@@ -119,14 +119,18 @@ def fig2_act_mix() -> None:
 
     bars = [("Humans", share(["SB-tagger"]))] + [
         (ARCH_NAME[a].replace("\n", " "), share([f"{a}-{p}" for p in PROMPTS])) for a in ARCHS]
-    fig, ax = plt.subplots(figsize=(14, 5.2))
+    fig, ax = plt.subplots(figsize=(14, 6.0))
     for i, (name, vals) in enumerate(bars[::-1]):
         left = 0
         for (g, _), v, col in zip(groups, vals, colors):
-            ax.barh(i, v, left=left, color=col, edgecolor="white")
-            if v >= 4:
+            ax.barh(i, v, 0.62, left=left, color=col, edgecolor="white")
+            if v >= 4:                       # wide segment: number inside
                 ax.text(left + v / 2, i, f"{v:.0f}", ha="center", va="center", fontsize=12,
                         color="white" if col in ("#222222",) else "black")
+            else:                            # thin segment: number just above the bar
+                ax.text(left + v / 2, i + 0.33, f"{v:.0f}", ha="center", va="bottom",
+                        fontsize=11, color=col if col != "#CCCCCC" else "#666",
+                        fontweight="bold")
             left += v
     ax.set_yticks(range(len(bars)), [b[0] for b in bars[::-1]])
     ax.set_xlim(0, 100)
