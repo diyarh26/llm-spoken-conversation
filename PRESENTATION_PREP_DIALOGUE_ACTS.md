@@ -20,7 +20,7 @@ question is about."
 
 **[How we measured it: 50 s]**
 "To label 260,000 sentences we used **DialogTag**, a DistilBERT model trained on the
-Switchboard corpus with its 42 dialogue-act labels. We grouped them into **10 categories**.
+Switchboard corpus with its standard dialogue-act labels. We grouped them into **10 categories**.
 The important design choice is that we ran the **same tagger on the humans and on the LLMs**,
 so we compare like with like, and any systematic error of the tagger hits both sides.
 Is the tagger reliable? On human speech it agrees with the expert labels **72%** of the time.
@@ -65,9 +65,22 @@ annotators labelled every utterance of 1,155 Switchboard conversations. The orig
 tags are clustered into **42** standard labels: sd = statement, sv = opinion, b =
 backchannel, qy = yes/no question, and so on.
 
+**Q (picky): So exactly how many labels?** Five layers:
+
+| Layer | Labels | What it is |
+|---|---|---|
+| Raw annotation | ~220 | what annotators wrote, incl. modifiers (`qy^d` declarative question, `sd^e` elaborated) |
+| **Standard set** | **42** | Jurafsky et al. (1997) clustering; the number everyone cites |
+| DialogTag output | 38 | the tagger's training merged a few of the 42 |
+| Our fine level | 39 | one shared list for the experts' and the tagger's labels (a few, like `%` abandoned and `x` non-verbal, exist only on the expert side) |
+| **Our main level** | **10** | the categories on the poster |
+
+Short answer: *"About 220 raw tags, clustered into the standard 42; the tagger predicts 38; we
+analyse 10 broad categories."*
+
 **Q: Why group into 10 categories?**
-1. Several of the 42 are rare and the tagger is unreliable on them. The tagger's error on
-   humans is **0.074 with 42 labels vs 0.035 with 10**.
+1. Several fine labels are rare and the tagger is unreliable on them. The tagger's error on
+   humans is **0.074 with the fine labels vs 0.035 with 10**.
 2. Our research question is about broad functions (listening, opinion, asking), not fine
    distinctions.
 The mapping is fixed in code (`FINE_TO_COARSE` in `analysis/dialogue_acts.py`) and is the
@@ -99,12 +112,12 @@ conversations. The same rule applies to all 12 conditions.
 
 **Q: What is DialogTag?**
 An open-source Python package: **DistilBERT** (a smaller, distilled version of BERT,
-`distilbert-base-uncased`) fine-tuned to classify a sentence into the 42 Switchboard
+`distilbert-base-uncased`) fine-tuned to classify a sentence into Switchboard
 dialogue-act labels.
 
 **Q: Did you fine-tune it?**
 **No.** We used it **off-the-shelf** (`pip install DialogTag`). Its authors fine-tuned
-DistilBERT on Switchboard; we only mapped its 42 output labels to our 10 categories. Instead
+DistilBERT on Switchboard; we only mapped its 38 output labels to our 10 categories. Instead
 of training it we **validated** it: 72% on human speech, 77% on LLM text (hand-check).
 *Why not fine-tune it ourselves?* Fine-tuning on LLM text would need thousands of hand-labelled
 LLM sentences, which don't exist. Fine-tuning on Switchboard again would just reproduce the
@@ -116,7 +129,7 @@ needs the previous question). That's why we make **no claims about Answers**. Ou
 (backchannels, opinions, questions) are visible in the sentence itself.
 
 **Q: How accurate is it?**
-- On human Switchboard speech: **70.6% with 42 labels, 72.0% with 10**, against the expert
+- On human Switchboard speech: **70.6% with the fine labels, 72.0% with 10**, against the expert
   labels, over all 223,606 units.
 - On LLM text (our hand-check): **77%** (75 of 98; 95% CI 67–84%).
 
@@ -182,8 +195,8 @@ a lot, compared with 0.002 for two human samples.
   and standard for comparing label distributions. Bonus: √JSD is a true **metric** (it obeys
   the triangle inequality; Endres & Schindelin, 2003).
 
-**Q: Is JSD on 42 labels consistent with 10?**
-Partly, and be honest here. With 42 labels all conditions sit at 0.22–0.28 and the ordering
+**Q: Is JSD on the fine labels consistent with 10?**
+Partly, and be honest here. With the fine labels (39 codes) all conditions sit at 0.22–0.28 and the ordering
 gets mixed (A4-P2 0.22 is lower than C1-P1 0.24), because rare fine labels are dominated by
 tagger noise (instrument error 0.074 vs 0.035). That's exactly why the **10-category** result
 is the primary one.
@@ -270,7 +283,7 @@ on the tagger alone: backchannels and questions are confirmed by tagger-free rul
 |---|---|
 | Human units / conversations | 223,606 / 1,155 (all of Switchboard) |
 | LLM units / conversations | 41,105 / 600 |
-| Tagger accuracy, humans (10 / 42 labels) | 72.0% / 70.6% |
+| Tagger accuracy, humans (10 categories / fine labels) | 72.0% / 70.6% |
 | Tagger accuracy, LLM text (hand-check) | 77% [67–84], 75/98 |
 | Annotator agreement | 83%, Fleiss κ 0.67 |
 | Backchannels (tagger): humans / LLMs | 25% / 1–9% |
