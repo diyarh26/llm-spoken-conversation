@@ -300,6 +300,41 @@ def poster_fig1b_vertical(width_cm: float, height_cm: float, name: str) -> None:
     save(fig, name)
 
 
+def poster_arch_vs_prompt(width_cm: float = 22, height_cm: float = 11) -> None:
+    """Mean JSD vs humans by architecture (over prompts) and by prompt (over architectures)."""
+    jsd = {r["condition"]: float(r["jsd_dist"]) for r in rows(DA / "da_jsd_vs_sb.csv")
+           if r["label_set"] == "coarse" and r["view"] == "tagger_human_vs_tagger_llm_primary"}
+    by_arch = {a: np.mean([jsd[f"{a}-{p}"] for p in PROMPTS]) for a in ARCHS}
+    by_prompt = {p: np.mean([jsd[f"{a}-{p}"] for a in ARCHS]) for p in PROMPTS}
+    ra = max(by_arch.values()) - min(by_arch.values())
+    rp = max(by_prompt.values()) - min(by_prompt.values())
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(width_cm / 2.54, height_cm / 2.54), sharey=True,
+                                 gridspec_kw={"width_ratios": [4, 3]})
+    for ax, vals, cols, labels, rng, title in [
+        (a1, list(by_arch.values()), [ARCH_COLOR[a] for a in ARCHS],
+         [ARCH_NAME[a].split("\n")[0] for a in ARCHS], ra, "By architecture"),
+        (a2, list(by_prompt.values()), ["#BBBBBB", "#888888", "#555555"], PROMPTS, rp, "By prompt"),
+    ]:
+        x = np.arange(len(vals))
+        ax.bar(x, vals, 0.6, color=cols)
+        for xi, v in zip(x, vals):
+            ax.text(xi, v + 0.004, f"{v:.3f}", ha="center", va="bottom", fontsize=12)
+        lo, hi = min(vals), max(vals)
+        xr = len(vals) - 0.45
+        ax.annotate("", xy=(xr, lo), xytext=(xr, hi), arrowprops=dict(arrowstyle="<->", lw=2))
+        ax.text(xr + 0.08, (lo + hi) / 2, f"range\n{rng:.3f}", va="center", fontsize=13,
+                fontweight="bold")
+        ax.set_xticks(x, labels, fontsize=14)
+        ax.set_xlim(-0.6, len(vals) + 0.4)
+        ax.set_title(title, fontsize=15)
+    a1.set_ylabel("mean distance from humans (JSD)")
+    a1.set_ylim(0, max(by_arch.values()) * 1.25)
+    fig.suptitle(f"Architecture moves the distance ~{ra / rp:.1f}× more than the prompt",
+                 fontsize=17, fontweight="bold")
+    fig.tight_layout()
+    save(fig, "poster_arch_vs_prompt")
+
+
 def poster_fig5a_alignment() -> None:
     """Fig 5(a) alone: alignment in the first vs second half of a conversation (prompt P1)."""
     el = {r["condition"]: r for r in rows(RES / "alignment_earlier_later.csv") if r["variant"] == "all_pairs"}
