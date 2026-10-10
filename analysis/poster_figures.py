@@ -322,12 +322,12 @@ def poster_arch_vs_prompt(width_cm: float = 22, height_cm: float = 11) -> None:
         lo, hi = min(vals), max(vals)
         xr = len(vals) - 0.45
         ax.annotate("", xy=(xr, lo), xytext=(xr, hi), arrowprops=dict(arrowstyle="<->", lw=2))
-        ax.text(xr + 0.08, (lo + hi) / 2, f"range\n{rng:.3f}", va="center", fontsize=13,
+        ax.text(xr + 0.12, (lo + hi) / 2, f"range\n{rng:.3f}", va="center", fontsize=13,
                 fontweight="bold")
         ax.set_xticks(x, labels, fontsize=14)
         ax.set_xlim(-0.6, len(vals) + 0.4)
         ax.set_title(title, fontsize=15)
-    a1.set_ylabel("mean distance from humans (JSD)")
+    a1.set_ylabel("distance from\nhumans (JSD)")
     a1.set_ylim(0, max(by_arch.values()) * 1.25)
     fig.suptitle(f"Architecture moves the distance ~{ra / rp:.1f}× more than the prompt",
                  fontsize=17, fontweight="bold")
