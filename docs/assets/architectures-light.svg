@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<title id="t">Four generation architectures</title>
+<desc id="d">Four generation architectures, from one model writing the whole call (C1) to two different models talking (C4).</desc>
+<defs><marker id="ah-light" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#59636e"/></marker></defs>
+<rect x="40" y="34" width="270" height="352" rx="16" fill="none" stroke="#d1d9e0" stroke-width="1.5"/>
+<rect x="62" y="59" width="12" height="12" rx="3" fill="#2a78d6"/>
+<text x="82.0" y="71.0" font-size="19" font-weight="700" fill="#1f2328" text-anchor="start">C1</text>
+<text x="114.0" y="71.0" font-size="17" font-weight="400" fill="#1f2328" text-anchor="start">All at once</text>
+<rect x="120" y="106" width="110" height="44" rx="10" fill="none" stroke="#2a78d6" stroke-width="2"/>
+<text x="175.0" y="134.0" font-size="15" font-weight="600" fill="#1f2328" text-anchor="middle">Vicuna-13B</text>
+<line x1="175" y1="156" x2="175" y2="194" stroke="#59636e" stroke-width="1.8" marker-end="url(#ah-light)"/>
+<rect x="127" y="202" width="96" height="114" rx="8" fill="none" stroke="#d1d9e0" stroke-width="1.5"/>
+<rect x="141" y="216" width="68" height="8" rx="4" fill="#2a78d6"/>
+<rect x="141" y="232" width="55" height="8" rx="4" fill="#94bcea"/>
+<rect x="141" y="248" width="42" height="8" rx="4" fill="#2a78d6"/>
+<rect x="141" y="264" width="59" height="8" rx="4" fill="#94bcea"/>
+<rect x="141" y="280" width="46" height="8" rx="4" fill="#2a78d6"/>
+<rect x="141" y="296" width="63" height="8" rx="4" fill="#94bcea"/>
+<text x="175.0" y="334.0" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">whole call, one pass</text>
+<text x="175.0" y="356.0" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="middle">One generation writes the</text>
+<text x="175.0" y="374.0" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="middle">entire conversation.</text>
+<rect x="332" y="34" width="270" height="352" rx="16" fill="none" stroke="#d1d9e0" stroke-width="1.5"/>
+<rect x="354" y="59" width="12" height="12" rx="3" fill="#eb6834"/>
+<text x="374.0" y="71.0" font-size="19" font-weight="700" fill="#1f2328" text-anchor="start">C2</text>
+<text x="406.0" y="71.0" font-size="17" font-weight="400" fill="#1f2328" text-anchor="start">Turn by turn</text>
+<rect x="412" y="106" width="110" height="44" rx="10" fill="none" stroke="#eb6834" stroke-width="2"/>
+<text x="467.0" y="134.0" font-size="15" font-weight="600" fill="#1f2328" text-anchor="middle">Vicuna-13B</text>
+<path d="M 529 118 a 16 16 0 1 1 0 20" fill="none" stroke="#59636e" stroke-width="1.8" marker-end="url(#ah-light)"/>
+<line x1="467" y1="156" x2="467" y2="194" stroke="#59636e" stroke-width="1.8" marker-end="url(#ah-light)"/>
+<rect x="419" y="202" width="96" height="114" rx="8" fill="none" stroke="#d1d9e0" stroke-width="1.5"/>
+<rect x="433" y="216" width="68" height="8" rx="4" fill="#eb6834"/>
+<rect x="433" y="232" width="55" height="8" rx="4" fill="#f5b49a"/>
+<rect x="433" y="248" width="42" height="8" rx="4" fill="#eb6834"/>
+<rect x="433" y="264" width="59" height="8" rx="4" fill="#f5b49a"/>
+<rect x="433" y="280" width="46" height="8" rx="4" fill="#eb6834"/>
+<rect x="433" y="296" width="63" height="8" rx="4" fill="#f5b49a"/>
+<text x="467.0" y="334.0" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">next turn ← full transcript</text>
+<text x="467.0" y="356.0" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="middle">One model writes one turn at a</text>
+<text x="467.0" y="374.0" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="middle">time and sees both speakers.</text>
+<rect x="624" y="34" width="270" height="352" rx="16" fill="none" stroke="#d1d9e0" stroke-width="1.5"/>
+<rect x="646" y="59" width="12" height="12" rx="3" fill="#1baf7a"/>
+<text x="666.0" y="71.0" font-size="19" font-weight="700" fill="#1f2328" text-anchor="start">C3</text>
+<text x="698.0" y="71.0" font-size="17" font-weight="400" fill="#1f2328" text-anchor="start">Two agents</text>
+<rect x="646" y="106" width="100" height="44" rx="10" fill="none" stroke="#1baf7a" stroke-width="2"/>
+<text x="696.0" y="126.0" font-size="15" font-weight="600" fill="#1f2328" text-anchor="middle">Speaker A</text>
+<text x="696.0" y="142.0" font-size="12" font-weight="400" fill="#59636e" text-anchor="middle">Vicuna-13B</text>
+<rect x="772" y="106" width="100" height="44" rx="10" fill="none" stroke="#8dd7bc" stroke-width="2"/>
+<text x="822.0" y="126.0" font-size="15" font-weight="600" fill="#1f2328" text-anchor="middle">Speaker B</text>
+<text x="822.0" y="142.0" font-size="12" font-weight="400" fill="#59636e" text-anchor="middle">Vicuna-13B</text>
+<line x1="750" y1="128" x2="768" y2="128" stroke="#59636e" stroke-width="1.8" marker-end="url(#ah-light)" marker-start="url(#ah-light)"/>
+<rect x="646" y="172" width="100" height="118" rx="10" fill="none" stroke="#d1d9e0" stroke-width="1.5" stroke-dasharray="4 4"/>
+<text x="696.0" y="194.0" font-size="12" font-weight="400" fill="#59636e" text-anchor="middle">private view</text>
+<rect x="660" y="208" width="56" height="9" rx="4.5" fill="#1baf7a"/>
+<rect x="676" y="226" width="56" height="9" rx="4.5" fill="#d1d9e0"/>
+<rect x="660" y="244" width="56" height="9" rx="4.5" fill="#1baf7a"/>
+<rect x="676" y="262" width="56" height="9" rx="4.5" fill="#d1d9e0"/>
+<rect x="772" y="172" width="100" height="118" rx="10" fill="none" stroke="#d1d9e0" stroke-width="1.5" stroke-dasharray="4 4"/>
+<text x="822.0" y="194.0" font-size="12" font-weight="400" fill="#59636e" text-anchor="middle">private view</text>
+<rect x="802" y="208" width="56" height="9" rx="4.5" fill="#d1d9e0"/>
+<rect x="786" y="226" width="56" height="9" rx="4.5" fill="#8dd7bc"/>
+<rect x="802" y="244" width="56" height="9" rx="4.5" fill="#d1d9e0"/>
+<rect x="786" y="262" width="56" height="9" rx="4.5" fill="#8dd7bc"/>
+<text x="759.0" y="334.0" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">own persona card · own context</text>
+<text x="759.0" y="356.0" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="middle">Two separate chat sessions; each</text>
+<text x="759.0" y="374.0" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="middle">sees only its own side of the call.</text>
+<rect x="916" y="34" width="270" height="352" rx="16" fill="none" stroke="#d1d9e0" stroke-width="1.5"/>
+<rect x="938" y="59" width="12" height="12" rx="3" fill="#eda100"/>
+<text x="958.0" y="71.0" font-size="19" font-weight="700" fill="#1f2328" text-anchor="start">C4</text>
+<text x="990.0" y="71.0" font-size="17" font-weight="400" fill="#1f2328" text-anchor="start">Two models</text>
+<rect x="938" y="106" width="100" height="44" rx="10" fill="none" stroke="#eda100" stroke-width="2"/>
+<text x="988.0" y="126.0" font-size="15" font-weight="600" fill="#1f2328" text-anchor="middle">Speaker A</text>
+<text x="988.0" y="142.0" font-size="12" font-weight="400" fill="#59636e" text-anchor="middle">Vicuna-13B</text>
+<rect x="1064" y="106" width="100" height="44" rx="10" fill="none" stroke="#f6d080" stroke-width="2"/>
+<text x="1114.0" y="126.0" font-size="15" font-weight="600" fill="#1f2328" text-anchor="middle">Speaker B</text>
+<text x="1114.0" y="142.0" font-size="12" font-weight="400" fill="#59636e" text-anchor="middle">Mistral-7B</text>
+<line x1="1042" y1="128" x2="1060" y2="128" stroke="#59636e" stroke-width="1.8" marker-end="url(#ah-light)" marker-start="url(#ah-light)"/>
+<rect x="938" y="172" width="100" height="118" rx="10" fill="none" stroke="#d1d9e0" stroke-width="1.5" stroke-dasharray="4 4"/>
+<text x="988.0" y="194.0" font-size="12" font-weight="400" fill="#59636e" text-anchor="middle">private view</text>
+<rect x="952" y="208" width="56" height="9" rx="4.5" fill="#eda100"/>
+<rect x="968" y="226" width="56" height="9" rx="4.5" fill="#d1d9e0"/>
+<rect x="952" y="244" width="56" height="9" rx="4.5" fill="#eda100"/>
+<rect x="968" y="262" width="56" height="9" rx="4.5" fill="#d1d9e0"/>
+<rect x="1064" y="172" width="100" height="118" rx="10" fill="none" stroke="#d1d9e0" stroke-width="1.5" stroke-dasharray="4 4"/>
+<text x="1114.0" y="194.0" font-size="12" font-weight="400" fill="#59636e" text-anchor="middle">private view</text>
+<rect x="1094" y="208" width="56" height="9" rx="4.5" fill="#d1d9e0"/>
+<rect x="1078" y="226" width="56" height="9" rx="4.5" fill="#f6d080"/>
+<rect x="1094" y="244" width="56" height="9" rx="4.5" fill="#d1d9e0"/>
+<rect x="1078" y="262" width="56" height="9" rx="4.5" fill="#f6d080"/>
+<text x="1051.0" y="334.0" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">own persona card · own context</text>
+<text x="1051.0" y="356.0" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="middle">The same two-agent setup, with</text>
+<text x="1051.0" y="374.0" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="middle">two different models.</text>
+<line x1="50" y1="422" x2="1150" y2="422" stroke="#59636e" stroke-width="1.8" marker-end="url(#ah-light)"/>
+<text x="600.0" y="452.0" font-size="14.5" font-weight="400" fill="#59636e" text-anchor="middle">the two speakers become more independent</text>
+</svg>
