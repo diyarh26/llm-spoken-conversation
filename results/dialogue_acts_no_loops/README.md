@@ -16,7 +16,7 @@ Switchboard averages 193.6 units/conversation. Generated conditions average 38.1
 
 ## Method and limitations
 
-DialogTag `distilbert-base-uncased` was retained after a timeboxed Hugging Face search: the plausible public SwDA checkpoint was token-classification with undocumented utterance-boundary encoding, not a clean sentence-classification replacement. The same-tagger primary view removes the two-ruler confound but cannot remove correlated domain errors on polished LLM text. Full-corpus in-domain fine/coarse agreement is 70.6%/72.0%; this is calibration, not a held-out accuracy claim. Human hand-labeling of generated text remains out of scope.
+DialogTag `distilbert-base-uncased` was retained after a timeboxed Hugging Face search: the plausible public SwDA checkpoint was token-classification with undocumented utterance-boundary encoding, not a clean sentence-classification replacement. The same-tagger primary view removes the two-ruler confound but cannot remove correlated domain errors on polished LLM text. Full-corpus in-domain fine/coarse agreement is 70.6%/72.0%; this is calibration, not a held-out accuracy claim. A separate human check on 100 generated units found 77% agreement (see `results/tagger_handcheck.txt` and `annotation/`).
 
 The text-only cross-check is especially important for listener feedback: it finds 19.1% short lexical backchannels in humans, while generated conditions range from 0.0% to 0.4%. DialogTag assigns substantially more generated backchannels, so the deficit is not an artifact of relying on its labels.
 

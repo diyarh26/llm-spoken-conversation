@@ -1,7 +1,7 @@
 """
-Explicit degeneration score for the decoding dev sweep (§8 redo: "tune decoding
-per-architecture on a dev set against an explicit degeneration score, freeze it,
-document it").
+Explicit degeneration score for the decoding sweep: decoding was tuned per architecture
+on five held-out development conversations against this score, then frozen and documented
+(see generation/config.py and docs/methods.md).
 
 Scores one or more condition directories of generated-conversation JSONs and reports,
 per directory:
@@ -21,7 +21,7 @@ per directory:
 Composite: degeneration_per_conv = (dup turns + dup_kept + token-cap hits
                                     + turn-cap endings) / conversations.
 
-Stdlib only — runs on the VM or locally, no torch. Usage:
+Standard library only (no torch). Usage:
     python generation/degeneration_score.py data/generated/C2-P0 [more dirs ...] [--json]
 """
 

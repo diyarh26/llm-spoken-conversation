@@ -1,6 +1,6 @@
 """
 Torch-free turn-quality primitives, shared by the runtime loop guard
-(generation/model_utils.generate_turn) and the post-hoc dev-sweep scorer
+(generation/turnwise.generate_turn) and the post-hoc dev-sweep scorer
 (generation/degeneration_score.py). One definition of "near-duplicate" everywhere.
 """
 

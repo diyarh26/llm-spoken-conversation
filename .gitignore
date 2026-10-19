@@ -18,10 +18,6 @@ hf_cache/
 # --- Switchboard source data — LDC-licensed, do NOT redistribute. Keep local only. ---
 data/switchboard/
 
-# social_metrics.py's turn_labels.csv embeds raw Switchboard transcript text (LDC) in its
-# `text` column — regenerate it locally for review, NEVER commit it.
-results/social_metrics/turn_labels.csv
-
 # dialogue_acts.py writes aggregate counts only.  Keep any ad-hoc/debug export that adds
 # utterance text out of git as well; Switchboard transcripts are LDC-licensed.
 results/dialogue_acts/*turn_labels*.csv
@@ -42,8 +38,7 @@ data/align/_work/
 Thumbs.db
 desktop.ini
 
-# NOTE: data/generated/ (our own conversations) and results/ ARE committed on purpose —
-# they are small text/JSON and we want to share them across machines via git.
+# NOTE: data/generated/ (the released conversations) and results/ ARE committed on purpose.
 
 # hand-check answer key (tagger labels) - keep away from annotators
 annotation/_key.csv

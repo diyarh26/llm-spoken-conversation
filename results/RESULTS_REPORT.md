@@ -1,20 +1,19 @@
-# Results Report — final dataset (`data/generated`)
+# Results report
 
 **Question:** how does the generation architecture shape the structure of LLM conversations,
 compared with real human telephone calls (Switchboard)?
 
 - **Architectures:** C1 one model writes the whole conversation at once · C2 one model, turn
   by turn · C3 two separate Vicuna agents · C4 Vicuna ↔ Mistral agents.
-- **Prompts:** P0 the paper's basic prompt · P1 spoken register + persona cards · P2 = P1 + a
-  real Switchboard excerpt as an example.
+- **Prompts:** P0 the paper's basic prompt · P1 spoken register + persona cards · P2 = P1 + two
+  short real Switchboard excerpts (other topics) as examples.
 - **Data:** 12 conditions × 50 conversations = 600. All 12 conditions use the same 50 topics.
 - **Human reference:** the 50 Switchboard conversations those topics come from
   (`generation/target_ids.json`). They reproduce the paper's human numbers: 14.4 words/turn
   (paper 13.97) and uh-huh 1.03 per 100 words (paper 1.03).
 
-First version by Sham (2026-10-03: metrics, real ALIGN, expanded backchannel analysis).
-Re-run on 2026-10-05 after the cleaning and fixes listed in §6. Every number below is
-reproducible with the commands in §7.
+Every number below is reproducible with the commands in §7; the methods are described in
+[`docs/methods.md`](../docs/methods.md) and the dataset in [`docs/data.md`](../docs/data.md).
 
 ---
 
@@ -34,7 +33,7 @@ with the same tagger, so the comparison is like-for-like. Coarse act mix, % of u
 **Standalone backchannels**, i.e. a unit that is *only* "uh-huh / yeah / right": humans
 **19.1%**, every LLM condition **0.0–0.4%**. The tagger's 8–9% for C1 comes from turns that
 *start* with "Yeah, …" and then carry on. These are reaction words, not listener turns.
-Sham's lexicon measure agrees: a backchannel is its own turn **51%** of the time for humans
+The lexicon-based measure agrees: a backchannel is its own turn **51%** of the time for humans
 and **0%** in all 12 LLM conditions.
 
 **Distance from humans** (Jensen–Shannon divergence, 0 = identical; lower = more human).
@@ -99,7 +98,7 @@ Per-conversation means (`results/metrics_summary.csv`):
 | C4-P1 | 108.6 | 165.0 | 11.3 | 0.12 | 0.02 | 0.00 | 0.52 | 0% | 1.86 |
 | C4-P2 * | 95.0 | 83.7 | 15.0 | 0.06 | 0.01 | 0.00 | 0.34 | 0% | 1.78 |
 
-\* The P2 prompt shows the model a real Switchboard excerpt, so P2 marker rates
+\* The P2 prompt shows the model real Switchboard excerpts, so P2 marker rates
 (oh/okay/uh-huh, BC) partly reflect what it was shown. Even so, uh-huh stays at 0.
 
 **Statistics** (`results/stats_report.txt`):
@@ -159,8 +158,7 @@ the paper). 17,947 turn pairs. `results/alignment_checks.txt`.
 | C4-P0 / P1 / P2 | 2.1% / 1.2% / 1.3% | 5 / 1 / 2 | 3 / 0 / 0 |
 
 \* A turn of ≥8 words whose word set overlaps ≥80% with an earlier turn: the same definition
-the generator's loop guard uses (`generation/quality.py`). This replaces the earlier
-44% / 0% figures, which no code in the repo reproduces.
+the generator's loop guard uses (`generation/quality.py`).
 
 Language drift = Vicuna appends "번역결과" ("translation result") plus a Korean translation,
 and the agents then continue partly in Korean. Turns are cut where the Korean starts; the
@@ -168,7 +166,7 @@ English before it is kept.
 
 ---
 
-## 5. Poster story in one paragraph
+## 5. Summary in one paragraph
 
 LLM-simulated phone calls lack the listener. Humans spend a quarter of their talk on
 backchannels ("uh-huh", "yeah"); every LLM setup produces almost none as standalone
@@ -181,7 +179,11 @@ choice of architecture.
 
 ---
 
-## 6. What changed since the 2026-10-03 version
+## 6. Revision notes
+
+The first version of this report, the metrics pipeline (`analysis/evaluate_generated.py`) and
+the ALIGN export (`analysis/export_align.py`) were written by Sham Alem. Before the final
+analysis, the following corrections were made and every number was recomputed:
 
 1. **Scripted "Hello!/Hello!" openings were counted** for C2–C4 (not C1) in
    `evaluate_generated.py`. All metrics now use the shared cleaner (`conversation_turns`).
@@ -197,6 +199,10 @@ choice of architecture.
 6. Repetition figures replaced (§4). The "sycophancy" interpretation was dropped (§3).
 
 ## 7. Reproduce
+
+`make analysis` runs the metric and statistics steps (it needs the licensed SwDA corpus under
+`data/switchboard/swda/`); the dialogue-act tagger and ALIGN run in their own environments
+(see the README).
 
 ```
 python analysis/dialogue_acts.py --generated-root data/generated --out-dir results/dialogue_acts   # + --exclude-loops / --exclude-drift

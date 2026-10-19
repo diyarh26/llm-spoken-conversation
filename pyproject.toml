@@ -103,6 +103,7 @@ ignore = [
 "generation/*.py" = ["E402"]
 "analysis/*.py" = ["E402"]
 "explorer/*.py" = ["E402"]
+"prompts/render_examples.py" = ["E402"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["analysis", "generation", "prompts"]

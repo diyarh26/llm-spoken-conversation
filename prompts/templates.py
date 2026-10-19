@@ -16,7 +16,7 @@ P0  basic / replication : faithfully follows the paper's BASIC prompt (GPT4-1 wo
                           turns). No marker forcing, no scripted openings/closings, no guard.
 P1  spoken intervention : OUR prompt — spoken register + brevity, natural ending, peer/anti-
                           assistant guard, and a seeded PERSONA CARD (occupation, stance
-                          toward the topic, one life anchor). Design principle (2026-07-14):
+                          toward the topic, one life anchor). Design principle:
                           EVOKE behavior through persona and situation; NEVER instruct a
                           behavior we measure. No dialogue act, coordination marker, or topic
                           behavior is ever named — stories/disagreement/tangents must emerge
@@ -181,7 +181,7 @@ def _style(level: str) -> str:
 
 
 def _turn_status(history: list, max_turns: int | None) -> str:
-    """Supervisor fix (2026-07-14): tell the model where it is in the turn budget, so it
+    """Turn countdown: tell the model where it is in the turn budget, so it
     can bring the call to a natural close before the hard cap instead of being cut off
     mid-conversation. Phrased as position only — it never says HOW to close.
     NOTE for analysis: this makes ending behavior harness-assisted in every turn-by-turn
@@ -268,7 +268,7 @@ def _fewshot_block(level: str, conversation_no: int | None = None, k: int = 2) -
 # P3 uses the SAME two pool excerpts for every conversation: the two richest in listener
 # behavior by their gold SwDA labels (6–7 backchannel-type turns of 12 each, incl. a
 # backchannel question, a turn continued through the partner's backchannel, and
-# unfinished turns). Chosen 2026-09-30 by label counts over the 10-excerpt pool.
+# unfinished turns). Chosen by gold-label counts over the 10-excerpt pool.
 P3_EXAMPLE_IDS = (3352, 2909)  # FISHING, IMMIGRATION
 
 

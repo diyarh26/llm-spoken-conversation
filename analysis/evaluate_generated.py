@@ -9,7 +9,7 @@ Tier 1 (original paper, independently justified):
   read by analysis/stats.py. This module previously had its own M3, a lexical-Jaccard proxy;
   removed as redundant now that real ALIGN results exist for the generated conditions.
 
-Tier 2 (new criteria, evaluation_criteria.pdf):
+Tier 2 (extension criteria):
   M4  Turn-taking economy        – % turns < 5 words
   M5  Backchannel standalone ratio
   M6  "Oh" epistemic contingency
@@ -53,8 +53,7 @@ MARKER_PAT = {
 BACKCHANNEL_FULL = re.compile(r"^\s*(uh-?huh|okay|ok|mm-?hm|yeah|right|sure)[\s.,!?]*$", re.I)
 BACKCHANNEL_PRESENCE = re.compile(r"\b(uh-?huh|okay|ok|mm-?hm)\b", re.I)
 
-# Expanded listener-feedback lexicon -- "Improving Backchannel Analysis": the original
-# paper only tracked oh/okay/uh-huh; these additional forms (yeah, right, mm-hmm, i see,
+# Expanded listener-feedback lexicon: the original paper only tracked oh/okay/uh-huh; these additional forms (yeah, right, mm-hmm, i see,
 # sure) are also common backchannel/continuer tokens and were previously invisible to
 # the rate/standalone/diversity metrics below. Each entry is (name, bare-phrase-regex);
 # the bare phrase (no \b wrapping, no flags) is reused to build both the per-token
@@ -263,7 +262,7 @@ def m1_turn_length(turns):
         "median_words_per_turn": round(statistics.median(wpt), 3) if wpt else 0,
         "stdev_words_per_turn": round(statistics.stdev(wpt), 3) if len(wpt) > 1 else 0,
         # Turn-length variability as IQR (Q3 - Q1), robust to the long-tail outlier turns
-        # that inflate stdev -- see "Improving Turn Length Analysis" slide.
+        # that inflate stdev.
         "q1_words_per_turn": round(q1, 3),
         "q3_words_per_turn": round(q3, 3),
         "iqr_words_per_turn": round(q3 - q1, 3),
@@ -303,12 +302,12 @@ def m5_backchannel_standalone(turns):
 
 
 def m_backchannel_analysis(turns):
-    """ "Improving Backchannel Analysis": rate, standalone rate, and diversity of listener
-    feedback tokens, over the expanded BACKCHANNEL_LEXICON (not just oh/okay/uh-huh).
+    """Rate, standalone rate, and diversity of listener feedback tokens, over the expanded
+    BACKCHANNEL_LEXICON (not just oh/okay/uh-huh).
 
     1. backchannel_rate_per_100w : Rate(token) = (#occurrences / total words) * 100,
        summed across the whole lexicon -- generalizes the paper's single-token rate
-       formula to "any listener signal", per the slide's stated purpose.
+       formula to "any listener signal".
     2. backchannel_standalone_rate : of the TURNS that contain a lexicon token, what
        fraction are brief, independent turns (the turn IS the backchannel, not a
        backchannel glued onto a longer sentence).

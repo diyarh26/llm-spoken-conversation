@@ -9,7 +9,7 @@ Note on scope: the paper counts markers in the MAIN BODY only (from topic initia
 We don't have topic-initiation annotation locally, so the script below counts over whole
 conversations — expect oh/uh-huh to land close, and `okay` to run a bit higher (okay
 clusters at the opening/closing transitions the paper excludes). Exact main-body
-replication happens alongside ALIGN on the VM.
+replication happens alongside ALIGN (analysis/export_align.py).
 
 Run as a script to validate against Switchboard (stdlib only, no GPU):
     python analysis/metrics.py --n 50

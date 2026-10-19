@@ -30,7 +30,7 @@ Known scope differences from the paper (documented rather than silently glossed 
   3. Syntactic/lexical alignment require export_align.py's syntax_stan_tok2/tok3/lem2/lem3
      and lexical_tok2/tok3/lem2/lem3 columns (added alongside this file). Older
      alignment_turns.csv exports only have cosine_semanticL -- re-run export_align.py on
-     the VM to get syntax_stan/lexical populated before this script's alignment analysis
+     to get syntax_stan/lexical populated before this script's alignment analysis
      will produce anything beyond conceptual alignment.
 
 Usage

@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use this code or the generated conversations, please cite them as below."
+type: software
+title: "LLM Spoken Conversation: generation architecture vs. prompting in simulated telephone calls"
+abstract: >-
+  600 telephone conversations simulated with open LLMs (Vicuna-13B, Mistral-7B) under four
+  generation architectures and three prompts, compared with the Switchboard corpus on turn
+  length, coordination markers, dialogue-act structure and conceptual alignment. Generating
+  the whole conversation at once is closest to human structure; giving each speaker its own
+  agent moves it further away, and every setup lacks the listener behaviour that makes up a
+  quarter of human talk.
+authors:
+  - given-names: Amal
+    family-names: Marjieh
+  - given-names: Sham
+    family-names: Alem
+  - given-names: Aleen
+    family-names: Nijim
+  - given-names: Diyar
+    family-names: Husayyan
+version: 1.0.0
+date-released: 2026-10-20
+license: MIT
+repository-code: "https://github.com/diyarh26/llm-spoken-conversation"
+url: "https://diyarh26.github.io/llm-spoken-conversation/"
+keywords:
+  - large language models
+  - dialogue acts
+  - conversation analysis
+  - Switchboard
+  - multi-agent simulation
+  - backchannels
+references:
+  - type: article
+    title: "Can Large Language Models Simulate Spoken Human Conversations?"
+    authors:
+      - given-names: Eric
+        family-names: Mayor
+      - given-names: Lucas M.
+        family-names: Bietti
+      - given-names: Adrian
+        family-names: Bangerter
+    journal: "Cognitive Science"
+    volume: 49
+    start: e70106
+    year: 2025
+    doi: "10.1111/cogs.70106"

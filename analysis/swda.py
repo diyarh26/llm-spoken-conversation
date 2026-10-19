@@ -29,7 +29,7 @@ from pathlib import Path
 
 DATA_ROOT = Path(__file__).resolve().parent.parent / "data" / "switchboard" / "swda"
 
-# SwDA caller education codes -> text. TODO: verify exact labels against SwDA docs.
+# SwDA caller education codes, rendered as text in the personas (9 = not recorded).
 EDU = {
     "0": "less than a high-school education",
     "1": "a high-school education",

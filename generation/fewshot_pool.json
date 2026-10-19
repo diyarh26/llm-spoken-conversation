@@ -1,5 +1,5 @@
 {
-  "description": "P2 few-shot pool: 10 backchannel-rich SwDA excerpts, distinct topics, disjoint from target/dev ids and target topics. Recipe only (no text) \u2014 reconstructed from local Switchboard at generation time. Built by scratchpad/build_pool.py; seed-free (deterministic scoring).",
+  "description": "P2 few-shot pool: 10 backchannel-rich SwDA excerpts on distinct topics, disjoint from the target and development conversations and their topics. A recipe only (conversation ids and turn offsets, no text): the excerpts are reconstructed from a local Switchboard copy at generation time. Chosen deterministically by scoring excerpts for listener behaviour.",
   "window": 12,
   "excerpts": [
     {

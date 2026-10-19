@@ -3,7 +3,7 @@
 Produces the per-turn CSV analysis/stats.py expects at data/align/alignment_turns.csv:
     condition, conv_id, turn_index, n_turns, cosine_semanticL   (condition="SB" for the baseline)
 
-This mirrors the Switchboard pipeline validated against the paper in Phase 1:
+This mirrors the Switchboard pipeline that was first validated against the original paper:
     1. write each conversation as a tab-separated participant/content .txt file
     2. align.prepare_transcripts()  -- cleaning, tokenizing, lemmatizing, POS-tagging
     3. align.calculate_alignment()  -- turn-by-turn lexical/syntactic/conceptual alignment,
@@ -41,7 +41,7 @@ def generated_records(
     """(condition, conv_id, turns) for every data_dir/<condition>/*.json.
 
     Skips any condition directory whose name doesn't look like a real condition (e.g. the
-    `.broken` backups left behind by the C1 regeneration) unless explicitly requested.
+    `.broken` backup folders) unless explicitly requested.
     """
     for cond_dir in sorted(p for p in data_dir.glob("*") if p.is_dir()):
         cond = cond_dir.name

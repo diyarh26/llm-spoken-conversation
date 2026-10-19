@@ -1,12 +1,15 @@
-"""Poster figures from the committed results in results/ (no data access needed).
+"""The poster's figures, rebuilt from the committed results (no data access needed).
 
-    python analysis/poster_figures.py            # -> results/figures/fig*.png + .pdf
+    python analysis/poster_figures.py            # -> poster/figures/*.png + .pdf
 
 fig1_backchannels   the headline: listener backchannels, humans vs every LLM condition
 fig2_act_mix        what the talk is made of (coarse dialogue acts), humans vs architectures
 fig3_distance       distance from human act structure (JSD) per condition, with reference lines
 fig4_turn_length    words per turn per condition vs humans
 fig5_alignment      ALIGN: earlier -> later convergence, and length-controlled gap vs humans
+poster_*            the same results cut to the poster's layout slots (sizes in cm)
+
+The README uses a separate, theme-aware figure set: see analysis/figures.py.
 """
 
 from __future__ import annotations
@@ -23,11 +26,11 @@ import numpy as np
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RES = ROOT / "results"
 DA = RES / "dialogue_acts"
-OUT = RES / "figures"
+OUT = ROOT / "poster" / "figures"
 
 ARCHS = ["C1", "C2", "C3", "C4"]
-# Display names follow the poster (supervisor's naming): agent architectures are A3/A4. The
-# data keeps its condition ids (C3-P0 ...); only the labels change.
+# Display names follow the poster, which labels the agent architectures A3/A4. The data keeps
+# its condition ids (C3-P0 ...); only the labels change.
 ARCH_NAME = {
     "C1": "C1\nall at once",
     "C2": "C2\nturn by turn",
@@ -524,6 +527,11 @@ def poster_fig5a_alignment() -> None:
 if __name__ == "__main__":
     poster_fig1b_listener()
     poster_fig5a_alignment()
+    poster_fig1_sized(14, 25, "poster_fig1_14x25")
+    poster_fig1_sized(25, 14, "poster_fig1_25x14")
+    poster_fig1b_vertical(14, 25, "poster_fig1b_vertical_14x25")
+    poster_fig1b_vertical(25, 14, "poster_fig1b_vertical_25x14")
+    poster_arch_vs_prompt(40, 12)
     fig1_backchannels()
     fig2_act_mix()
     fig3_distance()

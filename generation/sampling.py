@@ -7,7 +7,7 @@ whatever topics happen to sort first). The draw is:
   1. Pool = the SwDA conversations that exist on disk AND have metadata (1,155).
   2. Proportional stratification by `topic_description` with largest-remainder rounding,
      so the sample's topic mix mirrors the full corpus (this is what makes the
-     topic-matched human comparison in Track 2 fair).
+     topic-matched human comparison fair).
   3. Seeded RNG within each topic; the final list is seed-shuffled so any PREFIX of it is
      itself a roughly stratified subsample (useful for pilots: `--n 10` = first 10 ids).
   4. A small disjoint DEV set is drawn from the leftover pool for decoding tuning.
