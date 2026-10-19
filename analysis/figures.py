@@ -229,10 +229,10 @@ def _mpl(theme: Theme):
 
 
 def _headline(fig, theme: Theme, title: str, subtitle: str, y: float = 0.985) -> None:
-    fig.text(
-        0.012, y, title, ha="left", va="top", fontsize=14.5, fontweight="bold", color=theme.ink
-    )
-    fig.text(0.012, y - 0.085, subtitle, ha="left", va="top", fontsize=10.5, color=theme.muted)
+    """One-line description at the top. The title is not drawn: in the README the section
+    heading above each figure already says it (it stays in the SVG metadata)."""
+    fig.text(0.012, y, subtitle, ha="left", va="top", fontsize=10.5, color=theme.muted)
+    fig.text(0, 0, title, alpha=0, gid="figure-title")  # invisible, for screen readers/search
 
 
 def _save(fig, out: pathlib.Path, name: str, theme: Theme) -> pathlib.Path:
@@ -257,8 +257,8 @@ def fig_acts(theme: Theme, out: pathlib.Path) -> pathlib.Path:
     ]
     rows = ["SB-tagger", *ARCHS]
     labels = ["Humans", *(f"{a}  {ARCH_NAME[a]}" for a in ARCHS)]
-    fig, axes = plt.subplots(1, 3, figsize=(10.2, 3.7), sharey=True)
-    fig.subplots_adjust(left=0.135, right=0.985, top=0.70, bottom=0.11, wspace=0.12)
+    fig, axes = plt.subplots(1, 3, figsize=(10.2, 3.45), sharey=True)
+    fig.subplots_adjust(left=0.135, right=0.985, top=0.79, bottom=0.115, wspace=0.12)
     for ax, (title, keys) in zip(axes, panels, strict=True):
 
         def pct(cond, keys=keys):
@@ -307,8 +307,8 @@ def fig_distance(theme: Theme, out: pathlib.Path) -> pathlib.Path:
     plt = _mpl(theme)
     ci = jsd_with_ci()
     tagger, floor = reference_lines()
-    fig, ax = plt.subplots(figsize=(10.2, 4.9))
-    fig.subplots_adjust(left=0.235, right=0.975, top=0.81, bottom=0.11)
+    fig, ax = plt.subplots(figsize=(10.2, 4.6))
+    fig.subplots_adjust(left=0.235, right=0.975, top=0.90, bottom=0.115)
     y, yticks, ylabels = 0.0, [], []
     centers = {}
     for a in reversed(ARCHS):
@@ -361,8 +361,8 @@ def fig_turn_length(theme: Theme, out: pathlib.Path) -> pathlib.Path:
     human = data["SB"]
     q1, q3 = np.percentile(human, [25, 75])
     rng = np.random.default_rng(7)
-    fig, ax = plt.subplots(figsize=(10.2, 5.3))
-    fig.subplots_adjust(left=0.215, right=0.975, top=0.84, bottom=0.10)
+    fig, ax = plt.subplots(figsize=(10.2, 5.0))
+    fig.subplots_adjust(left=0.215, right=0.975, top=0.91, bottom=0.105)
     rows = [("SB", "Humans", theme.human)] + [
         (f"{a}-{p}", p, theme.arch[a]) for a in ARCHS for p in PROMPTS
     ]
@@ -418,8 +418,10 @@ def fig_alignment(theme: Theme, out: pathlib.Path) -> pathlib.Path:
         if r["variant"] == "all_pairs"
     }
     lc = {r["condition"]: r for r in _rows(RES / "alignment_length_controlled.csv")}
-    fig, (a1, a2) = plt.subplots(1, 2, figsize=(10.2, 4.4), gridspec_kw={"width_ratios": [1.15, 1]})
-    fig.subplots_adjust(left=0.07, right=0.885, top=0.75, bottom=0.13, wspace=0.42)
+    fig, (a1, a2) = plt.subplots(
+        1, 2, figsize=(10.2, 4.15), gridspec_kw={"width_ratios": [1.15, 1]}
+    )
+    fig.subplots_adjust(left=0.07, right=0.885, top=0.82, bottom=0.135, wspace=0.42)
 
     lines = [("SB", "Humans", theme.human)] + [(f"{a}-P1", a, theme.arch[a]) for a in ARCHS]
     ends = []
