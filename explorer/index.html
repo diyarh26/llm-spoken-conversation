@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conversation Explorer · LLM Spoken Conversation</title>
+  <meta name="description" content="Browse 600 telephone conversations simulated by LLMs, side by side: four generation architectures and three prompts, compared with real human calls.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='9' width='9' height='14' rx='3' fill='%232a78d6'/%3E%3Crect x='13' y='9' width='5' height='14' rx='2.5' fill='%23eb6834'/%3E%3Crect x='20' y='9' width='10' height='14' rx='3' fill='%231baf7a'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead wrap">
+    <div>
+      <p class="eyebrow">LLM Spoken Conversation · Technion</p>
+      <h1>Conversation Explorer</h1>
+      <p class="lede">600 telephone calls written by LLMs, side by side. Every conversation exists in
+        twelve versions: four ways of generating it × three prompts, all on the topic of a real
+        recorded call.</p>
+    </div>
+    <nav class="links" aria-label="Project links">
+      <a href="https://github.com/diyarh26/llm-spoken-conversation">Repository</a>
+      <a href="https://github.com/diyarh26/llm-spoken-conversation/blob/main/results/RESULTS_REPORT.md">Results</a>
+      <button id="theme" class="icon-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <section class="controls" aria-label="Choose a conversation">
+    <div class="wrap controls-row">
+      <label class="field">
+        <span>Topic</span>
+        <select id="topic" aria-label="Topic"></select>
+      </label>
+      <div class="field">
+        <span id="prompt-label">Prompt</span>
+        <div class="seg" id="prompt" role="radiogroup" aria-labelledby="prompt-label"></div>
+      </div>
+      <button id="shuffle" class="btn" type="button">Random topic</button>
+      <p class="prompt-note" id="prompt-note" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section class="context card" aria-label="The call">
+      <div>
+        <h2 class="kicker">What the callers were asked</h2>
+        <blockquote id="instruction"></blockquote>
+      </div>
+      <div class="personas" id="personas"></div>
+    </section>
+
+    <section class="card rhythm-card" aria-labelledby="rhythm-title">
+      <div class="card-head">
+        <h2 id="rhythm-title">The rhythm of each call</h2>
+        <p class="hint">Each block is one turn; width = words, shade = speaker. Dots are listener
+          turns: just “uh-huh”, “yeah”, “right”. Click a block to jump to that turn.</p>
+      </div>
+      <div id="rhythm" class="rhythm"></div>
+    </section>
+
+    <div class="tabs" id="tabs" role="tablist" aria-label="Architecture"></div>
+    <section class="columns" id="columns" aria-label="Transcripts"></section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Generated with Vicuna-13B v1.5 and Mistral-7B-Instruct (4-bit). Turns are shown exactly as
+      analysed: scripted “Hello!” openings and non-speech residue removed. The human calls come
+      from the Switchboard corpus, whose transcripts are licensed by the LDC and are not shown;
+      only their turn lengths are used here.</p>
+    <p>Amal Marjieh · Sham Alem · Aleen Nijim · Diyar Husayyan — Technion, 2026 ·
+      <a href="https://github.com/diyarh26/llm-spoken-conversation">github.com/diyarh26/llm-spoken-conversation</a></p>
+  </footer>
+
+  <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
     python analysis/figures.py              # -> docs/assets/*-{light,dark}.svg
     python analysis/figures.py --out DIR    # render somewhere else (CI does this)
-    python analysis/figures.py --extract    # refresh results/figure_data/turn_rhythm.json
+    python analysis/figures.py --extract    # refresh results/figure_data/human_turns.json
                                             # (needs the licensed Switchboard corpus)
 
 Every number comes from results/ (and data/generated/ for the LLM turn sequences), so the
@@ -29,7 +29,9 @@ sys.path.insert(0, str(ROOT))
 
 RES = ROOT / "results"
 DA = RES / "dialogue_acts"
-RHYTHM = RES / "figure_data" / "turn_rhythm.json"
+HUMAN_TURNS = RES / "figure_data" / "human_turns.json"  # word counts only, no text
+GEN = ROOT / "data" / "generated"
+HERO_CONVERSATION, HERO_PROMPT = 3508, "P1"  # see hero_svg for how it was chosen
 OUT = ROOT / "docs" / "assets"
 
 ARCHS = ("C1", "C2", "C3", "C4")
@@ -167,6 +169,26 @@ def listener_share() -> dict[str, float]:
     }
 
 
+def rhythm(turns: list[tuple[str, str]]) -> list[list]:
+    """[speaker, words, listener_only] per turn. Listener-only = the whole turn is just
+    "uh-huh", "yeah", "right"... (the same lexicon as analysis/evaluate_generated.py)."""
+    from analysis.evaluate_generated import BACKCHANNEL_STANDALONE_FULL
+
+    return [
+        [spk[-1], len(text.split()), bool(BACKCHANNEL_STANDALONE_FULL.match(text.strip()))]
+        for spk, text in turns
+    ]
+
+
+def generated_record(condition: str, conversation_no: int) -> dict:
+    path = GEN / condition / f"{conversation_no}.json"
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def human_turns() -> dict[str, list[list]]:
+    return json.loads(HUMAN_TURNS.read_text(encoding="utf-8"))["conversations"]
+
+
 # --- matplotlib figures --------------------------------------------------------------
 
 
@@ -182,6 +204,7 @@ def _mpl(theme: Theme):
             "font.sans-serif": ["Segoe UI", "Helvetica Neue", "Helvetica", "Arial", "DejaVu Sans"],
             "font.size": 10.5,
             "svg.fonttype": "path",
+            "svg.hashsalt": "llm-spoken-conversation",  # deterministic ids: stable diffs
             "axes.edgecolor": theme.grid,
             "axes.labelcolor": theme.muted,
             "axes.linewidth": 0.8,
@@ -488,9 +511,16 @@ def _text(x, y, s, size, fill, weight=400, anchor="start", extra="") -> str:
 
 def hero_svg(theme: Theme, out: pathlib.Path, window: int = 300) -> pathlib.Path:
     """The same topic as a timeline of turns: one real call vs four generated versions."""
-    data = json.loads(RHYTHM.read_text(encoding="utf-8"))
+    from analysis.analyze import conversation_turns
+
+    cno, prompt = HERO_CONVERSATION, HERO_PROMPT
+    topic = generated_record(f"C1-{prompt}", cno)["topic"]
+    sequences = {"SB": human_turns()[str(cno)]}
+    for a in ARCHS:
+        sequences[f"{a}-{prompt}"] = rhythm(
+            conversation_turns(generated_record(f"{a}-{prompt}", cno))
+        )
     stats, listen = summary(), listener_share()
-    prompt = data["prompt"]
     rows = [("SB", "Humans", "real call (Switchboard)", theme.human, theme.human_b)] + [
         (f"{a}-{prompt}", a, ARCH_DESC[a], theme.arch[a], theme.arch_b[a]) for a in ARCHS
     ]
@@ -505,7 +535,7 @@ def hero_svg(theme: Theme, out: pathlib.Path, window: int = 300) -> pathlib.Path
         _text(
             40,
             92,
-            f"One topic ({data['topic'].lower()}) as a timeline of turns: the first "
+            f"One topic ({topic.lower()}) as a timeline of turns: the first "
             f"{window} words of a real call and of four LLM-generated versions.",
             17,
             t.muted,
@@ -530,7 +560,7 @@ def hero_svg(theme: Theme, out: pathlib.Path, window: int = 300) -> pathlib.Path
         )
         pos = 0
         listeners = []
-        for spk, words, is_listener in data["turns"][cond]:
+        for spk, words, is_listener in sequences[cond]:
             if pos >= window:
                 break
             start, end = pos, min(pos + words, window)
@@ -569,7 +599,7 @@ def hero_svg(theme: Theme, out: pathlib.Path, window: int = 300) -> pathlib.Path
             40,
             ly + 34,
             f"Right columns: averages over all 50 calls per condition (LLMs: prompt "
-            f"{prompt}). Conversation {data['conversation_no']} was chosen as the most typical "
+            f"{prompt}). Conversation {cno} was chosen as the most typical "
             "topic: closest to each condition's median",
             12.5,
             t.faint,
@@ -718,42 +748,31 @@ def architectures_svg(theme: Theme, out: pathlib.Path) -> pathlib.Path:
 # --- corpus-dependent extraction -------------------------------------------------------
 
 
-def extract_rhythm(conversation_no: int = 3508, prompt: str = "P1") -> None:
-    """Write the hero's turn sequences (word counts and listener flags only; no text)."""
-    from analysis.analyze import conversation_turns
-    from analysis.evaluate_generated import BACKCHANNEL_STANDALONE_FULL
+def extract_human_turns() -> None:
+    """Write the turn rhythm of the 50 topic-matched human calls (numbers only, no text)."""
     from analysis.swda import conversation_no_of, iter_conversation_files, parse_conversation
+    from generation.sampling import load_target_ids
 
-    def encode(turns):
-        return [
-            [spk[-1], len(text.split()), bool(BACKCHANNEL_STANDALONE_FULL.match(text.strip()))]
-            for spk, text in turns
-        ]
-
-    human = next(f for f in iter_conversation_files() if conversation_no_of(f) == conversation_no)
-    turns = {"SB": encode(parse_conversation(human))}
-    topic = None
-    for a in ARCHS:
-        rec = json.loads(
-            (ROOT / "data" / "generated" / f"{a}-{prompt}" / f"{conversation_no}.json").read_text(
-                encoding="utf-8"
-            )
-        )
-        topic = rec["topic"]
-        turns[f"{a}-{prompt}"] = encode(conversation_turns(rec))
-    RHYTHM.parent.mkdir(parents=True, exist_ok=True)
-    payload = {
-        "conversation_no": conversation_no,
-        "topic": topic,
-        "prompt": prompt,
-        "fields": ["speaker", "words", "listener_only"],
-        "note": "Per-turn word counts and listener-only flags; no transcript text.",
-        "turns": turns,
+    targets = set(load_target_ids())
+    conversations = {
+        str(conversation_no_of(f)): rhythm(parse_conversation(f))
+        for f in iter_conversation_files()
+        if conversation_no_of(f) in targets
     }
-    turns_json = ",\n".join(f'  "{k}": {json.dumps(v)}' for k, v in payload.pop("turns").items())
-    head = json.dumps(payload, indent=1)[:-2]  # drop the closing "\n}"
-    RHYTHM.write_text(f'{head},\n "turns": {{\n{turns_json}\n }}\n}}\n', encoding="utf-8")
-    print("wrote", RHYTHM.relative_to(ROOT))
+    assert len(conversations) == len(targets), "some target conversations are missing"
+    header = {
+        "source": "Switchboard (SwDA): the 50 calls matched to generation/target_ids.json",
+        "fields": ["speaker", "words", "listener_only"],
+        "note": "Per-turn word counts and listener-only flags only; no transcript text.",
+    }
+    lines = [json.dumps(header, indent=1)[:-2] + ",", ' "conversations": {']
+    items = sorted(conversations.items(), key=lambda kv: int(kv[0]))
+    lines += [f'  "{k}": {json.dumps(v)},' for k, v in items]
+    lines[-1] = lines[-1].rstrip(",")  # no trailing comma after the last conversation
+    lines += [" }", "}"]
+    HUMAN_TURNS.parent.mkdir(parents=True, exist_ok=True)
+    HUMAN_TURNS.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
+    print("wrote", HUMAN_TURNS.relative_to(ROOT))
 
 
 def main() -> None:
@@ -767,7 +786,7 @@ def main() -> None:
     ap.add_argument("--theme", choices=sorted(THEMES), help="render one theme only")
     args = ap.parse_args()
     if args.extract:
-        extract_rhythm()
+        extract_human_turns()
     args.out.mkdir(parents=True, exist_ok=True)
     themes = [THEMES[args.theme]] if args.theme else list(THEMES.values())
     for theme in themes:

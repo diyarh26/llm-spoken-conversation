@@ -207,7 +207,7 @@ def _peer_guard() -> str:
     )
 
 
-def _naturalize(text: str) -> str:
+def naturalize(text: str) -> str:
     """The SB prompt is stored verbatim in ALL CAPS ('DISCUSS THE CHANGES...'). For P1/P2,
     present it in natural sentence case so it reads like something a person was asked, not a
     shout. Content is preserved — only casing changes. P0 keeps it verbatim (replication)."""
@@ -228,7 +228,7 @@ def _topic_clause(topic: str, sb_prompt: str | None, level: str) -> str:
     # was actually handed (authentic) — no ALL-CAPS shout, no duplicated topic line.
     return (
         f"The two of you were each asked to phone a stranger and talk about {topic.lower()}. "
-        f"The prompt you were given was: {_naturalize(instruction)} "
+        f"The prompt you were given was: {naturalize(instruction)} "
         "Talk it over as equals, comparing your own experiences and opinions."
     )
 

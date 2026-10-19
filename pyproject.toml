@@ -102,6 +102,7 @@ ignore = [
 # Runnable scripts put the repository root on sys.path before importing project modules.
 "generation/*.py" = ["E402"]
 "analysis/*.py" = ["E402"]
+"explorer/*.py" = ["E402"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["analysis", "generation", "prompts"]
