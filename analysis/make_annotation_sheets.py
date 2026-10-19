@@ -61,7 +61,7 @@ def sample_units(cache_path: pathlib.Path) -> list[dict]:
     memo = json.load(open(cache_path, encoding="utf-8"))["generated_unit_labels"]
     rng = random.Random(SEED)
     by_cond: dict[str, list[dict]] = {}
-    for conv in load_generated(ROOT / "data" / "generated_v3"):
+    for conv in load_generated(ROOT / "data" / "generated"):
         for i, text in enumerate(conv.texts):
             if _key(text) not in memo or len(text.split()) < 1:
                 continue

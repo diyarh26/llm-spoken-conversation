@@ -3,21 +3,19 @@
 Produces the per-turn CSV analysis/stats.py expects at data/align/alignment_turns.csv:
     condition, conv_id, turn_index, n_turns, cosine_semanticL   (condition="SB" for the baseline)
 
-This mirrors the SB pipeline already validated on the VM (see VM_REPORT.md "ALIGN validation"):
+This mirrors the Switchboard pipeline validated against the paper in Phase 1:
     1. write each conversation as a tab-separated participant/content .txt file
-       (same format as analysis/prepare_align_input.py)
     2. align.prepare_transcripts()  -- cleaning, tokenizing, lemmatizing, POS-tagging
     3. align.calculate_alignment()  -- turn-by-turn lexical/syntactic/conceptual alignment,
        using the same pretrained word2vec-google-news-300 vectors as the validated SB run
 
 Needs the `ALIGN` package + NLTK data (punkt_tab, wordnet, averaged_perceptron_tagger[_eng])
-+ the pretrained word2vec file. All three exist already in the VM's `convsim` env per
-VM_REPORT.md -- run this there. `--pretrained-vectors` defaults to the path VM_REPORT.md
-recorded (~/gensim-data/word2vec-google-news-300/word2vec-google-news-300.gz).
++ the pretrained word2vec file. `--pretrained-vectors` defaults to
+~/gensim-data/word2vec-google-news-300/word2vec-google-news-300.gz.
 
 Usage:
-    python analysis/export_align.py --data-dir data/generated_v2 --include-sb --n-sb 50
-    python analysis/export_align.py --data-dir data/generated_v2 --conditions C2-P0 C2-P1
+    python analysis/export_align.py --data-dir data/generated --include-sb --n-sb 50
+    python analysis/export_align.py --data-dir data/generated --conditions C2-P0 C2-P1
 """
 
 from __future__ import annotations
@@ -116,7 +114,7 @@ def run_align(raw_dir: pathlib.Path, work_dir: pathlib.Path, pretrained_vectors:
     results_dir = work_dir / "results"
     results_dir.mkdir(parents=True, exist_ok=True)
 
-    # Same settings as the validated SB run (VM_REPORT.md): spell-check off.
+    # Same settings as the validated SB run (Phase-1 validation): spell-check off.
     align.prepare_transcripts(
         input_files=str(raw_dir),
         output_file_directory=str(prepared_dir),
@@ -137,7 +135,7 @@ def run_align(raw_dir: pathlib.Path, work_dir: pathlib.Path, pretrained_vectors:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data-dir", default="data/generated_v2")
+    ap.add_argument("--data-dir", default="data/generated")
     ap.add_argument("--conditions", nargs="*", default=None,
                     help="restrict to these condition dirs (default: all non-.broken dirs)")
     ap.add_argument("--include-sb", action="store_true", help="also export the Switchboard baseline")

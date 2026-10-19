@@ -34,13 +34,13 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--cache", required=True)
     ap.add_argument("--reps", type=int, default=2000)
-    ap.add_argument("--out", default=str(ROOT / "results_v3" / "da_jsd_bootstrap.csv"))
+    ap.add_argument("--out", default=str(ROOT / "results" / "da_jsd_bootstrap.csv"))
     args = ap.parse_args()
     cache = json.load(open(args.cache, encoding="utf-8"))
     memo = cache["generated_unit_labels"]
     human = np.array([counts(r["fine_labels"]) for r in cache["human"]])
     by_cond: dict[str, list[np.ndarray]] = {}
-    for conv in load_generated(ROOT / "data" / "generated_v3"):
+    for conv in load_generated(ROOT / "data" / "generated"):
         labs = [memo[hashlib.sha1(t.encode("utf-8")).hexdigest()] for t in conv.texts]
         by_cond.setdefault(conv.condition, []).append(counts(labs))
     rng = np.random.default_rng(20261009)

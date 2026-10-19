@@ -2,7 +2,7 @@
 
 **Status:** design frozen locally 2026-07-14 (prompt/sampling/model/N). Decoding is at
 *pre-sweep defaults*: the VM dev sweep may amend it once, with evidence, then it freezes
-(see "Dev sweep protocol"). Output dir: `data/generated_v3/` (supersedes the v2 draft).
+(see "Dev sweep protocol"). Output dir: `data/generated/` (supersedes the v2 draft).
 
 This is the documented redo demanded by the rigor review (`RESEARCH_DIALOGUE_ACTS.md` §8–9).
 Design discussion resolved 2026-07-14 (local session): **P1 = register + brevity + persona
@@ -131,7 +131,7 @@ repeat. Empty emissions get one retry, then end the conversation (`ended_by: emp
 3. Read 2–3 transcripts per condition (register, coherence, endings).
 4. Acceptance: `dup_turn_rate < 0.05` and `degeneration_per_conv < 1.0` and no runaway
    turn-cap endings. If a condition fails on loops: escalate `repetition_penalty`
-   1.0 → **1.05 max**, re-score, commit `config.py` with the two scores in `VM_REPORT.md`.
+   1.0 → **1.05 max**, re-score, commit `config.py` with the two scores recorded.
 5. Freeze `config.py`. The full run uses no CLI decoding overrides.
 
 ## 6. Output JSON additions (v3)

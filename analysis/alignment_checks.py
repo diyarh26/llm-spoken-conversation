@@ -13,7 +13,7 @@ before any alignment claim goes on the poster:
      (both turns 5–40 words) with plain means.
   3. Echo loops — '<cond>-noloop' rows (export_align.py --loop-sensitivity) vs the original.
 
-    python analysis/alignment_checks.py [--csv data/align/alignment_turns.csv] [--out results_v3]
+    python analysis/alignment_checks.py [--csv data/align/alignment_turns.csv] [--out results]
 """
 from __future__ import annotations
 
@@ -79,7 +79,7 @@ def length_controlled(df: pd.DataFrame) -> pd.DataFrame:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv", default=str(ROOT / "data" / "align" / "alignment_turns.csv"))
-    ap.add_argument("--out", default=str(ROOT / "results_v3"))
+    ap.add_argument("--out", default=str(ROOT / "results"))
     args = ap.parse_args()
     out = pathlib.Path(args.out); out.mkdir(parents=True, exist_ok=True)
 

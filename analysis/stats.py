@@ -341,7 +341,7 @@ def main() -> None:
                     help="use the first N Switchboard files instead of the topic-matched 50")
     ap.add_argument("--figures", action="store_true", help="also write PNGs to analysis/figures/")
     ap.add_argument("--data-dir", type=pathlib.Path, default=GEN_ROOT,
-                    help="generated condition folders (final data: data/generated_v3)")
+                    help="generated condition folders (final data: data/generated)")
     args = ap.parse_args()
 
     rows = generated_rows(args.data_dir) + switchboard_rows(args.n_sb, topic_matched=not args.sb_first_n)

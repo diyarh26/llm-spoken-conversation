@@ -22,7 +22,7 @@ contrast is not confounded by sampling choices.
 FREEZE PROTOCOL: these are the pre-sweep defaults. The VM runs the dev-set sweep
 (generation/degeneration_score.py over the 5 dev ids), amends ONLY what the score forces
 (documented escalation: repetition_penalty 1.0 → 1.05), commits the change with the score
-evidence in VM_REPORT.md, and then this file is FROZEN for the v3 run.
+evidence in the dev-sweep notes, and then this file is FROZEN for the v3 run.
 """
 
 from __future__ import annotations

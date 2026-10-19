@@ -7,7 +7,7 @@ stratified manifest (generation/target_ids.json), decoding from generation/confi
 <out-root>/C1-<prompt>/<conversation_no>.json and already-present ids are skipped, so the
 job is resumable after an SSH/kernel drop. Run inside tmux on the VM:
 
-    python generation/generate_c1.py --prompt P0 --out-root data/generated_v3
+    python generation/generate_c1.py --prompt P0 --out-root data/generated
 """
 
 from __future__ import annotations
@@ -47,7 +47,7 @@ def main() -> None:
     ap.add_argument("--repetition-penalty", type=float, default=C1_DECODING.repetition_penalty)
     ap.add_argument("--no-repeat-ngram", type=int, default=C1_DECODING.no_repeat_ngram_size)
     ap.add_argument("--out-root", default=str(OUT_ROOT),
-                    help="output root; use data/generated_v3 for the regeneration run")
+                    help="output root; use data/generated for the regeneration run")
     args = ap.parse_args()
 
     cond = f"C1-{args.prompt}"

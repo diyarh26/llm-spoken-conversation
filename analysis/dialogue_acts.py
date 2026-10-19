@@ -44,7 +44,7 @@ from analysis.swda import (  # noqa: E402
 )
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-GEN_ROOT = ROOT / "data" / "generated_v2"
+GEN_ROOT = ROOT / "data" / "generated"
 OUT_DIR = ROOT / "results" / "dialogue_acts"
 CACHE_VERSION = 2
 
@@ -1231,9 +1231,9 @@ def _legacy_write_readme(
         for conversations in generated_groups.values()
         for conversation in conversations
     )
-    text = f"""# Dialogue-act structural signature — draft-data smoke test
+    text = f"""# Dialogue-act structural signature
 
-This is a first indicator on `data/generated_v2/`, not a final-dataset result.  It compares
+This compares
 {len(gold):,} full Switchboard conversations ({sum(len(c.fine_labels) for c in gold):,}
 gold utterance units) with {sum(len(v) for v in generated_groups.values()):,} generated
 conversations ({generated_units:,} generated turns) across {len(generated_groups)} conditions.
@@ -1360,7 +1360,7 @@ def write_readme(output_dir: pathlib.Path, *, gold: Sequence[Conversation],
     gold_rate = tagger_rates(gold)
     tagged_rate = tagger_rates(tagged_human)
     units = [sum(len(c.fine_labels) for c in group) / len(group) for group in generated_groups.values()]
-    text = f"""# Dialogue-act structural signature — draft-data refined analysis
+    text = f"""# Dialogue-act structural signature
 
 This rerun compares {len(gold):,} Switchboard conversations ({sum(len(c.fine_labels) for c in gold):,} gold utterance units) with {sum(len(v) for v in generated_groups.values()):,} generated conversations. Generated turns are split into sentence units before tagging.
 

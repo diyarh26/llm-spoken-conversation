@@ -1,6 +1,6 @@
-"""Poster figures from the committed results in results_v3/ (no data access needed).
+"""Poster figures from the committed results in results/ (no data access needed).
 
-    python analysis/poster_figures.py            # -> results_v3/figures/fig*.png + .pdf
+    python analysis/poster_figures.py            # -> results/figures/fig*.png + .pdf
 
 fig1_backchannels   the headline: listener backchannels, humans vs every LLM condition
 fig2_act_mix        what the talk is made of (coarse dialogue acts), humans vs architectures
@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-RES = ROOT / "results_v3"
+RES = ROOT / "results"
 DA = RES / "dialogue_acts"
 OUT = RES / "figures"
 

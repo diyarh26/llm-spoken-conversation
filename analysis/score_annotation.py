@@ -7,7 +7,7 @@ Reads annotation/sheets/annotator_*.xlsx (filled) + annotation/_key.csv and repo
     ceiling the tagger should be compared against;
   * the confusion table (human label -> tagger label).
 
-    python analysis/score_annotation.py [--sheets annotation/sheets] [--out results_v3]
+    python analysis/score_annotation.py [--sheets annotation/sheets] [--out results]
 """
 from __future__ import annotations
 
@@ -46,7 +46,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--sheets", default=str(ROOT / "annotation" / "sheets"))
     ap.add_argument("--key", default=str(ROOT / "annotation" / "_key.csv"))
-    ap.add_argument("--out", default=str(ROOT / "results_v3"))
+    ap.add_argument("--out", default=str(ROOT / "results"))
     args = ap.parse_args()
 
     key = list(csv.DictReader(open(args.key, encoding="utf-8")))

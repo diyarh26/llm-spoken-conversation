@@ -6,7 +6,7 @@ with thousands of units — tiny rows are noisy and can dominate. Here each row'
 weighted by how often that act occurs (mean of the two corpora's act shares), so the score
 reflects what the conversations mostly do. Reads the CSVs dialogue_acts.py already wrote.
 
-    python analysis/transition_weighted.py results_v3/dialogue_acts
+    python analysis/transition_weighted.py results/dialogue_acts
 """
 from __future__ import annotations
 
@@ -57,4 +57,4 @@ def main(out_dir: pathlib.Path) -> None:
 
 
 if __name__ == "__main__":
-    main(pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "results_v3/dialogue_acts"))
+    main(pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "results/dialogue_acts"))

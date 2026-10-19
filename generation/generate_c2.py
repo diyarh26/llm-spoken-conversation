@@ -10,7 +10,7 @@ multiple turns at once). Each generation is truncated to the first turn, and we 
 Targets come from the committed stratified manifest (generation/target_ids.json), decoding
 from generation/config.py (DV-safe; see GENERATION_SPEC.md). Resumable; writes
 <out-root>/C2-<prompt>/<id>.json. Run in tmux:
-    python generation/generate_c2.py --prompt P0 --out-root data/generated_v3
+    python generation/generate_c2.py --prompt P0 --out-root data/generated
 """
 
 from __future__ import annotations
@@ -60,7 +60,7 @@ def main() -> None:
                     help="1.0 = off; loops are handled procedurally (near-duplicate resample)")
     ap.add_argument("--no-repeat-ngram", type=int, default=TURNWISE.no_repeat_ngram_size)
     ap.add_argument("--out-root", default=str(OUT_ROOT),
-                    help="output root; use data/generated_v3 for the regeneration run")
+                    help="output root; use data/generated for the regeneration run")
     args = ap.parse_args()
 
     cond = f"C2-{args.prompt}"

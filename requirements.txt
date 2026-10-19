@@ -1,6 +1,6 @@
 # Generation + metrics stack for the conversation-simulation project.
 #
-# IMPORTANT: install torch FIRST, matching the VM's CUDA version (see README).
+# IMPORTANT: install torch FIRST, matching your CUDA version (see README).
 #   e.g.  pip install torch --index-url https://download.pytorch.org/whl/cu118
 # Then install the rest:
 
@@ -15,12 +15,12 @@ pandas
 numpy
 scipy
 matplotlib
-sentence-transformers  # required by analysis/semantic_routes.py; no TF-IDF fallback
-
-# analysis/social_metrics.py can still use sentence-transformers for its legacy CAS metric.
-# The canonical conversation-level diversity analysis is analysis/semantic_routes.py.
+statsmodels    # mixed-effects models in analysis/stats.py and alignment_checks.py
 
 # ALIGN (Duran et al., 2019) for conceptual/syntactic/lexical alignment is installed
 # SEPARATELY — it is finicky about dependency versions. Follow the install path used in
 # the authors' OSF Colab notebooks (osf.io/zxwtr) and pin it in its own environment if
-# it conflicts with the generation stack. See README "Phase 1".
+# it conflicts with the generation stack.
+#
+# The DialogTag dialogue-act tagger needs its own isolated environment:
+#   analysis/requirements-dialogue-acts.txt

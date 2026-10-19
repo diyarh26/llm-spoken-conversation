@@ -22,7 +22,7 @@ Composite: degeneration_per_conv = (dup turns + dup_kept + token-cap hits
                                     + turn-cap endings) / conversations.
 
 Stdlib only — runs on the VM or locally, no torch. Usage:
-    python generation/degeneration_score.py data/generated_v3/C2-P0 [more dirs ...] [--json]
+    python generation/degeneration_score.py data/generated/C2-P0 [more dirs ...] [--json]
 """
 
 from __future__ import annotations
