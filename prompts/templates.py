@@ -359,3 +359,27 @@ def build_agent(prompt_level: str, me: Persona, partner: Persona, topic: str,
     if messages[-1]["role"] == "assistant":
         messages.append({"role": "user", "content": "(Your partner is quiet — continue if you wish.)"})
     return messages
+
+
+# --- architecture views ----------------------------------------------------------------
+#
+# What a model sees when it writes the next turn is the essence of each turn-wise
+# architecture. These factories return the message builders the generators plug into
+# generation.runner.run_turnwise_job:
+#     (speaker, persona_a, persona_b, topic, sb_prompt, history, conversation_no) -> messages
+
+def writer_view(prompt_level: str, max_turns: int | None):
+    """C2: one omniscient writer sees both personas and the whole labelled transcript."""
+    def build(speaker, a, b, topic, sb_prompt, history, conversation_no):
+        return build_c2(prompt_level, a, b, topic, sb_prompt, history, speaker,
+                        max_turns=max_turns, conversation_no=conversation_no)
+    return build
+
+
+def agent_view(prompt_level: str, max_turns: int | None):
+    """C3/C4: each speaker is its own agent and sees the call only from its own side."""
+    def build(speaker, a, b, topic, sb_prompt, history, conversation_no):
+        me, partner = (a, b) if speaker == a.label else (b, a)
+        return build_agent(prompt_level, me, partner, topic, sb_prompt, history,
+                           max_turns=max_turns, conversation_no=conversation_no)
+    return build

@@ -1,42 +1,41 @@
 """
-Model loading + chat-generation helpers for the VM (Vicuna / Mistral).
+Model loading and chat generation (the only generation module that needs a GPU).
 
-4-bit quantized load to fit the V100 (16 GB). Uses each model's chat template so prompt
-formatting is correct, with a Vicuna-v1.5 fallback if no template is shipped.
+Models are loaded 4-bit quantized (NF4, double quantization) so a 13B model fits on a
+single 16 GB GPU. Prompts are built with each model's own chat template, with a
+Vicuna-v1.5 ``USER:/ASSISTANT:`` fallback for checkpoints that ship without one.
 
-Requires (VM only): torch, transformers, accelerate, bitsandbytes.
+Requires: torch, transformers, accelerate, bitsandbytes (``pip install -e ".[generation]"``).
 """
 
 from __future__ import annotations
 
-import re
-
 import torch
 from transformers import (
-    AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, StoppingCriteria,
+    AutoModelForCausalLM,
+    AutoTokenizer,
+    BitsAndBytesConfig,
+    StoppingCriteria,
     StoppingCriteriaList,
 )
 
-from generation.quality import is_near_duplicate  # shared with the post-hoc scorer
+from generation.cleaning import has_meta_artifact, next_speaker_marker
 
 VICUNA = "lmsys/vicuna-13b-v1.5-16k"
 MISTRAL = "mistralai/Mistral-7B-Instruct-v0.2"
 
 
 def load_model(name: str, device: str | None = None):
-    """Load a 4-bit quantized causal LM + tokenizer onto the GPU.
+    """Load a 4-bit quantized causal LM and its tokenizer onto the GPU.
 
-    device=None -> device_map="auto" (default; on a single-GPU box this puts the whole
-    model on that GPU, on a multi-GPU box it splits layers to balance memory — correct for
-    the V100). device="cuda:N" pins the ENTIRE model to one GPU — used only as a multi-GPU
-    stopgap (e.g. C4 on the 2×M60 box: Vicuna on cuda:0, Mistral on cuda:1, so two models
-    don't collide). Placement is output-neutral: same weights, same decoding, same result.
+    ``device=None`` uses ``device_map="auto"`` (the whole model on a single GPU, or split
+    across several). ``device="cuda:N"`` pins the entire model to one GPU, which lets C4
+    put its two models on two smaller cards. Placement never changes the output.
     """
-    # Never generate on the CPU: with the GPU driver lost (it happened twice on the course
-    # VM), transformers silently loads the model into RAM and a single conversation takes
-    # hours. Fail fast instead. Output-neutral: it only refuses to start.
+    # Never generate on the CPU: if the GPU driver is lost, transformers silently loads the
+    # model into RAM and a single conversation takes hours. Fail fast instead.
     if not torch.cuda.is_available():
-        raise RuntimeError("No CUDA GPU visible (check nvidia-smi) — refusing to run on CPU.")
+        raise RuntimeError("No CUDA GPU visible (check nvidia-smi); refusing to run on CPU.")
     bnb = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_compute_dtype=torch.float16,
@@ -49,7 +48,7 @@ def load_model(name: str, device: str | None = None):
         name, quantization_config=bnb, device_map=device_map, use_safetensors=True
     )
     # Some chat checkpoints ship sampling fields with do_sample=False, which triggers
-    # transformers warnings. Keep model defaults neutral; pass sampling choices per call.
+    # transformers warnings. Keep model defaults neutral; sampling is passed per call.
     model.generation_config.do_sample = False
     model.generation_config.temperature = None
     model.generation_config.top_p = None
@@ -57,80 +56,99 @@ def load_model(name: str, device: str | None = None):
     return model, tok
 
 
-class SentenceEndStoppingCriteria(StoppingCriteria):
-    """Stop once a short generated turn reaches a sentence boundary."""
+class _NewTextCriteria(StoppingCriteria):
+    """Base class: decode only the newly generated tokens."""
 
-    def __init__(self, tok, prompt_len: int, min_new_tokens: int = 8):
+    def __init__(self, tok, prompt_len: int):
         self.tok = tok
         self.prompt_len = prompt_len
+
+    def new_text(self, input_ids) -> str:
+        return self.tok.decode(input_ids[0][self.prompt_len :], skip_special_tokens=True)
+
+
+class SentenceEndStoppingCriteria(_NewTextCriteria):
+    """Stop once a short generated turn reaches a sentence boundary (off in the study)."""
+
+    def __init__(self, tok, prompt_len: int, min_new_tokens: int = 8):
+        super().__init__(tok, prompt_len)
         self.min_new_tokens = min_new_tokens
 
     def __call__(self, input_ids, scores, **kwargs) -> bool:
-        new_ids = input_ids[0][self.prompt_len:]
-        if new_ids.shape[-1] < self.min_new_tokens:
+        if input_ids[0][self.prompt_len :].shape[-1] < self.min_new_tokens:
             return False
-        text = self.tok.decode(new_ids, skip_special_tokens=True).strip()
-        if not text:
-            return False
-        return text.endswith((".", "?", "!"))
+        text = self.new_text(input_ids).strip()
+        return bool(text) and text.endswith((".", "?", "!"))
 
 
-class SpeakerMarkerStoppingCriteria(StoppingCriteria):
+class SpeakerMarkerStoppingCriteria(_NewTextCriteria):
     """Stop as soon as the model starts writing the NEXT speaker's turn.
 
-    Output-neutral: clean_single_turn() cuts at exactly the same marker, so the kept turn is
-    identical — this only skips the tokens that would be thrown away. Without it, Vicuna
-    often writes a whole fake dialogue up to max_new_tokens (the 2026-07-24 dev sweep: most
-    GPU time spent on discarded text, and C3's 50%+ token-cap rate).
+    Output-neutral: ``clean_single_turn`` cuts at exactly the same marker, so the kept turn
+    is identical; this only skips tokens that would be thrown away. Without it, Vicuna
+    often writes a whole fake dialogue up to ``max_new_tokens``.
     """
 
     def __init__(self, tok, prompt_len: int, labels):
-        self.tok = tok
-        self.prompt_len = prompt_len
+        super().__init__(tok, prompt_len)
         self.labels = labels
 
     def __call__(self, input_ids, scores, **kwargs) -> bool:
-        text = self.tok.decode(input_ids[0][self.prompt_len:], skip_special_tokens=True)
-        return _next_marker(text, self.labels) is not None
+        return next_speaker_marker(self.new_text(input_ids), self.labels) is not None
+
+
+class MetaArtifactStoppingCriteria(_NewTextCriteria):
+    """Stop as soon as the model starts writing non-speech residue.
+
+    Output-neutral like :class:`SpeakerMarkerStoppingCriteria`: ``strip_meta_artifacts``
+    cuts the turn at the same match.
+    """
+
+    def __call__(self, input_ids, scores, **kwargs) -> bool:
+        return has_meta_artifact(self.new_text(input_ids))
 
 
 @torch.inference_mode()
-def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
-         do_sample=True, stop_at_sentence=False, min_new_tokens=2,
-         repetition_penalty=1.0, no_repeat_ngram_size=0,
-         stop_labels=None) -> tuple[str, dict]:
-    """messages: list of {role, content}. Returns (text, info).
+def chat(
+    model,
+    tok,
+    messages,
+    max_new_tokens=512,
+    temperature=0.8,
+    top_p=0.95,
+    do_sample=True,
+    stop_at_sentence=False,
+    min_new_tokens=2,
+    repetition_penalty=1.0,
+    no_repeat_ngram_size=0,
+    stop_labels=None,
+) -> tuple[str, dict]:
+    """Generate a reply to ``messages`` (a list of {role, content}). Returns (text, info).
 
-    info = {"n_new_tokens": int, "hit_token_cap": bool} — cap-hits are logged by the
-    generators because a bound cap truncates turn length, a measured DV.
-    stop_labels: speaker labels for turn-wise generation — stop once the next speaker's
-    marker appears (see SpeakerMarkerStoppingCriteria). None for C1 (whole conversation).
-    Defaults mirror generation/config.py (DV-safe: penalties off, no real token floor);
-    per-run values come from the config/CLI, not from here.
+    ``info = {"n_new_tokens": int, "hit_token_cap": bool}``. Cap hits are recorded by the
+    generators because a binding cap would truncate turn length, a measured quantity.
+    ``stop_labels``: speaker labels for turn-wise generation; generation stops once the
+    next speaker's marker appears. None for C1, which writes the whole conversation.
+    Defaults mirror ``generation/config.py``; per-run values come from the config/CLI.
     """
     try:
         encoded = tok.apply_chat_template(
             messages, add_generation_prompt=True, return_tensors="pt", return_dict=True
         )
     except Exception:
-        # Vicuna v1.5 may not ship a chat template — use its USER/ASSISTANT format.
+        # Vicuna v1.5 may not ship a chat template: use its USER/ASSISTANT format.
         encoded = tok(_vicuna_format(messages), return_tensors="pt")
 
     if isinstance(encoded, torch.Tensor):
         model_inputs = {"input_ids": encoded.to(model.device)}
     else:
-        model_inputs = {
-            k: v.to(model.device) if hasattr(v, "to") else v
-            for k, v in encoded.items()
-        }
+        model_inputs = {k: v.to(model.device) if hasattr(v, "to") else v for k, v in encoded.items()}
     input_len = model_inputs["input_ids"].shape[-1]
 
     gen_kwargs = {
         "max_new_tokens": max_new_tokens,
-        # min_new_tokens forbids the end-of-sequence token before this many tokens are
-        # generated — this is what actually prevents 1-word "fragment" turns. It used to be
-        # passed into this function but only fed the sentence-stop criteria, never generate(),
-        # so there was no real floor on turn length. Now it is enforced.
+        # Forbids the end-of-sequence token before this many tokens. The study uses 2,
+        # which only blocks empty replies: a real floor would make backchannels impossible.
         "min_new_tokens": min_new_tokens,
         "do_sample": do_sample,
         "pad_token_id": tok.eos_token_id,
@@ -160,191 +178,6 @@ def chat(model, tok, messages, max_new_tokens=512, temperature=0.8, top_p=0.95,
     return tok.decode(new_tokens, skip_special_tokens=True).strip(), info
 
 
-def generate_turn(model, tok, messages, history, labels, *,
-                  max_new_tokens, temperature, top_p, min_new_tokens,
-                  stop_at_sentence, repetition_penalty, no_repeat_ngram_size,
-                  dup_min_words=8, dup_jaccard=0.8, resample_temp_bump=0.15,
-                  counters=None) -> str:
-    """One clean conversational turn, with the procedural quality guards.
-
-    Shared by the C2/C3/C4 turn-by-turn generators (single place, per the no-copy-paste
-    rule). Pipeline: generate → truncate to one turn → strip chatbot residue → then
-      - empty result: ONE fresh retry (models may emit instant EOS now that the token
-        floor is gone); still empty = the model left the conversation, return "".
-      - near-duplicate of an earlier turn (loop): ONE resample at temperature+bump —
-        the procedural replacement for logit-level repetition penalties.
-    `counters` (a dict) accumulates: multi_turn_emissions, hit_token_cap, empty_retries,
-    dup_resamples, dup_kept — all recorded in the output JSON for the degeneration score.
-    """
-    counters = counters if counters is not None else {}
-
-    def _once(temp: float) -> str:
-        raw, info = chat(
-            model, tok, messages,
-            max_new_tokens=max_new_tokens, temperature=temp, top_p=top_p,
-            min_new_tokens=min_new_tokens, stop_at_sentence=stop_at_sentence,
-            repetition_penalty=repetition_penalty,
-            no_repeat_ngram_size=no_repeat_ngram_size, stop_labels=labels,
-        )
-        counters["hit_token_cap"] = counters.get("hit_token_cap", 0) + int(info["hit_token_cap"])
-        turn, ran_past = clean_single_turn(raw, labels)
-        counters["multi_turn_emissions"] = counters.get("multi_turn_emissions", 0) + int(ran_past)
-        return strip_meta_artifacts(turn)
-
-    turn = _once(temperature)
-    if not turn:
-        counters["empty_retries"] = counters.get("empty_retries", 0) + 1
-        turn = _once(temperature)
-        if not turn:
-            return ""
-    if is_near_duplicate(turn, history, dup_min_words, dup_jaccard):
-        counters["dup_resamples"] = counters.get("dup_resamples", 0) + 1
-        retry = _once(temperature + resample_temp_bump)
-        if retry and not is_near_duplicate(retry, history, dup_min_words, dup_jaccard):
-            turn = retry
-        else:
-            counters["dup_kept"] = counters.get("dup_kept", 0) + 1
-            turn = retry or turn
-    return turn
-
-
-def clean_single_turn(text: str, labels=("ParticipantA", "ParticipantB")) -> tuple[str, bool]:
-    """Return the first utterance and whether the model ran on past a single turn.
-
-    Truncates at the first speaker/role marker. Besides the participant labels, this also
-    catches chat-role residue the agent path leaks when Vicuna rambles into a whole fake
-    dialogue (line-initial USER:, ASSISTANT:, and degraded 4-bit variants ASSISTATIVE: /
-    ASSISTY:, plus HUMAN:/AI:/SYSTEM:/BOT:). A True flag here means the model did NOT keep
-    to one turn — which we count as a multi-turn emission.
-    """
-    t = _strip_lead_labels(text.strip())
-    cut = _marker_in(t, labels)
-    ran_past = cut is not None
-    if ran_past:
-        t = t[:cut]
-    return t.strip().strip('"'), ran_past
-
-
-def _next_marker(text: str, labels) -> int | None:
-    """Position of the next-speaker marker in raw model output (None = still one turn)."""
-    return _marker_in(_strip_lead_labels(text.strip()), labels)
-
-
-def _marker_in(t: str, labels) -> int | None:
-    label_alt = "|".join(re.escape(label) for label in labels)
-    # Tolerant participant label: catches degraded 4-bit variants like "ParticipantsA:"
-    # (stray 's') and "Participant A:" (space) that the exact label misses. The C2
-    # single-model path — where one model writes both speakers — leaks these often.
-    fuzzy_label = r"Participants?\s*[AB]"
-    marker_re = re.compile(
-        rf"(?:\b(?:{label_alt}|{fuzzy_label})\s*:)"
-        rf"|(?:(?:^|\n)\s*(?:USER|ASSIST\w*|HUMAN|AI|SYSTEM|BOT)\s*:)",
-        re.I,
-    )
-    m = marker_re.search(t)
-    return m.start() if m else None
-
-
-def _strip_lead_labels(t: str) -> str:
-    # Leading label — aggressive. The single-model C2 path (one model writes BOTH speakers off a
-    # labelled transcript) emits a wide variety of degraded/misspelled speaker labels:
-    # "ParticipentB:", "ParticipB:", "Participation:", "ParticipANT_A:", the vocative
-    # "ParticipantB," (comma), even doubled "ParticipParticipant B:". Peel any participant/role
-    # prefix ending in a colon OR comma from the very START (repeatably). A trailing colon/comma
-    # is required, so legitimate words ("Part of...", "...every part: the cost") are never touched.
-    lead_label = re.compile(
-        r"^\s*(?:particip\w*|part(?:ner)?|user|assist\w*|human|ai|system|bot)"
-        r"[\s_]*[ab]?\s*[:,]\s*",
-        re.I,
-    )
-    prev = None
-    while prev != t:
-        prev = t
-        t = lead_label.sub("", t, count=1)
-    return t
-
-
-# Farewell / sign-off cues used to end a conversation naturally (see generate_c3.py loop).
-_CLOSING_RE = re.compile(
-    r"\b(?:good-?bye|bye-?bye|bye|take care|farewell|see you(?: around| soon| later| next time)?|"
-    r"talk (?:to you )?(?:soon|later)|catch you later|until next time|happy chatting|"
-    r"(?:nice|great|lovely|a pleasure) (?:talking|chatting|speaking)(?: (?:to|with) you)?|"
-    r"enjoy (?:the rest of )?your day|"
-    r"have a (?:great|good|nice|wonderful|lovely|fantastic) (?:day|one|time|evening|weekend))\b",
-    re.I,
-)
-
-# Assistant / template / end-of-session residue the model emits once it drops out of the
-# conversation (observed in C3 tails: "[End of Response]", "*Session closed.*", code fences,
-# "Here's a summary", stray role tokens, and garbage like "** | **" / "-> |" / "V V V").
-_META_RE = re.compile(
-    r"(?:"
-    r"\[(?:end of|turn|tur|t\b|this|do you|assist|closed|/)"
-    r"|\*{1,}\s*(?:conversation|chat|session|closed|ended|assistance|connection|end of)"
-    r"|here'?s (?:the |a )?(?:quick )?(?:summary|recap)"
-    r"|this (?:concludes|conversation (?:covered|concludes|ends))"
-    r"|```"
-    r"|(?:^|\n)\s*(?:USER|ASSISTANT|ASSISTMENT|SYSTEM|BOT)\b"
-    r"|\*\*\s*\||\|\s*->|->\s*\||\bV\s+V\s+V\b"
-    r"|(?:^|\n)\s*---\s*(?:$|\n)"
-    # Parenthesized stage directions / prompt echoes and fake headings (2026-09-30 C3/C4
-    # test: "(Your turn count is 68)", "(End of conversation.)", "## Example response:").
-    # Only these meta openers — ordinary parentheses in speech ("(IoT)", "401(k)",
-    # "(writing, drawing, composing music)") are never matched.
-    r"|\((?:your turn|end of (?:the )?conversation|the conversation (?:can|has|ends|is|so far)|"
-    r"note:|i'll (?:now )?(?:wait|end)|here'?s a suggested|this is the final turn|"
-    r"it'?s important to remember that these conversations)"
-    r"|(?:^|\n)\s*#{1,6}\s"
-    r"|\bexample response\s*:"
-    # Prompt echo (2026-10-02 C4 retest): fake "**Prompt:** … **Reply:** …" pairs that copy
-    # our own instructions back ("Act like a 42-year-old…", "…turns of talk; do not end it
-    # too early"). A leading digit is included so a turn that STARTS mid-echo ("0 turns of
-    # talk…") is cut to empty rather than to a stray "0".
-    r"|\*\*\s*(?:prompt|reply|response|answer|user|assistant|system)\s*:?\s*\*\*"
-    r"|\bact like an? \d+-year-old"
-    r"|\d*\s*\bturns of talk\b"
-    r"|\bdo not end it too early"
-    r"|\bthe topic of the conversation is\s*:"
-    r"|\bthe conversation will have about"
-    r")",
-    re.I | re.M,
-)
-
-
-class MetaArtifactStoppingCriteria(StoppingCriteria):
-    """Stop as soon as the model starts writing non-speech residue (_META_RE).
-
-    Output-neutral like SpeakerMarkerStoppingCriteria: strip_meta_artifacts() cuts the turn
-    at the same match, so this only skips tokens that would be discarded. Searched after
-    peeling leading labels, exactly as the turn cleaner sees the text.
-    """
-
-    def __init__(self, tok, prompt_len: int):
-        self.tok = tok
-        self.prompt_len = prompt_len
-
-    def __call__(self, input_ids, scores, **kwargs) -> bool:
-        text = self.tok.decode(input_ids[0][self.prompt_len:], skip_special_tokens=True)
-        return _META_RE.search(_strip_lead_labels(text.strip())) is not None
-
-
-def strip_meta_artifacts(text: str) -> str:
-    """Cut a turn at the first assistant/template/end-of-conversation artifact.
-
-    Keeps the clean leading part so chatbot residue never enters the transcript; if the whole
-    turn was such residue this returns "" (the caller then ends the conversation).
-    """
-    m = _META_RE.search(text)
-    if m:
-        text = text[: m.start()]
-    return text.strip().strip('"').strip()
-
-
-def looks_like_closing(text: str) -> bool:
-    """True if a turn contains a farewell / sign-off (used to stop the conversation)."""
-    return bool(_CLOSING_RE.search(text))
-
-
 def _vicuna_format(messages) -> str:
     system = next((m["content"] for m in messages if m["role"] == "system"), "")
     parts = [system] if system else []
@@ -355,4 +188,3 @@ def _vicuna_format(messages) -> str:
             parts.append(f"ASSISTANT: {m['content']}")
     parts.append("ASSISTANT:")
     return "\n".join(parts)
-
