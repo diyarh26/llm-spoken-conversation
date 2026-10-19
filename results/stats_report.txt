@@ -1,5 +1,5 @@
 ========================================================================
-PHASE 2 STATISTICS
+STATISTICS REPORT
 generated convs: 600   Switchboard convs: 50   prompt levels: ['P0', 'P1', 'P2']
 ========================================================================
 
@@ -68,9 +68,9 @@ generated convs: 600   Switchboard convs: 50   prompt levels: ['P0', 'P1', 'P2']
   C4-P2: SKIPPED (few-shot excerpt -> circular for lexical markers)
 
 [3] ALIGNMENT (cosine_semanticL)
-  P0: SB=0.621  C1=0.619  C2=0.884  C3=0.765  C4=0.857
-  P1: SB=0.621  C1=0.621  C2=0.523  C3=0.749  C4=0.865
-  P2: SB=0.621  C1=0.639  C2=0.515  C3=0.775  C4=0.839
+  P0: SB=0.560  C1=0.611  C2=0.880  C3=0.751  C4=0.852
+  P1: SB=0.560  C1=0.614  C2=0.516  C3=0.740  C4=0.861
+  P2: SB=0.560  C1=0.632  C2=0.510  C3=0.765  C4=0.833
 
 [4] INDEPENDENCE GRADIENT  C1->C2->C3->C4  (words/turn, per prompt level)
     rho<0: w/turn falls along the gradient; dist = abs(mean - SB mean)
