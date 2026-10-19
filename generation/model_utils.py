@@ -142,7 +142,9 @@ def chat(
     if isinstance(encoded, torch.Tensor):
         model_inputs = {"input_ids": encoded.to(model.device)}
     else:
-        model_inputs = {k: v.to(model.device) if hasattr(v, "to") else v for k, v in encoded.items()}
+        model_inputs = {
+            k: v.to(model.device) if hasattr(v, "to") else v for k, v in encoded.items()
+        }
     input_len = model_inputs["input_ids"].shape[-1]
 
     gen_kwargs = {

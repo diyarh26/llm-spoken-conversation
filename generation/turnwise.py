@@ -24,7 +24,9 @@ from generation.config import DUP_JACCARD, DUP_MIN_WORDS, RESAMPLE_TEMP_BUMP
 from generation.quality import is_near_duplicate
 
 Turn = tuple[str, str]  # (speaker label, utterance)
-ChatFn = Callable[[float], tuple[str, dict]]  # temperature -> (raw text, {"hit_token_cap": bool, ...})
+ChatFn = Callable[
+    [float], tuple[str, dict]
+]  # temperature -> (raw text, {"hit_token_cap": bool, ...})
 Speaker = Callable[[str, list[Turn]], str]  # (speaker label, history) -> next turn ("" = left)
 
 # Every turn-wise conversation opens with a scripted mutual greeting, as in the original

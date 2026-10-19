@@ -65,9 +65,7 @@ class NormalizationTests(unittest.TestCase):
         self.assertEqual(dialogtag_to_fine("Declarative Yes-No-Question"), "qy")
         self.assertEqual(dialogtag_to_fine("Declarative Wh-Question"), "qw")
         self.assertEqual(dialogtag_to_fine("Repeat-phrase"), "b")
-        self.assertEqual(
-            dialogtag_to_fine("backchannel in question form"), "bh"
-        )
+        self.assertEqual(dialogtag_to_fine("backchannel in question form"), "bh")
 
     def test_shared_inventory_is_exhaustive(self) -> None:
         self.assertEqual(len(FINE_LABELS), 39)
@@ -82,9 +80,7 @@ class DistanceTests(unittest.TestCase):
         right = np.array([0.0, 1.0])
         self.assertEqual(js_divergence(left, left), 0.0)
         self.assertAlmostEqual(js_divergence(left, right), 1.0)
-        self.assertAlmostEqual(
-            js_divergence(left, right), js_divergence(right, left)
-        )
+        self.assertAlmostEqual(js_divergence(left, right), js_divergence(right, left))
 
     def test_transition_missing_row_is_maximal(self) -> None:
         left = np.array([[1.0, 0.0], [0.0, 0.0]])
@@ -111,24 +107,37 @@ class SeedTurnTests(unittest.TestCase):
 
 class ArtifactCleaningTests(unittest.TestCase):
     def test_meta_notes_are_stripped_and_speech_kept(self):
-        rec = {"turns": [
-            ["A", "I like fishing. (This is turn 14)"],
-            ["B", "Me too. What about you?\n\n(End of turn)\n\n[The conversation cannot go past 40 turns.]"],
-            ["A", "(Conversation ends here)"],
-            ["B", "I put it in my 401(k) and talked (briefly) about it."],
-        ]}
-        self.assertEqual(conversation_turns(rec), [
-            ("A", "I like fishing."),
-            ("B", "Me too. What about you?"),
-            ("B", "I put it in my 401(k) and talked (briefly) about it."),
-        ])
+        rec = {
+            "turns": [
+                ["A", "I like fishing. (This is turn 14)"],
+                [
+                    "B",
+                    "Me too. What about you?\n\n(End of turn)\n\n[The conversation cannot go past 40 turns.]",
+                ],
+                ["A", "(Conversation ends here)"],
+                ["B", "I put it in my 401(k) and talked (briefly) about it."],
+            ]
+        }
+        self.assertEqual(
+            conversation_turns(rec),
+            [
+                ("A", "I like fishing."),
+                ("B", "Me too. What about you?"),
+                ("B", "I put it in my 401(k) and talked (briefly) about it."),
+            ],
+        )
 
     def test_language_drift_is_cut_and_flagged(self):
-        rec = {"turns": [["A", "Do you garden?\n\n번역결과 \n안녕"],
-                         ["B", "안녕하세요"],
-                         ["A", "Café au lait, Bren� Brown."]]}
-        self.assertEqual(conversation_turns(rec),
-                         [("A", "Do you garden?"), ("A", "Café au lait, Bren Brown.")])
+        rec = {
+            "turns": [
+                ["A", "Do you garden?\n\n번역결과 \n안녕"],
+                ["B", "안녕하세요"],
+                ["A", "Café au lait, Bren� Brown."],
+            ]
+        }
+        self.assertEqual(
+            conversation_turns(rec), [("A", "Do you garden?"), ("A", "Café au lait, Bren Brown.")]
+        )
         self.assertTrue(has_language_drift(rec))
         self.assertFalse(has_language_drift({"turns": [["A", "Café, naïve — 50€ ™"]]}))
 
@@ -136,22 +145,31 @@ class ArtifactCleaningTests(unittest.TestCase):
 class LoopFilterTests(unittest.TestCase):
     def test_echo_repeats_dropped_backchannels_kept(self) -> None:
         long_turn = "yes I have test driven the Honda Accord and the Toyota Camry myself"
-        turns = [("A", long_turn), ("B", "Uh-huh."), ("A", long_turn + " too"),
-                 ("B", "Uh-huh."), ("A", "What about the price of those two cars though?")]
+        turns = [
+            ("A", long_turn),
+            ("B", "Uh-huh."),
+            ("A", long_turn + " too"),
+            ("B", "Uh-huh."),
+            ("A", "What about the price of those two cars though?"),
+        ]
         kept = drop_loop_turns(turns)
-        self.assertEqual([t for _, t in kept],
-                         [long_turn, "Uh-huh.", "Uh-huh.",
-                          "What about the price of those two cars though?"])
+        self.assertEqual(
+            [t for _, t in kept],
+            [long_turn, "Uh-huh.", "Uh-huh.", "What about the price of those two cars though?"],
+        )
 
 
 class GranularityTests(unittest.TestCase):
     def test_sentence_units_preserve_short_reactions(self) -> None:
-        self.assertEqual(sentence_units("Yeah. I see what you mean! Right?"),
-                         ["Yeah.", "I see what you mean!", "Right?"])
+        self.assertEqual(
+            sentence_units("Yeah. I see what you mean! Right?"),
+            ["Yeah.", "I see what you mean!", "Right?"],
+        )
 
     def test_sentence_units_do_not_split_abbreviations_without_terminal_space(self) -> None:
-        self.assertEqual(sentence_units("I met Dr. Smith yesterday."),
-                         ["I met Dr.", "Smith yesterday."])
+        self.assertEqual(
+            sentence_units("I met Dr. Smith yesterday."), ["I met Dr.", "Smith yesterday."]
+        )
 
 
 if __name__ == "__main__":

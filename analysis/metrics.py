@@ -25,7 +25,7 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from analysis.swda import parse_conversation, iter_conversation_files  # noqa: E402
+from analysis.swda import iter_conversation_files, parse_conversation
 
 MARKER_PATTERNS = {
     "oh": re.compile(r"\boh\b", re.I),
@@ -35,8 +35,14 @@ MARKER_PATTERNS = {
 
 # Turn-initial agreement / sycophancy tokens (seed list; expand from Supp. File 2).
 SYCOPHANCY = [
-    "absolutely", "definitely", "exactly", "for sure", "great point",
-    "i couldn't agree more", "i completely agree", "totally",
+    "absolutely",
+    "definitely",
+    "exactly",
+    "for sure",
+    "great point",
+    "i couldn't agree more",
+    "i completely agree",
+    "totally",
 ]
 SYCOPHANCY_PATTERNS = [re.compile(rf"\b{re.escape(t)}\b", re.I) for t in SYCOPHANCY]
 
@@ -61,8 +67,7 @@ def sycophancy_rate(turns: list[tuple[str, str]]) -> float:
     if not turns:
         return 0.0
     hits = sum(
-        1 for _, txt in turns
-        if any(p.match(txt.lower().lstrip()) for p in SYCOPHANCY_PATTERNS)
+        1 for _, txt in turns if any(p.match(txt.lower().lstrip()) for p in SYCOPHANCY_PATTERNS)
     )
     return hits / len(turns)
 
@@ -74,7 +79,7 @@ def _validate(n: int) -> None:
         if len(files) >= n:
             break
     if not files:
-        print(f"No conversation files found. Did you extract swda.zip?")
+        print("No conversation files found. Did you extract swda.zip?")
         return
 
     rates = {"oh": [], "okay": [], "uh-huh": []}
@@ -91,7 +96,9 @@ def _validate(n: int) -> None:
     print(f"mean words/turn      : {statistics.mean(wpt):.2f}   (paper SB ~14)")
     print("marker rates per 100 words (mean) vs paper SB Table 5:")
     print(f"  oh     : {statistics.mean(rates['oh']):.2f}   (paper 0.57)")
-    print(f"  okay   : {statistics.mean(rates['okay']):.2f}   (paper 0.16; higher here = incl. openings/closings)")
+    print(
+        f"  okay   : {statistics.mean(rates['okay']):.2f}   (paper 0.16; higher here = incl. openings/closings)"
+    )
     print(f"  uh-huh : {statistics.mean(rates['uh-huh']):.2f}   (paper 1.03)")
     print(f"sycophancy turn-openers: {statistics.mean(syco):.3f}   (SB expected ~0)")
 

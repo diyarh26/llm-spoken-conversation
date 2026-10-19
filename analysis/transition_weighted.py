@@ -8,6 +8,7 @@ reflects what the conversations mostly do. Reads the CSVs dialogue_acts.py alrea
 
     python analysis/transition_weighted.py results/dialogue_acts
 """
+
 from __future__ import annotations
 
 import csv
@@ -22,9 +23,10 @@ def _jsd(p: list[float], q: list[float]) -> float:
         return 0.0
     if not sp or not sq:
         return 1.0
-    p = [x / sp for x in p]; q = [x / sq for x in q]
-    m = [(a + b) / 2 for a, b in zip(p, q)]
-    kl = lambda a, b: sum(x * math.log2(x / y) for x, y in zip(a, b) if x > 0)
+    p = [x / sp for x in p]
+    q = [x / sq for x in q]
+    m = [(a + b) / 2 for a, b in zip(p, q, strict=True)]
+    kl = lambda a, b: sum(x * math.log2(x / y) for x, y in zip(a, b, strict=True) if x > 0)
     return 0.5 * kl(p, m) + 0.5 * kl(q, m)
 
 
@@ -38,7 +40,7 @@ def _matrix(path: pathlib.Path) -> dict[str, list[float]]:
 def main(out_dir: pathlib.Path) -> None:
     with (out_dir / "da_distribution_coarse_by_condition.csv").open(encoding="utf-8") as f:
         dist = {r["condition"]: r for r in csv.DictReader(f)}
-    ref = _matrix(out_dir / "da_transition_coarse_SB_tagger.csv")   # same tagger as the LLMs
+    ref = _matrix(out_dir / "da_transition_coarse_SB_tagger.csv")  # same tagger as the LLMs
     ref_share = dist["SB-tagger"]
     lines = ["condition,weighted_transition_jsd,unweighted_transition_jsd"]
     for cond in sorted(c for c in dist if not c.startswith("SB")):
@@ -50,7 +52,9 @@ def main(out_dir: pathlib.Path) -> None:
             if d is None:
                 continue
             w = (float(dist[cond][act]) + float(ref_share[act])) / 2
-            num += w * d; den += w; unweighted.append(d)
+            num += w * d
+            den += w
+            unweighted.append(d)
         lines.append(f"{cond},{num / den:.4f},{sum(unweighted) / len(unweighted):.4f}")
     (out_dir / "da_transition_weighted.csv").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))

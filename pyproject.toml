@@ -1,0 +1,117 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-spoken-conversation"
+version = "1.0.0"
+description = "Do LLMs talk like humans on the phone? 600 simulated telephone calls vs. the Switchboard corpus: how generation architecture shapes conversational structure."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Amal Marjieh" },
+    { name = "Sham Alem" },
+    { name = "Aleen Nijim" },
+    { name = "Diyar Husayyan" },
+]
+keywords = [
+    "large-language-models",
+    "dialogue",
+    "conversation-analysis",
+    "dialogue-acts",
+    "switchboard",
+    "multi-agent",
+    "computational-linguistics",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = []
+
+[project.optional-dependencies]
+# Metrics, statistics and figures. Runs on a laptop (no GPU).
+analysis = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "statsmodels>=0.14",
+    "matplotlib>=3.8",
+    "openpyxl>=3.1",
+]
+# Conversation generation. Needs a CUDA GPU; install torch for your CUDA version first.
+# The exact versions used for the published run are in environment/generation-lock.txt.
+generation = [
+    "torch>=2.1",
+    "transformers>=4.40",
+    "accelerate>=0.30",
+    "bitsandbytes>=0.43",
+    "sentencepiece",
+    "protobuf",
+    "tiktoken",
+]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.urls]
+Repository = "https://github.com/diyarh26/llm-spoken-conversation"
+"Conversation explorer" = "https://diyarh26.github.io/llm-spoken-conversation/"
+"Original study" = "https://doi.org/10.1111/cogs.70106"
+
+[tool.setuptools]
+packages = ["analysis", "generation", "prompts"]
+
+[tool.setuptools.package-data]
+generation = ["*.json"]
+
+# --- lint & format -------------------------------------------------------------------
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["_private", "data"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # import sorting
+    "UP",   # pyupgrade
+    "B",    # bugbear
+    "C4",   # comprehensions
+    "SIM",  # simplifications
+    "RUF",  # ruff-specific
+]
+ignore = [
+    "E501",    # long lines are left to the formatter (long regexes and strings stay intact)
+    "E731",    # small lambdas are clearer than defs in a few call sites
+    "RUF001",  # ambiguous unicode in strings: the prompts deliberately use typographic dashes
+    "RUF002",
+    "RUF003",
+    "SIM108",  # ternaries are not always clearer
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Runnable scripts put the repository root on sys.path before importing project modules.
+"generation/*.py" = ["E402"]
+"analysis/*.py" = ["E402"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["analysis", "generation", "prompts"]
+
+# --- tests ---------------------------------------------------------------------------
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers"
+markers = [
+    "corpus: needs the licensed Switchboard (SwDA) corpus under data/switchboard/ (skipped otherwise)",
+]

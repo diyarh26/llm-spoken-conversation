@@ -14,8 +14,9 @@ def token_jaccard(a: str, b: str) -> float:
     return len(wa & wb) / len(union) if union else 0.0
 
 
-def is_near_duplicate(turn: str, history: list[tuple[str, str]],
-                      min_words: int = 8, threshold: float = 0.8) -> bool:
+def is_near_duplicate(
+    turn: str, history: list[tuple[str, str]], min_words: int = 8, threshold: float = 0.8
+) -> bool:
     """Is `turn` a near-verbatim repeat of an earlier turn (a degeneration loop)?
 
     Token-set Jaccard >= threshold against any prior turn of comparable length. Turns

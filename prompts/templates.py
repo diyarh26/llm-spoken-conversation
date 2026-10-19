@@ -39,13 +39,13 @@ from dataclasses import dataclass
 
 @dataclass
 class Persona:
-    label: str        # "ParticipantA" / "ParticipantB"
-    gender: str       # "man" / "woman"
+    label: str  # "ParticipantA" / "ParticipantB"
+    gender: str  # "man" / "woman"
     age: int
-    education: str    # e.g. "a college degree"
+    education: str  # e.g. "a college degree"
     # Seeded persona-card fields (P1/P2 only; P0 stays the paper's bare demographics).
     occupation: str | None = None
-    stance: str | None = None      # index into _STANCES at assignment time; stored as text
+    stance: str | None = None  # index into _STANCES at assignment time; stored as text
     anchor: str | None = None
 
     def describe(self) -> str:
@@ -55,15 +55,18 @@ class Persona:
         """P1/P2 agent view: 'You work as ... You have mixed feelings ...'."""
         if not self.occupation:
             return ""
-        return (f"You work as {self.occupation}. {_STANCES[self.stance][0]} "
-                f"{_ANCHORS[self.anchor][0]}")
+        return (
+            f"You work as {self.occupation}. {_STANCES[self.stance][0]} {_ANCHORS[self.anchor][0]}"
+        )
 
     def card_third_person(self) -> str:
         """P1/P2 writer view (C1/C2): '... works as ..., has mixed feelings ...'."""
         if not self.occupation:
             return ""
-        return (f"{self.label} works as {self.occupation}, "
-                f"{_STANCES[self.stance][1]}, and {_ANCHORS[self.anchor][1]}.")
+        return (
+            f"{self.label} works as {self.occupation}, "
+            f"{_STANCES[self.stance][1]}, and {_ANCHORS[self.anchor][1]}."
+        )
 
 
 # Persona-card pools, (first-person, third-person) pairs. Attitude and content only —
@@ -71,27 +74,54 @@ class Persona:
 # is ever prompted. Disagreement etc. can only EMERGE from stance combinations, which
 # keeps the DA metric non-circular.
 _OCCUPATIONS = [
-    "a school bus driver", "a nurse", "an electrician", "a grocery store manager",
-    "a high-school teacher", "an accountant", "a car mechanic", "a restaurant server",
-    "a farmer", "an office receptionist", "a carpenter", "a pharmacist",
-    "a real estate agent", "a factory supervisor", "a librarian", "a plumber",
-    "a bank teller", "a truck driver", "a dental hygienist", "an insurance adjuster",
+    "a school bus driver",
+    "a nurse",
+    "an electrician",
+    "a grocery store manager",
+    "a high-school teacher",
+    "an accountant",
+    "a car mechanic",
+    "a restaurant server",
+    "a farmer",
+    "an office receptionist",
+    "a carpenter",
+    "a pharmacist",
+    "a real estate agent",
+    "a factory supervisor",
+    "a librarian",
+    "a plumber",
+    "a bank teller",
+    "a truck driver",
+    "a dental hygienist",
+    "an insurance adjuster",
 ]
 _STANCES = [
-    ("You find this topic genuinely interesting and have plenty of opinions about it.",
-     "finds the topic genuinely interesting with plenty of opinions about it"),
-    ("You have mixed feelings about this topic — parts of it sit fine with you, parts don't.",
-     "has mixed feelings about the topic — parts of it sit fine, parts don't"),
-    ("Privately, you are a bit skeptical about this topic.",
-     "is privately a bit skeptical about the topic"),
+    (
+        "You find this topic genuinely interesting and have plenty of opinions about it.",
+        "finds the topic genuinely interesting with plenty of opinions about it",
+    ),
+    (
+        "You have mixed feelings about this topic — parts of it sit fine with you, parts don't.",
+        "has mixed feelings about the topic — parts of it sit fine, parts don't",
+    ),
+    (
+        "Privately, you are a bit skeptical about this topic.",
+        "is privately a bit skeptical about the topic",
+    ),
 ]
 _ANCHORS = [
-    ("You have a personal experience related to it that you sometimes tell people about.",
-     "has a personal experience related to it that they sometimes tell people about"),
-    ("Someone close to you has dealt with it, which shaped how you see it.",
-     "knows someone close who has dealt with it, which shaped their view"),
-    ("You made up your mind about it years ago, though you would struggle to say exactly why.",
-     "made up their mind about it years ago without quite being able to say why"),
+    (
+        "You have a personal experience related to it that you sometimes tell people about.",
+        "has a personal experience related to it that they sometimes tell people about",
+    ),
+    (
+        "Someone close to you has dealt with it, which shaped how you see it.",
+        "knows someone close who has dealt with it, which shaped their view",
+    ),
+    (
+        "You made up your mind about it years ago, though you would struggle to say exactly why.",
+        "made up their mind about it years ago without quite being able to say why",
+    ),
 ]
 
 
@@ -116,6 +146,7 @@ def render_transcript(history: list[tuple[str, str]]) -> str:
 
 # --- shared prompt pieces ------------------------------------------------------------
 
+
 def _length_clause() -> str:
     return "The conversation will have about 30 turns of talk; do not end it too early."
 
@@ -139,8 +170,8 @@ def _p3_style() -> str:
     # "shown/instructed", never as emergent behavior.
     return (
         "Talk the way people actually do out loud on the phone — casual and uneven: "
-        "sometimes a sentence or two, sometimes just a word or two, like \"uh-huh\", "
-        "\"yeah\", \"right\" or \"oh, really?\". Let the conversation end naturally when it "
+        'sometimes a sentence or two, sometimes just a word or two, like "uh-huh", '
+        '"yeah", "right" or "oh, really?". Let the conversation end naturally when it '
         "feels finished; don't pad it out."
     )
 
@@ -157,8 +188,10 @@ def _turn_status(history: list, max_turns: int | None) -> str:
     condition; closing-act results must be reported with that caveat."""
     if not max_turns:
         return ""
-    return (f"\n(The conversation so far has {len(history)} turns of talk; "
-            f"it cannot go past {max_turns} turns, so it has to be over by then.)")
+    return (
+        f"\n(The conversation so far has {len(history)} turns of talk; "
+        f"it cannot go past {max_turns} turns, so it has to be over by then.)"
+    )
 
 
 def _peer_guard() -> str:
@@ -215,6 +248,7 @@ def _fewshot_block(level: str, conversation_no: int | None = None, k: int = 2) -
         return ""
     try:
         from analysis.swda import fewshot_examples
+
         picks = fewshot_examples(conversation_no, k=k)
     except Exception:
         picks = []
@@ -235,13 +269,14 @@ def _fewshot_block(level: str, conversation_no: int | None = None, k: int = 2) -
 # behavior by their gold SwDA labels (6–7 backchannel-type turns of 12 each, incl. a
 # backchannel question, a turn continued through the partner's backchannel, and
 # unfinished turns). Chosen 2026-09-30 by label counts over the 10-excerpt pool.
-P3_EXAMPLE_IDS = (3352, 2909)   # FISHING, IMMIGRATION
+P3_EXAMPLE_IDS = (3352, 2909)  # FISHING, IMMIGRATION
 
 
 def _p3_fewshot_block() -> str:
     """P3: the fixed excerpts, each turn followed by its gold dialogue act in plain words."""
     try:
         from analysis.swda import load_fewshot_pool
+
         by_id = {e["conversation_no"]: e for e in load_fewshot_pool()}
         picks = [by_id[c] for c in P3_EXAMPLE_IDS if c in by_id]
     except Exception:
@@ -264,8 +299,15 @@ def _p3_fewshot_block() -> str:
 
 # --- C1: all at once -----------------------------------------------------------------
 
-def build_c1(prompt_level: str, a: Persona, b: Persona, topic: str,
-             sb_prompt: str | None = None, conversation_no: int | None = None) -> list[dict]:
+
+def build_c1(
+    prompt_level: str,
+    a: Persona,
+    b: Persona,
+    topic: str,
+    sb_prompt: str | None = None,
+    conversation_no: int | None = None,
+) -> list[dict]:
     if prompt_level == "P0":
         prompt = (
             "Write the log of a telephone conversation between two people who do not know each "
@@ -290,10 +332,18 @@ def build_c1(prompt_level: str, a: Persona, b: Persona, topic: str,
 
 # --- C2: turn-by-turn, single model sees the whole script (replicates GPT4-1) --------
 
-def build_c2(prompt_level: str, a: Persona, b: Persona, topic: str,
-             sb_prompt: str | None,
-             history: list[tuple[str, str]], next_speaker: str,
-             max_turns: int | None = None, conversation_no: int | None = None) -> list[dict]:
+
+def build_c2(
+    prompt_level: str,
+    a: Persona,
+    b: Persona,
+    topic: str,
+    sb_prompt: str | None,
+    history: list[tuple[str, str]],
+    next_speaker: str,
+    max_turns: int | None = None,
+    conversation_no: int | None = None,
+) -> list[dict]:
     transcript = render_transcript(history) if history else f"{a.label}: Hello!\n{b.label}: Hello!"
     me = {a.label: a, b.label: b}[next_speaker]
     if prompt_level == "P0":
@@ -321,10 +371,17 @@ def build_c2(prompt_level: str, a: Persona, b: Persona, topic: str,
 
 # --- C3 / C4: independent first-person agents ----------------------------------------
 
-def build_agent(prompt_level: str, me: Persona, partner: Persona, topic: str,
-                sb_prompt: str | None,
-                history: list[tuple[str, str]],
-                max_turns: int | None = None, conversation_no: int | None = None) -> list[dict]:
+
+def build_agent(
+    prompt_level: str,
+    me: Persona,
+    partner: Persona,
+    topic: str,
+    sb_prompt: str | None,
+    history: list[tuple[str, str]],
+    max_turns: int | None = None,
+    conversation_no: int | None = None,
+) -> list[dict]:
     """Build the message list from `me`'s point of view (used for both C3 and C4).
 
     The partner is deliberately NOT described beyond "a stranger" (P1/P2): the agents are
@@ -349,7 +406,9 @@ def build_agent(prompt_level: str, me: Persona, partner: Persona, topic: str,
         )
     messages = [{"role": "system", "content": system}]
     if not history:
-        messages.append({"role": "user", "content": "(The phone connects — your partner is on the line.)"})
+        messages.append(
+            {"role": "user", "content": "(The phone connects — your partner is on the line.)"}
+        )
         return messages
     if history[0][0] == me.label:
         messages.append({"role": "user", "content": "(The call is already underway.)"})
@@ -357,7 +416,9 @@ def build_agent(prompt_level: str, me: Persona, partner: Persona, topic: str,
         role = "assistant" if spk == me.label else "user"
         messages.append({"role": role, "content": txt})
     if messages[-1]["role"] == "assistant":
-        messages.append({"role": "user", "content": "(Your partner is quiet — continue if you wish.)"})
+        messages.append(
+            {"role": "user", "content": "(Your partner is quiet — continue if you wish.)"}
+        )
     return messages
 
 
@@ -368,18 +429,40 @@ def build_agent(prompt_level: str, me: Persona, partner: Persona, topic: str,
 # generation.runner.run_turnwise_job:
 #     (speaker, persona_a, persona_b, topic, sb_prompt, history, conversation_no) -> messages
 
+
 def writer_view(prompt_level: str, max_turns: int | None):
     """C2: one omniscient writer sees both personas and the whole labelled transcript."""
+
     def build(speaker, a, b, topic, sb_prompt, history, conversation_no):
-        return build_c2(prompt_level, a, b, topic, sb_prompt, history, speaker,
-                        max_turns=max_turns, conversation_no=conversation_no)
+        return build_c2(
+            prompt_level,
+            a,
+            b,
+            topic,
+            sb_prompt,
+            history,
+            speaker,
+            max_turns=max_turns,
+            conversation_no=conversation_no,
+        )
+
     return build
 
 
 def agent_view(prompt_level: str, max_turns: int | None):
     """C3/C4: each speaker is its own agent and sees the call only from its own side."""
+
     def build(speaker, a, b, topic, sb_prompt, history, conversation_no):
         me, partner = (a, b) if speaker == a.label else (b, a)
-        return build_agent(prompt_level, me, partner, topic, sb_prompt, history,
-                           max_turns=max_turns, conversation_no=conversation_no)
+        return build_agent(
+            prompt_level,
+            me,
+            partner,
+            topic,
+            sb_prompt,
+            history,
+            max_turns=max_turns,
+            conversation_no=conversation_no,
+        )
+
     return build

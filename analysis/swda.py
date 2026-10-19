@@ -46,18 +46,18 @@ def clean_text(raw: str) -> str:
     words); [ .. + .. ] repair brackets; trailing slash-units '/' and interruptions '-/'.
     """
     t = raw
-    t = re.sub(r"<+[^>]*>+", " ", t)      # <beep>, <<long pause>>
-    t = re.sub(r"\{[A-Z]\s", " ", t)       # opening {D {F {C {E {A ...
+    t = re.sub(r"<+[^>]*>+", " ", t)  # <beep>, <<long pause>>
+    t = re.sub(r"\{[A-Z]\s", " ", t)  # opening {D {F {C {E {A ...
     t = t.replace("}", " ")
     t = re.sub(r"\(\(\s*(.*?)\s*\)\)", r"\1", t)  # (( uncertain )) -> keep the words
     for ch in "[]+#":
         t = t.replace(ch, " ")
-    t = re.sub(r"-?/", " ", t)             # slash-unit and -/ interruption
-    t = t.replace("--", " ")               # interruption dashes
+    t = re.sub(r"-?/", " ", t)  # slash-unit and -/ interruption
+    t = t.replace("--", " ")  # interruption dashes
     t = re.sub(r"(?:^|\s)-+(?=\s|$)", " ", t)  # stray standalone hyphens
     t = re.sub(r"\s+", " ", t).strip()
-    t = re.sub(r"\s+([,.?!])", r"\1", t)   # tidy space before punctuation
-    t = t.strip(" ,")                       # no dangling leading/trailing commas
+    t = re.sub(r"\s+([,.?!])", r"\1", t)  # tidy space before punctuation
+    t = t.strip(" ,")  # no dangling leading/trailing commas
     # Drop turns that are only non-verbals: e.g. '<Breathing>.' / '<Lipsmack>' clean to
     # bare punctuation. Left in, they become phantom 1-word "turns" that inflate the human
     # short-turn/backchannel rate (2.85% of SB turns) and poison the P2 few-shot example.
@@ -113,17 +113,43 @@ def parse_conversation_tagged(csv_path: Path) -> list[tuple[str, str, list[str]]
 # Plain-language names for the SwDA act tags shown in P3's labeled examples. Base tag =
 # the part before any ^ ( @ modifier. Anything unlisted renders as "other".
 ACT_NAMES = {
-    "sd": "statement", "sv": "opinion", "b": "backchannel", "bh": "backchannel question",
-    "bk": "acknowledgment", "aa": "agreement", "aap": "partial agreement",
-    "ba": "appreciation", "%": "unfinished", "+": "continues their earlier turn",
-    "qy": "yes/no question", "qw": "wh-question", "qo": "open question",
-    "qh": "rhetorical question", "qrr": "or-question", "ny": "yes answer",
-    "nn": "no answer", "na": "affirmative answer", "ng": "negative answer",
-    "no": "other answer", "h": "hedge", "fc": "closing", "fp": "opening",
-    "bf": "summary", "br": "didn't understand", "ar": "disagreement",
-    "arp": "partial disagreement", "bd": "downplayer", "ft": "thanks", "fa": "apology",
-    "ad": "suggestion", "oo": "offer", "x": "non-verbal", "t1": "self-talk",
-    "t3": "aside", "^2": "completes the other's sentence", "^q": "quotation",
+    "sd": "statement",
+    "sv": "opinion",
+    "b": "backchannel",
+    "bh": "backchannel question",
+    "bk": "acknowledgment",
+    "aa": "agreement",
+    "aap": "partial agreement",
+    "ba": "appreciation",
+    "%": "unfinished",
+    "+": "continues their earlier turn",
+    "qy": "yes/no question",
+    "qw": "wh-question",
+    "qo": "open question",
+    "qh": "rhetorical question",
+    "qrr": "or-question",
+    "ny": "yes answer",
+    "nn": "no answer",
+    "na": "affirmative answer",
+    "ng": "negative answer",
+    "no": "other answer",
+    "h": "hedge",
+    "fc": "closing",
+    "fp": "opening",
+    "bf": "summary",
+    "br": "didn't understand",
+    "ar": "disagreement",
+    "arp": "partial disagreement",
+    "bd": "downplayer",
+    "ft": "thanks",
+    "fa": "apology",
+    "ad": "suggestion",
+    "oo": "offer",
+    "x": "non-verbal",
+    "t1": "self-talk",
+    "t3": "aside",
+    "^2": "completes the other's sentence",
+    "^q": "quotation",
 }
 
 
@@ -162,10 +188,18 @@ def make_personas(meta: dict):
     def _edu(code: str) -> str:
         return EDU.get(code.strip(), "an unspecified education")
 
-    a = Persona("ParticipantA", _sex(meta["from_caller_sex"]),
-                _age(meta["from_caller_birth_year"]), _edu(meta["from_caller_education"]))
-    b = Persona("ParticipantB", _sex(meta["to_caller_sex"]),
-                _age(meta["to_caller_birth_year"]), _edu(meta["to_caller_education"]))
+    a = Persona(
+        "ParticipantA",
+        _sex(meta["from_caller_sex"]),
+        _age(meta["from_caller_birth_year"]),
+        _edu(meta["from_caller_education"]),
+    )
+    b = Persona(
+        "ParticipantB",
+        _sex(meta["to_caller_sex"]),
+        _age(meta["to_caller_birth_year"]),
+        _edu(meta["to_caller_education"]),
+    )
     # word-wise capitalize, not .title() — .title() mangles apostrophes ("WOMEN'S" ->
     # "Women'S"); .capitalize() per word gives "Women's Roles".
     topic_desc = meta["topic_description"].strip()
@@ -182,16 +216,24 @@ def make_personas(meta: dict):
 _PROMPT_FIXES = {
     "PETS": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
     "TRIAL BY JURY": "DISCUSS POSSIBLE CHANGES IN THE WAY TRIALS BY JURY ARE CONDUCTED.",
-    "JOB BENEFITS": ("WHAT DO YOU CONSIDER THE MOST IMPORTANT BENEFITS BESIDES SALARY IN A "
-                     "JOB WITH A LARGE ORGANIZATION?  HOW SATISFIED ARE YOU WITH THE CURRENT "
-                     "BENEFITS OF YOUR JOB?"),
-    "DRUG TESTING": ("HOW DO YOU FEEL ABOUT THE PRACTICE OF SOME COMPANIES OR GOVERNMENT "
-                     "AGENCIES TESTING EMPLOYEES OR PROSPECTIVE EMPLOYEES FOR DRUGS?  IS "
-                     "RANDOM SPOT TESTING JUSTIFIED?  WHAT LIMITS SHOULD THERE BE?"),
-    "POLITICS": ("DISCUSS ANY RECENT POLITICAL ELECTIONS OR MOVEMENT THAT YOU AND THE OTHER "
-                 "CALLER CONSIDER INTERESTING OR IMPORTANT."),
-    "SOCIAL CHANGE": ("DISCUSS RECENT SOCIAL CHANGES.  HOW IS LIFE IN AMERICA DIFFERENT "
-                      "TODAY COMPARED TO LIVING TEN YEARS AGO?"),
+    "JOB BENEFITS": (
+        "WHAT DO YOU CONSIDER THE MOST IMPORTANT BENEFITS BESIDES SALARY IN A "
+        "JOB WITH A LARGE ORGANIZATION?  HOW SATISFIED ARE YOU WITH THE CURRENT "
+        "BENEFITS OF YOUR JOB?"
+    ),
+    "DRUG TESTING": (
+        "HOW DO YOU FEEL ABOUT THE PRACTICE OF SOME COMPANIES OR GOVERNMENT "
+        "AGENCIES TESTING EMPLOYEES OR PROSPECTIVE EMPLOYEES FOR DRUGS?  IS "
+        "RANDOM SPOT TESTING JUSTIFIED?  WHAT LIMITS SHOULD THERE BE?"
+    ),
+    "POLITICS": (
+        "DISCUSS ANY RECENT POLITICAL ELECTIONS OR MOVEMENT THAT YOU AND THE OTHER "
+        "CALLER CONSIDER INTERESTING OR IMPORTANT."
+    ),
+    "SOCIAL CHANGE": (
+        "DISCUSS RECENT SOCIAL CHANGES.  HOW IS LIFE IN AMERICA DIFFERENT "
+        "TODAY COMPARED TO LIVING TEN YEARS AGO?"
+    ),
     "WOODWORKING": "PLEASE DISCUSS WOODWORKING.  IS IT A HOBBY FOR YOU?",
 }
 
@@ -243,7 +285,7 @@ def load_fewshot_pool() -> list[dict]:
             fp = idx.get(e["conversation_no"])
             if fp is None:
                 continue
-            turns = parse_conversation_tagged(fp)[e["start"]:e["start"] + e["window"]]
+            turns = parse_conversation_tagged(fp)[e["start"] : e["start"] + e["window"]]
             if not turns:
                 continue
             text = "\n".join(f"{_LABEL.get(spk, spk)}: {txt}" for spk, txt, _ in turns)
@@ -253,8 +295,14 @@ def load_fewshot_pool() -> list[dict]:
                 f"[{', '.join(dict.fromkeys(act_name(t) for t in tags))}]"
                 for spk, txt, tags in turns
             )
-            pool.append({"conversation_no": e["conversation_no"],
-                         "topic": e["topic"], "text": text, "labeled_text": labeled})
+            pool.append(
+                {
+                    "conversation_no": e["conversation_no"],
+                    "topic": e["topic"],
+                    "text": text,
+                    "labeled_text": labeled,
+                }
+            )
     except Exception:
         pool = []
     _POOL_CACHE = pool
@@ -272,8 +320,12 @@ def fewshot_examples(conversation_no: int, k: int = 2) -> list[dict]:
     return rng.sample(pool, min(k, len(pool)))
 
 
-def fewshot_example(turns: int = 10, exclude_ids: set[int] | None = None,
-                    exclude_topics: set[str] | None = None, skip: int = 80) -> str:
+def fewshot_example(
+    turns: int = 10,
+    exclude_ids: set[int] | None = None,
+    exclude_topics: set[str] | None = None,
+    skip: int = 80,
+) -> str:
     """A cleaned Switchboard excerpt for the P2 few-shot style example.
 
     With `exclude_ids`/`exclude_topics` (from the sampling manifest): the excerpt is the

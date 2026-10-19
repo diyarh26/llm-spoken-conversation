@@ -21,7 +21,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import glob
 import json
 import pathlib
 import shutil
@@ -29,15 +28,16 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from analysis.analyze import conversation_turns  # noqa: E402
-from analysis.swda import iter_conversation_files, parse_conversation, conversation_no_of  # noqa: E402
+from analysis.analyze import conversation_turns
+from analysis.swda import conversation_no_of, iter_conversation_files, parse_conversation
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 ALIGN_OUT = ROOT / "data" / "align"
 
 
-def generated_records(data_dir: pathlib.Path, conditions: list[str] | None,
-                      exclude_loops: bool = False, tag: str = ""):
+def generated_records(
+    data_dir: pathlib.Path, conditions: list[str] | None, exclude_loops: bool = False, tag: str = ""
+):
     """(condition, conv_id, turns) for every data_dir/<condition>/*.json.
 
     Skips any condition directory whose name doesn't look like a real condition (e.g. the
@@ -50,10 +50,11 @@ def generated_records(data_dir: pathlib.Path, conditions: list[str] | None,
         if not conditions and (".broken" in cond or cond.endswith(".broken")):
             continue
         for fp in sorted(cond_dir.glob("*.json")):
-            rec = json.load(open(fp, encoding="utf-8"))
+            rec = json.loads(fp.read_text(encoding="utf-8"))
             turns = conversation_turns(rec)
-            if exclude_loops:      # sensitivity: drop echo-loop turns (same rule as dialogue_acts)
+            if exclude_loops:  # sensitivity: drop echo-loop turns (same rule as dialogue_acts)
                 from analysis.dialogue_acts import drop_loop_turns
+
                 turns = drop_loop_turns(turns)
             if len(turns) >= 4:  # ALIGN needs turn pairs; too-short convs aren't useful anyway
                 yield cond + tag, fp.stem, turns
@@ -65,6 +66,7 @@ def switchboard_records(n: int, topic_matched: bool = True):
     files = list(iter_conversation_files())
     if topic_matched:
         from generation.sampling import load_target_ids
+
         targets = set(load_target_ids())
         files = [fp for fp in files if conversation_no_of(fp) in targets]
     else:
@@ -105,7 +107,6 @@ def write_input_files(records, raw_dir: pathlib.Path) -> dict[str, tuple[str, st
     return meta
 
 
-
 def run_align(raw_dir: pathlib.Path, work_dir: pathlib.Path, pretrained_vectors: str | None):
     import align
 
@@ -136,26 +137,48 @@ def run_align(raw_dir: pathlib.Path, work_dir: pathlib.Path, pretrained_vectors:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--data-dir", default="data/generated")
-    ap.add_argument("--conditions", nargs="*", default=None,
-                    help="restrict to these condition dirs (default: all non-.broken dirs)")
-    ap.add_argument("--include-sb", action="store_true", help="also export the Switchboard baseline")
+    ap.add_argument(
+        "--conditions",
+        nargs="*",
+        default=None,
+        help="restrict to these condition dirs (default: all non-.broken dirs)",
+    )
+    ap.add_argument(
+        "--include-sb", action="store_true", help="also export the Switchboard baseline"
+    )
     ap.add_argument("--n-sb", type=int, default=50, help="with --sb-first-n only")
-    ap.add_argument("--sb-first-n", action="store_true",
-                    help="use the first N Switchboard files instead of the topic-matched 50")
-    ap.add_argument("--loop-sensitivity", nargs="*", default=[],
-                    help="also export these conditions with echo-loop turns dropped, as '<cond>-noloop'")
-    ap.add_argument("--pretrained-vectors", default=None,
-                    help="path to word2vec-google-news-300(.gz); matches the validated SB run. "
-                         "Omit to build a from-corpus model instead (NOT comparable to the SB "
-                         "baseline -- only for a mechanical smoke test of this script).")
+    ap.add_argument(
+        "--sb-first-n",
+        action="store_true",
+        help="use the first N Switchboard files instead of the topic-matched 50",
+    )
+    ap.add_argument(
+        "--loop-sensitivity",
+        nargs="*",
+        default=[],
+        help="also export these conditions with echo-loop turns dropped, as '<cond>-noloop'",
+    )
+    ap.add_argument(
+        "--pretrained-vectors",
+        default=None,
+        help="path to word2vec-google-news-300(.gz); matches the validated SB run. "
+        "Omit to build a from-corpus model instead (NOT comparable to the SB "
+        "baseline -- only for a mechanical smoke test of this script).",
+    )
     ap.add_argument("--work-dir", default=None, help="scratch dir for intermediate ALIGN files")
     ap.add_argument("--out", default=str(ALIGN_OUT / "alignment_turns.csv"))
     args = ap.parse_args()
 
     records = list(generated_records(pathlib.Path(args.data_dir), args.conditions))
     if args.loop_sensitivity:
-        records += list(generated_records(pathlib.Path(args.data_dir), args.loop_sensitivity,
-                                          exclude_loops=True, tag="-noloop"))
+        records += list(
+            generated_records(
+                pathlib.Path(args.data_dir),
+                args.loop_sensitivity,
+                exclude_loops=True,
+                tag="-noloop",
+            )
+        )
     if args.include_sb:
         records += list(switchboard_records(args.n_sb, topic_matched=not args.sb_first_n))
     if not records:
@@ -163,7 +186,11 @@ def main() -> None:
         return
     print(f"Preparing {len(records)} conversations for ALIGN...")
 
-    work_dir = pathlib.Path(args.work_dir) if args.work_dir else pathlib.Path(ROOT / "data" / "align" / "_work")
+    work_dir = (
+        pathlib.Path(args.work_dir)
+        if args.work_dir
+        else pathlib.Path(ROOT / "data" / "align" / "_work")
+    )
     if work_dir.exists():
         shutil.rmtree(work_dir)
     raw_dir = work_dir / "raw"
@@ -180,8 +207,19 @@ def main() -> None:
     LEXICAL_COLS = ["lexical_tok2", "lexical_lem2", "lexical_tok3", "lexical_lem3"]
 
     out_rows = []
-    fieldnames = (["condition", "conv_id", "turn_index", "n_turns", "cosine_semanticL"]
-                  + SYNTAX_COLS + LEXICAL_COLS + ["syntax_stan", "lexical", "words1", "words2"])
+    fieldnames = [
+        "condition",
+        "conv_id",
+        "turn_index",
+        "n_turns",
+        "cosine_semanticL",
+        *SYNTAX_COLS,
+        *LEXICAL_COLS,
+        "syntax_stan",
+        "lexical",
+        "words1",
+        "words2",
+    ]
     for _, row in turn_df.iterrows():
         fname = row["condition_info"]
         if fname not in meta:
@@ -209,6 +247,7 @@ def main() -> None:
     out_path = pathlib.Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     import csv
+
     with open(out_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()

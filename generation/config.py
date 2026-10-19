@@ -33,11 +33,11 @@ from dataclasses import dataclass
 @dataclass(frozen=True)
 class DecodingConfig:
     max_new_tokens: int
-    min_new_tokens: int = 2          # blocks empty emissions only — NOT a turn-length floor
+    min_new_tokens: int = 2  # blocks empty emissions only — NOT a turn-length floor
     temperature: float = 0.8
     top_p: float = 0.95
     repetition_penalty: float = 1.0  # off; escalate to at most 1.05 if the dev sweep forces it
-    no_repeat_ngram_size: int = 0    # off
+    no_repeat_ngram_size: int = 0  # off
     stop_at_sentence: bool = False
 
 

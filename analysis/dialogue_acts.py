@@ -28,16 +28,20 @@ import random
 import re
 import sys
 from collections import Counter, defaultdict
+from collections.abc import Sequence
 from dataclasses import dataclass, field
-from typing import Iterable, Sequence
 
 import numpy as np
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from analysis.analyze import conversation_turns, has_language_drift  # noqa: E402
-from analysis.swda import (  # noqa: E402
+import itertools
+
+from analysis.analyze import conversation_turns, has_language_drift
+from analysis.swda import (
     DATA_ROOT as SWDA_ROOT,
+)
+from analysis.swda import (
     clean_text,
     conversation_no_of,
     iter_conversation_files,
@@ -55,10 +59,45 @@ CACHE_VERSION = 2
 # them.  The result is one shared 39-code inventory, with structural zeros where
 # the automatic tagger lacks a class.
 FINE_LABELS = [
-    "sd", "b", "sv", "%", "aa", "ba", "qy", "x", "ny", "fc",
-    "qw", "nn", "bk", "h", "fo", "bh", "^q", "bf", "na", "ad",
-    "^2", "qo", "qh", "^h", "ng", "br", "fp", "qrr", "arp", "t3",
-    "oo", "aap", "bd", "t1", "^g", "fa", "ft", "ar", "no",
+    "sd",
+    "b",
+    "sv",
+    "%",
+    "aa",
+    "ba",
+    "qy",
+    "x",
+    "ny",
+    "fc",
+    "qw",
+    "nn",
+    "bk",
+    "h",
+    "fo",
+    "bh",
+    "^q",
+    "bf",
+    "na",
+    "ad",
+    "^2",
+    "qo",
+    "qh",
+    "^h",
+    "ng",
+    "br",
+    "fp",
+    "qrr",
+    "arp",
+    "t3",
+    "oo",
+    "aap",
+    "bd",
+    "t1",
+    "^g",
+    "fa",
+    "ft",
+    "ar",
+    "no",
 ]
 
 COARSE_LABELS = [
@@ -78,36 +117,36 @@ COARSE_LABELS = [
 # ten-way home; the choices below preserve their broad interactional function.
 FINE_TO_COARSE = {
     "sd": "Statement",
-    "^q": "Statement",       # quotation
+    "^q": "Statement",  # quotation
     "sv": "Opinion",
     "b": "Backchannel",
-    "bk": "Backchannel",     # response acknowledgement
-    "bh": "Backchannel",     # backchannel in question form
-    "ba": "Backchannel",     # appreciation/listener response
+    "bk": "Backchannel",  # response acknowledgement
+    "bh": "Backchannel",  # backchannel in question form
+    "ba": "Backchannel",  # appreciation/listener response
     "qy": "YesNoQuestion",
-    "^g": "YesNoQuestion",   # tag question
+    "^g": "YesNoQuestion",  # tag question
     "qrr": "YesNoQuestion",  # or-clause
     "qw": "WhQuestion/OpenQuestion",
     "qo": "WhQuestion/OpenQuestion",
     "qh": "WhQuestion/OpenQuestion",
     "aa": "Agreement",
-    "aap": "Agreement",      # maybe/accept-part
-    "bd": "Agreement",       # downplayer
+    "aap": "Agreement",  # maybe/accept-part
+    "bd": "Agreement",  # downplayer
     "ny": "Answer",
     "nn": "Answer",
     "na": "Answer",
     "ng": "Answer",
-    "ar": "Answer",          # reject
-    "no": "Answer",          # other answer
-    "arp": "Answer",         # dispreferred answer
+    "ar": "Answer",  # reject
+    "no": "Answer",  # other answer
+    "arp": "Answer",  # dispreferred answer
     "ad": "Directive",
-    "oo": "Directive",       # offers/options/commits
+    "oo": "Directive",  # offers/options/commits
     "h": "Repair/Hedge",
-    "bf": "Repair/Hedge",    # summarize/reformulate
-    "br": "Repair/Hedge",    # signal non-understanding
-    "^h": "Repair/Hedge",    # hold before answer/agreement
-    "^2": "Repair/Hedge",    # collaborative completion
-    "t1": "Repair/Hedge",    # self-talk/word-search turn management
+    "bf": "Repair/Hedge",  # summarize/reformulate
+    "br": "Repair/Hedge",  # signal non-understanding
+    "^h": "Repair/Hedge",  # hold before answer/agreement
+    "^2": "Repair/Hedge",  # collaborative completion
+    "t1": "Repair/Hedge",  # self-talk/word-search turn management
     "%": "Abandoned/Other",
     "x": "Abandoned/Other",
     "fo": "Abandoned/Other",
@@ -115,7 +154,7 @@ FINE_TO_COARSE = {
     "fp": "Abandoned/Other",
     "fa": "Abandoned/Other",
     "ft": "Abandoned/Other",
-    "t3": "Abandoned/Other", # third-party talk, outside the dyadic exchange
+    "t3": "Abandoned/Other",  # third-party talk, outside the dyadic exchange
 }
 
 # Exact long strings from DialogTag 1.1.3's downloaded label_map.txt.  Several
@@ -335,9 +374,9 @@ def drop_loop_turns(turns: list[tuple[str, str]]) -> list[tuple[str, str]]:
     return kept
 
 
-def load_generated(root: pathlib.Path = GEN_ROOT,
-                   exclude_loops: bool = False,
-                   exclude_drift: bool = False) -> list[Conversation]:
+def load_generated(
+    root: pathlib.Path = GEN_ROOT, exclude_loops: bool = False, exclude_drift: bool = False
+) -> list[Conversation]:
     conversations: list[Conversation] = []
     for path in sorted(root.glob("*/*.json")):
         with path.open(encoding="utf-8") as handle:
@@ -412,13 +451,12 @@ class DialogTagAdapter:
         self.tagger = DialogTag(model_name)
         self._batch_available = False
         try:
-            self._tokenizer = getattr(self.tagger, "_DialogTag__tokenizer")
-            self._model = getattr(self.tagger, "_DialogTag__model")
-            class_helper = getattr(self.tagger, "_DialogTag__classhelper")
+            self._tokenizer = self.tagger._DialogTag__tokenizer
+            self._model = self.tagger._DialogTag__model
+            class_helper = self.tagger._DialogTag__classhelper
             logits_class, class_expanded = class_helper()
             self._index_to_long = {
-                int(index): class_expanded[short_code]
-                for index, short_code in logits_class.items()
+                int(index): class_expanded[short_code] for index, short_code in logits_class.items()
             }
             self._batch_available = True
         except (AttributeError, KeyError, TypeError, ValueError):
@@ -435,7 +473,7 @@ class DialogTagAdapter:
         predictions: list[str] = []
         try:
             for start in range(0, len(texts), batch_size):
-                batch = list(texts[start:start + batch_size])
+                batch = list(texts[start : start + batch_size])
                 encoded = self._tokenizer(
                     batch,
                     truncation=True,
@@ -463,7 +501,7 @@ def fingerprint_conversations(conversations: Sequence[Conversation]) -> str:
     ):
         digest.update(conversation.condition.encode("utf-8"))
         digest.update(str(conversation.conversation_no).encode("ascii"))
-        for speaker, text in zip(conversation.speakers, conversation.texts):
+        for speaker, text in zip(conversation.speakers, conversation.texts, strict=True):
             digest.update(b"\0")
             digest.update(speaker.encode("utf-8"))
             digest.update(b"\1")
@@ -481,16 +519,14 @@ def validation_sample(
             f"Cannot sample {n_conversations} validation conversations from {len(gold)}"
         )
     rng = random.Random(seed)
-    return sorted(
-        rng.sample(list(gold), n_conversations), key=lambda item: item.conversation_no
-    )
+    return sorted(rng.sample(list(gold), n_conversations), key=lambda item: item.conversation_no)
 
 
 def _validation_texts(sample: Sequence[Conversation]) -> tuple[list[str], list[str]]:
     texts: list[str] = []
     labels: list[str] = []
     for conversation in sample:
-        for raw_text, label in zip(conversation.texts, conversation.fine_labels):
+        for raw_text, label in zip(conversation.texts, conversation.fine_labels, strict=True):
             # DialogTag was trained on cleaned SwDA utterance text.  Keep a raw
             # fallback for pure non-verbal rows that clean to an empty string.
             text = clean_text(raw_text) or raw_text.strip() or "[non-verbal]"
@@ -517,20 +553,33 @@ def _load_partial_cache(
         with cache_path.open(encoding="utf-8") as handle:
             cache = json.load(handle)
         expected_ids = [conversation.conversation_no for conversation in gold]
-        if (cache.get("version") != CACHE_VERSION or cache.get("model_name") != model_name
-                or cache.get("human_ids") != expected_ids
-                or cache.get("human_fingerprint") != fingerprint_conversations(gold)):
+        if (
+            cache.get("version") != CACHE_VERSION
+            or cache.get("model_name") != model_name
+            or cache.get("human_ids") != expected_ids
+            or cache.get("human_fingerprint") != fingerprint_conversations(gold)
+        ):
             return None
         human_by_id = {int(row["conversation_no"]): row["fine_labels"] for row in cache["human"]}
         tagged_human: list[Conversation] = []
         confusion: Counter[tuple[str, str]] = Counter()
         for conversation in gold:
             labels = list(human_by_id[conversation.conversation_no])
-            if len(labels) != len(conversation.texts) or any(label not in FINE_LABELS for label in labels):
+            if len(labels) != len(conversation.texts) or any(
+                label not in FINE_LABELS for label in labels
+            ):
                 return None
-            tagged_human.append(Conversation("SB", "SB-tagger", conversation.conversation_no,
-                                             list(conversation.speakers), [], labels))
-            confusion.update(zip(conversation.fine_labels, labels))
+            tagged_human.append(
+                Conversation(
+                    "SB",
+                    "SB-tagger",
+                    conversation.conversation_no,
+                    list(conversation.speakers),
+                    [],
+                    labels,
+                )
+            )
+            confusion.update(zip(conversation.fine_labels, labels, strict=True))
         memo = {k: v for k, v in cache.get("generated_unit_labels", {}).items() if v in FINE_LABELS}
         return tagged_human, ValidationResult(expected_ids, confusion), memo
     except (KeyError, TypeError, ValueError, json.JSONDecodeError):
@@ -569,18 +618,26 @@ def _load_cache(
             ):
                 return None
             conversation.fine_labels = labels
-        human_by_id = {
-            int(row["conversation_no"]): row["fine_labels"] for row in cache["human"]
-        }
+        human_by_id = {int(row["conversation_no"]): row["fine_labels"] for row in cache["human"]}
         tagged_human: list[Conversation] = []
         confusion: Counter[tuple[str, str]] = Counter()
         for conversation in gold:
             labels = list(human_by_id[conversation.conversation_no])
-            if len(labels) != len(conversation.texts) or any(label not in FINE_LABELS for label in labels):
+            if len(labels) != len(conversation.texts) or any(
+                label not in FINE_LABELS for label in labels
+            ):
                 return None
-            tagged_human.append(Conversation("SB", "SB-tagger", conversation.conversation_no,
-                                             list(conversation.speakers), [], labels))
-            confusion.update(zip(conversation.fine_labels, labels))
+            tagged_human.append(
+                Conversation(
+                    "SB",
+                    "SB-tagger",
+                    conversation.conversation_no,
+                    list(conversation.speakers),
+                    [],
+                    labels,
+                )
+            )
+            confusion.update(zip(conversation.fine_labels, labels, strict=True))
         return tagged_human, ValidationResult(expected_ids, confusion)
     except (KeyError, TypeError, ValueError, json.JSONDecodeError):
         return None
@@ -602,7 +659,12 @@ def _write_cache(
         except (OSError, ValueError, AttributeError):
             memo = {}
     for conversation in generated:
-        memo.update({_unit_key(t): label for t, label in zip(conversation.texts, conversation.fine_labels)})
+        memo.update(
+            {
+                _unit_key(t): label
+                for t, label in zip(conversation.texts, conversation.fine_labels, strict=True)
+            }
+        )
     payload = {
         "version": CACHE_VERSION,
         "model_name": model_name,
@@ -621,8 +683,10 @@ def _write_cache(
             )
         ],
         "human": [
-            {"conversation_no": conversation.conversation_no,
-             "fine_labels": conversation.fine_labels}
+            {
+                "conversation_no": conversation.conversation_no,
+                "fine_labels": conversation.fine_labels,
+            }
             for conversation in tagged_human
         ],
         "validation_confusion": [
@@ -657,14 +721,21 @@ def tag_both_sides(
         if partial is not None:
             tagged_human, validation, memo = partial
             missing = sorted({t for c in generated for t in c.texts if _unit_key(t) not in memo})
-            print(f"Reusing cached human labels and {len(memo):,} generated-unit labels; "
-                  f"tagging {len(missing):,} new generated units...")
+            print(
+                f"Reusing cached human labels and {len(memo):,} generated-unit labels; "
+                f"tagging {len(missing):,} new generated units..."
+            )
             if missing:
                 tagger = DialogTagAdapter(model_name)
                 predicted = tagger.predict_many(missing, batch_size=batch_size)
                 if len(predicted) != len(missing):
                     raise RuntimeError("DialogTag returned the wrong number of predictions")
-                memo.update({_unit_key(t): dialogtag_to_fine(lab) for t, lab in zip(missing, predicted)})
+                memo.update(
+                    {
+                        _unit_key(t): dialogtag_to_fine(lab)
+                        for t, lab in zip(missing, predicted, strict=True)
+                    }
+                )
             for conversation in generated:
                 conversation.fine_labels = [memo[_unit_key(t)] for t in conversation.texts]
             _write_cache(cache_path, generated, gold, tagged_human, model_name, validation)
@@ -677,9 +748,7 @@ def tag_both_sides(
         f"sentence units and {len(human_texts):,} human utterances..."
     )
     tagger = DialogTagAdapter(model_name)
-    long_predictions = tagger.predict_many(
-        llm_texts + human_texts, batch_size=batch_size
-    )
+    long_predictions = tagger.predict_many(llm_texts + human_texts, batch_size=batch_size)
     fine_predictions = [dialogtag_to_fine(label) for label in long_predictions]
     if len(fine_predictions) != len(llm_texts) + len(human_texts):
         raise RuntimeError("DialogTag returned the wrong number of predictions")
@@ -689,18 +758,25 @@ def tag_both_sides(
         next_cursor = cursor + len(conversation.texts)
         conversation.fine_labels = fine_predictions[cursor:next_cursor]
         cursor = next_cursor
-    predicted_gold = fine_predictions[len(llm_texts):]
+    predicted_gold = fine_predictions[len(llm_texts) :]
     tagged_human: list[Conversation] = []
     cursor = 0
     for conversation in gold:
         next_cursor = cursor + len(conversation.texts)
-        tagged_human.append(Conversation("SB", "SB-tagger", conversation.conversation_no,
-                                         list(conversation.speakers), [],
-                                         predicted_gold[cursor:next_cursor]))
+        tagged_human.append(
+            Conversation(
+                "SB",
+                "SB-tagger",
+                conversation.conversation_no,
+                list(conversation.speakers),
+                [],
+                predicted_gold[cursor:next_cursor],
+            )
+        )
         cursor = next_cursor
     validation = ValidationResult(
         conversation_ids=[conversation.conversation_no for conversation in gold],
-        fine_confusion=Counter(zip(gold_labels, predicted_gold)),
+        fine_confusion=Counter(zip(gold_labels, predicted_gold, strict=True)),
     )
     if use_cache:
         _write_cache(cache_path, generated, gold, tagged_human, model_name, validation)
@@ -728,9 +804,7 @@ def label_inventory(label_set: str) -> list[str]:
     return FINE_LABELS if label_set == "fine" else COARSE_LABELS
 
 
-def distribution(
-    conversations: Sequence[Conversation], label_set: str
-) -> np.ndarray:
+def distribution(conversations: Sequence[Conversation], label_set: str) -> np.ndarray:
     inventory = label_inventory(label_set)
     index = {label: i for i, label in enumerate(inventory)}
     counts = np.zeros(len(inventory), dtype=float)
@@ -741,15 +815,13 @@ def distribution(
     return counts / total if total else counts
 
 
-def transition_matrix(
-    conversations: Sequence[Conversation], label_set: str
-) -> np.ndarray:
+def transition_matrix(conversations: Sequence[Conversation], label_set: str) -> np.ndarray:
     inventory = label_inventory(label_set)
     index = {label: i for i, label in enumerate(inventory)}
     counts = np.zeros((len(inventory), len(inventory)), dtype=float)
     for conversation in conversations:
         sequence = labels_for(conversation, label_set)
-        for current, following in zip(sequence, sequence[1:]):
+        for current, following in itertools.pairwise(sequence):
             counts[index[current], index[following]] += 1
     row_totals = counts.sum(axis=1, keepdims=True)
     return np.divide(
@@ -803,7 +875,9 @@ def bootstrap_noise_floor(
 ) -> tuple[float, np.ndarray]:
     inventory = label_inventory(label_set)
     index = {label: i for i, label in enumerate(inventory)}
-    pooled = [index[label] for conversation in gold for label in labels_for(conversation, label_set)]
+    pooled = [
+        index[label] for conversation in gold for label in labels_for(conversation, label_set)
+    ]
     if unit_count > len(pooled):
         raise ValueError(f"Unit-matched draw {unit_count} exceeds {len(pooled)} human units")
     full = np.bincount(pooled, minlength=len(inventory)).astype(float)
@@ -842,23 +916,26 @@ def tagger_rates(conversations: Sequence[Conversation]) -> tuple[float, float]:
     labels = [label for conversation in conversations for label in conversation.fine_labels]
     backchannel = {"b", "bk", "bh", "ba"}
     questions = {"qy", "qw", "qo", "qh", "qrr", "^g", "bh"}
-    return (sum(x in backchannel for x in labels) / len(labels),
-            sum(x in questions for x in labels) / len(labels)) if labels else (0.0, 0.0)
+    return (
+        (
+            sum(x in backchannel for x in labels) / len(labels),
+            sum(x in questions for x in labels) / len(labels),
+        )
+        if labels
+        else (0.0, 0.0)
+    )
 
 
 def assistant_register_counts(
     conversations: Sequence[Conversation],
 ) -> dict[str, float | int]:
-    matches = Counter({name: 0 for name in ASSISTANT_PATTERNS})
+    matches = Counter(dict.fromkeys(ASSISTANT_PATTERNS, 0))
     any_match = 0
     n_turns = 0
     for conversation in conversations:
         for text in conversation.texts:
             n_turns += 1
-            matched = [
-                name for name, pattern in ASSISTANT_PATTERNS.items()
-                if pattern.search(text)
-            ]
+            matched = [name for name, pattern in ASSISTANT_PATTERNS.items() if pattern.search(text)]
             if matched:
                 any_match += 1
                 matches.update(matched)
@@ -897,9 +974,7 @@ def write_csv(path: pathlib.Path, rows: Sequence[dict], fieldnames: Sequence[str
         writer.writerows(rows)
 
 
-def distribution_rows(
-    groups: dict[str, Sequence[Conversation]], label_set: str
-) -> list[dict]:
+def distribution_rows(groups: dict[str, Sequence[Conversation]], label_set: str) -> list[dict]:
     inventory = label_inventory(label_set)
     rows: list[dict] = []
     for condition, conversations in groups.items():
@@ -914,16 +989,13 @@ def distribution_rows(
     return rows
 
 
-def write_transition_csv(
-    path: pathlib.Path, matrix: np.ndarray, label_set: str
-) -> None:
+def write_transition_csv(path: pathlib.Path, matrix: np.ndarray, label_set: str) -> None:
     inventory = label_inventory(label_set)
     rows = []
     for row_index, current in enumerate(inventory):
         row = {"current_act": current}
         row.update(
-            {following: f"{matrix[row_index, col]:.10f}"
-             for col, following in enumerate(inventory)}
+            {following: f"{matrix[row_index, col]:.10f}" for col, following in enumerate(inventory)}
         )
         rows.append(row)
     write_csv(path, rows, ["current_act", *inventory])
@@ -937,32 +1009,48 @@ def build_comparison_rows(
     gold: Sequence[Conversation],
     tagged_human: Sequence[Conversation],
     generated_groups: dict[str, list[Conversation]],
-    *, repetitions: int, seed: int,
+    *,
+    repetitions: int,
+    seed: int,
 ) -> tuple[list[dict], list[dict]]:
     rows: list[dict] = []
     noise_rows: list[dict] = []
     for label_set in ("fine", "coarse"):
         gold_dist = distribution(gold, label_set)
         tagged_dist = distribution(tagged_human, label_set)
-        rows.append({
-            "condition": "SB", "label_set": label_set, "view": "gold_human_reference",
-            "jsd_dist": "0.0000000000", "jsd_transition": "0.0000000000",
-            "noise_floor_p95": "", "exceeds_floor": "", "n_units": sum(len(labels_for(c, label_set)) for c in gold),
-        })
+        rows.append(
+            {
+                "condition": "SB",
+                "label_set": label_set,
+                "view": "gold_human_reference",
+                "jsd_dist": "0.0000000000",
+                "jsd_transition": "0.0000000000",
+                "noise_floor_p95": "",
+                "exceeds_floor": "",
+                "n_units": sum(len(labels_for(c, label_set)) for c in gold),
+            }
+        )
         calibration = js_divergence(gold_dist, tagged_dist)
-        rows.append({
-            "condition": "SB", "label_set": label_set, "view": "gold_vs_tagger_human_calibration",
-            "jsd_dist": f"{calibration:.10f}",
-            "jsd_transition": f"{transition_jsd(transition_matrix(gold, label_set), transition_matrix(tagged_human, label_set)):.10f}",
-            "noise_floor_p95": "", "exceeds_floor": "", "n_units": sum(len(labels_for(c, label_set)) for c in tagged_human),
-        })
+        rows.append(
+            {
+                "condition": "SB",
+                "label_set": label_set,
+                "view": "gold_vs_tagger_human_calibration",
+                "jsd_dist": f"{calibration:.10f}",
+                "jsd_transition": f"{transition_jsd(transition_matrix(gold, label_set), transition_matrix(tagged_human, label_set)):.10f}",
+                "noise_floor_p95": "",
+                "exceeds_floor": "",
+                "n_units": sum(len(labels_for(c, label_set)) for c in tagged_human),
+            }
+        )
         for condition, conversations in generated_groups.items():
             condition_distribution = distribution(conversations, label_set)
             condition_transition = transition_matrix(conversations, label_set)
             assistant = assistant_register_counts(conversations)
             n_units = sum(len(labels_for(c, label_set)) for c in conversations)
-            floor, distances = bootstrap_noise_floor(tagged_human, label_set, unit_count=n_units,
-                                                     repetitions=repetitions, seed=seed)
+            floor, distances = bootstrap_noise_floor(
+                tagged_human, label_set, unit_count=n_units, repetitions=repetitions, seed=seed
+            )
             dist_jsd = js_divergence(condition_distribution, tagged_dist)
             rows.append(
                 {
@@ -978,15 +1066,21 @@ def build_comparison_rows(
                     "n_units": n_units,
                 }
             )
-            noise_rows.append({"condition": condition, "label_set": label_set,
-                               "unit_count": n_units, "repetitions": repetitions, "seed": seed,
-                               "mean_jsd": f"{distances.mean():.10f}", "p95_jsd": f"{floor:.10f}"})
+            noise_rows.append(
+                {
+                    "condition": condition,
+                    "label_set": label_set,
+                    "unit_count": n_units,
+                    "repetitions": repetitions,
+                    "seed": seed,
+                    "mean_jsd": f"{distances.mean():.10f}",
+                    "p95_jsd": f"{floor:.10f}",
+                }
+            )
     return rows, noise_rows
 
 
-def write_validation_outputs(
-    output_dir: pathlib.Path, validation: ValidationResult
-) -> list[dict]:
+def write_validation_outputs(output_dir: pathlib.Path, validation: ValidationResult) -> list[dict]:
     summary_rows: list[dict] = []
     confusion_rows: list[dict] = []
     for label_set in ("fine", "coarse"):
@@ -1082,21 +1176,17 @@ def _import_plotting():
     return plt
 
 
-def plot_key_acts(
-    groups: dict[str, Sequence[Conversation]], output_path: pathlib.Path
-) -> None:
+def plot_key_acts(groups: dict[str, Sequence[Conversation]], output_path: pathlib.Path) -> None:
     plt = _import_plotting()
     conditions = list(groups)
     keys = ["Backchannel", "Statement", "Question", "Agreement"]
     values: dict[str, list[float]] = {key: [] for key in keys}
     for condition in conditions:
         coarse = distribution(groups[condition], "coarse")
-        by_label = dict(zip(COARSE_LABELS, coarse))
+        by_label = dict(zip(COARSE_LABELS, coarse, strict=True))
         values["Backchannel"].append(by_label["Backchannel"])
         values["Statement"].append(by_label["Statement"] + by_label["Opinion"])
-        values["Question"].append(
-            by_label["YesNoQuestion"] + by_label["WhQuestion/OpenQuestion"]
-        )
+        values["Question"].append(by_label["YesNoQuestion"] + by_label["WhQuestion/OpenQuestion"])
         values["Agreement"].append(by_label["Agreement"])
 
     x = np.arange(len(conditions))
@@ -1131,21 +1221,32 @@ def plot_sb_heatmap(matrix: np.ndarray, output_path: pathlib.Path) -> None:
     plt.close(fig)
 
 
-def plot_jsd(
-    comparison_rows: Sequence[dict], output_path: pathlib.Path
-) -> None:
+def plot_jsd(comparison_rows: Sequence[dict], output_path: pathlib.Path) -> None:
     plt = _import_plotting()
     fig, axes = plt.subplots(2, 1, figsize=(13, 9), sharex=True)
-    for axis, label_set in zip(axes, ("fine", "coarse")):
-        rows = [row for row in comparison_rows if row["label_set"] == label_set and
-                row.get("view") == "tagger_human_vs_tagger_llm_primary"]
+    for axis, label_set in zip(axes, ("fine", "coarse"), strict=True):
+        rows = [
+            row
+            for row in comparison_rows
+            if row["label_set"] == label_set
+            and row.get("view") == "tagger_human_vs_tagger_llm_primary"
+        ]
         conditions = [row["condition"] for row in rows]
         values = [float(row["jsd_dist"]) for row in rows]
         floors = [float(row["noise_floor_p95"]) for row in rows]
-        colors = ["#b43c39" if value > floor else "#4c78a8" for value, floor in zip(values, floors)]
+        colors = [
+            "#b43c39" if value > floor else "#4c78a8"
+            for value, floor in zip(values, floors, strict=True)
+        ]
         axis.bar(range(len(rows)), values, color=colors)
-        axis.scatter(range(len(rows)), floors, color="black", marker="_", s=180,
-                     label="unit-matched human p95")
+        axis.scatter(
+            range(len(rows)),
+            floors,
+            color="black",
+            marker="_",
+            s=180,
+            label="unit-matched human p95",
+        )
         axis.set_ylabel("JSD vs full SB")
         axis.set_title(f"{label_set.capitalize()} dialogue-act distribution")
         axis.grid(axis="y", alpha=0.2)
@@ -1170,196 +1271,36 @@ def top_confusions(
     return sorted(errors, reverse=True)[:n]
 
 
-def _legacy_write_readme(
+def write_readme(
     output_dir: pathlib.Path,
     *,
     gold: Sequence[Conversation],
+    tagged_human: Sequence[Conversation],
     generated_groups: dict[str, list[Conversation]],
     comparison_rows: Sequence[dict],
     validation: ValidationResult,
-    assistant_rows: Sequence[dict],
     bootstrap_repetitions: int,
-    bootstrap_size: int,
     seed: int,
     model_name: str,
     cache_used: bool,
 ) -> None:
-    fine_accuracy = validation_accuracy(
-        confusion_for_label_set(validation.fine_confusion, "fine")
-    )
-    coarse_accuracy = validation_accuracy(
-        confusion_for_label_set(validation.fine_confusion, "coarse")
-    )
-    coarse_rows = [row for row in comparison_rows if row["label_set"] == "coarse"]
-    fine_rows = [row for row in comparison_rows if row["label_set"] == "fine"]
-    closest = min(coarse_rows, key=lambda row: float(row["jsd_dist"]))
-    farthest = max(coarse_rows, key=lambda row: float(row["jsd_dist"]))
-    coarse_exceed = sum(row["exceeds_floor"] == "true" for row in coarse_rows)
-    fine_exceed = sum(row["exceeds_floor"] == "true" for row in fine_rows)
-    assistant_by_condition = {
-        row["condition"]: float(row["assistant_register_fraction"])
-        for row in assistant_rows
-    }
-    top_assistant = max(
-        generated_groups,
-        key=lambda condition: assistant_by_condition[condition],
-    )
-    matched_deltas = [
-        abs(float(row["topic_matched_jsd_dist"]) - float(row["jsd_dist"]))
-        for row in coarse_rows
+    primary = [
+        r
+        for r in comparison_rows
+        if r["view"] == "tagger_human_vs_tagger_llm_primary" and r["label_set"] == "coarse"
     ]
-    largest_matched_delta = max(matched_deltas) if matched_deltas else 0.0
-    sb_coarse = dict(zip(COARSE_LABELS, distribution(gold, "coarse")))
-    generated_backchannels = {
-        condition: dict(zip(COARSE_LABELS, distribution(conversations, "coarse")))[
-            "Backchannel"
-        ]
-        for condition, conversations in generated_groups.items()
-    }
-    highest_backchannel_condition = max(
-        generated_backchannels, key=generated_backchannels.get
+    calibration = next(
+        r
+        for r in comparison_rows
+        if r["view"] == "gold_vs_tagger_human_calibration" and r["label_set"] == "coarse"
     )
-    lowest_backchannel_condition = min(
-        generated_backchannels, key=generated_backchannels.get
-    )
-    confusion_lines = [
-        f"  - `{gold_label}` -> `{predicted}`: {count:,}"
-        for count, gold_label, predicted in top_confusions(validation, "coarse")
-    ]
-    generated_units = sum(
-        len(conversation.fine_labels)
-        for conversations in generated_groups.values()
-        for conversation in conversations
-    )
-    text = f"""# Dialogue-act structural signature
-
-This compares
-{len(gold):,} full Switchboard conversations ({sum(len(c.fine_labels) for c in gold):,}
-gold utterance units) with {sum(len(v) for v in generated_groups.values()):,} generated
-conversations ({generated_units:,} generated turns) across {len(generated_groups)} conditions.
-
-## First signal
-
-On the more tagger-robust coarse inventory, the closest condition is **{closest['condition']}**
-(distribution JSD {float(closest['jsd_dist']):.4f}) and the farthest is
-**{farthest['condition']}** ({float(farthest['jsd_dist']):.4f}).  {coarse_exceed} of
-{len(coarse_rows)} coarse comparisons and {fine_exceed} of {len(fine_rows)} fine comparisons
-exceed the 95th-percentile human n={bootstrap_size} sampling-noise floor.  This is evidence
-that the structural signature has signal on the draft generations; it is not evidence that
-the automatic fine labels are all trustworthy.
-
-The clearest component is listener feedback: Switchboard is
-**{sb_coarse['Backchannel']:.1%} backchannels**, while the generated conditions span only
-**{generated_backchannels[lowest_backchannel_condition]:.1%}**
-({lowest_backchannel_condition}) to **{generated_backchannels[highest_backchannel_condition]:.1%}**
-({highest_backchannel_condition}).  That reproduces the qualitative `sd -> b -> sd` gap in
-the spec as an aggregate structural difference rather than a hand-picked example.
-
-Restricting the human reference to the same 50 `conversation_no` values changes coarse JSD
-by at most {largest_matched_delta:.4f} in this run.  That makes topic mix an unlikely sole
-explanation for the observed gap, although the current 50 topics are the old first-50
-convenience sample rather than the planned stratified sample.
-
-The assistant-register rule layer is complementary to DAMSL, not a new DAMSL act.  Its
-highest generated-condition rate is **{top_assistant}** at
-{assistant_by_condition[top_assistant]:.1%}; the full-SB rule-match rate is
-{assistant_by_condition['SB']:.1%}.  These are literal phrase/list matches and should be read
-as an indicator, not a classifier.
-
-## Tagger validation
-
-DialogTag `{model_name}` was evaluated on {len(validation.conversation_ids)} seeded SwDA
-conversations ({validation.n_items:,} utterances): fine accuracy **{fine_accuracy:.1%}** and
-coarse accuracy **{coarse_accuracy:.1%}**.  Largest coarse confusions were:
-
-{chr(10).join(confusion_lines) if confusion_lines else '  - none'}
-
-This is an in-domain diagnostic, not a guaranteed model-held-out score: DialogTag was trained
-on the 1,155-conversation SwDA distribution and does not publish enough split identifiers to
-prove that this seeded sample was absent from its training split.  It also cannot emit gold
-`%`, `x`, `ar`, or `no`.  The coarse comparison is therefore the safer headline.
-
-## Method and normalization
-
-- Raw SwDA suffix modifiers are removed (`sd^e -> sd`, `qy^d -> qy`); standard semantic
-  exceptions `nn^e -> ng` and `ny^e -> na` are applied first.  Leading-caret base acts such
-  as `^q` are preserved.  All direct-CSV rows are retained while `@`, `*`, and parenthesized
-  annotation flags are removed.
-- Rare comma/semicolon compound tags use the first act, following `cgpotts/swda`.
-- `+` continuations inherit the previous normalized act from the **same caller**, not the
-  immediately preceding row.  `%` and `x` stay explicit.
-- DialogTag's 38 model labels are explicitly mapped into the shared short inventory.  They
-  collapse to 35 short codes; gold-only `%`, `x`, `ar`, and `no` complete the 39 columns.
-  Grouped rare classes and question/repeat modifiers are collapsed on both sides.  All 39
-  fine acts then map exhaustively to the requested ten coarse categories.
-- Distribution distance is base-2 Jensen-Shannon divergence.  Transition distance is the
-  unweighted mean row JSD of `P(next | current)`; a transition row present on only one side
-  has maximal row distance 1.
-- The noise floor uses {bootstrap_repetitions:,} seeded draws of {bootstrap_size} whole human
-  conversations without replacement against the full human reference (seed {seed}).
-
-## Important limitations
-
-Gold labels are SwDA annotation units, while each generated model turn receives one label.
-That granularity mismatch follows the available inputs but can inflate structural differences,
-especially around continuations and backchannels.  DialogTag is a legacy TensorFlow model,
-was trained on human telephone speech, and forces assistant-like turns into its human taxonomy.
-Draft conditions also have unequal generated-turn counts.  Treat rankings as a smoke-test
-direction for the regenerated dataset, not a final claim.
-
-The mandated bootstrap matches **conversation count**, not the number of classified units:
-an average 50-conversation human draw contains about
-{bootstrap_size * sum(len(c.fine_labels) for c in gold) / len(gold):,.0f} gold annotation
-units, versus {min(sum(len(c.fine_labels) for c in conversations) for conversations in generated_groups.values()):,}–{max(sum(len(c.fine_labels) for c in conversations) for conversations in generated_groups.values()):,}
-turns in a generated condition.  The very small human-only floor is therefore optimistic
-for the human/generated granularity mismatch and should not be treated as a fully calibrated
-significance threshold, even though the observed JSDs are orders of magnitude larger.
-
-The cached prediction file contains generated-data labels and aggregate gold confusion counts
-only—never Switchboard transcript text.  This run {'reused that cache' if cache_used else 'created fresh predictions'}.
-
-## Files
-
-- `da_distribution_by_condition.csv` and `da_distribution_coarse_by_condition.csv`
-- `da_jsd_vs_sb.csv` (fine/coarse, full and topic-matched comparisons)
-- `da_transition_*.csv` and `da_transition_coarse_*.csv`
-- `da_tagger_validation.csv`, `da_tagger_confusion.csv`
-- `assistant_register_by_condition.csv`
-- `key_acts_grouped_bar.png`, `sb_transition_heatmap.png`, `jsd_vs_sb.png`
-
-## Reproducing the model-dependent stage
-
-DialogTag is isolated from the main generation environment because its legacy TensorFlow
-checkpoint needs older dependency pins.  On Windows with Python 3.11:
-
-```powershell
-py -3.11 -m venv .venv-dialogtag
-.venv-dialogtag/Scripts/python -m pip install -r analysis/requirements-dialogue-acts.txt
-.venv-dialogtag/Scripts/python analysis/dialogue_acts.py --force-retag
-```
-
-The first model load downloads DialogTag's checkpoint.  Model-free reruns can then use the
-text-free cache with the ordinary project environment.
-
-Run the gold-only path with `python analysis/dialogue_acts.py --human-only`.  A full rerun can
-reuse `dialogtag_predictions.json` without importing the model; pass `--force-retag` to invoke
-DialogTag again.  See the module docstring and `--help` for paths and statistical controls.
-"""
-    with (output_dir / "README.md").open("w", encoding="utf-8") as handle:
-        handle.write(text)
-
-
-def write_readme(output_dir: pathlib.Path, *, gold: Sequence[Conversation],
-                 tagged_human: Sequence[Conversation], generated_groups: dict[str, list[Conversation]],
-                 comparison_rows: Sequence[dict], validation: ValidationResult,
-                 bootstrap_repetitions: int, seed: int, model_name: str, cache_used: bool) -> None:
-    primary = [r for r in comparison_rows if r["view"] == "tagger_human_vs_tagger_llm_primary" and r["label_set"] == "coarse"]
-    calibration = next(r for r in comparison_rows if r["view"] == "gold_vs_tagger_human_calibration" and r["label_set"] == "coarse")
     closest = min(primary, key=lambda r: float(r["jsd_dist"]))
     farthest = max(primary, key=lambda r: float(r["jsd_dist"]))
     gold_rate = tagger_rates(gold)
     tagged_rate = tagger_rates(tagged_human)
-    units = [sum(len(c.fine_labels) for c in group) / len(group) for group in generated_groups.values()]
+    units = [
+        sum(len(c.fine_labels) for c in group) / len(group) for group in generated_groups.values()
+    ]
     text = f"""# Dialogue-act structural signature
 
 This rerun compares {len(gold):,} Switchboard conversations ({sum(len(c.fine_labels) for c in gold):,} gold utterance units) with {sum(len(v) for v in generated_groups.values()):,} generated conversations. Generated turns are split into sentence units before tagging.
@@ -1367,10 +1308,10 @@ This rerun compares {len(gold):,} Switchboard conversations ({sum(len(c.fine_lab
 ## Three views
 
 1. **Gold-human reference (authoritative):** charts and `SB-gold` distribution/transition files preserve the expert `act_tag` labels. Gold coarse backchannels are {gold_rate[0]:.1%}; gold question acts are {gold_rate[1]:.1%}.
-2. **Primary fair divergence:** DialogTag is applied to both human and generated units. Coarse JSD ranges from **{float(closest['jsd_dist']):.4f}** ({closest['condition']}) to **{float(farthest['jsd_dist']):.4f}** ({farthest['condition']}); every condition has its own human unit-matched 95th-percentile noise floor.
-3. **Tagger calibration:** gold-human vs tagger-human coarse JSD is **{float(calibration['jsd_dist']):.4f}** (transition JSD {float(calibration['jsd_transition']):.4f}). On human speech the tagger reports {tagged_rate[0]:.1%} backchannels and {tagged_rate[1]:.1%} questions, versus the gold rates above. Per-act contributions are in `da_tagger_calibration_by_act.csv`.
+2. **Primary fair divergence:** DialogTag is applied to both human and generated units. Coarse JSD ranges from **{float(closest["jsd_dist"]):.4f}** ({closest["condition"]}) to **{float(farthest["jsd_dist"]):.4f}** ({farthest["condition"]}); every condition has its own human unit-matched 95th-percentile noise floor.
+3. **Tagger calibration:** gold-human vs tagger-human coarse JSD is **{float(calibration["jsd_dist"]):.4f}** (transition JSD {float(calibration["jsd_transition"]):.4f}). On human speech the tagger reports {tagged_rate[0]:.1%} backchannels and {tagged_rate[1]:.1%} questions, versus the gold rates above. Per-act contributions are in `da_tagger_calibration_by_act.csv`.
 
-Switchboard averages {sum(len(c.fine_labels) for c in gold)/len(gold):.1f} units/conversation. Generated conditions average {min(units):.1f}–{max(units):.1f} sentence units/conversation; segmentation narrows but does not eliminate the granularity difference.
+Switchboard averages {sum(len(c.fine_labels) for c in gold) / len(gold):.1f} units/conversation. Generated conditions average {min(units):.1f}–{max(units):.1f} sentence units/conversation; segmentation narrows but does not eliminate the granularity difference.
 
 ## Tagger-independent cross-check
 
@@ -1378,11 +1319,11 @@ Switchboard averages {sum(len(c.fine_labels) for c in gold)/len(gold):.1f} units
 
 ## Method and limitations
 
-DialogTag `{model_name}` was retained after a timeboxed Hugging Face search: the plausible public SwDA checkpoint was token-classification with undocumented utterance-boundary encoding, not a clean sentence-classification replacement. The same-tagger primary view removes the two-ruler confound but cannot remove correlated domain errors on polished LLM text. Full-corpus in-domain fine/coarse agreement is {validation_accuracy(confusion_for_label_set(validation.fine_confusion, 'fine')):.1%}/{validation_accuracy(confusion_for_label_set(validation.fine_confusion, 'coarse')):.1%}; this is calibration, not a held-out accuracy claim. Human hand-labeling of generated text remains out of scope.
+DialogTag `{model_name}` was retained after a timeboxed Hugging Face search: the plausible public SwDA checkpoint was token-classification with undocumented utterance-boundary encoding, not a clean sentence-classification replacement. The same-tagger primary view removes the two-ruler confound but cannot remove correlated domain errors on polished LLM text. Full-corpus in-domain fine/coarse agreement is {validation_accuracy(confusion_for_label_set(validation.fine_confusion, "fine")):.1%}/{validation_accuracy(confusion_for_label_set(validation.fine_confusion, "coarse")):.1%}; this is calibration, not a held-out accuracy claim. Human hand-labeling of generated text remains out of scope.
 
-The text-only cross-check is especially important for listener feedback: it finds {transparent_rule_counts(gold)['rule_backchannel_rate']:.1%} short lexical backchannels in humans, while generated conditions range from {min(transparent_rule_counts(v)['rule_backchannel_rate'] for v in generated_groups.values()):.1%} to {max(transparent_rule_counts(v)['rule_backchannel_rate'] for v in generated_groups.values()):.1%}. DialogTag assigns substantially more generated backchannels, so the deficit is not an artifact of relying on its labels.
+The text-only cross-check is especially important for listener feedback: it finds {transparent_rule_counts(gold)["rule_backchannel_rate"]:.1%} short lexical backchannels in humans, while generated conditions range from {min(transparent_rule_counts(v)["rule_backchannel_rate"] for v in generated_groups.values()):.1%} to {max(transparent_rule_counts(v)["rule_backchannel_rate"] for v in generated_groups.values()):.1%}. DialogTag assigns substantially more generated backchannels, so the deficit is not an artifact of relying on its labels.
 
-Noise floors use {bootstrap_repetitions:,} seeded multinomial bootstrap draws from tagger-human units, matched separately to each condition's classified-unit count (seed {seed}). The label cache contains labels, IDs, fingerprints, and aggregate confusion only—never Switchboard or generated transcript text. This run {'reused the cache' if cache_used else 'created fresh predictions'}.
+Noise floors use {bootstrap_repetitions:,} seeded multinomial bootstrap draws from tagger-human units, matched separately to each condition's classified-unit count (seed {seed}). The label cache contains labels, IDs, fingerprints, and aggregate confusion only—never Switchboard or generated transcript text. This run {"reused the cache" if cache_used else "created fresh predictions"}.
 """
     (output_dir / "README.md").write_text(text, encoding="utf-8")
 
@@ -1420,19 +1361,27 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         description="Compute fine and coarse dialogue-act structural signatures."
     )
     parser.add_argument(
-        "--generated-root", type=pathlib.Path, default=GEN_ROOT,
+        "--generated-root",
+        type=pathlib.Path,
+        default=GEN_ROOT,
         help=f"generated condition directory (default: {GEN_ROOT})",
     )
     parser.add_argument(
-        "--swda-root", type=pathlib.Path, default=SWDA_ROOT,
+        "--swda-root",
+        type=pathlib.Path,
+        default=SWDA_ROOT,
         help=f"extracted SwDA directory (default: {SWDA_ROOT})",
     )
     parser.add_argument(
-        "--out-dir", type=pathlib.Path, default=OUT_DIR,
+        "--out-dir",
+        type=pathlib.Path,
+        default=OUT_DIR,
         help=f"output directory (default: {OUT_DIR})",
     )
     parser.add_argument(
-        "--cache", type=pathlib.Path, default=None,
+        "--cache",
+        type=pathlib.Path,
+        default=None,
         help="prediction cache path (default: <out-dir>/dialogtag_predictions.json)",
     )
     parser.add_argument("--model", default="distilbert-base-uncased")
@@ -1442,27 +1391,33 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--bootstrap-repetitions", type=int, default=1000)
     parser.add_argument("--seed", type=int, default=20260714)
     parser.add_argument(
-        "--force-retag", action="store_true",
+        "--force-retag",
+        action="store_true",
         help="ignore a valid cache and invoke DialogTag again",
     )
     parser.add_argument(
-        "--no-cache", action="store_true",
+        "--no-cache",
+        action="store_true",
         help="do not read or write the prediction cache",
     )
     parser.add_argument(
-        "--human-only", action="store_true",
+        "--human-only",
+        action="store_true",
         help="write the gold reference/noise floor without importing DialogTag",
     )
     parser.add_argument(
-        "--no-figures", action="store_true",
+        "--no-figures",
+        action="store_true",
         help="skip matplotlib figures",
     )
     parser.add_argument(
-        "--exclude-loops", action="store_true",
+        "--exclude-loops",
+        action="store_true",
         help="sensitivity analysis: drop echo-loop turns (near-verbatim repeats) before tagging",
     )
     parser.add_argument(
-        "--exclude-drift", action="store_true",
+        "--exclude-drift",
+        action="store_true",
         help="sensitivity analysis: drop whole conversations with language drift (non-Latin script)",
     )
     return parser.parse_args(argv)
@@ -1513,12 +1468,8 @@ def main(argv: Sequence[str] | None = None) -> None:
     )
     fine_sb_transition = transition_matrix(gold, "fine")
     coarse_sb_transition = transition_matrix(gold, "coarse")
-    write_transition_csv(
-        output_dir / "da_transition_SB.csv", fine_sb_transition, "fine"
-    )
-    write_transition_csv(
-        output_dir / "da_transition_coarse_SB.csv", coarse_sb_transition, "coarse"
-    )
+    write_transition_csv(output_dir / "da_transition_SB.csv", fine_sb_transition, "fine")
+    write_transition_csv(output_dir / "da_transition_coarse_SB.csv", coarse_sb_transition, "coarse")
 
     if args.human_only:
         if not args.no_figures:
@@ -1528,8 +1479,9 @@ def main(argv: Sequence[str] | None = None) -> None:
         print(f"Wrote gold outputs to {output_dir}")
         return
 
-    generated = load_generated(args.generated_root, exclude_loops=args.exclude_loops,
-                               exclude_drift=args.exclude_drift)
+    generated = load_generated(
+        args.generated_root, exclude_loops=args.exclude_loops, exclude_drift=args.exclude_drift
+    )
     generated_groups = grouped_by_condition(generated)
     print(
         f"Loaded {len(generated):,} generated conversations across "
@@ -1549,7 +1501,11 @@ def main(argv: Sequence[str] | None = None) -> None:
     print(f"Prediction source: {'validated cache' if cache_used else 'DialogTag model'}")
     print_validation(validation)
 
-    all_groups: dict[str, Sequence[Conversation]] = {"SB-gold": gold, "SB-tagger": tagged_human, **generated_groups}
+    all_groups: dict[str, Sequence[Conversation]] = {
+        "SB-gold": gold,
+        "SB-tagger": tagged_human,
+        **generated_groups,
+    }
     fine_rows = distribution_rows(all_groups, "fine")
     coarse_rows = distribution_rows(all_groups, "coarse")
     write_csv(
@@ -1562,10 +1518,14 @@ def main(argv: Sequence[str] | None = None) -> None:
         coarse_rows,
         ["condition", "n_conversations", "n_units", *COARSE_LABELS],
     )
-    write_transition_csv(output_dir / "da_transition_SB_tagger.csv",
-                         transition_matrix(tagged_human, "fine"), "fine")
-    write_transition_csv(output_dir / "da_transition_coarse_SB_tagger.csv",
-                         transition_matrix(tagged_human, "coarse"), "coarse")
+    write_transition_csv(
+        output_dir / "da_transition_SB_tagger.csv", transition_matrix(tagged_human, "fine"), "fine"
+    )
+    write_transition_csv(
+        output_dir / "da_transition_coarse_SB_tagger.csv",
+        transition_matrix(tagged_human, "coarse"),
+        "coarse",
+    )
 
     for condition, conversations in generated_groups.items():
         safe_name = safe_condition_name(condition)
@@ -1583,44 +1543,78 @@ def main(argv: Sequence[str] | None = None) -> None:
     comparison_rows, noise_rows = build_comparison_rows(
         gold, tagged_human, generated_groups, repetitions=args.bootstrap_repetitions, seed=args.seed
     )
-    write_csv(output_dir / "da_noise_floor.csv", noise_rows,
-              ["condition", "label_set", "unit_count", "repetitions", "seed", "mean_jsd", "p95_jsd"])
+    write_csv(
+        output_dir / "da_noise_floor.csv",
+        noise_rows,
+        ["condition", "label_set", "unit_count", "repetitions", "seed", "mean_jsd", "p95_jsd"],
+    )
     write_csv(
         output_dir / "da_jsd_vs_sb.csv",
         comparison_rows,
         [
-            "condition", "label_set", "view", "jsd_dist", "jsd_transition",
-            "noise_floor_p95", "exceeds_floor", "assistant_register_fraction",
-            "n_conversations", "n_units",
+            "condition",
+            "label_set",
+            "view",
+            "jsd_dist",
+            "jsd_transition",
+            "noise_floor_p95",
+            "exceeds_floor",
+            "assistant_register_fraction",
+            "n_conversations",
+            "n_units",
         ],
     )
     write_validation_outputs(output_dir, validation)
-    assistant_rows = write_assistant_output(
-        output_dir, gold, generated_groups
-    )
+    write_assistant_output(output_dir, gold, generated_groups)
     crosscheck_rows = []
     for condition, raw_group, tagged_group in [("SB", gold, tagged_human)] + [
         (condition, group, group) for condition, group in generated_groups.items()
     ]:
         rule = transparent_rule_counts(raw_group)
         bc, q = tagger_rates(tagged_group)
-        crosscheck_rows.append({"condition": condition, **rule,
-                                "tagger_backchannel_rate": f"{bc:.10f}", "tagger_question_rate": f"{q:.10f}"})
-    write_csv(output_dir / "da_rule_crosscheck.csv", crosscheck_rows,
-              ["condition", "n_units", "rule_backchannel_rate", "tagger_backchannel_rate",
-               "rule_question_rate", "tagger_question_rate"])
+        crosscheck_rows.append(
+            {
+                "condition": condition,
+                **rule,
+                "tagger_backchannel_rate": f"{bc:.10f}",
+                "tagger_question_rate": f"{q:.10f}",
+            }
+        )
+    write_csv(
+        output_dir / "da_rule_crosscheck.csv",
+        crosscheck_rows,
+        [
+            "condition",
+            "n_units",
+            "rule_backchannel_rate",
+            "tagger_backchannel_rate",
+            "rule_question_rate",
+            "tagger_question_rate",
+        ],
+    )
     calibration_rows = []
     for label_set in ("fine", "coarse"):
         gd, td = distribution(gold, label_set), distribution(tagged_human, label_set)
         for i, act in enumerate(label_inventory(label_set)):
             m = (gd[i] + td[i]) / 2
-            contribution = 0.5 * ((gd[i] * np.log2(gd[i] / m) if gd[i] else 0) +
-                                  (td[i] * np.log2(td[i] / m) if td[i] else 0))
-            calibration_rows.append({"label_set": label_set, "act": act,
-                                     "gold_rate": f"{gd[i]:.10f}", "tagger_rate": f"{td[i]:.10f}",
-                                     "jsd_contribution": f"{contribution:.10f}"})
-    write_csv(output_dir / "da_tagger_calibration_by_act.csv", calibration_rows,
-              ["label_set", "act", "gold_rate", "tagger_rate", "jsd_contribution"])
+            contribution = 0.5 * (
+                (gd[i] * np.log2(gd[i] / m) if gd[i] else 0)
+                + (td[i] * np.log2(td[i] / m) if td[i] else 0)
+            )
+            calibration_rows.append(
+                {
+                    "label_set": label_set,
+                    "act": act,
+                    "gold_rate": f"{gd[i]:.10f}",
+                    "tagger_rate": f"{td[i]:.10f}",
+                    "jsd_contribution": f"{contribution:.10f}",
+                }
+            )
+    write_csv(
+        output_dir / "da_tagger_calibration_by_act.csv",
+        calibration_rows,
+        ["label_set", "act", "gold_rate", "tagger_rate", "jsd_contribution"],
+    )
 
     if not args.no_figures:
         plot_key_acts(all_groups, output_dir / "key_acts_grouped_bar.png")

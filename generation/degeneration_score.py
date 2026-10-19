@@ -37,7 +37,7 @@ from collections import Counter
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from generation.quality import is_near_duplicate                          # noqa: E402
+from generation.quality import is_near_duplicate
 
 _C1_LINE = re.compile(r"^\s*Participants?\s*_?([AB])\s*[:,]\s*(.+)$", re.I)
 
@@ -78,7 +78,7 @@ def score_dir(cond_dir: pathlib.Path) -> dict:
             nw = len(txt.split())
             words_per_turn.append(nw)
             short_turns += int(nw < 3)
-            dup_turns += int(is_near_duplicate(txt, turns[:seed + i]))
+            dup_turns += int(is_near_duplicate(txt, turns[: seed + i]))
 
     n = len(convs)
     if not n or not total_turns:
@@ -101,8 +101,7 @@ def score_dir(cond_dir: pathlib.Path) -> dict:
         "words_per_turn_mean": round(statistics.mean(words_per_turn), 2),
         "words_per_turn_median": statistics.median(words_per_turn),
         "short_turn_rate": round(short_turns / total_turns, 4),
-        "multi_turn_emission_rate": round(
-            counters.get("multi_turn_emissions", 0) / total_turns, 4),
+        "multi_turn_emission_rate": round(counters.get("multi_turn_emissions", 0) / total_turns, 4),
         "ended_by": dict(ended),
     }
 

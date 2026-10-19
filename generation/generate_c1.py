@@ -21,10 +21,10 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from generation.config import C1 as C1_DECODING  # noqa: E402
-from generation.model_utils import VICUNA, chat, load_model  # noqa: E402
-from generation.runner import base_parser, prepare_job  # noqa: E402
-from prompts.templates import build_c1  # noqa: E402
+from generation.config import C1 as C1_DECODING
+from generation.model_utils import VICUNA, chat, load_model
+from generation.runner import base_parser, prepare_job
+from prompts.templates import build_c1
 
 
 def main(argv: list[str] | None = None) -> None:

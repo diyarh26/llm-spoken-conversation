@@ -8,6 +8,7 @@ fig3_distance       distance from human act structure (JSD) per condition, with 
 fig4_turn_length    words per turn per condition vs humans
 fig5_alignment      ALIGN: earlier -> later convergence, and length-controlled gap vs humans
 """
+
 from __future__ import annotations
 
 import csv
@@ -16,8 +17,8 @@ import pathlib
 import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-import numpy as np  # noqa: E402
+import matplotlib.pyplot as plt
+import numpy as np
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RES = ROOT / "results"
@@ -27,16 +28,28 @@ OUT = RES / "figures"
 ARCHS = ["C1", "C2", "C3", "C4"]
 # Display names follow the poster (supervisor's naming): agent architectures are A3/A4. The
 # data keeps its condition ids (C3-P0 ...); only the labels change.
-ARCH_NAME = {"C1": "C1\nall at once", "C2": "C2\nturn by turn", "C3": "A3\n2 agents\n(same model)",
-             "C4": "A4\n2 agents\n(2 models)"}
+ARCH_NAME = {
+    "C1": "C1\nall at once",
+    "C2": "C2\nturn by turn",
+    "C3": "A3\n2 agents\n(same model)",
+    "C4": "A4\n2 agents\n(2 models)",
+}
 ARCH_COLOR = {"C1": "#4C72B0", "C2": "#55A868", "C3": "#DD8452", "C4": "#C44E52"}
 PROMPTS = ["P0", "P1", "P2"]
 PROMPT_ALPHA = {"P0": 0.45, "P1": 0.75, "P2": 1.0}
 HUMAN = "#222222"
 
-plt.rcParams.update({"font.size": 15, "axes.titlesize": 18, "axes.labelsize": 16,
-                     "axes.spines.top": False, "axes.spines.right": False,
-                     "legend.frameon": False, "figure.dpi": 100})
+plt.rcParams.update(
+    {
+        "font.size": 15,
+        "axes.titlesize": 18,
+        "axes.labelsize": 16,
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+        "legend.frameon": False,
+        "figure.dpi": 100,
+    }
+)
 
 
 def rows(path: pathlib.Path) -> list[dict]:
@@ -56,7 +69,13 @@ def save(fig, name: str) -> None:
     print("wrote", OUT / f"{name}.png")
 
 
-def grouped(ax, values: dict[str, float], errors: dict[str, float] | None = None, fmt: str = "{:.0f}", label_size: float = 10.5):
+def grouped(
+    ax,
+    values: dict[str, float],
+    errors: dict[str, float] | None = None,
+    fmt: str = "{:.0f}",
+    label_size: float = 10.5,
+):
     """Bars grouped by architecture, one bar per prompt level; returns x centers."""
     width, centers = 0.26, []
     for i, a in enumerate(ARCHS):
@@ -64,17 +83,36 @@ def grouped(ax, values: dict[str, float], errors: dict[str, float] | None = None
         for j, p in enumerate(PROMPTS):
             c = f"{a}-{p}"
             x = i + 1 + (j - 1) * width
-            ax.bar(x, values[c], width * 0.92, color=ARCH_COLOR[a], alpha=PROMPT_ALPHA[p],
-                   yerr=None if errors is None else errors[c], capsize=3, ecolor="#555")
-            ax.text(x, values[c] + (0 if errors is None else errors[c]), fmt.format(values[c]),
-                    ha="center", va="bottom", fontsize=label_size)
+            ax.bar(
+                x,
+                values[c],
+                width * 0.92,
+                color=ARCH_COLOR[a],
+                alpha=PROMPT_ALPHA[p],
+                yerr=None if errors is None else errors[c],
+                capsize=3,
+                ecolor="#555",
+            )
+            ax.text(
+                x,
+                values[c] + (0 if errors is None else errors[c]),
+                fmt.format(values[c]),
+                ha="center",
+                va="bottom",
+                fontsize=label_size,
+            )
     return centers
 
 
 def prompt_legend(ax, loc="upper left"):
     from matplotlib.patches import Patch
-    handles = [Patch(color="#777", alpha=PROMPT_ALPHA[p], label=lab) for p, lab in
-               zip(PROMPTS, ["P0 paper prompt", "P1 spoken + persona", "P2 + real example"])]
+
+    handles = [
+        Patch(color="#777", alpha=PROMPT_ALPHA[p], label=lab)
+        for p, lab in zip(
+            PROMPTS, ["P0 paper prompt", "P1 spoken + persona", "P2 + real example"], strict=True
+        )
+    ]
     ax.legend(handles=handles, loc=loc, fontsize=12, title="bar shade = prompt", title_fontsize=12)
 
 
@@ -88,7 +126,9 @@ def fig1_backchannels() -> None:
     hum = 100 * float(dist["SB-tagger"]["Backchannel"])
     a1.bar(0, hum, 0.6, color=HUMAN)
     a1.text(0, hum, f"{hum:.0f}", ha="center", va="bottom", fontsize=12, fontweight="bold")
-    a1.set_xticks([0] + centers, ["Humans\n(Switchboard)"] + [ARCH_NAME[a] for a in ARCHS], fontsize=12.5)
+    a1.set_xticks(
+        [0, *centers], ["Humans\n(Switchboard)"] + [ARCH_NAME[a] for a in ARCHS], fontsize=12.5
+    )
     a1.set_ylabel("% of talk units tagged backchannel")
     a1.set_title("(a) Backchannels, as tagged")
     prompt_legend(a1, loc="upper right")
@@ -97,58 +137,108 @@ def fig1_backchannels() -> None:
     hb = 100 * float(rule["SB"]["rule_backchannel_rate"])
     a2.bar([0, 1], [hb, max(llm)], 0.55, color=[HUMAN, "#999"])
     a2.text(0, hb, f"{hb:.0f}%", ha="center", va="bottom", fontsize=15, fontweight="bold")
-    a2.text(1, max(llm), f"{min(llm):.1f}–{max(llm):.1f}%", ha="center", va="bottom", fontsize=15,
-            fontweight="bold")
+    a2.text(
+        1,
+        max(llm),
+        f"{min(llm):.1f}–{max(llm):.1f}%",
+        ha="center",
+        va="bottom",
+        fontsize=15,
+        fontweight="bold",
+    )
     a2.set_xticks([0, 1], ["Humans", "All 12 LLM\nconditions"])
     a2.set_ylabel("% of units that are ONLY\n'uh-huh / yeah / right'")
     a2.set_title("(b) Stand-alone listener turns")
     a2.set_ylim(0, hb * 1.25)
-    fig.suptitle("LLM conversations are missing the listener", fontsize=21, fontweight="bold", y=1.02)
+    fig.suptitle(
+        "LLM conversations are missing the listener", fontsize=21, fontweight="bold", y=1.02
+    )
     save(fig, "fig1_backchannels")
 
 
 def fig2_act_mix() -> None:
     dist = by(DA / "da_distribution_coarse_by_condition.csv")
-    groups = [("Statement", ["Statement"]), ("Opinion", ["Opinion"]), ("Backchannel", ["Backchannel"]),
-              ("Question", ["YesNoQuestion", "WhQuestion/OpenQuestion"]), ("Agreement", ["Agreement"]),
-              ("Other", ["Answer", "Directive", "Repair/Hedge", "Abandoned/Other"])]
+    groups = [
+        ("Statement", ["Statement"]),
+        ("Opinion", ["Opinion"]),
+        ("Backchannel", ["Backchannel"]),
+        ("Question", ["YesNoQuestion", "WhQuestion/OpenQuestion"]),
+        ("Agreement", ["Agreement"]),
+        ("Other", ["Answer", "Directive", "Repair/Hedge", "Abandoned/Other"]),
+    ]
     colors = ["#8DA0CB", "#E78AC3", "#222222", "#FC8D62", "#66C2A5", "#CCCCCC"]
 
     def share(conds: list[str]) -> list[float]:
-        return [100 * np.mean([sum(float(dist[c][k]) for k in keys) for c in conds]) for _, keys in groups]
+        return [
+            100 * np.mean([sum(float(dist[c][k]) for k in keys) for c in conds])
+            for _, keys in groups
+        ]
 
     bars = [("Humans", share(["SB-tagger"]))] + [
-        (ARCH_NAME[a].replace("\n", " "), share([f"{a}-{p}" for p in PROMPTS])) for a in ARCHS]
+        (ARCH_NAME[a].replace("\n", " "), share([f"{a}-{p}" for p in PROMPTS])) for a in ARCHS
+    ]
     fig, ax = plt.subplots(figsize=(14, 6.0))
-    for i, (name, vals) in enumerate(bars[::-1]):
+    for i, (_name, vals) in enumerate(bars[::-1]):
         left = 0
-        for (g, _), v, col in zip(groups, vals, colors):
+        for _group, v, col in zip(groups, vals, colors, strict=True):
             ax.barh(i, v, 0.62, left=left, color=col, edgecolor="white")
-            if v >= 4:                       # wide segment: number inside
-                ax.text(left + v / 2, i, f"{v:.0f}", ha="center", va="center", fontsize=12,
-                        color="white" if col in ("#222222",) else "black")
-            else:                            # thin segment: number just above the bar
-                ax.text(left + v / 2, i + 0.33, f"{v:.0f}", ha="center", va="bottom",
-                        fontsize=11, color=col if col != "#CCCCCC" else "#666",
-                        fontweight="bold")
+            if v >= 4:  # wide segment: number inside
+                ax.text(
+                    left + v / 2,
+                    i,
+                    f"{v:.0f}",
+                    ha="center",
+                    va="center",
+                    fontsize=12,
+                    color="white" if col in ("#222222",) else "black",
+                )
+            else:  # thin segment: number just above the bar
+                ax.text(
+                    left + v / 2,
+                    i + 0.33,
+                    f"{v:.0f}",
+                    ha="center",
+                    va="bottom",
+                    fontsize=11,
+                    color=col if col != "#CCCCCC" else "#666",
+                    fontweight="bold",
+                )
             left += v
     ax.set_yticks(range(len(bars)), [b[0] for b in bars[::-1]])
     ax.set_xlim(0, 100)
     ax.set_xlabel("% of talk units (LLM rows: mean over prompts P0–P2)")
-    ax.legend([plt.Rectangle((0, 0), 1, 1, color=c) for c in colors], [g for g, _ in groups],
-              ncol=6, loc="upper center", bbox_to_anchor=(0.5, 1.16), fontsize=13)
+    ax.legend(
+        [plt.Rectangle((0, 0), 1, 1, color=c) for c in colors],
+        [g for g, _ in groups],
+        ncol=6,
+        loc="upper center",
+        bbox_to_anchor=(0.5, 1.16),
+        fontsize=13,
+    )
     ax.spines["left"].set_visible(False)
-    fig.suptitle("Fewer listener reactions, more opinions and questions", fontsize=20,
-                 fontweight="bold", y=1.08)
+    fig.suptitle(
+        "Fewer listener reactions, more opinions and questions",
+        fontsize=20,
+        fontweight="bold",
+        y=1.08,
+    )
     save(fig, "fig2_act_mix")
 
 
 def fig3_distance() -> None:
-    jsd = {r["condition"]: r for r in rows(DA / "da_jsd_vs_sb.csv")
-           if r["label_set"] == "coarse" and r["view"] == "tagger_human_vs_tagger_llm_primary"}
-    calib = next(float(r["jsd_dist"]) for r in rows(DA / "da_jsd_vs_sb.csv")
-                 if r["label_set"] == "coarse" and r["view"] == "gold_vs_tagger_human_calibration")
-    floor = max(float(r["p95_jsd"]) for r in rows(DA / "da_noise_floor.csv") if r["label_set"] == "coarse")
+    jsd = {
+        r["condition"]: r
+        for r in rows(DA / "da_jsd_vs_sb.csv")
+        if r["label_set"] == "coarse" and r["view"] == "tagger_human_vs_tagger_llm_primary"
+    }
+    calib = next(
+        float(r["jsd_dist"])
+        for r in rows(DA / "da_jsd_vs_sb.csv")
+        if r["label_set"] == "coarse" and r["view"] == "gold_vs_tagger_human_calibration"
+    )
+    floor = max(
+        float(r["p95_jsd"]) for r in rows(DA / "da_noise_floor.csv") if r["label_set"] == "coarse"
+    )
     fig, ax = plt.subplots(figsize=(12, 5.6))
     vals = {c: float(jsd[c]["jsd_dist"]) for c in jsd}
     centers = grouped(ax, vals, fmt="{:.2f}")
@@ -160,9 +250,15 @@ def fig3_distance() -> None:
     ax.set_title("Separate agents do not bring the structure closer to humans", fontweight="bold")
     prompt_legend(ax)
     ax.add_artist(ax.get_legend())
-    ax.legend([l1, l2], [f"tagger's own error on human talk ({calib:.3f})",
-                         f"sampling noise: random human samples of the same size ({floor:.3f})"],
-              loc="upper right", fontsize=12)
+    ax.legend(
+        [l1, l2],
+        [
+            f"tagger's own error on human talk ({calib:.3f})",
+            f"sampling noise: random human samples of the same size ({floor:.3f})",
+        ],
+        loc="upper right",
+        fontsize=12,
+    )
     ax.set_ylim(0, max(vals.values()) * 1.25)
     save(fig, "fig3_distance")
 
@@ -171,7 +267,9 @@ def fig4_turn_length() -> None:
     m = by(RES / "metrics_summary.csv")
     fig, ax = plt.subplots(figsize=(12, 5.6))
     vals = {c: float(m[c]["mean_words_per_turn_mean"]) for c in m if c[0] == "C"}
-    err = {c: 1.96 * float(m[c]["mean_words_per_turn_sd"]) / np.sqrt(float(m[c]["n"])) for c in vals}
+    err = {
+        c: 1.96 * float(m[c]["mean_words_per_turn_sd"]) / np.sqrt(float(m[c]["n"])) for c in vals
+    }
     centers = grouped(ax, vals, err)
     hum = float(m["SB"]["mean_words_per_turn_mean"])
     hl = ax.axhline(hum, color=HUMAN, ls="--", lw=2)
@@ -192,14 +290,18 @@ def fig5_alignment() -> None:
     fig, (a1, a2) = plt.subplots(1, 2, figsize=(15, 5.8), gridspec_kw={"width_ratios": [1, 1.3]})
 
     def line(ax, conds, color, label, lw=2.5):
-        e = np.mean([float(el[c]["earlier"]) for c in conds])
-        l = np.mean([float(el[c]["later"]) for c in conds])
-        ax.plot([0, 1], [e, l], "-o", color=color, lw=lw, ms=8, label=label)
+        early = np.mean([float(el[c]["earlier"]) for c in conds])
+        late = np.mean([float(el[c]["later"]) for c in conds])
+        ax.plot([0, 1], [early, late], "-o", color=color, lw=lw, ms=8, label=label)
 
     line(a1, ["SB"], HUMAN, f"Humans (p = {float(el['SB']['wilcoxon_p']):.2f})", lw=3.5)
     for a in ARCHS:
-        line(a1, [f"{a}-P1"], ARCH_COLOR[a],
-             ARCH_NAME[a].replace("\n", " ") + f" (p = {float(el[a + '-P1']['wilcoxon_p']):.3f})")
+        line(
+            a1,
+            [f"{a}-P1"],
+            ARCH_COLOR[a],
+            ARCH_NAME[a].replace("\n", " ") + f" (p = {float(el[a + '-P1']['wilcoxon_p']):.3f})",
+        )
     a1.set_xticks([0, 1], ["first half", "second half"])
     a1.set_xlim(-0.2, 1.2)
     a1.set_ylabel("conceptual alignment\n(ALIGN, adjacent turns)")
@@ -219,8 +321,12 @@ def fig5_alignment() -> None:
     a2.set_ylabel("alignment minus humans")
     a2.set_title("(b) Gap vs humans: raw (dashed outline)\nvs controlling for turn length (filled)")
     fig.subplots_adjust(wspace=0.35)
-    fig.suptitle("Long turns explain most of the LLMs' extra alignment", fontsize=20,
-                 fontweight="bold", y=1.06)
+    fig.suptitle(
+        "Long turns explain most of the LLMs' extra alignment",
+        fontsize=20,
+        fontweight="bold",
+        y=1.06,
+    )
     save(fig, "fig5_alignment")
 
 
@@ -229,11 +335,17 @@ def poster_fig1b_listener() -> None:
     rule = by(DA / "da_rule_crosscheck.csv")
     llm = [100 * float(rule[c]["rule_backchannel_rate"]) for c in rule if c != "SB"]
     hb = 100 * float(rule["SB"]["rule_backchannel_rate"])
-    fig, ax = plt.subplots(figsize=(10, 3.6))           # horizontal: fits a wide poster slot
+    fig, ax = plt.subplots(figsize=(10, 3.6))  # horizontal: fits a wide poster slot
     ax.barh([1, 0], [hb, max(llm)], 0.6, color=[HUMAN, "#999"])
     ax.text(hb + 0.3, 1, f"{hb:.0f}%", va="center", fontsize=22, fontweight="bold")
-    ax.text(max(llm) + 0.3, 0, f"{min(llm):.1f}–{max(llm):.1f}%", va="center",
-            fontsize=22, fontweight="bold")
+    ax.text(
+        max(llm) + 0.3,
+        0,
+        f"{min(llm):.1f}–{max(llm):.1f}%",
+        va="center",
+        fontsize=22,
+        fontweight="bold",
+    )
     ax.set_yticks([1, 0], ["Humans", "All 12 LLM\nconditions"], fontsize=16)
     ax.set_xlabel("% of talk units that are ONLY 'uh-huh / yeah / right'")
     ax.set_xlim(0, hb * 1.3)
@@ -249,8 +361,11 @@ def poster_fig1_sized(width_cm: float, height_cm: float, name: str) -> None:
     rule = by(DA / "da_rule_crosscheck.csv")
     tall = height_cm > width_cm
     fig, (a1, a2) = plt.subplots(
-        2 if tall else 1, 1 if tall else 2, figsize=(width_cm / 2.54, height_cm / 2.54),
-        gridspec_kw={"height_ratios": [1.5, 1]} if tall else {"width_ratios": [1.6, 1]})
+        2 if tall else 1,
+        1 if tall else 2,
+        figsize=(width_cm / 2.54, height_cm / 2.54),
+        gridspec_kw={"height_ratios": [1.5, 1]} if tall else {"width_ratios": [1.6, 1]},
+    )
 
     vals = {c: 100 * float(dist[c]["Backchannel"]) for c in dist if c[0] == "C"}
     centers = grouped(a1, vals, fmt="{:.0f}", label_size=10)
@@ -258,8 +373,9 @@ def poster_fig1_sized(width_cm: float, height_cm: float, name: str) -> None:
     a1.bar(0, hum, 0.6, color=HUMAN)
     a1.text(0, hum, f"{hum:.0f}", ha="center", va="bottom", fontsize=13, fontweight="bold")
     # short labels: the poster's design boxes already explain C1/C2/A3/A4
-    a1.set_xticks([0] + centers, ["Humans"] + [ARCH_NAME[a].split("\n")[0] for a in ARCHS],
-                  fontsize=13)
+    a1.set_xticks(
+        [0, *centers], ["Humans"] + [ARCH_NAME[a].split("\n")[0] for a in ARCHS], fontsize=13
+    )
     a1.set_ylabel("% of talk units\ntagged backchannel")
     a1.set_ylim(0, hum * 1.15)
     a1.set_title("(a) Backchannels, per condition", fontsize=15)
@@ -269,15 +385,26 @@ def poster_fig1_sized(width_cm: float, height_cm: float, name: str) -> None:
     hb = 100 * float(rule["SB"]["rule_backchannel_rate"])
     a2.barh([1, 0], [hb, max(llm)], 0.6, color=[HUMAN, "#999"])
     a2.text(hb + 0.3, 1, f"{hb:.0f}%", va="center", fontsize=20, fontweight="bold")
-    a2.text(max(llm) + 0.3, 0, f"{min(llm):.1f}–{max(llm):.1f}%", va="center", fontsize=20,
-            fontweight="bold")
+    a2.text(
+        max(llm) + 0.3,
+        0,
+        f"{min(llm):.1f}–{max(llm):.1f}%",
+        va="center",
+        fontsize=20,
+        fontweight="bold",
+    )
     a2.set_yticks([1, 0], ["Humans", "All 12 LLM\nconditions"], fontsize=13)
     a2.set_xlabel("% of talk units that are ONLY\n'uh-huh / yeah / right'")
     a2.set_xlim(0, hb * 1.35)
     a2.set_ylim(-0.6, 1.6)
     a2.set_title("(b) Stand-alone listener turns", fontsize=15)
-    fig.suptitle("LLM conversations are\nmissing the listener" if tall else
-                 "LLM conversations are missing the listener", fontsize=19, fontweight="bold")
+    fig.suptitle(
+        "LLM conversations are\nmissing the listener"
+        if tall
+        else "LLM conversations are missing the listener",
+        fontsize=19,
+        fontweight="bold",
+    )
     fig.tight_layout()
     save(fig, name)
 
@@ -290,8 +417,15 @@ def poster_fig1b_vertical(width_cm: float, height_cm: float, name: str) -> None:
     fig, ax = plt.subplots(figsize=(width_cm / 2.54, height_cm / 2.54))
     ax.bar([0, 1], [hb, max(llm)], 0.6, color=[HUMAN, "#999"])
     ax.text(0, hb, f"{hb:.0f}%", ha="center", va="bottom", fontsize=24, fontweight="bold")
-    ax.text(1, max(llm) + 0.3, f"{min(llm):.1f}–\n{max(llm):.1f}%", ha="center", va="bottom",
-            fontsize=22, fontweight="bold")
+    ax.text(
+        1,
+        max(llm) + 0.3,
+        f"{min(llm):.1f}–\n{max(llm):.1f}%",
+        ha="center",
+        va="bottom",
+        fontsize=22,
+        fontweight="bold",
+    )
     ax.set_xticks([0, 1], ["Humans", "All 12 LLM\nconditions"], fontsize=16)
     ax.set_ylabel("% of talk units that are ONLY\n'uh-huh / yeah / right'", fontsize=16)
     ax.set_ylim(0, hb * 1.2)
@@ -302,53 +436,83 @@ def poster_fig1b_vertical(width_cm: float, height_cm: float, name: str) -> None:
 
 def poster_arch_vs_prompt(width_cm: float = 22, height_cm: float = 11) -> None:
     """Mean JSD vs humans by architecture (over prompts) and by prompt (over architectures)."""
-    jsd = {r["condition"]: float(r["jsd_dist"]) for r in rows(DA / "da_jsd_vs_sb.csv")
-           if r["label_set"] == "coarse" and r["view"] == "tagger_human_vs_tagger_llm_primary"}
+    jsd = {
+        r["condition"]: float(r["jsd_dist"])
+        for r in rows(DA / "da_jsd_vs_sb.csv")
+        if r["label_set"] == "coarse" and r["view"] == "tagger_human_vs_tagger_llm_primary"
+    }
     by_arch = {a: np.mean([jsd[f"{a}-{p}"] for p in PROMPTS]) for a in ARCHS}
     by_prompt = {p: np.mean([jsd[f"{a}-{p}"] for a in ARCHS]) for p in PROMPTS}
     ra = max(by_arch.values()) - min(by_arch.values())
     rp = max(by_prompt.values()) - min(by_prompt.values())
-    fig, (a1, a2) = plt.subplots(1, 2, figsize=(width_cm / 2.54, height_cm / 2.54), sharey=True,
-                                 gridspec_kw={"width_ratios": [4, 3]})
+    fig, (a1, a2) = plt.subplots(
+        1,
+        2,
+        figsize=(width_cm / 2.54, height_cm / 2.54),
+        sharey=True,
+        gridspec_kw={"width_ratios": [4, 3]},
+    )
     for ax, vals, cols, labels, rng, title in [
-        (a1, list(by_arch.values()), [ARCH_COLOR[a] for a in ARCHS],
-         [ARCH_NAME[a].split("\n")[0] for a in ARCHS], ra, "By architecture"),
+        (
+            a1,
+            list(by_arch.values()),
+            [ARCH_COLOR[a] for a in ARCHS],
+            [ARCH_NAME[a].split("\n")[0] for a in ARCHS],
+            ra,
+            "By architecture",
+        ),
         (a2, list(by_prompt.values()), ["#BBBBBB", "#888888", "#555555"], PROMPTS, rp, "By prompt"),
     ]:
         x = np.arange(len(vals))
         ax.bar(x, vals, 0.6, color=cols)
-        for xi, v in zip(x, vals):
+        for xi, v in zip(x, vals, strict=True):
             ax.text(xi, v + 0.004, f"{v:.3f}", ha="center", va="bottom", fontsize=12)
         lo, hi = min(vals), max(vals)
         xr = len(vals) - 0.45
-        ax.annotate("", xy=(xr, lo), xytext=(xr, hi), arrowprops=dict(arrowstyle="<->", lw=2))
-        ax.text(xr + 0.12, (lo + hi) / 2, f"range\n{rng:.3f}", va="center", fontsize=13,
-                fontweight="bold")
+        ax.annotate("", xy=(xr, lo), xytext=(xr, hi), arrowprops={"arrowstyle": "<->", "lw": 2})
+        ax.text(
+            xr + 0.12,
+            (lo + hi) / 2,
+            f"range\n{rng:.3f}",
+            va="center",
+            fontsize=13,
+            fontweight="bold",
+        )
         ax.set_xticks(x, labels, fontsize=14)
         ax.set_xlim(-0.6, len(vals) + 0.4)
         ax.set_title(title, fontsize=15)
     a1.set_ylabel("distance from\nhumans (JSD)")
     a1.set_ylim(0, max(by_arch.values()) * 1.25)
-    fig.suptitle(f"Architecture moves the distance ~{ra / rp:.1f}× more than the prompt",
-                 fontsize=17, fontweight="bold")
+    fig.suptitle(
+        f"Architecture moves the distance ~{ra / rp:.1f}× more than the prompt",
+        fontsize=17,
+        fontweight="bold",
+    )
     fig.tight_layout()
     save(fig, "poster_arch_vs_prompt")
 
 
 def poster_fig5a_alignment() -> None:
     """Fig 5(a) alone: alignment in the first vs second half of a conversation (prompt P1)."""
-    el = {r["condition"]: r for r in rows(RES / "alignment_earlier_later.csv") if r["variant"] == "all_pairs"}
+    el = {
+        r["condition"]: r
+        for r in rows(RES / "alignment_earlier_later.csv")
+        if r["variant"] == "all_pairs"
+    }
     fig, ax = plt.subplots(figsize=(8.2, 5.6))
 
     def line(cond, color, label, lw=2.8):
-        e, l = float(el[cond]["earlier"]), float(el[cond]["later"])
-        ax.plot([0, 1], [e, l], "-o", color=color, lw=lw, ms=9, label=label)
+        early, late = float(el[cond]["earlier"]), float(el[cond]["later"])
+        ax.plot([0, 1], [early, late], "-o", color=color, lw=lw, ms=9, label=label)
 
     line("SB", HUMAN, f"Humans (p = {float(el['SB']['wilcoxon_p']):.2f}, no change)", lw=4)
     for a in ARCHS:
         p = float(el[a + "-P1"]["wilcoxon_p"])
-        line(a + "-P1", ARCH_COLOR[a], ARCH_NAME[a].replace("\n", " ")
-             + (f" (p = {p:.3f})" if p >= 0.001 else " (p < 0.001)"))
+        line(
+            a + "-P1",
+            ARCH_COLOR[a],
+            ARCH_NAME[a].replace("\n", " ") + (f" (p = {p:.3f})" if p >= 0.001 else " (p < 0.001)"),
+        )
     ax.set_xticks([0, 1], ["first half\nof the call", "second half\nof the call"])
     ax.set_xlim(-0.15, 1.15)
     ax.set_ylabel("conceptual alignment\n(ALIGN, adjacent turns)")

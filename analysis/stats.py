@@ -1,21 +1,21 @@
-"""Phase 2 statistics: per-turn dataset, mixed-effects models, Independence Gradient test.
+"""Statistics report: per-turn dataset, mixed-effects models, independence-gradient test.
 
 Builds one tidy per-turn table from the Switchboard baseline + every
 ``data/generated/<condition>/*.json``, then:
 
-  1. words/turn:   DV ~ Corpus*Section + (1|ConvID) per architecture vs SB  (ANLY-01, -04)
-  2. markers:      oh/okay/uh-huh rate per condition vs SB                   (ANLY-03)
-  3. alignment:    same mixed model on ALIGN's cosine_semanticL, if present  (ANLY-02)
-  4. gradient:     Independence Gradient C1->C2->C3->C4 vs SB                 (ANLY-05)
+  1. words/turn:   words ~ Corpus*Section + (1|ConvID), each condition vs Switchboard
+  2. markers:      oh/okay/uh-huh rate per condition vs Switchboard (Mann-Whitney)
+  3. alignment:    ALIGN conceptual alignment (cosine_semanticL) per architecture
+  4. gradient:     "independence gradient" C1 -> C2 -> C3 -> C4 (speakers increasingly
+                   independent), Spearman trend + Kruskal-Wallis
 
 Design notes
 ------------
-* **Runs on whatever conditions are present** — use it incrementally as generation lands.
-* **Pure numpy + scipy core** so it runs in the local Windows env today. ``statsmodels``
-  (the formal mixed-effects model) and ``matplotlib`` (figures) are *optional* upgrades; if
-  missing, the script falls back to a per-conversation Welch test and skips figures, telling
-  you so. Install the full stack (``pip install pandas statsmodels matplotlib``) or run on
-  the VM ``convsim`` env for the mixed-effects numbers that go in the write-up.
+* **Runs on whatever conditions are present**, so it can be used while generation runs.
+* **Pure numpy + scipy core.** ``statsmodels`` (the mixed-effects model) and
+  ``matplotlib`` (figures) are optional: without them the script falls back to a
+  per-conversation Welch test and skips figures, and says so. The published report used
+  the full stack (``pip install -e ".[analysis]"``).
 * **P2 is a robustness condition.** Its prompt embeds a verbatim Switchboard few-shot
   excerpt, so measuring oh/okay/uh-huh on P2 would be circular. P2 is therefore **excluded
   from the marker analysis** and kept only for non-lexical metrics (words/turn, alignment).
@@ -44,18 +44,20 @@ from scipy import stats
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from analysis.analyze import conversation_turns                 # noqa: E402  (C1 raw parse reuse)
-from analysis.metrics import marker_counts                      # noqa: E402
-from analysis.swda import (                                     # noqa: E402
-    iter_conversation_files, parse_conversation, conversation_no_of,
+from analysis.analyze import conversation_turns
+from analysis.metrics import marker_counts
+from analysis.swda import (
+    conversation_no_of,
+    iter_conversation_files,
+    parse_conversation,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 GEN_ROOT = ROOT / "data" / "generated"
-ALIGN_CSV = ROOT / "data" / "align" / "alignment_turns.csv"     # VM writes this; see load_align_rows
+ALIGN_CSV = ROOT / "data" / "align" / "alignment_turns.csv"  # written by export_align.py
 FIG_DIR = ROOT / "analysis" / "figures"
 
-ARCH_ORDER = ["C1", "C2", "C3", "C4"]            # independence gradient order
+ARCH_ORDER = ["C1", "C2", "C3", "C4"]  # independence gradient order
 MARKERS = ("oh", "okay", "uh-huh")
 
 # Paper Switchboard references (Mayor et al. 2025), for context in the report.
@@ -65,6 +67,7 @@ PAPER_SB = {"words_per_turn": 14.0, "oh": 0.57, "okay": 0.16, "uh-huh": 1.03, "a
 # --------------------------------------------------------------------------- #
 # 1. Build the tidy per-turn table                                            #
 # --------------------------------------------------------------------------- #
+
 
 def _section(turn_index: int, n_turns: int) -> str:
     """Earlier = first half of the conversation, Later = second half."""
@@ -76,27 +79,29 @@ def _rows_from_turns(turns, *, conv_id, condition, architecture, prompt_level, c
     rows = []
     for i, (_, text) in enumerate(turns):
         mc = marker_counts(text)
-        rows.append({
-            "conv_id": conv_id,
-            "condition": condition,
-            "architecture": architecture,
-            "prompt_level": prompt_level,
-            "corpus": corpus,                      # "SB" or "LLM"
-            "turn_index": i,
-            "n_turns": n,
-            "section": _section(i, n),
-            "words": len(text.split()),
-            "oh": mc["oh"],
-            "okay": mc["okay"],
-            "uh-huh": mc["uh-huh"],
-        })
+        rows.append(
+            {
+                "conv_id": conv_id,
+                "condition": condition,
+                "architecture": architecture,
+                "prompt_level": prompt_level,
+                "corpus": corpus,  # "SB" or "LLM"
+                "turn_index": i,
+                "n_turns": n,
+                "section": _section(i, n),
+                "words": len(text.split()),
+                "oh": mc["oh"],
+                "okay": mc["okay"],
+                "uh-huh": mc["uh-huh"],
+            }
+        )
     return rows
 
 
 def generated_rows(gen_root: pathlib.Path = GEN_ROOT) -> list[dict]:
     rows: list[dict] = []
     for f in sorted(glob.glob(str(gen_root / "*" / "*.json"))):
-        rec = json.load(open(f, encoding="utf-8"))
+        rec = json.loads(pathlib.Path(f).read_text(encoding="utf-8"))
         turns = conversation_turns(rec)
         if not turns:
             continue
@@ -119,6 +124,7 @@ def switchboard_rows(n: int = 50, topic_matched: bool = True) -> list[dict]:
     files = list(iter_conversation_files())
     if topic_matched:
         from generation.sampling import load_target_ids
+
         targets = set(load_target_ids())
         files = [fp for fp in files if conversation_no_of(fp) in targets]
     else:
@@ -130,7 +136,10 @@ def switchboard_rows(n: int = 50, topic_matched: bool = True) -> list[dict]:
         rows += _rows_from_turns(
             turns,
             conv_id=f"SB/{conversation_no_of(fp)}",
-            condition="SB", architecture="SB", prompt_level="SB", corpus="SB",
+            condition="SB",
+            architecture="SB",
+            prompt_level="SB",
+            corpus="SB",
         )
     return rows
 
@@ -163,6 +172,7 @@ def conv_table(rows: list[dict]) -> list[dict]:
 # 2. Models / tests                                                           #
 # --------------------------------------------------------------------------- #
 
+
 def _cohens_d(a, b) -> float:
     a, b = np.asarray(a, float), np.asarray(b, float)
     na, nb = len(a), len(b)
@@ -183,9 +193,12 @@ def words_mixedlm(rows: list[dict], architecture: str, prompt_level: str) -> str
         import statsmodels.formula.api as smf
     except ImportError:
         return None
-    sub = [r for r in rows
-           if r["corpus"] == "SB"
-           or (r["architecture"] == architecture and r["prompt_level"] == prompt_level)]
+    sub = [
+        r
+        for r in rows
+        if r["corpus"] == "SB"
+        or (r["architecture"] == architecture and r["prompt_level"] == prompt_level)
+    ]
     df = pd.DataFrame(sub)
     if df.empty or df["corpus"].nunique() < 2:
         return f"  (insufficient data for {architecture}-{prompt_level} mixed model)"
@@ -196,7 +209,7 @@ def words_mixedlm(rows: list[dict], architecture: str, prompt_level: str) -> str
         # Default optimizer: method="lbfgs" silently stalls at beta=0, p=1 on these data
         # (verified 2026-10-05 on C2-P1/C4-P0 vs SB); the default converges correctly.
         res = md.fit(reml=True)
-    except Exception as e:                                    # singular fits, tiny n, etc.
+    except Exception as e:  # singular fits, tiny n, etc.
         return f"  (mixed model failed for {architecture}-{prompt_level}: {e})"
     lines = [f"  {architecture}-{prompt_level} vs SB  -  words ~ Corpus*Section + (1|ConvID)"]
     for name in res.params.index:
@@ -209,14 +222,19 @@ def words_mixedlm(rows: list[dict], architecture: str, prompt_level: str) -> str
 def welch_words(conv_rows: list[dict], architecture: str, prompt_level: str) -> str:
     """scipy fallback: per-conversation mean words, Welch t-test vs SB + Cohen's d."""
     sb = [c["mean_words"] for c in conv_rows if c["corpus"] == "SB"]
-    cond = [c["mean_words"] for c in conv_rows
-            if c["architecture"] == architecture and c["prompt_level"] == prompt_level]
+    cond = [
+        c["mean_words"]
+        for c in conv_rows
+        if c["architecture"] == architecture and c["prompt_level"] == prompt_level
+    ]
     if len(sb) < 2 or len(cond) < 2:
         return f"  {architecture}-{prompt_level}: n too small (SB={len(sb)}, cond={len(cond)})"
     t, p = stats.ttest_ind(cond, sb, equal_var=False)
     d = _cohens_d(cond, sb)
-    return (f"  {architecture}-{prompt_level}: mean w/turn {statistics.mean(cond):5.1f} "
-            f"vs SB {statistics.mean(sb):5.1f}  Welch t={t:6.2f} p={p:.3g}  d={d:5.2f}")
+    return (
+        f"  {architecture}-{prompt_level}: mean w/turn {statistics.mean(cond):5.1f} "
+        f"vs SB {statistics.mean(sb):5.1f}  Welch t={t:6.2f} p={p:.3g}  d={d:5.2f}"
+    )
 
 
 def marker_summary(conv_rows: list[dict], condition: str) -> str:
@@ -230,7 +248,7 @@ def marker_summary(conv_rows: list[dict], condition: str) -> str:
         cd = [c[f"{m}_rate"] for c in cond_rows]
         try:
             _, p = stats.mannwhitneyu(cd, sb, alternative="two-sided")
-        except ValueError:                                   # all-identical (e.g. all zero)
+        except ValueError:  # all-identical (e.g. all zero)
             p = float("nan")
         parts.append(f"{m} {statistics.mean(cd):.2f} vs {statistics.mean(sb):.2f} (p={p:.2g})")
     return "  ".join(parts)
@@ -247,8 +265,11 @@ def independence_gradient(conv_rows: list[dict], prompt_level: str, value_key: s
 
     groups, means, dist, x, y = {}, {}, {}, [], []
     for idx, arch in enumerate(ARCH_ORDER):
-        vals = [c[value_key] for c in conv_rows
-                if c["architecture"] == arch and c["prompt_level"] == prompt_level]
+        vals = [
+            c[value_key]
+            for c in conv_rows
+            if c["architecture"] == arch and c["prompt_level"] == prompt_level
+        ]
         if not vals:
             continue
         groups[arch] = vals
@@ -257,9 +278,18 @@ def independence_gradient(conv_rows: list[dict], prompt_level: str, value_key: s
         x += [idx] * len(vals)
         y += vals
 
-    res = {"prompt_level": prompt_level, "value_key": value_key, "sb_mean": sb_mean,
-           "means": means, "dist_to_sb": dist, "n_arch": len(groups),
-           "trend_rho": None, "trend_p": None, "kw_p": None, "closest_to_sb": None}
+    res = {
+        "prompt_level": prompt_level,
+        "value_key": value_key,
+        "sb_mean": sb_mean,
+        "means": means,
+        "dist_to_sb": dist,
+        "n_arch": len(groups),
+        "trend_rho": None,
+        "trend_p": None,
+        "kw_p": None,
+        "closest_to_sb": None,
+    }
     if len(groups) >= 2 and len(set(x)) >= 2:
         rho, p = stats.spearmanr(x, y)
         res["trend_rho"], res["trend_p"] = float(rho), float(p)
@@ -273,35 +303,47 @@ def independence_gradient(conv_rows: list[dict], prompt_level: str, value_key: s
 
 
 # --------------------------------------------------------------------------- #
-# 3. Optional ALIGN integration (VM produces the input)                       #
+# 3. Optional ALIGN integration (input written by export_align.py)            #
 # --------------------------------------------------------------------------- #
 
+
 def load_align_rows() -> list[dict]:
-    """Load ALIGN per-turn output if the VM has produced it.
+    """Load the ALIGN per-turn output written by ``analysis/export_align.py``.
 
     Expected CSV at ``data/align/alignment_turns.csv`` with columns:
         condition, conv_id, turn_index, n_turns, cosine_semanticL
     (``condition`` "SB" for the baseline). Returns conv-level rows shaped like
     :func:`conv_table` with an ``align`` value, or ``[]`` if the file is absent.
+    Loop-sensitivity rows (conditions ending in ``-noloop``) are skipped here; they are
+    analysed in ``analysis/alignment_checks.py``.
     """
     if not ALIGN_CSV.exists():
         return []
     import csv
+
     by_conv: dict[str, list[dict]] = defaultdict(list)
     with open(ALIGN_CSV, newline="", encoding="utf-8") as f:
         for row in csv.DictReader(f):
             by_conv[(row["condition"], row["conv_id"])].append(row)
     out = []
     for (condition, conv_id), rs in by_conv.items():
+        if condition.endswith("-noloop"):
+            continue
         vals = [float(r["cosine_semanticL"]) for r in rs if r.get("cosine_semanticL")]
         if not vals:
             continue
         arch = "SB" if condition == "SB" else condition.split("-")[0]
         plv = "SB" if condition == "SB" else condition.split("-")[-1]
-        out.append({"conv_id": f"{condition}/{conv_id}", "condition": condition,
-                    "architecture": arch, "prompt_level": plv,
-                    "corpus": "SB" if condition == "SB" else "LLM",
-                    "align": statistics.mean(vals)})
+        out.append(
+            {
+                "conv_id": f"{condition}/{conv_id}",
+                "condition": condition,
+                "architecture": arch,
+                "prompt_level": plv,
+                "corpus": "SB" if condition == "SB" else "LLM",
+                "align": statistics.mean(vals),
+            }
+        )
     return out
 
 
@@ -309,9 +351,11 @@ def load_align_rows() -> list[dict]:
 # 4. Figures (optional)                                                       #
 # --------------------------------------------------------------------------- #
 
+
 def make_figures(conv_rows: list[dict]) -> bool:
     try:
         import matplotlib
+
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
     except ImportError:
@@ -319,13 +363,19 @@ def make_figures(conv_rows: list[dict]) -> bool:
     FIG_DIR.mkdir(parents=True, exist_ok=True)
     sb_mean = statistics.mean([c["mean_words"] for c in conv_rows if c["corpus"] == "SB"] or [0])
     conds = sorted({c["condition"] for c in conv_rows if c["corpus"] == "LLM"})
-    means = [statistics.mean([c["mean_words"] for c in conv_rows if c["condition"] == k]) for k in conds]
+    means = [
+        statistics.mean([c["mean_words"] for c in conv_rows if c["condition"] == k]) for k in conds
+    ]
     fig, ax = plt.subplots(figsize=(9, 4))
     ax.bar(conds, means, color="#4c72b0")
     ax.axhline(sb_mean, color="crimson", ls="--", label=f"Switchboard ({sb_mean:.1f})")
-    ax.set_ylabel("mean words / turn"); ax.set_title("Words per turn by condition vs Switchboard")
-    ax.legend(); plt.xticks(rotation=45, ha="right"); fig.tight_layout()
-    fig.savefig(FIG_DIR / "words_per_turn.png", dpi=130); plt.close(fig)
+    ax.set_ylabel("mean words / turn")
+    ax.set_title("Words per turn by condition vs Switchboard")
+    ax.legend()
+    plt.xticks(rotation=45, ha="right")
+    fig.tight_layout()
+    fig.savefig(FIG_DIR / "words_per_turn.png", dpi=130)
+    plt.close(fig)
     return True
 
 
@@ -333,18 +383,32 @@ def make_figures(conv_rows: list[dict]) -> bool:
 # Report                                                                       #
 # --------------------------------------------------------------------------- #
 
+
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--n-sb", type=int, default=50,
-                    help="with --sb-first-n: number of Switchboard convs for the baseline")
-    ap.add_argument("--sb-first-n", action="store_true",
-                    help="use the first N Switchboard files instead of the topic-matched 50")
+    ap.add_argument(
+        "--n-sb",
+        type=int,
+        default=50,
+        help="with --sb-first-n: number of Switchboard convs for the baseline",
+    )
+    ap.add_argument(
+        "--sb-first-n",
+        action="store_true",
+        help="use the first N Switchboard files instead of the topic-matched 50",
+    )
     ap.add_argument("--figures", action="store_true", help="also write PNGs to analysis/figures/")
-    ap.add_argument("--data-dir", type=pathlib.Path, default=GEN_ROOT,
-                    help="generated condition folders (final data: data/generated)")
+    ap.add_argument(
+        "--data-dir",
+        type=pathlib.Path,
+        default=GEN_ROOT,
+        help="generated condition folders (final data: data/generated)",
+    )
     args = ap.parse_args()
 
-    rows = generated_rows(args.data_dir) + switchboard_rows(args.n_sb, topic_matched=not args.sb_first_n)
+    rows = generated_rows(args.data_dir) + switchboard_rows(
+        args.n_sb, topic_matched=not args.sb_first_n
+    )
     if not any(r["corpus"] == "LLM" for r in rows):
         print("No generated conversations found under data/generated/. Nothing to analyze.")
         return
@@ -352,7 +416,7 @@ def main() -> None:
     prompt_levels = sorted({c["prompt_level"] for c in convs if c["corpus"] == "LLM"})
 
     print("=" * 72)
-    print("PHASE 2 STATISTICS")
+    print("STATISTICS REPORT")
     n_llm = sum(c["corpus"] == "LLM" for c in convs)
     n_sb = sum(c["corpus"] == "SB" for c in convs)
     print(f"generated convs: {n_llm}   Switchboard convs: {n_sb}   prompt levels: {prompt_levels}")
@@ -373,25 +437,31 @@ def main() -> None:
                 print(welch_words(convs, arch, plv))
 
     # --- markers (P2 excluded as circular) ---
-    print("\n[2] MARKER RATES per 100 words vs SB  (Mann-Whitney; SB ref oh/okay/uh-huh "
-          f"= {PAPER_SB['oh']}/{PAPER_SB['okay']}/{PAPER_SB['uh-huh']})")
+    print(
+        "\n[2] MARKER RATES per 100 words vs SB  (Mann-Whitney; SB ref oh/okay/uh-huh "
+        f"= {PAPER_SB['oh']}/{PAPER_SB['okay']}/{PAPER_SB['uh-huh']})"
+    )
     for c in sorted({c["condition"] for c in convs if c["corpus"] == "LLM"}):
         if c.endswith("P2"):
             print(f"  {c}: SKIPPED (few-shot excerpt -> circular for lexical markers)")
             continue
         print(marker_summary(convs, c))
 
-    # --- alignment (if VM produced it) ---
+    # --- alignment (if export_align.py has been run) ---
     align = load_align_rows()
     print("\n[3] ALIGNMENT (cosine_semanticL)")
     if not align:
-        print(f"  ALIGN output not present yet - expected at {ALIGN_CSV.relative_to(ROOT)} "
-              "(produced on the VM). Skipping.")
+        print(
+            f"  ALIGN output not present yet - expected at {ALIGN_CSV.relative_to(ROOT)} "
+            "(run analysis/export_align.py first). Skipping."
+        )
     else:
         for plv in sorted({a["prompt_level"] for a in align if a["corpus"] == "LLM"}):
             g = independence_gradient(align, plv, "align")
-            print(f"  {plv}: SB={g['sb_mean']:.3f}  " +
-                  "  ".join(f"{a}={m:.3f}" for a, m in g["means"].items()))
+            print(
+                f"  {plv}: SB={g['sb_mean']:.3f}  "
+                + "  ".join(f"{a}={m:.3f}" for a, m in g["means"].items())
+            )
 
     # --- independence gradient on words/turn ---
     print("\n[4] INDEPENDENCE GRADIENT  C1->C2->C3->C4  (words/turn, per prompt level)")
@@ -401,18 +471,28 @@ def main() -> None:
         if g["n_arch"] < 2:
             print(f"  {plv}: <2 architectures present, skipping trend")
             continue
-        order = "  ".join(f"{a}={m:.1f}(dist {g['dist_to_sb'][a]:.1f})" for a, m in g["means"].items())
-        rho = g["trend_rho"]; tp = g["trend_p"]; kw = g["kw_p"]
+        order = "  ".join(
+            f"{a}={m:.1f}(dist {g['dist_to_sb'][a]:.1f})" for a, m in g["means"].items()
+        )
+        rho = g["trend_rho"]
+        tp = g["trend_p"]
+        kw = g["kw_p"]
         print(f"  {plv}: SB={g['sb_mean']:.1f} | {order}")
-        print(f"        Spearman rho={rho:+.2f} p={tp:.3g}  Kruskal p={kw:.3g}  "
-              f"closest to SB: {g['closest_to_sb']}")
+        print(
+            f"        Spearman rho={rho:+.2f} p={tp:.3g}  Kruskal p={kw:.3g}  "
+            f"closest to SB: {g['closest_to_sb']}"
+        )
 
     if args.figures:
         ok = make_figures(convs)
-        print(f"\n[figures] {'written to ' + str(FIG_DIR.relative_to(ROOT)) if ok else 'matplotlib not installed - skipped'}")
+        print(
+            f"\n[figures] {'written to ' + str(FIG_DIR.relative_to(ROOT)) if ok else 'matplotlib not installed - skipped'}"
+        )
 
-    print("\nNote: each condition uses whatever convs are present. Markers for P2 are omitted "
-          "as circular.")
+    print(
+        "\nNote: each condition uses whatever convs are present. Markers for P2 are omitted "
+        "as circular."
+    )
 
 
 if __name__ == "__main__":

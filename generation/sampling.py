@@ -34,12 +34,14 @@ from collections import defaultdict
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from analysis.swda import (                                              # noqa: E402
-    load_metadata, iter_conversation_files, conversation_no_of,
+from analysis.swda import (
+    conversation_no_of,
+    iter_conversation_files,
+    load_metadata,
 )
 
 MANIFEST = pathlib.Path(__file__).resolve().parent / "target_ids.json"
-DEFAULT_SEED = 20260714   # date the sampling design was decided; do not change casually
+DEFAULT_SEED = 20260714  # date the sampling design was decided; do not change casually
 DEFAULT_N = 50
 DEFAULT_DEV = 5
 
@@ -98,19 +100,22 @@ def main() -> None:
     ap.add_argument("--n", type=int, default=DEFAULT_N)
     ap.add_argument("--dev", type=int, default=DEFAULT_DEV)
     ap.add_argument("--seed", type=int, default=DEFAULT_SEED)
-    ap.add_argument("--write", action="store_true",
-                    help="write generation/target_ids.json (otherwise just print the draw)")
+    ap.add_argument(
+        "--write",
+        action="store_true",
+        help="write generation/target_ids.json (otherwise just print the draw)",
+    )
     args = ap.parse_args()
 
     meta = load_metadata()
     target, dev, allocation = stratified_sample(args.n, args.seed, meta)
-    dev = dev[:args.dev]
+    dev = dev[: args.dev]
 
     manifest = {
         "seed": args.seed,
         "n": len(target),
         "method": "topic-proportional stratified, largest-remainder rounding, "
-                  "seeded RNG within topic, seed-shuffled order (prefix ~ stratified)",
+        "seeded RNG within topic, seed-shuffled order (prefix ~ stratified)",
         "target_ids": target,
         "dev_ids": dev,
         "topic_allocation": allocation,

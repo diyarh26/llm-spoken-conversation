@@ -17,15 +17,15 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from generation.cleaning import LABELS  # noqa: E402
-from generation.model_utils import MISTRAL, VICUNA, chat, load_model  # noqa: E402
-from generation.runner import (  # noqa: E402
+from generation.cleaning import LABELS
+from generation.model_utils import MISTRAL, VICUNA, chat, load_model
+from generation.runner import (
     add_turnwise_args,
     base_parser,
     prepare_job,
     run_turnwise_job,
 )
-from prompts.templates import agent_view  # noqa: E402
+from prompts.templates import agent_view
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -43,13 +43,19 @@ def main(argv: list[str] | None = None) -> None:
     if not job.todo:
         return
 
-    print(f"loading {args.model_a} for {LABELS[0]}" + (f" on {args.device_a}" if args.device_a else ""))
+    print(
+        f"loading {args.model_a} for {LABELS[0]}"
+        + (f" on {args.device_a}" if args.device_a else "")
+    )
     model_a, tok_a = load_model(args.model_a, device=args.device_a)
     # Reuse one instance only when it is the SAME model AND not pinned to distinct GPUs.
     if args.model_b == args.model_a and args.device_a == args.device_b:
         model_b, tok_b = model_a, tok_a
     else:
-        print(f"loading {args.model_b} for {LABELS[1]}" + (f" on {args.device_b}" if args.device_b else ""))
+        print(
+            f"loading {args.model_b} for {LABELS[1]}"
+            + (f" on {args.device_b}" if args.device_b else "")
+        )
         model_b, tok_b = load_model(args.model_b, device=args.device_b)
 
     run_turnwise_job(

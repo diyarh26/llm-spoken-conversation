@@ -17,15 +17,15 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from generation.cleaning import LABELS  # noqa: E402
-from generation.model_utils import VICUNA, chat, load_model  # noqa: E402
-from generation.runner import (  # noqa: E402
+from generation.cleaning import LABELS
+from generation.model_utils import VICUNA, chat, load_model
+from generation.runner import (
     add_turnwise_args,
     base_parser,
     prepare_job,
     run_turnwise_job,
 )
-from prompts.templates import agent_view  # noqa: E402
+from prompts.templates import agent_view
 
 
 def main(argv: list[str] | None = None) -> None:

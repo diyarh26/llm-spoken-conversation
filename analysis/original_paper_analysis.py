@@ -54,10 +54,13 @@ from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from analysis.analyze import conversation_turns                          # noqa: E402
-from analysis.metrics import marker_counts, words_per_turn as _wpt        # noqa: E402
-from analysis.swda import (                                              # noqa: E402
-    iter_conversation_files, parse_conversation, conversation_no_of,
+from analysis.analyze import conversation_turns
+from analysis.metrics import marker_counts
+from analysis.metrics import words_per_turn as _wpt
+from analysis.swda import (
+    conversation_no_of,
+    iter_conversation_files,
+    parse_conversation,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -70,6 +73,7 @@ ARCHITECTURES = ["C1", "C2", "C3", "C4"]  # C3/C4 = A3/A4 in the presentation, s
 # --------------------------------------------------------------------------------------- #
 # Data loading -- one row per conversation (turn length, markers) or per turn-pair (align) #
 # --------------------------------------------------------------------------------------- #
+
 
 def load_per_conversation_table(n_sb: int = 50, prompt_level: str = "P0") -> pd.DataFrame:
     """One row per conversation: condition, mean words/turn, oh/okay/uh-huh rate per 100 words.
@@ -91,6 +95,7 @@ def load_per_conversation_table(n_sb: int = 50, prompt_level: str = "P0") -> pd.
             continue
         for fp in sorted(cond_dir.glob("*.json")):
             import json
+
             rec = json.loads(fp.read_text(encoding="utf-8"))
             turns = conversation_turns(rec)
             if not turns:
@@ -128,15 +133,17 @@ def load_alignment_table(csv_path: pathlib.Path = ALIGN_CSV_DEFAULT) -> pd.DataF
             ti = int(row["turn_index"])
             if ti >= 10:
                 continue
-            rows.append({
-                "condition": row["condition"],
-                "conv_id": row["conv_id"],
-                "turn_index": ti,
-                "section": "Earlier" if ti < 5 else "Later",
-                "cosine_semanticL": _to_float(row.get("cosine_semanticL")),
-                "syntax_stan": _to_float(row.get("syntax_stan")),
-                "lexical": _to_float(row.get("lexical")),
-            })
+            rows.append(
+                {
+                    "condition": row["condition"],
+                    "conv_id": row["conv_id"],
+                    "turn_index": ti,
+                    "section": "Earlier" if ti < 5 else "Later",
+                    "cosine_semanticL": _to_float(row.get("cosine_semanticL")),
+                    "syntax_stan": _to_float(row.get("syntax_stan")),
+                    "lexical": _to_float(row.get("lexical")),
+                }
+            )
     return pd.DataFrame(rows)
 
 
@@ -151,6 +158,7 @@ def _to_float(v):
 # 1. Turn length -- port of the paper's Section 2.4.1 design (no R file was released)      #
 # --------------------------------------------------------------------------------------- #
 
+
 def run_turn_length_analysis(df: pd.DataFrame) -> None:
     """words_per_turn ~ Model, SB as reference, all corpora in ONE model (omnibus F-test).
 
@@ -161,33 +169,35 @@ def run_turn_length_analysis(df: pd.DataFrame) -> None:
     (see module docstring, point 1, for why this isn't split by phase).
     """
     print("\n=== Turn length: mean_words_per_turn ~ Model (SB = reference) ===")
-    model = smf.ols(
-        "mean_words_per_turn ~ C(condition, Treatment(reference='SB'))", data=df
-    ).fit()
+    model = smf.ols("mean_words_per_turn ~ C(condition, Treatment(reference='SB'))", data=df).fit()
     print(model.summary())
-    print(f"\nOmnibus F({model.df_model:.0f}, {model.df_resid:.0f}) = {model.fvalue:.2f}, "
-          f"p = {model.f_pvalue:.3g}")
+    print(
+        f"\nOmnibus F({model.df_model:.0f}, {model.df_resid:.0f}) = {model.fvalue:.2f}, "
+        f"p = {model.f_pvalue:.3g}"
+    )
 
 
 # --------------------------------------------------------------------------------------- #
 # 2. Coordination markers -- line-for-line port of MarkersAnalyses.R                        #
 # --------------------------------------------------------------------------------------- #
 
+
 def run_marker_analysis(df: pd.DataFrame) -> None:
     """oh/okay/uh_huh ~ Model, SB releveled as the reference (exactly MarkersAnalyses.R)."""
     for marker in ("okay", "uh_huh", "oh"):
         print(f"\n=== Coordination marker: {marker} ~ Model (SB = reference) ===")
-        model = smf.ols(
-            f"{marker} ~ C(condition, Treatment(reference='SB'))", data=df
-        ).fit()
+        model = smf.ols(f"{marker} ~ C(condition, Treatment(reference='SB'))", data=df).fit()
         print(model.summary())
-        print(f"\nF({model.df_model:.0f}, {model.df_resid:.0f}) = {model.fvalue:.2f}, "
-              f"p = {model.f_pvalue:.3g}   (paper's okay: F=45.97, uh-huh: F=317.93, oh: F=244.09)")
+        print(
+            f"\nF({model.df_model:.0f}, {model.df_resid:.0f}) = {model.fvalue:.2f}, "
+            f"p = {model.f_pvalue:.3g}   (paper's okay: F=45.97, uh-huh: F=317.93, oh: F=244.09)"
+        )
 
 
 # --------------------------------------------------------------------------------------- #
 # 3. Alignment -- line-for-line port of AlignAnalyseOSF.R                                   #
 # --------------------------------------------------------------------------------------- #
+
 
 def run_alignment_analysis(df: pd.DataFrame, architecture: str) -> None:
     """cosine_semanticL / syntax_stan / lexical ~ Condition * Section + (1|Conv).
@@ -206,11 +216,15 @@ def run_alignment_analysis(df: pd.DataFrame, architecture: str) -> None:
     for dv in ("cosine_semanticL", "syntax_stan", "lexical"):
         sub_dv = sub.dropna(subset=[dv])
         if sub_dv.empty:
-            print(f"\n=== {dv} ({architecture} vs SB): no data -- "
-                  f"re-run export_align.py to populate this column ===")
+            print(
+                f"\n=== {dv} ({architecture} vs SB): no data -- "
+                f"re-run export_align.py to populate this column ==="
+            )
             continue
-        print(f"\n=== Alignment: {dv} ~ Condition * Section + (1|Conv), "
-              f"reference = {architecture} ===")
+        print(
+            f"\n=== Alignment: {dv} ~ Condition * Section + (1|Conv), "
+            f"reference = {architecture} ==="
+        )
         formula = f"{dv} ~ C(condition, Treatment(reference='{architecture}')) * section"
         model = smf.mixedlm(formula, data=sub_dv, groups=sub_dv["conv_id"])
         result = model.fit(reml=True)
@@ -219,13 +233,16 @@ def run_alignment_analysis(df: pd.DataFrame, architecture: str) -> None:
         # VIF on the fixed-effects design matrix, as vif(mAGa.Cosine) etc. did in the R script.
         try:
             import patsy
+
             X = patsy.dmatrix(
                 f"C(condition, Treatment(reference='{architecture}')) * section",
-                sub_dv, return_type="dataframe",
+                sub_dv,
+                return_type="dataframe",
             )
             vifs = {
                 col: variance_inflation_factor(X.values, i)
-                for i, col in enumerate(X.columns) if col != "Intercept"
+                for i, col in enumerate(X.columns)
+                if col != "Intercept"
             }
             print("VIF:", {k: round(v, 2) for k, v in vifs.items()})
         except Exception as e:
@@ -233,7 +250,9 @@ def run_alignment_analysis(df: pd.DataFrame, architecture: str) -> None:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument("--turn-length", action="store_true")
     ap.add_argument("--markers", action="store_true")
     ap.add_argument("--alignment", action="store_true")

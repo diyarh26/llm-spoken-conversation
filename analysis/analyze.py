@@ -15,16 +15,20 @@ from __future__ import annotations
 
 import glob
 import json
-import re
 import pathlib
+import re
 import statistics
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from analysis.metrics import marker_rates, words_per_turn          # noqa: E402
-from analysis.swda import (                                        # noqa: E402
-    iter_conversation_files, parse_conversation, words_per_turn as sb_words_per_turn,
+from analysis.metrics import marker_rates, words_per_turn
+from analysis.swda import (
+    iter_conversation_files,
+    parse_conversation,
+)
+from analysis.swda import (
+    words_per_turn as sb_words_per_turn,
 )
 
 GEN_ROOT = pathlib.Path(__file__).resolve().parent.parent / "data" / "generated"
@@ -50,8 +54,11 @@ def conversation_turns(rec: dict) -> list[tuple[str, str]]:
                 if txt.strip():
                     turns.append((spk.strip(), txt.strip()))
     n_seed = 0
-    while (n_seed < int(rec.get("seed_turns", 0)) and n_seed < len(turns)
-           and turns[n_seed][1].strip().strip('"').lower() == "hello!"):
+    while (
+        n_seed < int(rec.get("seed_turns", 0))
+        and n_seed < len(turns)
+        and turns[n_seed][1].strip().strip('"').lower() == "hello!"
+    ):
         n_seed += 1
     turns = turns[n_seed:]
     # P3 shows examples with "[backchannel]"-style labels; if the model copies one into its
@@ -70,9 +77,9 @@ def conversation_turns(rec: dict) -> list[tuple[str, str]]:
 
 
 def _cut_language_drift(text: str) -> str:
-    text = text.replace("�", "")          # undecodable-byte debris ("�����")
+    text = text.replace("�", "")  # undecodable-byte debris ("�����")
     m = _NON_LATIN_RE.search(text)
-    return text[:m.start()].strip() if m else text
+    return text[: m.start()].strip() if m else text
 
 
 def has_language_drift(rec: dict) -> bool:
@@ -86,7 +93,9 @@ def _p3_label_re():
     or "[statement, opinion]" — used by conversation_turns() to strip them if a model
     echoes one of its own shown examples back into a turn instead of just the dialogue."""
     import re
+
     from analysis.swda import ACT_NAMES
+
     names = sorted(set(ACT_NAMES.values()) | {"other"}, key=len, reverse=True)
     alt = "|".join(re.escape(n) for n in names)
     return re.compile(rf"\s*\[(?:{alt})(?:,\s*(?:{alt}))*\]", re.I)
@@ -123,7 +132,7 @@ def main() -> None:
     all conditions alongside the Switchboard baseline for a quick side-by-side read."""
     conds: dict[str, dict] = {}
     for f in sorted(glob.glob(str(GEN_ROOT / "*" / "*.json"))):
-        rec = json.load(open(f, encoding="utf-8"))
+        rec = json.loads(pathlib.Path(f).read_text(encoding="utf-8"))
         turns = conversation_turns(rec)
         if not turns:
             continue
@@ -140,14 +149,18 @@ def main() -> None:
     print(hdr)
     print("-" * len(hdr))
     sb_r = {k: statistics.mean(v) for k, v in sb["rates"].items()}
-    print(f"{'SWITCHBD':10} {sb['n']:>3} {statistics.mean(sb['wpt']):7.1f} "
-          f"{sb_r['oh']:6.2f} {sb_r['okay']:6.2f} {sb_r['uh-huh']:7.2f}")
+    print(
+        f"{'SWITCHBD':10} {sb['n']:>3} {statistics.mean(sb['wpt']):7.1f} "
+        f"{sb_r['oh']:6.2f} {sb_r['okay']:6.2f} {sb_r['uh-huh']:7.2f}"
+    )
     print("-" * len(hdr))
     for cond in sorted(conds):
         c = conds[cond]
-        print(f"{cond:10} {c['n']:>3} {statistics.mean(c['wpt']):7.1f} "
-              f"{statistics.mean(c['oh']):6.2f} {statistics.mean(c['okay']):6.2f} "
-              f"{statistics.mean(c['uh-huh']):7.2f}")
+        print(
+            f"{cond:10} {c['n']:>3} {statistics.mean(c['wpt']):7.1f} "
+            f"{statistics.mean(c['oh']):6.2f} {statistics.mean(c['okay']):6.2f} "
+            f"{statistics.mean(c['uh-huh']):7.2f}"
+        )
     print("\n(Switchboard ref from paper: ~14 w/turn; oh 0.57, okay 0.16, uh-huh 1.03)")
 
 

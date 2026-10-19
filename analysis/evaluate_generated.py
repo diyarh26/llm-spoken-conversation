@@ -45,17 +45,13 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 # ---------------------------------------------------------------------------
 
 MARKER_PAT = {
-    "oh":     re.compile(r"\boh\b", re.I),
-    "okay":   re.compile(r"\b(?:okay|ok)\b", re.I),
+    "oh": re.compile(r"\boh\b", re.I),
+    "okay": re.compile(r"\b(?:okay|ok)\b", re.I),
     "uh_huh": re.compile(r"\buh-?\s?huh\b", re.I),
 }
 
-BACKCHANNEL_FULL = re.compile(
-    r"^\s*(uh-?huh|okay|ok|mm-?hm|yeah|right|sure)[\s.,!?]*$", re.I
-)
-BACKCHANNEL_PRESENCE = re.compile(
-    r"\b(uh-?huh|okay|ok|mm-?hm)\b", re.I
-)
+BACKCHANNEL_FULL = re.compile(r"^\s*(uh-?huh|okay|ok|mm-?hm|yeah|right|sure)[\s.,!?]*$", re.I)
+BACKCHANNEL_PRESENCE = re.compile(r"\b(uh-?huh|okay|ok|mm-?hm)\b", re.I)
 
 # Expanded listener-feedback lexicon -- "Improving Backchannel Analysis": the original
 # paper only tracked oh/okay/uh-huh; these additional forms (yeah, right, mm-hmm, i see,
@@ -65,13 +61,13 @@ BACKCHANNEL_PRESENCE = re.compile(
 # detector and the whole-turn "is this JUST a backchannel" check.
 BACKCHANNEL_PHRASES: list[tuple[str, str]] = [
     ("uh_huh", r"uh-?\s?huh"),
-    ("okay",   r"(?:okay|ok)"),
-    ("oh",     r"oh"),
-    ("yeah",   r"yeah"),
-    ("right",  r"right"),
+    ("okay", r"(?:okay|ok)"),
+    ("oh", r"oh"),
+    ("yeah", r"yeah"),
+    ("right", r"right"),
     ("mm_hmm", r"mm+[\s-]?hmm?"),
-    ("i_see",  r"i see"),
-    ("sure",   r"sure"),
+    ("i_see", r"i see"),
+    ("sure", r"sure"),
 ]
 BACKCHANNEL_LEXICON: dict[str, re.Pattern] = {
     name: re.compile(rf"\b{phrase}\b", re.I) for name, phrase in BACKCHANNEL_PHRASES
@@ -81,38 +77,106 @@ BACKCHANNEL_LEXICON: dict[str, re.Pattern] = {
 # or more lexicon tokens only (joined by light punctuation/conjunctions) -- i.e. the turn
 # carries no additional propositional content beyond the listener signal itself.
 _BC_TOKEN_ALT = "|".join(phrase for _, phrase in BACKCHANNEL_PHRASES)
-BACKCHANNEL_STANDALONE_FULL = re.compile(
-    rf"^\s*(?:(?:{_BC_TOKEN_ALT})[\s,.!]*(?:and\s+)?)+$", re.I
-)
+BACKCHANNEL_STANDALONE_FULL = re.compile(rf"^\s*(?:(?:{_BC_TOKEN_ALT})[\s,.!]*(?:and\s+)?)+$", re.I)
 
 REPAIR_REPEATS_RE = re.compile(r"\b(\w+)\s+\1\b", re.I)
 REPAIR_MARKERS_RE = re.compile(r"-\s|I mean\b|or rather\b", re.I)
 
 CLOSING_STAGES = {
-    "pre_closing":   re.compile(r"\bokay\b|\ball right\b|\bwell\b", re.I),
+    "pre_closing": re.compile(r"\bokay\b|\ball right\b|\bwell\b", re.I),
     "justification": re.compile(r"\bi (should|have to|need to|gotta) go\b", re.I),
-    "well_wishing":  re.compile(r"\bhave a (nice|good|great)\b|\btake care\b|\bgood luck\b", re.I),
-    "goodbye":       re.compile(r"\bbye\b|\bgoodbye\b|\bsee you\b|\bsee ya\b", re.I),
+    "well_wishing": re.compile(r"\bhave a (nice|good|great)\b|\btake care\b|\bgood luck\b", re.I),
+    "goodbye": re.compile(r"\bbye\b|\bgoodbye\b|\bsee you\b|\bsee ya\b", re.I),
 }
 CLOSING_ORDER = ["pre_closing", "justification", "well_wishing", "goodbye"]
 
 SYCOPHANCY_PHRASES = [
-    "that's a great point", "i really agree", "absolutely",
-    "you're right that", "great question", "i love that",
-    "that's a really good point", "i completely agree",
-    "that's so true", "i totally agree", "great point",
-    "definitely", "exactly right",
+    "that's a great point",
+    "i really agree",
+    "absolutely",
+    "you're right that",
+    "great question",
+    "i love that",
+    "that's a really good point",
+    "i completely agree",
+    "that's so true",
+    "i totally agree",
+    "great point",
+    "definitely",
+    "exactly right",
 ]
 
 STOP_WORDS = {
-    "a", "an", "the", "and", "or", "but", "in", "on", "at", "to",
-    "for", "of", "with", "is", "it", "i", "you", "he", "she", "we",
-    "they", "was", "are", "be", "been", "being", "have", "has", "had",
-    "do", "does", "did", "will", "would", "could", "should", "may",
-    "might", "that", "this", "these", "those", "my", "your", "his",
-    "her", "our", "their", "its", "not", "no", "so", "as", "if",
-    "up", "out", "about", "just", "like", "what", "when", "how",
-    "there", "then", "than", "from", "by", "into", "over", "also",
+    "a",
+    "an",
+    "the",
+    "and",
+    "or",
+    "but",
+    "in",
+    "on",
+    "at",
+    "to",
+    "for",
+    "of",
+    "with",
+    "is",
+    "it",
+    "i",
+    "you",
+    "he",
+    "she",
+    "we",
+    "they",
+    "was",
+    "are",
+    "be",
+    "been",
+    "being",
+    "have",
+    "has",
+    "had",
+    "do",
+    "does",
+    "did",
+    "will",
+    "would",
+    "could",
+    "should",
+    "may",
+    "might",
+    "that",
+    "this",
+    "these",
+    "those",
+    "my",
+    "your",
+    "his",
+    "her",
+    "our",
+    "their",
+    "its",
+    "not",
+    "no",
+    "so",
+    "as",
+    "if",
+    "up",
+    "out",
+    "about",
+    "just",
+    "like",
+    "what",
+    "when",
+    "how",
+    "there",
+    "then",
+    "than",
+    "from",
+    "by",
+    "into",
+    "over",
+    "also",
 }
 
 # ---------------------------------------------------------------------------
@@ -137,14 +201,16 @@ def load_conversations(data_dir: pathlib.Path) -> list[dict]:
     scripted "Hello!" seeds dropped, stage directions and language drift removed — the same
     turns every other metric (dialogue acts, ALIGN, stats) sees."""
     from analysis.analyze import conversation_turns
+
     convs = []
     for json_file in sorted(data_dir.rglob("*.json")):
         with json_file.open(encoding="utf-8") as f:
             data = json.load(f)
         turns = conversation_turns(data)
         if turns:
-            convs.append({**data, "turns": turns,
-                          "file": json_file.relative_to(data_dir).as_posix()})
+            convs.append(
+                {**data, "turns": turns, "file": json_file.relative_to(data_dir).as_posix()}
+            )
     return convs
 
 
@@ -154,13 +220,22 @@ def load_switchboard_reference() -> list[dict]:
     same metric functions. Only numbers are written out, never Switchboard text."""
     from analysis.swda import conversation_no_of, iter_conversation_files, parse_conversation
     from generation.sampling import load_target_ids
+
     targets = set(load_target_ids())
     convs = []
     for fp in iter_conversation_files():
         no = conversation_no_of(fp)
         if no in targets:
-            convs.append({"condition": "SB", "architecture": "human", "prompt_level": "-",
-                          "conversation_no": no, "turns": parse_conversation(fp), "file": None})
+            convs.append(
+                {
+                    "condition": "SB",
+                    "architecture": "human",
+                    "prompt_level": "-",
+                    "conversation_no": no,
+                    "turns": parse_conversation(fp),
+                    "file": None,
+                }
+            )
     if len(convs) != len(targets):
         raise RuntimeError(f"found {len(convs)}/{len(targets)} target Switchboard conversations")
     return convs
@@ -169,6 +244,7 @@ def load_switchboard_reference() -> list[dict]:
 # ---------------------------------------------------------------------------
 # Metric functions (all take `turns: list[tuple[str, str]]`)
 # ---------------------------------------------------------------------------
+
 
 def _quartiles(values: list[int]) -> tuple[float, float]:
     """Q1, Q3 via the same method as statistics.quantiles(n=4, method='exclusive')."""
@@ -227,7 +303,7 @@ def m5_backchannel_standalone(turns):
 
 
 def m_backchannel_analysis(turns):
-    """"Improving Backchannel Analysis": rate, standalone rate, and diversity of listener
+    """ "Improving Backchannel Analysis": rate, standalone rate, and diversity of listener
     feedback tokens, over the expanded BACKCHANNEL_LEXICON (not just oh/okay/uh-huh).
 
     1. backchannel_rate_per_100w : Rate(token) = (#occurrences / total words) * 100,
@@ -260,7 +336,9 @@ def m_backchannel_analysis(turns):
     return {
         "backchannel_rate_per_100w": round(rate_per_100w, 4),
         "n_backchannel_occurrences": total_occurrences,
-        "backchannel_standalone_rate": round(standalone_rate, 4) if standalone_rate is not None else None,
+        "backchannel_standalone_rate": round(standalone_rate, 4)
+        if standalone_rate is not None
+        else None,
         "n_backchannel_turns_any": len(has_bc),
         "backchannel_diversity_types": types_used,
         "backchannel_diversity_ratio": round(diversity_ratio, 4),
@@ -368,15 +446,16 @@ def m10_info_density_variance(turns):
 # Per-conversation evaluation
 # ---------------------------------------------------------------------------
 
+
 def evaluate_conversation(conv: dict) -> dict:
     turns = conv["turns"]
     metrics = {
-        "condition":       conv.get("condition"),
-        "architecture":    conv.get("architecture"),
-        "prompt_level":    conv.get("prompt_level"),
+        "condition": conv.get("condition"),
+        "architecture": conv.get("architecture"),
+        "prompt_level": conv.get("prompt_level"),
         "conversation_no": conv.get("conversation_no"),
-        "topic":           conv.get("topic"),
-        "file":            conv.get("file"),
+        "topic": conv.get("topic"),
+        "file": conv.get("file"),
     }
     metrics.update(m1_turn_length(turns))
     metrics.update(m2_marker_rates(turns))
@@ -398,19 +477,31 @@ def evaluate_conversation(conv: dict) -> dict:
 # ---------------------------------------------------------------------------
 
 NUMERIC_KEYS = [
-    "mean_words_per_turn", "median_words_per_turn", "stdev_words_per_turn",
-    "q1_words_per_turn", "q3_words_per_turn", "iqr_words_per_turn",
+    "mean_words_per_turn",
+    "median_words_per_turn",
+    "stdev_words_per_turn",
+    "q1_words_per_turn",
+    "q3_words_per_turn",
+    "iqr_words_per_turn",
     "n_turns",
-    "rate_oh", "rate_okay", "rate_uh_huh",
+    "rate_oh",
+    "rate_okay",
+    "rate_uh_huh",
     "pct_short_turns",
-    "backchannel_standalone_ratio", "n_backchannel_turns",
-    "backchannel_rate_per_100w", "n_backchannel_occurrences",
-    "backchannel_standalone_rate", "n_backchannel_turns_any",
-    "backchannel_diversity_types", "backchannel_diversity_ratio",
-    "oh_epistemic_ratio", "n_oh",
+    "backchannel_standalone_ratio",
+    "n_backchannel_turns",
+    "backchannel_rate_per_100w",
+    "n_backchannel_occurrences",
+    "backchannel_standalone_rate",
+    "n_backchannel_turns_any",
+    "backchannel_diversity_types",
+    "backchannel_diversity_ratio",
+    "oh_epistemic_ratio",
+    "n_oh",
     "self_repair_per_100",
     "closing_order_correct",
-    "sycophancy_rate_per_100w", "sycophancy_turn_open_frac",
+    "sycophancy_rate_per_100w",
+    "sycophancy_turn_open_frac",
     "info_density_cv",
 ]
 
@@ -447,7 +538,7 @@ def summary_to_csv(summary: dict, out_path: pathlib.Path) -> None:
 
     with out_path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["condition", "n"] + all_cols)
+        writer.writerow(["condition", "n", *all_cols])
         for cond in conditions:
             row = [cond, summary[cond].get("n", "")]
             for col in all_cols:
@@ -459,20 +550,24 @@ def summary_to_csv(summary: dict, out_path: pathlib.Path) -> None:
 # Main
 # ---------------------------------------------------------------------------
 
+
 def main():
     ap = argparse.ArgumentParser(description="Evaluate generated conversations")
     ap.add_argument("--data_dir", default="data/generated")
     ap.add_argument("--out_dir", default="results")
-    ap.add_argument("--switchboard", action="store_true",
-                    help="also score the 50 topic-matched Switchboard conversations (condition SB)")
+    ap.add_argument(
+        "--switchboard",
+        action="store_true",
+        help="also score the 50 topic-matched Switchboard conversations (condition SB)",
+    )
     args = ap.parse_args()
 
     base = pathlib.Path(__file__).resolve().parent.parent
     data_dir = base / args.data_dir
-    out_dir  = base / args.out_dir
+    out_dir = base / args.out_dir
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"Loading conversations from {data_dir} …")
+    print(f"Loading conversations from {data_dir} ...")
     convs = load_conversations(data_dir)
     if args.switchboard:
         convs += load_switchboard_reference()
@@ -481,23 +576,23 @@ def main():
         print("Nothing to evaluate.")
         sys.exit(1)
 
-    print("Computing metrics …")
+    print("Computing metrics ...")
     records = [evaluate_conversation(c) for c in convs]
 
     per_conv_path = out_dir / "metrics_per_conversation.json"
     with per_conv_path.open("w", encoding="utf-8") as f:
         json.dump(records, f, indent=2, ensure_ascii=False)
-    print(f"  Saved per-conversation results → {per_conv_path}")
+    print(f"  Saved per-conversation results -> {per_conv_path}")
 
     summary = summarise(records)
     summary_json_path = out_dir / "metrics_summary.json"
     with summary_json_path.open("w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2)
-    print(f"  Saved condition summary       → {summary_json_path}")
+    print(f"  Saved condition summary       -> {summary_json_path}")
 
     summary_csv_path = out_dir / "metrics_summary.csv"
     summary_to_csv(summary, summary_csv_path)
-    print(f"  Saved condition summary CSV   → {summary_csv_path}")
+    print(f"  Saved condition summary CSV   -> {summary_csv_path}")
 
     print("\n=== Quick summary ===")
     for cond, stats in sorted(summary.items()):
@@ -512,7 +607,9 @@ def main():
         print(f"  backchannel standalone   : {stats.get('backchannel_standalone_ratio_mean', '—')}")
         print(f"  backchannel rate/100w    : {stats.get('backchannel_rate_per_100w_mean', '—')}")
         print(f"  backchannel standalone % : {stats.get('backchannel_standalone_rate_mean', '—')}")
-        print(f"  backchannel diversity    : {stats.get('backchannel_diversity_types_mean', '—')} / 8 types")
+        print(
+            f"  backchannel diversity    : {stats.get('backchannel_diversity_types_mean', '—')} / 8 types"
+        )
         print(f"  oh epistemic ratio       : {stats.get('oh_epistemic_ratio_mean', '—')}")
         print(f"  self-repair/100w         : {stats.get('self_repair_per_100_mean', '—')}")
         print(f"  closing order correct    : {stats.get('closing_order_correct_mean', '—')}")

@@ -6,6 +6,7 @@ The noise floor in dialogue_acts.py resamples *units*; this resamples whole *con
 
     python analysis/jsd_bootstrap.py --cache <dialogtag cache json> [--reps 2000]
 """
+
 from __future__ import annotations
 
 import argparse
@@ -18,7 +19,7 @@ import numpy as np
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from analysis.dialogue_acts import COARSE_LABELS, FINE_TO_COARSE, js_divergence, load_generated  # noqa: E402
+from analysis.dialogue_acts import COARSE_LABELS, FINE_TO_COARSE, js_divergence, load_generated
 
 IDX = {c: i for i, c in enumerate(COARSE_LABELS)}
 
@@ -36,7 +37,7 @@ def main() -> None:
     ap.add_argument("--reps", type=int, default=2000)
     ap.add_argument("--out", default=str(ROOT / "results" / "da_jsd_bootstrap.csv"))
     args = ap.parse_args()
-    cache = json.load(open(args.cache, encoding="utf-8"))
+    cache = json.loads(pathlib.Path(args.cache).read_text(encoding="utf-8"))
     memo = cache["generated_unit_labels"]
     human = np.array([counts(r["fine_labels"]) for r in cache["human"]])
     by_cond: dict[str, list[np.ndarray]] = {}
@@ -59,7 +60,10 @@ def main() -> None:
         lo, hi = np.quantile(reps, [0.025, 0.975])
         lines.append(f"{cond},{point:.4f},{lo:.4f},{hi:.4f}")
     # architecture-level contrasts (pooled over prompts): C1 vs each other architecture
-    arch = {a: np.mean([boots[f"{a}-{p}"] for p in ("P0", "P1", "P2")], axis=0) for a in ("C1", "C2", "C3", "C4")}
+    arch = {
+        a: np.mean([boots[f"{a}-{p}"] for p in ("P0", "P1", "P2")], axis=0)
+        for a in ("C1", "C2", "C3", "C4")
+    }
     lines.append("")
     lines.append("contrast,mean_diff,ci_low,ci_high,share_of_reps_C1_closer")
     for a in ("C2", "C3", "C4"):

@@ -9,6 +9,7 @@ Reads annotation/sheets/annotator_*.xlsx (filled) + annotation/_key.csv and repo
 
     python analysis/score_annotation.py [--sheets annotation/sheets] [--out results]
 """
+
 from __future__ import annotations
 
 import argparse
@@ -49,8 +50,9 @@ def main() -> None:
     ap.add_argument("--out", default=str(ROOT / "results"))
     args = ap.parse_args()
 
-    key = list(csv.DictReader(open(args.key, encoding="utf-8")))
-    labels: dict[str, dict[int, str]] = defaultdict(dict)       # item -> annotator -> label
+    with open(args.key, encoding="utf-8") as f:
+        key = list(csv.DictReader(f))
+    labels: dict[str, dict[int, str]] = defaultdict(dict)  # item -> annotator -> label
     tagger, shared = {}, {}
     missing = 0
     for a in sorted({int(k["annotator"]) for k in key}):
@@ -59,7 +61,9 @@ def main() -> None:
             print(f"(annotator {a}: no sheet yet — skipped)")
             continue
         ws = load_workbook(path)["Label these"]
-        answers = {int(r[0]): (r[4] or "").strip() for r in ws.iter_rows(min_row=2, values_only=True)}
+        answers = {
+            int(r[0]): (r[4] or "").strip() for r in ws.iter_rows(min_row=2, values_only=True)
+        }
         for k in (k for k in key if int(k["annotator"]) == a):
             lab = answers.get(int(k["row"]), "")
             tagger[k["item_id"]], shared[k["item_id"]] = k["tagger_coarse"], k["shared"] == "1"
@@ -76,18 +80,33 @@ def main() -> None:
             human[item] = top[0][0]
     hits = sum(human[i] == tagger[i] for i in human)
     lo, hi = wilson(hits, len(human))
-    lines = [f"# Tagger hand-check ({len(human)} units scored; {missing} blank answers)", "",
-             f"Tagger accuracy vs humans: {hits}/{len(human)} = {hits / len(human):.0%} "
-             f"(95% CI {lo:.0%}-{hi:.0%})", ""]
+    lines = [
+        f"# Tagger hand-check ({len(human)} units scored; {missing} blank answers)",
+        "",
+        f"Tagger accuracy vs humans: {hits}/{len(human)} = {hits / len(human):.0%} "
+        f"(95% CI {lo:.0%}-{hi:.0%})",
+        "",
+    ]
 
     sh = [i for i in labels if shared[i] and len(labels[i]) >= 2]
     if sh:
-        pairs = [labels[i][x] == labels[i][y] for i in sh for x, y in itertools.combinations(sorted(labels[i]), 2)]
-        complete = [list(labels[i].values()) for i in sh if len(labels[i]) == max(len(labels[j]) for j in sh)]
-        lines += [f"Human-human agreement on {len(sh)} shared units: {sum(pairs) / len(pairs):.0%} pairwise"
-                  + (f", Fleiss' kappa {fleiss_kappa(complete):.2f}" if len(complete) >= 2 else ""),
-                  f"Tagger vs human majority on the shared units: "
-                  f"{sum(human[i] == tagger[i] for i in sh if i in human)}/{sum(i in human for i in sh)}", ""]
+        pairs = [
+            labels[i][x] == labels[i][y]
+            for i in sh
+            for x, y in itertools.combinations(sorted(labels[i]), 2)
+        ]
+        complete = [
+            list(labels[i].values())
+            for i in sh
+            if len(labels[i]) == max(len(labels[j]) for j in sh)
+        ]
+        lines += [
+            f"Human-human agreement on {len(sh)} shared units: {sum(pairs) / len(pairs):.0%} pairwise"
+            + (f", Fleiss' kappa {fleiss_kappa(complete):.2f}" if len(complete) >= 2 else ""),
+            f"Tagger vs human majority on the shared units: "
+            f"{sum(human[i] == tagger[i] for i in sh if i in human)}/{sum(i in human for i in sh)}",
+            "",
+        ]
 
     lines += ["Per human label (how often the tagger gave the same label):"]
     by_h = defaultdict(list)
@@ -96,7 +115,9 @@ def main() -> None:
     for h, v in sorted(by_h.items(), key=lambda kv: -len(kv[1])):
         lines.append(f"  {h:26} {sum(v)}/{len(v)}")
     lines += ["", "Confusion (human -> tagger), disagreements only:"]
-    for (h, t), n in Counter((human[i], tagger[i]) for i in human if human[i] != tagger[i]).most_common():
+    for (h, t), n in Counter(
+        (human[i], tagger[i]) for i in human if human[i] != tagger[i]
+    ).most_common():
         lines.append(f"  {h:26} -> {t:26} {n}")
     out = pathlib.Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
