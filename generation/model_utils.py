@@ -21,9 +21,6 @@ from transformers import (
 
 from generation.cleaning import has_meta_artifact, next_speaker_marker
 
-VICUNA = "lmsys/vicuna-13b-v1.5-16k"
-MISTRAL = "mistralai/Mistral-7B-Instruct-v0.2"
-
 
 def load_model(name: str, device: str | None = None):
     """Load a 4-bit quantized causal LM and its tokenizer onto the GPU.

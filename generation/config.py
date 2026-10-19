@@ -1,66 +1,62 @@
 """
-Per-architecture decoding configuration — the single documented source of truth (§8 redo).
+Models and decoding settings: the single source of truth for every generation run.
 
-DV-SAFETY RULE (why these values look permissive): decoding must never bound a quantity we
-measure. The dialogue-act headline metric measures backchannels, abandoned turns, and turn
-length — so:
-  - NO token floor (`min_new_tokens=2` only blocks empty emissions). The old floor of 16
-    made backchannels ("Uh-huh.") impossible by construction.
-  - NO sentence-boundary stopping. It made abandoned/trailing-off turns (`%` acts)
-    impossible.
-  - NO logit-level anti-repetition by default (repetition_penalty=1.0, ngram ban off).
-    Both apply over the whole context incl. the transcript, so they systematically
-    suppress conversation-frequent tokens — exactly the repeated short acknowledgments
-    the metric counts. Loops are handled procedurally instead (near-duplicate turn →
-    one resample at higher temperature; see model_utils.is_near_duplicate) — except C1,
-    whose known-good config never looped (all-at-once has no two-agent echo spiral).
-  - GENEROUS caps, logged when hit: per-turn 300 tokens, C1 whole-log 4096, 40 turns.
+Design rule: decoding must never bound a quantity the study measures. The headline metric
+counts backchannels, abandoned turns and turn length, so the settings look permissive on
+purpose:
 
-Sampling params (temperature/top_p) are SHARED across architectures so the architecture
-contrast is not confounded by sampling choices.
+- No real token floor. ``min_new_tokens=2`` only blocks empty replies; a floor of 16 tokens
+  (used in an early draft) made a backchannel like "Uh-huh." impossible by construction.
+- No sentence-boundary stopping. It would make abandoned, trailing-off turns impossible.
+- No logit-level anti-repetition (``repetition_penalty=1.0``, no n-gram ban). Both act over
+  the whole context, transcript included, so they suppress conversation-frequent tokens:
+  exactly the repeated short acknowledgments being measured. Verbatim loops are handled
+  procedurally instead: a near-duplicate turn is resampled once at a higher temperature
+  (``generation.quality`` / ``generation.turnwise``). C1 needs no guard, since writing
+  the whole conversation at once has no two-agent echo spiral.
+- Generous caps, and every cap hit is recorded in the output files.
 
-FREEZE PROTOCOL: these are the pre-sweep defaults. The VM runs the dev-set sweep
-(generation/degeneration_score.py over the 5 dev ids), amends ONLY what the score forces
-(documented escalation: repetition_penalty 1.0 → 1.05), commits the change with the score
-evidence in the dev-sweep notes, and then this file is FROZEN for the v3 run.
+Sampling (temperature / top-p) is shared by all architectures, so the architecture contrast
+is not confounded by sampling choices. The values were frozen after a decoding sweep on five
+held-out development conversations (``generation/degeneration_score.py``), before the run.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
 
+VICUNA = "lmsys/vicuna-13b-v1.5-16k"  # all architectures; speaker A in C4
+MISTRAL = "mistralai/Mistral-7B-Instruct-v0.2"  # speaker B in C4
+
 
 @dataclass(frozen=True)
 class DecodingConfig:
     max_new_tokens: int
-    min_new_tokens: int = 2  # blocks empty emissions only — NOT a turn-length floor
+    min_new_tokens: int = 2  # blocks empty replies only; NOT a turn-length floor
     temperature: float = 0.8
     top_p: float = 0.95
-    repetition_penalty: float = 1.0  # off; escalate to at most 1.05 if the dev sweep forces it
+    repetition_penalty: float = 1.0  # off
     no_repeat_ngram_size: int = 0  # off
     stop_at_sentence: bool = False
 
 
-# C1 writes the ENTIRE conversation in one call; 4096 tokens fits ~40 long P0 turns in the
-# 16k context, so the cap should never bind (log if it does).
+# C1 writes the ENTIRE conversation in one call; 4096 tokens fits ~40 long turns in the 16k
+# context, so the cap never binds (0 hits in all 150 C1 conversations).
 C1 = DecodingConfig(max_new_tokens=4096)
 
-# C2/C3/C4 generate one turn per call. The cap is a safety net, never a bound on a measured
-# DV. Raised 300 -> 512 on 2026-10-02: the C4 retest showed Mistral writing genuine 250-word
-# turns that 300 cut mid-sentence (C4-P2: 14 cap hits). Output-neutral for existing data:
-# C2-P1/P2 and the C3 retest never reached 300 (0 hits); the C2-P0 run already in progress
-# keeps 300 and hit it once in 643 turns (documented in GENERATION_SPEC.md).
+# C2/C3/C4 generate one turn per call; the cap is a safety net. It was raised from 300 to 512
+# tokens before the C3/C4 runs, after Mistral wrote genuine 250-word turns in a pilot. C2 had
+# already been generated with 300 (one cap hit in 5,596 turns), so its records keep 300.
 TURNWISE = DecodingConfig(max_new_tokens=512)
 
-# Uniform hard cap on turns for the turn-by-turn conditions (was inconsistent: C2=30,
-# C3/C4=50). The prompt tells the model where it is in this budget (supervisor fix) so
-# conversations close naturally before the cap; hitting it is logged as `hit_turn_cap`.
+# Hard cap on turns for the turn-by-turn conditions. Every prompt tells the model how many
+# turns have passed, so conversations can close before it; `ended_by` records the reason.
 MAX_TURNS = 40
 
 # Procedural loop guard (replaces logit penalties): a turn of >= DUP_MIN_WORDS words whose
 # token-set Jaccard similarity with any earlier turn is >= DUP_JACCARD triggers ONE resample
-# at temperature + RESAMPLE_TEMP_BUMP. Short turns are exempt on purpose — backchannels
-# legitimately repeat, and guarding them would re-suppress the phenomenon we measure.
+# at temperature + RESAMPLE_TEMP_BUMP. Short turns are exempt on purpose: backchannels
+# legitimately repeat, and guarding them would re-suppress the phenomenon being measured.
 DUP_MIN_WORDS = 8
 DUP_JACCARD = 0.8
 RESAMPLE_TEMP_BUMP = 0.15

@@ -18,7 +18,8 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 from generation.cleaning import LABELS
-from generation.model_utils import MISTRAL, VICUNA, chat, load_model
+from generation.config import MISTRAL, VICUNA
+from generation.model_utils import chat, load_model
 from generation.runner import (
     add_turnwise_args,
     base_parser,

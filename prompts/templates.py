@@ -45,8 +45,8 @@ class Persona:
     education: str  # e.g. "a college degree"
     # Seeded persona-card fields (P1/P2 only; P0 stays the paper's bare demographics).
     occupation: str | None = None
-    stance: str | None = None  # index into _STANCES at assignment time; stored as text
-    anchor: str | None = None
+    stance: int | None = None  # index into _STANCES (recorded in the output JSON)
+    anchor: int | None = None  # index into _ANCHORS
 
     def describe(self) -> str:
         return f"a {self.age}-year-old {self.gender} with {self.education}"

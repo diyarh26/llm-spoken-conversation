@@ -22,7 +22,8 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 from generation.config import C1 as C1_DECODING
-from generation.model_utils import VICUNA, chat, load_model
+from generation.config import VICUNA
+from generation.model_utils import chat, load_model
 from generation.runner import base_parser, prepare_job
 from prompts.templates import build_c1
 

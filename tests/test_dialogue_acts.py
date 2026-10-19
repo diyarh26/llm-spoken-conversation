@@ -1,4 +1,4 @@
-"""Small correctness tests for the dialogue-act normalization and distances."""
+"""Dialogue-act label normalization, distances, and the shared turn cleaner."""
 
 from __future__ import annotations
 
