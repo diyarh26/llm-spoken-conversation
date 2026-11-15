@@ -70,6 +70,7 @@ every prompt is in [`prompts/PROMPT_EXAMPLES.md`](../prompts/PROMPT_EXAMPLES.md)
 | **P1** | Our prompt: spoken register and brevity, a natural ending, a one-sentence peer framing ("an ordinary person, not an assistant"), and a seeded **persona card** per speaker (occupation, stance toward the topic, one life anchor). |
 | **P2** | P1 plus two 12-turn excerpts from real Switchboard calls on *other* topics, drawn deterministically per conversation from a pool of 10 listener-rich excerpts (`generation/fewshot_pool.json`, which stores only ids and offsets, never text). |
 | P3 | Exploratory and outside the main design: shows listener reactions by example. Reported separately and never as emergent behaviour. |
+| P4 | Exploratory listener-gap test, outside the main design: P1 plus one sentence that explicitly permits a listener-only turn ("a brief listener response of a word or two"), with no examples and no quoted marker. P4−P1 isolates the effect of permission; P3−P4 the added effect of showing the forms. Measured with [`analysis/listener_gap.py`](../analysis/listener_gap.py). Reported separately and never as emergent behaviour. |
 
 **The non-circularity rule.** The original study's *enhanced* prompts asked for "okay", "oh"
 and "uh-huh" and then measured exactly those words. No prompt in the main design (P0–P2)

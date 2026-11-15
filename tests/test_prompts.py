@@ -81,6 +81,20 @@ def test_p3_is_the_declared_exception(personas, monkeypatch):
     assert any(MEASURED.search(p) for p in all_prompts("P3", *personas))
 
 
+def test_p4_differs_from_p1_only_by_the_listener_option(personas):
+    for p1, p4 in zip(all_prompts("P1", *personas), all_prompts("P4", *personas), strict=True):
+        assert templates.P4_LISTENER_OPTION in p4
+        assert " ".join(p4.replace(templates.P4_LISTENER_OPTION, "").split()) == " ".join(
+            p1.split()
+        )
+
+
+def test_p4_permits_listening_without_quoting_measured_forms(personas):
+    # Permission only: unlike P3, P4 never shows or names the forms the metric counts.
+    for prompt in all_prompts("P4", *personas):
+        assert not MEASURED.search(prompt), prompt
+
+
 def test_persona_cards_are_seeded_and_stable(personas):
     a, b = personas
     again_a = Persona("ParticipantA", "man", 54, "some college")
