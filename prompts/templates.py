@@ -250,10 +250,10 @@ def _fewshot_block(level: str, conversation_no: int | None = None, k: int = 2) -
         from analysis.swda import fewshot_examples
 
         picks = fewshot_examples(conversation_no, k=k)
-    except Exception:
-        picks = []
-    if not picks:
-        return ""
+    except Exception as exc:
+        raise RuntimeError("P2 examples unavailable; check the local Switchboard corpus.") from exc
+    if len(picks) != k:
+        raise RuntimeError(f"P2 requires {k} examples; found {len(picks)}.")
     blocks = "\n\n".join(
         f"Example {i} — two strangers talking about {e['topic'].title()}:\n{e['text']}"
         for i, e in enumerate(picks, 1)

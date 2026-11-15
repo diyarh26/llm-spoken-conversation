@@ -1,9 +1,9 @@
 """
 Model loading and chat generation (the only generation module that needs a GPU).
 
-Models are loaded 4-bit quantized (NF4, double quantization) so a 13B model fits on a
-single 16 GB GPU. Prompts are built with each model's own chat template, with a
-Vicuna-v1.5 ``USER:/ASSISTANT:`` fallback for checkpoints that ship without one.
+Supports NF4, BF16 and FP16; use a GPU pilot to determine memory requirements.
+Qwen3.5/Gemma4 use their native multimodal model and processor for text-only calls.
+Only Vicuna may use the legacy ``USER:/ASSISTANT:`` fallback.
 
 Requires: torch, transformers, accelerate, bitsandbytes (``pip install -e ".[generation]"``).
 """
@@ -11,7 +11,9 @@ Requires: torch, transformers, accelerate, bitsandbytes (``pip install -e ".[gen
 from __future__ import annotations
 
 import torch
+import transformers
 from transformers import (
+    AutoConfig,
     AutoModelForCausalLM,
     AutoTokenizer,
     BitsAndBytesConfig,
@@ -20,29 +22,58 @@ from transformers import (
 )
 
 from generation.cleaning import has_meta_artifact, next_speaker_marker
+from generation.response import spoken_response
 
 
-def load_model(name: str, device: str | None = None):
-    """Load a 4-bit quantized causal LM and its tokenizer onto the GPU.
+def load_model(name: str, device: str | None = None, *, revision="main", precision="nf4"):
+    """Load the selected model and its native tokenizer/processor onto the GPU.
 
     ``device=None`` uses ``device_map="auto"`` (the whole model on a single GPU, or split
     across several). ``device="cuda:N"`` pins the entire model to one GPU, which lets C4
-    put its two models on two smaller cards. Placement never changes the output.
+    put its two models on separate cards. Placement is recorded in the run identity.
     """
     # Never generate on the CPU: if the GPU driver is lost, transformers silently loads the
     # model into RAM and a single conversation takes hours. Fail fast instead.
     if not torch.cuda.is_available():
         raise RuntimeError("No CUDA GPU visible (check nvidia-smi); refusing to run on CPU.")
-    bnb = BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_compute_dtype=torch.float16,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_use_double_quant=True,
-    )
-    tok = AutoTokenizer.from_pretrained(name)
+    if precision not in ("nf4", "bf16", "fp16"):
+        raise ValueError(f"Unsupported precision: {precision}")
+    config = AutoConfig.from_pretrained(name, revision=revision)
+    multimodal = config.model_type in ("qwen3_5", "gemma4")
+    if multimodal:
+        loader = getattr(transformers, "AutoModelForMultimodalLM", None)
+        if loader is None:
+            raise RuntimeError(
+                "This checkpoint needs AutoModelForMultimodalLM; install the workshop environment."
+            )
+        tok = transformers.AutoProcessor.from_pretrained(name, revision=revision)
+    else:
+        loader = AutoModelForCausalLM
+        tok = AutoTokenizer.from_pretrained(name, revision=revision)
+    if not getattr(tok, "chat_template", None) and not name.startswith("lmsys/vicuna-"):
+        raise ValueError(
+            f"No native chat template for {name}; plain base models need a separate experiment."
+        )
+    loading = {"dtype": torch.bfloat16 if precision == "bf16" else torch.float16}
+    if precision == "nf4":
+        loading["quantization_config"] = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_compute_dtype=torch.float16,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_use_double_quant=True,
+        )
     device_map = "auto" if device is None else {"": device}
-    model = AutoModelForCausalLM.from_pretrained(
-        name, quantization_config=bnb, device_map=device_map, use_safetensors=True
+    model = loader.from_pretrained(
+        name, revision=revision, device_map=device_map, use_safetensors=True, **loading
+    )
+    if any(str(value) in ("cpu", "disk") for value in getattr(model, "hf_device_map", {}).values()):
+        raise RuntimeError(
+            "Model offloaded to CPU/disk; choose sufficient GPU memory before generation."
+        )
+    model._conversation_name = name
+    model._conversation_family = config.model_type
+    model._conversation_context = getattr(
+        getattr(config, "text_config", config), "max_position_embeddings", None
     )
     # Some chat checkpoints ship sampling fields with do_sample=False, which triggers
     # transformers warnings. Keep model defaults neutral; sampling is passed per call.
@@ -128,13 +159,24 @@ def chat(
     next speaker's marker appears. None for C1, which writes the whole conversation.
     Defaults mirror ``generation/config.py``; per-run values come from the config/CLI.
     """
-    try:
+    template_kwargs = {}
+    if getattr(model, "_conversation_family", "") in ("qwen3_5", "gemma4"):
+        template_kwargs["enable_thinking"] = False
+    if getattr(tok, "chat_template", None):
         encoded = tok.apply_chat_template(
-            messages, add_generation_prompt=True, return_tensors="pt", return_dict=True
+            messages,
+            add_generation_prompt=True,
+            return_tensors="pt",
+            return_dict=True,
+            **template_kwargs,
         )
-    except Exception:
+    elif getattr(model, "_conversation_name", "").startswith("lmsys/vicuna-"):
         # Vicuna v1.5 may not ship a chat template: use its USER/ASSISTANT format.
         encoded = tok(_vicuna_format(messages), return_tensors="pt")
+    else:
+        raise ValueError(
+            "Native chat template unavailable; refusing Vicuna fallback for this model."
+        )
 
     if isinstance(encoded, torch.Tensor):
         model_inputs = {"input_ids": encoded.to(model.device)}
@@ -143,6 +185,12 @@ def chat(
             k: v.to(model.device) if hasattr(v, "to") else v for k, v in encoded.items()
         }
     input_len = model_inputs["input_ids"].shape[-1]
+    context = getattr(model, "_conversation_context", None)
+    if context and input_len + max_new_tokens > context:
+        raise ValueError(
+            f"Input ({input_len}) plus output budget ({max_new_tokens}) exceeds context {context}."
+        )
+    tokenizer = getattr(tok, "tokenizer", tok)
 
     gen_kwargs = {
         "max_new_tokens": max_new_tokens,
@@ -150,9 +198,13 @@ def chat(
         # which only blocks empty replies: a real floor would make backchannels impossible.
         "min_new_tokens": min_new_tokens,
         "do_sample": do_sample,
-        "pad_token_id": tok.eos_token_id,
+        "pad_token_id": tokenizer.pad_token_id
+        if tokenizer.pad_token_id is not None
+        else tokenizer.eos_token_id,
         "repetition_penalty": repetition_penalty,
         "no_repeat_ngram_size": no_repeat_ngram_size,
+        "top_k": 0,  # neutralize model-specific generation defaults
+        "min_p": 0.0,
     }
     if do_sample:
         if temperature is not None:
@@ -170,11 +222,16 @@ def chat(
 
     out = model.generate(**model_inputs, **gen_kwargs)
     new_tokens = out[0][input_len:]
+    raw = tok.decode(new_tokens, skip_special_tokens=False)
+    text, leak = spoken_response(raw, tok.decode(new_tokens, skip_special_tokens=True))
     info = {
         "n_new_tokens": int(new_tokens.shape[-1]),
         "hit_token_cap": int(new_tokens.shape[-1]) >= max_new_tokens,
+        "raw_output": raw,
+        "reasoning_leak": leak,
+        "input_tokens": input_len,
     }
-    return tok.decode(new_tokens, skip_special_tokens=True).strip(), info
+    return text, info
 
 
 def _vicuna_format(messages) -> str:

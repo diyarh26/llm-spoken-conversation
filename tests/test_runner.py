@@ -60,8 +60,8 @@ def test_prepare_job_resolves_ids(fake_corpus, tmp_path):
     assert job.todo == IDS
     job = runner.prepare_job("C2", parse("--n", "2", "--out-root", str(tmp_path)))
     assert job.todo == IDS[:2]
-    job = runner.prepare_job("C2", parse("--ids", "2155, 9999", "--out-root", str(tmp_path)))
-    assert job.todo == [2155]  # unknown ids are dropped
+    with pytest.raises(ValueError, match="Missing Switchboard metadata"):
+        runner.prepare_job("C2", parse("--ids", "2155, 9999", "--out-root", str(tmp_path)))
 
 
 @pytest.mark.parametrize(

@@ -20,9 +20,10 @@ import pathlib
 from collections.abc import Callable
 from typing import Any
 
-from analysis.swda import load_metadata, make_personas
+from analysis.swda import fewshot_examples, load_metadata, make_personas
 from generation.cleaning import LABELS
 from generation.config import MAX_TURNS, TURNWISE
+from generation.run_context import add_runtime_args, atomic_json, seed_conversation, traced_engine
 from generation.sampling import load_target_ids
 from generation.turnwise import SEED_TURNS, Turn, generate_turn, run_conversation
 from prompts.templates import Persona, assign_cards
@@ -58,6 +59,7 @@ def base_parser(doc: str | None) -> argparse.ArgumentParser:
         help="comma-separated conversation_no's to (re)generate; overrides the manifest",
     )
     ap.add_argument("--out-root", default=str(OUT_ROOT), help="output root directory")
+    add_runtime_args(ap)
     return ap
 
 
@@ -118,6 +120,9 @@ class Job:
     out_dir: pathlib.Path
     todo: list[int]
     meta: dict[int, dict]
+    target_ids: list[int] = dataclasses.field(default_factory=list)
+    input_hash: str = ""
+    run_metadata: dict = dataclasses.field(default_factory=dict)
 
     def speakers(self, conversation_no: int) -> tuple[Persona, Persona, str, str]:
         """Personas (demographics from Switchboard + seeded persona cards) and the topic."""
@@ -127,7 +132,9 @@ class Job:
 
     def save(self, conversation_no: int, record: dict) -> pathlib.Path:
         path = self.out_dir / f"{conversation_no}.json"
-        path.write_text(json.dumps(record, indent=2), encoding="utf-8")
+        if self.run_metadata:
+            record = {**record, "run_id": self.run_metadata["run_id"], "run": self.run_metadata}
+        atomic_json(path, record)
         return path
 
 
@@ -144,10 +151,32 @@ def prepare_job(architecture: str, args: argparse.Namespace) -> Job:
         ids = load_target_ids()
         if args.n:
             ids = ids[: args.n]
-    ids = [c for c in ids if c in meta]
+    missing = set(ids) - set(meta)
+    if missing:
+        raise ValueError(f"Missing Switchboard metadata for IDs: {sorted(missing)}")
+    ids = list(dict.fromkeys(ids))
+    if not ids:
+        raise ValueError("No conversation IDs selected.")
+    examples = {}
+    if args.prompt == "P2":
+        for cno in ids:
+            picks = fewshot_examples(cno, k=2)
+            if len(picks) != 2 or not all(e["text"].strip() for e in picks):
+                raise ValueError(
+                    f"Two P2 examples unavailable for {cno}; check local Switchboard data."
+                )
+            examples[cno] = picks
+    import hashlib
+
+    input_hash = hashlib.sha256(
+        json.dumps(
+            {"metadata": {cno: meta[cno] for cno in sorted(meta)}, "examples": examples},
+            sort_keys=True,
+        ).encode()
+    ).hexdigest()
     todo = [c for c in ids if not (out_dir / f"{c}.json").exists()]
     print(f"[{condition}] target={len(ids)} todo={len(todo)} done={len(ids) - len(todo)}")
-    return Job(condition, out_dir, todo, meta)
+    return Job(condition, out_dir, todo, meta, ids, input_hash)
 
 
 def run_turnwise_job(
@@ -173,9 +202,14 @@ def run_turnwise_job(
         "no_repeat_ngram_size": args.no_repeat_ngram,
     }
     for cno in job.todo:
+        conversation_seed = seed_conversation(job, args, cno) if job.run_metadata else None
+        conversation_engines = {
+            speaker: traced_engine(engine, job, cno, speaker) if job.run_metadata else engine
+            for speaker, engine in engines.items()
+        }
         a, b, topic, sb_prompt = job.speakers(cno)
         history, ended_by, counters = _converse(
-            args, engines, build_messages, decoding, a, b, topic, sb_prompt, cno
+            args, conversation_engines, build_messages, decoding, a, b, topic, sb_prompt, cno
         )
         record = {
             "condition": job.condition,
@@ -194,6 +228,7 @@ def run_turnwise_job(
             "multi_turn_emissions": counters.get("multi_turn_emissions", 0),
             "decoding": turnwise_decoding(args),
             "quality_counters": counters,  # also: cap hits, empty retries, dup resamples
+            "conversation_seed": conversation_seed,
         }
         job.save(cno, record)
         print(f"  saved {cno}  turns={len(history)}  counters={counters}")

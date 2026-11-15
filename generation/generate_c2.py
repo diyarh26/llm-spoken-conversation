@@ -20,33 +20,46 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 from generation.cleaning import LABELS
 from generation.config import VICUNA
-from generation.model_utils import chat, load_model
+from generation.run_context import bind_run
 from generation.runner import (
     add_turnwise_args,
     base_parser,
     prepare_job,
     run_turnwise_job,
+    turnwise_decoding,
 )
 from prompts.templates import writer_view
 
 
 def main(argv: list[str] | None = None) -> None:
     ap = base_parser(__doc__)
+    ap.add_argument("--model", default=VICUNA)
     add_turnwise_args(ap)
     args = ap.parse_args(argv)
 
     job = prepare_job("C2", args)
-    if not job.todo:
+    if args.preflight_only:
+        print("Corpus/ID preflight passed; no weights loaded or GPU generation attempted.")
         return
 
-    model, tok = load_model(VICUNA)
+    resolved = bind_run(job, args, dict.fromkeys(LABELS, args.model), turnwise_decoding(args))
+    if not job.todo:
+        return
+    from generation.model_utils import chat, load_model
+
+    model, tok = load_model(
+        args.model,
+        device=args.device,
+        revision=resolved[LABELS[0]]["revision"],
+        precision=args.precision,
+    )
     engine = functools.partial(chat, model, tok)
     run_turnwise_job(
         job,
         args,
         engines=dict.fromkeys(LABELS, engine),
         build_messages=writer_view(args.prompt, args.max_turns),
-        model_info={"model": VICUNA},
+        model_info={"model": args.model},
     )
 
 

@@ -1,0 +1,12 @@
+# Install CUDA-enabled PyTorch using the chosen RunPod image first.
+# This is a starting environment; freeze the complete environment after a GPU pilot.
+# New model configs and AutoModelForMultimodalLM require this Transformers release.
+torch==2.12.0
+torchvision==0.27.0
+transformers==5.12.1
+accelerate==1.14.0
+bitsandbytes==0.46.1
+sentencepiece
+protobuf
+tiktoken
+pillow

@@ -197,6 +197,21 @@ The full protocol, including every declared caveat, is in **[docs/methods.md](do
 
 ## Quickstart
 
+**Workshop extension:** [Sham's run guide](docs/SHAM_INSTRUCTIONS.md) and
+[Aleen's run guide](docs/ALEEN_INSTRUCTIONS.md) cover the new models, GitHub, RunPod,
+preflight checks and development pilots. **C3/A3 and C4/A4 GPU runs are currently paused**
+for agent-design review; the active assignment is C1/C2 × P0–P2 × 50 IDs = 300 calls per
+teammate. The original 600 released calls remain under `data/generated/`.
+
+New runs accept `--model`, `--precision`, `--revision` and `--seed`; C4 accepts two
+model names and revisions. Each condition saves a run manifest and refuses mixed-model
+or mixed-settings resumes. Raw prompts and responses stay in gitignored `_private/`.
+Start with `python generation/preflight.py --owner sham` (or `aleen` / `diyar`) after
+installing `environment/workshop-requirements.txt` and supplying the private Switchboard
+corpus. This checks native templates without downloading weights; GPU loading and memory
+still require a pilot. `make generate` now defaults to C1/C2 only and writes to
+`data/generated_reproduction/`; use the teammate guides for workshop output locations.
+
 ```bash
 git clone https://github.com/diyarh26/llm-spoken-conversation.git
 cd llm-spoken-conversation
