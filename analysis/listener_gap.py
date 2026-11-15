@@ -2,9 +2,7 @@
 Listener-gap test: how often is a whole turn nothing but a listener response?
 
 Real Switchboard callers give many turns that only signal listening ("uh-huh", "yeah",
-"right"); LLM dialogues give almost none. P3 (shown examples) and P4 (explicit permission,
-no examples) test whether that gap closes when the models are allowed to listen. If the
-rates stay near zero under P4, the gap is not a prompting artefact.
+"right"); LLM dialogues give almost none.
 
 Two per-conversation rates, both over ALL turns (scripted "Hello!" seeds removed by the
 shared cleaner):
@@ -18,7 +16,7 @@ The human reference uses exactly the same functions on the topic-matched Switchb
 conversations. Only numbers are printed, never Switchboard text.
 
     python analysis/listener_gap.py data/generated_workshop/qwen35-9b
-    python analysis/listener_gap.py data/generated runs/listener-p4 --sb dev --csv out.csv
+    python analysis/listener_gap.py data/generated --sb dev --csv out.csv
 """
 
 from __future__ import annotations

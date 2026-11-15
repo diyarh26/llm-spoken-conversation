@@ -30,7 +30,7 @@ from prompts.templates import Persona, assign_cards
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT_ROOT = ROOT / "data" / "generated"
-PROMPT_LEVELS = ("P0", "P1", "P2", "P3", "P4")
+PROMPT_LEVELS = ("P0", "P1", "P2")
 
 # (speaker label, persona A, persona B, topic, SB prompt, history, conversation_no) -> messages
 MessageBuilder = Callable[[str, Persona, Persona, str, "str | None", list[Turn], int], list[dict]]

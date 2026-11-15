@@ -24,10 +24,10 @@ def test_empty_conversation_has_no_rates():
 
 def test_summarise_groups_by_condition():
     convs = [
-        {"condition": "C2-P4", "turns": [("A", "Uh-huh."), ("B", "I fish every summer.")]},
-        {"condition": "C2-P4", "turns": [("A", "Okay."), ("B", "Okay.")]},
+        {"condition": "C2-P1", "turns": [("A", "Uh-huh."), ("B", "I fish every summer.")]},
+        {"condition": "C2-P1", "turns": [("A", "Okay."), ("B", "Okay.")]},
     ]
     (row,) = summarise(convs)
-    assert row["condition"] == "C2-P4"
+    assert row["condition"] == "C2-P1"
     assert row["n_conversations"] == 2
     assert row["listener_only_rate_mean"] == 0.75
