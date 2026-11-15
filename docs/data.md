@@ -113,8 +113,9 @@ The generated conversations and derived numbers in this repository are released 
 Llama 2 Community License) and Mistral-7B-Instruct v0.2 (Apache 2.0), whose terms may also
 apply to downstream use.
 
-**Switchboard is not included.** The SwDA corpus is licensed by the Linguistic Data Consortium.
-This repository contains no Switchboard transcript text, only topic instructions and caller
-demographics used to seed the prompts, and numbers derived from the corpus (turn lengths,
-act frequencies, alignment scores). To recompute the human side, place the SwDA release under
-`data/switchboard/swda/`.
+**The public SwDA text distribution is included as `swda.zip`.** It is Christopher
+Potts' unmodified public archive, with its own upstream notices and attribution in
+[SWDA_SOURCE.md](SWDA_SOURCE.md). It is separate from the full Switchboard audio release
+and is not relicensed under this project's MIT or CC BY 4.0 terms. Extract it with
+`python -m zipfile -e swda.zip data/switchboard` to recompute the human side and render P2
+examples. The extracted directory remains gitignored to avoid duplicate copies.

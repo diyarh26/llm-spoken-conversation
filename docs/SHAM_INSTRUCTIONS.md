@@ -187,14 +187,20 @@ This editable install is not a version lock. Save `python -m pip freeze` in priv
 
 If the model download requires authentication, use your own Hugging Face account and the approved client's interactive login. Do not paste tokens into scripts, command arguments, logs, or commits.
 
-Diyar must provide authorized access to the existing Switchboard files. Place them at:
+The public SwDA text archive is now included in the GitHub repository as `swda.zip`. Read [its source and license notices](SWDA_SOURCE.md). After cloning, extract it from the repository root:
+
+```bash
+python -m zipfile -e swda.zip data/switchboard
+```
+
+The resulting files must be at:
 
 ```text
 data/switchboard/swda/swda-metadata.csv
 data/switchboard/swda/.../sw_*.utt.csv
 ```
 
-GitHub does not contain those files. P2 reconstructs its examples from the local corpus and can silently omit them if they are unavailable. Run this check from the repository root:
+GitHub contains the archive; the extracted directory stays gitignored to avoid storing it twice. P2 reconstructs its examples from the extracted corpus and fails clearly when they are unavailable. Run this check from the repository root:
 
 ```bash
 python - <<'PY'
@@ -215,7 +221,7 @@ print("Metadata and two P2 examples are available for every target and dev ID.")
 PY
 ```
 
-Do not publish the Switchboard corpus, rendered prompts containing its excerpts, or private raw diagnostics. Do not change or regenerate the sampling manifest.
+Keep ad-hoc rendered prompts and raw diagnostics private. The included unmodified SwDA archive retains its upstream attribution and terms; do not relicense it under the project's generated-data license. Do not change or regenerate the sampling manifest.
 
 Next check the actual checkpoint configs, native templates, and installed model-class support:
 
