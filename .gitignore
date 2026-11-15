@@ -15,11 +15,11 @@ models/
 hf_cache/
 .cache/
 
-# --- Switchboard source data — LDC-licensed, do NOT redistribute. Keep local only. ---
+# --- Extracted SwDA corpus: reproduce from the attributed upstream archive in swda.zip. ---
 data/switchboard/
 
 # dialogue_acts.py writes aggregate counts only.  Keep any ad-hoc/debug export that adds
-# utterance text out of git as well; Switchboard transcripts are LDC-licensed.
+# utterance text out of git as well; use the attributed upstream archive for distribution.
 results/dialogue_acts/*turn_labels*.csv
 results/dialogue_acts/*validation_text*.csv
 results/dialogue_acts/*transcript*.csv
@@ -32,6 +32,8 @@ data/align/_work/
 
 # --- Raw corpus archives — keep local ---
 *.zip
+# Unmodified public Christopher Potts SwDA distribution; see docs/SWDA_SOURCE.md.
+!/swda.zip
 
 # --- OS cruft ---
 .DS_Store

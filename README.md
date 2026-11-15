@@ -197,6 +197,21 @@ The full protocol, including every declared caveat, is in **[docs/methods.md](do
 
 ## Quickstart
 
+**Workshop extension:** [Sham's run guide](docs/SHAM_INSTRUCTIONS.md) and
+[Aleen's run guide](docs/ALEEN_INSTRUCTIONS.md) cover the new models, GitHub, RunPod,
+preflight checks and development pilots. **C3/A3 and C4/A4 GPU runs are currently paused**
+for agent-design review; the active assignment is C1/C2 × P0–P2 × 50 IDs = 300 calls per
+teammate. The original 600 released calls remain under `data/generated/`.
+
+New runs accept `--model`, `--precision`, `--revision` and `--seed`; C4 accepts two
+model names and revisions. Each condition saves a run manifest and refuses mixed-model
+or mixed-settings resumes. Raw prompts and responses stay in gitignored `_private/`.
+Start with `python generation/preflight.py --owner sham` (or `aleen` / `diyar`) after
+installing `environment/workshop-requirements.txt` and extracting `swda.zip` with
+`python -m zipfile -e swda.zip data/switchboard`. This checks native templates without downloading weights; GPU loading and memory
+still require a pilot. `make generate` now defaults to C1/C2 only and writes to
+`data/generated_reproduction/`; use the teammate guides for workshop output locations.
+
 ```bash
 git clone https://github.com/diyarh26/llm-spoken-conversation.git
 cd llm-spoken-conversation
@@ -211,8 +226,9 @@ make serve      # browse the conversations at http://localhost:8000
 `make generate` (resumable; each conversation is saved as soon as it finishes). The exact
 package versions of the published run are in
 [`environment/generation-lock.txt`](environment/generation-lock.txt). Recomputing the human
-side needs the Switchboard Dialog Act corpus, which is licensed by the LDC and not included:
-place it under `data/switchboard/swda/` and run `make analysis`. The dialogue-act tagger and
+side needs the Switchboard Dialog Act text corpus: extract the included public `swda.zip`
+under `data/switchboard/` and run `make analysis`. See [source attribution](docs/SWDA_SOURCE.md).
+The dialogue-act tagger and
 ALIGN run in their own environments; see [Methods § Reproducing](docs/methods.md#11-reproducing).
 
 ## Limitations
@@ -255,4 +271,5 @@ Fusaroli, 2019) and [DialogTag](https://github.com/bhavitvyamalik/DialogTag).
 
 Code: [MIT](LICENSE). Generated conversations and derived results:
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); the upstream model licenses may also
-apply ([data card](docs/data.md#license)). No Switchboard transcript text is included.
+apply ([data card](docs/data.md#license)). The included upstream SwDA archive has separate
+[source and license notices](docs/SWDA_SOURCE.md).

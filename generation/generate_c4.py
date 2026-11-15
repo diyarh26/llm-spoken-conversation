@@ -19,12 +19,13 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 from generation.cleaning import LABELS
 from generation.config import MISTRAL, VICUNA
-from generation.model_utils import chat, load_model
+from generation.run_context import bind_run
 from generation.runner import (
     add_turnwise_args,
     base_parser,
     prepare_job,
     run_turnwise_job,
+    turnwise_decoding,
 )
 from prompts.templates import agent_view
 
@@ -34,30 +35,46 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--model-a", default=VICUNA)
     ap.add_argument("--model-b", default=MISTRAL)
     # Pin each model to its own GPU when one card cannot hold both. Placement never
-    # changes the output. Leave unset on a single large GPU (device_map="auto").
+    # is recorded. Leave unset on a single large GPU (device_map="auto").
     ap.add_argument("--device-a", default=None, help="e.g. cuda:0 (pin model A to one GPU)")
     ap.add_argument("--device-b", default=None, help="e.g. cuda:1 (pin model B to one GPU)")
     add_turnwise_args(ap)
     args = ap.parse_args(argv)
 
+    if args.model_a == args.model_b:
+        ap.error("C4 requires two different model checkpoints; use C3 for same-model agents.")
     job = prepare_job("C4", args)
+    if args.preflight_only:
+        print("Corpus/ID preflight passed; no weights loaded or GPU generation attempted.")
+        return
+
+    resolved = bind_run(
+        job, args, {LABELS[0]: args.model_a, LABELS[1]: args.model_b}, turnwise_decoding(args)
+    )
     if not job.todo:
         return
+    from generation.model_utils import chat, load_model
 
     print(
         f"loading {args.model_a} for {LABELS[0]}"
         + (f" on {args.device_a}" if args.device_a else "")
     )
-    model_a, tok_a = load_model(args.model_a, device=args.device_a)
-    # Reuse one instance only when it is the SAME model AND not pinned to distinct GPUs.
-    if args.model_b == args.model_a and args.device_a == args.device_b:
-        model_b, tok_b = model_a, tok_a
-    else:
-        print(
-            f"loading {args.model_b} for {LABELS[1]}"
-            + (f" on {args.device_b}" if args.device_b else "")
-        )
-        model_b, tok_b = load_model(args.model_b, device=args.device_b)
+    model_a, tok_a = load_model(
+        args.model_a,
+        device=args.device_a,
+        revision=resolved[LABELS[0]]["revision"],
+        precision=args.precision,
+    )
+    print(
+        f"loading {args.model_b} for {LABELS[1]}"
+        + (f" on {args.device_b}" if args.device_b else "")
+    )
+    model_b, tok_b = load_model(
+        args.model_b,
+        device=args.device_b,
+        revision=resolved[LABELS[1]]["revision"],
+        precision=args.precision,
+    )
 
     run_turnwise_job(
         job,

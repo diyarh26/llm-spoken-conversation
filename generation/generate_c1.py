@@ -23,13 +23,14 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 from generation.config import C1 as C1_DECODING
 from generation.config import VICUNA
-from generation.model_utils import chat, load_model
+from generation.run_context import bind_run, seed_conversation, traced_engine
 from generation.runner import base_parser, prepare_job
 from prompts.templates import build_c1
 
 
 def main(argv: list[str] | None = None) -> None:
     ap = base_parser(__doc__)
+    ap.add_argument("--model", default=VICUNA)
     ap.add_argument("--max-new-tokens", type=int, default=C1_DECODING.max_new_tokens)
     ap.add_argument("--temperature", type=float, default=C1_DECODING.temperature)
     ap.add_argument("--top-p", type=float, default=C1_DECODING.top_p)
@@ -38,7 +39,8 @@ def main(argv: list[str] | None = None) -> None:
     args = ap.parse_args(argv)
 
     job = prepare_job("C1", args)
-    if not job.todo:
+    if args.preflight_only:
+        print("Corpus/ID preflight passed; no weights loaded or GPU generation attempted.")
         return
     decoding = {
         "max_new_tokens": args.max_new_tokens,
@@ -48,18 +50,33 @@ def main(argv: list[str] | None = None) -> None:
         "no_repeat_ngram_size": args.no_repeat_ngram,
     }
 
-    model, tok = load_model(VICUNA)
+    resolved = bind_run(job, args, {"ParticipantA": args.model}, decoding)
+    if not job.todo:
+        return
+    from generation.model_utils import chat, load_model
+
+    model, tok = load_model(
+        args.model,
+        device=args.device,
+        revision=resolved["ParticipantA"]["revision"],
+        precision=args.precision,
+    )
     for cno in job.todo:
+        conversation_seed = seed_conversation(job, args, cno)
         a, b, topic, sb_prompt = job.speakers(cno)
         messages = build_c1(args.prompt, a, b, topic, sb_prompt, conversation_no=cno)
-        text, info = chat(model, tok, messages, **decoding)
+        engine = traced_engine(
+            lambda messages, **kw: chat(model, tok, messages, **kw), job, cno, "writer"
+        )
+        text, info = engine(messages, **decoding)
         job.save(
             cno,
             {
                 "condition": job.condition,
                 "architecture": "C1",
                 "prompt_level": args.prompt,
-                "model": VICUNA,
+                "model": args.model,
+                "conversation_seed": conversation_seed,
                 "conversation_no": cno,
                 "topic": topic,
                 "sb_prompt": sb_prompt,
