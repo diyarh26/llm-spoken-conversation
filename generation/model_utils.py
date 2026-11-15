@@ -165,6 +165,8 @@ def chat(
     if getattr(tok, "chat_template", None):
         encoded = tok.apply_chat_template(
             messages,
+            # Processors (Qwen3.5/Gemma4) default to tokenize=False and return a string.
+            tokenize=True,
             add_generation_prompt=True,
             return_tensors="pt",
             return_dict=True,
