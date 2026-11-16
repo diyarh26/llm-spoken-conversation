@@ -2,9 +2,9 @@
 Listener-gap test: how often is a whole turn nothing but a listener response?
 
 Real Switchboard callers give many turns that only signal listening ("uh-huh", "yeah",
-"right"); LLM dialogues give almost none. P4 (explicit permission to give a listener-only
+"right"); LLM dialogues give almost none. P3 (explicit permission to give a listener-only
 turn, no examples) tests whether the gap closes when the models are allowed to listen: if
-the rates stay near zero under P4, the gap is not a prompting artefact.
+the rates stay near zero under P3, the gap is not a prompting artefact.
 
 Two per-conversation rates, both over ALL turns (scripted "Hello!" seeds removed by the
 shared cleaner):

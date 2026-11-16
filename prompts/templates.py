@@ -163,12 +163,12 @@ def _p1_style() -> str:
     )
 
 
-# P4 (exploratory, INSTRUCTED — listener-gap test, outside the non-circular P0–P2 design):
+# P3 (exploratory, INSTRUCTED — listener-gap test, outside the non-circular P0–P2 design):
 # P1 plus ONE sentence that explicitly permits a listener-only turn. It shows no example
-# and quotes no measured form, so P4−P1 isolates the effect of permission alone. If
-# listener turns stay near zero under P4, the gap is not a prompting artefact. Reported
+# and quotes no measured form, so P3−P1 isolates the effect of permission alone. If
+# listener turns stay near zero under P3, the gap is not a prompting artefact. Reported
 # as instructed, never as emergent.
-P4_LISTENER_OPTION = (
+P3_LISTENER_OPTION = (
     "Whenever someone would really just be listening while the other person talks, their "
     "turn can be nothing more than a brief listener response of a word or two, and then "
     "the other person carries on."
@@ -176,8 +176,8 @@ P4_LISTENER_OPTION = (
 
 
 def _style(level: str) -> str:
-    if level == "P4":
-        return f"{_p1_style()} {P4_LISTENER_OPTION}"
+    if level == "P3":
+        return f"{_p1_style()} {P3_LISTENER_OPTION}"
     return _p1_style()
 
 
