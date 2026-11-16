@@ -10,11 +10,12 @@ turn-by-turn agents (C3/C4) may behave more like humans than one all-knowing wri
 
 Data: HCRC Map Task Corpus annotations v2.1 (NXT format), Human Communication Research
 Centre, Universities of Edinburgh and Glasgow, licensed CC BY 4.0
-(https://groups.inf.ed.ac.uk/maptask/). Download once with
+(https://groups.inf.ed.ac.uk/maptask/); the unmodified archives are committed in
+data/maptask/archives/ (see docs/MAPTASK_SOURCE.md). Unpack them once with
 
     python -m maptask.corpus --download
 
-which fetches into data/maptask_raw/ (gitignored). This module reads:
+which unpacks into data/maptask_raw/ (gitignored). This module reads:
   * 128 dialogues: map, giver/follower, eye contact, and the path deviation score
     (devscore: area between the giver's route and the follower's drawn route; lower is
     better) — the human task-success reference;
@@ -67,20 +68,26 @@ MOVE_LABELS = (
 INITIATING = {"instruct", "explain", "check", "align", "query_yn", "query_w"}
 
 
+ARCHIVES = ROOT / "data" / "maptask" / "archives"  # committed, unmodified (CC BY 4.0)
+
+
 def download() -> None:
-    """Fetch and unpack the corpus into data/maptask_raw/ (about 13 MB)."""
+    """Unpack the corpus into data/maptask_raw/ from the committed archives
+    (data/maptask/archives/, see docs/MAPTASK_SOURCE.md); an archive missing there is
+    downloaded from Edinburgh instead."""
     import tarfile
 
     RAW.mkdir(parents=True, exist_ok=True)
+    paths = {}
     for name, url in DOWNLOADS.items():
-        dest = RAW / name
-        if not dest.exists():
-            urllib.request.urlretrieve(url, dest)
-    with zipfile.ZipFile(RAW / "hcrcmaptask.nxtformatv2-1.zip") as z:
+        paths[name] = ARCHIVES / name if (ARCHIVES / name).exists() else RAW / name
+        if not paths[name].exists():
+            urllib.request.urlretrieve(url, paths[name])
+    with zipfile.ZipFile(paths["hcrcmaptask.nxtformatv2-1.zip"]) as z:
         z.extractall(RAW / "nxt")
-    with zipfile.ZipFile(RAW / "transcripts.zip") as z:
+    with zipfile.ZipFile(paths["transcripts.zip"]) as z:
         z.extractall(RAW / "tx")
-    with tarfile.open(RAW / "maps.tar.gz") as t:
+    with tarfile.open(paths["maps.tar.gz"]) as t:
         try:
             t.extractall(RAW / "maps", filter="data")
         except TypeError:  # Python < 3.10.12 has no extraction filters
