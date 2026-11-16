@@ -1,0 +1,151 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m0",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1630703509,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Right, I'll guide you. Start at the cross, go up past the camera shop on the left.\nFollower: Okay, going up past the camera shop.\nGiver: Keep going up a bit more, then turn sharply left. Go all the way to the top edge of the map.\nFollower: Turned left, heading to the top edge.\nGiver: Now turn right and go straight down. Stop just past the parked van.\nFollower: Straight down, past the van.\nGiver: Turn left again. Go up towards the allotments.\nFollower: Turning left, heading up toward the allotments.\nGiver: Pass the allotments on your right, but don't touch them. Keep going up.\nFollower: Okay, passing them on the right.\nGiver: Turn left now. Go up to the level crossing.\nFollower: Wait, I don't see a level crossing there.\nGiver: Ah, look for the road crossing, sort of in the middle. Turn left there.\nFollower: Okay, found a crossing. Turning left.\nGiver: Go up past the crossing. Turn left again and go up towards the alpine garden.\nFollower: Going up, passing the alpine garden on the right.\nGiver: Good. Turn left now. Go up to the youth hostel.\nFollower: Found the youth hostel. Turning left.\nGiver: Pass the hostel on your right. Keep going up. Turn left at the telephone box.\nFollower: Passing the hostel, found the telephone box. Turning left.\nGiver: Go up past the telephone box. Turn left again.\nFollower: Turning left.\nGiver: Go up towards the thatched mud hut. Pass it on the right, then turn left.\nFollower: Found the hut. Passing on the right, turning left.\nGiver: Go up a bit. You should see a cross. That's the finish.\nFollower: I see a cross! Is that it?\nGiver: Yes, stop there. That's the finish.\nFollower: Done.\nGiver: Great job.\nFollower: Thanks, bye.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, I'll guide you. Start at the cross, go up past the camera shop on the left."
+    ],
+    [
+      "Follower",
+      "Okay, going up past the camera shop."
+    ],
+    [
+      "Giver",
+      "Keep going up a bit more, then turn sharply left. Go all the way to the top edge of the map."
+    ],
+    [
+      "Follower",
+      "Turned left, heading to the top edge."
+    ],
+    [
+      "Giver",
+      "Now turn right and go straight down. Stop just past the parked van."
+    ],
+    [
+      "Follower",
+      "Straight down, past the van."
+    ],
+    [
+      "Giver",
+      "Turn left again. Go up towards the allotments."
+    ],
+    [
+      "Follower",
+      "Turning left, heading up toward the allotments."
+    ],
+    [
+      "Giver",
+      "Pass the allotments on your right, but don't touch them. Keep going up."
+    ],
+    [
+      "Follower",
+      "Okay, passing them on the right."
+    ],
+    [
+      "Giver",
+      "Turn left now. Go up to the level crossing."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see a level crossing there."
+    ],
+    [
+      "Giver",
+      "Ah, look for the road crossing, sort of in the middle. Turn left there."
+    ],
+    [
+      "Follower",
+      "Okay, found a crossing. Turning left."
+    ],
+    [
+      "Giver",
+      "Go up past the crossing. Turn left again and go up towards the alpine garden."
+    ],
+    [
+      "Follower",
+      "Going up, passing the alpine garden on the right."
+    ],
+    [
+      "Giver",
+      "Good. Turn left now. Go up to the youth hostel."
+    ],
+    [
+      "Follower",
+      "Found the youth hostel. Turning left."
+    ],
+    [
+      "Giver",
+      "Pass the hostel on your right. Keep going up. Turn left at the telephone box."
+    ],
+    [
+      "Follower",
+      "Passing the hostel, found the telephone box. Turning left."
+    ],
+    [
+      "Giver",
+      "Go up past the telephone box. Turn left again."
+    ],
+    [
+      "Follower",
+      "Turning left."
+    ],
+    [
+      "Giver",
+      "Go up towards the thatched mud hut. Pass it on the right, then turn left."
+    ],
+    [
+      "Follower",
+      "Found the hut. Passing on the right, turning left."
+    ],
+    [
+      "Giver",
+      "Go up a bit. You should see a cross. That's the finish."
+    ],
+    [
+      "Follower",
+      "I see a cross! Is that it?"
+    ],
+    [
+      "Giver",
+      "Yes, stop there. That's the finish."
+    ],
+    [
+      "Follower",
+      "Done."
+    ],
+    [
+      "Giver",
+      "Great job."
+    ],
+    [
+      "Follower",
+      "Thanks, bye."
+    ]
+  ],
+  "n_turns": 30,
+  "ended_by": "single_generation"
+}

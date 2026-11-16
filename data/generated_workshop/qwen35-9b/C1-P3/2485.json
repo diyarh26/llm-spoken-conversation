@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2360937977,
+  "conversation_no": 2485,
+  "topic": "Family Reunions",
+  "sb_prompt": "DISCUSS PLANNING A FAMILY REUNION.  DRAW ON YOUR EXPERIENCES AND THOSE OF THE OTHER CALLER FOR MAKING THE NEXT GET-TOGETHER SUCCESSFUL AND MEMORABLE.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 45,
+    "education": "a high-school education",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: You got through! I was starting to think I'd get your voicemail.\nParticipantB: Yeah, my phone was on silent all day. Hi. How's it going?\nParticipantA: Good, good. So, are you ready to plan this family reunion?\nParticipantB: Honestly? I'm a little skeptical. Seems like a lot of work for nothing sometimes.\nParticipantA: Oh, really? I think it's great fun. My aunt did it last year and it was the best thing ever.\nParticipantB: My cousin went last year, and it was a disaster. Everyone was complaining about food costs and seating.\nParticipantA: Ugh, that sounds awful. Mine had a potluck and everyone brought something different. It was chaotic but so nice.\nParticipantB: See? That's the problem. Too many variables. People show up, they hate the food, they argue about who sits where.\nParticipantA: But you have to let them bring food! That's how you make people feel included.\nParticipantB: Well, my cousin's wife brought a dish nobody ate and then got offended. Hard to fix that.\nParticipantA: Oh, that's mean. But at my reunion, we just put it in the back and nobody cared. It was all about the faces we saw.\nParticipantB: True. Maybe the food isn't the point. The point is just seeing folks again.\nParticipantA: Exactly! We talked about how long it's been since we all gathered. That was the real highlight.\nParticipantB: Yeah, I get that. My cousin said she missed her sister more than the food.\nParticipantA: So, how about we keep it simple this time? Just a big yard gathering? No fancy venue.\nParticipantB: That sounds easier. Less stress for the organizer. Less pressure on the budget.\nParticipantA: And we can have a playlist! My husband made a whole thing of songs from the 80s.\nParticipantB: Oh, please. Nobody wants to dance to hair metal. But maybe some classics?\nParticipantA: Sure, sure. We can agree on a few oldies. Nobody will complain about that.\nParticipantB: Okay, that works. At least we won't have to buy tickets to a hall.\nParticipantA: Right? Just a big backyard barbecue and maybe some lawn games.\nParticipantB: I like that. Less formal. People can bring what they want to eat.\nParticipantA: Exactly! That's the key. Let people feed themselves a little bit.\nParticipantB: True. Saves a ton of money and hassle.\nParticipantA: So, when are we thinking? Like next summer or fall?\nParticipantB: Fall is probably better. Weather's nicer, no one's too hot.\nParticipantA: Yeah, autumn sounds cozy. We could even do some apple picking if anyone wants.\nParticipantB: Oh, that'd be nice. My kid would love that.\nParticipantA: Perfect! We'll tell the family about the fall date soon.\nParticipantB: Alright. Thanks for calling. I needed to hear someone say it could be fun.\nParticipantA: No problem! It definitely can be. Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 700,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

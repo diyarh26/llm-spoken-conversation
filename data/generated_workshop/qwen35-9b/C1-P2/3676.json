@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3057617536,
+  "conversation_no": 3676,
+  "topic": "Movies",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THOUGHT ABOUT THE LAST FEW MOVIES THEY SAW. WHAT MOVIES HAVE YOU SEEN LATELY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hey, how's it going?\nParticipantB: Hey, good. How are you?\nParticipantA: Pretty good. Just teaching again today. It's this high school English stuff, you know? It's interesting, honestly.\nParticipantB: Yeah, I can imagine. I'm at the auto shop mostly. Fixing cars, you know?\nParticipantA: Oh, cool. So, what movies have you seen lately?\nParticipantB: Uh, well, I saw \"The Fall Guy\" the other day.\nParticipantA: Oh, that one? I heard about it. I actually saw \"Kung Fu Panda 4\" recently.\nParticipantB: Really? I didn't catch that. What did you think?\nParticipantA: You know, it was... okay? Not great, but fun? Like, the jokes were a little hit or miss.\nParticipantB: Yeah, I felt that. It felt a little too long, maybe?\nParticipantA: Yeah, exactly. And the first act felt like it dragged on forever.\nParticipantB: Oh, really? That's a bummer.\nParticipantA: Yeah. But, I have to say, the fight scenes were pretty slick. You know, like, really well done.\nParticipantB: Oh, I didn't see the fight scenes. My friend Gary went with me. He's the guy who works at the dealership next door.\nParticipantA: Oh, Gary? Hey, that's cool. Did he like it?\nParticipantB: No, he hated it. He said it was a total waste of his time.\nParticipantA: Wow, okay. That's a tough crowd to please.\nParticipantB: Yeah, he said the whole thing felt fake. Like, \"why are we paying to watch this?\"\nParticipantA: Well, I think that's the thing. It was a fantasy. Sometimes you just want the fantasy, you know?\nParticipantB: Hmm. Well, Gary's pretty hard on movies these days. He's seen some of the new ones coming up.\nParticipantA: Yeah, I know. It can be tricky. I actually saw \"Despicable Me 4\" yesterday.\nParticipantB: Oh, the Minions?\nParticipantA: Yeah.\nParticipantB: Okay, I actually went with my nephew, so I'm biased.\nParticipantA: Oh, good.\nParticipantB: It was funny though. Very funny. My nephew was laughing the whole time.\nParticipantA: That's good to hear. Sometimes those just hit the spot.\nParticipantB: Yeah, definitely. Simple, you know? Just straight up fun.\nParticipantA: Totally. I think that's what I'll stick with more.\nParticipantB: Fair enough. Hey, did you see that new sci-fi thing?\nParticipantA: Oh, the one with the space stuff? Yeah, I saw that last week.\nParticipantB: Right?\nParticipantA: I thought it was a bit deep, honestly. Maybe too deep?\nParticipantB: Oh, really? What did you think of the story?\nParticipantA: The story was okay, but the characters felt a little flat.\nParticipantB: Yeah, I felt that too. It felt like they didn't care much about the people in it.\nParticipantA: Exactly. That's the thing I tell people sometimes. Like, you need to care about the characters, not just the explosions.\nParticipantB: Yeah, Gary always says that too. He's got a big opinion on that.\nParticipantA: That's true. It's funny, people always think I'm boring because I work in school, but I really care about stories.\nParticipantB: Yeah, I get that. I care about the machines, you know?\nParticipantA: I bet.\nParticipantB: Anyway, glad I called. Thanks for talking.\nParticipantA: Yeah, no problem. Thanks for talking to me.\nParticipantB: Okay, bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 851,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

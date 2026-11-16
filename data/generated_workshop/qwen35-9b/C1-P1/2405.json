@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3797907708,
+  "conversation_no": 2405,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 28,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey there!\nParticipantA: You sound busy, are you in the middle of something?\nParticipantB: A little bit, just checking a table before I go back to the kitchen.\nParticipantA: Oh, wait for me, I'm pretty free actually.\nParticipantB: Okay, cool. So, what's up?\nParticipantA: Well, my mom sent me a link about some new AI art thing and I was like, \"Hey, tell this stranger on the phone about computers!\"\nParticipantB: LMAO, funny! That's actually why you called me?\nParticipantA: Exactly! I gotta be honest, computers are kinda intimidating to me. I have some college but mostly I just use them to do my bank deposits.\nParticipantB: Oh wow, really? I thought you'd be the tech expert!\nParticipantA: Ha, no way! My cousin is the one who actually built my PC last year. I just tell him what I want and he does the rest.\nParticipantB: Oh man, that's kinda cool. I have a personal experience with this actually.\nParticipantA: Do tell!\nParticipantB: Yeah, last summer my laptop died right before a big trip. I had to go to a store and beg someone to help me fix it, and it was such a pain.\nParticipantA: Oh no, that sounds awful! I'm lucky I didn't have to deal with that kind of stress.\nParticipantB: Yeah, but seeing them troubleshoot it got me interested. I've been trying to learn a little more about how they work ever since.\nParticipantA: That's cool! So, do you prefer working with the actual machines or just using them?\nParticipantB: Honestly, I love the machines. Sometimes I just like taking them apart to see how the fans spin. But mostly I just use them to manage my schedules.\nParticipantA: Same here! I love watching the screens light up when the teller line works. It's satisfying when it's all connected right.\nParticipantB: Yeah, there's something nice about knowing everything is working perfectly.\nParticipantA: Totally. Do you ever feel like computers are getting too complicated though?\nParticipantB: All the time! Like, why do they need ten updates for a simple thing?\nParticipantA: Right? It feels like they want to force you to learn all this new stuff.\nParticipantB: Exactly, it feels like a chore sometimes.\nParticipantA: Yeah, I think I'll stick to what I know until I figure out how to update without messing up my banking app.\nParticipantB: Good plan, trust your cousin for the heavy lifting!\nParticipantA: Haha, I will!\nParticipantB: Anyway, I think I've got a rush coming up, gotta get back to work.\nParticipantA: Okay, well thanks for talking about computers with me!\nParticipantB: You too, it was fun!\nParticipantA: Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 641,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

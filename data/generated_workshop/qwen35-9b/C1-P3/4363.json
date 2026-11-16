@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3809200888,
+  "conversation_no": 4363,
+  "topic": "Football",
+  "sb_prompt": "PLEASE DISCUSS PROFESSIONAL FOOTBALL.  FIND OUT THE OTHER CALLER'S FAVORITE PRO FOOTBALL TEAM AND WHERE IT'S HEADED THIS YEAR.       DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 27,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey there!\nParticipantA: Yeah, I guess I called since we were asked to talk about pro football. I'm actually a librarian, so it's a bit weird for me to be calling about this.\nParticipantB: Haha, no worries! I'm a mechanic, so honestly, I feel like I know more about football than cars sometimes. What's your favorite team?\nParticipantA: Honestly, I don't really know. I've picked the same team for years, but it's just... I don't know, I made up my mind a long time ago without really knowing why.\nParticipantB: Oh, that happens! I've been a Cowboys fan since I was twelve, and I can't explain why, but every game matters to me. Where do you think they're headed this year?\nParticipantA: I feel like they're going to struggle again. Like, I just can't see them making the playoffs. It's just a gut feeling.\nParticipantB: Oh, really? I totally disagree. I think they're going to win the division easily. The new quarterback is firing on all cylinders, and the defense is actually playing well.\nParticipantA: Yeah, I know that too, but for some reason, I just don't feel right about it. Maybe it's just bad luck or something?\nParticipantB: Well, I can't say I've ever been wrong before, so I'm sticking with my gut. How about you, do you have any specific players you like?\nParticipantA: I mean, I used to love the running back, but now... I don't even know. It's just frustrating, you know?\nParticipantB: Yeah, I get that. Sometimes you just want to see them struggle a bit before they turn it around. But I'm still hopeful.\nParticipantA: Yeah, maybe I'm just being too pessimistic. It's weird because I've had mixed feelings about it for years.\nParticipantB: Yeah, that's normal. Sometimes you just need a break from the team to reset. Do you ever think about switching to a new team?\nParticipantA: Probably not. I mean, I've been loyal to them, even if I'm not happy with how they're doing this year.\nParticipantB: That's cool. I've never switched, either. Even when they stink, I still show up. It's just part of the deal.\nParticipantA: Yeah, I guess it is. Thanks for talking to me, it was actually kind of nice to hear someone else's perspective.\nParticipantB: No problem! Good luck this season, even if you're not a believer. I'll see you around.\nParticipantA: Yeah, you too. Bye.\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 589,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

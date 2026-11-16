@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2825072795,
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey!\nParticipantA: Yeah, you got the wrong number? No, wait, no, I'm actually from the list. I'm supposed to talk to people about houses.\nParticipantB: Oh, okay. Me too. That's weird.\nParticipantA: Yeah, it is. So, uh, tell me about your place. Is it like a typical house where you live?\nParticipantB: Well, I live in a little townhouse. Three floors. It's got a small kitchen and a big living room downstairs.\nParticipantA: Oh, that sounds... small. I drive trucks all day, so I don't really see that much, but I heard small places are hard to find.\nParticipantB: They are. My landlord keeps raising rent. But honestly, I think it's actually nice because I don't have to mow the lawn or fix the roof.\nParticipantA: Oh, that makes sense. I have a two-story house out in the 'burbs. Big yard, two cars.\nParticipantB: Wow. Two cars? You live in a house with two cars?\nParticipantA: Yeah. It's... it's a big house. Maybe too big? I mean, I work nights and I'm always tired, so I don't really use the second bedroom much.\nParticipantB: That's fair. Sometimes I wish my place was bigger, but then again, less cleaning is good for me too. I work restaurant service, you know?\nParticipantA: Oh, right. I see. I worked in a restaurant once for a summer, actually. It was crazy.\nParticipantB: Really? What was it like?\nParticipantA: It was loud. And fast. One night I spilled coffee on a guy's pants and he got really mad. I felt bad for a long time.\nParticipantB: Oh, man. I spilled red wine on a tablecloth last week. The whole table got it. The customers didn't say anything, but my manager did.\nParticipantA: Yeah, that sucks. I felt like I wanted to quit that job. It was just... stressful.\nParticipantB: I feel that way sometimes. But I keep coming back because I like the people. You know?\nParticipantA: I guess so. Though my house is quieter. At least I can just sit on the porch and listen to the birds. No screaming kids or loud servers.\nParticipantB: That sounds nice. A quiet porch. Do you ever feel like your house is too quiet though? Sometimes I get lonely in my apartment.\nParticipantA: Sometimes. Yeah, actually. Last week I invited a couple friends over and we just talked for hours. It was nice.\nParticipantB: Oh, that's sweet. Do you do that often?\nParticipantA: Not really. I'm usually too tired after being on the road. But yeah, it felt good.\nParticipantB: I guess I'm in the middle. I like my small place, but I wish it was bigger. And I like the people, but the job is exhausting.\nParticipantA: Yeah, that's exactly how I feel. It's a bit of a trap sometimes. You get used to it.\nParticipantB: Exactly. So is your house typical for the area? I mean, are most people here living in big houses?\nParticipantA: Yeah, mostly. Most people around here have big yards. But my neighbors have a lot of older cars.\nParticipantB: Oh, really? Older cars? I have a brand new car, but it's small. Maybe I'll need a bigger one soon.\nParticipantA: Maybe. My truck is an older one, but it gets me around.\nParticipantB: Yeah, trucks are great. I'm jealous of the space.\nParticipantA: Well, you never know. Maybe you'll buy a bigger place eventually.\nParticipantB: Maybe. Or maybe I'll stay here and just enjoy the porch.\nParticipantA: Yeah, sounds good. Thanks for telling me about it.\nParticipantB: Yeah, same to you. It was nice talking.\nParticipantA: Yep. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 886,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

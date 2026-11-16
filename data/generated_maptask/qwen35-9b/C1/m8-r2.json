@@ -1,0 +1,207 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m8",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 4236686903,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Right, let's start at the bottom left. Where did you mark your start?\nFollower: Oh, got it. The cross is near the bottom left corner.\nGiver: Good. Okay, from there, you need to go up and slightly left, past the telephone kiosk, but keep the kiosk on your left side as you move up.\nFollower: Left of the kiosk? Okay, I'm drawing a line going up the left edge, keeping the kiosk to my left.\nGiver: No, wait. You pass the kiosk. Keep it on your left as you walk away from it, moving towards the top of the map.\nFollower: Ah, so I walk past it? Okay, I'm heading towards the top left now.\nGiver: Yes, keep going straight up until you hit the very top edge of the map.\nFollower: Okay, I'm at the top left corner now.\nGiver: Great. Now turn right, go across the top, then turn left again, coming down just past the stone circle. Keep the stone circle on your left.\nFollower: Stone circle... oh! That's near the bottom left on my map. Is that the stone circle?\nGiver: Yeah, that's it. You'll see it's a circle of stones. Go past it, then head straight down towards the farmer's gate.\nFollower: Farmer's gate? Wait, I have a broken gate there. Is that the one? And why is it further down than the stone circle on my map?\nGiver: Yeah, it's the broken gate on the right side. Okay, draw a line from the top left, down past the stone circle on your left, then over to the broken gate.\nFollower: Okay, I'm drawing that. So from the top left corner, down to the stone circle, then across to the gate.\nGiver: Yes, that's right. Now, from the gate, head towards the meadow. Keep the meadow on your left.\nFollower: Meadow is there... okay, heading towards it.\nGiver: Wait, on my map, the meadow is near the bottom right, but you have it higher up. Does it matter? Just follow the line towards the bottom right corner.\nFollower: Oh, okay. I'm drawing it towards the bottom right now.\nGiver: Good. Keep going until you reach the bottom right corner. That's where you'll find the east lake.\nFollower: East lake? I see a lake there, but it's pretty big.\nGiver: Yep, the east lake. It's the one near the bottom right. Keep going up the right side of the map, past the lake.\nFollower: Okay, moving up the right side. Wait, I see a rocket launch pad there. Is that part of the route?\nGiver: No, ignore the rocket launch pad. Just keep walking up the right side. You'll hit a viewpoint soon.\nFollower: Viewpoint! Oh, I see a great viewpoint up there. Is that the one?\nGiver: Yes, the great viewpoint. Keep it on your left as you pass it. Then continue up and slightly right, ignoring that other viewpoint higher up.\nFollower: Okay, I'm passing the viewpoint on the left. Now going towards the middle.\nGiver: Yes. Now head towards the ruined monastery. Keep it on your left.\nFollower: Ruined monastery? That's near the middle on my map. Okay, heading towards it.\nGiver: Keep going until you're next to it, then turn right and walk towards the stile. Keep the stile on your right.\nFollower: Stile! Oh, I see it. Okay, I'm walking towards it. Wait, my stile is slightly lower than yours, but I'll adjust.\nGiver: Don't worry about the exact position, just get to the stile. Once you're there, turn left and head towards the dead tree. Keep the dead tree on your left.\nFollower: Dead tree... oh, that's way up there! Okay, heading up.\nGiver: Yes, the dead tree is higher up on my map. Keep going until you reach the great viewpoint again.\nFollower: Great viewpoint? There are two of them now. Which one?\nGiver: The one you passed earlier, the lower one. That's the one. Keep it on your left.\nFollower: Okay, I'm at the lower viewpoint now. Heading towards the finish.\nGiver: Yes, from here, just walk towards the finish. The finish is near the top middle.\nFollower: Finish? I see a cross there!\nGiver: Perfect. That's the finish. Make sure you end your line exactly on the cross.\nFollower: Done! I've drawn the whole route.\nGiver: Great job. Are you sure the line connects everything?\nFollower: Yeah, looks good. Start, stone circle, broken gate, meadow, east lake, viewpoint, ruined monastery, stile, dead tree, and finish.\nGiver: Perfect. You're done.\nFollower: Okay, call ended. Thanks!",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, let's start at the bottom left. Where did you mark your start?"
+    ],
+    [
+      "Follower",
+      "Oh, got it. The cross is near the bottom left corner."
+    ],
+    [
+      "Giver",
+      "Good. Okay, from there, you need to go up and slightly left, past the telephone kiosk, but keep the kiosk on your left side as you move up."
+    ],
+    [
+      "Follower",
+      "Left of the kiosk? Okay, I'm drawing a line going up the left edge, keeping the kiosk to my left."
+    ],
+    [
+      "Giver",
+      "No, wait. You pass the kiosk. Keep it on your left as you walk away from it, moving towards the top of the map."
+    ],
+    [
+      "Follower",
+      "Ah, so I walk past it? Okay, I'm heading towards the top left now."
+    ],
+    [
+      "Giver",
+      "Yes, keep going straight up until you hit the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the top left corner now."
+    ],
+    [
+      "Giver",
+      "Great. Now turn right, go across the top, then turn left again, coming down just past the stone circle. Keep the stone circle on your left."
+    ],
+    [
+      "Follower",
+      "Stone circle... oh! That's near the bottom left on my map. Is that the stone circle?"
+    ],
+    [
+      "Giver",
+      "Yeah, that's it. You'll see it's a circle of stones. Go past it, then head straight down towards the farmer's gate."
+    ],
+    [
+      "Follower",
+      "Farmer's gate? Wait, I have a broken gate there. Is that the one? And why is it further down than the stone circle on my map?"
+    ],
+    [
+      "Giver",
+      "Yeah, it's the broken gate on the right side. Okay, draw a line from the top left, down past the stone circle on your left, then over to the broken gate."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing that. So from the top left corner, down to the stone circle, then across to the gate."
+    ],
+    [
+      "Giver",
+      "Yes, that's right. Now, from the gate, head towards the meadow. Keep the meadow on your left."
+    ],
+    [
+      "Follower",
+      "Meadow is there... okay, heading towards it."
+    ],
+    [
+      "Giver",
+      "Wait, on my map, the meadow is near the bottom right, but you have it higher up. Does it matter? Just follow the line towards the bottom right corner."
+    ],
+    [
+      "Follower",
+      "Oh, okay. I'm drawing it towards the bottom right now."
+    ],
+    [
+      "Giver",
+      "Good. Keep going until you reach the bottom right corner. That's where you'll find the east lake."
+    ],
+    [
+      "Follower",
+      "East lake? I see a lake there, but it's pretty big."
+    ],
+    [
+      "Giver",
+      "Yep, the east lake. It's the one near the bottom right. Keep going up the right side of the map, past the lake."
+    ],
+    [
+      "Follower",
+      "Okay, moving up the right side. Wait, I see a rocket launch pad there. Is that part of the route?"
+    ],
+    [
+      "Giver",
+      "No, ignore the rocket launch pad. Just keep walking up the right side. You'll hit a viewpoint soon."
+    ],
+    [
+      "Follower",
+      "Viewpoint! Oh, I see a great viewpoint up there. Is that the one?"
+    ],
+    [
+      "Giver",
+      "Yes, the great viewpoint. Keep it on your left as you pass it. Then continue up and slightly right, ignoring that other viewpoint higher up."
+    ],
+    [
+      "Follower",
+      "Okay, I'm passing the viewpoint on the left. Now going towards the middle."
+    ],
+    [
+      "Giver",
+      "Yes. Now head towards the ruined monastery. Keep it on your left."
+    ],
+    [
+      "Follower",
+      "Ruined monastery? That's near the middle on my map. Okay, heading towards it."
+    ],
+    [
+      "Giver",
+      "Keep going until you're next to it, then turn right and walk towards the stile. Keep the stile on your right."
+    ],
+    [
+      "Follower",
+      "Stile! Oh, I see it. Okay, I'm walking towards it. Wait, my stile is slightly lower than yours, but I'll adjust."
+    ],
+    [
+      "Giver",
+      "Don't worry about the exact position, just get to the stile. Once you're there, turn left and head towards the dead tree. Keep the dead tree on your left."
+    ],
+    [
+      "Follower",
+      "Dead tree... oh, that's way up there! Okay, heading up."
+    ],
+    [
+      "Giver",
+      "Yes, the dead tree is higher up on my map. Keep going until you reach the great viewpoint again."
+    ],
+    [
+      "Follower",
+      "Great viewpoint? There are two of them now. Which one?"
+    ],
+    [
+      "Giver",
+      "The one you passed earlier, the lower one. That's the one. Keep it on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the lower viewpoint now. Heading towards the finish."
+    ],
+    [
+      "Giver",
+      "Yes, from here, just walk towards the finish. The finish is near the top middle."
+    ],
+    [
+      "Follower",
+      "Finish? I see a cross there!"
+    ],
+    [
+      "Giver",
+      "Perfect. That's the finish. Make sure you end your line exactly on the cross."
+    ],
+    [
+      "Follower",
+      "Done! I've drawn the whole route."
+    ],
+    [
+      "Giver",
+      "Great job. Are you sure the line connects everything?"
+    ],
+    [
+      "Follower",
+      "Yeah, looks good. Start, stone circle, broken gate, meadow, east lake, viewpoint, ruined monastery, stile, dead tree, and finish."
+    ],
+    [
+      "Giver",
+      "Perfect. You're done."
+    ],
+    [
+      "Follower",
+      "Okay, call ended. Thanks!"
+    ]
+  ],
+  "n_turns": 44,
+  "ended_by": "single_generation"
+}

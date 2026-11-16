@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1854034378,
+  "conversation_no": 2501,
+  "topic": "Painting",
+  "sb_prompt": "HAVE YOU DONE ANY PAINTING PROJECTS RECENTLYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 50,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Hey, I was supposed to call you about painting. Did you ever do any projects recently?\nParticipantB: Oh, not recently. I think I did some watercolors maybe ten years ago for a magazine assignment.\nParticipantA: Wow, that's so long ago. I actually just finished a big series of oil paintings last week.\nParticipantB: Really? That's amazing. I've always been interested in it, but I never really got into it myself.\nParticipantA: Yeah, it's kind of wild. You know, I work at a bank, and people always think that's the only thing I do, but I've been painting for years.\nParticipantB: That's cool. I'm a high school teacher, so I'm busy enough, but I still find the topic interesting. I just never made the jump to actually doing it.\nParticipantA: Right? It's funny how you can be an expert in one area and a total beginner in another. I spend eight hours in a cubicle, then I'm in a studio for four hours on weekends.\nParticipantB: I get that. I made up my mind about painting years ago without really knowing why. Just felt like I needed to do it, but never started.\nParticipantA: That happens a lot. I have this personal experience where I'd buy all these canvases and paints, but then life gets in the way, like this week with a customer dispute at the bank.\nParticipantB: Oh no, I hope it wasn't too bad. Do you find that stress helps you paint better?\nParticipantA: Actually, no, it's the opposite. I need to clear my head to paint. Last week I was so frustrated with a teller that I couldn't focus on my strokes until I went for a run.\nParticipantB: That makes sense. I'm the same way. I need to be calm and organized to teach a class, so I don't really have the patience for painting right now.\nParticipantA: Exactly. It's about the headspace. Sometimes I even tell people at the bank about my work, and they think it's just a hobby, but it's really my main outlet.\nParticipantB: I see. I guess I just never found the time or the motivation. Do you think I should try it again?\nParticipantA: Absolutely. If you just picked up a brush and started, you'd probably surprise yourself. I started with a simple landscape and ended up doing a whole collection.\nParticipantB: Maybe I will. Maybe I'll just grab some paper and markers this weekend. I have a free period on Tuesday.\nParticipantA: That sounds like a great start. Just don't expect to be an artist overnight, it takes practice.\nParticipantB: Fair enough. Thanks for talking about this. I might actually call you back next week to see if I made any progress.\nParticipantA: Sounds good. I'll be ready. Thanks for chatting!\nParticipantB: You too! Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 644,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,827 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m12",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1169811870,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Hi there. We need to go from the Start to the Finish. Look at your map, find the cross marked Start.\nFollower: Okay, found the cross. It's near the caravan park, right?\nGiver: Yes, just south of the caravan park. Start here.\nFollower: Right. Which way do I go?\nGiver: Go down, slightly left, towards the bottom edge of the map.\nFollower: Okay, heading down. I see a forest area. Do I go through it?\nGiver: No, stay clear of the forest. Keep to the left, near the picket fence if you can see one.\nFollower: Ah, there's a picket fence on my left. Okay, going left towards the edge.\nGiver: Good. Now, once you hit the very bottom edge, turn right immediately. Go all the way to the right side.\nFollower: Okay, hit the bottom edge, turned right. Going straight east.\nGiver: Keep going until you pass the old mill on your right. Then turn left, heading back towards the center.\nFollower: Okay, passed the mill. Turning left. Wait, I see a fenced meadow on my left now. Do I go there?\nGiver: Yes, go into the fenced meadow. Stop there.\nFollower: Okay, I'm in the meadow. Do I keep going?\nGiver: Yes, go up from the meadow. Stop when you see the trig point on your right.\nFollower: Okay, going up. There's a monument further up on the right. Do I stop before the monument?\nGiver: No, keep going. Go past the monument. Now, do you see a nuclear test site further up on the right?\nFollower: Yes, I see it. Do I go past that?\nGiver: Yes. Go all the way past it to the top right corner area.\nFollower: Okay, I'm near the test site. Going up towards the top right.\nGiver: Turn left there. Head towards the east lake.\nFollower: Okay, turning left. I see the east lake. Do I go right next to it?\nGiver: Yes, go right up to the lake. Stop when you reach the road next to it. That's the Finish.\nFollower: Okay, I'm at the lake. Wait, the Finish isn't on my map! I don't see a Finish cross anywhere near the lake.\nGiver: What do you mean?\nFollower: I followed your instructions. I went to the lake, but there's no cross here. Maybe I missed a step?\nGiver: Let me re-check. Did you pass the caravan park first?\nFollower: Yes, I started near the caravan park.\nGiver: Okay, maybe you went too far south. Did you hit the old mill?\nFollower: Yes, I passed the mill.\nGiver: Did you see a forest on the way?\nFollower: Yes, I walked through a forest.\nGiver: Okay, that's the first part. From the start, go down past the caravan park, avoid the forest, go to the bottom edge, turn right, go to the old mill, turn left, go into the fenced meadow, go up to the trig point, go past the monument, go past the nuclear test site, turn left towards the east lake. Do you see a cross at the lake?\nFollower: No, there is no cross at the lake on my map.\nGiver: That's strange. Let me describe the whole path again. Start near the caravan park. Go down to the very bottom. Turn right. Go to the old mill. Turn left. Go to the fenced meadow. Go up to the trig point. Go up past the monument. Go up past the nuclear test site. Turn left. Go to the east lake. Is there a cross at the lake?\nFollower: No, definitely no cross. Just the lake.\nGiver: Okay, I might be confusing our maps. Let me describe the landmarks again. Start. Caravan park. Old mill. Fenced meadow. Trig point. Monument. Nuclear test site. East lake. Are all these on your map?\nFollower: Yes, all of them are here.\nGiver: Okay. So from the nuclear test site, go left towards the east lake. Stop right next to the lake.\nFollower: Okay, I'm at the lake. But there's no cross. Is the finish somewhere else?\nGiver: No, the finish is definitely near the east lake. Maybe you have the lake in a different spot?\nFollower: My lake is here at the top right. Yours must be different. Where is the finish on your map?\nGiver: It's right next to the east lake.\nFollower: I don't see it.\nGiver: Okay, let's try again. Start. Go down to the bottom edge. Turn right. Go to the old mill. Turn left. Go to the fenced meadow. Go up. Stop at the trig point. Go up past the monument. Go up past the nuclear test site. Turn left. Go to the east lake. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a golf course on your way?\nFollower: Yes! I see a golf course near the monument. I went past it.\nGiver: Okay, maybe you took a wrong turn. From the start, go down to the bottom edge. Turn right. Go to the old mill. Turn left. Go to the fenced meadow. Go up. Stop at the trig point. Go up past the monument. Go up past the nuclear test site. Turn left. Go to the east lake. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different lake. Do you have a west lake too?\nFollower: Yes, I have a west lake on the left side.\nGiver: Okay, so ignore the west lake. Focus on the east lake. Is there a cross next to it?\nFollower: No.\nGiver: Okay, I think I know what happened. You went too far east. Did you see a caravan park?\nFollower: Yes, two caravan parks. One near the start, one further east.\nGiver: Ah! That's it. Start near the first caravan park. Go down to the bottom edge. Turn right. Go to the old mill. Turn left. Go to the fenced meadow. Go up. Stop at the trig point. Go up past the monument. Go up past the nuclear test site. Turn left. Go to the east lake. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a mill wheel on your map?\nFollower: Yes! I see a mill wheel near the old mill.\nGiver: Okay, so you're using the right mill. Is there a cross at the east lake?\nFollower: No.\nGiver: Okay, maybe you have a different east lake. Is your east lake near the caravan park?\nFollower: Yes, my east lake is right next to the caravan park.\nGiver: Ah! That's the problem. You have the lake in the wrong place. On my map, the lake is further east. Go to the lake that is next to the caravan park. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different caravan park. Is there a caravan park near the finish?\nFollower: Yes, there's a caravan park near the finish.\nGiver: Okay, so go to the caravan park that is near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a picket fence on your map?\nFollower: Yes, I see a picket fence near the start.\nGiver: Okay, so ignore the picket fence. Go to the caravan park near the start. Go down to the bottom edge. Turn right. Go to the old mill. Turn left. Go to the fenced meadow. Go up. Stop at the trig point. Go up past the monument. Go up past the nuclear test site. Turn left. Go to the east lake. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different east lake. Is your east lake near the golf course?\nFollower: Yes, my east lake is near the golf course.\nGiver: Ah! That's it. You have the lake in the wrong place again. Go to the lake that is NOT near the golf course. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different nuclear test site. Is there a nuclear test site near the finish?\nFollower: Yes, there's a nuclear test site near the finish.\nGiver: Okay, so go to the nuclear test site near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a monument on your map?\nFollower: Yes, I see a monument near the nuclear test site.\nGiver: Okay, so ignore the monument near the nuclear test site. Go to the monument that is further north. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different monument. Is there a monument near the finish?\nFollower: Yes, there's a monument near the finish.\nGiver: Okay, so go to the monument near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a trig point on your map?\nFollower: Yes, I see a trig point near the start.\nGiver: Okay, so ignore the trig point near the start. Go to the trig point that is further south. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different trig point. Is there a trig point near the finish?\nFollower: Yes, there's a trig point near the finish.\nGiver: Okay, so go to the trig point near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a caravan park on your map?\nFollower: Yes, I see a caravan park near the start.\nGiver: Okay, so ignore the caravan park near the start. Go to the caravan park that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different caravan park. Is there a caravan park near the finish?\nFollower: Yes, there's a caravan park near the finish.\nGiver: Okay, so go to the caravan park near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a fenced meadow on your map?\nFollower: Yes, I see a fenced meadow near the start.\nGiver: Okay, so ignore the fenced meadow near the start. Go to the fenced meadow that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different fenced meadow. Is there a fenced meadow near the finish?\nFollower: Yes, there's a fenced meadow near the finish.\nGiver: Okay, so go to the fenced meadow near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see an old mill on your map?\nFollower: Yes, I see an old mill near the start.\nGiver: Okay, so ignore the old mill near the start. Go to the old mill that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different old mill. Is there an old mill near the finish?\nFollower: Yes, there's an old mill near the finish.\nGiver: Okay, so go to the old mill near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see an east lake on your map?\nFollower: Yes, I see an east lake near the start.\nGiver: Okay, so ignore the east lake near the start. Go to the east lake that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different east lake. Is there an east lake near the finish?\nFollower: Yes, there's an east lake near the finish.\nGiver: Okay, so go to the east lake near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a west lake on your map?\nFollower: Yes, I see a west lake near the start.\nGiver: Okay, so ignore the west lake near the start. Go to the west lake that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different west lake. Is there a west lake near the finish?\nFollower: Yes, there's a west lake near the finish.\nGiver: Okay, so go to the west lake near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a caravan park on your map?\nFollower: Yes, I see a caravan park near the start.\nGiver: Okay, so ignore the caravan park near the start. Go to the caravan park that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different caravan park. Is there a caravan park near the finish?\nFollower: Yes, there's a caravan park near the finish.\nGiver: Okay, so go to the caravan park near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a fenced meadow on your map?\nFollower: Yes, I see a fenced meadow near the start.\nGiver: Okay, so ignore the fenced meadow near the start. Go to the fenced meadow that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different fenced meadow. Is there a fenced meadow near the finish?\nFollower: Yes, there's a fenced meadow near the finish.\nGiver: Okay, so go to the fenced meadow near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see an old mill on your map?\nFollower: Yes, I see an old mill near the start.\nGiver: Okay, so ignore the old mill near the start. Go to the old mill that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different old mill. Is there an old mill near the finish?\nFollower: Yes, there's an old mill near the finish.\nGiver: Okay, so go to the old mill near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see an east lake on your map?\nFollower: Yes, I see an east lake near the start.\nGiver: Okay, so ignore the east lake near the start. Go to the east lake that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different east lake. Is there an east lake near the finish?\nFollower: Yes, there's an east lake near the finish.\nGiver: Okay, so go to the east lake near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a west lake on your map?\nFollower: Yes, I see a west lake near the start.\nGiver: Okay, so ignore the west lake near the start. Go to the west lake that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different west lake. Is there a west lake near the finish?\nFollower: Yes, there's a west lake near the finish.\nGiver: Okay, so go to the west lake near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a caravan park on your map?\nFollower: Yes, I see a caravan park near the start.\nGiver: Okay, so ignore the caravan park near the start. Go to the caravan park that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different caravan park. Is there a caravan park near the finish?\nFollower: Yes, there's a caravan park near the finish.\nGiver: Okay, so go to the caravan park near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see a fenced meadow on your map?\nFollower: Yes, I see a fenced meadow near the start.\nGiver: Okay, so ignore the fenced meadow near the start. Go to the fenced meadow that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different fenced meadow. Is there a fenced meadow near the finish?\nFollower: Yes, there's a fenced meadow near the finish.\nGiver: Okay, so go to the fenced meadow near the finish. Is there a cross there?\nFollower: No, still no cross.\nGiver: Wait, did you see an old mill on your map?\nFollower: Yes, I see an old mill near the start.\nGiver: Okay, so ignore the old mill near the start. Go to the old mill that is further east. Is there a cross there?\nFollower: No, still no cross.\nGiver: Okay, maybe you have a different old mill. Is there an old mill near the finish?",
+  "hit_token_cap": true,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi there. We need to go from the Start to the Finish. Look at your map, find the cross marked Start."
+    ],
+    [
+      "Follower",
+      "Okay, found the cross. It's near the caravan park, right?"
+    ],
+    [
+      "Giver",
+      "Yes, just south of the caravan park. Start here."
+    ],
+    [
+      "Follower",
+      "Right. Which way do I go?"
+    ],
+    [
+      "Giver",
+      "Go down, slightly left, towards the bottom edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, heading down. I see a forest area. Do I go through it?"
+    ],
+    [
+      "Giver",
+      "No, stay clear of the forest. Keep to the left, near the picket fence if you can see one."
+    ],
+    [
+      "Follower",
+      "Ah, there's a picket fence on my left. Okay, going left towards the edge."
+    ],
+    [
+      "Giver",
+      "Good. Now, once you hit the very bottom edge, turn right immediately. Go all the way to the right side."
+    ],
+    [
+      "Follower",
+      "Okay, hit the bottom edge, turned right. Going straight east."
+    ],
+    [
+      "Giver",
+      "Keep going until you pass the old mill on your right. Then turn left, heading back towards the center."
+    ],
+    [
+      "Follower",
+      "Okay, passed the mill. Turning left. Wait, I see a fenced meadow on my left now. Do I go there?"
+    ],
+    [
+      "Giver",
+      "Yes, go into the fenced meadow. Stop there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm in the meadow. Do I keep going?"
+    ],
+    [
+      "Giver",
+      "Yes, go up from the meadow. Stop when you see the trig point on your right."
+    ],
+    [
+      "Follower",
+      "Okay, going up. There's a monument further up on the right. Do I stop before the monument?"
+    ],
+    [
+      "Giver",
+      "No, keep going. Go past the monument. Now, do you see a nuclear test site further up on the right?"
+    ],
+    [
+      "Follower",
+      "Yes, I see it. Do I go past that?"
+    ],
+    [
+      "Giver",
+      "Yes. Go all the way past it to the top right corner area."
+    ],
+    [
+      "Follower",
+      "Okay, I'm near the test site. Going up towards the top right."
+    ],
+    [
+      "Giver",
+      "Turn left there. Head towards the east lake."
+    ],
+    [
+      "Follower",
+      "Okay, turning left. I see the east lake. Do I go right next to it?"
+    ],
+    [
+      "Giver",
+      "Yes, go right up to the lake. Stop when you reach the road next to it. That's the Finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the lake. Wait, the Finish isn't on my map! I don't see a Finish cross anywhere near the lake."
+    ],
+    [
+      "Giver",
+      "What do you mean?"
+    ],
+    [
+      "Follower",
+      "I followed your instructions. I went to the lake, but there's no cross here. Maybe I missed a step?"
+    ],
+    [
+      "Giver",
+      "Let me re-check. Did you pass the caravan park first?"
+    ],
+    [
+      "Follower",
+      "Yes, I started near the caravan park."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you went too far south. Did you hit the old mill?"
+    ],
+    [
+      "Follower",
+      "Yes, I passed the mill."
+    ],
+    [
+      "Giver",
+      "Did you see a forest on the way?"
+    ],
+    [
+      "Follower",
+      "Yes, I walked through a forest."
+    ],
+    [
+      "Giver",
+      "Okay, that's the first part. From the start, go down past the caravan park, avoid the forest, go to the bottom edge, turn right, go to the old mill, turn left, go into the fenced meadow, go up to the trig point, go past the monument, go past the nuclear test site, turn left towards the east lake. Do you see a cross at the lake?"
+    ],
+    [
+      "Follower",
+      "No, there is no cross at the lake on my map."
+    ],
+    [
+      "Giver",
+      "That's strange. Let me describe the whole path again. Start near the caravan park. Go down to the very bottom. Turn right. Go to the old mill. Turn left. Go to the fenced meadow. Go up to the trig point. Go up past the monument. Go up past the nuclear test site. Turn left. Go to the east lake. Is there a cross at the lake?"
+    ],
+    [
+      "Follower",
+      "No, definitely no cross. Just the lake."
+    ],
+    [
+      "Giver",
+      "Okay, I might be confusing our maps. Let me describe the landmarks again. Start. Caravan park. Old mill. Fenced meadow. Trig point. Monument. Nuclear test site. East lake. Are all these on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, all of them are here."
+    ],
+    [
+      "Giver",
+      "Okay. So from the nuclear test site, go left towards the east lake. Stop right next to the lake."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the lake. But there's no cross. Is the finish somewhere else?"
+    ],
+    [
+      "Giver",
+      "No, the finish is definitely near the east lake. Maybe you have the lake in a different spot?"
+    ],
+    [
+      "Follower",
+      "My lake is here at the top right. Yours must be different. Where is the finish on your map?"
+    ],
+    [
+      "Giver",
+      "It's right next to the east lake."
+    ],
+    [
+      "Follower",
+      "I don't see it."
+    ],
+    [
+      "Giver",
+      "Okay, let's try again. Start. Go down to the bottom edge. Turn right. Go to the old mill. Turn left. Go to the fenced meadow. Go up. Stop at the trig point. Go up past the monument. Go up past the nuclear test site. Turn left. Go to the east lake. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a golf course on your way?"
+    ],
+    [
+      "Follower",
+      "Yes! I see a golf course near the monument. I went past it."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you took a wrong turn. From the start, go down to the bottom edge. Turn right. Go to the old mill. Turn left. Go to the fenced meadow. Go up. Stop at the trig point. Go up past the monument. Go up past the nuclear test site. Turn left. Go to the east lake. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different lake. Do you have a west lake too?"
+    ],
+    [
+      "Follower",
+      "Yes, I have a west lake on the left side."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the west lake. Focus on the east lake. Is there a cross next to it?"
+    ],
+    [
+      "Follower",
+      "No."
+    ],
+    [
+      "Giver",
+      "Okay, I think I know what happened. You went too far east. Did you see a caravan park?"
+    ],
+    [
+      "Follower",
+      "Yes, two caravan parks. One near the start, one further east."
+    ],
+    [
+      "Giver",
+      "Ah! That's it. Start near the first caravan park. Go down to the bottom edge. Turn right. Go to the old mill. Turn left. Go to the fenced meadow. Go up. Stop at the trig point. Go up past the monument. Go up past the nuclear test site. Turn left. Go to the east lake. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a mill wheel on your map?"
+    ],
+    [
+      "Follower",
+      "Yes! I see a mill wheel near the old mill."
+    ],
+    [
+      "Giver",
+      "Okay, so you're using the right mill. Is there a cross at the east lake?"
+    ],
+    [
+      "Follower",
+      "No."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different east lake. Is your east lake near the caravan park?"
+    ],
+    [
+      "Follower",
+      "Yes, my east lake is right next to the caravan park."
+    ],
+    [
+      "Giver",
+      "Ah! That's the problem. You have the lake in the wrong place. On my map, the lake is further east. Go to the lake that is next to the caravan park. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different caravan park. Is there a caravan park near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a caravan park near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the caravan park that is near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a picket fence on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see a picket fence near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the picket fence. Go to the caravan park near the start. Go down to the bottom edge. Turn right. Go to the old mill. Turn left. Go to the fenced meadow. Go up. Stop at the trig point. Go up past the monument. Go up past the nuclear test site. Turn left. Go to the east lake. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different east lake. Is your east lake near the golf course?"
+    ],
+    [
+      "Follower",
+      "Yes, my east lake is near the golf course."
+    ],
+    [
+      "Giver",
+      "Ah! That's it. You have the lake in the wrong place again. Go to the lake that is NOT near the golf course. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different nuclear test site. Is there a nuclear test site near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a nuclear test site near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the nuclear test site near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a monument on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see a monument near the nuclear test site."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the monument near the nuclear test site. Go to the monument that is further north. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different monument. Is there a monument near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a monument near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the monument near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a trig point on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see a trig point near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the trig point near the start. Go to the trig point that is further south. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different trig point. Is there a trig point near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a trig point near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the trig point near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a caravan park on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see a caravan park near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the caravan park near the start. Go to the caravan park that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different caravan park. Is there a caravan park near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a caravan park near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the caravan park near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a fenced meadow on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see a fenced meadow near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the fenced meadow near the start. Go to the fenced meadow that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different fenced meadow. Is there a fenced meadow near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a fenced meadow near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the fenced meadow near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see an old mill on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see an old mill near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the old mill near the start. Go to the old mill that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different old mill. Is there an old mill near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's an old mill near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the old mill near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see an east lake on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see an east lake near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the east lake near the start. Go to the east lake that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different east lake. Is there an east lake near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's an east lake near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the east lake near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a west lake on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see a west lake near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the west lake near the start. Go to the west lake that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different west lake. Is there a west lake near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a west lake near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the west lake near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a caravan park on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see a caravan park near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the caravan park near the start. Go to the caravan park that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different caravan park. Is there a caravan park near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a caravan park near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the caravan park near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a fenced meadow on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see a fenced meadow near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the fenced meadow near the start. Go to the fenced meadow that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different fenced meadow. Is there a fenced meadow near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a fenced meadow near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the fenced meadow near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see an old mill on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see an old mill near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the old mill near the start. Go to the old mill that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different old mill. Is there an old mill near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's an old mill near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the old mill near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see an east lake on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see an east lake near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the east lake near the start. Go to the east lake that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different east lake. Is there an east lake near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's an east lake near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the east lake near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a west lake on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see a west lake near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the west lake near the start. Go to the west lake that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different west lake. Is there a west lake near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a west lake near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the west lake near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a caravan park on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see a caravan park near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the caravan park near the start. Go to the caravan park that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different caravan park. Is there a caravan park near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a caravan park near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the caravan park near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see a fenced meadow on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see a fenced meadow near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the fenced meadow near the start. Go to the fenced meadow that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different fenced meadow. Is there a fenced meadow near the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a fenced meadow near the finish."
+    ],
+    [
+      "Giver",
+      "Okay, so go to the fenced meadow near the finish. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Wait, did you see an old mill on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see an old mill near the start."
+    ],
+    [
+      "Giver",
+      "Okay, so ignore the old mill near the start. Go to the old mill that is further east. Is there a cross there?"
+    ],
+    [
+      "Follower",
+      "No, still no cross."
+    ],
+    [
+      "Giver",
+      "Okay, maybe you have a different old mill. Is there an old mill near the finish?"
+    ]
+  ],
+  "n_turns": 199,
+  "ended_by": "single_generation"
+}

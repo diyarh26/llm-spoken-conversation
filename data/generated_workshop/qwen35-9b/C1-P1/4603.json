@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 383681638,
+  "conversation_no": 4603,
+  "topic": "Universal Pblic Serv",
+  "sb_prompt": "SEE HOW THE OTHER CALLER FEELS ABOUT THE PROPOSAL THAT ALL YOUNG AMERICANS SHOULD SPEND A YEAR OR TWO DOING SOME KIND OF PUBLIC SERVICE",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 51,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hi there. You got the wrong number?\nParticipantA: No, I did the right number. Just wanted to chat about that proposal.\nParticipantB: Oh, the service thing? Yeah, I got that too.\nParticipantA: Right. So, I'm gonna be honest, I'm a little skeptical about it myself.\nParticipantB: Me too. Honestly, I'm pretty on the fence about it.\nParticipantA: Yeah. I mean, I'm a manager at a grocery store, and it feels like we're already stretched pretty thin.\nParticipantB: Yeah, I drive a school bus. That's just one of those jobs that's kind of all-consuming.\nParticipantA: I know. It's just, I don't know, I've held onto this doubt for a while now.\nParticipantB: Same here. It's been sitting in the back of my head for years.\nParticipantA: Exactly. I can't really articulate why, but it just doesn't feel right.\nParticipantB: I get that. I feel like my own kids are already doing enough without forcing it.\nParticipantA: That's fair. My kids are older now, and they're figuring things out on their own.\nParticipantB: Yeah, kind of like that. Sometimes you wonder if it's just another layer of bureaucracy.\nParticipantA: Exactly. It feels a bit like solving a problem we didn't necessarily create.\nParticipantB: True. Like, who decided it's better for everyone to do this?\nParticipantA: I guess that's the hard part. The \"who\" is missing.\nParticipantB: Yeah. I don't think anyone really listened to people like us, doing the day-to-day.\nParticipantA: No, that's it. I feel like the people doing the actual work are the ones who'd know best.\nParticipantB: Amen to that. I think we're done here?\nParticipantA: Yeah, I think so. Thanks for talking.\nParticipantB: Yeah, thanks. Good talking to you.\nParticipantA: Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 454,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

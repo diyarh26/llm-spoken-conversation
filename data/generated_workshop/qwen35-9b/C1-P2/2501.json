@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 22728734,
+  "conversation_no": 2501,
+  "topic": "Painting",
+  "sb_prompt": "HAVE YOU DONE ANY PAINTING PROJECTS RECENTLYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 50,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Can I ask you something?\nParticipantB: Yeah, sure.\nParticipantA: Have you done any painting projects recently?\nParticipantB: Not really. Maybe just a little bit on some furniture.\nParticipantA: Oh, that's nice. I've been doing a lot of painting.\nParticipantB: Oh, really? Like what?\nParticipantA: Well, I started a few weeks ago. Just simple stuff. Like, you know, touching up old wood.\nParticipantB: Oh, that sounds fun. Do you have a favorite color?\nParticipantA: Yeah, honestly, I'm really into reds and deep blues right now.\nParticipantB: Those are my favorites too. I love blue.\nParticipantA: That's interesting because, like, when I'm at the bank, dealing with all that money, it makes me want to be calm.\nParticipantB: Yeah, I get that. I teach high school English, and I'm stressed out all the time.\nParticipantA: Oh, teaching must be tough. Do you paint in your free time to relax?\nParticipantB: I tried once, years ago. But I just couldn't get into it.\nParticipantA: Huh. What happened? Did you not like it?\nParticipantB: I don't know. Maybe I just don't have the patience. Or maybe I just don't have the talent.\nParticipantA: Oh, I totally get that. I used to think I couldn't do it either.\nParticipantB: Really? You didn't think you could?\nParticipantA: Yeah. I was working at this bank for ten years. Just counting money and checking IDs.\nParticipantB: Oh wow. That sounds boring.\nParticipantA: It is, kind of. But then I got this little easel my grandma left me.\nParticipantB: Oh? What did she leave you?\nParticipantA: Just an old wooden easel and a bunch of brushes. Dusty as hell.\nParticipantB: Oh, that's cool.\nParticipantA: So I started painting on the weekends. Just little landscapes.\nParticipantB: Oh, that sounds lovely. Did you like it?\nParticipantA: Yeah, actually. It was really nice. Got me out of the office.\nParticipantB: That's good for you. I feel like I should try, but I never really started.\nParticipantA: Maybe you just haven't found the right subject?\nParticipantB: Hmm. Maybe. I guess I just don't know why I stopped.\nParticipantA: Well, you could always try again. It's just paint and wood.\nParticipantB: Yeah, maybe I will. Thanks for asking.\nParticipantA: No problem. It really helped me to just do something creative.\nParticipantB: I'll keep that in mind.\nParticipantA: Alright, well, I've got to get back to the bank.\nParticipantB: Okay, talk soon?\nParticipantA: Maybe. Thanks for talking about painting with me.\nParticipantB: Sure thing. Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 669,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

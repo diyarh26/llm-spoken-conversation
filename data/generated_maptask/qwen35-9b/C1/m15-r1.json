@@ -1,0 +1,207 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m15",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 3624724369,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Right, let's start at the cross marked START. From there, go towards the sandy shore, but keep moving slightly up and left until you hit the well.\nFollower: Okay, starting. Towards the shore... wait, the shore is right there on the left. Do I pass it?\nGiver: No, don't pass it. Go just past the shore, keep the shore on your left side, and head straight for the well.\nFollower: Got it. Left side is the shore. I'm heading for the well.\nGiver: Good. Once you're at the well, turn right and head towards the local residents.\nFollower: Turning right. Wait, I see a crane bay coming up on the left before I get to the residents. Did you go past the crane bay?\nGiver: Yes, the route goes right next to the crane bay. You pass it on your left. Keep going straight past it to the residents.\nFollower: Ah, okay. I'm passing the crane bay now. Okay, I'm at the residents now. Turn left?\nGiver: No, turn right. From the residents, head towards the wood.\nFollower: Wait, the wood is way off to the right. Are you going there?\nGiver: No, I meant the woodland. Look for the woodland near the wood. Go there.\nFollower: Okay, found the woodland. I'm heading there. Oh no, there's an iron bridge near the wood. Did you go near that?\nGiver: No, ignore the iron bridge. Just head to the woodland. Once you're there, turn left towards the hills.\nFollower: Okay, passed the iron bridge. Heading to the hills now.\nGiver: Right. From the hills, you need to go down towards the dead tree.\nFollower: Okay, heading down. Wait, there's a forked stream on the right. Do I cross it?\nGiver: No, keep the stream on your right. Go straight past it towards the dead tree.\nFollower: Okay, keeping the stream on the right. I see the dead tree. Okay, I'm at the tree. Now what?\nGiver: From the tree, head back up towards the farmed land.\nFollower: Back up? There's a lagoon on the right. Do I go near the lagoon?\nGiver: Yes, head for the lagoon on the right. Stop when you're close to it.\nFollower: Okay, heading for the lagoon. Wait, the lagoon is quite far. Okay, I'm near it now. Turn left?\nGiver: No, turn left towards the rockfall.\nFollower: Okay, turning left towards the rockfall. Oh, the rockfall is on the left, but then I see the pirate ship. Do I go there?\nGiver: No, keep going left towards the green bay first, then the pirate ship is further down. Actually, from the lagoon, head left to the rockfall, then up towards the green bay.\nFollower: Okay, rockfall on the left. Green bay is further up. Heading there now.\nGiver: Yes, heading to the green bay. Once you're there, turn right towards the pine grove.\nFollower: Okay, at the green bay. Heading right to the pine grove. Wait, the pine grove is way over there.\nGiver: Yes, go all the way to the pine grove.\nFollower: Okay, I'm at the pine grove now. Turn left?\nGiver: Yes, turn left and head towards the farmed land.\nFollower: Okay, heading for the farmed land. Wait, there's another farmed land further east. Which one?\nGiver: The one to the west. The one closer to the start. Head to that one.\nFollower: Okay, heading to the western farmed land. I'm getting close. Turn right?\nGiver: Yes, turn right and head towards the FINISH.\nFollower: Okay, turning right. Wait, I don't see a FINISH. Is it the farmed land?\nGiver: No, the FINISH is near the pirate ship, but on the left side of the map. It's marked with a cross. Look for the cross.\nFollower: Oh! There it is. The pirate ship is on the left, and the cross is near it. Okay, I see the cross.\nGiver: Good. Draw the line to the cross.\nFollower: Drawing the line... Okay, done.\nGiver: Did you reach the cross?\nFollower: Yes, I'm at the cross.\nGiver: Great. That's it.\nFollower: Done!",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, let's start at the cross marked START. From there, go towards the sandy shore, but keep moving slightly up and left until you hit the well."
+    ],
+    [
+      "Follower",
+      "Okay, starting. Towards the shore... wait, the shore is right there on the left. Do I pass it?"
+    ],
+    [
+      "Giver",
+      "No, don't pass it. Go just past the shore, keep the shore on your left side, and head straight for the well."
+    ],
+    [
+      "Follower",
+      "Got it. Left side is the shore. I'm heading for the well."
+    ],
+    [
+      "Giver",
+      "Good. Once you're at the well, turn right and head towards the local residents."
+    ],
+    [
+      "Follower",
+      "Turning right. Wait, I see a crane bay coming up on the left before I get to the residents. Did you go past the crane bay?"
+    ],
+    [
+      "Giver",
+      "Yes, the route goes right next to the crane bay. You pass it on your left. Keep going straight past it to the residents."
+    ],
+    [
+      "Follower",
+      "Ah, okay. I'm passing the crane bay now. Okay, I'm at the residents now. Turn left?"
+    ],
+    [
+      "Giver",
+      "No, turn right. From the residents, head towards the wood."
+    ],
+    [
+      "Follower",
+      "Wait, the wood is way off to the right. Are you going there?"
+    ],
+    [
+      "Giver",
+      "No, I meant the woodland. Look for the woodland near the wood. Go there."
+    ],
+    [
+      "Follower",
+      "Okay, found the woodland. I'm heading there. Oh no, there's an iron bridge near the wood. Did you go near that?"
+    ],
+    [
+      "Giver",
+      "No, ignore the iron bridge. Just head to the woodland. Once you're there, turn left towards the hills."
+    ],
+    [
+      "Follower",
+      "Okay, passed the iron bridge. Heading to the hills now."
+    ],
+    [
+      "Giver",
+      "Right. From the hills, you need to go down towards the dead tree."
+    ],
+    [
+      "Follower",
+      "Okay, heading down. Wait, there's a forked stream on the right. Do I cross it?"
+    ],
+    [
+      "Giver",
+      "No, keep the stream on your right. Go straight past it towards the dead tree."
+    ],
+    [
+      "Follower",
+      "Okay, keeping the stream on the right. I see the dead tree. Okay, I'm at the tree. Now what?"
+    ],
+    [
+      "Giver",
+      "From the tree, head back up towards the farmed land."
+    ],
+    [
+      "Follower",
+      "Back up? There's a lagoon on the right. Do I go near the lagoon?"
+    ],
+    [
+      "Giver",
+      "Yes, head for the lagoon on the right. Stop when you're close to it."
+    ],
+    [
+      "Follower",
+      "Okay, heading for the lagoon. Wait, the lagoon is quite far. Okay, I'm near it now. Turn left?"
+    ],
+    [
+      "Giver",
+      "No, turn left towards the rockfall."
+    ],
+    [
+      "Follower",
+      "Okay, turning left towards the rockfall. Oh, the rockfall is on the left, but then I see the pirate ship. Do I go there?"
+    ],
+    [
+      "Giver",
+      "No, keep going left towards the green bay first, then the pirate ship is further down. Actually, from the lagoon, head left to the rockfall, then up towards the green bay."
+    ],
+    [
+      "Follower",
+      "Okay, rockfall on the left. Green bay is further up. Heading there now."
+    ],
+    [
+      "Giver",
+      "Yes, heading to the green bay. Once you're there, turn right towards the pine grove."
+    ],
+    [
+      "Follower",
+      "Okay, at the green bay. Heading right to the pine grove. Wait, the pine grove is way over there."
+    ],
+    [
+      "Giver",
+      "Yes, go all the way to the pine grove."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the pine grove now. Turn left?"
+    ],
+    [
+      "Giver",
+      "Yes, turn left and head towards the farmed land."
+    ],
+    [
+      "Follower",
+      "Okay, heading for the farmed land. Wait, there's another farmed land further east. Which one?"
+    ],
+    [
+      "Giver",
+      "The one to the west. The one closer to the start. Head to that one."
+    ],
+    [
+      "Follower",
+      "Okay, heading to the western farmed land. I'm getting close. Turn right?"
+    ],
+    [
+      "Giver",
+      "Yes, turn right and head towards the FINISH."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. Wait, I don't see a FINISH. Is it the farmed land?"
+    ],
+    [
+      "Giver",
+      "No, the FINISH is near the pirate ship, but on the left side of the map. It's marked with a cross. Look for the cross."
+    ],
+    [
+      "Follower",
+      "Oh! There it is. The pirate ship is on the left, and the cross is near it. Okay, I see the cross."
+    ],
+    [
+      "Giver",
+      "Good. Draw the line to the cross."
+    ],
+    [
+      "Follower",
+      "Drawing the line... Okay, done."
+    ],
+    [
+      "Giver",
+      "Did you reach the cross?"
+    ],
+    [
+      "Follower",
+      "Yes, I'm at the cross."
+    ],
+    [
+      "Giver",
+      "Great. That's it."
+    ],
+    [
+      "Follower",
+      "Done!"
+    ]
+  ],
+  "n_turns": 44,
+  "ended_by": "single_generation"
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2210137970,
+  "conversation_no": 3810,
+  "topic": "Music",
+  "sb_prompt": "PLEASE DISCUSS MUSIC.  CAN YOU FIND MUSICIANSOR TYPES OF MUSIC THAT BOTH YOU AND THE OTHER CALLER LIKE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Sorry, was this the right number?\nParticipantB: Yeah, this is Sarah. Who's calling?\nParticipantA: Oh, hi. I'm Elena.\nParticipantB: Hi Elena! How are you?\nParticipantA: Pretty good, thanks. So we were supposed to talk about music?\nParticipantB: Right, yeah. Music. That's cool. I actually love it, but it's a little overwhelming sometimes with how much is out there.\nParticipantA: Totally. It's like this huge ocean. When I first started selling houses, I tried to figure out what \"good taste\" looked like for buyers, and honestly, it drove me crazy.\nParticipantB: That makes sense. My cousin is a musician, you know? He plays in a band, so I hear a lot of it. It's neat seeing people express themselves, but sometimes the sound just doesn't sit right for me.\nParticipantA: Yeah, that's interesting. I never really had a clear lane. Like, do you like folk? Do you like hip hop? I feel like I like everything equally, which is weird.\nParticipantB: Yeah, that's my issue too. I love the honesty in folk music, and then I hate how aggressive some hip hop can be, but I can't turn it off. It's just there.\nParticipantA: Wait, really? I thought you guys who study biology or something were super structured with things.\nParticipantB: (Laughs) I went to pharmacy school, so yeah, definitely structured. But music feels chaotic. Like, my cousin would tell you that the pain in his songs is real, and that's why it resonates, even if the production is loud.\nParticipantA: Oh, that's a good point. I've sold houses to people who listen to nothing but heavy metal, and they say it helps them focus. I guess I just assumed everyone liked softer stuff.\nParticipantB: Definitely. There's a guy who just bought a place off your area, I think? His wife is a drummer. They love that loud stuff.\nParticipantA: Oh! Yeah, that sounds familiar. I love that. The energy! It's so different from listening to a quiet classical piece while you're unpacking boxes.\nParticipantB: Exactly. Sometimes I need that chaos to feel alive. But other days, I just want something calming. Like jazz. My cousin hates jazz, says it's too \"safe.\"\nParticipantA: Ha! I'm the same. I think jazz is great, but my clients think it's boring. I tell them it's like the music for an adult party, and they want a rock concert!\nParticipantB: That's funny. I guess we all have different needs. I'm trying to figure out if I should recommend my cousin's album to anyone. He's good, but is it too niche?\nParticipantA: Well, if they like stories in their songs, I'd say listen to him. If they want a dance floor, maybe not. It's all about what you're looking for in a house, basically.\nParticipantB: (Laughs) A house! That's a great analogy. Like, do you want a big kitchen for parties, or a cozy nook for reading?\nParticipantA: Exactly! Some people want a mansion for the view, others want a small cottage for the peace.\nParticipantB: I like that way of thinking. Maybe I should ask my cousin to record an acoustic version of his stuff. See if that bridges the gap.\nParticipantA: Oh, that's a great idea! Tell him I said hello. I'd love to hear it.\nParticipantB: I will. Thanks, Elena. That was fun talking to you.\nParticipantA: Me too! I actually didn't realize how much I thought about music until I started selling houses.\nParticipantB: Yeah, it's everywhere. Well, I gotta run, got a shift at the pharmacy soon.\nParticipantA: Oh, wow, really? I didn't know you worked in pharmacy. That's cool.\nParticipantB: Yeah, busy! Thanks again. Take care.\nParticipantA: You too! Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 892,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

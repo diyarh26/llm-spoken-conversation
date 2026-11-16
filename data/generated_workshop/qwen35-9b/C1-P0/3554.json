@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3621667290,
+  "conversation_no": 3554,
+  "topic": "Exercise And Fitness",
+  "sb_prompt": "DO YOU DO ANY EXERCISE REGULARLY TO MAINTAIN YOUR HEALTH OR FITNESS LEVEL?  IF SOOR DO IT AS A TASK?  COMPARE YOUR HABITS AND YOUR MOTIVES",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Thanks for talking to me. I was wondering if you'd be open to chatting about our exercise habits?\nParticipantB: Sure, that sounds interesting. What kind of things did you have in mind?\nParticipantA: Well, I wanted to know if you do any exercise regularly to maintain your health or fitness level.\nParticipantB: I do, actually. I try to work out at least three or four times a week.\nParticipantA: That's good to hear. I don't think I do enough. I usually just jog occasionally when I feel like it.\nParticipantB: Jogging is great, but do you treat it like a scheduled task or just something you do when you have time?\nParticipantA: Honestly, it's more of a casual thing. If I'm busy or tired, I often skip it.\nParticipantB: I see. For me, it's definitely a task. I schedule it on my calendar every Tuesday and Thursday morning.\nParticipantA: Oh, that's a structured approach. I haven't thought of scheduling it before. Why do you think you do that?\nParticipantB: Well, I find that without a set time, I tend to procrastinate. It helps me stick to a routine.\nParticipantA: That makes sense. My main motive for exercising is just to stay generally healthy and not get sick.\nParticipantB: Mine is a bit different. I'm doing it to build specific strength and to feel more confident physically.\nParticipantA: That's interesting. You're focused on fitness goals, while I'm just trying to avoid illness.\nParticipantB: Yeah, maybe I should look into that. Do you ever feel like your lack of structure is holding you back?\nParticipantA: Sometimes. I know I should do more, but without a plan, I often end up watching TV instead.\nParticipantB: Maybe you could try adding a task element. Even if you only commit to 20 minutes, scheduling it might help.\nParticipantA: That's a good idea. I'll think about setting a reminder for a quick workout.\nParticipantB: Exactly. Consistency is key, regardless of the intensity. How long have you been exercising?\nParticipantA: I've been jogging since I was in high school, so about five years now, but inconsistently.\nParticipantB: I've been working out seriously for about two years now. It really changed my energy levels.\nParticipantA: Two years is a long time. I wish I had started that kind of routine sooner.\nParticipantB: It's never too late to start, though. Have you tried any specific types of exercise besides jogging?\nParticipantA: Not really. I've done some yoga once or twice, but I never stick with it.\nParticipantB: Yoga can be great for flexibility and stress. Maybe you should give it a try as a task.\nParticipantA: I might. Stress is actually a big reason why I stop exercising anyway.\nParticipantB: Right, stress management is a huge motivator for many people. I use exercise to clear my head.\nParticipantA: I see how that works. When you push through a workout, it feels like a reset button.\nParticipantB: Exactly. It's like a task you complete to boost your mental state, not just your body.\nParticipantA: I've been feeling pretty stressed lately with work and school. Maybe a task-based workout could help.\nParticipantB: Absolutely. If you set aside 30 minutes twice a week, you might see a difference.\nParticipantA: Okay, I'll try to commit to that. It seems easier to promise myself 30 minutes than an hour.\nParticipantB: Smart move. It's better to have a consistent habit than an intense session you can't sustain.\nParticipantA: Yeah, burnout is real. I don't want to quit again because I pushed too hard.\nParticipantB: Totally agree. Starting small and making it a habit is the way to go.\nParticipantA: Thanks for the advice. I feel like I have a clearer motive now beyond just staying healthy.\nParticipantB: You're welcome. Building fitness should be about feeling good, not just avoiding the doctor.\nParticipantA: That sounds much more positive. I'm happy we compared notes on this.\nParticipantB: It was helpful talking about it. I hope you find some motivation to start scheduling your runs.\nParticipantA: I will. I think I'll treat my next jog as a non-negotiable task this week.\nParticipantB: That's the spirit. Accountability really does make a difference.\nParticipantA: Thanks again for chatting. I feel a little more determined now.\nParticipantB: Anytime. Good luck with your new routine!\nParticipantA: You too. Keep up the good work with your strength training.\nParticipantB: Will do. Thanks again!\nParticipantA: Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 1050,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "58458112bb2669ef495d1a606c197effe91d8a239eb7e5c609de7bcf44ad11ec",
+  "run": {
+    "run_id": "58458112bb2669ef495d1a606c197effe91d8a239eb7e5c609de7bcf44ad11ec",
+    "identity": {
+      "condition": "C1-P0",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T18:24:10.874304+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

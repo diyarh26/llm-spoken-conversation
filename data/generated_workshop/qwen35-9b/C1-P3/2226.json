@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 325540581,
+  "conversation_no": 2226,
+  "topic": "Books And Literature",
+  "sb_prompt": "FIND OUT WHAT BOOKS THE OTHER CALLER READS FOR ENJOYMENT OR SELF-IMPROVEMENT.         DO YOU HAVE SIMILAR OR DIFFERENT INTERESTS IN BOOKS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 44,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 27,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: This is Sarah, we talked on the line before?\nParticipantB: Yeah, sure. It's Jen.\nParticipantA: Oh, hi Jen! How are you doing?\nParticipantB: Good, good. Just wrapping up a job at the old mill.\nParticipantA: That sounds intense. What do you do for a living?\nParticipantB: Electrician. Been doing it for about five years now.\nParticipantA: Nice. I'm an accountant. I spend my days staring at spreadsheets, you know?\nParticipantB: Oh, really? I figure those people just deal with taxes and headaches.\nParticipantA: Well, it's actually kind of fascinating if you look at it the right way.\nParticipantB: Hmm. I never really saw it that way.\nParticipantA: Like, I had this one client last year who was losing his business because of a tiny decimal error.\nParticipantB: Yeah, I guess that happens.\nParticipantA: And fixing it saved him thousands, but it felt like solving a mystery. It makes you think.\nParticipantB: I suppose. I think numbers are just numbers, though. Too rigid.\nParticipantA: Maybe for you, but for me, finding the pattern is the whole point. It's like detective work.\nParticipantB: I guess I prefer the physical stuff. Wires, circuits. You can touch them.\nParticipantA: True. I love that about your job. I wish I could touch my spreadsheets sometimes.\nParticipantB: Nah, I don't think I'd enjoy sitting behind a desk. Too quiet for me.\nParticipantA: Absolutely. So, what kinds of books do you read when you get off work?\nParticipantB: Honestly? Not many. Maybe something quick to unwind.\nParticipantA: Oh, I see. I read a lot. Mostly historical fiction or stuff about business.\nParticipantB: Historical? Interesting. I usually just grab whatever is on the top shelf.\nParticipantA: Like, did you read anything good lately?\nParticipantB: Um, I think I started this thing about wiring houses in the 19th century.\nParticipantA: Oh wow. That sounds heavy. Is it good?\nParticipantB: Eh. Kind of dry. But I suppose I should read more about people's lives.\nParticipantA: You should! Stories can actually teach you a lot, even if they're just made up.\nParticipantB: Maybe. I'll keep that in mind. I'm usually too tired after climbing ladders to read.\nParticipantA: I get that. Sometimes I just stare at the ceiling after crunching numbers.\nParticipantB: Yeah, exactly. Same thing.\nParticipantA: Well, maybe you'll pick up a book next time. I'd love to hear what you think.\nParticipantB: Sure, maybe. Thanks for talking, Sarah.\nParticipantA: No problem, Jen. Take care.\nParticipantB: You too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 644,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

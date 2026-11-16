@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2037477413,
+  "conversation_no": 2279,
+  "topic": "Family Life",
+  "sb_prompt": "IF YOU HAVE CHILDRENY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 37,
+    "education": "a high-school education",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Are you there?\nParticipantB: Yes, I am. How can I help you?\nParticipantA: I need to talk about kids. Do you have any children?\nParticipantB: No, I don't have any children yet. Why do you ask?\nParticipantA: Me neither. But I was thinking about it. Do you think having kids is good?\nParticipantB: That's a big question. I think it depends on what you want in life.\nParticipantA: Yeah, I guess so. My mom says it's the best thing in the world.\nParticipantB: Some people feel that way. Others say it changes everything in a hard way.\nParticipantA: How old do you have to be to have kids? Like, is there an age limit?\nParticipantB: Not really a legal limit for everyone, but usually people wait until they are older, like twenty-five or thirty.\nParticipantA: I am thirty-seven. Is that too old?\nParticipantB: No, thirty-seven is fine. Many people have kids at your age.\nParticipantA: Really? That makes me feel better. I thought people had to be younger.\nParticipantB: Biology says it gets harder as you get older, but it definitely happens all the time.\nParticipantA: What about money? Can you afford kids at thirty-seven?\nParticipantB: It is expensive. You need a stable job and a savings plan.\nParticipantA: I have a job. I just finished high school last year. Can I afford it then?\nParticipantB: That might be difficult at first. You might need to save for a while before starting a family.\nParticipantA: Oh, that sounds scary. I don't have much money right now.\nParticipantB: That is a real concern. You could start small, like fostering a pet or getting an apartment with a roommate.\nParticipantA: A pet? That sounds kind of like a kid. Would that count?\nParticipantB: It's not exactly a child, but it teaches responsibility. That is a good first step.\nParticipantA: Maybe I should get a dog first. Then I can learn how to take care of someone.\nParticipantB: That is a great idea. It gives you experience without the full cost of a baby.\nParticipantA: But what if I want a real baby? Do I need to go back to school?\nParticipantB: Many parents with degrees have kids. It helps to understand how to teach them.\nParticipantA: I only have a high school diploma. Do you think that stops me from being a good mom?\nParticipantB: No, it does not stop you. Education helps, but love and patience matter more.\nParticipantA: That makes me happy to hear. What if I go to college later?\nParticipantB: You can do that. Many people return to school while their kids are in school too.\nParticipantA: That would be hard though. Balancing work, school, and kids sounds crazy.\nParticipantB: It is very hard. You need support from a partner or family to make it work.\nParticipantA: I don't have a partner. Is it possible to raise kids alone at thirty-seven?\nParticipantB: It is possible, but it is very challenging. You need a strong support network and a lot of planning.\nParticipantA: Maybe I should find someone to help me first?\nParticipantB: Yes, building a life with someone can share the burden. Are you seeing anyone?\nParticipantA: Not really. I just meet people sometimes, but we don't talk about kids much.\nParticipantB: Maybe you should bring it up next time. It is an important life topic.\nParticipantA: I will try that. Do you think I should live in a bigger city where people help each other?\nParticipantB: Cities can be good because there are communities and resources for families.\nParticipantA: My town is small. There are not many people here to help.\nParticipantB: If you move, you need to find a place with good schools and support groups.\nParticipantA: Moving sounds expensive. Can I just stay here and save up?\nParticipantB: You could stay here. It depends on your budget and your goals.\nParticipantA: I want to save for my future. Do you think kids ruin your dreams?\nParticipantB: It changes your dreams. You focus on providing for them instead of just yourself.\nParticipantA: I like my freedom. I want to travel and buy my own house soon.\nParticipantB: You can do that before having kids, but once you have them, your priorities change quickly.\nParticipantA: That is true. I don't know if I want to give up my freedom.\nParticipantB: Some parents say they don't miss their freedom much. They find joy in their kids.\nParticipantA: Maybe I will wait five years to see how I feel.\nParticipantB: Taking your time is wise. You should not rush into it if you are unsure.\nParticipantA: Thank you for talking to me. You gave me a lot to think about.\nParticipantB: You are welcome. It was good discussing this with someone your age.\nParticipantA: It was nice talking to you too. Have a good day.\nParticipantB: You too. Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 1143,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "58458112bb2669ef495d1a606c197effe91d8a239eb7e5c609de7bcf44ad11ec",
+  "run": {
+    "run_id": "58458112bb2669ef495d1a606c197effe91d8a239eb7e5c609de7bcf44ad11ec",
+    "identity": {
+      "condition": "C1-P0",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T18:24:10.874304+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

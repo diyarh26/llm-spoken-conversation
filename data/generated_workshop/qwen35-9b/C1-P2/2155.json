@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1293270666,
+  "conversation_no": 2155,
+  "topic": "Care Of The Elderly",
+  "sb_prompt": "PLEASE DISCUSS CARE OF THE ELDERLY.  FIND OUT HOW THE OTHER CALLER FEELS ABOUT SENDING AN ELDERLY FAMILY MEMBER TO A NURSING HOME.  WHAT SHOULD ONE KNOW ABOUT THE NURSING HOME ENVIRONMENT WHEN MAKING THIS DECISION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hi there.\nParticipantA: How are you doing today?\nParticipantB: Pretty good, just finished a shift. How about you?\nParticipantA: Yeah, I'm okay. Just wrapping up some stuff at the store.\nParticipantB: Oh, so you work at a grocery place? That sounds busy.\nParticipantA: Yeah, I'm a manager there. It's... it's a mix of things, honestly.\nParticipantB: Oh? What kind of mix?\nParticipantA: Well, I've made up my mind a long time ago about putting my own mom in a place if she needs it, but some parts of it just sit wrong with me.\nParticipantB: That's interesting. Do you feel like the people there treat you well?\nParticipantA: They're mostly fine. The staff is decent. But it's just... it feels like a factory sometimes, you know? Everyone in a white coat, same routine.\nParticipantB: Yeah, I get that. I'm an electrician, so I'm used to being in houses, seeing people live. It's weird to think about moving someone out of their home.\nParticipantA: Exactly. That's what bothers me. Losing that \"home\" part of it. But I also think, if they can't take care of themselves, maybe that's the only way to keep them safe.\nParticipantB: That makes sense. I actually had a client last year, his dad got sick real bad. He tried to keep him at home for six months, but the house was just falling apart, and the dad was in pain.\nParticipantA: Oh, really? What happened?\nParticipantB: Well, he ended up in a facility. It wasn't perfect, but the nurse took such good care of him. He was actually happier there than at home because the house was so stressful.\nParticipantA: Hmm. That's a good point. Maybe the environment isn't always bad if the right person is there.\nParticipantB: Yeah, it depends on the place. I know a lot of places are just warehouses with cots, which is sad. But others are like little communities.\nParticipantA: Right. So what should someone look for? If they're thinking about it for themselves or a family member?\nParticipantB: Well, you gotta ask about the staff turnover. If the same people aren't there every day, that's a red flag. And you want to see if families are allowed to visit easily.\nParticipantA: Okay, staff consistency. That's something I didn't think about much. I just thought about the cost and the room size.\nParticipantB: Cost is huge. And you should probably tour it when it's quiet, not just when the brochure says they're happy. See the real conditions.\nParticipantA: Yeah, touring it makes sense. It's good to know there are different kinds of places.\nParticipantB: Definitely. My dad's friend went into a nice one where they let him keep his garden stuff. He was fine with it there.\nParticipantA: Oh, that's great. Keeping things that make it feel like home.\nParticipantB: Exactly. It's about dignity. Even if they don't remember your name, they should feel respected.\nParticipantA: Yeah, dignity is key. I guess I was worried it would be just \"care\" without the \"human\" part.\nParticipantB: I hear you. It's a hard decision, nobody likes putting someone in there. But safety comes first sometimes.\nParticipantA: True. I'm glad you shared that story. It made me think a little differently about my mom's situation.\nParticipantB: Glad I could help. Sometimes hearing someone else's story helps you see your own options.\nParticipantA: Yeah, it really did. Thanks for talking this over with me.\nParticipantB: No problem. Take care now.\nParticipantA: You too. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 843,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

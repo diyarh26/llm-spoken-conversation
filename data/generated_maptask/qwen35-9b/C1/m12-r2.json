@@ -1,0 +1,163 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m12",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 2194277180,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Right, you're listening? Okay. Start where you see the cross near the bottom left.\nFollower: Yeah, got the cross. Found the caravan park just below it.\nGiver: Good. Move your line to the left first, just a bit, then go down sharply.\nFollower: Okay, going left... now down. Wait, what's that next to me? Is that the old mill?\nGiver: No, don't go there yet. Keep going down, almost to the bottom edge of your map.\nFollower: Okay, near the bottom. I see a picket fence here. Is that part of the route?\nGiver: No, ignore the fence. Go past it, slightly right, then turn right and head up towards the top edge.\nFollower: Up towards the top? Okay, going up. Whoa, there's a golf course here. Is that the landmark I should be near?\nGiver: No, don't touch the golf course. Keep going straight up past it, then turn left a little bit.\nFollower: Okay, turning left. There's a forest here... wait, I don't have a forest on my map. What is that?\nGiver: It doesn't matter what it is, just follow the path I told you. Turn left, then go down.\nFollower: Going down. Now I'm near the top again. I see a trig point on the right side of my map. Should I go near it?\nGiver: No, the trig point is on the right, you go on the left side of it. Go past the trig point, then turn left and go down again.\nFollower: Okay, left of the trig point. Down. Wait, I see a monument here. Do I go near it?\nGiver: Yes, go near the monument, but on your left side. Then turn right.\nFollower: Turning right. Okay, now I'm moving right. Is that the nuclear test site over there?\nGiver: Yes, that's it. Stay left of the nuclear test site. Keep going right until you can't go further.\nFollower: Okay, I'm near the test site now. Going down. Wait, I see a fenced meadow on my map. Is that it?\nGiver: Not quite. The meadow is on your left. You need to be on the right of it. Go down past the meadow, then turn right.\nFollower: Okay, right of the meadow. Down. Now I'm heading towards the middle. What's this abandoned cottage?\nGiver: That's just a landmark, ignore it. Keep going left, then turn up.\nFollower: Turning up. Okay, going up. Now I'm near the top again. Is that the east lake?\nGiver: Yes, that's the east lake. Stay left of it. Go down past it, then turn right.\nFollower: Turning right. Okay, near the east lake. Down. Wait, I see a farm here. Is that the finish?\nGiver: Not yet. Keep going down, then turn left. You're almost there.\nFollower: Turning left. Okay, I'm getting closer to the center. Wait, I don't see a cross on my map yet. Is that the finish?\nGiver: Almost. Keep going down, then turn right. You should see the cross soon.\nFollower: Okay, turning right. There it is! The cross!\nGiver: Perfect. You did it.\nFollower: Wow, really? I thought I was going to get lost.\nGiver: You did great. Call me when you finish the whole thing.\nFollower: Okay, done. Thanks!\nGiver: You're welcome. Good job.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, you're listening? Okay. Start where you see the cross near the bottom left."
+    ],
+    [
+      "Follower",
+      "Yeah, got the cross. Found the caravan park just below it."
+    ],
+    [
+      "Giver",
+      "Good. Move your line to the left first, just a bit, then go down sharply."
+    ],
+    [
+      "Follower",
+      "Okay, going left... now down. Wait, what's that next to me? Is that the old mill?"
+    ],
+    [
+      "Giver",
+      "No, don't go there yet. Keep going down, almost to the bottom edge of your map."
+    ],
+    [
+      "Follower",
+      "Okay, near the bottom. I see a picket fence here. Is that part of the route?"
+    ],
+    [
+      "Giver",
+      "No, ignore the fence. Go past it, slightly right, then turn right and head up towards the top edge."
+    ],
+    [
+      "Follower",
+      "Up towards the top? Okay, going up. Whoa, there's a golf course here. Is that the landmark I should be near?"
+    ],
+    [
+      "Giver",
+      "No, don't touch the golf course. Keep going straight up past it, then turn left a little bit."
+    ],
+    [
+      "Follower",
+      "Okay, turning left. There's a forest here... wait, I don't have a forest on my map. What is that?"
+    ],
+    [
+      "Giver",
+      "It doesn't matter what it is, just follow the path I told you. Turn left, then go down."
+    ],
+    [
+      "Follower",
+      "Going down. Now I'm near the top again. I see a trig point on the right side of my map. Should I go near it?"
+    ],
+    [
+      "Giver",
+      "No, the trig point is on the right, you go on the left side of it. Go past the trig point, then turn left and go down again."
+    ],
+    [
+      "Follower",
+      "Okay, left of the trig point. Down. Wait, I see a monument here. Do I go near it?"
+    ],
+    [
+      "Giver",
+      "Yes, go near the monument, but on your left side. Then turn right."
+    ],
+    [
+      "Follower",
+      "Turning right. Okay, now I'm moving right. Is that the nuclear test site over there?"
+    ],
+    [
+      "Giver",
+      "Yes, that's it. Stay left of the nuclear test site. Keep going right until you can't go further."
+    ],
+    [
+      "Follower",
+      "Okay, I'm near the test site now. Going down. Wait, I see a fenced meadow on my map. Is that it?"
+    ],
+    [
+      "Giver",
+      "Not quite. The meadow is on your left. You need to be on the right of it. Go down past the meadow, then turn right."
+    ],
+    [
+      "Follower",
+      "Okay, right of the meadow. Down. Now I'm heading towards the middle. What's this abandoned cottage?"
+    ],
+    [
+      "Giver",
+      "That's just a landmark, ignore it. Keep going left, then turn up."
+    ],
+    [
+      "Follower",
+      "Turning up. Okay, going up. Now I'm near the top again. Is that the east lake?"
+    ],
+    [
+      "Giver",
+      "Yes, that's the east lake. Stay left of it. Go down past it, then turn right."
+    ],
+    [
+      "Follower",
+      "Turning right. Okay, near the east lake. Down. Wait, I see a farm here. Is that the finish?"
+    ],
+    [
+      "Giver",
+      "Not yet. Keep going down, then turn left. You're almost there."
+    ],
+    [
+      "Follower",
+      "Turning left. Okay, I'm getting closer to the center. Wait, I don't see a cross on my map yet. Is that the finish?"
+    ],
+    [
+      "Giver",
+      "Almost. Keep going down, then turn right. You should see the cross soon."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. There it is! The cross!"
+    ],
+    [
+      "Giver",
+      "Perfect. You did it."
+    ],
+    [
+      "Follower",
+      "Wow, really? I thought I was going to get lost."
+    ],
+    [
+      "Giver",
+      "You did great. Call me when you finish the whole thing."
+    ],
+    [
+      "Follower",
+      "Okay, done. Thanks!"
+    ],
+    [
+      "Giver",
+      "You're welcome. Good job."
+    ]
+  ],
+  "n_turns": 33,
+  "ended_by": "single_generation"
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1233044427,
+  "conversation_no": 2469,
+  "topic": "Hobbies And Crafts",
+  "sb_prompt": "WHAT HOBBIES DO YOU HAVE IN YOUR SPARE TIME?  DO THEY INCLUDE ANY HANDICRAFTSWOODWORKING?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hi there.\nParticipantB: Hello!\nParticipantA: Did you get my message about the call?\nParticipantB: Yeah, I saw it. Hi.\nParticipantA: So, what do you like to do in your spare time?\nParticipantB: Oh, well, honestly? Not much right now. Work is pretty consuming. I'm a pharmacist, so it's mostly just being on my feet, dealing with prescriptions, you know?\nParticipantA: Oh, that sounds intense. I'm a librarian, so it's a lot quieter, but definitely busy too.\nParticipantB: Yeah, but different kind of busy. Mine is high-stakes sometimes. Like, if someone walks in there with a severe reaction, you gotta act fast.\nParticipantA: Right, that's good stuff. I mean, I don't have that kind of pressure. It's just... books. And quiet places.\nParticipantB: Books? Like, reading? Or do you do anything with them?\nParticipantA: Oh, actually, I do a little bit. I like woodworking. I've been making small stuff. Birdhouses, little shelves. Just nothing big.\nParticipantB: Woodworking? Oh, nice. I've thought about trying that. I mean, the idea of making something with your hands sounds nice.\nParticipantA: Yeah, it does. I guess I just started a few years ago. I didn't really have a reason, I just felt like it.\nParticipantB: Huh. Just felt like it? That's kind of hard to explain. I usually need a reason or a goal.\nParticipantA: Yeah, I know what you mean. It was just this quiet urge I've had since college. Never quite figured out why, but it stuck.\nParticipantB: Yeah, that's weird. I'm kind of the opposite. I like the idea of fixing things, but the actual process? It's not for me.\nParticipantA: Really? Why's that?\nParticipantB: Well, I have a cousin who got into woodworking, serious into it. He'd spend hours in the garage. And he got really stressed. Like, obsessed.\nParticipantA: Oh, wow. That's different. I thought everyone liked it because it was relaxing.\nParticipantB: For me, seeing that with him... it just made me realize I might not be the patient type. I get anxious if I can't just solve the problem immediately.\nParticipantA: Hmm. I guess I'm lucky. I just enjoy the process, even if I don't know why. It helps me unwind.\nParticipantB: Yeah, I get that. I just prefer fixing appliances or something quick. A little repair here, a little patch there.\nParticipantA: Oh, that makes sense. I'm glad you didn't end up making birdhouses, though. Maybe you'd hate it.\nParticipantB: Maybe. I'd probably break the saw. I don't know. But at least I'm not gonna ruin the whole project like my cousin did.\nParticipantA: True. I'm proud of my shelves, actually. Took me six months to get the legs right.\nParticipantB: Six months? Wow. I couldn't do that. I'd quit after an hour.\nParticipantA: I guess we're different. I'm patient; you're practical.\nParticipantB: Exactly. I mean, I appreciate the craft, I just don't have the temperament for the long haul.\nParticipantA: Fair enough. Well, I'm glad we talked about it. I think I might stick to birdhouses.\nParticipantB: Birdhouses sound nice. Quiet and simple. Maybe I'll just keep fixing my coffee maker instead.\nParticipantA: That works for me too. Thanks for chatting.\nParticipantB: Yeah, sure. You too.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 809,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

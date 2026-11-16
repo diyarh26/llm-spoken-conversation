@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1404608070,
+  "conversation_no": 2452,
+  "topic": "Middle East",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THINKS ABOUT CURRENT US POLICY IN THE MIDDLE EAST. SHOULD US POLICY BE CHANGED OR NOT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, what's the deal with the Middle East right now? You think we're doing the right thing?\nParticipantB: Hmm. Well, I'm not sure. Honestly, I kind of doubt it.\nParticipantA: Oh yeah? Why's that?\nParticipantB: It's just... look, a few years back I was working on a renovation out in Kuwait. We got there, and the place was a wreck, you know? Just concrete and dust everywhere.\nParticipantA: Oh, really? That sounds rough.\nParticipantB: Yeah. And the Americans were everywhere, just setting up all these bases, guarding stuff, telling us what to do. But you know what was funny?\nParticipantA: What was funny?\nParticipantB: Nobody from the local families would talk to them. Like, not at all. They'd walk by in their trucks, and people would just look right through them. Like, invisible or something.\nParticipantA: Invisible?\nParticipantB: Yeah, kinda. Like, they weren't part of the neighborhood at all. Just kind of stuck there, feeling real awkward.\nParticipantA: That's weird. I never thought about it that way. I mean, I work with cars, you know? Mostly old Jeeps and pickups, mostly coming back from over there.\nParticipantB: Oh? What about them?\nParticipantA: They're usually real happy to be home, honestly. They don't complain about the mission. They just want to fix their trucks and go home to their kids. They seem pretty sure it's the right thing to do.\nParticipantB: Hmm. Well, maybe they just don't see it the way I do.\nParticipantA: Maybe. But I guess I just look at it differently. I think if we pull back, everything just falls apart. The bad guys take over. It's just... messy, that's all.\nParticipantB: I guess so. But I still think maybe we should try to talk more. Not just tell people what to do.\nParticipantA: Talk? Like what?\nParticipantB: Like, actually listen. Maybe build something that works for everyone, not just protect some bases.\nParticipantA: Well, I'm not so sure about that. The last thing I heard was about a huge attack if we leave. It feels like we have to be there.\nParticipantB: Yeah, but is it enough? Just being there? Or do we need to change how we do it?\nParticipantA: Maybe we should. But I'm scared if we do, we'll lose the peace we have now.\nParticipantB: I get that. It's just hard to say.\nParticipantA: Yeah, it is.\nParticipantB: Well, I guess I'll keep thinking about it. Thanks for talking.\nParticipantA: Yeah, me too. Good luck with your work.\nParticipantB: You too. Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 635,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

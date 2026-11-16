@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 4118931540,
+  "conversation_no": 2469,
+  "topic": "Hobbies And Crafts",
+  "sb_prompt": "WHAT HOBBIES DO YOU HAVE IN YOUR SPARE TIME?  DO THEY INCLUDE ANY HANDICRAFTSWOODWORKING?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hi there!\nParticipantA: Thanks for calling. I'm doing a little survey on hobbies. What do you do in your spare time?\nParticipantB: Oh, sure. Well, I work as a pharmacist, so most of my weekends are spent trying not to think about prescriptions or something. Mostly just watching shows or reading. Do any of those count as handicrafts?\nParticipantA: Nah, not really. I'm a librarian, actually. So my \"craft\" is organizing books and maybe stamping some bookmarks if I'm feeling fancy. But honestly, I've never really done woodworking.\nParticipantB: Right, I can see that. I know, I have a cousin who is obsessed with woodworking. He builds all these custom cabinets. It's actually kind of annoying to watch sometimes.\nParticipantA: Oh? Why is it annoying? I mean, I think it's really interesting. I've always been drawn to it, but I just never picked up a saw.\nParticipantB: Well, it's just the smell, mostly. Like, imagine being in a room for six hours surrounded by sawdust and glue fumes. My cousin's shop is a mess. It's not really relaxing for me.\nParticipantA: Haha, true. I guess I prefer the quiet of the library. Though sometimes I do wonder what it's like to build something solid. Like, make a chair from scratch.\nParticipantB: Yeah, but for me, there's just too much risk. My cousin burned down a bench once. He still hasn't forgiven himself. So now he just does jewelry or sewing stuff.\nParticipantA: Oh, that's sad. I never thought about the danger part. I guess I'm lucky I stuck to books.\nParticipantB: Definitely. Well, I'm glad I talked to you. Do you ever make anything specific, like wood?\nParticipantA: Not even close. Just maybe folding paper cranes if I'm bored. Hey, did you try to say yes to the woodworking question?\nParticipantB: Haha, no way. I'm passing. Maybe another time.\nParticipantA: Alright, thanks for chatting!\nParticipantB: You too! Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 471,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

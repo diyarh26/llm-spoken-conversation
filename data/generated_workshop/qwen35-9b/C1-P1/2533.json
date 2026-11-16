@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 148274444,
+  "conversation_no": 2533,
+  "topic": "Baseball",
+  "sb_prompt": "FIND OUT THE OTHER CALLER'S FAVORITE PRO BASEBALL TEAM AND WHERE IT'S HEADED THIS YEAR.  DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hi there!\nParticipantA: Sorry, didn't mean to catch you off guard. Is this a good time for a quick chat about baseball?\nParticipantB: Yeah, definitely. I was just taking a break between cars. What's your team?\nParticipantA: Mine is the Cubs. I've been a fan my whole life. How about you?\nParticipantB: Oh, I'm rooting for the Red Sox. Always have been.\nParticipantA: Okay. So, where do you think they're headed this year? Are you optimistic?\nParticipantB: Honestly? I'm pretty skeptical. They're talking about winning the division, but I just don't see it happening. The pitching staff is inconsistent and the injuries are piling up.\nParticipantA: Oh, I hear that a lot about the Cubs too. Actually, my cousin is a scout for a minor league team, and he says both teams are overhyped.\nParticipantB: Really? That's interesting. My mechanic friend, who used to play semi-pro ball, says the same thing about the Sox. He thinks the roster is too old to make a run this season.\nParticipantA: Yeah, that makes sense. I kind of feel that way too, even though everyone else is excited. Part of me wants to believe, but the other part is just like, \"No way.\"\nParticipantB: Exactly. I'd rather be optimistic, but the stats don't lie. The defense is shaky and the bullpen has been a mess so far.\nParticipantA: True. My cousin mentioned that the Red Sox front office is making some bad trades already. It's like they're panicking instead of building something solid.\nParticipantB: Yeah, panic mode is real this season. It's frustrating when you think they're going to pull it off but they keep missing.\nParticipantA: Same here. I guess I'm just going to enjoy watching the games even if I don't think we win. Does that sound weird?\nParticipantB: Not at all. I'm doing the same. It's fun to watch, even if you're rooting for the other guy sometimes.\nParticipantA: Haha, yeah, that's the thing. It's a guilty pleasure, kind of. Well, I shouldn't keep you from your lunch break.\nParticipantB: No, no, that was actually good. Thanks for chatting. Good luck with the Cubs, regardless of how it goes.\nParticipantA: Thanks! You too with the Sox. Have a good one.\nParticipantB: You too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 546,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

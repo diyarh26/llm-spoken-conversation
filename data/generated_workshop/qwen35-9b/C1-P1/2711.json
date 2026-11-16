@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3112611722,
+  "conversation_no": 2711,
+  "topic": "Vacation Spots",
+  "sb_prompt": "PLEASE DISCUSS TYPES OF VACATIONS AND TRIPS YOU ENJOY.  FIND OUT WHETHER THE OTHER CALLER CAN INTEREST YOU IN A VACATION SPOT YOU HAVEN'T VISITED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 25,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hi! Yeah, this is Alex.\nParticipantA: Nice to meet you. I'm Sam. We were supposed to chat about vacations, right?\nParticipantB: Absolutely. So, what kind of trips do you actually enjoy?\nParticipantA: Honestly, I love the small road trips. You know, just driving out to a random town, grabbing a burger at a diner, staying in a weird motel?\nParticipantB: Oh, I love that too! I hate the big touristy places with the huge crowds and the overpriced souvenirs.\nParticipantA: Exactly. It's about the food and the drive. Like, I went to this little place in Ohio last month and found the best chili I've ever had.\nParticipantB: That sounds amazing! Actually, my buddy Dave\u2014he's a mechanic\u2014just came back from a similar trip he took with his sister.\nParticipantA: Oh, really? Where did they go?\nParticipantB: They drove all the way up north to this state called Vermont. They stayed in this cabin that looked like it was straight out of a movie.\nParticipantA: Whoa, a cabin? That sounds kinda fancy for a road trip. Is it expensive?\nParticipantB: Nah, it was pretty affordable. But here's the thing, Dave is really into the whole camping thing now. He says staying in a cabin is the only way to really see the place.\nParticipantA: Hmm, I've never thought of it that way. Usually, I'm too tired to set up a tent or anything. I just want a bed.\nParticipantB: Well, if you're not a big outdoors person, maybe you'd like a historic inn? Like, an old house that's been turned into a hotel?\nParticipantA: Actually, yeah! I was talking to my manager the other day about how we need to update the decor, and I told her I'd love to stay in a place with actual history.\nParticipantB: That's a great idea. There's a place in New England called the Inn at Oak Hill. It's got a porch swing and they serve fresh lobster.\nParticipantA: Wait, lobster? That sounds like a stretch for my usual budget. But the porch swing does sound nice.\nParticipantB: It's not super cheap, but you can do a day trip there and just grab the room for the night. My sister says the views are insane.\nParticipantA: I might have to look into that. I usually just stick to diners and motels, but maybe a nice dinner once in a while wouldn't hurt.\nParticipantB: Totally. You should check it out next time you get a good tip from your manager about somewhere cool.\nParticipantA: Deal. By the way, how do you handle that? I mean, you're a truck driver, right? Do you get to just drive wherever you want?\nParticipantB: Man, it's a mix. Sometimes I'm on a tight schedule and I just sleep in the cab. Other times, like last week, I got a layover in Colorado for three days.\nParticipantA: Three days? That's insane! I can't imagine sitting in a truck for that long without going crazy.\nParticipantB: It's actually pretty freeing if you like the road. I found this little spot near the Rockies that's basically just a field with a fire pit.\nParticipantA: Oh, that sounds perfect for you. I'd probably be sweating inside a truck, but that sounds like a dream.\nParticipantB: It was. Just me, the dogs, and a guitar. Felt like I had the whole world to myself.\nParticipantA: I need to experience that someday. I guess I'm just too stuck in the \"eat, sleep, repeat\" routine.\nParticipantB: You might just have to force yourself out of it once in a while. Dave says you learn so much about the country that way.\nParticipantA: Maybe. But if you know a place that's quiet, has good coffee, and isn't too far from the highway, hit me up.\nParticipantB: Okay, I'll text you. Actually, there's one near my old hometown in Ohio that's pretty quiet.\nParticipantA: Oh, really? I haven't been to Ohio in years. I'll definitely check it out.\nParticipantB: Sounds like a plan. So, what else have you done? Any weird food you've tried on a trip?\nParticipantA: Oh, man. In that Ohio trip, I tried something called \"chicken fried steak\" and it was basically just a steak, but it was good.\nParticipantB: Haha, okay. I ate a sandwich that tasted like bread and butter in Colorado.\nParticipantA: Wow, you have to try that. It sounds like the best thing I've ever had.\nParticipantB: I'll keep it on my list. Hey, should we hang up now? I've got to get back on the road.\nParticipantA: Yeah, no problem. Thanks for the info, Alex. That cabin thing sounds pretty cool.\nParticipantB: Thanks, Sam. Give it a shot. Take care.\nParticipantA: You too. Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 1110,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1732120897,
+  "conversation_no": 3040,
+  "topic": "Taxes",
+  "sb_prompt": "TALK ABOUT WHETHER AMERICANSY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 56,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey there. You got the wrong number or something?\nParticipantA: No, no, I actually called because of that prompt about taxes. I didn't think we'd talk to each other, but here we are.\nParticipantB: Oh, wow. Yeah, taxes. That's... well, that's a whole can of worms. I guess you're an accountant?\nParticipantA: Yeah, I am. Forty years or so of filing returns. It's a weird thing. Part of it sits fine, honestly. The math, the deductions for home interest, the standard deduction\u2014those make sense.\nParticipantB: I can believe that. For me, it's different. I'm a farmer. Just a regular guy, try to make a living from the land.\nParticipantA: Right. How does that work with the taxes?\nParticipantB: It's... complicated. Some parts sit fine, I guess. Like deducting feed or fertilizer. But other parts just... don't. I made up my mind about it years ago without quite being able to say why. It just feels like the government is always picking at your pockets when you're trying to do the hard work.\nParticipantA: That actually resonates with me. I tell my wife that sometimes. I know the rules, I know the code, but there are specific things where it feels like they're taking a bite out of something you worked hard for.\nParticipantB: My cousin dealt with it recently. He's got a close guy who was an auditor, and that shaped my view completely. The guy was so rigid, you know? Just said \"no\" to everything I tried to explain about crop losses.\nParticipantA: Ugh, that's the worst part. The human element. The rules might be logical, but the people enforcing them... it's like talking to a wall. I've felt that myself a few times.\nParticipantB: Yeah, exactly. It's frustrating. Do you think they'll ever get it right? Or is it just how it's always been?\nParticipantA: Hard to say. I think parts of it will always feel like that to people on the ground. Maybe it's just the nature of the beast.\nParticipantB: Maybe. Well, I'm glad I called someone who actually understands the numbers behind it. Most people just tell me to \"just pay it.\"\nParticipantA: Well, I don't want to just tell you to pay it, either. It sucks. I hope your cousin gets it figured out next time.\nParticipantB: We'll see. Thanks for talking it over with me. It helps to know there's someone else who feels the same way.\nParticipantA: Yeah, it does. Thanks for chatting.\nParticipantB: You too. Good luck with the filing.\nParticipantA: Will do. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 610,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

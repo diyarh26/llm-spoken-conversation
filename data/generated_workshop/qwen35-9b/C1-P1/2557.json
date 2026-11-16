@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3283093310,
+  "conversation_no": 2557,
+  "topic": "Recycling",
+  "sb_prompt": "WHAT IS BEING DONE IN YOUR COMMUNITY OR AREA ABOUT RECYCLING WASTE MATERIALS?  DO YOU THINK MORE SHOULD BE DONE?  DO YOU HAVE ANY IDEAS ON HOW TO ENCOURAGE MORE RECYCLING OR ON WHAT OTHER MATERIALS SHOULD BE INCLUDED?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 55,
+    "education": "a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 46,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Hi, I'm Mary. You got my number from that little flyer on the counter?\nParticipantB: Oh, hi Mary. Yeah, that's me, Linda. Saw it in the bank lobby yesterday.\nParticipantA: Right. So, how's it going over there with the cars? I heard you're a mechanic.\nParticipantB: Hey, it's okay. Just busy as usual. Why? You need your brakes fixed?\nParticipantA: No, not me. I'm a teller here at the bank. I called 'cause I saw people dropping off bags at the back. I wanted to ask what you guys are doing about recycling here.\nParticipantB: Oh, yeah. The city started a new curbside program three months ago. It's pretty mixed, honestly.\nParticipantA: Mixed? I thought it was going to be great.\nParticipantB: Well, they take the bottles and cans now, which is good. But they're not doing the paper or the old electronics.\nParticipantA: Oh, that's a bummer. I actually feel kind of bad about that. My cousin Dave, he works at the recycling center downtown.\nParticipantB: Really? That's interesting. What does he say?\nParticipantA: He says if you don't separate the plastic from the glass, the whole truck gets sent to the dump instead. He's really annoyed people just throw everything in one bag.\nParticipantB: Ugh, that is frustrating. I've heard that too from some of the guys I work with. They say the sorting machines jam up constantly because people mix everything.\nParticipantA: Yeah, it seems like people just don't care enough to read the labels.\nParticipantB: Yeah, that's the problem. Nobody thinks about it. So what do you think should change?\nParticipantA: Well, I think maybe if they put stickers on the trash cans with pictures, people might actually know what goes where.\nParticipantB: That's a good idea. Maybe the city could send out some free bins with clear icons?\nParticipantA: Yes, that would help. But I also wonder if we should start taking in more stuff. Like old computers or batteries.\nParticipantB: Oh, definitely. My best friend's kid lost a laptop last year and had no idea where to put it. They just tossed it in the regular trash.\nParticipantA: That's terrible. Those things have stuff in them that hurts the ground.\nParticipantB: Exactly. Maybe we could start a drop-off day at the auto shop? We could take the electronics and the old tires.\nParticipantA: Oh, that sounds wonderful. I'd actually be willing to bring my old printer over if that would work.\nParticipantB: Sure, let me talk to my boss. We have a little room in the back that's perfect for it.\nParticipantA: That's really nice of you. I feel better knowing someone is going to take care of it properly.\nParticipantB: Yeah, no problem. It helps the whole neighborhood, I think.\nParticipantA: Yeah, I agree. Thanks for listening, Linda.\nParticipantB: No problem, Mary. Call me if you want to drop it off next week.\nParticipantA: Will do. Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 708,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

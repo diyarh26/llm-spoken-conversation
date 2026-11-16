@@ -1,0 +1,247 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m6",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 2298689733,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Hi, can you hear me?\nFollower: Yes, I can hear you. Where should I start?\nGiver: Start at the cross on your map.\nFollower: Okay, I'm at the cross. What do I do next?\nGiver: Move up a bit, then left. Go past the diamond mine on your left.\nFollower: The diamond mine? Oh, I see it. So I go left of that?\nGiver: No, wait. You're going the wrong way. Go up first, then turn left. You'll pass the mine on your left side.\nFollower: Ah, okay. Up, then left. Right, past the mine.\nGiver: Good. Now keep going left until you hit the graveyard.\nFollower: I don't see a graveyard on my map. Do you have a different one?\nGiver: What? I have a graveyard right there next to the river. Why don't you?\nFollower: Maybe it's just not on my map. Okay, I'll ignore it for now. I'm going left past the river.\nGiver: Wait, you're going too far left! The river is on the right, not the left. Turn back right.\nFollower: Oh, I see. So the river is on my right. Okay, I'm turning right now.\nGiver: Good. Now go up past the river, then turn left. You should see an Apache camp on your left soon.\nFollower: Apache camp? Yeah, I see it. But it's pretty far up. Is that the one?\nGiver: Yes, that's the one. Make sure you go left of the camp.\nFollower: Okay, I'm going left of the camp now.\nGiver: Good. Now keep going up and left. You'll reach a carved wooden pole on your right.\nFollower: Carved wooden pole? I see one on my right. Okay, I'll go past it.\nGiver: Wait, which pole? There are two poles on the whole map. One near the top, one near the bottom. Which one did you mean?\nFollower: Oh, I thought you meant the one near the top. That's the first one I saw.\nGiver: No, I meant the second one, the lower one. The one near the walled city. I'm going to go down to the walled city now.\nFollower: Oh, I'm still near the top pole. I didn't know there was another one. Okay, I'll head down to the walled city.\nGiver: Okay, go down to the walled city on your left.\nFollower: Found it. It's on my left. Okay, going up past it now.\nGiver: Good. Now go right, past some flat rocks on your left.\nFollower: Flat rocks? I see rocks on my left. Are those the flat rocks?\nGiver: Yes, those are the flat rocks. Go right past them.\nFollower: Okay, I'm going right now.\nGiver: Good. Now go up and right. You'll see a buffalo on your right soon.\nFollower: Buffalo? I don't see any animals on my map. What do you mean?\nGiver: A buffalo. It's a big animal. It's on the right side of the map, near the middle.\nFollower: Oh, I think I see a symbol that might be an animal. Is that it?\nGiver: Yes, that's it. Go right past the buffalo.\nFollower: Okay, I'm going right of the buffalo now.\nGiver: Good. Now go up and left. You'll see a cattle ranch on your left.\nFollower: Cattle ranch? I don't see a ranch. Is that the same as the Apache camp?\nGiver: No, it's different. The Apache camp is higher up. The ranch is lower down, near the fort.\nFollower: Oh, I see. There's a ranch lower down. Okay, going left of the ranch now.\nGiver: Good. Now go up and right. You'll see a fort on your right.\nFollower: Fort? I see a building on my right. Is that the fort?\nGiver: Yes, that's the fort. Go right past it.\nFollower: Okay, I'm going right of the fort now.\nGiver: Good. Now go down and left. You'll reach the finish line.\nFollower: Finish? I don't see a finish line. Just buildings and stuff.\nGiver: The finish is at the bottom left. It's marked with a cross. Look for the cross.\nFollower: Oh! There it is. I see a cross at the bottom left.\nGiver: Great. Now draw a line from the fort to that cross.\nFollower: Okay, drawing the line... almost there.\nGiver: Is that the finish?\nFollower: Yes, I think so. I'm at the cross.\nGiver: Perfect. You did it.\nFollower: Okay, done.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi, can you hear me?"
+    ],
+    [
+      "Follower",
+      "Yes, I can hear you. Where should I start?"
+    ],
+    [
+      "Giver",
+      "Start at the cross on your map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the cross. What do I do next?"
+    ],
+    [
+      "Giver",
+      "Move up a bit, then left. Go past the diamond mine on your left."
+    ],
+    [
+      "Follower",
+      "The diamond mine? Oh, I see it. So I go left of that?"
+    ],
+    [
+      "Giver",
+      "No, wait. You're going the wrong way. Go up first, then turn left. You'll pass the mine on your left side."
+    ],
+    [
+      "Follower",
+      "Ah, okay. Up, then left. Right, past the mine."
+    ],
+    [
+      "Giver",
+      "Good. Now keep going left until you hit the graveyard."
+    ],
+    [
+      "Follower",
+      "I don't see a graveyard on my map. Do you have a different one?"
+    ],
+    [
+      "Giver",
+      "What? I have a graveyard right there next to the river. Why don't you?"
+    ],
+    [
+      "Follower",
+      "Maybe it's just not on my map. Okay, I'll ignore it for now. I'm going left past the river."
+    ],
+    [
+      "Giver",
+      "Wait, you're going too far left! The river is on the right, not the left. Turn back right."
+    ],
+    [
+      "Follower",
+      "Oh, I see. So the river is on my right. Okay, I'm turning right now."
+    ],
+    [
+      "Giver",
+      "Good. Now go up past the river, then turn left. You should see an Apache camp on your left soon."
+    ],
+    [
+      "Follower",
+      "Apache camp? Yeah, I see it. But it's pretty far up. Is that the one?"
+    ],
+    [
+      "Giver",
+      "Yes, that's the one. Make sure you go left of the camp."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going left of the camp now."
+    ],
+    [
+      "Giver",
+      "Good. Now keep going up and left. You'll reach a carved wooden pole on your right."
+    ],
+    [
+      "Follower",
+      "Carved wooden pole? I see one on my right. Okay, I'll go past it."
+    ],
+    [
+      "Giver",
+      "Wait, which pole? There are two poles on the whole map. One near the top, one near the bottom. Which one did you mean?"
+    ],
+    [
+      "Follower",
+      "Oh, I thought you meant the one near the top. That's the first one I saw."
+    ],
+    [
+      "Giver",
+      "No, I meant the second one, the lower one. The one near the walled city. I'm going to go down to the walled city now."
+    ],
+    [
+      "Follower",
+      "Oh, I'm still near the top pole. I didn't know there was another one. Okay, I'll head down to the walled city."
+    ],
+    [
+      "Giver",
+      "Okay, go down to the walled city on your left."
+    ],
+    [
+      "Follower",
+      "Found it. It's on my left. Okay, going up past it now."
+    ],
+    [
+      "Giver",
+      "Good. Now go right, past some flat rocks on your left."
+    ],
+    [
+      "Follower",
+      "Flat rocks? I see rocks on my left. Are those the flat rocks?"
+    ],
+    [
+      "Giver",
+      "Yes, those are the flat rocks. Go right past them."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going right now."
+    ],
+    [
+      "Giver",
+      "Good. Now go up and right. You'll see a buffalo on your right soon."
+    ],
+    [
+      "Follower",
+      "Buffalo? I don't see any animals on my map. What do you mean?"
+    ],
+    [
+      "Giver",
+      "A buffalo. It's a big animal. It's on the right side of the map, near the middle."
+    ],
+    [
+      "Follower",
+      "Oh, I think I see a symbol that might be an animal. Is that it?"
+    ],
+    [
+      "Giver",
+      "Yes, that's it. Go right past the buffalo."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going right of the buffalo now."
+    ],
+    [
+      "Giver",
+      "Good. Now go up and left. You'll see a cattle ranch on your left."
+    ],
+    [
+      "Follower",
+      "Cattle ranch? I don't see a ranch. Is that the same as the Apache camp?"
+    ],
+    [
+      "Giver",
+      "No, it's different. The Apache camp is higher up. The ranch is lower down, near the fort."
+    ],
+    [
+      "Follower",
+      "Oh, I see. There's a ranch lower down. Okay, going left of the ranch now."
+    ],
+    [
+      "Giver",
+      "Good. Now go up and right. You'll see a fort on your right."
+    ],
+    [
+      "Follower",
+      "Fort? I see a building on my right. Is that the fort?"
+    ],
+    [
+      "Giver",
+      "Yes, that's the fort. Go right past it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going right of the fort now."
+    ],
+    [
+      "Giver",
+      "Good. Now go down and left. You'll reach the finish line."
+    ],
+    [
+      "Follower",
+      "Finish? I don't see a finish line. Just buildings and stuff."
+    ],
+    [
+      "Giver",
+      "The finish is at the bottom left. It's marked with a cross. Look for the cross."
+    ],
+    [
+      "Follower",
+      "Oh! There it is. I see a cross at the bottom left."
+    ],
+    [
+      "Giver",
+      "Great. Now draw a line from the fort to that cross."
+    ],
+    [
+      "Follower",
+      "Okay, drawing the line... almost there."
+    ],
+    [
+      "Giver",
+      "Is that the finish?"
+    ],
+    [
+      "Follower",
+      "Yes, I think so. I'm at the cross."
+    ],
+    [
+      "Giver",
+      "Perfect. You did it."
+    ],
+    [
+      "Follower",
+      "Okay, done."
+    ]
+  ],
+  "n_turns": 54,
+  "ended_by": "single_generation"
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2701992526,
+  "conversation_no": 3554,
+  "topic": "Exercise And Fitness",
+  "sb_prompt": "DO YOU DO ANY EXERCISE REGULARLY TO MAINTAIN YOUR HEALTH OR FITNESS LEVEL?  IF SOOR DO IT AS A TASK?  COMPARE YOUR HABITS AND YOUR MOTIVES",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey!\nParticipantA: How's it going?\nParticipantB: Pretty good, just finished a double shift at the hospital. Exhausted.\nParticipantA: Yeah, I can imagine. I'm just finishing up at my desk, trying to get some numbers sorted out.\nParticipantB: Do you do any exercise regularly to maintain your health or fitness level?\nParticipantA: Well, I guess so. I go for walks sometimes, mostly after work.\nParticipantB: Oh, nice. Do you do it as a task? Like, \"I have to do this\"?\nParticipantA: Honestly, it's kind of mixed. I love the walk itself, but the idea of \"maintaining\" it feels a little heavy sometimes.\nParticipantB: Yeah, I get that. It's like... you're doing it for the maintenance, not for the joy, right?\nParticipantA: Maybe. I've had the same routine for years. It just felt like the right thing to do. I never really figured out exactly why, though.\nParticipantB: That's funny. My sister got really sick with an autoimmune thing a few years ago. She basically had to force herself to move every day, even when she felt terrible.\nParticipantA: Oh, that's really tough.\nParticipantB: Yeah, it was. She'd drag herself out for a twenty-minute walk and say, \"I'm doing this so I don't get worse.\" She didn't do it because she wanted to feel fit; she did it to survive.\nParticipantA: That changes things a bit. I never thought about it as survival. I thought of it as keeping my engine tuned up, you know?\nParticipantB: Huh. Maybe that's the difference. You're tuning the engine; she was just trying to stay alive.\nParticipantA: That makes sense. I guess I just never had anyone tell me \"if you stop, you break down.\"\nParticipantB: Yeah, people don't usually say that to healthy people. They assume if you're not moving, you're sick.\nParticipantA: True. Well, I guess I'll keep my engine tuned, even if I don't love the garage visits sometimes.\nParticipantB: Same here. I still hate the treadmill, but I know if I stop, I feel like I'm rusting.\nParticipantA: Okay, maybe that's good enough for now.\nParticipantB: Yeah, it works. Thanks for chatting.\nParticipantA: No problem. Good luck with your shift.\nParticipantB: You too. Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 555,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3385103119,
+  "conversation_no": 3013,
+  "topic": "Recipes/food/cooking",
+  "sb_prompt": "PLEASE DISCUSS FOOD AND COOKING.  WHAT FOODS WOULD YOU INCLUDE IN THE MENU FOR A DINNER PARTY?  SHARE THE RECIPE FOR ONE OF THESE FOODS WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Yeah, I was just in the breakroom grabbing a coffee and I thought, hey, call someone and talk food. It's a bit random but it's nice to hear what people like.\nParticipantB: Oh, that sounds fun. I was sitting at my lunch table thinking the same thing. Do you like to cook a lot?\nParticipantA: Honestly? It's complicated. I love the idea of it, but sometimes it feels like too much work when I'm just trying to get through a week.\nParticipantB: Totally get that. I feel the same way. I work as a factory supervisor too, so my days are pretty structured and I don't always have the energy to meal prep.\nParticipantA: Yeah, exactly. I made up my mind years ago that I'd only cook a few specific things if I'm hosting, because I need to feel okay about it, you know? Even if the rest of the week is just heating things up.\nParticipantB: Oh, I hear you. I actually have this one dish I make when I need something that feels special but isn't a huge project. It's a lentil stew with roasted root veggies and a crispy crumble on top.\nParticipantA: A crumble? That sounds really good. I usually stick to pasta or maybe a big salad, but that sounds fancy enough for a dinner party without being crazy.\nParticipantB: Yeah, it's comforting. I tell people sometimes it's just \"beans and veggies,\" but the texture of the crumble makes it feel like a real feast. I made it last weekend and my sister came over and she didn't believe me at first.\nParticipantA: Oh, did she not believe you? That's funny. I think a lot of people underestimate simple things. What kind of crumble topping do you use?\nParticipantB: I use oats, some flour, a little brown sugar, and butter, then I mix it with some spices like cumin and coriander before I add it. It gets really crunchy when it bakes.\nParticipantA: That sounds delicious. I've never tried that combo before. Usually, I just think of crumbles as sweet, like for fruit.\nParticipantB: Nah, savory works great too. It adds this really nice depth. Do you have a go-to dish that you feel good making, even if you don't cook every night?\nParticipantA: Maybe a chicken and rice thing. It's just chicken, rice, and whatever veggies I happen to have in the fridge. Sometimes it's just beans and corn.\nParticipantB: That's totally fair. Sometimes you just need to put something on the table that you won't worry about for three days.\nParticipantA: Exactly. It's about having a plan that doesn't stress you out. I guess I'm lucky because I don't feel guilty about serving simple food to my guests anymore.\nParticipantB: Yeah, I think once you get comfortable with your own style, it stops being a chore. I actually feel pretty proud when I pull off that stew, even if it's just a Tuesday night dinner.\nParticipantA: Me too. I like knowing I can make something that feels warm and real without losing my mind.\nParticipantB: Well, if you ever want to try that lentil dish, let me know. I'd love to swap recipes sometime.\nParticipantA: I'd love that too. I'll definitely give it a shot next time I host. Thanks for sharing your story.\nParticipantB: No problem! Take care.\nParticipantA: You too, bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 764,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

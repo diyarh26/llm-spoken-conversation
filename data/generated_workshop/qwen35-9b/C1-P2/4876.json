@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1744985555,
+  "conversation_no": 4876,
+  "topic": "Child Care",
+  "sb_prompt": "FIND OUT WHAT CRITERIA THE OTHER CALLER WOULD USE IN SELECTING CHILD CARE SERVICES FOR A PRESCHOOLER.  IS IT EASY OR DIFFICULT TO FIND SUCH CARE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hi there!\nParticipantA: Yeah, hi. Is this the person I was supposed to call about child care?\nParticipantB: Yes, that's me. What about it?\nParticipantA: Right. Well, I've been thinking a lot about this because my wife and I are looking at options for our three-year-old.\nParticipantB: Oh, yeah? That's a big decision. My daughter just turned four, so I'm deep in the trenches on this stuff.\nParticipantA: Yeah, it is. You know, the criteria... I mean, I think safety is obviously number one. Like, is the building secure? Are the people background checked?\nParticipantB: Absolutely. For us, that was the dealbreaker. We actually drove to three different places, but one of them had a former employee who we found out on a background check was listed in a newspaper as having some... let's just say a bad history.\nParticipantA: Oh, wow. That's scary. I guess I didn't think about the newspaper checks, just the standard ones.\nParticipantB: Yeah, it's intense. We also had to look at ratios. Like, how many kids per teacher? My friend Sarah lost her mind because the place she picked had three kids for one teacher.\nParticipantA: Oh, that sounds rough. I remember my ex-wife had a cousin who was a teacher, and she said those ratios are illegal in some states if you're under a certain age.\nParticipantB: Exactly! It got so complicated we almost gave up. Then we found a smaller place where the owner was actually a retired teacher, and that made the difference for us.\nParticipantA: That makes sense. I've been struggling with the \"easy or difficult\" part you mentioned. I feel like it's a nightmare to find, honestly.\nParticipantB: It definitely isn't easy. In this neighborhood, we have maybe two options that are actually decent, and they're both wait-listed for six months.\nParticipantA: Six months? Man, that's a long time to wait. My experience was... well, it was mixed. I found a place that seemed perfect on paper, but the mom told me the kids were always sick because of a leaky roof.\nParticipantB: Oh, really? That sucks. We had that happen once with a babysitter we hired through a friend. The apartment was damp, and my kid was constantly coughing. We had to fire her on the spot.\nParticipantA: Yeah, that's the thing. I think people lie about things. Like, they say \"no sick kids,\" but then there's a child with chicken pox every Tuesday.\nParticipantB: Ugh, that happens. And then you have to check if the caregivers are actually qualified. My friend's sister works in a center, and she told me half the staff there had degrees but no actual early childhood training.\nParticipantA: Oh, that's disturbing. I just assumed if they had a license, the staff were trained.\nParticipantB: Not always. It's a mess. But for us, the criteria boiled down to: is the staff loving and do they have a degree? If yes, we trust it more than the building itself.\nParticipantA: Hmm. I'm not sure about that. I think the building matters more to me than the degree. If the room is dirty, a degree won't fix it.\nParticipantB: Maybe both? You can't have a clean room with untrained staff watching your kid. We're looking at one place now that has a degree requirement and they clean the toys every hour.\nParticipantA: Okay, that sounds... doable. I guess I was worried it would be impossible to find anything safe.\nParticipantB: It's not impossible, but it takes work. We interviewed five people before we picked the one we're going with.\nParticipantA: Five? Wow. That must have taken you a long time.\nParticipantB: About two months of driving around. But yeah, worth it.\nParticipantA: Well, maybe I'll have to try that. I'll see if I can track down a few more places.\nParticipantB: Good luck with it. It's a lot to check off the list.\nParticipantA: Thanks. Yeah, I think I'll need a long list.\nParticipantB: Let me know if you find something that works!\nParticipantA: Will do. Thanks for talking to me about this. It helps to hear your side.\nParticipantB: No problem. Good luck finding your spot.\nParticipantA: Thanks again. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 983,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

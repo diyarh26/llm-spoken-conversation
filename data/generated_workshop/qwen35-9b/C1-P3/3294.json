@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1073882902,
+  "conversation_no": 3294,
+  "topic": "Right To Privacy",
+  "sb_prompt": "FIND OUT WHAT EVERYDAY OCCURRENCES THE OTHER CALLER CONSIDERS TO BE AN INTRUSION OF PRIVACY.  WHAT CAN BE DONE TO PREVENT THEM?  DO YOU AGREE OR DISAGREE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 48,
+    "education": "a college degree",
+    "occupation": "a nurse",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a librarian",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Hi, I'm Sarah, and I'm calling about this right to privacy thing. What's your name?\nParticipantB: Oh, sure. I'm Kevin.\nParticipantA: Nice to meet you, Kevin. So, what kind of stuff do you think is an intrusion these days?\nParticipantB: Well, honestly? It's weird. I think it's mostly when people just show up without knocking. Like, if someone rings my doorbell when I'm in the middle of something, that feels like a breach.\nParticipantA: Yeah, that's huge. Especially with my schedule, I get interrupted constantly. But also, I think tracking where people go without permission is the big one.\nParticipantB: Actually, that's exactly what happened to me a few years ago. I started getting texts telling me when I was at the library or the grocery store, even though I hadn't agreed to it.\nParticipantA: Oh no, that sounds really scary. Did you find out who was sending them?\nParticipantB: Yeah, turns out my former boss was leaking my location data to a competitor. It was pretty messed up.\nParticipantA: That is terrible. I can't even imagine. My best friend, Maria, had her phone tapped because of a dispute with her landlord. She said she heard his voice on a call she didn't make.\nParticipantB: Wow, that's way worse than mine. So, what do you think caused that?\nParticipantA: It seems like the landlords are just desperate to control things. They probably have some kind of listening device installed in her unit.\nParticipantB: Oh, really? That's a serious violation. Do you think there's anything we can do to stop it?\nParticipantA: We could definitely demand better laws, but honestly, I'm not sure it's enough. People are too willing to share their own data to get discounts or free stuff.\nParticipantB: That's true. I didn't think about that. I guess I just assumed it was purely malicious, but maybe I'm just being naive.\nParticipantA: It's a tough balance. Privacy is important, but convenience is tempting. Still, I think we should never agree to location sharing without reading the fine print first.\nParticipantB: Good point. I'll be more careful next time. What about you? Have you ever encountered something like the landlord thing?\nParticipantA: Not exactly, but I had a patient who felt her medical records were being accessed by her ex-husband through a work order the hospital issued by mistake.\nParticipantB: Oh, that's a nightmare. How did you handle that?\nParticipantA: I had to go through the chain of command and demand an audit. It was exhausting, but they fixed it eventually.\nParticipantB: That sounds like you stood up for yourself pretty well. I wish I had that kind of support.\nParticipantA: It's what I do. But yeah, it's a constant battle. Do you think social media is part of the problem too?\nParticipantB: Oh, absolutely. Everything I post feels like a public record now. I feel like I have no privacy left online.\nParticipantA: I agree. We overshare way too much. Maybe the solution is to just stop posting so much?\nParticipantB: That would be a relief, honestly. I'd love to post less and just keep my stuff to myself.\nParticipantA: I think we should all try that. Less is more.\nParticipantB: Definitely. Well, I'm glad I got to talk to you about this. It made me feel less alone in my frustration.\nParticipantA: Same here. It's good to know others are thinking about it too.\nParticipantB: Thanks for sharing your story, Sarah.\nParticipantA: You too, Kevin. Take care.\nParticipantB: You too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 826,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

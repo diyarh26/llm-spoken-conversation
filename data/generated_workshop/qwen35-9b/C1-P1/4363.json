@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2532515416,
+  "conversation_no": 4363,
+  "topic": "Football",
+  "sb_prompt": "PLEASE DISCUSS PROFESSIONAL FOOTBALL.  FIND OUT THE OTHER CALLER'S FAVORITE PRO FOOTBALL TEAM AND WHERE IT'S HEADED THIS YEAR.       DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 27,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey, yeah, what's up?\nParticipantA: Just got a weird call from some guy saying I had to talk about football with a stranger. So... here I am.\nParticipantB: Haha, same. I'm a mechanic, so I've got plenty of stories about the game, mostly about how much I hate the refs sometimes.\nParticipantA: Oh, fair enough. I'm a librarian, so I probably sound too quiet. Where are you from?\nParticipantB: Ohio. You?\nParticipantA: Portland. Weird question, I guess, but what's your favorite team?\nParticipantB: Bengals. They're absolute trash right now, honestly. Can't believe they're still this good for so long.\nParticipantA: Wait, really? I think they're actually kinda decent. Maybe my view is just old.\nParticipantB: Yeah, people say the same thing. They've been winning for years, but this year looks different. Quarterback's got some serious injury issues.\nParticipantA: That's... actually a point I've made before, but I never really said why. It feels like they just can't stop losing in the second half.\nParticipantB: Exactly! It's like they get complacent. Do you agree with that? Do you think they're headed for a bad season?\nParticipantA: Hmm. It sits fine with me that they're struggling, but parts of it don't. Like, I don't want them to lose too hard. It's just... confusing?\nParticipantB: Yeah, that's what gets me. You made up your mind years ago, right? About them?\nParticipantA: Yeah, kind of. But I can't quite say why. It's just a feeling, I guess. Like something is off.\nParticipantB: See, I'm the same. I've thought about it for years. Why do they keep failing when they have that coach?\nParticipantA: Maybe because they're too stuck in their ways? I read something about it once, but it didn't click.\nParticipantB: True. They need to adapt, I think. So yeah, I say they're done for this year.\nParticipantA: Me too, honestly. It's just a gut feeling, really.\nParticipantB: Yeah, gut feeling. That's all this is. So you're cool with them failing?\nParticipantA: Sort of. It feels right, but I hate watching good teams fall apart.\nParticipantA: Well, I guess that's my take. Thanks for talking.\nParticipantB: Yeah, same. Good one. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 559,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

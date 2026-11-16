@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1448313558,
+  "conversation_no": 3883,
+  "topic": "Clothing And Dress",
+  "sb_prompt": "THE TOPIC IS CLOTHING.  PLEASE FIND OUT HOW THE OTHER CALLER TYPICALLY DRESSES FOR WORK.  HOW MUCH VARIATION IS THERE FROM DAY TO DAY?  HOW MUCH VARIATION IS THERE FROM SEASON TO SEASON?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 57,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Hi, I'm calling about that prompt on clothing and dress. I'm curious about what you wear for work.\nParticipantB: Oh, sure. Yeah, I'm a dental hygienist, so I'm basically covered head to toe in scrubs or a uniform most days.\nParticipantA: Oh, really? I'm actually a factory supervisor. It's kind of a weird mix because I have to be safe but also presentable for the clients who come in to audit us.\nParticipantB: That sounds intense. Do you wear a specific uniform?\nParticipantA: Not really a uniform, but I usually have these durable coveralls on over my clothes. They're heavy cotton, you know, fire-resistant stuff. Sometimes I'll wear a vest over them if we're doing an inspection.\nParticipantB: Wow, that sounds so much more practical than my scrubs. I never thought about the safety aspect really. Mine just have to be clean and fit the company color code.\nParticipantA: Yeah, variation is huge for me. Like, if it's freezing in the warehouse, I'm layering up under those coveralls. If it's summer, I might just wear the coveralls alone or maybe shorts underneath if the policy lets me.\nParticipantB: That makes sense. My variation is less about weather and more about... hair and nails. I have to keep it super neat.\nParticipantA: Oh, right. Does that mean you never change your outfit much?\nParticipantB: Pretty much. I've been in these same teal scrubs for like three years. I just swap the tops and bottoms sometimes, but it's the same brand. My best friend is a dentist too, and she actually got a rash from hers because the fabric wasn't breathable, so I stuck with the breathable ones.\nParticipantA: That's actually a good point. I sometimes tell people about how my coveralls get so stiff and itchy after a week of shifts. I hate the stiffness, but I can't change it because of the safety rules.\nParticipantB: Yeah, I get it. Once you're in a uniform, you stop seeing the clothes, you just see the job. It's like wearing a second skin.\nParticipantA: Exactly. Though I do try to pick the ones that look less \"factory worker\" when I have guests coming in. Maybe a nicer vest or a specific color scheme.\nParticipantB: I wish I could do that. My patients notice my uniform more than I do. Sometimes I feel like I'm invisible because I'm always the same.\nParticipantA: Well, at least you don't have to worry about grease stains or sparks. That's a huge plus for me.\nParticipantB: True. And I don't have to worry about dirtying my nice pants every day.\nParticipantA: Yeah, my personal stuff stays at home. Once I clock in, it's work gear.\nParticipantB: Same here. Home clothes are for relaxing, work clothes are for not getting sued or hurt.\nParticipantA: Fair enough. Well, I think that covers the work stuff mostly. Is there anything else you wanted to know about how I dress?\nParticipantB: No, I think I got it. It's interesting you have to layer for safety while I just have to stay sterile.\nParticipantA: Exactly. Safety first for me, hygiene first for you.\nParticipantB: Right. Well, thanks for chatting about it.\nParticipantA: You too. Talk later.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 753,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

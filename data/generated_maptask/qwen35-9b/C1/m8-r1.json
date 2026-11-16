@@ -1,0 +1,335 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m8",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 2429078125,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Right, we're starting at the telephone kiosk. Go up from there.\nFollower: Okay, moving up from the kiosk.\nGiver: Keep going until you hit the stone circle on your left.\nFollower: Ah, there it is, the stone circle. I'll go left there.\nGiver: Good. Now turn right and go up a bit more.\nFollower: Turning right... going up.\nGiver: Stop when you reach the bottom of that hill.\nFollower: Okay, stopping there.\nGiver: Now turn left. Head towards the stone circle again.\nFollower: Left towards the circle? Okay.\nGiver: No, don't go all the way back to it. Just go up until you pass it on your left.\nFollower: Wait, I thought we were going towards it?\nGiver: I said pass it on the left. Keep going up.\nFollower: Ah, got it. Passing it on the left. Okay, heading up now.\nGiver: Now turn right. Go towards the meadow.\nFollower: Towards the meadow? Okay, turning right.\nGiver: Don't go too far right. Just go until you hit the stile.\nFollower: Wait, I see a stile over there, but I don't see one on my map.\nGiver: Ah, did you draw that stile?\nFollower: No, I didn't. I thought it was just a gate. Where is it?\nGiver: It's a stile, not a gate. You're close to the wrong thing. Turn left now.\nFollower: Okay, turning left.\nGiver: Go until you reach the dead tree. That's the next landmark.\nFollower: Okay, going for the dead tree.\nGiver: Good. Now turn left again. Go up past the ruined monastery.\nFollower: Wait, the monastery? I have a ruined monastery, but it's over here... and I don't have a dead tree.\nGiver: Where's the dead tree?\nFollower: I don't have one. Just a tree and a gate.\nGiver: Ah, okay. If you don't have the dead tree, you've gone too far right. Turn left immediately.\nFollower: Turning left now.\nGiver: Go up past the monastery, then turn right. Head towards the great viewpoint.\nFollower: Okay, past the monastery. Turning right.\nGiver: Go up until you reach the viewpoint on the left.\nFollower: Ah! Here's a viewpoint! But I thought there were only two viewpoints?\nGiver: Yeah, there are two. This is the lower one. Go up from here.\nFollower: Okay, going up from the lower viewpoint.\nGiver: Keep going up until you hit the east lake.\nFollower: Wait, I have an east lake up here... but I don't have a lower viewpoint. Where do I go?\nGiver: You're at the wrong spot. Turn left. Go towards the bottom of the map.\nFollower: Turning left. Okay, I think I'm near the start again.\nGiver: No, don't go back to the start. You're just below the meadow. Turn right now.\nFollower: Turning right. Going towards the meadow again?\nGiver: No, go up from there. Head towards the ruined monastery.\nFollower: Okay, heading for the monastery.\nGiver: Pass it on the left. Go up.\nFollower: Passing it on the left. Okay, going up.\nGiver: Now turn right. Go towards the great viewpoint again.\nFollower: Towards the viewpoint? But I'm already near it.\nGiver: The upper viewpoint. This is the second one. Go up from here.\nFollower: Ah, okay, the upper one. I see it now. Going up.\nGiver: Keep going up until you hit the east lake.\nFollower: Up... up... okay, I see the lake. But I also see a rocket launch pad. Is that near?\nGiver: Ignore the rocket. Just go up to the lake. Stop there.\nFollower: Okay, stopped at the lake.\nGiver: Now turn left. Go towards the FINISH.\nFollower: Turning left. Where is the finish?\nGiver: It's just below the east lake. Look for the cross.\nFollower: I don't see a cross near the lake.\nGiver: Wait, check your map. Do you have a FINISH marked anywhere?\nFollower: No, I just have start points and landmarks.\nGiver: Ah, you missed it. The finish is right under the east lake on my map.\nFollower: Okay, I'll mark a cross there.\nGiver: Good. Now draw a line from the start to the finish.\nFollower: Drawing the line.\nGiver: Go via the stone circle, past the stile, up past the tree and monastery, to the viewpoints, then to the lake.\nFollower: Okay, doing that. Stone circle... stile... tree... monastery... viewpoints... lake.\nGiver: Make sure you turn at each landmark. Don't go straight through them.\nFollower: Okay, turning at each one.\nGiver: Stop when you hit the cross near the lake.\nFollower: Okay, reached the cross.\nGiver: Great. You're done.\nFollower: Done.\nGiver: Well done.\nFollower: Thanks.\nGiver: Bye.\nFollower: Bye.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, we're starting at the telephone kiosk. Go up from there."
+    ],
+    [
+      "Follower",
+      "Okay, moving up from the kiosk."
+    ],
+    [
+      "Giver",
+      "Keep going until you hit the stone circle on your left."
+    ],
+    [
+      "Follower",
+      "Ah, there it is, the stone circle. I'll go left there."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right and go up a bit more."
+    ],
+    [
+      "Follower",
+      "Turning right... going up."
+    ],
+    [
+      "Giver",
+      "Stop when you reach the bottom of that hill."
+    ],
+    [
+      "Follower",
+      "Okay, stopping there."
+    ],
+    [
+      "Giver",
+      "Now turn left. Head towards the stone circle again."
+    ],
+    [
+      "Follower",
+      "Left towards the circle? Okay."
+    ],
+    [
+      "Giver",
+      "No, don't go all the way back to it. Just go up until you pass it on your left."
+    ],
+    [
+      "Follower",
+      "Wait, I thought we were going towards it?"
+    ],
+    [
+      "Giver",
+      "I said pass it on the left. Keep going up."
+    ],
+    [
+      "Follower",
+      "Ah, got it. Passing it on the left. Okay, heading up now."
+    ],
+    [
+      "Giver",
+      "Now turn right. Go towards the meadow."
+    ],
+    [
+      "Follower",
+      "Towards the meadow? Okay, turning right."
+    ],
+    [
+      "Giver",
+      "Don't go too far right. Just go until you hit the stile."
+    ],
+    [
+      "Follower",
+      "Wait, I see a stile over there, but I don't see one on my map."
+    ],
+    [
+      "Giver",
+      "Ah, did you draw that stile?"
+    ],
+    [
+      "Follower",
+      "No, I didn't. I thought it was just a gate. Where is it?"
+    ],
+    [
+      "Giver",
+      "It's a stile, not a gate. You're close to the wrong thing. Turn left now."
+    ],
+    [
+      "Follower",
+      "Okay, turning left."
+    ],
+    [
+      "Giver",
+      "Go until you reach the dead tree. That's the next landmark."
+    ],
+    [
+      "Follower",
+      "Okay, going for the dead tree."
+    ],
+    [
+      "Giver",
+      "Good. Now turn left again. Go up past the ruined monastery."
+    ],
+    [
+      "Follower",
+      "Wait, the monastery? I have a ruined monastery, but it's over here... and I don't have a dead tree."
+    ],
+    [
+      "Giver",
+      "Where's the dead tree?"
+    ],
+    [
+      "Follower",
+      "I don't have one. Just a tree and a gate."
+    ],
+    [
+      "Giver",
+      "Ah, okay. If you don't have the dead tree, you've gone too far right. Turn left immediately."
+    ],
+    [
+      "Follower",
+      "Turning left now."
+    ],
+    [
+      "Giver",
+      "Go up past the monastery, then turn right. Head towards the great viewpoint."
+    ],
+    [
+      "Follower",
+      "Okay, past the monastery. Turning right."
+    ],
+    [
+      "Giver",
+      "Go up until you reach the viewpoint on the left."
+    ],
+    [
+      "Follower",
+      "Ah! Here's a viewpoint! But I thought there were only two viewpoints?"
+    ],
+    [
+      "Giver",
+      "Yeah, there are two. This is the lower one. Go up from here."
+    ],
+    [
+      "Follower",
+      "Okay, going up from the lower viewpoint."
+    ],
+    [
+      "Giver",
+      "Keep going up until you hit the east lake."
+    ],
+    [
+      "Follower",
+      "Wait, I have an east lake up here... but I don't have a lower viewpoint. Where do I go?"
+    ],
+    [
+      "Giver",
+      "You're at the wrong spot. Turn left. Go towards the bottom of the map."
+    ],
+    [
+      "Follower",
+      "Turning left. Okay, I think I'm near the start again."
+    ],
+    [
+      "Giver",
+      "No, don't go back to the start. You're just below the meadow. Turn right now."
+    ],
+    [
+      "Follower",
+      "Turning right. Going towards the meadow again?"
+    ],
+    [
+      "Giver",
+      "No, go up from there. Head towards the ruined monastery."
+    ],
+    [
+      "Follower",
+      "Okay, heading for the monastery."
+    ],
+    [
+      "Giver",
+      "Pass it on the left. Go up."
+    ],
+    [
+      "Follower",
+      "Passing it on the left. Okay, going up."
+    ],
+    [
+      "Giver",
+      "Now turn right. Go towards the great viewpoint again."
+    ],
+    [
+      "Follower",
+      "Towards the viewpoint? But I'm already near it."
+    ],
+    [
+      "Giver",
+      "The upper viewpoint. This is the second one. Go up from here."
+    ],
+    [
+      "Follower",
+      "Ah, okay, the upper one. I see it now. Going up."
+    ],
+    [
+      "Giver",
+      "Keep going up until you hit the east lake."
+    ],
+    [
+      "Follower",
+      "Up... up... okay, I see the lake. But I also see a rocket launch pad. Is that near?"
+    ],
+    [
+      "Giver",
+      "Ignore the rocket. Just go up to the lake. Stop there."
+    ],
+    [
+      "Follower",
+      "Okay, stopped at the lake."
+    ],
+    [
+      "Giver",
+      "Now turn left. Go towards the FINISH."
+    ],
+    [
+      "Follower",
+      "Turning left. Where is the finish?"
+    ],
+    [
+      "Giver",
+      "It's just below the east lake. Look for the cross."
+    ],
+    [
+      "Follower",
+      "I don't see a cross near the lake."
+    ],
+    [
+      "Giver",
+      "Wait, check your map. Do you have a FINISH marked anywhere?"
+    ],
+    [
+      "Follower",
+      "No, I just have start points and landmarks."
+    ],
+    [
+      "Giver",
+      "Ah, you missed it. The finish is right under the east lake on my map."
+    ],
+    [
+      "Follower",
+      "Okay, I'll mark a cross there."
+    ],
+    [
+      "Giver",
+      "Good. Now draw a line from the start to the finish."
+    ],
+    [
+      "Follower",
+      "Drawing the line."
+    ],
+    [
+      "Giver",
+      "Go via the stone circle, past the stile, up past the tree and monastery, to the viewpoints, then to the lake."
+    ],
+    [
+      "Follower",
+      "Okay, doing that. Stone circle... stile... tree... monastery... viewpoints... lake."
+    ],
+    [
+      "Giver",
+      "Make sure you turn at each landmark. Don't go straight through them."
+    ],
+    [
+      "Follower",
+      "Okay, turning at each one."
+    ],
+    [
+      "Giver",
+      "Stop when you hit the cross near the lake."
+    ],
+    [
+      "Follower",
+      "Okay, reached the cross."
+    ],
+    [
+      "Giver",
+      "Great. You're done."
+    ],
+    [
+      "Follower",
+      "Done."
+    ],
+    [
+      "Giver",
+      "Well done."
+    ],
+    [
+      "Follower",
+      "Thanks."
+    ],
+    [
+      "Giver",
+      "Bye."
+    ],
+    [
+      "Follower",
+      "Bye."
+    ]
+  ],
+  "n_turns": 76,
+  "ended_by": "single_generation"
+}

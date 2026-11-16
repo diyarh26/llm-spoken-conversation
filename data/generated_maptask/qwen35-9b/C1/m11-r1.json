@@ -1,0 +1,183 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m11",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 3515872295,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Right, so start here at the cross.\nFollower: Okay, got the cross.\nGiver: Now, head straight towards the haystack, but keep it on your left.\nFollower: Left of the haystack? Got it.\nGiver: Pass it close, then turn right towards the Carpenter.\nFollower: Right of the Carpenter... okay.\nGiver: Keep going straight past him, but don't go all the way to the Seven Beeches.\nFollower: A bit short of the Beeches, left side... yeah.\nGiver: Then swing right again, aiming for the Chapel, but stop before you hit it.\nFollower: Left of the Chapel, coming up... okay.\nGiver: Now turn right. You're heading towards the Reclaimed Fields.\nFollower: Right of the fields... okay.\nGiver: Keep going. You're going to pass the Crane Bay on your left.\nFollower: Left of the Crane Bay... got it.\nGiver: Good. Now turn right again. There's a big Vast Meadow, make sure you're on the right side of it.\nFollower: Right of the meadow... okay.\nGiver: Continue straight. Just past the meadow, you'll see the Attractive Cliffs on the left.\nFollower: Left of the cliffs... okay.\nGiver: Keep going straight now.\nFollower: Okay, straight ahead.\nGiver: Wait, hold on. Do you see the White-washed Cottage?\nFollower: Yeah, I see that little house up ahead.\nGiver: Ignore it, keep going straight. You need to get past it to the right.\nFollower: Okay, ignoring the house, heading towards the coast...\nGiver: Right, you're heading for the Moored Boats now.\nFollower: Okay, looking for the boats... I see them!\nGiver: Good. Once you pass the boats, turn left and head down towards the bottom edge of the map.\nFollower: Left of the boats... okay, heading down.\nGiver: Watch out, there's a Crashed Spaceship over to the left side, make sure you don't go there.\nFollower: Okay, avoiding the spaceship, staying on the right...\nGiver: Keep going straight until you hit the edge.\nFollower: Okay, straight down... almost at the bottom.\nGiver: Now turn right. There's a Chestnut Tree there, make sure you end up on the right side of it.\nFollower: Right of the chestnut tree... oh, I see it, but it's not where I expected it to be.\nGiver: That's fine, just follow my line. You end up at the Finish cross.\nFollower: Okay, I'm drawing a line to the Finish... done.\nGiver: Perfect.\nFollower: Done.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, so start here at the cross."
+    ],
+    [
+      "Follower",
+      "Okay, got the cross."
+    ],
+    [
+      "Giver",
+      "Now, head straight towards the haystack, but keep it on your left."
+    ],
+    [
+      "Follower",
+      "Left of the haystack? Got it."
+    ],
+    [
+      "Giver",
+      "Pass it close, then turn right towards the Carpenter."
+    ],
+    [
+      "Follower",
+      "Right of the Carpenter... okay."
+    ],
+    [
+      "Giver",
+      "Keep going straight past him, but don't go all the way to the Seven Beeches."
+    ],
+    [
+      "Follower",
+      "A bit short of the Beeches, left side... yeah."
+    ],
+    [
+      "Giver",
+      "Then swing right again, aiming for the Chapel, but stop before you hit it."
+    ],
+    [
+      "Follower",
+      "Left of the Chapel, coming up... okay."
+    ],
+    [
+      "Giver",
+      "Now turn right. You're heading towards the Reclaimed Fields."
+    ],
+    [
+      "Follower",
+      "Right of the fields... okay."
+    ],
+    [
+      "Giver",
+      "Keep going. You're going to pass the Crane Bay on your left."
+    ],
+    [
+      "Follower",
+      "Left of the Crane Bay... got it."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right again. There's a big Vast Meadow, make sure you're on the right side of it."
+    ],
+    [
+      "Follower",
+      "Right of the meadow... okay."
+    ],
+    [
+      "Giver",
+      "Continue straight. Just past the meadow, you'll see the Attractive Cliffs on the left."
+    ],
+    [
+      "Follower",
+      "Left of the cliffs... okay."
+    ],
+    [
+      "Giver",
+      "Keep going straight now."
+    ],
+    [
+      "Follower",
+      "Okay, straight ahead."
+    ],
+    [
+      "Giver",
+      "Wait, hold on. Do you see the White-washed Cottage?"
+    ],
+    [
+      "Follower",
+      "Yeah, I see that little house up ahead."
+    ],
+    [
+      "Giver",
+      "Ignore it, keep going straight. You need to get past it to the right."
+    ],
+    [
+      "Follower",
+      "Okay, ignoring the house, heading towards the coast..."
+    ],
+    [
+      "Giver",
+      "Right, you're heading for the Moored Boats now."
+    ],
+    [
+      "Follower",
+      "Okay, looking for the boats... I see them!"
+    ],
+    [
+      "Giver",
+      "Good. Once you pass the boats, turn left and head down towards the bottom edge of the map."
+    ],
+    [
+      "Follower",
+      "Left of the boats... okay, heading down."
+    ],
+    [
+      "Giver",
+      "Watch out, there's a Crashed Spaceship over to the left side, make sure you don't go there."
+    ],
+    [
+      "Follower",
+      "Okay, avoiding the spaceship, staying on the right..."
+    ],
+    [
+      "Giver",
+      "Keep going straight until you hit the edge."
+    ],
+    [
+      "Follower",
+      "Okay, straight down... almost at the bottom."
+    ],
+    [
+      "Giver",
+      "Now turn right. There's a Chestnut Tree there, make sure you end up on the right side of it."
+    ],
+    [
+      "Follower",
+      "Right of the chestnut tree... oh, I see it, but it's not where I expected it to be."
+    ],
+    [
+      "Giver",
+      "That's fine, just follow my line. You end up at the Finish cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a line to the Finish... done."
+    ],
+    [
+      "Giver",
+      "Perfect."
+    ],
+    [
+      "Follower",
+      "Done."
+    ]
+  ],
+  "n_turns": 38,
+  "ended_by": "single_generation"
+}

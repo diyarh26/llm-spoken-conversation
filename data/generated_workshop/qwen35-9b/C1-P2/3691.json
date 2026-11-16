@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 712480668,
+  "conversation_no": 3691,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hey, yeah, hi.\nParticipantB: Oh, hello there.\nParticipantA: How are you doing today?\nParticipantB: Pretty good, I guess. Just a slow day at the bank.\nParticipantB: I was wondering what kind of pets you have? Do you have any?\nParticipantA: Oh, yeah, I do. Two dogs.\nParticipantA: Golden Retriever mix and a little Chihuahua.\nParticipantB: Oh, nice. I love dogs.\nParticipantB: I don't have any right now, though.\nParticipantA: That's too bad. Someone needs to pet something.\nParticipantB: Yeah, well, it's kind of complicated.\nParticipantA: Complicated how?\nParticipantB: Well, my sister-in-law, she's got three cats and two dogs.\nParticipantA: Really? That's a lot of animals.\nParticipantB: Yeah, and it's just... it's a mess.\nParticipantB: She spends half her paycheck on vet bills and food.\nParticipantB: And honestly, she doesn't even know them well enough to call them names.\nParticipantA: Oh, wow. That sounds tough.\nParticipantA: I never thought about it that way. I thought people just got pets because they love them.\nParticipantB: Well, that's the thing. People think they want them, but then the cost hits.\nParticipantB: Or they get lonely and buy something to fill the silence.\nParticipantA: Hmm. I have a friend who did that.\nParticipantA: Bought a dog after his divorce.\nParticipantB: Yeah, exactly. Turned out the dog had behavioral issues.\nParticipantB: They couldn't handle it. Had to give it up.\nParticipantA: Oh, that's sad.\nParticipantA: I tried to help her fix it, but it just got worse.\nParticipantA: Now the dog is with a shelter and my friend is crying.\nParticipantB: That's rough. Sometimes I wonder if we're doing it right.\nParticipantB: I know a guy who was going to get a horse.\nParticipantB: Said he wanted to ride, but then he realized he couldn't afford the tack or the farrier.\nParticipantA: Yeah, that makes sense. It's a big commitment.\nParticipantA: I tell my clients all the time, \"Don't buy a house you can't afford.\"\nParticipantB: Oh, really? You're a realtor?\nParticipantA: Yeah, I am.\nParticipantB: Oh, okay. That explains it.\nParticipantB: I'm a teller, so I see a lot of people trying to save for that first one.\nParticipantB: But then they buy the pet and it becomes a financial burden.\nParticipantA: Yeah, exactly.\nParticipantA: I had a client, older guy, really nice.\nParticipantA: He wanted a big dog to run around in the yard.\nParticipantB: Yeah?\nParticipantA: Turns out he was retired and had a stiff neck.\nParticipantB: Oh no.\nParticipantA: He couldn't walk it. Couldn't lift it.\nParticipantA: Had to surrender the dog to a shelter.\nParticipantB: That must have been hard for him.\nParticipantA: Yeah, he was devastated.\nParticipantA: Said he felt like he lied to the animal.\nParticipantB: That's a heavy price to pay.\nParticipantB: I guess I wouldn't do it if I knew it was going to end up like that.\nParticipantA: Me neither.\nParticipantA: It's better to be honest with yourself before you bring one home.\nParticipantB: True.\nParticipantB: I think I'll stick to volunteering at the shelter for now.\nParticipantA: Good idea. You can help without adding to the burden.\nParticipantB: Yeah, that feels better.\nParticipantA: And no vet bills for you.\nParticipantB: Exactly.\nParticipantA: Well, I'm glad we talked about it.\nParticipantB: Me too. Thanks for listening.\nParticipantA: No problem. Take care.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 895,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

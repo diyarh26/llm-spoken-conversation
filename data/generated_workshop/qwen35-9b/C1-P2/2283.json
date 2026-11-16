@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2839269298,
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: How are you doing?\nParticipantB: Pretty good, just busy. What's up with you?\nParticipantA: I'm good, just wrapping up a shift at the grocery store. I'm the manager here.\nParticipantB: Oh, really? Nice. I work as a pharmacist.\nParticipantA: Oh, wow. That sounds... pretty serious.\nParticipantB: Yeah, it is. Lots of responsibility. But honestly, I've got my hands in a couple of different things lately.\nParticipantA: Like what?\nParticipantB: Well, besides the pharmacy, I've been trying to get my backyard looking better. It's a bit of a mess.\nParticipantA: Oh, that's cool. So you're doing the landscaping yourself?\nParticipantB: Yeah, mostly. I'm trying to figure out how to get some flowers in there without killing them.\nParticipantA: Haha, right? The flowers are tricky sometimes. I've tried to plant things in my own yard, but honestly, I feel like I just make things worse.\nParticipantB: Really? What have you tried?\nParticipantA: Well, last year I got some advice from a neighbor and planted these big bushes around the edge. I thought they'd look nice.\nParticipantB: Oh, did they?\nParticipantA: They didn't. They just took over and choked everything else out. I had to rip most of them out.\nParticipantB: Oh, no. That's frustrating. I've been afraid of doing that to my own garden.\nParticipantA: Yeah, I feel like maybe I'm just not cut out for it. I guess I'm too skeptical about it.\nParticipantB: I get that. I was pretty excited about gardening too, but my brother tried it last summer and it was a disaster.\nParticipantA: Oh, really? What happened?\nParticipantB: He bought all these fancy seeds online and followed the instructions perfectly, but nothing grew. He said the soil was just bad or something.\nParticipantA: Yeah, I felt that way too. Like, why do I keep messing up? Maybe I just have a black thumb or whatever they call it.\nParticipantB: Maybe it's just bad luck. Or maybe we need a pro to show us what we're doing wrong.\nParticipantA: I guess. Though, honestly, I'm kind of relieved I don't have to deal with it. My wife handles all the outside stuff.\nParticipantB: Oh, that's nice. Having someone else do the heavy lifting. I'm still trying to figure out if I even enjoy it enough to keep going.\nParticipantA: I think a lot of people say they love it, but in reality, they just want a nice lawn and don't actually enjoy the work.\nParticipantB: That's true. I don't think I'll be able to keep this up if it gets too much work.\nParticipantA: Yeah, probably not. It's too much time commitment.\nParticipantB: Right. I'll probably just hire someone to do it next time.\nParticipantA: Yeah, that might be the best option.\nParticipantB: For sure. Well, I'm glad we talked about it. I feel like I learned something, even if I'm not doing it myself.\nParticipantA: Yeah, same here. Nice talking to you.\nParticipantB: You too. Bye!\nParticipantA: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 737,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

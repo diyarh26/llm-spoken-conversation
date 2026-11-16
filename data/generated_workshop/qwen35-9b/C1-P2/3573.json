@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 760631816,
+  "conversation_no": 3573,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 67,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hey, how's it going?\nParticipantB: Pretty good, just here. You?\nParticipantA: I'm fine. Long drive today, traffic was awful near the city.\nParticipantB: Yeah, that rush hour is a nightmare. I supervise at the plant, we're always waiting on parts deliveries like that.\nParticipantA: Man, it's crazy. I've been driving for eight years now, and the roads just seem to get worse every year.\nParticipantB: Tell me about it. It's like everyone's in a rush to get somewhere, but nobody knows where.\nParticipantA: Exactly. It makes me wonder, what's the point of all this? You ever think about just quitting it?\nParticipantB: Well, I did, actually. About ten years ago, I made up my mind I'd never come back to a factory floor.\nParticipantA: Oh yeah? You left?\nParticipantB: Yeah, I switched over to management, supervising a whole shift. I just realized I couldn't stand the noise and the pressure anymore.\nParticipantA: That's a big leap for you. I'd never do that. I love the open road, even if the traffic sucks.\nParticipantB: I guess that's the thing. I needed the quiet more than the control, ironically. Once I made that choice, it stuck like glue.\nParticipantA: Hmm. I suppose that makes sense. But what about your car? That's what I called you about.\nParticipantB: Oh, right. My car? Well, I'm looking at buying a new one soon.\nParticipantA: Oh, nice. What kind are you thinking?\nParticipantB: I'm thinking something comfortable, you know, a sedan. Maybe a little older model, not too expensive.\nParticipantA: Interesting. I was thinking the opposite. Something tough. Like a truck or an SUV.\nParticipantB: A truck? Why?\nParticipantA: Well, I haul stuff. I'm a driver, so I need something that can take a beating. Plus, I think it's safer on the highway.\nParticipantB: Oh, I see. I didn't think about safety like that. I just want something that handles well in the rain.\nParticipantA: Yeah, handling is key. I've seen too many trucks get stuck in the snow to just buy any old big vehicle.\nParticipantB: True. My last car slid out on ice more than once. I don't want that next time.\nParticipantA: Exactly. That's why I'm leaning towards a four-wheel drive. What about you? Any specific brands?\nParticipantB: Probably a Toyota. They last forever. I've had two of them already.\nParticipantA: Oh, a Toyota? That's smart. I respect that. I might look into one of those if I can find a good deal.\nParticipantB: They're not cheap, but they hold their value. Plus, the parts are easy to find if you ever break down.\nParticipantA: Yeah, that's a good point. I've broken down twice in three years. Need a reliable machine.\nParticipantB: Well, we're pretty similar then. You want durable, I want durable.\nParticipantA: Yeah, that's the main thing. We both want something that gets us there without giving us trouble.\nParticipantB: Exactly. Maybe we should go look at the same models sometime.\nParticipantA: Good idea. I've got a few in mind. Do you live anywhere near here?\nParticipantB: No, I'm in the suburbs about forty minutes out. You?\nParticipantA: I'm just north of the city. We're actually not too far apart.\nParticipantB: Oh, really? That's cool. Maybe we could drive out together next time we need to test a car.\nParticipantA: I'd like that. It'd be nice to talk about something other than traffic and shipments.\nParticipantB: Yeah, definitely. Well, I'll let you get back to the road.\nParticipantA: Thanks. Take care, man.\nParticipantB: You too.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 874,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

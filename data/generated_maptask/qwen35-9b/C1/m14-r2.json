@@ -1,0 +1,195 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m14",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 2714019651,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Right, so we're going from the start all the way to the finish. First, you need to go down just a little bit, past the diamond mine.\nFollower: Okay, past the diamond mine. Do I go left or right?\nGiver: Left. Keep going down until you hit the graveyard.\nFollower: Right, left past the mine, down to the graveyard. Okay, now I'm at the graveyard.\nGiver: From the graveyard, turn right. Go up and left until you hit the carved stones.\nFollower: Okay, turn right, go up and left... to the carved stones. Got it.\nGiver: From the carved stones, go left until you see the great rock on your right.\nFollower: Left to the great rock. Okay.\nGiver: Now, go down from there. You'll pass the gold mine on your left.\nFollower: Down past the gold mine.\nGiver: Keep going down a bit more, then turn right towards the trout farm. Stop just before the trout farm.\nFollower: Okay, turned right, stopped before the trout farm.\nGiver: Now, go down and left. You'll see the cavalry on the right side. Stop there.\nFollower: Okay, down and left, past the cavalry.\nGiver: From there, go down and right until you hit the cattle stockade on the right.\nFollower: Down and right... wait, I don't see the cattle stockade here.\nGiver: What? Did you draw a line to the right?\nFollower: No, I went left. There's no cattle stockade on the right here.\nGiver: Oh. Okay, look at the top right corner. There's a patch of land there. Maybe that's it? No, wait. You're near the indian country. Go down from the cavalry, then turn left towards the great rock at the bottom.\nFollower: Okay, down from the cavalry to the great rock at the bottom.\nGiver: From that great rock, go left.\nFollower: Left... oh, there's a bandit territory on the left. Stop before that.\nGiver: Yes, stop before the bandit territory. Then go left again, all the way down to the bottom edge.\nFollower: Okay, down to the bottom.\nGiver: From the bottom edge, go left until you hit the cattle stockade. Wait, do you have a cattle stockade?\nFollower: No, I don't have a cattle stockade.\nGiver: Oh, that's weird. Where's the cattle stockade?\nFollower: I don't have it. Is it on my map?\nGiver: No, it's not on your map. You have to assume it's there. Okay, from the bottom edge, go left a little, then turn up towards the bandit territory.\nFollower: Okay, left a bit, up to the bandit territory.\nGiver: From the bandit territory, go left.\nFollower: Left.\nGiver: Keep going left until you hit the parched river bed.\nFollower: Left... oh, there's a parched river bed. Stop there.\nGiver: From the parched river bed, go down and left to the finish.\nFollower: Okay, down and left to the finish.\nGiver: And make sure you go past the trout farm on the left and the cavalry on the right.\nFollower: Okay, past the trout farm and the cavalry. Done.\nGiver: Did you get it?\nFollower: Looks like I did.\nGiver: Great.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, so we're going from the start all the way to the finish. First, you need to go down just a little bit, past the diamond mine."
+    ],
+    [
+      "Follower",
+      "Okay, past the diamond mine. Do I go left or right?"
+    ],
+    [
+      "Giver",
+      "Left. Keep going down until you hit the graveyard."
+    ],
+    [
+      "Follower",
+      "Right, left past the mine, down to the graveyard. Okay, now I'm at the graveyard."
+    ],
+    [
+      "Giver",
+      "From the graveyard, turn right. Go up and left until you hit the carved stones."
+    ],
+    [
+      "Follower",
+      "Okay, turn right, go up and left... to the carved stones. Got it."
+    ],
+    [
+      "Giver",
+      "From the carved stones, go left until you see the great rock on your right."
+    ],
+    [
+      "Follower",
+      "Left to the great rock. Okay."
+    ],
+    [
+      "Giver",
+      "Now, go down from there. You'll pass the gold mine on your left."
+    ],
+    [
+      "Follower",
+      "Down past the gold mine."
+    ],
+    [
+      "Giver",
+      "Keep going down a bit more, then turn right towards the trout farm. Stop just before the trout farm."
+    ],
+    [
+      "Follower",
+      "Okay, turned right, stopped before the trout farm."
+    ],
+    [
+      "Giver",
+      "Now, go down and left. You'll see the cavalry on the right side. Stop there."
+    ],
+    [
+      "Follower",
+      "Okay, down and left, past the cavalry."
+    ],
+    [
+      "Giver",
+      "From there, go down and right until you hit the cattle stockade on the right."
+    ],
+    [
+      "Follower",
+      "Down and right... wait, I don't see the cattle stockade here."
+    ],
+    [
+      "Giver",
+      "What? Did you draw a line to the right?"
+    ],
+    [
+      "Follower",
+      "No, I went left. There's no cattle stockade on the right here."
+    ],
+    [
+      "Giver",
+      "Oh. Okay, look at the top right corner. There's a patch of land there. Maybe that's it? No, wait. You're near the indian country. Go down from the cavalry, then turn left towards the great rock at the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, down from the cavalry to the great rock at the bottom."
+    ],
+    [
+      "Giver",
+      "From that great rock, go left."
+    ],
+    [
+      "Follower",
+      "Left... oh, there's a bandit territory on the left. Stop before that."
+    ],
+    [
+      "Giver",
+      "Yes, stop before the bandit territory. Then go left again, all the way down to the bottom edge."
+    ],
+    [
+      "Follower",
+      "Okay, down to the bottom."
+    ],
+    [
+      "Giver",
+      "From the bottom edge, go left until you hit the cattle stockade. Wait, do you have a cattle stockade?"
+    ],
+    [
+      "Follower",
+      "No, I don't have a cattle stockade."
+    ],
+    [
+      "Giver",
+      "Oh, that's weird. Where's the cattle stockade?"
+    ],
+    [
+      "Follower",
+      "I don't have it. Is it on my map?"
+    ],
+    [
+      "Giver",
+      "No, it's not on your map. You have to assume it's there. Okay, from the bottom edge, go left a little, then turn up towards the bandit territory."
+    ],
+    [
+      "Follower",
+      "Okay, left a bit, up to the bandit territory."
+    ],
+    [
+      "Giver",
+      "From the bandit territory, go left."
+    ],
+    [
+      "Follower",
+      "Left."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the parched river bed."
+    ],
+    [
+      "Follower",
+      "Left... oh, there's a parched river bed. Stop there."
+    ],
+    [
+      "Giver",
+      "From the parched river bed, go down and left to the finish."
+    ],
+    [
+      "Follower",
+      "Okay, down and left to the finish."
+    ],
+    [
+      "Giver",
+      "And make sure you go past the trout farm on the left and the cavalry on the right."
+    ],
+    [
+      "Follower",
+      "Okay, past the trout farm and the cavalry. Done."
+    ],
+    [
+      "Giver",
+      "Did you get it?"
+    ],
+    [
+      "Follower",
+      "Looks like I did."
+    ],
+    [
+      "Giver",
+      "Great."
+    ]
+  ],
+  "n_turns": 41,
+  "ended_by": "single_generation"
+}

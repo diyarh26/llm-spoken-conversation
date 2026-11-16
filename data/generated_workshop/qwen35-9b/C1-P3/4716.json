@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1377173551,
+  "conversation_no": 4716,
+  "topic": "Gun Control",
+  "sb_prompt": "DISCUSS GUN CONTROL.  WHERE DO YOU AND THE OTHER CALLER STAND ON A SCALE FROM 1 TO 10",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey!\nParticipantA: Yeah, I was just looking at some news about the shooting downtown and it got me thinking. You know, what do you think? Like, where are we on this gun control thing?\nParticipantB: Oh, right. Honestly? I'm probably around a 4 or 5. Kinda in the middle, I guess.\nParticipantA: Wow, really? I'm definitely more of a 9. Maybe even an 10 if I'm being honest.\nParticipantB: Man, a 10? That's pretty serious. My cousin got arrested a couple years back for having a loaded rifle in his truck. He said he felt safer with it, but it ended up looking real bad in court.\nParticipantA: Oh, that sucks for your cousin. Yeah, I see where you're coming from. But for me, it's just about respect for other people's safety. I work as an electrician, you know?\nParticipantB: Oh, yeah? How's that going?\nParticipantA: It's awesome. I love it. I've been doing this since I was like 20. I made up my mind way back then. I just knew I wanted to be out there working, not sitting in an office.\nParticipantB: That's cool. I actually went to college for finance, though. Kinda changed my mind about what I wanted to do after a while. Now I'm a bank teller.\nParticipantA: Oh, nice! I've always kind of looked up to people who work in the city. You see more of society, right?\nParticipantB: Yeah, definitely. Every day, people come in with all kinds of problems. Some are scared, some are angry. It's just... it's a lot of pressure. Makes me want to keep my options open.\nParticipantA: I get that. But honestly, when I'm up in the attic fixing wiring, I don't want anyone to walk up and shoot me because I'm working. It's not about politics, really. It's just about being able to do my job without fear.\nParticipantB: I mean, I agree about the fear part. That's for sure. My cousin's story is why I lean toward 4. I don't want people afraid of their own families. But I also don't want a crazy person getting a weapon easily.\nParticipantA: Right? That's the thing. It feels like we're both trying to protect people, just in different ways. I think stricter laws would actually make it safer for my crew.\nParticipantB: Hmm. Maybe we just disagree on the best way to do it.\nParticipantA: Totally. Look, I'm gonna head out to a job site, actually. Got a call at 10.\nParticipantB: Oh, yeah? Good luck with that.\nParticipantA: Thanks. You stick to the bank stuff, right?\nParticipantB: Yeah, I will. Talk later?\nParticipantA: Yeah, maybe.\nParticipantB: Cool. Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 659,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

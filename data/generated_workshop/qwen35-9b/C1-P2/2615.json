@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2464077380,
+  "conversation_no": 2615,
+  "topic": "Auto Repairs",
+  "sb_prompt": "WHAT WAS THE LAST AUTO REPAIR YOU PERFORMED OR HAD DONE ON YOUR CAR? ARE THERE SOME TYPES OF REPAIRS OR MAINTENANCE TASKS YOU PREFER TO DO YOURSELF?  DISCUSS YOUR EXPERIENCES IN THIS AREA WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 50,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hey, did you get my call earlier?\nParticipantB: Yeah, you got me. Sorry, I was in the middle of a tax audit.\nParticipantA: No worries. Yeah, I just wanted to ask, what was the last auto repair you had done?\nParticipantB: Hmm, last time? Uh, actually, I just replaced my brakes about two weeks ago.\nParticipantA: Oh, really? That's pretty standard stuff. Did you do it yourself or had a shop do it?\nParticipantB: Had the shop do it. You know, I'm an accountant, so I'm good with money, but wrenches... not so much.\nParticipantA: Yeah, I get that. I'm a grocery store manager, so I'm used to people asking me for advice, but I'm pretty hands-on with my own car.\nParticipantB: Oh, really? You fix your own car?\nParticipantA: Yeah, I've been doing it for years. I don't know, I just always felt like if I couldn't do it myself, I was gonna get ripped off.\nParticipantB: That's a fair point. I guess I just don't have the patience for the diagrams sometimes.\nParticipantA: Oh, I totally get that. It's just a lot of small things. Like last month, I changed my own oil and filter. Took me maybe an hour?\nParticipantB: Oh, wow. Okay, I would have never thought of doing that myself. I usually just go to the quick lube place.\nParticipantA: Yeah, the quick lube places are fine, but sometimes you feel like they're rushing you. Plus, you save the money.\nParticipantB: True. Though I have to say, I did replace my own battery last year.\nParticipantA: Wait, really? You did that yourself?\nParticipantB: Yeah, I found a video online. It was just a couple of clips holding it down and swapping it. Took me like twenty minutes.\nParticipantA: That's impressive. I usually leave the battery to the pros. I guess I just don't feel comfortable messing with the terminals or anything.\nParticipantB: I get that. It's just the confidence thing. I made up my mind years ago that I'd figure it out, even if I don't know why exactly.\nParticipantA: Yeah, same here. It's just that nagging feeling that if I learn how, I'll be okay. And honestly, it's kind of satisfying when you see the light come back on.\nParticipantB: I can see that. But I'm still afraid of the engines. I just don't touch anything under the hood except maybe checking fluids.\nParticipantA: No, don't touch the engine! That's a good call. Leave the engine to the experts. Just the basics, oil, tires, brakes.\nParticipantB: Yeah, those are the only things I'll really try. Although, I'm thinking about checking my own tire pressure next week.\nParticipantA: Oh, do that! Just the air. That's easy enough.\nParticipantB: Okay, I'll do that. Thanks for talking about this.\nParticipantA: No problem. It was nice hearing your take.\nParticipantB: Yeah, same. I think I'll stick to the basics for now.\nParticipantA: Good call. Take care.\nParticipantB: You too.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 722,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

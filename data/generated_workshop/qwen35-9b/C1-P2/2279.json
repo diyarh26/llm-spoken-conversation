@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2157410333,
+  "conversation_no": 2279,
+  "topic": "Family Life",
+  "sb_prompt": "IF YOU HAVE CHILDRENY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 37,
+    "education": "a high-school education",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Oh, hi. Did you get a call from me?\nParticipantB: Yeah, just a minute ago. Yeah.\nParticipantA: Okay. So, the topic is family life. Right?\nParticipantB: Yeah, family stuff. Kids mostly.\nParticipantA: Oh, good. I have two. A girl, eight years old, and a boy, five.\nParticipantB: Oh, wow. That's young. I have one. Just a girl, three.\nParticipantA: Three? Okay. That's... that's the tough part I guess.\nParticipantB: Yeah, the little one. She's not even in school yet.\nParticipantA: Right. I feel like I'm just running from one to the other all day.\nParticipantB: Yeah, it's a full time job, for sure. Especially if you're driving a bus.\nParticipantA: Wait, you drive a bus?\nParticipantB: Yeah, school bus. It's my job.\nParticipantA: Oh, wow. That's intense. I'm an electrician.\nParticipantB: Really? That sounds cool. I mean, I've always liked it, but...\nParticipantA: What about it?\nParticipantB: Well, my cousin was an electrician too. And he... he didn't really like it.\nParticipantA: Oh? Why not? I thought you'd think it was great.\nParticipantB: He said it was too much stress. And the hours. And you know, you're always on call.\nParticipantA: Hmm. Yeah, I get that a lot. But I like the work itself.\nParticipantB: Really? Your cousin hated the work.\nParticipantA: No, no. My cousin was scared of heights maybe? Or something.\nParticipantB: Oh. Well, I guess everyone is different.\nParticipantA: Yeah. I've wanted to be an electrician since I was like... twelve?\nParticipantB: That's young to decide.\nParticipantA: I don't know why. Just felt like it was the only thing that made sense.\nParticipantB: Maybe because you're good with your hands?\nParticipantA: Maybe. I guess so. But sometimes I wonder if I made the right choice.\nParticipantB: You know, my daughter... she wants to be a vet.\nParticipantA: Oh, that's nice. That's very different from driving a bus.\nParticipantB: Yeah. She loves animals. But I tell her, \"You gotta eat first.\"\nParticipantA: Haha. That's true. You can't have animals without money.\nParticipantB: Exactly. So I'm trying to keep the bus route safe and stable.\nParticipantA: Oh, that's important. Safety first.\nParticipantB: Yeah. I drive the same route for ten years. Same kids, same houses.\nParticipantA: That's nice. Some consistency. My kids go to different schools.\nParticipantB: Oh? Why?\nParticipantA: Well, we moved. The house had a bad wire. I had to fix it.\nParticipantB: Wait, what? You fixed your own house?\nParticipantA: Yeah. Did some rewiring myself. Saved some cash.\nParticipantB: Wow. I'd never do that. Too risky.\nParticipantA: Maybe. But it saved me money. And I liked figuring it out.\nParticipantB: I guess. My cousin said it's dangerous work.\nParticipantA: It is. But you learn. You learn what works.\nParticipantB: Yeah. My daughter... she's asking me about fixing things too.\nParticipantA: Oh? That's good. Tell her she can help.\nParticipantB: She does. She helped me fix the toy car last week.\nParticipantA: Nice! What did you fix?\nParticipantB: The wheel came loose. Just tightened it up.\nParticipantA: That's pretty cool. She's smart.\nParticipantB: Yeah. But she's also... she doesn't like school much.\nParticipantA: Oh? Why not?\nParticipantB: She says it's boring. Too many rules.\nParticipantA: Haha. My son feels the same sometimes.\nParticipantB: Yeah. He's five. So maybe he'll grow out of it.\nParticipantA: Maybe. Or maybe I'll just let him be an electrician too.\nParticipantB: Oh, really? That's your plan?\nParticipantA: Maybe. It's just... I like it. Too much to give up.\nParticipantB: I guess. But you know, I'm not sure it's the best for everyone.\nParticipantA: I know. But I like it. I like seeing the work done.\nParticipantB: Yeah. It is satisfying, I guess.\nParticipantA: Yeah. Like finishing a job.\nParticipantB: Right. I get to see kids safe on the bus. That's good too.\nParticipantA: Oh, that's great. You make them feel secure.\nParticipantB: Yeah. I hope they do.\nParticipantA: Well, I guess we're both doing our thing.\nParticipantB: Yeah. Different paths.\nParticipantA: But both good. I think.\nParticipantB: Yeah. I think so too.\nParticipantA: Okay. Well, I'm gonna go fix a ceiling fan.\nParticipantB: Oh? Did it break?\nParticipantA: No. Just thought I'd try to balance the blades.\nParticipantB: Nice. Maybe your daughter will want to help later.\nParticipantA: Maybe. She's busy right now anyway.\nParticipantB: Yeah. Well, I should get back to the depot.\nParticipantA: Okay. Same here.\nParticipantB: Take care.\nParticipantA: You too. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 1257,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

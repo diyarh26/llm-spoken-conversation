@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2674305940,
+  "conversation_no": 3883,
+  "topic": "Clothing And Dress",
+  "sb_prompt": "THE TOPIC IS CLOTHING.  PLEASE FIND OUT HOW THE OTHER CALLER TYPICALLY DRESSES FOR WORK.  HOW MUCH VARIATION IS THERE FROM DAY TO DAY?  HOW MUCH VARIATION IS THERE FROM SEASON TO SEASON?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 57,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Hi, I'm calling because we were asked to chat with a stranger about clothing. How's it going on your end?\nParticipantB: Oh, hi. Yeah, it's fine. I'm a dental hygienist, so I wear scrubs basically every single day.\nParticipantA: Scrubs? That's my world! I'm a factory supervisor. I love talking about work clothes because it changes so much. What about your day-to-day? Do you change at all?\nParticipantB: Not really. Just the same blue scrub set. Maybe I swap in different tops sometimes, but mostly it's the same pockets, same name tag.\nParticipantA: Yeah, I get that. I've got my coveralls for the shop floor, but honestly, my variation depends on the shift and the season. Like, winter is totally different from summer.\nParticipantB: Oh, really? Do you dress warmer in winter or just put layers on? I'm used to being hot in the chair all day.\nParticipantA: It's the boots! In winter, I wear heavy insulated work boots with thick socks. In summer, it's just steel toes and thin socks. That's the biggest shift.\nParticipantB: Hmm, that sounds intense. My variation is basically zero. My boss is old school; if I look like a nurse instead of a hygienist, she gets weird.\nParticipantA: Oh, that makes sense. Well, I had this one day last month where it was 95 degrees and the AC was broken, and I basically looked like a marshmallow in those heavy boots.\nParticipantB: Wow, that sounds miserable. I never have to worry about that. My variation from season to season is just... maybe a different color scrub top?\nParticipantA: Right, same outfit, different fabric. Light cotton in summer, flannel or fleece-lined in winter. And personally, I think the boots are a safety necessity, so I don't mind the heat as much.\nParticipantB: I guess I've heard that from my dad, who's a mechanic. He says you have to prioritize function over fashion. I kind of wish I had that excuse to wear jeans sometimes, but my patient feels naked if I'm not in scrubs.\nParticipantA: That's a good point. I sometimes tell my friends about my \"uniform\" story because it's funny how different our jobs look. You really only see the top half when you're at work.\nParticipantB: True, I just do the teeth part in scrubs. My husband, he's a painter, he wears overalls all day and then puts a suit on for church on Sundays. That's his variation.\nParticipantA: Oh, a painter in overalls? That sounds rough. Do you ever see people in your practice who dress differently than you?\nParticipantB: Sometimes. The office manager wears business casual, and she changes her outfit every day. I think she enjoys it more than I do.\nParticipantA: Well, I definitely don't mind the uniform. Knowing what to wear takes the stress out of the morning. I just hope I don't have another heatwave like last month.\nParticipantB: Yeah, lucky you have the layers. Mine is just... stay dry and stay clean. No fun variation there.\nParticipantA: No, it's practical. I'll stick to the boots and the tops. Thanks for chatting, it was interesting hearing your side.\nParticipantB: Yeah, same to you. Good luck with your supervisor hat.\nParticipantA: Will do. Take care!\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 769,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

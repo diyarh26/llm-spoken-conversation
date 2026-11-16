@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3628296475,
+  "conversation_no": 4048,
+  "topic": "Drug Testing",
+  "sb_prompt": "HOW DO YOU FEEL ABOUT THE PRACTICE OF SOME COMPANIES OR GOVERNMENT AGENCIES TESTING EMPLOYEES OR PROSPECTIVE EMPLOYEES FOR DRUGS?  IS RANDOM SPOT TESTING JUSTIFIED?  WHAT LIMITS SHOULD THERE BE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 28,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 40,
+    "education": "a college degree",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Hey, I'm calling because I got this question from work about drug testing. It's pretty generic stuff, honestly.\nParticipantB: Oh, drug testing? Yeah, that's a big one. I actually have a student who just got fired for a positive test, so it's fresh in my mind.\nParticipantA: Really? That's heavy. I guess I've been thinking about this for years, but I never really knew why I felt the way I do.\nParticipantB: Well, for me, it depends on the job. If it's a school bus driver or an operating room tech, sure, I think random spot testing is totally justified. It's about safety.\nParticipantA: I see what you're saying, but honestly, I just feel like it's an invasion of privacy. My boss never asks me what I'm thinking or where I was last weekend, so why test my pee?\nParticipantB: I get that, and that's fair. But if someone is going to operate heavy machinery, isn't it their responsibility to be sharp?\nParticipantA: Maybe, but what if it's just a one-time thing? Like, they took something for a bad knee or a prescription that got mismanaged? Is that a crime now?\nParticipantB: That's where I think the lines get blurry. If it's a prescription, maybe they should talk to a doctor first. But if it's recreational stuff... yeah, companies need to know. I know a guy who lost his job as a teacher because of a failed test, even though he'd been there five years.\nParticipantA: Oh man, that sucks. That doesn't seem right to me. If you've been working there for five years, surely you've cleaned up your act by then.\nParticipantB: That's true. But sometimes the damage is already done before they catch it. It's like the needle is already in the wood.\nParticipantA: I guess that makes sense, but it feels like a fishing expedition. Like, are they just looking for a reason to get rid of people?\nParticipantB: Maybe some are. I've heard some teachers complain about it being used to weed out union members or older staff. But I think most of it is just panic.\nParticipantA: Panic? Do you really think companies are that scared?\nParticipantB: Yeah, the insurance premiums are through the roof. If they don't test, the rates go up for everyone. So they just do it to save a few bucks.\nParticipantA: That's actually a good point. I never thought about the insurance angle. But still, I think there should be limits. Like, maybe only for safety-sensitive jobs?\nParticipantB: Exactly. What about an accountant, like yourself? Would you want to be tested for drugs?\nParticipantA: Hah, no way. I deal with numbers all day. Unless I'm drinking to the point of blackout, I'm fine. I don't think testing me makes sense.\nParticipantB: Yeah, I agree. If you're sitting at a desk, I think the threat is lower. Unless it's a management position where you're driving a company car?\nParticipantA: Yeah, if I was managing a fleet of vans, sure, then maybe. But for regular staff? It just feels like spying.\nParticipantB: I think the key is transparency. If the rules are clear up front and there's a rehab program attached, then I can get behind it.\nParticipantA: That's a good point. If it's about getting help, maybe I could see it differently. But right now, it just feels like punishment.\nParticipantB: Yeah, it does feel punitive sometimes. Like, you're guilty until proven innocent, even if you've been clean for years.\nParticipantA: Exactly. It's a weird feeling, knowing you could lose your livelihood over something that happened a long time ago.\nParticipantB: Yeah, that's the scary part. One bad day, and your whole history gets erased.\nParticipantA: I guess that's why I'm skeptical. I just hope I don't have to worry about it.\nParticipantB: Well, hopefully your insurance premiums stay low.\nParticipantA: (laughs) Yeah, hopefully. Thanks for talking this out. It helped me sort through some of my own doubts.\nParticipantB: Anytime. Good luck with it.\nParticipantA: You too. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 949,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

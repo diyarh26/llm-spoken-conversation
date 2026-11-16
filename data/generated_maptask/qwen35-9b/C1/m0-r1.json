@@ -1,0 +1,335 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m0",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 3873800186,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Right, we're going to go from the Start to the Finish.\nFollower: Okay. Where is the Start?\nGiver: It's marked with a cross, just north of the camera shop.\nFollower: Okay, I see the camera shop down here.\nGiver: Good. So we start there, then we head left and up a bit.\nFollower: Left and up?\nGiver: Yeah, away from the camera shop. Do you see the parked van?\nFollower: Ah, there's a van over there.\nGiver: That's the one. We pass it on the left, so turn right towards the bottom of the map.\nFollower: Okay, turning right.\nGiver: Then go down past the allotments. Are those the allotments there?\nFollower: Yes, I see the allotments.\nGiver: Good. We pass them on the right side of the path. Keep going down.\nFollower: Okay, going down.\nGiver: Then turn left, heading towards the bottom left corner almost.\nFollower: Left?\nGiver: Yeah, almost all the way to the edge.\nFollower: Okay, turning left.\nGiver: Then turn right again, heading up towards the top left.\nFollower: Up towards the top left?\nGiver: Yeah. We pass the disused monastery on the left as we go up. Do you see the monastery?\nFollower: Oh, I see the monastery. But wait, I don't see the alpine garden near it.\nGiver: Oh? Where is the alpine garden on your map?\nFollower: It's way up near the top left, pretty far north.\nGiver: Ah, okay. On my map it's lower down, near the monastery. So you might get confused there. We pass it on the right.\nFollower: Oh, okay. So the monastery is on the left, and the garden is on the right.\nGiver: Yes. Then we turn left again.\nFollower: Left?\nGiver: Yeah, heading down towards the bottom left again.\nFollower: Okay, going down.\nGiver: Then turn right, heading towards the middle right of the map.\nFollower: Towards the middle right?\nGiver: Yeah. We pass the youth hostel on the right as we go. Do you see the hostel?\nFollower: I see the hostel, but it's quite far up.\nGiver: Ah, okay. It's further up on your map. Just keep going towards the right.\nFollower: Okay.\nGiver: Then turn left again, heading towards the right side.\nFollower: Left?\nGiver: Yeah. We pass the telephone box on the left. Do you see the telephone box?\nFollower: I see the telephone box. It's actually quite close to the middle right.\nGiver: Ah, okay. So it's lower down on your map. Keep going towards the right.\nFollower: Okay, going right.\nGiver: Then turn left again, heading towards the top right.\nFollower: Left?\nGiver: Yeah. We pass the thatched mud hut on the right. Do you see the hut?\nFollower: I see the hut. It's pretty far east.\nGiver: Okay. Then turn left again, heading towards the top right corner.\nFollower: Left?\nGiver: Yeah. We pass the east lake on the right. Do you see the lake?\nFollower: I see the lake. It's quite far north.\nGiver: Ah, okay. It's further north on your map. Keep going towards the right.\nFollower: Okay, going right.\nGiver: Then turn left again, heading towards the bottom right.\nFollower: Left?\nGiver: Yeah. We pass the yacht club on the right. Do you see the yacht club?\nFollower: I see the yacht club. It's quite far south.\nGiver: Ah, okay. It's further south on your map. Keep going towards the right.\nFollower: Okay, going right.\nGiver: Then turn left again, heading towards the bottom.\nFollower: Left?\nGiver: Yeah. We pass the parked van on the left. Wait, did we pass that van before?\nFollower: Oh! The van! There's a van near the bottom left too.\nGiver: Ah, that's a different van. This one is near the bottom.\nFollower: Okay, okay. Going down.\nGiver: Then turn right again, heading towards the top right.\nFollower: Right?\nGiver: Yeah. We're heading towards the Finish now.\nFollower: Okay, going right.\nGiver: The Finish is marked with a cross. It's near the top middle.\nFollower: I see the cross. It's near the top middle.\nGiver: Good. Do you think you've got it?\nFollower: I think so. I've drawn it from the start to the finish.\nGiver: Okay. I'll check my map and see if it matches.\nFollower: Okay.\nGiver: Great.\nFollower: Okay.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, we're going to go from the Start to the Finish."
+    ],
+    [
+      "Follower",
+      "Okay. Where is the Start?"
+    ],
+    [
+      "Giver",
+      "It's marked with a cross, just north of the camera shop."
+    ],
+    [
+      "Follower",
+      "Okay, I see the camera shop down here."
+    ],
+    [
+      "Giver",
+      "Good. So we start there, then we head left and up a bit."
+    ],
+    [
+      "Follower",
+      "Left and up?"
+    ],
+    [
+      "Giver",
+      "Yeah, away from the camera shop. Do you see the parked van?"
+    ],
+    [
+      "Follower",
+      "Ah, there's a van over there."
+    ],
+    [
+      "Giver",
+      "That's the one. We pass it on the left, so turn right towards the bottom of the map."
+    ],
+    [
+      "Follower",
+      "Okay, turning right."
+    ],
+    [
+      "Giver",
+      "Then go down past the allotments. Are those the allotments there?"
+    ],
+    [
+      "Follower",
+      "Yes, I see the allotments."
+    ],
+    [
+      "Giver",
+      "Good. We pass them on the right side of the path. Keep going down."
+    ],
+    [
+      "Follower",
+      "Okay, going down."
+    ],
+    [
+      "Giver",
+      "Then turn left, heading towards the bottom left corner almost."
+    ],
+    [
+      "Follower",
+      "Left?"
+    ],
+    [
+      "Giver",
+      "Yeah, almost all the way to the edge."
+    ],
+    [
+      "Follower",
+      "Okay, turning left."
+    ],
+    [
+      "Giver",
+      "Then turn right again, heading up towards the top left."
+    ],
+    [
+      "Follower",
+      "Up towards the top left?"
+    ],
+    [
+      "Giver",
+      "Yeah. We pass the disused monastery on the left as we go up. Do you see the monastery?"
+    ],
+    [
+      "Follower",
+      "Oh, I see the monastery. But wait, I don't see the alpine garden near it."
+    ],
+    [
+      "Giver",
+      "Oh? Where is the alpine garden on your map?"
+    ],
+    [
+      "Follower",
+      "It's way up near the top left, pretty far north."
+    ],
+    [
+      "Giver",
+      "Ah, okay. On my map it's lower down, near the monastery. So you might get confused there. We pass it on the right."
+    ],
+    [
+      "Follower",
+      "Oh, okay. So the monastery is on the left, and the garden is on the right."
+    ],
+    [
+      "Giver",
+      "Yes. Then we turn left again."
+    ],
+    [
+      "Follower",
+      "Left?"
+    ],
+    [
+      "Giver",
+      "Yeah, heading down towards the bottom left again."
+    ],
+    [
+      "Follower",
+      "Okay, going down."
+    ],
+    [
+      "Giver",
+      "Then turn right, heading towards the middle right of the map."
+    ],
+    [
+      "Follower",
+      "Towards the middle right?"
+    ],
+    [
+      "Giver",
+      "Yeah. We pass the youth hostel on the right as we go. Do you see the hostel?"
+    ],
+    [
+      "Follower",
+      "I see the hostel, but it's quite far up."
+    ],
+    [
+      "Giver",
+      "Ah, okay. It's further up on your map. Just keep going towards the right."
+    ],
+    [
+      "Follower",
+      "Okay."
+    ],
+    [
+      "Giver",
+      "Then turn left again, heading towards the right side."
+    ],
+    [
+      "Follower",
+      "Left?"
+    ],
+    [
+      "Giver",
+      "Yeah. We pass the telephone box on the left. Do you see the telephone box?"
+    ],
+    [
+      "Follower",
+      "I see the telephone box. It's actually quite close to the middle right."
+    ],
+    [
+      "Giver",
+      "Ah, okay. So it's lower down on your map. Keep going towards the right."
+    ],
+    [
+      "Follower",
+      "Okay, going right."
+    ],
+    [
+      "Giver",
+      "Then turn left again, heading towards the top right."
+    ],
+    [
+      "Follower",
+      "Left?"
+    ],
+    [
+      "Giver",
+      "Yeah. We pass the thatched mud hut on the right. Do you see the hut?"
+    ],
+    [
+      "Follower",
+      "I see the hut. It's pretty far east."
+    ],
+    [
+      "Giver",
+      "Okay. Then turn left again, heading towards the top right corner."
+    ],
+    [
+      "Follower",
+      "Left?"
+    ],
+    [
+      "Giver",
+      "Yeah. We pass the east lake on the right. Do you see the lake?"
+    ],
+    [
+      "Follower",
+      "I see the lake. It's quite far north."
+    ],
+    [
+      "Giver",
+      "Ah, okay. It's further north on your map. Keep going towards the right."
+    ],
+    [
+      "Follower",
+      "Okay, going right."
+    ],
+    [
+      "Giver",
+      "Then turn left again, heading towards the bottom right."
+    ],
+    [
+      "Follower",
+      "Left?"
+    ],
+    [
+      "Giver",
+      "Yeah. We pass the yacht club on the right. Do you see the yacht club?"
+    ],
+    [
+      "Follower",
+      "I see the yacht club. It's quite far south."
+    ],
+    [
+      "Giver",
+      "Ah, okay. It's further south on your map. Keep going towards the right."
+    ],
+    [
+      "Follower",
+      "Okay, going right."
+    ],
+    [
+      "Giver",
+      "Then turn left again, heading towards the bottom."
+    ],
+    [
+      "Follower",
+      "Left?"
+    ],
+    [
+      "Giver",
+      "Yeah. We pass the parked van on the left. Wait, did we pass that van before?"
+    ],
+    [
+      "Follower",
+      "Oh! The van! There's a van near the bottom left too."
+    ],
+    [
+      "Giver",
+      "Ah, that's a different van. This one is near the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, okay. Going down."
+    ],
+    [
+      "Giver",
+      "Then turn right again, heading towards the top right."
+    ],
+    [
+      "Follower",
+      "Right?"
+    ],
+    [
+      "Giver",
+      "Yeah. We're heading towards the Finish now."
+    ],
+    [
+      "Follower",
+      "Okay, going right."
+    ],
+    [
+      "Giver",
+      "The Finish is marked with a cross. It's near the top middle."
+    ],
+    [
+      "Follower",
+      "I see the cross. It's near the top middle."
+    ],
+    [
+      "Giver",
+      "Good. Do you think you've got it?"
+    ],
+    [
+      "Follower",
+      "I think so. I've drawn it from the start to the finish."
+    ],
+    [
+      "Giver",
+      "Okay. I'll check my map and see if it matches."
+    ],
+    [
+      "Follower",
+      "Okay."
+    ],
+    [
+      "Giver",
+      "Great."
+    ],
+    [
+      "Follower",
+      "Okay."
+    ]
+  ],
+  "n_turns": 76,
+  "ended_by": "single_generation"
+}

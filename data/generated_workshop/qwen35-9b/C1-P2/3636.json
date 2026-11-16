@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3615477668,
+  "conversation_no": 3636,
+  "topic": "Camping",
+  "sb_prompt": "FIND OUT FROM THE OTHER CALLER WHAT KIND OF CAMPING THEY HAVE DONE.  HOW DOES IT COMPARE WITH YOUR OWN EXPERIENCES?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hey, is this the right number?\nParticipantB: Yeah, it is. Hi.\nParticipantA: Hi, I'm Mike.\nParticipantB: I'm Susan. Nice to meet you.\nParticipantA: You too. So, how did you hear about this?\nParticipantB: Oh, just a little ad in the paper last week. Thought I'd give it a try.\nParticipantA: Nice. Well, I've been trying to get my feet wet in camping lately. It's kind of stuck in my head.\nParticipantB: Oh, camping. Yeah. I've done it a little bit.\nParticipantA: Really? What kind?\nParticipantB: Mostly just car camping. You know, sleeping in the back of the station wagon with a tent on the ground.\nParticipantA: Oh, that makes sense. I was looking at that same thing. I actually went once with my buddy Dave a couple years back.\nParticipantB: Oh, really? What was it like?\nParticipantA: It was... okay. But mostly just frustrating. We drove out to a state park, set up the tent, and ended up fighting with mosquitoes all night.\nParticipantB: Mosquitoes? Oh, that sounds awful. I've never had that problem.\nParticipantA: Yeah, Dave was complaining the whole time. He said it ruined the whole trip. He keeps talking about how he wants to go back, but only if we can get somewhere with no bugs.\nParticipantB: Hm. I guess that's a dealbreaker for some people. I remember doing car camping once too.\nParticipantA: How was it for you?\nParticipantB: It was actually pretty nice. We went to a little beach spot. It was just us and the car.\nParticipantA: Oh, beach camping? That sounds nice.\nParticipantB: Yeah. We just spread out the sleeping bags right on the sand. Didn't even pitch a tent.\nParticipantA: Wait, what? No tent? Just sleeping bags on the sand?\nParticipantB: Yeah! It was beautiful. We cooked dinner on the beach, watched the sunset, and went to sleep under the stars.\nParticipantA: Wow. I can't imagine doing that. My whole idea of camping is about staying dry and safe.\nParticipantB: See, that's where you and I might differ. I think camping is about getting away from it all. The bugs are part of the experience.\nParticipantA: The bugs? Are you serious?\nParticipantB: Yeah, honestly. Sometimes I think the challenge is half the fun. Like, you're really out in the wild, not just in a sheltered spot.\nParticipantA: Well, I don't think I could handle that. Dave says he'll probably still be bitter about that trip.\nParticipantB: Maybe you'll find a spot without bugs though. Or maybe you just need a bigger tent.\nParticipantA: Maybe. But I think I prefer the comfort. At least I sleep well.\nParticipantB: Well, at least I know you'll be warm.\nParticipantA: True. I don't know, maybe I'll try it again sometime. Just to see what it's like without the complaining.\nParticipantB: Sure. Maybe you'll change your mind. It's a different kind of adventure.\nParticipantA: Yeah, maybe. Thanks for talking about it.\nParticipantB: No problem. Nice chatting with you, Mike.\nParticipantA: You too, Susan. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 750,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

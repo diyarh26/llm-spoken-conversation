@@ -1,0 +1,383 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m7",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 3983533943,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Hello?\nFollower: Hi there.\nGiver: Okay, let's do this. You have the map with the cross?\nFollower: Yes, right here. Where do we start?\nGiver: Start at the cross. You know your map only has the start, right?\nFollower: Yeah, just the cross.\nGiver: Okay, look for a burnt forest near the start. It should be to your left.\nFollower: Ah, I see a dark patch. Is that the one?\nGiver: Yes. Now, from the cross, head down and slightly left towards it. Don't go all the way to it, just pass close.\nFollower: So, towards the left?\nGiver: Left of the start, but before you reach the forest. Keep going.\nFollower: Okay... I'm moving towards the forest now.\nGiver: Good. Now, once you're past the forest, turn right. We need to go up a bit.\nFollower: Turning right. Up a little.\nGiver: Keep going up until you see a small village in the distance on your left.\nFollower: Ah, I see a little cluster of huts. That's it?\nGiver: Yes, that's the remote village. Stop there. Don't pass it.\nFollower: Okay, stopping here.\nGiver: Now turn left. We need to go towards a ravine, but not right into it.\nFollower: Left... towards the ravine?\nGiver: Yes, the ravine is on your right side of the path. Aim for the area left of the ravine.\nFollower: I'm turning left. It looks steep here.\nGiver: That's right, keep walking left until you hit a pine grove.\nFollower: There's a pine grove! Okay, stopping there.\nGiver: Great. Now turn right. Go down towards the boat house.\nFollower: Turning right. Heading down.\nGiver: Wait, don't go straight to the boat house yet. There's a ravine coming up on your right first. Go up to it, then turn left.\nFollower: Whoa, okay, I missed that ravine. So up to the ravine, then left?\nGiver: Yes. Aim for a spot that puts the ravine on your right.\nFollower: Okay, so the ravine is there... turning left.\nGiver: Good. Now, follow that path until you see the pine grove again. Wait, no, we already passed the pine grove.\nFollower: Wait, we passed the pine grove already?\nGiver: Yes, that was the first pine grove. We are going down from the ravine towards a boat house.\nFollower: Ah, okay. So the ravine is on the right, and we're heading down to the boat house.\nGiver: Yes. Go down until you see the boat house on your right.\nFollower: Okay, heading down. I see a boat house shape.\nGiver: Yes, that's it. Stop right next to it.\nFollower: Stopped.\nGiver: Now, turn left. There's another boat house further down, but we don't go there yet. Go left towards the coast.\nFollower: Left towards the water?\nGiver: Yes, towards the pebbled shore. But stop before the shore starts. We need to find a specific spot.\nFollower: Okay, left... I see some pebbles.\nGiver: Good. Now look at your map. Do you see a hidden thing somewhere?\nFollower: I see a little shelter. Is that it?\nGiver: No, that's not it. Look to your right. Do you see a pine grove?\nFollower: Yes, there's a pine grove to my right.\nGiver: Okay, so you're at the boat house? No, wait. Let me rephrase.\nFollower: Wait, I'm confused. Are we at the boat house or near the shore?\nGiver: We are leaving the boat house. Go left. You'll see a pine grove on your left.\nFollower: Ah! The pine grove is on the left now. Okay, moving left.\nGiver: Yes. Keep going until you see the boat house on your right again.\nFollower: Okay, heading left. I see the boat house on my right.\nGiver: Perfect. Stop there. Now, turn left. We need to go towards the coast again.\nFollower: Left towards the coast.\nGiver: Yes. Follow the shore. Stop near the crane bay.\nFollower: Okay, following the shore. I see the crane bay.\nGiver: Good. Now turn right. There's a coconut palm nearby.\nFollower: Turning right. I see a tall palm tree.\nGiver: Yes, the coconut palm is on your right. Stop there.\nFollower: Stopped.\nGiver: Now, turn left. Go towards the beach again.\nFollower: Left towards the beach.\nGiver: Yes. Keep going until you see the pebbled shore. Stop just before it gets too crowded.\nFollower: Okay, left. I see the pebbles.\nGiver: Good. Now, look down. Is there a flag ship on your map?\nFollower: Yes! I see a ship shape at the bottom.\nGiver: Great. We need to go down towards it. Turn right slightly, heading towards the ship.\nFollower: Turning right. Heading down.\nGiver: Yes. Go all the way down until you see the flag ship.\nFollower: Okay, heading down. I see the ship!\nGiver: Almost there. Don't touch the ship yet. Go a little left of it.\nFollower: Left of the ship.\nGiver: Yes. Now, head left again towards the edge of the map.\nFollower: Left towards the edge.\nGiver: Good. Keep going left until you see washed stones or something similar.\nFollower: I don't see washed stones here. Is there another landmark?\nGiver: Wait, let me check. Ah, there's a washed stones area on your map?\nFollower: Yes, I do see washed stones further down.\nGiver: Okay, so go left past the ship, then turn up towards the washed stones.\nFollower: Okay, left of the ship. Turning up.\nGiver: Yes. Aim for the washed stones. Stop there.\nFollower: Stopped.\nGiver: Now turn left. We need to go to the finish line.\nFollower: Left.\nGiver: Go left until you can't go any further. That's the finish.\nFollower: Okay, heading left. I'm reaching the edge of the map.\nGiver: Perfect. You made it!\nFollower: Done! The route is drawn.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hello?"
+    ],
+    [
+      "Follower",
+      "Hi there."
+    ],
+    [
+      "Giver",
+      "Okay, let's do this. You have the map with the cross?"
+    ],
+    [
+      "Follower",
+      "Yes, right here. Where do we start?"
+    ],
+    [
+      "Giver",
+      "Start at the cross. You know your map only has the start, right?"
+    ],
+    [
+      "Follower",
+      "Yeah, just the cross."
+    ],
+    [
+      "Giver",
+      "Okay, look for a burnt forest near the start. It should be to your left."
+    ],
+    [
+      "Follower",
+      "Ah, I see a dark patch. Is that the one?"
+    ],
+    [
+      "Giver",
+      "Yes. Now, from the cross, head down and slightly left towards it. Don't go all the way to it, just pass close."
+    ],
+    [
+      "Follower",
+      "So, towards the left?"
+    ],
+    [
+      "Giver",
+      "Left of the start, but before you reach the forest. Keep going."
+    ],
+    [
+      "Follower",
+      "Okay... I'm moving towards the forest now."
+    ],
+    [
+      "Giver",
+      "Good. Now, once you're past the forest, turn right. We need to go up a bit."
+    ],
+    [
+      "Follower",
+      "Turning right. Up a little."
+    ],
+    [
+      "Giver",
+      "Keep going up until you see a small village in the distance on your left."
+    ],
+    [
+      "Follower",
+      "Ah, I see a little cluster of huts. That's it?"
+    ],
+    [
+      "Giver",
+      "Yes, that's the remote village. Stop there. Don't pass it."
+    ],
+    [
+      "Follower",
+      "Okay, stopping here."
+    ],
+    [
+      "Giver",
+      "Now turn left. We need to go towards a ravine, but not right into it."
+    ],
+    [
+      "Follower",
+      "Left... towards the ravine?"
+    ],
+    [
+      "Giver",
+      "Yes, the ravine is on your right side of the path. Aim for the area left of the ravine."
+    ],
+    [
+      "Follower",
+      "I'm turning left. It looks steep here."
+    ],
+    [
+      "Giver",
+      "That's right, keep walking left until you hit a pine grove."
+    ],
+    [
+      "Follower",
+      "There's a pine grove! Okay, stopping there."
+    ],
+    [
+      "Giver",
+      "Great. Now turn right. Go down towards the boat house."
+    ],
+    [
+      "Follower",
+      "Turning right. Heading down."
+    ],
+    [
+      "Giver",
+      "Wait, don't go straight to the boat house yet. There's a ravine coming up on your right first. Go up to it, then turn left."
+    ],
+    [
+      "Follower",
+      "Whoa, okay, I missed that ravine. So up to the ravine, then left?"
+    ],
+    [
+      "Giver",
+      "Yes. Aim for a spot that puts the ravine on your right."
+    ],
+    [
+      "Follower",
+      "Okay, so the ravine is there... turning left."
+    ],
+    [
+      "Giver",
+      "Good. Now, follow that path until you see the pine grove again. Wait, no, we already passed the pine grove."
+    ],
+    [
+      "Follower",
+      "Wait, we passed the pine grove already?"
+    ],
+    [
+      "Giver",
+      "Yes, that was the first pine grove. We are going down from the ravine towards a boat house."
+    ],
+    [
+      "Follower",
+      "Ah, okay. So the ravine is on the right, and we're heading down to the boat house."
+    ],
+    [
+      "Giver",
+      "Yes. Go down until you see the boat house on your right."
+    ],
+    [
+      "Follower",
+      "Okay, heading down. I see a boat house shape."
+    ],
+    [
+      "Giver",
+      "Yes, that's it. Stop right next to it."
+    ],
+    [
+      "Follower",
+      "Stopped."
+    ],
+    [
+      "Giver",
+      "Now, turn left. There's another boat house further down, but we don't go there yet. Go left towards the coast."
+    ],
+    [
+      "Follower",
+      "Left towards the water?"
+    ],
+    [
+      "Giver",
+      "Yes, towards the pebbled shore. But stop before the shore starts. We need to find a specific spot."
+    ],
+    [
+      "Follower",
+      "Okay, left... I see some pebbles."
+    ],
+    [
+      "Giver",
+      "Good. Now look at your map. Do you see a hidden thing somewhere?"
+    ],
+    [
+      "Follower",
+      "I see a little shelter. Is that it?"
+    ],
+    [
+      "Giver",
+      "No, that's not it. Look to your right. Do you see a pine grove?"
+    ],
+    [
+      "Follower",
+      "Yes, there's a pine grove to my right."
+    ],
+    [
+      "Giver",
+      "Okay, so you're at the boat house? No, wait. Let me rephrase."
+    ],
+    [
+      "Follower",
+      "Wait, I'm confused. Are we at the boat house or near the shore?"
+    ],
+    [
+      "Giver",
+      "We are leaving the boat house. Go left. You'll see a pine grove on your left."
+    ],
+    [
+      "Follower",
+      "Ah! The pine grove is on the left now. Okay, moving left."
+    ],
+    [
+      "Giver",
+      "Yes. Keep going until you see the boat house on your right again."
+    ],
+    [
+      "Follower",
+      "Okay, heading left. I see the boat house on my right."
+    ],
+    [
+      "Giver",
+      "Perfect. Stop there. Now, turn left. We need to go towards the coast again."
+    ],
+    [
+      "Follower",
+      "Left towards the coast."
+    ],
+    [
+      "Giver",
+      "Yes. Follow the shore. Stop near the crane bay."
+    ],
+    [
+      "Follower",
+      "Okay, following the shore. I see the crane bay."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right. There's a coconut palm nearby."
+    ],
+    [
+      "Follower",
+      "Turning right. I see a tall palm tree."
+    ],
+    [
+      "Giver",
+      "Yes, the coconut palm is on your right. Stop there."
+    ],
+    [
+      "Follower",
+      "Stopped."
+    ],
+    [
+      "Giver",
+      "Now, turn left. Go towards the beach again."
+    ],
+    [
+      "Follower",
+      "Left towards the beach."
+    ],
+    [
+      "Giver",
+      "Yes. Keep going until you see the pebbled shore. Stop just before it gets too crowded."
+    ],
+    [
+      "Follower",
+      "Okay, left. I see the pebbles."
+    ],
+    [
+      "Giver",
+      "Good. Now, look down. Is there a flag ship on your map?"
+    ],
+    [
+      "Follower",
+      "Yes! I see a ship shape at the bottom."
+    ],
+    [
+      "Giver",
+      "Great. We need to go down towards it. Turn right slightly, heading towards the ship."
+    ],
+    [
+      "Follower",
+      "Turning right. Heading down."
+    ],
+    [
+      "Giver",
+      "Yes. Go all the way down until you see the flag ship."
+    ],
+    [
+      "Follower",
+      "Okay, heading down. I see the ship!"
+    ],
+    [
+      "Giver",
+      "Almost there. Don't touch the ship yet. Go a little left of it."
+    ],
+    [
+      "Follower",
+      "Left of the ship."
+    ],
+    [
+      "Giver",
+      "Yes. Now, head left again towards the edge of the map."
+    ],
+    [
+      "Follower",
+      "Left towards the edge."
+    ],
+    [
+      "Giver",
+      "Good. Keep going left until you see washed stones or something similar."
+    ],
+    [
+      "Follower",
+      "I don't see washed stones here. Is there another landmark?"
+    ],
+    [
+      "Giver",
+      "Wait, let me check. Ah, there's a washed stones area on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I do see washed stones further down."
+    ],
+    [
+      "Giver",
+      "Okay, so go left past the ship, then turn up towards the washed stones."
+    ],
+    [
+      "Follower",
+      "Okay, left of the ship. Turning up."
+    ],
+    [
+      "Giver",
+      "Yes. Aim for the washed stones. Stop there."
+    ],
+    [
+      "Follower",
+      "Stopped."
+    ],
+    [
+      "Giver",
+      "Now turn left. We need to go to the finish line."
+    ],
+    [
+      "Follower",
+      "Left."
+    ],
+    [
+      "Giver",
+      "Go left until you can't go any further. That's the finish."
+    ],
+    [
+      "Follower",
+      "Okay, heading left. I'm reaching the edge of the map."
+    ],
+    [
+      "Giver",
+      "Perfect. You made it!"
+    ],
+    [
+      "Follower",
+      "Done! The route is drawn."
+    ]
+  ],
+  "n_turns": 88,
+  "ended_by": "single_generation"
+}

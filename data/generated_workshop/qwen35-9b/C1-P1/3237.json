@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2353106209,
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey! Yeah, hi.\nParticipantA: Hey there. You're calling about houses, right?\nParticipantB: Yeah, that's why I'm calling. How about you? Why did you get called?\nParticipantA: They said I'm a truck driver, so apparently I've got the home. I was just curious.\nParticipantB: Oh, cool. Me too, actually. I'm a server, so I'm in the same boat.\nParticipantA: Right? That's funny. I don't know if it's typical for us though.\nParticipantB: Yeah, me neither. My place is... kinda bare. Just the basics.\nParticipantA: Oh? What do you mean?\nParticipantB: Like, I have a bed and a couch, but the walls are painted by me last month. Pretty cheap stuff.\nParticipantA: Wait, really? I thought you had a full place.\nParticipantB: It's just a starter thing. You know, rent a room if I get too tight.\nParticipantA: Yeah, I get that. My place is actually a converted storage unit.\nParticipantB: What?! Oh, wow. That sounds super weird.\nParticipantA: It is, honestly. I drive my truck into the driveway, park, and go inside.\nParticipantB: Inside? Like, there's a door and a toilet?\nParticipantA: Yeah, I live there. It's got a kitchenette, but it's small.\nParticipantB: Okay, that's way different than my apartment. Mine is like a normal 2-bedroom.\nParticipantA: Yeah, mine's more like a closet with a bed in it.\nParticipantB: Haha, okay. So is yours typical? Like, do other drivers live there?\nParticipantA: Honestly, no. It's just something I do because it's cheap. Most folks want a real house.\nParticipantB: True. I think a real house is nice, but I can't afford one yet.\nParticipantA: Yeah, exactly. It's just me and my truck sometimes.\nParticipantB: Yeah, it is. My neighbor thinks I'm weird too, but he's nice.\nParticipantA: Oh, really? Did he say something mean?\nParticipantB: No, just asked why I don't have a garage. I said I park in the lot.\nParticipantA: Haha, that sounds familiar. I tell people that too, but they don't believe me.\nParticipantB: Yeah, they think it's a joke. But it's real.\nParticipantA: It is. I guess we're both just making do.\nParticipantB: Yeah, totally. My place is fine, just... not a dream home.\nParticipantA: Same here. It's functional.\nParticipantB: Yeah, that's the thing. It works for us.\nParticipantA: I think so too. Thanks for talking.\nParticipantB: Yeah, me too. Good chatting.\nParticipantA: Okay, bye.\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 654,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1263 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m1",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 213222961,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Okay, I'm looking at my map. We need to get from the start over here to the finish over there. Can you see the start?\nFollower: Yeah, I see the cross right in the middle-bottom.\nGiver: Good. So, leave the start and go straight up.\nFollower: Okay, going up.\nGiver: And when you get to the top edge of the map, turn left and go all the way to the left edge.\nFollower: Okay, left edge.\nGiver: Then turn down. Just keep going down until you hit the baboons.\nFollower: Wait, I don't see any baboons on my map.\nGiver: Hmm, what do you see there? Is there a mountain?\nFollower: Yeah, there's a mountain, but it looks like slate, not white. And it's a bit further right than where I was aiming.\nGiver: Oh, okay. Ignore that mountain. Look for the footbridge instead. That's a better landmark.\nFollower: Ah, there it is! The footbridge. Okay, I'm going down to it now.\nGiver: Okay, once you hit the footbridge, turn right and go up.\nFollower: Turning right. Going up.\nGiver: Keep going up until you hit the old temple. It's a big stone building on the right side.\nFollower: Okay, I see the temple. I'm heading towards it now.\nGiver: Don't go straight to it though. Go just past it, then turn left.\nFollower: Past it? How far?\nGiver: About halfway between the footbridge and the temple. Make a little jog to the left, then head back down.\nFollower: Okay, jogging left... down.\nGiver: Now you're heading down. Keep going until you hit the abandoned truck. It's near the bottom left quadrant.\nFollower: Wait, I see a truck, but it's lower down. And I don't see any baboons near it.\nGiver: That's strange. Are you sure you didn't pass the baboons?\nFollower: No, I definitely didn't see them. Maybe they aren't on my map?\nGiver: Maybe. Anyway, ignore the baboons. Just find the truck. Once you're next to it, turn right.\nFollower: Okay, found the truck. Turning right.\nGiver: Good. Now go down until you hit the white mountain. It should be on your left side.\nFollower: Wait, the mountain I see is on my right! And there's a white mountain way up near the top, but that's not near the truck.\nGiver: Oh, hold on. Which mountain are you looking for? The one near the top?\nFollower: The one near the top. But I'm near the truck now.\nGiver: Ah! I forgot to mention the pyramid. You have to pass the pyramid first. It's near the top right.\nFollower: Okay, I see a pyramid! I'm heading towards it now.\nGiver: Go past the pyramid, then go left. You'll hit the cobbled street.\nFollower: Okay, left. There's a cobbled street.\nGiver: Go down the cobbled street until you hit the remote village.\nFollower: Down to the village. Okay, I'm at the village.\nGiver: Turn right. Go up until you hit the poison stream. It's right next to the village.\nFollower: Okay, turning right. I see a stream next to the village.\nGiver: Go past the stream, then turn left.\nFollower: Turning left.\nGiver: Keep going left until you hit the lemon grove.\nFollower: Wait, I don't see a lemon grove. There's a banana tree though. Is that the same thing?\nGiver: Is it a banana tree? Oh, if there's a banana tree, you must have taken a wrong turn earlier.\nFollower: What?! I swear I didn't see a banana tree.\nGiver: Hmm, maybe you passed it thinking it was something else? Anyway, look for the slate mountain.\nFollower: Okay, I see a slate mountain. Where am I?\nGiver: You are just above the footbridge. Go straight up from there until you hit the slate mountain.\nFollower: Okay, going up. I see the slate mountain.\nGiver: Turn left at the mountain. Go left until you hit the white mountain.\nFollower: Okay, turning left. Now I see the white mountain.\nGiver: Good. Go down from the white mountain. You'll pass the abandoned truck on your right.\nFollower: Okay, going down. I see the truck on my right.\nGiver: Keep going down until you hit the baboons on your right.\nFollower: Wait, I don't see the baboons! They aren't on my map!\nGiver: Are you sure? Maybe you passed them?\nFollower: I definitely didn't pass them. I just see the truck and the mountain.\nGiver: Okay, forget the baboons. Go down until you hit the banana tree. That's where you should be.\nFollower: Okay, I see the banana tree! I didn't see that before. Okay, I'm at the banana tree.\nGiver: Good. Now turn left. Go left until you hit the footbridge.\nFollower: Okay, turning left. I see the footbridge.\nGiver: Go down from the footbridge. Don't go all the way down yet. Stop halfway.\nFollower: Okay, halfway down.\nGiver: Turn right. Go right until you hit the slate mountain.\nFollower: Okay, turning right. I see the slate mountain.\nGiver: Good. Now go down from the slate mountain.\nFollower: Going down.\nGiver: Keep going down until you hit the white mountain.\nFollower: Okay, I see the white mountain.\nGiver: Turn left. Go left until you hit the cobbled street.\nFollower: Okay, turning left. Cobbled street.\nGiver: Go down to the remote village.\nFollower: Down to the village.\nGiver: Turn right. Go to the poison stream.\nFollower: Right to the stream.\nGiver: Turn left. Go all the way left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom left corner.\nFollower: Down to the corner.\nGiver: Turn right. Go right until you hit the pyramid.\nFollower: Okay, turning right. I see the pyramid.\nGiver: Go down to the cobbled street.\nFollower: Down to the street.\nGiver: Turn right. Go to the remote village.\nFollower: Right to the village.\nGiver: Turn right. Go up to the poison stream.\nFollower: Up to the stream.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go all the way to the bottom.\nFollower: Down to the bottom.\nGiver: Turn right. Go right until you hit the lemon grove.\nFollower: Right to the grove.\nGiver: Turn right. Go down to the banana tree.\nFollower: Down to the banana tree.\nGiver: Turn right. Go right until you hit the footbridge.\nFollower: Right to the bridge.\nGiver: Turn right. Go up to the slate mountain.\nFollower: Up to the mountain.\nGiver: Turn left. Go left to the white mountain.\nFollower: Left to the mountain.\nGiver: Turn down. Go down to the abandoned truck.\nFollower: Down to the truck.\nGiver: Turn right. Go right to the baboons.\nFollower: Wait, I don't see the baboons again!\nGiver: Just ignore them. Go down to the banana tree.\nFollower: Down to the banana tree. Okay, I'm here.\nGiver: Turn left. Go left to the footbridge.\nFollower: Left to the bridge.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom edge.\nFollower: Down to the bottom.\nGiver: Turn right. Go right to the pyramid.\nFollower: Right to the pyramid.\nGiver: Go down to the cobbled street.\nFollower: Down to the street.\nGiver: Turn right. Go to the remote village.\nFollower: Right to the village.\nGiver: Turn right. Go up to the poison stream.\nFollower: Up to the stream.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom.\nFollower: Down to the bottom.\nGiver: Turn right. Go right to the lemon grove.\nFollower: Right to the grove.\nGiver: Turn right. Go down to the banana tree.\nFollower: Down to the banana tree.\nGiver: Turn right. Go right to the footbridge.\nFollower: Right to the bridge.\nGiver: Turn right. Go up to the slate mountain.\nFollower: Up to the mountain.\nGiver: Turn left. Go left to the white mountain.\nFollower: Left to the mountain.\nGiver: Turn down. Go down to the abandoned truck.\nFollower: Down to the truck.\nGiver: Turn right. Go right to the baboons.\nFollower: Okay, I see the baboons now!\nGiver: Great. Go down to the banana tree.\nFollower: Down to the banana tree.\nGiver: Turn left. Go left to the footbridge.\nFollower: Left to the bridge.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom.\nFollower: Down to the bottom.\nGiver: Turn right. Go right to the pyramid.\nFollower: Right to the pyramid.\nGiver: Go down to the cobbled street.\nFollower: Down to the street.\nGiver: Turn right. Go to the remote village.\nFollower: Right to the village.\nGiver: Turn right. Go up to the poison stream.\nFollower: Up to the stream.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom.\nFollower: Down to the bottom.\nGiver: Turn right. Go right to the lemon grove.\nFollower: Right to the grove.\nGiver: Turn right. Go down to the banana tree.\nFollower: Down to the banana tree.\nGiver: Turn right. Go right to the footbridge.\nFollower: Right to the bridge.\nGiver: Turn right. Go up to the slate mountain.\nFollower: Up to the mountain.\nGiver: Turn left. Go left to the white mountain.\nFollower: Left to the mountain.\nGiver: Turn down. Go down to the abandoned truck.\nFollower: Down to the truck.\nGiver: Turn right. Go right to the baboons.\nFollower: Okay, I see the baboons now!\nGiver: Great. Go down to the banana tree.\nFollower: Down to the banana tree.\nGiver: Turn left. Go left to the footbridge.\nFollower: Left to the bridge.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom.\nFollower: Down to the bottom.\nGiver: Turn right. Go right to the pyramid.\nFollower: Right to the pyramid.\nGiver: Go down to the cobbled street.\nFollower: Down to the street.\nGiver: Turn right. Go to the remote village.\nFollower: Right to the village.\nGiver: Turn right. Go up to the poison stream.\nFollower: Up to the stream.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom.\nFollower: Down to the bottom.\nGiver: Turn right. Go right to the lemon grove.\nFollower: Right to the grove.\nGiver: Turn right. Go down to the banana tree.\nFollower: Down to the banana tree.\nGiver: Turn right. Go right to the footbridge.\nFollower: Right to the bridge.\nGiver: Turn right. Go up to the slate mountain.\nFollower: Up to the mountain.\nGiver: Turn left. Go left to the white mountain.\nFollower: Left to the mountain.\nGiver: Turn down. Go down to the abandoned truck.\nFollower: Down to the truck.\nGiver: Turn right. Go right to the baboons.\nFollower: Okay, I see the baboons now!\nGiver: Great. Go down to the banana tree.\nFollower: Down to the banana tree.\nGiver: Turn left. Go left to the footbridge.\nFollower: Left to the bridge.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom.\nFollower: Down to the bottom.\nGiver: Turn right. Go right to the pyramid.\nFollower: Right to the pyramid.\nGiver: Go down to the cobbled street.\nFollower: Down to the street.\nGiver: Turn right. Go to the remote village.\nFollower: Right to the village.\nGiver: Turn right. Go up to the poison stream.\nFollower: Up to the stream.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom.\nFollower: Down to the bottom.\nGiver: Turn right. Go right to the lemon grove.\nFollower: Right to the grove.\nGiver: Turn right. Go down to the banana tree.\nFollower: Down to the banana tree.\nGiver: Turn right. Go right to the footbridge.\nFollower: Right to the bridge.\nGiver: Turn right. Go up to the slate mountain.\nFollower: Up to the mountain.\nGiver: Turn left. Go left to the white mountain.\nFollower: Left to the mountain.\nGiver: Turn down. Go down to the abandoned truck.\nFollower: Down to the truck.\nGiver: Turn right. Go right to the baboons.\nFollower: Okay, I see the baboons now!\nGiver: Great. Go down to the banana tree.\nFollower: Down to the banana tree.\nGiver: Turn left. Go left to the footbridge.\nFollower: Left to the bridge.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom.\nFollower: Down to the bottom.\nGiver: Turn right. Go right to the pyramid.\nFollower: Right to the pyramid.\nGiver: Go down to the cobbled street.\nFollower: Down to the street.\nGiver: Turn right. Go to the remote village.\nFollower: Right to the village.\nGiver: Turn right. Go up to the poison stream.\nFollower: Up to the stream.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom.\nFollower: Down to the bottom.\nGiver: Turn right. Go right to the lemon grove.\nFollower: Right to the grove.\nGiver: Turn right. Go down to the banana tree.\nFollower: Down to the banana tree.\nGiver: Turn right. Go right to the footbridge.\nFollower: Right to the bridge.\nGiver: Turn right. Go up to the slate mountain.\nFollower: Up to the mountain.\nGiver: Turn left. Go left to the white mountain.\nFollower: Left to the mountain.\nGiver: Turn down. Go down to the abandoned truck.\nFollower: Down to the truck.\nGiver: Turn right. Go right to the baboons.\nFollower: Okay, I see the baboons now!\nGiver: Great. Go down to the banana tree.\nFollower: Down to the banana tree.\nGiver: Turn left. Go left to the footbridge.\nFollower: Left to the bridge.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom.\nFollower: Down to the bottom.\nGiver: Turn right. Go right to the pyramid.\nFollower: Right to the pyramid.\nGiver: Go down to the cobbled street.\nFollower: Down to the street.\nGiver: Turn right. Go to the remote village.\nFollower: Right to the village.\nGiver: Turn right. Go up to the poison stream.\nFollower: Up to the stream.\nGiver: Turn left. Go left to the edge.\nFollower: Left to the edge.\nGiver: Turn down. Go down to the bottom.\nFollower: Down to the bottom.\nGiver: Turn right. Go right to the lemon grove.\nFollower: Right to the grove.\nGiver: Turn right. Go down to the banana tree.\nFollower: Down to the banana tree.\nGiver: Turn right. Go right to the footbridge.\nFollower: Right to the bridge.\nGiver: Turn right. Go up to the slate mountain.\nFollower: Up to the mountain.\nGiver: Turn left. Go left to the white mountain.\nFollower: Left to the mountain.\nGiver: Turn down. Go down to the abandoned truck.\nFollower: Down to the truck.\nGiver: Turn right. Go right to the baboons.\nFollower: Okay, I see the baboons now!",
+  "hit_token_cap": true,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Okay, I'm looking at my map. We need to get from the start over here to the finish over there. Can you see the start?"
+    ],
+    [
+      "Follower",
+      "Yeah, I see the cross right in the middle-bottom."
+    ],
+    [
+      "Giver",
+      "Good. So, leave the start and go straight up."
+    ],
+    [
+      "Follower",
+      "Okay, going up."
+    ],
+    [
+      "Giver",
+      "And when you get to the top edge of the map, turn left and go all the way to the left edge."
+    ],
+    [
+      "Follower",
+      "Okay, left edge."
+    ],
+    [
+      "Giver",
+      "Then turn down. Just keep going down until you hit the baboons."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see any baboons on my map."
+    ],
+    [
+      "Giver",
+      "Hmm, what do you see there? Is there a mountain?"
+    ],
+    [
+      "Follower",
+      "Yeah, there's a mountain, but it looks like slate, not white. And it's a bit further right than where I was aiming."
+    ],
+    [
+      "Giver",
+      "Oh, okay. Ignore that mountain. Look for the footbridge instead. That's a better landmark."
+    ],
+    [
+      "Follower",
+      "Ah, there it is! The footbridge. Okay, I'm going down to it now."
+    ],
+    [
+      "Giver",
+      "Okay, once you hit the footbridge, turn right and go up."
+    ],
+    [
+      "Follower",
+      "Turning right. Going up."
+    ],
+    [
+      "Giver",
+      "Keep going up until you hit the old temple. It's a big stone building on the right side."
+    ],
+    [
+      "Follower",
+      "Okay, I see the temple. I'm heading towards it now."
+    ],
+    [
+      "Giver",
+      "Don't go straight to it though. Go just past it, then turn left."
+    ],
+    [
+      "Follower",
+      "Past it? How far?"
+    ],
+    [
+      "Giver",
+      "About halfway between the footbridge and the temple. Make a little jog to the left, then head back down."
+    ],
+    [
+      "Follower",
+      "Okay, jogging left... down."
+    ],
+    [
+      "Giver",
+      "Now you're heading down. Keep going until you hit the abandoned truck. It's near the bottom left quadrant."
+    ],
+    [
+      "Follower",
+      "Wait, I see a truck, but it's lower down. And I don't see any baboons near it."
+    ],
+    [
+      "Giver",
+      "That's strange. Are you sure you didn't pass the baboons?"
+    ],
+    [
+      "Follower",
+      "No, I definitely didn't see them. Maybe they aren't on my map?"
+    ],
+    [
+      "Giver",
+      "Maybe. Anyway, ignore the baboons. Just find the truck. Once you're next to it, turn right."
+    ],
+    [
+      "Follower",
+      "Okay, found the truck. Turning right."
+    ],
+    [
+      "Giver",
+      "Good. Now go down until you hit the white mountain. It should be on your left side."
+    ],
+    [
+      "Follower",
+      "Wait, the mountain I see is on my right! And there's a white mountain way up near the top, but that's not near the truck."
+    ],
+    [
+      "Giver",
+      "Oh, hold on. Which mountain are you looking for? The one near the top?"
+    ],
+    [
+      "Follower",
+      "The one near the top. But I'm near the truck now."
+    ],
+    [
+      "Giver",
+      "Ah! I forgot to mention the pyramid. You have to pass the pyramid first. It's near the top right."
+    ],
+    [
+      "Follower",
+      "Okay, I see a pyramid! I'm heading towards it now."
+    ],
+    [
+      "Giver",
+      "Go past the pyramid, then go left. You'll hit the cobbled street."
+    ],
+    [
+      "Follower",
+      "Okay, left. There's a cobbled street."
+    ],
+    [
+      "Giver",
+      "Go down the cobbled street until you hit the remote village."
+    ],
+    [
+      "Follower",
+      "Down to the village. Okay, I'm at the village."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up until you hit the poison stream. It's right next to the village."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. I see a stream next to the village."
+    ],
+    [
+      "Giver",
+      "Go past the stream, then turn left."
+    ],
+    [
+      "Follower",
+      "Turning left."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the lemon grove."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see a lemon grove. There's a banana tree though. Is that the same thing?"
+    ],
+    [
+      "Giver",
+      "Is it a banana tree? Oh, if there's a banana tree, you must have taken a wrong turn earlier."
+    ],
+    [
+      "Follower",
+      "What?! I swear I didn't see a banana tree."
+    ],
+    [
+      "Giver",
+      "Hmm, maybe you passed it thinking it was something else? Anyway, look for the slate mountain."
+    ],
+    [
+      "Follower",
+      "Okay, I see a slate mountain. Where am I?"
+    ],
+    [
+      "Giver",
+      "You are just above the footbridge. Go straight up from there until you hit the slate mountain."
+    ],
+    [
+      "Follower",
+      "Okay, going up. I see the slate mountain."
+    ],
+    [
+      "Giver",
+      "Turn left at the mountain. Go left until you hit the white mountain."
+    ],
+    [
+      "Follower",
+      "Okay, turning left. Now I see the white mountain."
+    ],
+    [
+      "Giver",
+      "Good. Go down from the white mountain. You'll pass the abandoned truck on your right."
+    ],
+    [
+      "Follower",
+      "Okay, going down. I see the truck on my right."
+    ],
+    [
+      "Giver",
+      "Keep going down until you hit the baboons on your right."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see the baboons! They aren't on my map!"
+    ],
+    [
+      "Giver",
+      "Are you sure? Maybe you passed them?"
+    ],
+    [
+      "Follower",
+      "I definitely didn't pass them. I just see the truck and the mountain."
+    ],
+    [
+      "Giver",
+      "Okay, forget the baboons. Go down until you hit the banana tree. That's where you should be."
+    ],
+    [
+      "Follower",
+      "Okay, I see the banana tree! I didn't see that before. Okay, I'm at the banana tree."
+    ],
+    [
+      "Giver",
+      "Good. Now turn left. Go left until you hit the footbridge."
+    ],
+    [
+      "Follower",
+      "Okay, turning left. I see the footbridge."
+    ],
+    [
+      "Giver",
+      "Go down from the footbridge. Don't go all the way down yet. Stop halfway."
+    ],
+    [
+      "Follower",
+      "Okay, halfway down."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right until you hit the slate mountain."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. I see the slate mountain."
+    ],
+    [
+      "Giver",
+      "Good. Now go down from the slate mountain."
+    ],
+    [
+      "Follower",
+      "Going down."
+    ],
+    [
+      "Giver",
+      "Keep going down until you hit the white mountain."
+    ],
+    [
+      "Follower",
+      "Okay, I see the white mountain."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left until you hit the cobbled street."
+    ],
+    [
+      "Follower",
+      "Okay, turning left. Cobbled street."
+    ],
+    [
+      "Giver",
+      "Go down to the remote village."
+    ],
+    [
+      "Follower",
+      "Down to the village."
+    ],
+    [
+      "Giver",
+      "Turn right. Go to the poison stream."
+    ],
+    [
+      "Follower",
+      "Right to the stream."
+    ],
+    [
+      "Giver",
+      "Turn left. Go all the way left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom left corner."
+    ],
+    [
+      "Follower",
+      "Down to the corner."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right until you hit the pyramid."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. I see the pyramid."
+    ],
+    [
+      "Giver",
+      "Go down to the cobbled street."
+    ],
+    [
+      "Follower",
+      "Down to the street."
+    ],
+    [
+      "Giver",
+      "Turn right. Go to the remote village."
+    ],
+    [
+      "Follower",
+      "Right to the village."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the poison stream."
+    ],
+    [
+      "Follower",
+      "Up to the stream."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go all the way to the bottom."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right until you hit the lemon grove."
+    ],
+    [
+      "Follower",
+      "Right to the grove."
+    ],
+    [
+      "Giver",
+      "Turn right. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right until you hit the footbridge."
+    ],
+    [
+      "Follower",
+      "Right to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the slate mountain."
+    ],
+    [
+      "Follower",
+      "Up to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the white mountain."
+    ],
+    [
+      "Follower",
+      "Left to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the abandoned truck."
+    ],
+    [
+      "Follower",
+      "Down to the truck."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the baboons."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see the baboons again!"
+    ],
+    [
+      "Giver",
+      "Just ignore them. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree. Okay, I'm here."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the footbridge."
+    ],
+    [
+      "Follower",
+      "Left to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom edge."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the pyramid."
+    ],
+    [
+      "Follower",
+      "Right to the pyramid."
+    ],
+    [
+      "Giver",
+      "Go down to the cobbled street."
+    ],
+    [
+      "Follower",
+      "Down to the street."
+    ],
+    [
+      "Giver",
+      "Turn right. Go to the remote village."
+    ],
+    [
+      "Follower",
+      "Right to the village."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the poison stream."
+    ],
+    [
+      "Follower",
+      "Up to the stream."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the lemon grove."
+    ],
+    [
+      "Follower",
+      "Right to the grove."
+    ],
+    [
+      "Giver",
+      "Turn right. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the footbridge."
+    ],
+    [
+      "Follower",
+      "Right to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the slate mountain."
+    ],
+    [
+      "Follower",
+      "Up to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the white mountain."
+    ],
+    [
+      "Follower",
+      "Left to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the abandoned truck."
+    ],
+    [
+      "Follower",
+      "Down to the truck."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the baboons."
+    ],
+    [
+      "Follower",
+      "Okay, I see the baboons now!"
+    ],
+    [
+      "Giver",
+      "Great. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the footbridge."
+    ],
+    [
+      "Follower",
+      "Left to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the pyramid."
+    ],
+    [
+      "Follower",
+      "Right to the pyramid."
+    ],
+    [
+      "Giver",
+      "Go down to the cobbled street."
+    ],
+    [
+      "Follower",
+      "Down to the street."
+    ],
+    [
+      "Giver",
+      "Turn right. Go to the remote village."
+    ],
+    [
+      "Follower",
+      "Right to the village."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the poison stream."
+    ],
+    [
+      "Follower",
+      "Up to the stream."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the lemon grove."
+    ],
+    [
+      "Follower",
+      "Right to the grove."
+    ],
+    [
+      "Giver",
+      "Turn right. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the footbridge."
+    ],
+    [
+      "Follower",
+      "Right to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the slate mountain."
+    ],
+    [
+      "Follower",
+      "Up to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the white mountain."
+    ],
+    [
+      "Follower",
+      "Left to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the abandoned truck."
+    ],
+    [
+      "Follower",
+      "Down to the truck."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the baboons."
+    ],
+    [
+      "Follower",
+      "Okay, I see the baboons now!"
+    ],
+    [
+      "Giver",
+      "Great. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the footbridge."
+    ],
+    [
+      "Follower",
+      "Left to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the pyramid."
+    ],
+    [
+      "Follower",
+      "Right to the pyramid."
+    ],
+    [
+      "Giver",
+      "Go down to the cobbled street."
+    ],
+    [
+      "Follower",
+      "Down to the street."
+    ],
+    [
+      "Giver",
+      "Turn right. Go to the remote village."
+    ],
+    [
+      "Follower",
+      "Right to the village."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the poison stream."
+    ],
+    [
+      "Follower",
+      "Up to the stream."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the lemon grove."
+    ],
+    [
+      "Follower",
+      "Right to the grove."
+    ],
+    [
+      "Giver",
+      "Turn right. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the footbridge."
+    ],
+    [
+      "Follower",
+      "Right to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the slate mountain."
+    ],
+    [
+      "Follower",
+      "Up to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the white mountain."
+    ],
+    [
+      "Follower",
+      "Left to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the abandoned truck."
+    ],
+    [
+      "Follower",
+      "Down to the truck."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the baboons."
+    ],
+    [
+      "Follower",
+      "Okay, I see the baboons now!"
+    ],
+    [
+      "Giver",
+      "Great. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the footbridge."
+    ],
+    [
+      "Follower",
+      "Left to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the pyramid."
+    ],
+    [
+      "Follower",
+      "Right to the pyramid."
+    ],
+    [
+      "Giver",
+      "Go down to the cobbled street."
+    ],
+    [
+      "Follower",
+      "Down to the street."
+    ],
+    [
+      "Giver",
+      "Turn right. Go to the remote village."
+    ],
+    [
+      "Follower",
+      "Right to the village."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the poison stream."
+    ],
+    [
+      "Follower",
+      "Up to the stream."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the lemon grove."
+    ],
+    [
+      "Follower",
+      "Right to the grove."
+    ],
+    [
+      "Giver",
+      "Turn right. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the footbridge."
+    ],
+    [
+      "Follower",
+      "Right to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the slate mountain."
+    ],
+    [
+      "Follower",
+      "Up to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the white mountain."
+    ],
+    [
+      "Follower",
+      "Left to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the abandoned truck."
+    ],
+    [
+      "Follower",
+      "Down to the truck."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the baboons."
+    ],
+    [
+      "Follower",
+      "Okay, I see the baboons now!"
+    ],
+    [
+      "Giver",
+      "Great. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the footbridge."
+    ],
+    [
+      "Follower",
+      "Left to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the pyramid."
+    ],
+    [
+      "Follower",
+      "Right to the pyramid."
+    ],
+    [
+      "Giver",
+      "Go down to the cobbled street."
+    ],
+    [
+      "Follower",
+      "Down to the street."
+    ],
+    [
+      "Giver",
+      "Turn right. Go to the remote village."
+    ],
+    [
+      "Follower",
+      "Right to the village."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the poison stream."
+    ],
+    [
+      "Follower",
+      "Up to the stream."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the lemon grove."
+    ],
+    [
+      "Follower",
+      "Right to the grove."
+    ],
+    [
+      "Giver",
+      "Turn right. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the footbridge."
+    ],
+    [
+      "Follower",
+      "Right to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the slate mountain."
+    ],
+    [
+      "Follower",
+      "Up to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the white mountain."
+    ],
+    [
+      "Follower",
+      "Left to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the abandoned truck."
+    ],
+    [
+      "Follower",
+      "Down to the truck."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the baboons."
+    ],
+    [
+      "Follower",
+      "Okay, I see the baboons now!"
+    ],
+    [
+      "Giver",
+      "Great. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the footbridge."
+    ],
+    [
+      "Follower",
+      "Left to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the pyramid."
+    ],
+    [
+      "Follower",
+      "Right to the pyramid."
+    ],
+    [
+      "Giver",
+      "Go down to the cobbled street."
+    ],
+    [
+      "Follower",
+      "Down to the street."
+    ],
+    [
+      "Giver",
+      "Turn right. Go to the remote village."
+    ],
+    [
+      "Follower",
+      "Right to the village."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the poison stream."
+    ],
+    [
+      "Follower",
+      "Up to the stream."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the edge."
+    ],
+    [
+      "Follower",
+      "Left to the edge."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the bottom."
+    ],
+    [
+      "Follower",
+      "Down to the bottom."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the lemon grove."
+    ],
+    [
+      "Follower",
+      "Right to the grove."
+    ],
+    [
+      "Giver",
+      "Turn right. Go down to the banana tree."
+    ],
+    [
+      "Follower",
+      "Down to the banana tree."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the footbridge."
+    ],
+    [
+      "Follower",
+      "Right to the bridge."
+    ],
+    [
+      "Giver",
+      "Turn right. Go up to the slate mountain."
+    ],
+    [
+      "Follower",
+      "Up to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn left. Go left to the white mountain."
+    ],
+    [
+      "Follower",
+      "Left to the mountain."
+    ],
+    [
+      "Giver",
+      "Turn down. Go down to the abandoned truck."
+    ],
+    [
+      "Follower",
+      "Down to the truck."
+    ],
+    [
+      "Giver",
+      "Turn right. Go right to the baboons."
+    ],
+    [
+      "Follower",
+      "Okay, I see the baboons now!"
+    ]
+  ],
+  "n_turns": 308,
+  "ended_by": "single_generation"
+}

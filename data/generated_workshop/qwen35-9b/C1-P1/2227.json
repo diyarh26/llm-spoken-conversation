@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2691222291,
+  "conversation_no": 2227,
+  "topic": "Tv Programs",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER'S FAVORITE TV SHOWS ARE AND WHY.  ARE YOUR INTERESTS SIMILAR OR DIFFERENT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 16,
+    "education": "a high-school education",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Yeah, hi. Who's this?\nParticipantA: Just a random caller. I got the number from the list. Are you open to chatting?\nParticipantB: Sure, why not. What's up?\nParticipantA: So, I was told to ask about TV. What are your favorite shows?\nParticipantB: Hmm, that's easy. I like \"Stranger Things\" a lot. The kids are cool, you know?\nParticipantA: Stranger Things? Okay. I don't really get into that stuff. My favorite is probably \"The Office\" reruns.\nParticipantB: Really? Why that one? It's kind of old.\nParticipantA: Well, it's just funny in a real way. People act awkward, but it's true. Makes me laugh when I'm working the line.\nParticipantB: Oh, I've seen \"The Office.\" I think it's a bit much sometimes. Like, the crying scenes get too sad for me.\nParticipantA: Oh? Why's that? It's not that deep.\nParticipantB: Yeah, it is. Last year my cousin broke up with her girlfriend on a bus, just like in one episode. I felt kinda sick watching it.\nParticipantA: Oh wow. That's personal. I guess I'm just numb to it now. Been watching it for years, maybe too long.\nParticipantB: Yeah, I'm not sure about that. Some stuff hits different. Like \"Yellowjackets.\"\nParticipantA: \"Yellowjackets\"? I haven't heard of that. Is it scary?\nParticipantB: Kinda. It's about this girl's team at a factory, wait no, a soccer team, but they end up in the woods. Survivors.\nParticipantA: Oh, right. I heard something about that. It sounds intense. I prefer lighter stuff.\nParticipantB: Yeah, I get that. I like \"Brooklyn Nine-Nine.\" Everyone's just being themselves, no drama.\nParticipantA: Yeah, that's my speed. Happy people, funny jokes. Nothing too heavy.\nParticipantB: See, I like that too, but sometimes I just want to watch something real. Like the show about the factory workers?\nParticipantA: Oh, \"The Job\"? Not really. I'm a supervisor there, to be honest. Hard to watch yourself on TV sometimes.\nParticipantB: Really? You work in a factory? That's cool. I'm a supervisor too, actually.\nParticipantA: Oh, really? Same thing? I guess that makes sense then.\nParticipantB: Yeah. But I don't like the show that much. My boss there, he's kind of like the guy in the show, but nicer.\nParticipantA: Hmm. I thought the show was mostly fake. People make it up a lot.\nParticipantB: Maybe. But my experience is mixed. Some days it's great, some days it's just... tough.\nParticipantA: Yeah, I feel that. Sometimes the production line is smooth, sometimes it's chaos. Hard to keep up a perfect story.\nParticipantB: Exactly. That's why I like the lighter shows more. Gives you a break.\nParticipantA: True. Just want to forget the stress for an hour.\nParticipantB: Same here. So, are our interests totally different?\nParticipantA: A little. I like the office stuff, you like the mystery/survival stuff mostly.\nParticipantB: Yeah, seems like we have different vibes. Ours is real life, theirs is... fantasy.\nParticipantA: Yeah, something like that. Okay, I think that's all I needed.\nParticipantB: Sure, thanks for calling. It was nice talking.\nParticipantA: Yep, you too. Good luck with your shifts.\nParticipantB: Thanks. Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 832,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

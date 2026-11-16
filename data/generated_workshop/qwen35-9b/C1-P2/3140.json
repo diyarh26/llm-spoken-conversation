@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 120558782,
+  "conversation_no": 3140,
+  "topic": "Social Change",
+  "sb_prompt": "DISCUSS RECENT SOCIAL CHANGES.  HOW IS LIFE IN AMERICA DIFFERENT TODAY COMPARED TO LIVING TEN YEARS AGO?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "a college degree",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a farmer",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Sorry, did I get you?\nParticipantB: Yeah, yeah, absolutely. Who is this?\nParticipantA: Just a random person. I'm supposed to be talking to strangers about social change.\nParticipantB: Oh, wow. Okay. I'm gonna go off the record a bit, but... yeah, I'd love to hear about it.\nParticipantA: Cool. My name's Sarah, I'm a plumber, 33 years old.\nParticipantB: Nice to meet you. I'm Mike, I'm 26, I'm a farmer.\nParticipantA: Oh, wow, a farmer. That's cool.\nParticipantB: Thanks, yeah. It's... it's hard work.\nParticipantA: I know. I've got a degree too, actually, but ended up working with pipes.\nParticipantB: Ah, got it.\nParticipantA: So, what's been different for you in the last ten years?\nParticipantB: Well, honestly? A lot of things are weird. Like, there's less help on the farm. Ten years ago, my dad had three guys working alongside him. Now, it's just me and a guy from the city who comes once a week.\nParticipantA: That's rough.\nParticipantB: Yeah, it is. The equipment is better, sure, but the people... they're gone.\nParticipantA: Hmm. I guess my field is similar in a way. I've seen more immigrants coming into the plumbing trade lately.\nParticipantB: Really? Like, more of them?\nParticipantA: Yeah. At first, I thought, \"Great, more workers.\" But then you start working with them, and it's not always the same. Sometimes it's really nice, you know? They work harder than anyone I've ever met.\nParticipantB: That's good to hear.\nParticipantA: But other times... well, let me tell you a story.\nParticipantB: Sure, I'm listening.\nParticipantA: There was this guy who came to work for me a few years back. He was great at fixing pipes, really good. But he wouldn't let me tell my wife where he lived. He wouldn't let me call him on his days off. I felt like I was losing a friend, you know?\nParticipantB: Oh, that's tough.\nParticipantA: Yeah. And then he disappeared. Just... gone. Nobody knew where he went. I had to hire another guy, who was local, and we had to learn everything over again. It was frustrating, honestly.\nParticipantB: I see. That's... that's a different kind of change. I don't have that issue on the farm, but I worry about it. My neighbor, his son, he left town ten years ago. Said the farm was too much work for one guy. Now his house is empty.\nParticipantA: Yeah, that's what I've been hearing too. People moving away or leaving.\nParticipantB: It's scary, you know? You're here, but you feel alone.\nParticipantA: I get that. Sometimes I feel like I'm just keeping the pipes running, but not really building anything.\nParticipantB: Well, you're building a life, I think. That's something.\nParticipantA: Maybe. But yeah, it feels different than when I started ten years ago. Back then, everyone knew everyone.\nParticipantB: Yeah. I remember when I was a kid, my dad knew the mayor. Now, the mayor doesn't even come to the county fair.\nParticipantA: Oh, man. That's sad.\nParticipantB: Yeah. It's strange.\nParticipantA: Well, I'm glad I could talk to you about it.\nParticipantB: Me too. Thanks for calling.\nParticipantA: Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 832,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

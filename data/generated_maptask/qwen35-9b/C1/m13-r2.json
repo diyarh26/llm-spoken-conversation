@@ -1,0 +1,303 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m13",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 4212374405,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Right, we're starting here at the cross. What's right next to it?\nFollower: Oh, that's the extinct volcano. It's just below me, pretty much dead center.\nGiver: Okay, good. Ignore the volcano for now. Look to your left, slightly behind it. See that settlement with the huts?\nFollower: Yes, the tribal settlement. I see it on the left edge.\nGiver: Perfect. From the cross, you need to go left towards the settlement, but don't go all the way there yet. Just move left and up a little bit, towards the edge of the rocks.\nFollower: Okay, I'm moving left and up. I'm heading towards the settlement now.\nGiver: Don't go right into the settlement. Stop when you hit the edge of the white line that marks the beach on your left.\nFollower: Ah, I see. Okay, so I stop at the edge of the beach? That seems pretty far left.\nGiver: Yeah, you're close to the edge of the tribal settlement now. Now, turn right sharply. You want to go back towards the center, but stay on the left side of the extinct volcano.\nFollower: Okay, turning right. I'm coming back towards the volcano.\nGiver: Don't touch the volcano. Pass it on the left. You're going up now, towards the top of the map.\nFollower: Okay, passing the volcano on the left. Moving up.\nGiver: Keep going up until you hit the submerged rocks. You'll know you're close when you see the rocks poking up in the water.\nFollower: Okay, I see the submerged rocks now. I'm right next to them.\nGiver: Great. Now, turn left sharply. You're going to head straight for the tribal settlement again.\nFollower: Turning left. Heading for the settlement.\nGiver: Go as far left as you can without hitting the settlement. You want to graze the edge of it.\nFollower: Okay, I'm hugging the edge of the settlement now. I feel like I'm almost there.\nGiver: Stop just before you actually enter the settlement. Now, turn right and start climbing up. You're going towards the slate mountain.\nFollower: Okay, turning right. Climbing up. Where is the slate mountain? Is it near the top?\nGiver: Yeah, it's way up near the top edge, almost in the middle. Keep going up.\nFollower: Okay, heading for the top. I see the slate mountain now.\nGiver: Don't go right to the mountain yet. Pass it on the right side. Keep going up and left.\nFollower: Passing the mountain on the right. Moving up and left.\nGiver: Okay, now you're near the golden beach at the top. You're going to go down towards that beach.\nFollower: Going down towards the beach. Okay, I see the golden beach at the top.\nGiver: Go right up to the edge of the beach.\nFollower: Okay, touching the beach now.\nGiver: Now, turn left and go down. You're going towards the tribal settlement again.\nFollower: Turning left. Going down towards the settlement.\nGiver: Go as far left as possible. You're going to pass right next to the pelicans.\nFollower: Okay, going left. I see the pelicans on the right side of my path.\nGiver: Yes, keep them on your right. Go down towards the rope bridge.\nFollower: Okay, heading for the rope bridge. It's on my left now.\nGiver: Wait, the rope bridge is on the left? No, it's on the right of the settlement. Be careful, don't cross the settlement. Go towards the rope bridge.\nFollower: Okay, careful. I'm going towards the rope bridge. It's on the left side of the map now.\nGiver: No, the rope bridge is on the right of the settlement. I'm confused. You're on the left side.\nFollower: Oh, I see. I thought the bridge was on the left. Okay, turning right to find the bridge.\nGiver: There it is. The rope bridge. Okay, go up to the bridge.\nFollower: Okay, reaching the rope bridge.\nGiver: Cross the bridge mentally, but stay on your map. Now, go right, towards the collapsed shelter.\nFollower: Going right. I see the collapsed shelter.\nGiver: Don't go into the shelter. Pass it on the left. You're going up towards the saxon barn.\nFollower: Passing the shelter on the left. Heading for the saxon barn.\nGiver: The barn is on the right. Keep going up. You'll pass the barn on your right.\nFollower: Okay, passing the barn on the right.\nGiver: Now, turn left. You're going down towards the secret valley.\nFollower: Turning left. Going down towards the valley.\nGiver: Go towards the valley, but don't go all the way in. Stay on the edge.\nFollower: Okay, at the edge of the secret valley.\nGiver: Now, turn right and go up. You're going towards the golden beach at the top again.\nFollower: Going up towards the top beach.\nGiver: Go up to the beach.\nFollower: At the beach now.\nGiver: Turn left. Go towards the white mountain.\nFollower: Going left towards the white mountain.\nGiver: Pass the mountain on the right. You're going down towards the secret valley again.\nFollower: Passing the mountain on the right. Going down to the valley.\nGiver: Almost there. You're right next to the secret valley. Now, turn right and go up.\nFollower: Turning right. Going up.\nGiver: Keep going up. You're almost at the finish line. Can you see the cross at the top?\nFollower: Oh! There it is! The finish cross!\nGiver: Yes, that's it. Mark the cross as the finish.\nFollower: Done. I've drawn the whole route.\nGiver: Great job. Did you miss anything?\nFollower: No, I think I got it all. From start to finish, passing everything correctly.\nGiver: Perfect. We're done.\nFollower: Okay, call ended.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, we're starting here at the cross. What's right next to it?"
+    ],
+    [
+      "Follower",
+      "Oh, that's the extinct volcano. It's just below me, pretty much dead center."
+    ],
+    [
+      "Giver",
+      "Okay, good. Ignore the volcano for now. Look to your left, slightly behind it. See that settlement with the huts?"
+    ],
+    [
+      "Follower",
+      "Yes, the tribal settlement. I see it on the left edge."
+    ],
+    [
+      "Giver",
+      "Perfect. From the cross, you need to go left towards the settlement, but don't go all the way there yet. Just move left and up a little bit, towards the edge of the rocks."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving left and up. I'm heading towards the settlement now."
+    ],
+    [
+      "Giver",
+      "Don't go right into the settlement. Stop when you hit the edge of the white line that marks the beach on your left."
+    ],
+    [
+      "Follower",
+      "Ah, I see. Okay, so I stop at the edge of the beach? That seems pretty far left."
+    ],
+    [
+      "Giver",
+      "Yeah, you're close to the edge of the tribal settlement now. Now, turn right sharply. You want to go back towards the center, but stay on the left side of the extinct volcano."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. I'm coming back towards the volcano."
+    ],
+    [
+      "Giver",
+      "Don't touch the volcano. Pass it on the left. You're going up now, towards the top of the map."
+    ],
+    [
+      "Follower",
+      "Okay, passing the volcano on the left. Moving up."
+    ],
+    [
+      "Giver",
+      "Keep going up until you hit the submerged rocks. You'll know you're close when you see the rocks poking up in the water."
+    ],
+    [
+      "Follower",
+      "Okay, I see the submerged rocks now. I'm right next to them."
+    ],
+    [
+      "Giver",
+      "Great. Now, turn left sharply. You're going to head straight for the tribal settlement again."
+    ],
+    [
+      "Follower",
+      "Turning left. Heading for the settlement."
+    ],
+    [
+      "Giver",
+      "Go as far left as you can without hitting the settlement. You want to graze the edge of it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm hugging the edge of the settlement now. I feel like I'm almost there."
+    ],
+    [
+      "Giver",
+      "Stop just before you actually enter the settlement. Now, turn right and start climbing up. You're going towards the slate mountain."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. Climbing up. Where is the slate mountain? Is it near the top?"
+    ],
+    [
+      "Giver",
+      "Yeah, it's way up near the top edge, almost in the middle. Keep going up."
+    ],
+    [
+      "Follower",
+      "Okay, heading for the top. I see the slate mountain now."
+    ],
+    [
+      "Giver",
+      "Don't go right to the mountain yet. Pass it on the right side. Keep going up and left."
+    ],
+    [
+      "Follower",
+      "Passing the mountain on the right. Moving up and left."
+    ],
+    [
+      "Giver",
+      "Okay, now you're near the golden beach at the top. You're going to go down towards that beach."
+    ],
+    [
+      "Follower",
+      "Going down towards the beach. Okay, I see the golden beach at the top."
+    ],
+    [
+      "Giver",
+      "Go right up to the edge of the beach."
+    ],
+    [
+      "Follower",
+      "Okay, touching the beach now."
+    ],
+    [
+      "Giver",
+      "Now, turn left and go down. You're going towards the tribal settlement again."
+    ],
+    [
+      "Follower",
+      "Turning left. Going down towards the settlement."
+    ],
+    [
+      "Giver",
+      "Go as far left as possible. You're going to pass right next to the pelicans."
+    ],
+    [
+      "Follower",
+      "Okay, going left. I see the pelicans on the right side of my path."
+    ],
+    [
+      "Giver",
+      "Yes, keep them on your right. Go down towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, heading for the rope bridge. It's on my left now."
+    ],
+    [
+      "Giver",
+      "Wait, the rope bridge is on the left? No, it's on the right of the settlement. Be careful, don't cross the settlement. Go towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, careful. I'm going towards the rope bridge. It's on the left side of the map now."
+    ],
+    [
+      "Giver",
+      "No, the rope bridge is on the right of the settlement. I'm confused. You're on the left side."
+    ],
+    [
+      "Follower",
+      "Oh, I see. I thought the bridge was on the left. Okay, turning right to find the bridge."
+    ],
+    [
+      "Giver",
+      "There it is. The rope bridge. Okay, go up to the bridge."
+    ],
+    [
+      "Follower",
+      "Okay, reaching the rope bridge."
+    ],
+    [
+      "Giver",
+      "Cross the bridge mentally, but stay on your map. Now, go right, towards the collapsed shelter."
+    ],
+    [
+      "Follower",
+      "Going right. I see the collapsed shelter."
+    ],
+    [
+      "Giver",
+      "Don't go into the shelter. Pass it on the left. You're going up towards the saxon barn."
+    ],
+    [
+      "Follower",
+      "Passing the shelter on the left. Heading for the saxon barn."
+    ],
+    [
+      "Giver",
+      "The barn is on the right. Keep going up. You'll pass the barn on your right."
+    ],
+    [
+      "Follower",
+      "Okay, passing the barn on the right."
+    ],
+    [
+      "Giver",
+      "Now, turn left. You're going down towards the secret valley."
+    ],
+    [
+      "Follower",
+      "Turning left. Going down towards the valley."
+    ],
+    [
+      "Giver",
+      "Go towards the valley, but don't go all the way in. Stay on the edge."
+    ],
+    [
+      "Follower",
+      "Okay, at the edge of the secret valley."
+    ],
+    [
+      "Giver",
+      "Now, turn right and go up. You're going towards the golden beach at the top again."
+    ],
+    [
+      "Follower",
+      "Going up towards the top beach."
+    ],
+    [
+      "Giver",
+      "Go up to the beach."
+    ],
+    [
+      "Follower",
+      "At the beach now."
+    ],
+    [
+      "Giver",
+      "Turn left. Go towards the white mountain."
+    ],
+    [
+      "Follower",
+      "Going left towards the white mountain."
+    ],
+    [
+      "Giver",
+      "Pass the mountain on the right. You're going down towards the secret valley again."
+    ],
+    [
+      "Follower",
+      "Passing the mountain on the right. Going down to the valley."
+    ],
+    [
+      "Giver",
+      "Almost there. You're right next to the secret valley. Now, turn right and go up."
+    ],
+    [
+      "Follower",
+      "Turning right. Going up."
+    ],
+    [
+      "Giver",
+      "Keep going up. You're almost at the finish line. Can you see the cross at the top?"
+    ],
+    [
+      "Follower",
+      "Oh! There it is! The finish cross!"
+    ],
+    [
+      "Giver",
+      "Yes, that's it. Mark the cross as the finish."
+    ],
+    [
+      "Follower",
+      "Done. I've drawn the whole route."
+    ],
+    [
+      "Giver",
+      "Great job. Did you miss anything?"
+    ],
+    [
+      "Follower",
+      "No, I think I got it all. From start to finish, passing everything correctly."
+    ],
+    [
+      "Giver",
+      "Perfect. We're done."
+    ],
+    [
+      "Follower",
+      "Okay, call ended."
+    ]
+  ],
+  "n_turns": 68,
+  "ended_by": "single_generation"
+}

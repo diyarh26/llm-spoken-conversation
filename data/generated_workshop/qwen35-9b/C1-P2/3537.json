@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 66590577,
+  "conversation_no": 3537,
+  "topic": "Universal Health Ins",
+  "sb_prompt": "DO YOU BELIEVE THAT THE US GOVERNMENT SHOULD PROVIDE UNIVERSAL HEALTH INSURANCE",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Can I ask you something real quick?\nParticipantB: Sure, what's up?\nParticipantA: I'm trying to figure out if you think the US government should do universal health insurance.\nParticipantB: Oh, yeah. That's a big question.\nParticipantA: Tell me why you think that way.\nParticipantB: Well, honestly, I think they should. Look, I'm a nurse, you know?\nParticipantA: Right, I'm a real estate agent.\nParticipantB: Yeah, and working in the hospital... it's just crazy.\nParticipantA: Tell me about it.\nParticipantB: Like last week, I had a patient come in with a broken leg. He fell at work.\nParticipantA: Oh, really?\nParticipantB: His insurance company said, \"No, we don't cover that kind of injury,\" so we had to find a place that would take him even though he didn't have coverage.\nParticipantA: That sucks.\nParticipantB: It does. He was in pain, he needed the cast, he needed the follow-ups. If he didn't get it, he'd lose his job, he'd lose his apartment.\nParticipantA: Man, that is rough. I know my cousin got into a car accident a few years ago.\nParticipantB: Oh?\nParticipantA: Yeah, he was driving and hit a tree. He had to stay in the hospital for a week.\nParticipantB: How'd he handle the cost?\nParticipantA: Well, he had insurance, so it was mostly covered. But the deductible was like three thousand dollars.\nParticipantB: Three thousand?!\nParticipantA: Yeah. That was a blow to his savings. But he was okay.\nParticipantB: If that guy didn't have insurance, what would happen?\nParticipantA: Well, he couldn't afford it. He'd have to choose between paying for the leg and paying rent.\nParticipantB: Exactly. That's the problem. People are dying because they can't afford basic stuff.\nParticipantA: Hmm. I guess you're right. I've seen people in my listings who are terrified of getting sick.\nParticipantB: Yeah, it's scary.\nParticipantA: Do you think the government could actually pay for it?\nParticipantB: I don't know. My boss says it would bankrupt the country.\nParticipantA: Really?\nParticipantB: Yeah. He says taxes would go up so much people would revolt. And we'd have to hire more doctors, more nurses, more equipment.\nParticipantA: That sounds expensive.\nParticipantB: But he's never seen a patient go bankrupt just because he got sick.\nParticipantA: Hmm. That's a good point. I'm usually worried about taxes, though.\nParticipantB: So you'd rather people just pay for it themselves?\nParticipantA: Not really. I'd rather it was shared. Like, maybe not everyone gets the same thing, but no one gets shut out.\nParticipantB: I agree with that.\nParticipantA: What about you? Do you think everyone should get the exact same plan?\nParticipantB: No, I think everyone should have access to what they need. If I'm sick, I should get treated. If you're sick, you should get treated. It shouldn't depend on your job.\nParticipantA: That makes sense to me. My cousin had that scare, and now he's saving extra just in case.\nParticipantB: It's stressful.\nParticipantA: Yeah. Do you think it could work?\nParticipantB: I think it could. If we fix the system first. Right now it's just a mess.\nParticipantA: I agree. It's a mess.\nParticipantB: Yeah.\nParticipantA: Well, I guess I'll keep thinking about it. Thanks for talking to me.\nParticipantB: Yeah, same here. Good luck.\nParticipantA: Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 857,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

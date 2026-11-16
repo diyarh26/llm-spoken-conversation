@@ -1,0 +1,43 @@
+{
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "identity": {
+    "condition": "C1-P2",
+    "models": {
+      "ParticipantA": {
+        "name": "Qwen/Qwen3.5-9B",
+        "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+      }
+    },
+    "precision": "nf4",
+    "thinking": "off",
+    "sampling_defaults": {
+      "top_k": 0,
+      "min_p": 0.0,
+      "do_sample": true
+    },
+    "seed": 20261115,
+    "decoding": {
+      "max_new_tokens": 4096,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "repetition_penalty": 1.0,
+      "no_repeat_ngram_size": 0
+    },
+    "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+    "packages": {
+      "torch": "2.12.0+cu126",
+      "transformers": "5.12.1",
+      "accelerate": "1.14.0",
+      "bitsandbytes": "0.46.1",
+      "huggingface-hub": "1.33.0"
+    },
+    "devices": {
+      "single": null,
+      "a": null,
+      "b": null
+    },
+    "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+  },
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "created_utc": "2026-11-16T20:11:42.882478+00:00"
+}

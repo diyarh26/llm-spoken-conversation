@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1358687076,
+  "conversation_no": 3439,
+  "topic": "Credit Card Use",
+  "sb_prompt": "PLEASE DISCUSS CREDIT CARDS.  FIND OUT HOW THE OTHER CALLER MAKES USE OF CREDIT CARDS.  HOW DO THEY COMPARE TO YOUR OWN?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 51,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Yeah, you want to chat about credit cards?\nParticipantB: Sure, yeah. I mean, I do use them, but it's kind of... it's a big part of my life now.\nParticipantA: Oh, really? Mine is mostly just for the big stuff. Like the car or the house.\nParticipantB: That's different from me. I use mine for groceries and gas and stuff every single day.\nParticipantA: Hmm. Well, I guess I get why. It's easy to just swipe instead of digging into cash.\nParticipantB: Exactly. But I have this cousin who works at a bank, and she keeps telling me to be careful.\nParticipantA: Oh? What does she say?\nParticipantB: She says I'm building a huge nest egg of debt. She says I shouldn't keep balances so high if I don't pay them off.\nParticipantA: That actually scares me a little bit. I know I shouldn't carry a balance, but sometimes the interest rates are just... steep.\nParticipantB: Yeah, my cousin says the same thing. She told me once, \"If you can't pay it in full next month, you're paying someone else to borrow your money.\"\nParticipantA: That stings. I mean, I have some debts I don't want to get rid of right now. My payments are just... manageable, but they add up.\nParticipantB: I get that. My cousin says you have to live within your means, though. She says if you spend what you don't have, it catches up to you eventually.\nParticipantA: True. I guess I just feel like I'm okay because I can pay the minimums, even if it hurts a little bit.\nParticipantB: Well, my cousin says that's a trap. She says it keeps you in a cycle where you never actually save anything.\nParticipantA: Maybe she's right. I mean, I don't have an emergency fund or anything. That's probably why I feel so stuck sometimes.\nParticipantB: Yeah. My cousin actually helped me set up a budget a while back. She showed me how to track everything.\nParticipantA: Really? Oh, that sounds helpful. I never really did that. I just let the bills roll in.\nParticipantB: Well, I try to do it now. I pay off my gas card by the 1st of every month, and I try not to touch the other stuff unless it's an emergency.\nParticipantA: That's smart. I feel like I've been doing it my way for years, and maybe it's not the best way.\nParticipantB: It's not, honestly. My cousin says credit cards are great tools if you use them right, but they're dangerous if you don't watch them.\nParticipantA: Yeah, I think I need to talk to her. Maybe I'll try to get my balances down to zero next month.\nParticipantB: You should. It feels so much lighter when you don't owe anything.\nParticipantA: Exactly. I feel relieved just thinking about it.\nParticipantB: Yeah. Well, I guess we're kind of different. You're the cautious type, and I'm the... well, I'm learning to be more cautious.\nParticipantA: True. I think I'll stick with just the big purchases for now, and maybe stop using the card for daily stuff.\nParticipantB: That's a good start. My cousin says that's a huge step.\nParticipantA: Okay, well, I'm glad I asked you. Thanks for chatting.\nParticipantB: Sure thing. Good luck with your budgeting.\nParticipantA: Will do. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 799,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

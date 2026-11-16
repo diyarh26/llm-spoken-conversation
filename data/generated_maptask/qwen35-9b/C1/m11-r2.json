@@ -1,0 +1,251 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m11",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1850529550,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Hi there, can I give you some directions?\nFollower: Sure, go ahead.\nGiver: Okay, start at the top left. Find the little cross, that's where you begin.\nFollower: Got it.\nGiver: From there, head down a bit, then turn right towards the haystack. Pass it on your left side.\nFollower: Okay, heading toward the haystack.\nGiver: Don't go too close to it, keep it on the left. Now, turn right. You'll pass the carpenter on your right side.\nFollower: Found the carpenter. Okay, passing them on the right.\nGiver: Good. Keep going right now. You'll see the seven beeches coming up. Pass them on the left.\nFollower: Wait, I don't see the seven beeches anywhere.\nGiver: Oh? Where are they? They're just past the carpenter, slightly to the left.\nFollower: Ah, okay, there they are. Passing them on the left.\nGiver: Good. Now turn right. You'll see a chapel. Pass it on the right.\nFollower: Okay, turning right... wait, there's no chapel here.\nGiver: What? There must be one. Let me check. Ah, maybe you're near the wrong spot. Keep going straight a bit more.\nFollower: Okay, going straight... wait, I see a cottage instead. Is that the chapel?\nGiver: No, the cottage isn't on my map. Just keep going straight for a bit more.\nFollower: Okay, still going straight... okay, there it is. Passing the chapel on the right.\nGiver: Perfect. Now you'll see the reclaimed fields on your right. Don't miss them.\nFollower: Found the fields. Okay, keeping them on the right.\nGiver: Good. Now turn left. You'll come across a bay with a crane. Pass that on the left side.\nFollower: Okay, turning left... wait, I see a crashed spaceship there instead of a crane.\nGiver: Oh? That's weird. My map doesn't show a spaceship. Keep going left past that spot, there's a bay with a crane further down.\nFollower: Okay, I see the crane bay now. Passing it on the left.\nGiver: Good. Now turn right. You'll see a vast meadow. Pass it on the right.\nFollower: Okay, turning right... wait, the vast meadow is on the left of me.\nGiver: What? Did you turn the wrong way?\nFollower: No, I'm on the right side of the path, but the meadow is definitely to my left now.\nGiver: Oh, sorry, I meant the meadow should be on your right. Maybe you're on the wrong side of the road.\nFollower: Okay, let me retrace. I'll go back to the meadow and pass it on the right.\nGiver: Okay, that should be better. Now keep going. You'll see the attractive cliffs on the left.\nFollower: Found the cliffs. Okay, passing them on the left.\nGiver: Good. Now turn right. You'll see some moored boats. Pass them on the right.\nFollower: Okay, turning right... wait, I see a chestnut tree on the left now.\nGiver: Oh no, what's happening? The chestnut tree should be on the right at the end. Are you sure you're on the right track?\nFollower: I'm confused. I see a chestnut tree on the left, but you said the cliffs were on the left before that. Am I going in the wrong direction?\nGiver: No, wait. Let me explain. From the cliffs, turn right. You should see the boats on the right. Then the chestnut tree will be on the right at the very end.\nFollower: Okay, turning right from the cliffs... wait, I see a crashed spaceship again. Is that the start?\nGiver: No, the start is way up at the top left. The spaceship isn't on my map. Just ignore it and keep going to the right.\nFollower: Okay, ignoring the spaceship. Turning right... okay, I see the boats now. Passing them on the right.\nGiver: Good. Now keep going straight. You'll see the chestnut tree on the right. That's where you finish.\nFollower: Okay, seeing the chestnut tree... wait, it's on the left of me.\nGiver: What? I said it's on the right. Are you facing the wrong way?\nFollower: No, I'm facing the same way. It's just... it's on the left here.\nGiver: Oh, maybe I gave the wrong instructions. Just draw a line from the boats to the chestnut tree directly.\nFollower: Okay, drawing a line... wait, where exactly do I draw the line?\nGiver: From the boats, head straight left until you hit the chestnut tree.\nFollower: Okay, drawing a line... wait, that goes off the map!\nGiver: Oh no, sorry. That's wrong. The chestnut tree is on the right side of the map. Head right from the boats.\nFollower: Okay, heading right... there it is! Finished!\nGiver: Great job!\nFollower: Thanks, you were a bit confusing but I got it!\nGiver: No problem. Good luck!\nFollower: Bye!\nGiver: Bye!",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi there, can I give you some directions?"
+    ],
+    [
+      "Follower",
+      "Sure, go ahead."
+    ],
+    [
+      "Giver",
+      "Okay, start at the top left. Find the little cross, that's where you begin."
+    ],
+    [
+      "Follower",
+      "Got it."
+    ],
+    [
+      "Giver",
+      "From there, head down a bit, then turn right towards the haystack. Pass it on your left side."
+    ],
+    [
+      "Follower",
+      "Okay, heading toward the haystack."
+    ],
+    [
+      "Giver",
+      "Don't go too close to it, keep it on the left. Now, turn right. You'll pass the carpenter on your right side."
+    ],
+    [
+      "Follower",
+      "Found the carpenter. Okay, passing them on the right."
+    ],
+    [
+      "Giver",
+      "Good. Keep going right now. You'll see the seven beeches coming up. Pass them on the left."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see the seven beeches anywhere."
+    ],
+    [
+      "Giver",
+      "Oh? Where are they? They're just past the carpenter, slightly to the left."
+    ],
+    [
+      "Follower",
+      "Ah, okay, there they are. Passing them on the left."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right. You'll see a chapel. Pass it on the right."
+    ],
+    [
+      "Follower",
+      "Okay, turning right... wait, there's no chapel here."
+    ],
+    [
+      "Giver",
+      "What? There must be one. Let me check. Ah, maybe you're near the wrong spot. Keep going straight a bit more."
+    ],
+    [
+      "Follower",
+      "Okay, going straight... wait, I see a cottage instead. Is that the chapel?"
+    ],
+    [
+      "Giver",
+      "No, the cottage isn't on my map. Just keep going straight for a bit more."
+    ],
+    [
+      "Follower",
+      "Okay, still going straight... okay, there it is. Passing the chapel on the right."
+    ],
+    [
+      "Giver",
+      "Perfect. Now you'll see the reclaimed fields on your right. Don't miss them."
+    ],
+    [
+      "Follower",
+      "Found the fields. Okay, keeping them on the right."
+    ],
+    [
+      "Giver",
+      "Good. Now turn left. You'll come across a bay with a crane. Pass that on the left side."
+    ],
+    [
+      "Follower",
+      "Okay, turning left... wait, I see a crashed spaceship there instead of a crane."
+    ],
+    [
+      "Giver",
+      "Oh? That's weird. My map doesn't show a spaceship. Keep going left past that spot, there's a bay with a crane further down."
+    ],
+    [
+      "Follower",
+      "Okay, I see the crane bay now. Passing it on the left."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right. You'll see a vast meadow. Pass it on the right."
+    ],
+    [
+      "Follower",
+      "Okay, turning right... wait, the vast meadow is on the left of me."
+    ],
+    [
+      "Giver",
+      "What? Did you turn the wrong way?"
+    ],
+    [
+      "Follower",
+      "No, I'm on the right side of the path, but the meadow is definitely to my left now."
+    ],
+    [
+      "Giver",
+      "Oh, sorry, I meant the meadow should be on your right. Maybe you're on the wrong side of the road."
+    ],
+    [
+      "Follower",
+      "Okay, let me retrace. I'll go back to the meadow and pass it on the right."
+    ],
+    [
+      "Giver",
+      "Okay, that should be better. Now keep going. You'll see the attractive cliffs on the left."
+    ],
+    [
+      "Follower",
+      "Found the cliffs. Okay, passing them on the left."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right. You'll see some moored boats. Pass them on the right."
+    ],
+    [
+      "Follower",
+      "Okay, turning right... wait, I see a chestnut tree on the left now."
+    ],
+    [
+      "Giver",
+      "Oh no, what's happening? The chestnut tree should be on the right at the end. Are you sure you're on the right track?"
+    ],
+    [
+      "Follower",
+      "I'm confused. I see a chestnut tree on the left, but you said the cliffs were on the left before that. Am I going in the wrong direction?"
+    ],
+    [
+      "Giver",
+      "No, wait. Let me explain. From the cliffs, turn right. You should see the boats on the right. Then the chestnut tree will be on the right at the very end."
+    ],
+    [
+      "Follower",
+      "Okay, turning right from the cliffs... wait, I see a crashed spaceship again. Is that the start?"
+    ],
+    [
+      "Giver",
+      "No, the start is way up at the top left. The spaceship isn't on my map. Just ignore it and keep going to the right."
+    ],
+    [
+      "Follower",
+      "Okay, ignoring the spaceship. Turning right... okay, I see the boats now. Passing them on the right."
+    ],
+    [
+      "Giver",
+      "Good. Now keep going straight. You'll see the chestnut tree on the right. That's where you finish."
+    ],
+    [
+      "Follower",
+      "Okay, seeing the chestnut tree... wait, it's on the left of me."
+    ],
+    [
+      "Giver",
+      "What? I said it's on the right. Are you facing the wrong way?"
+    ],
+    [
+      "Follower",
+      "No, I'm facing the same way. It's just... it's on the left here."
+    ],
+    [
+      "Giver",
+      "Oh, maybe I gave the wrong instructions. Just draw a line from the boats to the chestnut tree directly."
+    ],
+    [
+      "Follower",
+      "Okay, drawing a line... wait, where exactly do I draw the line?"
+    ],
+    [
+      "Giver",
+      "From the boats, head straight left until you hit the chestnut tree."
+    ],
+    [
+      "Follower",
+      "Okay, drawing a line... wait, that goes off the map!"
+    ],
+    [
+      "Giver",
+      "Oh no, sorry. That's wrong. The chestnut tree is on the right side of the map. Head right from the boats."
+    ],
+    [
+      "Follower",
+      "Okay, heading right... there it is! Finished!"
+    ],
+    [
+      "Giver",
+      "Great job!"
+    ],
+    [
+      "Follower",
+      "Thanks, you were a bit confusing but I got it!"
+    ],
+    [
+      "Giver",
+      "No problem. Good luck!"
+    ],
+    [
+      "Follower",
+      "Bye!"
+    ],
+    [
+      "Giver",
+      "Bye!"
+    ]
+  ],
+  "n_turns": 55,
+  "ended_by": "single_generation"
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 715794841,
+  "conversation_no": 2485,
+  "topic": "Family Reunions",
+  "sb_prompt": "DISCUSS PLANNING A FAMILY REUNION.  DRAW ON YOUR EXPERIENCES AND THOSE OF THE OTHER CALLER FOR MAKING THE NEXT GET-TOGETHER SUCCESSFUL AND MEMORABLE.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 45,
+    "education": "a high-school education",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Yeah, hi. I'm calling about the family reunion stuff.\nParticipantB: Oh, right. My cousin just texted me saying we need to pick a date for the big one next summer.\nParticipantA: That's good. I was actually thinking about that yesterday. My dad keeps pushing for August, but I'm kind of leaning toward late July.\nParticipantB: Late July can be tricky though. My neighbor's kid got sick over the weekend, you know how it is with the kids? One person gets it and suddenly everyone's out.\nParticipantA: Oh yeah, that's true. My little brother had that same thing last year. It messed up everything. We had to move the whole thing to September.\nParticipantB: See, that's why I'm a little skeptical about doing it outdoors in July. I drive the school bus and I see how fast things spread in the morning. Everyone is just waiting for a sniffle to turn into a fever.\nParticipantA: I get your point. But honestly, I think August is nicer for the adults. We can go to the beach and not be stuck in the school zone or anything. Plus, the weather is usually better then.\nParticipantB: Maybe. My niece says August is too hot though. She's sixteen now and she's all about the pool parties at night. She said if we do July, she's bringing a tent just in case it rains.\nParticipantA: Haha, good idea. My mom always says rain is just part of the fun, but yeah, a tent never hurts. What do you think about the venue? We could do something at my dad's lake house again, or maybe rent a big hall?\nParticipantB: My sister lives near the city park and she wants to do it there. She said it's cheaper and there are already tables set up. But I'm worried about the parking. Last time we did it in the park, half the cars ended up on the sidewalk.\nParticipantA: Oh, that sounds stressful. I hate that. My dad's place has plenty of parking, but the roads are narrow and it takes forever to get there. Maybe we could split it up? Have the food at the park and the dancing at the lake house?\nParticipantB: That actually sounds pretty smart. Like a hybrid thing. No one has to drive far, and you don't have to worry about the school buses blocking everything if we just park them somewhere else.\nParticipantA: Yeah, I like that. My nephew is coming next year, so if we make it easy for him, he'll actually want to come. He got a license a few months ago and he's always complaining about traffic.\nParticipantB: He did? Well, that's a change. Last year he barely showed up at all. Maybe knowing there's no parking nightmare will change his mind.\nParticipantA: True. I feel like if we make the logistics easier, more people will actually show up. It's not just about the food, it's about everyone getting there at the same time.\nParticipantB: Exactly. My cousin said last year everyone showed up two hours late because of traffic. It ruined the whole vibe. Everyone was tired and grumpy.\nParticipantA: Oh man, that sucks. We have to figure out a time that works for the school schedule too. Like, maybe morning for the kids and afternoon for the adults?\nParticipantB: That could work. If we do it on a Tuesday, the kids are already off from school and the adults can come after work. Less rush hour, less stress.\nParticipantA: Tuesday sounds perfect. No kids crying about being late, and the adults don't have to rush. Let me check with my mom what days work for her.\nParticipantB: Okay, sounds good. I'll ask my sister to text my cousin. Maybe we can confirm a few things before we commit to a specific Tuesday.\nParticipantA: Sure, no problem. It's worth trying to make it actually fun instead of just another obligation.\nParticipantB: Agreed. My niece did say she'd bring snacks if we do it on a weekday. Maybe that helps with the food costs too.\nParticipantA: That's a great idea. I'll tell my brother to bring his guitar. He always plays while we eat, and it makes everyone laugh.\nParticipantB: Oh, that's nice. My kids love that part. They think it's a party even if the weather is ugly.\nParticipantA: Well, I'll give you a call tomorrow after I talk to my mom. See if we can lock in a Tuesday.\nParticipantB: Sounds like a plan. Talk soon.\nParticipantA: Okay, bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 1008,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

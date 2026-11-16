@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3125499950,
+  "conversation_no": 3691,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Is this the right number?\nParticipantB: Yes, it is. Who is this?\nParticipantA: It's me, just checking to see if I've got the right house.\nParticipantB: Oh, okay. Well, yes, this is the right place. What can I help you with?\nParticipantA: Well, I'm actually calling because I'm trying to figure out if you have any pets in the house.\nParticipantB: Why do you need to know that?\nParticipantA: It's just that I'm walking my dog and I need to make sure he doesn't run into anyone or anything out there.\nParticipantB: Oh, I see. Okay, let me see... do I have pets?\nParticipantA: Yes, that's exactly what I wanted to find out.\nParticipantB: Actually, yes, I do have a pet. What kind?\nParticipantA: Oh, really? That's great. Is it a dog or a cat?\nParticipantB: It's a dog. A small terrier mix.\nParticipantA: Okay, a terrier. What do you call him?\nParticipantB: His name is Buster.\nParticipantA: Buster, huh? That's a good name for a terrier.\nParticipantB: Yeah, he's pretty spirited for his size. Does your dog have a name?\nParticipantA: Yes, mine is named Barnaby.\nParticipantB: Barnaby? That's a nice name. Is he big or small?\nParticipantA: Barnaby is a big Golden Retriever. He's quite a big dog.\nParticipantB: Oh, wow, a Golden Retriever! I didn't know you had a big dog.\nParticipantA: He's a big boy, yeah. He loves to run. Does Buster like to run?\nParticipantB: Buster doesn't really like to run for long distances, but he loves to chase squirrels.\nParticipantA: Oh, that sounds like fun. Squirrels are good for exercise.\nParticipantB: Yeah, he gets excited about them. So, you have a big dog that likes to run, and I have a small dog that likes to chase squirrels.\nParticipantA: That's a pretty interesting pair of dogs to have around.\nParticipantB: Yeah, it can get a bit chaotic sometimes with two dogs of different sizes and energy levels.\nParticipantA: I can imagine. How old is Buster?\nParticipantB: Buster is about eight years old. He's a senior now.\nParticipantA: Oh, really? I thought he looked younger.\nParticipantB: He moves a little slower these days, but he's still sharp. How old is Barnaby?\nParticipantA: Barnaby is twelve. He's getting up there in age too, though he still runs fast.\nParticipantB: That's impressive. Twelve is a long time for a big dog.\nParticipantA: He's been a good companion for a long time. Do you have any other pets besides Buster?\nParticipantB: No, just Buster. I'm a bit worried about him since he's older.\nParticipantA: Me too. We try to keep him active but safe. Do you have a backyard?\nParticipantB: Yes, I have a small fenced yard. But I don't keep the fence up high enough for Buster to climb out if he wanted to.\nParticipantA: Oh, that could be risky with a terrier trying to chase a squirrel!\nParticipantB: Exactly. That's why I mostly keep him inside or on a long leash in the yard.\nParticipantA: I understand. We have a huge fenced yard, so Barnaby is very contained.\nParticipantB: That must be nice for him. Do you have any cats in the house?\nParticipantA: No, it's just Barnaby and me. Sometimes I wish we had a cat to keep Barnaby company, but we couldn't find the right one.\nParticipantB: Oh, I see. Well, maybe one day. Do you have any allergies to animals?\nParticipantA: No, I'm fine with dogs. My wife would probably complain if we had a cat, but I'm okay with just the dog.\nParticipantB: Okay, that's good. I don't have allergies, so Buster is safe with me.\nParticipantA: Good to know. So, to recap, you have Buster the terrier, and I have Barnaby the Golden Retriever.\nParticipantB: Yes, that's correct. Two different kinds of dogs, different ages, different temperaments.\nParticipantA: It sounds like quite the mix. Are you close to the area?\nParticipantB: I live about three blocks down the street. It's a quiet neighborhood.\nParticipantA: Oh, really? That's convenient. We are about two blocks away.\nParticipantB: That's very close. Maybe we could meet the dogs sometime?\nParticipantA: Yes! That would be great. We could introduce them to each other safely.\nParticipantB: I'd love that. Maybe next week? I'm free on Tuesdays and Thursdays afternoons.\nParticipantA: I'm usually free on Wednesdays and Saturdays. We could see if we can find a time that works for both of us.\nParticipantB: Okay, I'm free on Saturdays too. How about Saturday afternoon?\nParticipantA: Saturday afternoon works for me. What time would you like to meet?\nParticipantB: How about 2:00 PM? It should be warm enough for them to play a bit.\nParticipantA: 2:00 PM sounds perfect. I'll see Barnaby and bring a long leash just in case.\nParticipantB: I'll do the same for Buster. I'll make sure the yard is secure.\nParticipantA: Great. I'll call you again on Friday to confirm.\nParticipantB: Sounds good. I'll look forward to meeting Barnaby.\nParticipantA: Me too. It'll be fun to see how the two of them get along.\nParticipantB: Definitely. Thanks for calling, and thanks for telling me about Barnaby.\nParticipantA: You're welcome. Thanks for telling me about Buster. Have a nice day.\nParticipantB: You too. Bye!\nParticipantA: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 1347,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "58458112bb2669ef495d1a606c197effe91d8a239eb7e5c609de7bcf44ad11ec",
+  "run": {
+    "run_id": "58458112bb2669ef495d1a606c197effe91d8a239eb7e5c609de7bcf44ad11ec",
+    "identity": {
+      "condition": "C1-P0",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T18:24:10.874304+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

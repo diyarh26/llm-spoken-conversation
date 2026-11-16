@@ -1,0 +1,207 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m2",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 2728169830,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Right. First, leave Start. Head left.\nFollower: Okay. Left.\nGiver: Keep going left until you hit the white water.\nFollower: Left... okay, I see the white water. I'm past it now.\nGiver: Wait, no. Left *from* the white water. Go up a bit, then turn right.\nFollower: Ah, past the white water. Okay, going right.\nGiver: Turn right. Follow that little creek to the stone slabs.\nFollower: Stone slabs... there they are.\nGiver: Go down the stone slabs. Then turn left.\nFollower: Left from the slabs.\nGiver: Keep going left until you reach the swamp.\nFollower: Swamp is over there. Okay, heading for the swamp.\nGiver: Don't go *in* the swamp. Stop right at the edge. Then turn right.\nFollower: Right.\nGiver: Go straight until you pass the cactus.\nFollower: I don't see a cactus. Is there one?\nGiver: No, ignore that. Just keep going straight until you pass the outlaws hideout.\nFollower: Okay, passing the outlaws hideout.\nGiver: Good. Now turn left. Head towards the stone creek.\nFollower: Left. Where's the stone creek?\nGiver: It's the one to the left of the rocks.\nFollower: Ah! There's a stone creek to the left of the rocks. Okay, heading for that one.\nGiver: Yes, that's the right one. Go all the way down it.\nFollower: Following it down... okay, I'm at the bottom.\nGiver: Stop at the bottom. Turn right. Go across to the gold mine.\nFollower: Right. Gold mine is right there.\nGiver: Good. Now go down from the gold mine.\nFollower: Going down... okay, I'm past the gold mine.\nGiver: Turn left at the noose.\nFollower: Left at the noose.\nGiver: Follow that line down to the saloon bar.\nFollower: Okay, going down to the saloon bar.\nGiver: Stop at the saloon bar. Turn right. Go to the swan pond.\nFollower: Right. Swan pond is right there.\nGiver: Good. Now head left from the swan pond.\nFollower: Left from the swan pond.\nGiver: Keep going left until you reach the stone creek again.\nFollower: Stone creek... wait, there's only one stone creek on my map.\nGiver: No, there are two. One near the top, one near the bottom. The one near the bottom.\nFollower: Ah! The bottom one. Okay, heading for the bottom stone creek.\nGiver: Good. Go down that creek until you hit the FINISH.\nFollower: Going down... okay, I'm at the finish.\nGiver: Perfect.\nFollower: Done.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right. First, leave Start. Head left."
+    ],
+    [
+      "Follower",
+      "Okay. Left."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the white water."
+    ],
+    [
+      "Follower",
+      "Left... okay, I see the white water. I'm past it now."
+    ],
+    [
+      "Giver",
+      "Wait, no. Left *from* the white water. Go up a bit, then turn right."
+    ],
+    [
+      "Follower",
+      "Ah, past the white water. Okay, going right."
+    ],
+    [
+      "Giver",
+      "Turn right. Follow that little creek to the stone slabs."
+    ],
+    [
+      "Follower",
+      "Stone slabs... there they are."
+    ],
+    [
+      "Giver",
+      "Go down the stone slabs. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left from the slabs."
+    ],
+    [
+      "Giver",
+      "Keep going left until you reach the swamp."
+    ],
+    [
+      "Follower",
+      "Swamp is over there. Okay, heading for the swamp."
+    ],
+    [
+      "Giver",
+      "Don't go *in* the swamp. Stop right at the edge. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right."
+    ],
+    [
+      "Giver",
+      "Go straight until you pass the cactus."
+    ],
+    [
+      "Follower",
+      "I don't see a cactus. Is there one?"
+    ],
+    [
+      "Giver",
+      "No, ignore that. Just keep going straight until you pass the outlaws hideout."
+    ],
+    [
+      "Follower",
+      "Okay, passing the outlaws hideout."
+    ],
+    [
+      "Giver",
+      "Good. Now turn left. Head towards the stone creek."
+    ],
+    [
+      "Follower",
+      "Left. Where's the stone creek?"
+    ],
+    [
+      "Giver",
+      "It's the one to the left of the rocks."
+    ],
+    [
+      "Follower",
+      "Ah! There's a stone creek to the left of the rocks. Okay, heading for that one."
+    ],
+    [
+      "Giver",
+      "Yes, that's the right one. Go all the way down it."
+    ],
+    [
+      "Follower",
+      "Following it down... okay, I'm at the bottom."
+    ],
+    [
+      "Giver",
+      "Stop at the bottom. Turn right. Go across to the gold mine."
+    ],
+    [
+      "Follower",
+      "Right. Gold mine is right there."
+    ],
+    [
+      "Giver",
+      "Good. Now go down from the gold mine."
+    ],
+    [
+      "Follower",
+      "Going down... okay, I'm past the gold mine."
+    ],
+    [
+      "Giver",
+      "Turn left at the noose."
+    ],
+    [
+      "Follower",
+      "Left at the noose."
+    ],
+    [
+      "Giver",
+      "Follow that line down to the saloon bar."
+    ],
+    [
+      "Follower",
+      "Okay, going down to the saloon bar."
+    ],
+    [
+      "Giver",
+      "Stop at the saloon bar. Turn right. Go to the swan pond."
+    ],
+    [
+      "Follower",
+      "Right. Swan pond is right there."
+    ],
+    [
+      "Giver",
+      "Good. Now head left from the swan pond."
+    ],
+    [
+      "Follower",
+      "Left from the swan pond."
+    ],
+    [
+      "Giver",
+      "Keep going left until you reach the stone creek again."
+    ],
+    [
+      "Follower",
+      "Stone creek... wait, there's only one stone creek on my map."
+    ],
+    [
+      "Giver",
+      "No, there are two. One near the top, one near the bottom. The one near the bottom."
+    ],
+    [
+      "Follower",
+      "Ah! The bottom one. Okay, heading for the bottom stone creek."
+    ],
+    [
+      "Giver",
+      "Good. Go down that creek until you hit the FINISH."
+    ],
+    [
+      "Follower",
+      "Going down... okay, I'm at the finish."
+    ],
+    [
+      "Giver",
+      "Perfect."
+    ],
+    [
+      "Follower",
+      "Done."
+    ]
+  ],
+  "n_turns": 44,
+  "ended_by": "single_generation"
+}

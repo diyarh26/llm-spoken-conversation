@@ -1,0 +1,179 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m5",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 4114783578,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Right, okay. Where are you?\nFollower: Oh, I'm here. Where do I start?\nGiver: Start at the bottom, right in the middle. Just below the Missionary Camp.\nFollower: Okay, got it. I see the camp and the Start mark. Where do I go first?\nGiver: Go left. Just a little bit left.\nFollower: Left... okay. I'm moving left.\nGiver: Good. Now go down, but not too far. Just enough to pass *above* the Gorillas on your right.\nFollower: Ah, the Gorillas? Okay, I see them. I'm going down, keeping them on my right side.\nGiver: Right. Now swing left again. You're going to pass a Banana Tree. It's not on my map, but it should be there.\nFollower: Wait, Banana Tree? I don't see one. I only see... a Rockfall.\nGiver: Oh, right, that's a Rockfall on yours. Ignore that. Just keep going left until you hit the edge.\nFollower: Okay, left. I hit the edge. Now go up.\nGiver: Up a bit. Then turn left again. Watch out, don't go too far, or you'll hit the Gorillas.\nFollower: Okay... up and left. I'm feeling a bit lost. Are we going back to the Gorillas?\nGiver: No, no! You passed them already. Now you're near the Rope Bridge. It's on the left.\nFollower: Okay, I see the Rope Bridge. It's definitely on the left.\nGiver: Good. Now go up and right. You'll end up near some Fallen Pillars. Those are on the right.\nFollower: Okay, up and right. There are pillars there. Okay, I see them.\nGiver: Good. Now go left. You're heading towards the Ancient Ruins. They are on the right side of the path.\nFollower: Okay, going left. I see the Ruins on the right.\nGiver: Right. Keep going left. You'll pass the Stones. They are on the left.\nFollower: Okay, left. I see the Stones.\nGiver: Good. Now go up. You should see the White Mountain on the right.\nFollower: White Mountain! Okay, I see it. It's on the right.\nGiver: Yes. Now go left. Towards the Soft Furnishings Store. That's on the left.\nFollower: Soft Furnishings Store. Okay, I see it.\nGiver: Right. Go up now. You're almost there. You should see the Gazelles on the left.\nFollower: Gazelles! Okay, I see them.\nGiver: Good. Finally, go right. You're going to the Finish.\nFollower: Right... but wait. I'm going right and I see... a Straight River? And the Waterfall is on the right, but it looks like it's far away.\nGiver: Oh, the Waterfall? Yeah, that's on the right. But the Finish is actually further up. Make sure you don't go too far right.\nFollower: Okay, not too far right. I see the Finish mark!\nGiver: Perfect. You're there.\nFollower: Done!\nGiver: Great.\nFollower: Thanks.\nGiver: Bye.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, okay. Where are you?"
+    ],
+    [
+      "Follower",
+      "Oh, I'm here. Where do I start?"
+    ],
+    [
+      "Giver",
+      "Start at the bottom, right in the middle. Just below the Missionary Camp."
+    ],
+    [
+      "Follower",
+      "Okay, got it. I see the camp and the Start mark. Where do I go first?"
+    ],
+    [
+      "Giver",
+      "Go left. Just a little bit left."
+    ],
+    [
+      "Follower",
+      "Left... okay. I'm moving left."
+    ],
+    [
+      "Giver",
+      "Good. Now go down, but not too far. Just enough to pass *above* the Gorillas on your right."
+    ],
+    [
+      "Follower",
+      "Ah, the Gorillas? Okay, I see them. I'm going down, keeping them on my right side."
+    ],
+    [
+      "Giver",
+      "Right. Now swing left again. You're going to pass a Banana Tree. It's not on my map, but it should be there."
+    ],
+    [
+      "Follower",
+      "Wait, Banana Tree? I don't see one. I only see... a Rockfall."
+    ],
+    [
+      "Giver",
+      "Oh, right, that's a Rockfall on yours. Ignore that. Just keep going left until you hit the edge."
+    ],
+    [
+      "Follower",
+      "Okay, left. I hit the edge. Now go up."
+    ],
+    [
+      "Giver",
+      "Up a bit. Then turn left again. Watch out, don't go too far, or you'll hit the Gorillas."
+    ],
+    [
+      "Follower",
+      "Okay... up and left. I'm feeling a bit lost. Are we going back to the Gorillas?"
+    ],
+    [
+      "Giver",
+      "No, no! You passed them already. Now you're near the Rope Bridge. It's on the left."
+    ],
+    [
+      "Follower",
+      "Okay, I see the Rope Bridge. It's definitely on the left."
+    ],
+    [
+      "Giver",
+      "Good. Now go up and right. You'll end up near some Fallen Pillars. Those are on the right."
+    ],
+    [
+      "Follower",
+      "Okay, up and right. There are pillars there. Okay, I see them."
+    ],
+    [
+      "Giver",
+      "Good. Now go left. You're heading towards the Ancient Ruins. They are on the right side of the path."
+    ],
+    [
+      "Follower",
+      "Okay, going left. I see the Ruins on the right."
+    ],
+    [
+      "Giver",
+      "Right. Keep going left. You'll pass the Stones. They are on the left."
+    ],
+    [
+      "Follower",
+      "Okay, left. I see the Stones."
+    ],
+    [
+      "Giver",
+      "Good. Now go up. You should see the White Mountain on the right."
+    ],
+    [
+      "Follower",
+      "White Mountain! Okay, I see it. It's on the right."
+    ],
+    [
+      "Giver",
+      "Yes. Now go left. Towards the Soft Furnishings Store. That's on the left."
+    ],
+    [
+      "Follower",
+      "Soft Furnishings Store. Okay, I see it."
+    ],
+    [
+      "Giver",
+      "Right. Go up now. You're almost there. You should see the Gazelles on the left."
+    ],
+    [
+      "Follower",
+      "Gazelles! Okay, I see them."
+    ],
+    [
+      "Giver",
+      "Good. Finally, go right. You're going to the Finish."
+    ],
+    [
+      "Follower",
+      "Right... but wait. I'm going right and I see... a Straight River? And the Waterfall is on the right, but it looks like it's far away."
+    ],
+    [
+      "Giver",
+      "Oh, the Waterfall? Yeah, that's on the right. But the Finish is actually further up. Make sure you don't go too far right."
+    ],
+    [
+      "Follower",
+      "Okay, not too far right. I see the Finish mark!"
+    ],
+    [
+      "Giver",
+      "Perfect. You're there."
+    ],
+    [
+      "Follower",
+      "Done!"
+    ],
+    [
+      "Giver",
+      "Great."
+    ],
+    [
+      "Follower",
+      "Thanks."
+    ],
+    [
+      "Giver",
+      "Bye."
+    ]
+  ],
+  "n_turns": 37,
+  "ended_by": "single_generation"
+}

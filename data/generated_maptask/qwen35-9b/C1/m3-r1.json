@@ -1,0 +1,219 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m3",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1448226227,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Hi, I'm giving you directions. Okay, start at the cross.\nFollower: Okay, got the cross.\nGiver: Head towards the cliffs.\nFollower: Which way? Up or down?\nGiver: Down and slightly right. Pass close to the cliffs on your left.\nFollower: Right, so I go past the cliffs on the left.\nGiver: Good. Keep going down.\nFollower: Okay.\nGiver: Next, head towards the forge.\nFollower: Wait, I don't see a forge on my map.\nGiver: Ah, you don't? Okay, then head towards the old pine.\nFollower: Okay, towards the old pine.\nGiver: Pass the old pine on your right.\nFollower: Right, past the pine on the right.\nGiver: Now turn right and head towards the pine forest.\nFollower: Okay, turning right towards the forest.\nGiver: Pass the forest on your left.\nFollower: Done, forest on left.\nGiver: Keep going down a bit, then head right towards the bakery.\nFollower: Okay, heading to the bakery.\nGiver: Pass the bakery on your right.\nFollower: Right, bakery is on the right.\nGiver: Great. Now look for the canal.\nFollower: Oh, I see a canal, but it's way over here.\nGiver: Which way?\nFollower: It's further east, past the bakery.\nGiver: Okay, ignore that. Head towards the crane bay.\nFollower: Okay, heading to the crane bay.\nGiver: Pass the crane bay on your left.\nFollower: Right, bay on the left.\nGiver: Keep going. Look for the wheatfields.\nFollower: I see the wheatfields.\nGiver: Pass the wheatfields on your right.\nFollower: Okay, wheatfields on the right.\nGiver: Good. Now look for the rocket warehouse.\nFollower: I see the rocket warehouse.\nGiver: Pass the rocket warehouse on your left.\nFollower: Right, warehouse on the left.\nGiver: Continue down towards the old lighthouse.\nFollower: Okay, heading to the lighthouse.\nGiver: Pass the lighthouse on your left.\nFollower: Right, lighthouse on the left.\nGiver: Keep going until you hit the finish line.\nFollower: Okay, I see the finish line now.\nGiver: Are you there?\nFollower: Yes, I'm at the cross.\nGiver: Excellent. You're done.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi, I'm giving you directions. Okay, start at the cross."
+    ],
+    [
+      "Follower",
+      "Okay, got the cross."
+    ],
+    [
+      "Giver",
+      "Head towards the cliffs."
+    ],
+    [
+      "Follower",
+      "Which way? Up or down?"
+    ],
+    [
+      "Giver",
+      "Down and slightly right. Pass close to the cliffs on your left."
+    ],
+    [
+      "Follower",
+      "Right, so I go past the cliffs on the left."
+    ],
+    [
+      "Giver",
+      "Good. Keep going down."
+    ],
+    [
+      "Follower",
+      "Okay."
+    ],
+    [
+      "Giver",
+      "Next, head towards the forge."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see a forge on my map."
+    ],
+    [
+      "Giver",
+      "Ah, you don't? Okay, then head towards the old pine."
+    ],
+    [
+      "Follower",
+      "Okay, towards the old pine."
+    ],
+    [
+      "Giver",
+      "Pass the old pine on your right."
+    ],
+    [
+      "Follower",
+      "Right, past the pine on the right."
+    ],
+    [
+      "Giver",
+      "Now turn right and head towards the pine forest."
+    ],
+    [
+      "Follower",
+      "Okay, turning right towards the forest."
+    ],
+    [
+      "Giver",
+      "Pass the forest on your left."
+    ],
+    [
+      "Follower",
+      "Done, forest on left."
+    ],
+    [
+      "Giver",
+      "Keep going down a bit, then head right towards the bakery."
+    ],
+    [
+      "Follower",
+      "Okay, heading to the bakery."
+    ],
+    [
+      "Giver",
+      "Pass the bakery on your right."
+    ],
+    [
+      "Follower",
+      "Right, bakery is on the right."
+    ],
+    [
+      "Giver",
+      "Great. Now look for the canal."
+    ],
+    [
+      "Follower",
+      "Oh, I see a canal, but it's way over here."
+    ],
+    [
+      "Giver",
+      "Which way?"
+    ],
+    [
+      "Follower",
+      "It's further east, past the bakery."
+    ],
+    [
+      "Giver",
+      "Okay, ignore that. Head towards the crane bay."
+    ],
+    [
+      "Follower",
+      "Okay, heading to the crane bay."
+    ],
+    [
+      "Giver",
+      "Pass the crane bay on your left."
+    ],
+    [
+      "Follower",
+      "Right, bay on the left."
+    ],
+    [
+      "Giver",
+      "Keep going. Look for the wheatfields."
+    ],
+    [
+      "Follower",
+      "I see the wheatfields."
+    ],
+    [
+      "Giver",
+      "Pass the wheatfields on your right."
+    ],
+    [
+      "Follower",
+      "Okay, wheatfields on the right."
+    ],
+    [
+      "Giver",
+      "Good. Now look for the rocket warehouse."
+    ],
+    [
+      "Follower",
+      "I see the rocket warehouse."
+    ],
+    [
+      "Giver",
+      "Pass the rocket warehouse on your left."
+    ],
+    [
+      "Follower",
+      "Right, warehouse on the left."
+    ],
+    [
+      "Giver",
+      "Continue down towards the old lighthouse."
+    ],
+    [
+      "Follower",
+      "Okay, heading to the lighthouse."
+    ],
+    [
+      "Giver",
+      "Pass the lighthouse on your left."
+    ],
+    [
+      "Follower",
+      "Right, lighthouse on the left."
+    ],
+    [
+      "Giver",
+      "Keep going until you hit the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish line now."
+    ],
+    [
+      "Giver",
+      "Are you there?"
+    ],
+    [
+      "Follower",
+      "Yes, I'm at the cross."
+    ],
+    [
+      "Giver",
+      "Excellent. You're done."
+    ]
+  ],
+  "n_turns": 47,
+  "ended_by": "single_generation"
+}

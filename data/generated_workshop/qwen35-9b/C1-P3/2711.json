@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2897762060,
+  "conversation_no": 2711,
+  "topic": "Vacation Spots",
+  "sb_prompt": "PLEASE DISCUSS TYPES OF VACATIONS AND TRIPS YOU ENJOY.  FIND OUT WHETHER THE OTHER CALLER CAN INTEREST YOU IN A VACATION SPOT YOU HAVEN'T VISITED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 25,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Yeah, hi. I'm actually calling 'cause I was just thinking about how different vacations are depending on what you do for work.\nParticipantB: Oh, really?\nParticipantA: I mean, I'm a server, so my idea of a good trip is just getting away from the noise. Like, I need silence. But I know a lot of people who *have* to take vacations, and they're totally different.\nParticipantB: Yeah, that makes sense. My cousin drives a truck, you know? He spends six months on the road, so for him, a vacation isn't about relaxing on a beach. It's about seeing places he's never seen before.\nParticipantA: Oh, wow. That's wild. I've actually told a few people that before. Like, one time I was at a diner and this lady asked me if I wanted to go to Hawaii or something. And I just said, \"Nah, man, if I go somewhere with no traffic and no wifi, I'll just sit in my backyard and watch clouds.\"\nParticipantB: Haha, fair enough. Actually, my cousin does that sometimes. He says he just loves the freedom. Like, yesterday he called me from the middle of nowhere, just driving through Utah, and he was talking about how cool the canyon is. He said he's never been to a real city, just the tiny stops.\nParticipantA: That sounds intense. I can't imagine living like that. I guess for me, a vacation is about reconnecting with people. Like, maybe a cabin somewhere where you can actually talk to your friends without being interrupted?\nParticipantB: Oh, totally! My cousin said he wishes he could do that. He said he's lonely sometimes. But he said if he could choose one place to go for a real break, he'd want to drive up to the Rockies. He says the air is so fresh there.\nParticipantA: The Rockies? Oh, I love the mountains! I've been to Colorado once, but I never went up high enough. I just stayed near Denver. It was nice, but I didn't feel like I was really \"away\" from it all.\nParticipantB: Yeah, that's kind of the thing. You're still close to civilization. But my cousin said if you drive up past the towns, the world just kind of fades out. He said it's peaceful in a scary way, but peaceful.\nParticipantA: Hmm, that's actually kind of interesting. I always thought the only way to relax was to be somewhere nice and busy. Maybe I'm missing something. Have you ever thought about trying a road trip yourself?\nParticipantB: Nah, not really. I don't have the time. My shifts are crazy. But I'd love to see what it looks like. Maybe I could ask my cousin to show me a picture or two next time he calls.\nParticipantA: That sounds great. Yeah, maybe I should try a little road trip sometime. Just to see what the silence looks like. Maybe I'll book a week next month and just drive until I find a spot that feels right.\nParticipantB: Oh, that sounds fun. You might like it. It's not relaxing like a beach, but it's exciting. Just seeing new stuff all the time.\nParticipantA: Yeah, maybe. I'll keep that in mind. Thanks for the tip.\nParticipantB: No problem!\nParticipantA: Well, I gotta run, I have a table to clear.\nParticipantB: Okay, take care.\nParticipantA: Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 770,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 163059365,
+  "conversation_no": 3508,
+  "topic": "Recycling",
+  "sb_prompt": "WHAT IS BEING DONE IN YOUR COMMUNITY OR AREA ABOUT RECYCLING WASTE MATERIALS?  DO YOU THINK MORE SHOULD BE DONE?  DO YOU HAVE ANY IDEAS ON HOW TO ENCOURAGE MORE RECYCLING OR ON WHAT OTHER MATERIALS SHOULD BE INCLUDED?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 45,
+    "education": "a college degree",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 38,
+    "education": "a college degree",
+    "occupation": "a carpenter",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Hey, just picked up. How's it going?\nParticipantB: Pretty good, just about to head out to a job site. What's up?\nParticipantA: Oh, right, the recycling thing. So in my neighborhood, the city actually changed the bins a couple of years ago. We got those little green cart things now.\nParticipantB: Yeah, I've seen those everywhere. But honestly? They're kind of a pain to deal with sometimes.\nParticipantA: Really? How so? I thought everyone liked that they're smaller and easier to lift.\nParticipantB: Well, it's not the size, it's the sorting. My old lady neighbor, she's been doing this since we were kids, she told me the new bins are confusing. She says people are throwing stuff in there that doesn't belong because the labels are tiny.\nParticipantA: That is true. Actually, my cousin who runs the drop-off center downtown says the same thing. He told me last week that they're getting twice as many complaints about wrong materials as they used to.\nParticipantB: Oh, that's rough. I was hoping it would be simpler, but apparently, it's just moved the confusion from the street to the back end of the plant.\nParticipantA: Yeah, exactly. My cousin says they have to manually sort through all the paper bags that get thrown in the cardboard bin because people don't want to carry the whole bag out.\nParticipantB: Ugh, that makes sense. It feels like a waste of everyone's time then, doesn't it?\nParticipantA: Absolutely. But I do think we could do better. What do you think?\nParticipantB: Well, maybe if we didn't have to sort it all ourselves at the curb? Like, what if the trucks came out and picked up just the big stuff, and the rest stayed in the house until the city offered a centralized place?\nParticipantA: That actually sounds like a great idea. My cousin mentioned they have a community center down the street that accepts plastics and electronics sometimes, but it's not well advertised.\nParticipantB: Yeah, if we just had one big, easy place to drop off everything instead of sorting it into three different bins at the curb, maybe people would actually do it.\nParticipantA: I like that. No more guessing games. But what about other materials? Do you think we should be recycling more than just paper, plastic, and glass?\nParticipantB: Oh, definitely. I've been thinking about those weird metal tubes from old lightbulbs or batteries. People just throw them in the trash and I feel bad for it.\nParticipantA: Exactly! My cousin says they're seeing a ton of batteries in the compost pile now because nobody knows what to do with them. It's dangerous for the soil.\nParticipantB: Yeah, that's crazy. We really should have a specific bin for hazardous stuff.\nParticipantA: Agreed. Though I worry people might just fill that bin with junk if it's too easy.\nParticipantB: True, but at least then we aren't poisoning the ground. Maybe a sticker on the trash cans with pictures? Like a red circle with a battery icon?\nParticipantA: That could work. Visual cues are better than text, especially for the older folks.\nParticipantB: Definitely. Hey, does your cousin have any ideas on how to get more people to actually bother with it though?\nParticipantA: He said they're trying to put flyers in the mailers with the new carts. \"If it doesn't fit in the green bin, don't put it there\" kind of thing. Not sure if it's working yet.\nParticipantB: That seems reasonable. Maybe a little fines system? Like, if you get caught putting trash in the recycling, you pay a small fee?\nParticipantA: Hmm, that might be too harsh. My cousin says that just makes people angry and they stop using the program altogether.\nParticipantB: Maybe just a warning first? Give them a month to get used to it?\nParticipantA: Yeah, that makes more sense. Education before punishment.\nParticipantB: Right. Anyway, I'm about to load up my truck, so I've gotta run.\nParticipantA: Oh, okay, no problem. Good luck with the job.\nParticipantB: You too. Thanks for chatting about this.\nParticipantA: Sure thing. Take care!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 946,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3195645965,
+  "conversation_no": 3294,
+  "topic": "Right To Privacy",
+  "sb_prompt": "FIND OUT WHAT EVERYDAY OCCURRENCES THE OTHER CALLER CONSIDERS TO BE AN INTRUSION OF PRIVACY.  WHAT CAN BE DONE TO PREVENT THEM?  DO YOU AGREE OR DISAGREE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 48,
+    "education": "a college degree",
+    "occupation": "a nurse",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a librarian",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hey, uh, is this the number you gave me?\nParticipantB: Yeah, I'm the one. How are you doing?\nParticipantA: Pretty good. I'm just finishing a shift at the hospital, so I'm a little tired.\nParticipantB: Oh, I get that. I'm at the library downtown, so it's quieter but still, it's a grind.\nParticipantA: Right. So, I was just thinking about the whole privacy thing we were asked to talk about. You know, I feel like I've lost control of my own stuff lately.\nParticipantB: Yeah, me too. It's weird because I love my job, I'm a librarian, so I love books, but sometimes I feel like the whole system is just eating into my personal space.\nParticipantA: Tell me about it. Like, just yesterday, I was walking down the hallway and someone started filming me with their phone without asking.\nParticipantB: Oh no, seriously?\nParticipantA: Yeah. Just because I was passing by. No one was in distress, nothing was happening, and suddenly this guy starts zooming in on my face.\nParticipantB: That is crazy. I actually had something like that last week.\nParticipantA: What happened?\nParticipantB: Well, I was checking out a book for a patron, and another guy took a picture of me holding it. Then later, someone posted it on social media tagging me.\nParticipantA: Oh man, that's messed up. Who were you?\nParticipantB: Just a guy in his twenties. He didn't even know me. I was just doing my job, helping someone find a book, and he made it about me.\nParticipantA: See, that's exactly why I disagree with people who say \"it's just a photo.\" It feels like an intrusion when it's public. Like, if you're at work, or helping someone, you don't want to be a subject of gossip.\nParticipantB: Exactly. I used to think, \"Well, nothing bad happened, so why the big deal?\" But now that I've been on both sides, it feels different.\nParticipantA: Yeah, my sister-in-law had something similar. She's a nurse, and she's dealing with a patient who's a bit unstable.\nParticipantB: Oh, is this about the patient?\nParticipantA: No, no. It's about the family. One of the patient's daughters started filming her mom during a visit, even though the mom was trying to keep it low-key because of the hospital rules.\nParticipantB: Ah, okay.\nParticipantA: The mom got so upset she almost fainted. She didn't want to be recorded in that state. The daughter thought, \"It's for social media, it's for awareness.\"\nParticipantB: That's the thing. When you have a personal connection, like the daughter, you don't realize how much it hurts the person being filmed.\nParticipantA: Right. My sister-in-law is still coming off that. She said she felt violated. It's not about the content, it's about the lack of consent.\nParticipantB: Yeah, I get that. I'm starting to think we need some kind of rule in public places. Like, maybe a sign that says \"No filming unless permission is given\"?\nParticipantA: That sounds good. But how do you enforce that?\nParticipantB: Well, maybe just asking first? Like, \"Hey, can I take a picture?\"\nParticipantA: Yeah, definitely. Or maybe a policy where people in uniform or working at a place can't be filmed without specific consent forms.\nParticipantB: I could see that working. At least then people know before they start snapping photos.\nParticipantA: True. And it would stop the \"it's just a quick shot\" attitude. People assume it's fine until they get yelled at.\nParticipantB: Exactly. It saves everyone the awkwardness.\nParticipantA: I guess I just don't want to feel like a spectacle anymore. Even if I'm doing nothing wrong.\nParticipantB: Me neither. It's exhausting being the \"subject\" all the time.\nParticipantA: Yeah. Well, I should get back to the unit. My patient just called out for meds.\nParticipantB: Okay, good luck with that.\nParticipantA: Thanks. Maybe I'll think about asking someone to film me next time I'm at a party.\nParticipantB: Haha, fair enough. Take care.\nParticipantA: You too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 964,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

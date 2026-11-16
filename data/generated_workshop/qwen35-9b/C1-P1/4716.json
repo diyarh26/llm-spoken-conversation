@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1045149720,
+  "conversation_no": 4716,
+  "topic": "Gun Control",
+  "sb_prompt": "DISCUSS GUN CONTROL.  WHERE DO YOU AND THE OTHER CALLER STAND ON A SCALE FROM 1 TO 10",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey there, yeah! How's it going?\nParticipantA: Good, good. I just got off a job site, actually. You?\nParticipantB: Just about to clock out at the bank. Long day.\nParticipantA: Cool, cool. I'm an electrician, by the way. Been doing it for about seven years now.\nParticipantB: Oh, nice. I'm a teller, so we're in the same boat, basically. Just sitting behind glass all day.\nParticipantA: Yeah, I get that. But man, when I'm up in the attic or crawling in a crawlspace, there's something about the wiring that just clicks for me. I made up my mind to be an electrician like, eight or nine years ago, I think.\nParticipantB: Eight years ago? That's pretty young to decide on that.\nParticipantA: I know, right? I didn't even know what other jobs were really like back then. Just felt like... I needed to do it. But I can't really say why. Just knew it was the one.\nParticipantB: That's weird. I always wanted something more \"normal,\" like corporate or finance. Then my cousin went through the academy and started working security. He actually told me, \"Don't get involved with the guns unless you know what you're doing.\"\nParticipantA: Security? Oh, okay. That makes sense. My buddy Mike is a cop, actually. He says the same thing. You have to be trained, or it's just a death sentence.\nParticipantB: Yeah, exactly. He told me about a guy who tried to handle a situation and ended up getting shot because he didn't know how to de-escalate. It messed with me for a while. I don't think I have the stomach for it.\nParticipantA: I get it. It's scary stuff. But when I'm installing a system, like a door sensor or a camera, I feel like I'm helping people feel safe. There's a power in knowing how to protect a house.\nParticipantB: That's a good point. Maybe that's why I'm skeptical though. I think most people just want to lock their doors and leave it at that. Adding layers of \"protection\" feels like it makes things more dangerous.\nParticipantA: Maybe. But I also think if someone is trying to hurt people, a lock isn't going to stop them. It takes a bit more... presence.\nParticipantB: Presence?\nParticipantA: You know, being ready. Being able to stop a bad guy before they get in the car or into the house. My cousin says that's a hard line to draw.\nParticipantB: True. My cousin says the law is too strict sometimes, but he also says people are too quick to grab a gun when they could call 911. It's a gray area, you know?\nParticipantA: Yeah, it is. That's the tricky part. If you have the tools, do you use them right? I've never had to use my tools on a guy, you know?\nParticipantB: Right. But my cousin had to. And it changed him. He says now he doesn't trust people who don't know how to handle the weight of it. That's where I disagree with him, actually.\nParticipantA: What do you disagree with him about?\nParticipantB: He thinks everyone who wants to own a gun should be allowed to, if they pass a background check. I think we should limit it more. Too many people get their hands on stuff they shouldn't have.\nParticipantA: Hmm. I suppose I do see that. If I didn't know what I was doing, I'd be terrified. But since I do, I feel like I can manage it. It's just... responsibility.\nParticipantB: Responsibility is a big word. My cousin would say I'm just scared. But I think most folks are just trying to sleep at night without worrying about a neighbor's son walking through their door with a rifle.\nParticipantA: That's fair. I just wish people understood the craft better. Like, I can teach you the difference between a live wire and a dead one, but I can't teach you the difference between a protector and a threat.\nParticipantB: Yeah, that's the thing. I don't think I could make that call. I'm just a teller. I hand out money, I don't hand out bullets.\nParticipantA: That's okay. Maybe that's why you're on the fence. I'm just wired differently, I guess. I need to know how the power works to feel safe.\nParticipantB: I get that. It's just that when you mix it all up, it gets messy.\nParticipantA: Yeah, it does. Well, I gotta run, my shift ends in an hour.\nParticipantB: Oh, okay. Me too, actually. Thanks for talking.\nParticipantA: No problem. Good luck at the bank.\nParticipantB: You too. Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 1080,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

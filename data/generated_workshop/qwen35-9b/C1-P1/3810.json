@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 964828714,
+  "conversation_no": 3810,
+  "topic": "Music",
+  "sb_prompt": "PLEASE DISCUSS MUSIC.  CAN YOU FIND MUSICIANSOR TYPES OF MUSIC THAT BOTH YOU AND THE OTHER CALLER LIKE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Hi there, I'm just calling because I was asked to chat about music with a stranger.\nParticipantB: Oh, okay. That's actually kind of random, but sure. I'm good for it.\nParticipantA: Cool. So, what are you into? I'm pretty much all over the place, honestly.\nParticipantB: I'm a bit mixed, to be honest. I work in a pharmacy, so I listen to a lot of things, but some of it really grinds my gears.\nParticipantA: Oh, really? What kind?\nParticipantB: Well, you know how sometimes you work a shift and you just want noise to fill the silence, but it's just... generic pop? That's my dealbreaker sometimes. It feels a bit hollow.\nParticipantA: Yeah, I get that. I find music fascinating though, I mean, seriously, I think about it a lot. Even though I'm a real estate agent, you know?\nParticipantB: How does that connect?\nParticipantA: I don't know, it's just a long-held thing. I made up my mind years ago, like, \"Music is the real deal.\" It's just that I can't really put it into words why. But I love the intensity of it.\nParticipantB: That's interesting. My mom used to be a singer, actually. She didn't make it big, but she knew the ropes. She taught me that it's about the feeling, not just the radio hits.\nParticipantA: Oh, wow, that's sweet. My own experience is... well, I listen to bands that play at venues downtown. Things that feel alive. You know what I mean?\nParticipantB: Yeah, definitely. Live stuff hits different. Especially when you're dealing with people who are stressed out, like in a pharmacy, you need something that actually has heart.\nParticipantA: Exactly. And you know, there's this indie band I heard last week. They play this jazz-influenced rock thing.\nParticipantB: Oh? Who is it?\nParticipantA: They're called The Velvet Echoes. I don't know who else likes them, but their album cover is just beautiful. It's got this moody, blue tone.\nParticipantB: I've never heard of them. But the name sounds nice. Do they do any specific songs?\nParticipantA: They have one called \"Static on the Line.\" It's about feeling disconnected, you know? Like, when you're in a busy room but you're not really there.\nParticipantB: That actually resonates. Sometimes at work, I feel like that. Just surrounded by people but totally alone. I appreciate that kind of honesty.\nParticipantA: Yeah, that's why I stick to it. It feels real. Most pop stuff just feels like a product, you know?\nParticipantB: Totally. Though I will say, I do like the bigger pop hits sometimes. They're catchy. It's just hard to find ones that don't feel... manufactured.\nParticipantA: I guess I'm just lucky I don't really care about the charts. I just want the emotion.\nParticipantB: Same here. I guess I'm looking for that same authenticity, even if it's harder to find. Maybe we could swap playlists sometime?\nParticipantA: Oh, that would be awesome. I'd love to hear what you listen to that you actually enjoy.\nParticipantB: Sure. Maybe send me a few tracks from The Velvet Echoes?\nParticipantA: Definitely. And tell me about your mom's singing. That would be cool.\nParticipantB: Yeah, tell me about that. I'd love to hear about your \"long-held thing.\"\nParticipantA: Okay, well, I'll text you. Thanks for talking, it was nice.\nParticipantB: You too. Good chatting.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 827,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

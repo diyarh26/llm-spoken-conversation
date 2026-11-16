@@ -1,0 +1,207 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m9",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 2860588828,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Hi, can you hear me?\nFollower: Yeah, I can. What's the map?\nGiver: Just a simple one. Can you see it?\nFollower: Yep. Where do I start?\nGiver: Okay, find the START point on your map. It's a cross near the bottom.\nFollower: Found it. Looks like it's a bit lower left than mine? No, wait.\nGiver: Don't worry about the position, just find it. Now, look at the stony desert. Where is it relative to your start?\nFollower: Oh, it's right next to it. Actually, on my map, the stony desert is way up near the top right.\nGiver: Whoops, okay. Let's restart. Find the stony desert. Is it on the right side of your map?\nFollower: Yeah, it's on the right.\nGiver: Good. From your START, face the stony desert. Draw a line towards it, but stop short. Then turn left and draw a line going down.\nFollower: Okay, facing the desert... drawn a bit towards it... turned left... going down.\nGiver: Keep going down until you hit the collapsed shelter. Is that on your map?\nFollower: Yes, I see the collapsed shelter. It's down there.\nGiver: Great. From the shelter, turn right and head towards the savannah. Draw a line to it.\nFollower: Okay, turned right... heading for the savannah. Wait, is the savannah on the right side of the shelter?\nGiver: Yes, the savannah is on the right. Keep going until you reach it.\nFollower: Okay, reaching the savannah. Now turn left and go towards the waterhole. Is there a waterhole on your map?\nGiver: No, we don't go to the waterhole. Go left from the savannah until you see the slate mountain.\nFollower: Ah, I see the slate mountain. It's on the left. Drawing towards it.\nGiver: Good. Once you're next to the slate mountain, turn right and head towards the hot springs.\nFollower: Hot springs? I see hot springs on my map. Drawing towards it.\nGiver: Okay, once you're close to the hot springs, turn left and head towards the white mountain.\nFollower: White mountain... it's up there. Drawing towards it. Wait, is it on the right or left?\nGiver: It's on the right of your path. Go towards it.\nFollower: Okay, heading for the white mountain. Wait, I don't see it on my map. Is it missing?\nGiver: Oh, you don't have the white mountain? That's fine. Just keep going straight until you see the lake.\nFollower: Lake! There it is. Drawing towards the lake.\nGiver: Good. Once you're next to the lake, turn left and head towards the roman baths.\nFollower: Roman baths? I see it. Drawing towards it.\nGiver: Perfect. Once you're next to the roman baths, turn right and head towards the antelope.\nFollower: Antelope... there it is. Drawing towards it.\nGiver: Great. Once you're next to the antelope, keep going straight towards the FINISH. Draw a line to it.\nFollower: Wait, I don't see a FINISH on my map. Is it missing?\nGiver: Oh, you don't have the finish? That's okay. Just keep going straight past the antelope. Where does it end?\nFollower: I'm drawing a line... it seems to go right next to the site of the plane crash. Is that where the finish is?\nGiver: No, the finish is further down. Go past the plane crash site, turn left, and keep going until you reach the stony desert again.\nFollower: Wait, I thought I started near the stony desert?\nGiver: No, start at the bottom, go up, then follow the path I gave you. Just keep going until you hit the stony desert again. That's the finish.\nFollower: Okay, going up... past the plane crash... left... hitting the stony desert. Is this the finish?\nGiver: Yes, that's it. You've reached the finish.\nFollower: Great! Done.\nGiver: Perfect. Bye.\nFollower: Bye.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi, can you hear me?"
+    ],
+    [
+      "Follower",
+      "Yeah, I can. What's the map?"
+    ],
+    [
+      "Giver",
+      "Just a simple one. Can you see it?"
+    ],
+    [
+      "Follower",
+      "Yep. Where do I start?"
+    ],
+    [
+      "Giver",
+      "Okay, find the START point on your map. It's a cross near the bottom."
+    ],
+    [
+      "Follower",
+      "Found it. Looks like it's a bit lower left than mine? No, wait."
+    ],
+    [
+      "Giver",
+      "Don't worry about the position, just find it. Now, look at the stony desert. Where is it relative to your start?"
+    ],
+    [
+      "Follower",
+      "Oh, it's right next to it. Actually, on my map, the stony desert is way up near the top right."
+    ],
+    [
+      "Giver",
+      "Whoops, okay. Let's restart. Find the stony desert. Is it on the right side of your map?"
+    ],
+    [
+      "Follower",
+      "Yeah, it's on the right."
+    ],
+    [
+      "Giver",
+      "Good. From your START, face the stony desert. Draw a line towards it, but stop short. Then turn left and draw a line going down."
+    ],
+    [
+      "Follower",
+      "Okay, facing the desert... drawn a bit towards it... turned left... going down."
+    ],
+    [
+      "Giver",
+      "Keep going down until you hit the collapsed shelter. Is that on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see the collapsed shelter. It's down there."
+    ],
+    [
+      "Giver",
+      "Great. From the shelter, turn right and head towards the savannah. Draw a line to it."
+    ],
+    [
+      "Follower",
+      "Okay, turned right... heading for the savannah. Wait, is the savannah on the right side of the shelter?"
+    ],
+    [
+      "Giver",
+      "Yes, the savannah is on the right. Keep going until you reach it."
+    ],
+    [
+      "Follower",
+      "Okay, reaching the savannah. Now turn left and go towards the waterhole. Is there a waterhole on your map?"
+    ],
+    [
+      "Giver",
+      "No, we don't go to the waterhole. Go left from the savannah until you see the slate mountain."
+    ],
+    [
+      "Follower",
+      "Ah, I see the slate mountain. It's on the left. Drawing towards it."
+    ],
+    [
+      "Giver",
+      "Good. Once you're next to the slate mountain, turn right and head towards the hot springs."
+    ],
+    [
+      "Follower",
+      "Hot springs? I see hot springs on my map. Drawing towards it."
+    ],
+    [
+      "Giver",
+      "Okay, once you're close to the hot springs, turn left and head towards the white mountain."
+    ],
+    [
+      "Follower",
+      "White mountain... it's up there. Drawing towards it. Wait, is it on the right or left?"
+    ],
+    [
+      "Giver",
+      "It's on the right of your path. Go towards it."
+    ],
+    [
+      "Follower",
+      "Okay, heading for the white mountain. Wait, I don't see it on my map. Is it missing?"
+    ],
+    [
+      "Giver",
+      "Oh, you don't have the white mountain? That's fine. Just keep going straight until you see the lake."
+    ],
+    [
+      "Follower",
+      "Lake! There it is. Drawing towards the lake."
+    ],
+    [
+      "Giver",
+      "Good. Once you're next to the lake, turn left and head towards the roman baths."
+    ],
+    [
+      "Follower",
+      "Roman baths? I see it. Drawing towards it."
+    ],
+    [
+      "Giver",
+      "Perfect. Once you're next to the roman baths, turn right and head towards the antelope."
+    ],
+    [
+      "Follower",
+      "Antelope... there it is. Drawing towards it."
+    ],
+    [
+      "Giver",
+      "Great. Once you're next to the antelope, keep going straight towards the FINISH. Draw a line to it."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see a FINISH on my map. Is it missing?"
+    ],
+    [
+      "Giver",
+      "Oh, you don't have the finish? That's okay. Just keep going straight past the antelope. Where does it end?"
+    ],
+    [
+      "Follower",
+      "I'm drawing a line... it seems to go right next to the site of the plane crash. Is that where the finish is?"
+    ],
+    [
+      "Giver",
+      "No, the finish is further down. Go past the plane crash site, turn left, and keep going until you reach the stony desert again."
+    ],
+    [
+      "Follower",
+      "Wait, I thought I started near the stony desert?"
+    ],
+    [
+      "Giver",
+      "No, start at the bottom, go up, then follow the path I gave you. Just keep going until you hit the stony desert again. That's the finish."
+    ],
+    [
+      "Follower",
+      "Okay, going up... past the plane crash... left... hitting the stony desert. Is this the finish?"
+    ],
+    [
+      "Giver",
+      "Yes, that's it. You've reached the finish."
+    ],
+    [
+      "Follower",
+      "Great! Done."
+    ],
+    [
+      "Giver",
+      "Perfect. Bye."
+    ],
+    [
+      "Follower",
+      "Bye."
+    ]
+  ],
+  "n_turns": 44,
+  "ended_by": "single_generation"
+}

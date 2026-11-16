@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3742962292,
+  "conversation_no": 3124,
+  "topic": "Weather Climate",
+  "sb_prompt": "DISCUSS THE WEATHER.   WHAT HAS IT BEEN LIKE IN YOUR AREA?   HAS IT BEEN TYPICAL FOR THIS TIME OF YEAR?  COMPARE IT WITH THE OTHER CALLER'S WEATHER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 39,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 38,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Did you get to the right number?\nParticipantA: Yeah, just got to it. You?\nParticipantB: I was just pulling into my driveway. So, how's the weather treating you today?\nParticipantA: It's been pretty unseasonal. We've had these weird cold snaps and then it heats up right back up.\nParticipantB: Oh, really? That sounds rough. I've been hearing a lot of chatter about shifting patterns lately.\nParticipantA: Yeah, exactly. It feels like we're just guessing anymore. I know my sister deals with this all the time in her line of work.\nParticipantB: Oh, your sister?\nParticipantA: Yeah, she's an accountant. She told me her firm is seeing massive fluctuations in crop yields and insurance claims because of it.\nParticipantB: Wow, really? That's actually fascinating. I do some accounting work too, mostly financial forecasting.\nParticipantA: Oh, really? That sounds serious. My sister says the models are getting hard to predict.\nParticipantB: Totally. Last month I was working on a client's annual review and we were stuck trying to forecast their energy costs.\nParticipantA: Oh, tell me about that. Did you figure it out?\nParticipantB: We actually had to scrap the whole projection. The temperature swings were just too volatile for the old data sets.\nParticipantA: No way. I thought everyone just used the standard seasonal averages.\nParticipantB: Not anymore. My boss and a few of my clients are pretty convinced the old rules don't apply to this decade.\nParticipantA: That's scary to think about. I feel like we're just winging it these days.\nParticipantB: Exactly. I remember talking to a guy at the coffee shop last week who swore it was the most normal spring in history.\nParticipantA: Haha, really? That's the opposite of what everyone else is saying.\nParticipantB: Yeah, he was so convinced I had to laugh. He pulled out his old pocket watch and compared it to something, I forget what.\nParticipantA: That's wild. I think he just wanted to talk about something besides the news.\nParticipantB: Maybe. But seriously, the data I'm looking at right now suggests we're in for some really weird months.\nParticipantA: Oh man, that sounds stressful. I'm just glad I have a stable job where I can ignore the forecasts and just answer phones.\nParticipantB: Haha, I bet you do. It's nice to have a bit of control even if the world outside is chaotic.\nParticipantA: For sure. It's just weird when you see the ice on the roads in January and then the sun is out in July.\nParticipantB: Right? I'm starting to wonder if we need to completely rethink how we budget for everything.\nParticipantA: Maybe. I suppose if you work with numbers, you'd want to know for sure.\nParticipantB: Exactly. If I can't predict the inputs, how can I predict the outputs? It's driving me crazy trying to balance the books.\nParticipantA: I get that. At least I don't have to worry about my sister's clients losing their whole harvest or anything.\nParticipantB: Yeah, she told me about a client who lost three quarters of their inventory last winter. It was heartbreaking.\nParticipantA: That's so sad. I can only imagine how hard that was for them.\nParticipantB: She said they had to take a huge hit on the rest of the year just to cover it.\nParticipantA: Wow. I'm glad I don't deal with business stuff like that. Just happy the office is warm today.\nParticipantB: Yeah, it's actually holding steady for a few hours. Fingers crossed it lasts.\nParticipantA: Me too. Well, I'm gonna head back to the front desk and answer a few calls.\nParticipantB: Okay, sounds good. Thanks for chatting about this with me.\nParticipantA: Sure thing. Talk soon!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 872,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

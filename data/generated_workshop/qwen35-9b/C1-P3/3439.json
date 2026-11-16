@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 946788912,
+  "conversation_no": 3439,
+  "topic": "Credit Card Use",
+  "sb_prompt": "PLEASE DISCUSS CREDIT CARDS.  FIND OUT HOW THE OTHER CALLER MAKES USE OF CREDIT CARDS.  HOW DO THEY COMPARE TO YOUR OWN?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 51,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Are you from the survey?\nParticipantA: Yeah, I got the call too. I'm just glad I'm not talking to an actual salesperson.\nParticipantB: Me too. My boss tried to upsell me on a rewards card last week, it was weird.\nParticipantA: Right. So, how are you?\nParticipantB: I'm good, just tired. Work is a bit stressful lately.\nParticipantA: Same here. You know, I think credit cards are mostly good for building credit, honestly.\nParticipantB: Really? I used to think that, but now I'm on the fence.\nParticipantA: Yeah, exactly. It's about the discipline, not the plastic itself.\nParticipantB: That makes sense. My husband actually had a financial meltdown five years ago.\nParticipantA: Oh, that's... that's really hard to hear. I didn't know that.\nParticipantB: Yeah, he maxed out three cards and couldn't pay them back. He lost his house.\nParticipantA: Wow. That's a dark side I never really considered. I guess I just never let it get that bad.\nParticipantB: Exactly. Since then, I only use my card for gas and groceries, and I pay it off every single month.\nParticipantA: That's actually what I do too. I pay it off in full.\nParticipantB: Really? That's unusual. Most people I know just swipe and forget.\nParticipantA: Well, I learned that lesson a long time ago. I think I made it up back when I was in my thirties, something about it just feeling safer that way.\nParticipantB: I see. That's a good point. You seem pretty comfortable with it then.\nParticipantA: Yeah, mostly. Though sometimes I get tempted to buy something expensive I don't need.\nParticipantB: Oh, totally. I feel that all the time. That's why I'm so careful now.\nParticipantA: Right, the temptation is the real enemy.\nParticipantB: Yeah. Does it bother you at all? Just knowing you carry the debt around?\nParticipantA: A little bit. Sometimes I worry about interest rates creeping up, but overall I'm fine with it.\nParticipantB: I'm glad to hear that. At least your experience is different from my friend's.\nParticipantA: It is. It's a fine line, I guess.\nParticipantB: True. A fine line between a useful tool and a dangerous weapon.\nParticipantA: Yeah, that sums it up nicely.\nParticipantB: Okay, well I think we've said enough. Thanks for chatting.\nParticipantA: Sure, no problem. Good luck with the survey.\nParticipantB: You too. Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 607,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P0",
+  "architecture": "C1",
+  "prompt_level": "P0",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1371231903,
+  "conversation_no": 2711,
+  "topic": "Vacation Spots",
+  "sb_prompt": "PLEASE DISCUSS TYPES OF VACATIONS AND TRIPS YOU ENJOY.  FIND OUT WHETHER THE OTHER CALLER CAN INTEREST YOU IN A VACATION SPOT YOU HAVEN'T VISITED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 25,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Thanks for taking my call. I was hoping to chat about travel plans.\nParticipantB: Sure, I'd love to hear about it. What kind of trips do you usually enjoy?\nParticipantA: Well, I'm a big fan of road trips. I like getting behind the wheel and exploring new towns without a strict itinerary.\nParticipantB: That sounds fun. Do you prefer driving through mountains or coastal highways?\nParticipantA: Honestly, I've done both, but I lean towards coastal drives. Seeing the ocean from the side of the car is just relaxing.\nParticipantB: I see. I'm actually the opposite. I usually gravitate towards hiking and camping adventures in the woods.\nParticipantA: Oh, really? That sounds much more immersive than just driving by. Do you have a favorite spot?\nParticipantB: I just got back from a camping trip in the Pacific Northwest, and the rainforests there were incredible.\nParticipantA: The Pacific Northwest! I haven't been there at all. Is it too wet for someone like me who likes sunshine?\nParticipantB: It is pretty damp, but they have these incredible mossy forests and waterfalls. You can stay in cabins, so it's dry inside.\nParticipantA: A cabin sounds perfect. I've never considered that option. Most of my trips are just hotel rooms.\nParticipantB: It really changes the whole vibe. You wake up to bird sounds and dew on the tent. Do you have any experience with camping?\nParticipantA: Not really. I've stayed in motels and bed and breakfasts my whole life. I'm a bit worried about bugs or roughing it.\nParticipantB: If you're nervous, maybe start with a cabin rental rather than a tent. You can bring your own sleeping bags if you want.\nParticipantA: That makes sense. I like the idea of a cabin. Have you visited anywhere else that might interest me?\nParticipantB: I've been to a few places in the Southwest, like Arizona and New Mexico. The desert landscapes are stunning.\nParticipantA: The desert? I've heard those can be really remote. Is it safe for a first-time traveler?\nParticipantB: It's very safe if you stick to the main tourist areas. You can go to national parks like Saguaro or Mesa Verde.\nParticipantA: National parks sound appealing. I've been to Yellowstone, but I haven't been to the Southwest.\nParticipantB: The contrast is amazing there. You get huge cacti, red rocks, and ancient ruins. It's very different from the coast.\nParticipantA: I'm actually starting to think the Southwest might be right up my alley. It sounds adventurous but manageable.\nParticipantB: If you want, we could look at some itineraries together. Maybe plan a drive through New Mexico?\nParticipantA: That would be great. I'm usually flexible on dates, so when are you thinking of going back out there?\nParticipantB: I'm actually planning to go back next month. I'd love to show you some hidden spots I found last time.\nParticipantA: Next month is perfect for me. I was going to take some time off soon anyway.\nParticipantB: Okay, tell me what kind of schedule you have in mind. Are you looking for a long week or a short weekend trip?\nParticipantA: I think a five-day trip would be ideal. Enough time to see a few things but not too exhausting.\nParticipantB: Five days is plenty for the Southwest. We could hit three or four different towns and national parks.\nParticipantA: That sounds like a solid plan. I really appreciate you suggesting this, even though we've never met.\nParticipantB: No problem at all. Travel is better with a new perspective anyway. What's your dream destination you've never visited?\nParticipantA: My dream spot is probably Scotland. I've only been to Europe, mostly Italy and France.\nParticipantB: Scotland is beautiful! Lots of castles, highlands, and misty moors. Very different from the dry desert.\nParticipantA: I'd love to see the castles. Is it hard to get to?\nParticipantB: It's a bit of a long flight, but once you're there, the train system is great for getting around the highlands.\nParticipantA: A train ride sounds wonderful. I definitely need to add that to my bucket list eventually.\nParticipantB: You should! Maybe start with the Southwest and work your way up to Europe.\nParticipantA: That's a great strategy. I'll keep the Southwest in mind for next month then.\nParticipantB: Sounds like a plan. I'll send you a few links to cabin rentals in Arizona later.\nParticipantA: That would be amazing. Thank you for the help.\nParticipantB: My pleasure. I'm excited to hear how it goes.\nParticipantA: Me too. Thanks again for chatting with me.\nParticipantB: You too. Have a great week!\nParticipantA: You as well. Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 1082,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "58458112bb2669ef495d1a606c197effe91d8a239eb7e5c609de7bcf44ad11ec",
+  "run": {
+    "run_id": "58458112bb2669ef495d1a606c197effe91d8a239eb7e5c609de7bcf44ad11ec",
+    "identity": {
+      "condition": "C1-P0",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T18:24:10.874304+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

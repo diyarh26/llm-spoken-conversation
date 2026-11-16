@@ -1,0 +1,191 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m6",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 773239685,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Okay, we're going to start at the cross and head to the other cross. First, go up a little bit, then turn left.\nFollower: Alright, I'm starting. I go up a bit, turn left... okay, that's a path.\nGiver: Good. Now, do you see the diamond mine? It's to the left of us.\nFollower: Yeah, I see it. It's there.\nGiver: Okay, so you go past the diamond mine, but keep it on your left side. Then, turn right.\nFollower: Right, past the mine, turn right... oh, wait. There's a river here. Is that the one?\nGiver: Yes, that's the fast flowing river. Go along it. Keep the graveyard on your left.\nFollower: Okay, I'm along the river now. The graveyard is on my left... wait, the graveyard isn't on my map.\nGiver: Right, ignore that. Just keep going along the river. Now, turn left. Do you see the Apache camp?\nFollower: I see the Apache camp, yeah.\nGiver: Okay, you need to turn right towards the Apache camp, then turn left again and pass the carved wooden pole on your right.\nFollower: Wait, there's only one carved wooden pole on my map, and it's way down here...\nGiver: No, there are two. One up here, one way down. You missed the first one. Go back to the river, turn left, pass the pole on your right.\nFollower: Ah! Okay, there it is. Turn left, pass the pole on the right... okay, got it. Now turn left again.\nGiver: Good. Now head towards the walled city. Keep the walled city on your left.\nFollower: Okay, heading for the city. City is on my left... okay, good. Now turn right, go up past the flat rocks.\nGiver: Wait, do you see the flat rocks?\nFollower: Yeah, right there.\nGiver: Okay, pass them on your left. Now, go up towards the stone creek.\nFollower: Stone creek is here. Okay. Now turn right, go up. Do you see the buffalo?\nGiver: Yes, go towards the buffalo. Keep it on your right.\nFollower: Okay, buffalo is on my right. Good. Now turn left, go towards the cattle ranch.\nGiver: Pass the cattle ranch on your left. Keep going.\nFollower: Okay, passing the ranch... wait, where does the route go now?\nGiver: Now you turn right, go towards the fort. Keep the fort on your right.\nFollower: Fort is here. Okay, turn right... wait, the fort is on my left on my map!\nGiver: That's because the fort is on the right in my map. You're close, but you're going the wrong way. Turn left, go towards the fort.\nFollower: Okay, turn left... oh, now the fort is on my right. Okay, passing the fort on the right. Now go up a bit.\nGiver: Good. Now turn right, go towards the other carved wooden pole.\nFollower: Oh! There's another pole way down here. I didn't know there was two. Okay, heading for the bottom pole.\nGiver: Right, that's the one. Keep it on your right. Now turn left, go towards the finish.\nFollower: Okay, turn left... wait, the finish isn't on my map.\nGiver: The finish is where we started, but way down south. Look for the fort and the ranch, go past them, then turn left towards the bottom edge.\nFollower: Ah! Okay, past the ranch, turn left... I see the finish mark now? No, that's not it.\nGiver: Keep going left until you hit the edge. You should see the finish cross.\nFollower: Okay, I'm going left... I see a cross! Is that it?\nGiver: Yes! That's the finish. You're done.\nFollower: Whoa, okay. I thought I was lost. Thanks!\nGiver: No problem. You missed the second pole, but you figured it out.\nFollower: Yeah, almost missed it. I'm done.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Okay, we're going to start at the cross and head to the other cross. First, go up a little bit, then turn left."
+    ],
+    [
+      "Follower",
+      "Alright, I'm starting. I go up a bit, turn left... okay, that's a path."
+    ],
+    [
+      "Giver",
+      "Good. Now, do you see the diamond mine? It's to the left of us."
+    ],
+    [
+      "Follower",
+      "Yeah, I see it. It's there."
+    ],
+    [
+      "Giver",
+      "Okay, so you go past the diamond mine, but keep it on your left side. Then, turn right."
+    ],
+    [
+      "Follower",
+      "Right, past the mine, turn right... oh, wait. There's a river here. Is that the one?"
+    ],
+    [
+      "Giver",
+      "Yes, that's the fast flowing river. Go along it. Keep the graveyard on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm along the river now. The graveyard is on my left... wait, the graveyard isn't on my map."
+    ],
+    [
+      "Giver",
+      "Right, ignore that. Just keep going along the river. Now, turn left. Do you see the Apache camp?"
+    ],
+    [
+      "Follower",
+      "I see the Apache camp, yeah."
+    ],
+    [
+      "Giver",
+      "Okay, you need to turn right towards the Apache camp, then turn left again and pass the carved wooden pole on your right."
+    ],
+    [
+      "Follower",
+      "Wait, there's only one carved wooden pole on my map, and it's way down here..."
+    ],
+    [
+      "Giver",
+      "No, there are two. One up here, one way down. You missed the first one. Go back to the river, turn left, pass the pole on your right."
+    ],
+    [
+      "Follower",
+      "Ah! Okay, there it is. Turn left, pass the pole on the right... okay, got it. Now turn left again."
+    ],
+    [
+      "Giver",
+      "Good. Now head towards the walled city. Keep the walled city on your left."
+    ],
+    [
+      "Follower",
+      "Okay, heading for the city. City is on my left... okay, good. Now turn right, go up past the flat rocks."
+    ],
+    [
+      "Giver",
+      "Wait, do you see the flat rocks?"
+    ],
+    [
+      "Follower",
+      "Yeah, right there."
+    ],
+    [
+      "Giver",
+      "Okay, pass them on your left. Now, go up towards the stone creek."
+    ],
+    [
+      "Follower",
+      "Stone creek is here. Okay. Now turn right, go up. Do you see the buffalo?"
+    ],
+    [
+      "Giver",
+      "Yes, go towards the buffalo. Keep it on your right."
+    ],
+    [
+      "Follower",
+      "Okay, buffalo is on my right. Good. Now turn left, go towards the cattle ranch."
+    ],
+    [
+      "Giver",
+      "Pass the cattle ranch on your left. Keep going."
+    ],
+    [
+      "Follower",
+      "Okay, passing the ranch... wait, where does the route go now?"
+    ],
+    [
+      "Giver",
+      "Now you turn right, go towards the fort. Keep the fort on your right."
+    ],
+    [
+      "Follower",
+      "Fort is here. Okay, turn right... wait, the fort is on my left on my map!"
+    ],
+    [
+      "Giver",
+      "That's because the fort is on the right in my map. You're close, but you're going the wrong way. Turn left, go towards the fort."
+    ],
+    [
+      "Follower",
+      "Okay, turn left... oh, now the fort is on my right. Okay, passing the fort on the right. Now go up a bit."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right, go towards the other carved wooden pole."
+    ],
+    [
+      "Follower",
+      "Oh! There's another pole way down here. I didn't know there was two. Okay, heading for the bottom pole."
+    ],
+    [
+      "Giver",
+      "Right, that's the one. Keep it on your right. Now turn left, go towards the finish."
+    ],
+    [
+      "Follower",
+      "Okay, turn left... wait, the finish isn't on my map."
+    ],
+    [
+      "Giver",
+      "The finish is where we started, but way down south. Look for the fort and the ranch, go past them, then turn left towards the bottom edge."
+    ],
+    [
+      "Follower",
+      "Ah! Okay, past the ranch, turn left... I see the finish mark now? No, that's not it."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the edge. You should see the finish cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going left... I see a cross! Is that it?"
+    ],
+    [
+      "Giver",
+      "Yes! That's the finish. You're done."
+    ],
+    [
+      "Follower",
+      "Whoa, okay. I thought I was lost. Thanks!"
+    ],
+    [
+      "Giver",
+      "No problem. You missed the second pole, but you figured it out."
+    ],
+    [
+      "Follower",
+      "Yeah, almost missed it. I'm done."
+    ]
+  ],
+  "n_turns": 40,
+  "ended_by": "single_generation"
+}
