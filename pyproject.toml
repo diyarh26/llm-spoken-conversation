@@ -65,7 +65,7 @@ Repository = "https://github.com/diyarh26/llm-spoken-conversation"
 "Original study" = "https://doi.org/10.1111/cogs.70106"
 
 [tool.setuptools]
-packages = ["analysis", "generation", "prompts"]
+packages = ["analysis", "generation", "prompts", "maptask"]
 
 [tool.setuptools.package-data]
 generation = ["*.json"]
@@ -102,11 +102,12 @@ ignore = [
 # Runnable scripts put the repository root on sys.path before importing project modules.
 "generation/*.py" = ["E402"]
 "analysis/*.py" = ["E402"]
+"maptask/*.py" = ["E402"]
 "explorer/*.py" = ["E402"]
 "prompts/render_examples.py" = ["E402"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["analysis", "generation", "prompts"]
+known-first-party = ["analysis", "generation", "prompts", "maptask"]
 
 # --- tests ---------------------------------------------------------------------------
 
