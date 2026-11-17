@@ -37,7 +37,10 @@ from generation.turnwise import generate_turn
 from maptask.corpus import load_maps
 from maptask.prompts import FOLLOWER, GIVER, LABELS, build_agent, build_c1, build_c2
 
-MAX_TURNS = 150  # human dialogues: mean 147 turns, median well below; a safety cap only
+# Turn cap = the median length of the 128 human dialogues (126 turns; built from the coded
+# moves as in maptask.evaluate.human_turns). Dialogues normally end on their own; the cap
+# stops turn-by-turn runs that loop instead of closing. The same cap applies to C2, C3, C4.
+MAX_TURNS = 126
 ARCHS = ("c1", "c2", "c3", "c4")
 
 Turn = tuple[str, str]
@@ -149,6 +152,7 @@ def main(argv: list[str] | None = None) -> None:
             "thinking": "off",
             "conversation_seed": seed,
             "git_commit": _git_commit(),
+            "max_turns": args.max_turns,
         }
         if args.arch == "c1":
             model, tok = engine[GIVER]
