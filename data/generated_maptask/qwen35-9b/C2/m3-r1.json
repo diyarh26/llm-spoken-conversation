@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m3",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 4249010153,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 39,
+    "dup_kept": 18
+  },
+  "turns": [
+    [
+      "Giver",
+      "right, can you see where i'm starting? there's a cross on my map here. just below it, heading down, you'll hit a pair of cliffs on your left. keep going past those cliffs and you'll reach a small forge, also on the left. now, at the forge, turn sharply to the right. you'll pass an old pine tree straight away."
+    ],
+    [
+      "Follower",
+      "right, okay. i see the cross and the cliffs on my left. i'm walking past them now... and here's the forge on the left too. right, so i turn sharply right at the forge. there's the old pine tree."
+    ],
+    [
+      "Giver",
+      "keep going straight from the pine and you'll head towards a pine forest on your left. pass the forest and then bear right to cross some wheatfields. once you're on the other side, keep going until you reach a canal on your right. pass the canal and turn left into a bakery. from there, go straight through a large area of wheatfields until you hit a crane bay on your left."
+    ],
+    [
+      "Follower",
+      "right, okay. i see the pine forest on the left now. i'm passing it... oh wait, there's a stream on the right here that wasn't on yours? anyway, i'll bear right to cross the wheatfields. there's the canal on my right, but it's further down than you said. i'll keep going past it... wait, there's a bakery here too. where did you say the bakery was? is it before or after the canal?"
+    ],
+    [
+      "Giver",
+      "the bakery is before the canal, right after you cross the wheatfields. so turn left there, then go straight past the canal, and you'll hit the crane bay on your left."
+    ],
+    [
+      "Follower",
+      "right, i think i got it wrong. i turned left at the bakery and went past the canal. that's where the bakery is on my map, actually. i need to turn left *before* the canal, not after. so i'm going to retrace my steps. i'll go back to the bakery, turn right instead, go back across the wheatfields, pass the canal, and then turn left to find the bakery again. then i'll head towards the crane bay."
+    ],
+    [
+      "Giver",
+      "you've got it wrong there. don't go back. just turn left at the bakery now, then keep going straight past the canal on your right. you'll hit the crane bay after that."
+    ],
+    [
+      "Follower",
+      "right, you're right, i'm turning left at the bakery now and heading straight for the canal."
+    ],
+    [
+      "Giver",
+      "ok, good, keep going straight past the canal now until you hit the crane bay on your left, don't stop at the bakery this time just pass the canal and then turn left towards the bay."
+    ],
+    [
+      "Follower",
+      "ok, i'm heading straight past the canal now... right, and there it is, the crane bay on my left."
+    ],
+    [
+      "Giver",
+      "good, once you're at the bay, turn right and head inland towards the rocket warehouse on your left."
+    ],
+    [
+      "Follower",
+      "right, i'm turning right now and heading inland. the warehouse is on my left, good."
+    ],
+    [
+      "Giver",
+      "keep going straight from the warehouse and you'll come to a big old lighthouse on your left. walk along the cliff face right up to the top edge of the map."
+    ],
+    [
+      "Follower",
+      "right, i'm heading up the cliff now. oh, i see a cave on the left here that wasn't on your map... i'll just ignore it and keep going straight. wait, i think i see the lighthouse now, right at the top edge."
+    ],
+    [
+      "Giver",
+      "right, good, keep walking straight up that cliff edge until you hit the very top of the map, don't look at the cave just ignore it, and keep going until you reach the lighthouse standing right there at the top."
+    ],
+    [
+      "Follower",
+      "right, ok. i'm ignoring the cave and heading straight up... oh, wait. i just passed the rocket warehouse on the left, but i don't see the lighthouse anywhere near the top edge like you said. the top of my map is just open space. where is the lighthouse supposed to be?"
+    ],
+    [
+      "Giver",
+      "wait, look at the very bottom of your map. there's a second lighthouse down near the finish line, not up at the top. that's where you need to be going."
+    ],
+    [
+      "Follower",
+      "oh, right! i was going up the wrong way. i'm looking at the wrong lighthouse. okay, i'll go back down to the bottom and head towards that one near the finish line."
+    ],
+    [
+      "Giver",
+      "wait, don't go back down yet. you're almost there, just follow the coast a bit more to the left and you'll find the finish line right by the water."
+    ],
+    [
+      "Follower",
+      "right, i'm following the coast to the left now... oh, there it is, the finish line right by the water. done."
+    ],
+    [
+      "Giver",
+      "right, well done, that's the finish line."
+    ],
+    [
+      "Follower",
+      "right, i'm following the coast to the left now... oh, there it is, the finish line right by the water. done."
+    ],
+    [
+      "Giver",
+      "great, that's all the points on the map we needed to find, so i'm going to hang up the phone now."
+    ],
+    [
+      "Follower",
+      "right, thank you, i think that's everything."
+    ],
+    [
+      "Giver",
+      "okay, wait, i think we're stuck in a loop there. you've already said you're done and i said well done, so why are you repeating yourself? just stop talking now, the route is complete, and we can hang up."
+    ],
+    [
+      "Follower",
+      "right, okay, i understand, i'll stop talking now."
+    ],
+    [
+      "Giver",
+      "right, just stop talking now, the route is complete, and we can hang up."
+    ],
+    [
+      "Follower",
+      "right, okay, i'll stop talking now, the route is complete, and we can hang up."
+    ],
+    [
+      "Giver",
+      "right, stop repeating yourself, we have finished the route so i'm going to hang up the phone now."
+    ],
+    [
+      "Follower",
+      "right, okay, i understand, we're done, so i'll just stop talking now."
+    ],
+    [
+      "Giver",
+      "right, okay, we're done now so i'm hanging up."
+    ],
+    [
+      "Follower",
+      "okay, i stop talking now."
+    ],
+    [
+      "Giver",
+      "i'm hanging up now, good job."
+    ],
+    [
+      "Follower",
+      "okay, you're right, i understand, we're done, so i'll just stop talking now."
+    ],
+    [
+      "Giver",
+      "hang up"
+    ],
+    [
+      "Follower",
+      "okay, i stop talking now."
+    ],
+    [
+      "Giver",
+      "hang up"
+    ],
+    [
+      "Follower",
+      "okay, i stop talking now."
+    ],
+    [
+      "Giver",
+      "hang up"
+    ],
+    [
+      "Follower",
+      "i'm stopping now."
+    ],
+    [
+      "Giver",
+      "i'm hanging up now, good job."
+    ],
+    [
+      "Follower",
+      "i'm stopping now."
+    ],
+    [
+      "Giver",
+      "hang up"
+    ],
+    [
+      "Follower",
+      "okay, i'll stop talking now."
+    ],
+    [
+      "Giver",
+      "i'm hanging up now, good job."
+    ],
+    [
+      "Follower",
+      "okay, i'm stopping now."
+    ],
+    [
+      "Giver",
+      "okay, i'm hanging up now, good job."
+    ],
+    [
+      "Follower",
+      "okay, i'll stop talking now."
+    ],
+    [
+      "Giver",
+      "i'm hanging up now, good job."
+    ],
+    [
+      "Follower",
+      "okay, i'm stopping now."
+    ],
+    [
+      "Giver",
+      "hang up"
+    ],
+    [
+      "Follower",
+      "okay, i'm stopping now."
+    ],
+    [
+      "Giver",
+      "okay, stop repeating yourself, we are done, so i am hanging up."
+    ],
+    [
+      "Follower",
+      "okay, i'm stopping now."
+    ],
+    [
+      "Giver",
+      "hang up"
+    ],
+    [
+      "Follower",
+      "right, okay, i understand, we're done, so i'll just stop talking now."
+    ],
+    [
+      "Giver",
+      "okay, stop repeating yourself, we are done, so i am hanging up."
+    ],
+    [
+      "Follower",
+      "okay, i stop talking now."
+    ],
+    [
+      "Giver",
+      "keep going straight from the bakery, you won't go back to the woods, just walk past the canal, turn left into the bakery, then go straight through the wheatfields to the crane bay, then turn right inland to the warehouse, then head up the cliff past the cave to the lighthouse at the top, then turn left down the coast to the finish line."
+    ],
+    [
+      "Follower",
+      "right, okay, i'm going to ignore all that and just follow the route from the start again. i'll head past the forge, turn right to the pine, go past the forest, cross the wheatfields, turn left at the bakery, go past the canal, turn left into the bakery again, go through the wheatfields to the crane bay, turn right to the warehouse, head up the cliff past the cave to the lighthouse, and then turn left down to the finish."
+    ],
+    [
+      "Giver",
+      "no, no, stop that, you're going in circles again. listen carefully. you did not turn left at the bakery the first time you went through that section; you went straight. you need to turn left into the bakery for the second time, not the first. ignore the woods you already passed. from the bakery, go straight through the wheatfields to the crane bay, turn right to the warehouse, go up the cliff past the cave to the lighthouse at the top, then turn left down the coast to the finish line. do not do the whole route from the start, just pick up where you left off at the bakery and finish it correctly."
+    ],
+    [
+      "Follower",
+      "right, okay, i understand. i'm going to ignore the start and the forge for now and just start again from where we left off. i'll head straight from the bakery past the wheatfields to the crane bay on the left."
+    ],
+    [
+      "Giver",
+      "keep going straight past the crane bay on your left and you'll hit the rocket warehouse straight away."
+    ],
+    [
+      "Follower",
+      "right, i'm heading straight past the bakery now and going towards the crane bay."
+    ],
+    [
+      "Giver",
+      "keep going, you'll hit the warehouse next, turn right at it and head up the cliff past the cave to the lighthouse at the very top edge."
+    ],
+    [
+      "Follower",
+      "right, okay, i'll stop talking now and just draw the line from the warehouse straight up the cliff to the lighthouse."
+    ],
+    [
+      "Giver",
+      "yes, just draw a straight line from the warehouse up to the lighthouse at the top edge, don't talk any more, just draw it and we are done."
+    ],
+    [
+      "Follower",
+      "okay, i'll stop talking now and just draw a straight line from the warehouse up to the lighthouse at the top edge."
+    ],
+    [
+      "Giver",
+      "yes, good, just draw that line up now and don't say another word."
+    ],
+    [
+      "Follower",
+      "okay, i'll stop talking now and just draw that line up."
+    ],
+    [
+      "Giver",
+      "yes, just draw it, i'm waiting."
+    ],
+    [
+      "Follower",
+      "okay, i'm drawing the line now."
+    ],
+    [
+      "Giver",
+      "keep going up the cliff face and you'll reach the lighthouse at the very top."
+    ],
+    [
+      "Follower",
+      "okay, i'm drawing the line up now... wait, hold on, i just realized something. you said the lighthouse is at the very top edge, but on my map, there's no lighthouse up there. there's only a cave and open space. the lighthouse you were talking about earlier was down near the finish line, right? did you mean for me to go to the top one or the bottom one? because i don't see a lighthouse at the top to draw my line to."
+    ],
+    [
+      "Giver",
+      "no, i mean the lighthouse at the top edge, the one i marked on my map. go to the top edge where the cliff ends and draw the line straight up to where the cross is there, don't worry about the cave or the one at the bottom, just draw it to the top cross now."
+    ],
+    [
+      "Follower",
+      "right, okay, i'm drawing the line up to the top edge where you said there's a cross, even though i don't see it on my map, i'll just draw it there now."
+    ],
+    [
+      "Giver",
+      "right, just draw a straight vertical line all the way up to that spot on the top edge, i don't care if it's a cave or open space on your map, just draw the line to where the finish point is at the very top."
+    ],
+    [
+      "Follower",
+      "right, okay, i'm drawing that vertical line straight up to the top edge where you say the cross is."
+    ],
+    [
+      "Giver",
+      "keep going straight up that line until you reach the very top edge of your map, don't stop halfway or look for the cave, just draw it straight up to the finish point at the top."
+    ],
+    [
+      "Follower",
+      "okay, i'm drawing the line straight up to the top edge now."
+    ],
+    [
+      "Giver",
+      "keep drawing that line up to the top edge, don't stop now, just go straight up to the finish point at the very top."
+    ],
+    [
+      "Follower",
+      "okay, i'm drawing the line straight up to the top edge now."
+    ],
+    [
+      "Giver",
+      "keep drawing that line up to the top edge, don't stop halfway, just go straight up to the very top."
+    ],
+    [
+      "Follower",
+      "okay, i'm drawing the line straight up to the top edge now, don't stop."
+    ],
+    [
+      "Giver",
+      "keep going up, don't stop halfway, just draw it straight to the very top."
+    ],
+    [
+      "Follower",
+      "right, okay, i'm drawing the line straight up to the very top edge now."
+    ],
+    [
+      "Giver",
+      "keep going up, don't stop now, just draw it straight to the very top."
+    ],
+    [
+      "Follower",
+      "okay, i'm drawing the line straight up to the very top."
+    ],
+    [
+      "Giver",
+      "keep going up that line until you reach the very top edge, don't stop halfway, just go straight up to the finish point now."
+    ],
+    [
+      "Follower",
+      "okay, i'm drawing the line straight up to the very top edge now, don't stop."
+    ],
+    [
+      "Giver",
+      "keep going up that line until you reach the very top edge now."
+    ],
+    [
+      "Follower",
+      "okay, i'm drawing the line straight up to the very top edge now, don't stop halfway, just go straight up to the finish point."
+    ],
+    [
+      "Giver",
+      "keep going up that line until you reach the very top edge, don't stop halfway, just go straight to the finish point now."
+    ],
+    [
+      "Follower",
+      "okay, i'm drawing the line straight up to the very top edge now, don't stop halfway, just go straight to the finish point."
+    ],
+    [
+      "Giver",
+      "keep going up straight to the very top edge now, don't stop halfway, just draw it to the finish point."
+    ],
+    [
+      "Follower",
+      "okay, i'm drawing the line straight up to the very top edge now, don't stop halfway, just go straight to the finish point."
+    ],
+    [
+      "Giver",
+      "don't keep repeating yourself, just draw the line to the top edge right now, stop talking, and finish it."
+    ],
+    [
+      "Follower",
+      "okay, i'm drawing the line straight up to the very top edge right now."
+    ],
+    [
+      "Giver",
+      "stop talking and just draw the line straight up to the very top edge right now."
+    ],
+    [
+      "Follower",
+      "okay, i'm drawing the line straight up to the very top edge right now."
+    ],
+    [
+      "Giver",
+      "stop talking and just draw the line."
+    ],
+    [
+      "Follower",
+      "i'm drawing the line up to the top edge now."
+    ],
+    [
+      "Giver",
+      "stop talking now, just draw the line to the top edge, we are done."
+    ],
+    [
+      "Follower",
+      "okay, i stop talking now."
+    ],
+    [
+      "Giver",
+      "okay, just finish drawing the line to the top edge now and we are done."
+    ],
+    [
+      "Follower",
+      "right, okay, i stop talking now and finish drawing the line to the top edge."
+    ],
+    [
+      "Giver",
+      "stop talking, just draw the line to the top edge and we are done."
+    ],
+    [
+      "Follower",
+      "right, okay, i'm done drawing the line now."
+    ],
+    [
+      "Giver",
+      "i said stop talking."
+    ],
+    [
+      "Follower",
+      "i'm done talking now, just drawing the line."
+    ],
+    [
+      "Giver",
+      "stop talking now and just draw the line to the top edge."
+    ],
+    [
+      "Follower",
+      "okay, i'm done drawing the line to the top edge now."
+    ],
+    [
+      "Giver",
+      "keep drawing the line up to the top edge now, do not say another word, just finish it."
+    ],
+    [
+      "Follower",
+      "okay, i'm done drawing the line."
+    ],
+    [
+      "Giver",
+      "right, draw the line to the top edge now and stop talking."
+    ],
+    [
+      "Follower",
+      "okay, i'm done drawing the line now."
+    ],
+    [
+      "Giver",
+      "stop talking now and just finish drawing the line."
+    ],
+    [
+      "Follower",
+      "okay, i'm done drawing the line now."
+    ],
+    [
+      "Giver",
+      "stop talking now, just draw the line to the top edge and we are done."
+    ],
+    [
+      "Follower",
+      "okay, i'm done drawing the line."
+    ],
+    [
+      "Giver",
+      "stop talking now and just finish drawing the line to the top edge."
+    ],
+    [
+      "Follower",
+      "okay, i'm done drawing the line now."
+    ],
+    [
+      "Giver",
+      "stop talking now and just finish drawing the line to the top edge."
+    ],
+    [
+      "Follower",
+      "right, okay, i stop talking now and just draw the line to the top edge."
+    ],
+    [
+      "Giver",
+      "stop talking now and just draw the line to the top edge."
+    ],
+    [
+      "Follower",
+      "okay, i'm done drawing the line."
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

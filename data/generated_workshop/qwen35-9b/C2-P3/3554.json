@@ -1,0 +1,274 @@
+{
+  "condition": "C2-P3",
+  "architecture": "C2",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 3554,
+  "topic": "Exercise And Fitness",
+  "sb_prompt": "DO YOU DO ANY EXERCISE REGULARLY TO MAINTAIN YOUR HEALTH OR FITNESS LEVEL?  IF SOOR DO IT AS A TASK?  COMPARE YOUR HABITS AND YOUR MOTIVES",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, actually I do kind of. But mostly it feels like a task you have to check off a list, not something I really enjoy."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I get that. My cousin's a nurse too and she basically treats running like a job she hates."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, mine's mostly just making sure I don't have a heart attack before I'm thirty-five."
+    ],
+    [
+      "ParticipantB",
+      "That's a bit grim, isn't it? My cousin actually quit running last year because she just couldn't stand it anymore, so she switched to yoga and walks instead. Does that sound like something you'd ever want to try?"
+    ],
+    [
+      "ParticipantA",
+      "Yoga sounds tempting actually, maybe I should try it once just to see if I can breathe without hating it."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe you should give it a go before you lose all interest."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm sure it'd be way less painful than pounding pavement."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, definitely. The first time you do it, you'll probably still feel like you're working out, but there are actually a lot of ways to move your body without it feeling like punishment."
+    ],
+    [
+      "ParticipantA",
+      "That actually does sound pretty appealing, honestly."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe just start with twenty minutes of that instead of an hour on the treadmill."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that sounds doable. Maybe I'll look into a class near my office."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that'd be a good start, maybe just go for it."
+    ],
+    [
+      "ParticipantA",
+      "I'd do that, sure. I mean, maybe just once or twice to see if it sticks."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, don't overthink it, just try one class this week."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess I'll check the listings this weekend."
+    ],
+    [
+      "ParticipantB",
+      "Sounds good, but don't let it just be another box to tick off, yeah?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess I won't make it a chore if I just show up once."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, just show up and see how you feel."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's probably enough to get the ball rolling."
+    ],
+    [
+      "ParticipantB",
+      "Right, so you just give it a shot without worrying too much about the commitment?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, exactly, just show up and see what happens."
+    ],
+    [
+      "ParticipantB",
+      "That's a good mindset, just take it day by day."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess I'll just try it out and see if it feels less like a chore."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's the only way it sticks without becoming a burden."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, exactly."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's probably the best way to approach it anyway."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's probably the best way to approach it anyway."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's all you need to start."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's exactly what I need to hear."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, tell you what, let's see how you go with that first class and we can chat about it again later."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, sounds like a plan."
+    ],
+    [
+      "ParticipantB",
+      "Sounds good, yeah."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'll let you know how it goes."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, absolutely, let's do that."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that'd be great."
+    ],
+    [
+      "ParticipantB",
+      "Sounds good."
+    ],
+    [
+      "ParticipantA",
+      "Okay, well I'll give it a shot."
+    ],
+    [
+      "ParticipantB",
+      "Okay, take care."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, sounds good."
+    ]
+  ],
+  "n_turns": 41,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2,
+    "dup_kept": 1
+  },
+  "conversation_seed": 3093280203,
+  "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+  "run": {
+    "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+    "identity": {
+      "condition": "C2-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+    "created_utc": "2026-11-17T10:53:33.359476+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

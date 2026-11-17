@@ -1,0 +1,278 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 2227,
+  "topic": "Tv Programs",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER'S FAVORITE TV SHOWS ARE AND WHY.  ARE YOUR INTERESTS SIMILAR OR DIFFERENT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 16,
+    "education": "a high-school education",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hey, so what shows are you into? I'm thinking of asking my boss to put some on the factory floor breaks, but honestly, I'm kinda skeptical about whether they'd actually keep anyone awake."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I work breaks too and honestly, I'm torn on it; I'd love to try *The Office* again but my shift is so dead anyway I don't think it'll matter."
+    ],
+    [
+      "ParticipantA",
+      "I get that, but honestly I never really saw the point in it myself."
+    ],
+    [
+      "ParticipantB",
+      "Look, you never saw the point, but for me, it's just that one guy who keeps falling out of his chair; that's the only part that actually cracks me up sometimes."
+    ],
+    [
+      "ParticipantA",
+      "I guess I just don't think laughing helps when you're standing on a production line trying to catch someone's mistake."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess you're right, but still, if I'm on the verge of falling asleep, at least *The Office* makes me want to laugh out loud a little bit instead of just staring at the wall."
+    ],
+    [
+      "ParticipantA",
+      "I guess I just think the clock keeps ticking louder than any joke anyway."
+    ],
+    [
+      "ParticipantB",
+      "I guess you're right, it's a hard sell, but sometimes a good laugh is the only thing that keeps me from dozing off right there on the line."
+    ],
+    [
+      "ParticipantA",
+      "Look, I just don't think standing around watching people trip over themselves is gonna make my hands stop shaking when I spot a defect."
+    ],
+    [
+      "ParticipantB",
+      "I mean, maybe not the hands shaking, but the brain definitely needs a break from staring at that same conveyor belt."
+    ],
+    [
+      "ParticipantA",
+      "Look, I get the brain break part, but when it comes to the actual defects on the line, I don't think watching strangers trip over their own chairs is gonna help me spot a real problem."
+    ],
+    [
+      "ParticipantB",
+      "I mean, nobody actually trips on my shift, so it's not exactly relatable, but I guess if it helps you relax a little bit then I'll take it."
+    ],
+    [
+      "ParticipantA",
+      "Look, I appreciate you trying to see the humor in it, but I just can't bring myself to think about tripping when I'm trying to keep this line running tight."
+    ],
+    [
+      "ParticipantB",
+      "I get that you need to stay sharp, but honestly, even if it doesn't help with the defects, a little bit of distraction can't hurt."
+    ],
+    [
+      "ParticipantA",
+      "Look, if it ain't helping me catch the defect, then it's just wasting time and I need to focus on the work."
+    ],
+    [
+      "ParticipantB",
+      "I guess you're right, I just need something that doesn't feel like I'm forcing myself to be entertained."
+    ],
+    [
+      "ParticipantA",
+      "Look, I know it's just a distraction, but I really can't bring myself to watch people mess up when I'm supposed to be watching for real mistakes."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I get that about the work stuff, but maybe we can just talk about something completely different, like shows where people actually solve problems instead of just messing up?"
+    ],
+    [
+      "ParticipantA",
+      "That's actually a good idea, shows about fixing things might feel more useful. What kind of problem-solvers are you into? Do you like shows where people figure it out, or stuff where they mess up and learn?"
+    ],
+    [
+      "ParticipantB",
+      "Something like *How It's Made* or maybe a home repair show, where you actually see something broken get fixed instead of just people tripping."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, something like *How It's Made* makes more sense to me, seeing as how my job is literally about figuring out how things are built right."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds way more useful, actually, seeing as how my job is literally about figuring out how things are built right."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that'd be way better than watching people trip, honestly."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe something like *MythBusters* or a history doc where they actually test if something works, that feels pretty real to me."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, *MythBusters* sounds like something that'd actually help me figure out if a part is gonna fail before it does."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds pretty solid, actually."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that actually hits home because sometimes I can't figure out why a part is failing until I see how it was made in the first place."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, seeing a thing actually built or tested before it breaks, that feels way more satisfying than just watching someone slip."
+    ],
+    [
+      "ParticipantA",
+      "That's the kind of stuff that actually makes sense, seeing as I'm trying to figure out exactly why these parts aren't holding up."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that makes total sense, because sometimes I watch those shows just to see if they'd actually work on my line before I'd even try fixing it myself."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, seeing it actually work before you even touch it yourself, that's gotta be better than guessing."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, seeing how it's built before you even touch it, that's gotta be way better than just guessing."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's actually the whole point for me, seeing the real build process makes it way easier to spot what might go wrong before it even happens."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that actually makes sense, because sometimes seeing how something's made helps me spot the flaw before I even get there."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the kind of logic that actually sticks when you're the one holding the hammer, so maybe we should just stick to the stuff that teaches you something real."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe we should just stick to the stuff that teaches you something real."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think we both agree on that then."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that makes total sense, because sometimes seeing how something's made helps me spot the flaw before I even get there."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, seeing how it's made helps me spot the flaw before I even get there, so I think we're on the same page about that."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, exactly, that's probably why you're the one to watch for the real defects and I'm just the one keeping the workers awake."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 6,
+    "dup_kept": 1
+  },
+  "conversation_seed": 2287330382,
+  "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+  "run": {
+    "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+    "identity": {
+      "condition": "C2-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "90e78653f87b3d00f02c3bc4759891c48c15c8cf",
+    "created_utc": "2026-11-17T07:24:13.295312+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m1",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 655333798,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  },
+  "turns": [
+    [
+      "Giver",
+      "hello i need you to draw a route on your map from start to finish do you have the start point marked"
+    ],
+    [
+      "Follower",
+      "yeah i've got the start marked with a cross"
+    ],
+    [
+      "Giver",
+      "alright look at your map and find the banana tree near the top left corner of your start point"
+    ],
+    [
+      "Follower",
+      "ah okay i found it yeah it's right there near the top left corner of my start"
+    ],
+    [
+      "Giver",
+      "now draw a line from your start over to the banana tree on your map"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing the line to the banana tree now"
+    ],
+    [
+      "Giver",
+      "and then walk north to the footbridge"
+    ],
+    [
+      "Follower",
+      "okay i found the footbridge i'm walking north from the banana tree to it"
+    ],
+    [
+      "Giver",
+      "and then follow that stream on your left until you see the abandoned truck"
+    ],
+    [
+      "Follower",
+      "i found the truck but it's on my left side not my right so this stream must be the wrong one i'll follow this other stream instead"
+    ],
+    [
+      "Giver",
+      "oh sorry, i said left when i meant right, ignore that stream and follow the one on your right side"
+    ],
+    [
+      "Follower",
+      "oh okay so i'll follow the stream on the right side then."
+    ],
+    [
+      "Giver",
+      "and then turn left and head down the cobbled street to the remote village"
+    ],
+    [
+      "Follower",
+      "okay i found the cobbled street and the remote village but i'm going to have to draw the line differently than you are describing because the street on my map runs straight down towards the bottom and doesn't seem to connect to the village you're talking about."
+    ],
+    [
+      "Giver",
+      "wait the cobbled street is to the left of the pyramid not the right can you look at the pyramid again and draw towards that instead"
+    ],
+    [
+      "Follower",
+      "ah okay i see now, i'm looking at the pyramid on the left and heading down that street towards the village."
+    ],
+    [
+      "Giver",
+      "okay now you should be at the village so just head north from there until you see the white mountain on your right and the abandoned truck on your left then keep going up towards the old temple"
+    ],
+    [
+      "Follower",
+      "okay i found the village and the mountain is on my right and the truck is on my left so i'm heading up towards the temple now."
+    ],
+    [
+      "Giver",
+      "and then follow the crest falls down to the right until you reach the footbridge"
+    ],
+    [
+      "Follower",
+      "oh wait i'm following the crest falls down the right side but the footbridge is on my left i must be on the wrong stream"
+    ],
+    [
+      "Giver",
+      "hold on wait the footbridge is on the left of the stream you're on but the temple is on the right so you must be on the wrong stream altogether you need to go back to the village and find the stream that's actually on your right side"
+    ],
+    [
+      "Follower",
+      "oh no okay i'm going back to the village and looking for the stream on the right side now"
+    ],
+    [
+      "Giver",
+      "okay i see the confusion let me clarify the whole path from the start again so we don't keep making mistakes."
+    ],
+    [
+      "Follower",
+      "okay sure, where do we start?"
+    ],
+    [
+      "Giver",
+      "let's start at the top of the map find the pyramid near the north edge and draw a line down to the cobbled street on your left"
+    ],
+    [
+      "Follower",
+      "okay i see the pyramid near the top edge so i'm drawing a line down to the street on my left now."
+    ],
+    [
+      "Giver",
+      "and then turn right and head down that street to the cobbled street"
+    ],
+    [
+      "Follower",
+      "wait i think i'm confused, you said draw down to the cobbled street then turn right to head down it, but the cobbled street is the one i'm already on going down, so do you mean turn left to the other street or just keep going down this one?"
+    ],
+    [
+      "Giver",
+      "keep going straight down the street you are on until you reach the cobbled street"
+    ],
+    [
+      "Follower",
+      "wait okay so i'm just walking straight down that street to the cobbled street."
+    ],
+    [
+      "Giver",
+      "and once you get there just keep going straight down until you see the remote village on your left side"
+    ],
+    [
+      "Follower",
+      "okay i'm going straight down the street now until i see the village on my left side"
+    ],
+    [
+      "Giver",
+      "okay so once you hit the village keep going north up the street past the truck until you see the old temple on your right"
+    ],
+    [
+      "Follower",
+      "okay i'm heading up the street past the truck now looking for the temple on my right"
+    ],
+    [
+      "Giver",
+      "and then walk along that street until you see the remote village on your left, then turn right and keep going up until you see the abandoned truck on your left."
+    ],
+    [
+      "Follower",
+      "wait i'm confused you said hit the village first but you just said go past the truck to the temple then come back to the village on the left, but i'm already at the temple heading down, so am i supposed to go back down to the village?"
+    ],
+    [
+      "Giver",
+      "wait calm down i'm sorry i'm getting ahead of myself let's start over from the very beginning and go slowly"
+    ],
+    [
+      "Follower",
+      "okay sure, where do we start?"
+    ],
+    [
+      "Giver",
+      "hello hello i am so sorry i am speaking too fast let us start from the very top and go very slowly.\nlook at your map find the pyramid near the very top edge of your map\ndraw a line down from the pyramid to the left of it until you hit the cobbled street\nonce you are on that street walk straight down towards the bottom of the page\ni see you are drawing it now okay good\nkeep going down that street until you see the remote village on your left side\ndo you see the village on your left yet"
+    ],
+    [
+      "Follower",
+      "no i see the village on my left now"
+    ]
+  ],
+  "n_turns": 40,
+  "ended_by": "closing"
+}

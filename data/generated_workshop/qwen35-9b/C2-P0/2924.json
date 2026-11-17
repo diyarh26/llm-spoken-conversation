@@ -1,0 +1,278 @@
+{
+  "condition": "C2-P0",
+  "architecture": "C2",
+  "prompt_level": "P0",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 2924,
+  "topic": "Trial By Jury",
+  "sb_prompt": "DISCUSS POSSIBLE CHANGES IN THE WAY TRIALS BY JURY ARE CONDUCTED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 26,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hey, thanks for picking up. I'm pretty glad you called because I was just reading an article about proposed reforms to jury selection, and I wanted to get your thoughts on whether we should abolish the requirement that jurors be registered voters."
+    ],
+    [
+      "ParticipantB",
+      "Oh wow, that's actually a really bold idea to just drop the voter registration requirement entirely. I mean, I definitely have some college credits, so I've read a bit about the theory behind it, but it feels like there might be some unintended consequences if we just open it up to everyone.\n\nI was thinking about it last night too, actually. My friend, he's a great guy and very informed on local issues, but he's not a registered voter because he moved here last year and hasn't bothered with the paperwork yet. If we abolished that rule, he'd probably be on a jury, which is totally fair in theory that he should have a voice, but practically, does he know enough about the specific laws in this county to make a good call?\n\nIt seems like we might end up with jurors who are just picking sides based on their own biases rather than the facts, since they haven't had the same incentive to stay engaged with local politics. But I guess the counter-argument is that the current system excludes a lot of people who could see both sides of an argument better than just the registered voters.\n\nWhat do you think? Do you feel like the current system is doing enough to ensure a fair cross-section of the community, or do you think we should just go ahead and remove that barrier?"
+    ],
+    [
+      "ParticipantA",
+      "That's a really valid point about the practical side of things, and honestly, your friend's situation highlights exactly why I was worried. You're right that just opening it up to everyone might mean jurors don't actually know the local laws or the specific nuances of our community. I think the issue isn't necessarily with the people themselves, but with the system trying to police who \"knows enough\" without actually testing their knowledge. Maybe instead of just flipping a switch to let non-voters in, we could keep the voter registration requirement but add a mandatory orientation or a short quiz about local statutes before they're seated, so we ensure they actually understand the issues they're deciding on without losing the broader diversity of the community."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a really interesting compromise, honestly. I actually hadn't considered a mandatory quiz, but it makes sense that we'd want to verify people actually understand the local context before handing them gavel power.\n\nBut I'm just worried about how much time that would eat into the trial process itself. If we have to sit everyone through an orientation or a test, isn't it possible the whole trial gets delayed? Trials are already tough on people; imagine having to sit through an extra hour of lectures before we even get to the evidence.\n\nAlso, do you think that would discourage people from even trying to serve in the first place? If it feels like an extra hurdle just to do civic duty, maybe we'd end up with even *fewer* jurors than we have now.\n\nI'm just wondering if there isn't a middle ground where we keep the current system mostly intact but maybe add some other way to get more diverse perspectives, like maybe better outreach to encourage non-voters to register, rather than just letting them sit in without knowing the law? What do you think about that approach?"
+    ],
+    [
+      "ParticipantA",
+      "That outreach idea actually addresses your time concern perfectly because we'd only need to invest that energy upfront to get a more diverse pool, rather than wasting hours on jury selection day. If we focus on getting non-voters to register first, they pass the existing filter naturally, so we don't lose the current efficiency. Plus, there's a moral argument there\u2014if you want a truly representative cross-section of the community, the jury should ideally reflect the actual demographics of the city, not just a subset of voters. Have you thought about how hard it might be to get people to register if they don't see an immediate benefit? Like, what if we made jury service a prerequisite for getting certain civic credits or discounts, just to nudge that participation up?"
+    ],
+    [
+      "ParticipantB",
+      "That's actually a really creative idea about tying it to civic credits or discounts, but I'm a little skeptical that people would actually see jury service as a chore worth trading for a discount. It feels like a lot of effort for just a small perk, and honestly, if they were going to vote anyway, they probably wouldn't mind registering just to do their civic duty regardless of the reward.\n\nBut I guess the risk is that if we make it too hard to register or the process too complicated, we end up scaring people away entirely. Maybe instead of discounts, we could simplify the whole registration process for non-voters? Like, if you show up to court, could they help you register on the spot before sending you home? That way, you get the benefit of the diversity without the upfront administrative hassle, and the court can vet you right then and there. What do you think about that \"register at the courthouse\" approach? It feels like it solves the \"knowledge gap\" you mentioned earlier too, since you'd only be seated if you actually took the time to go through the process."
+    ],
+    [
+      "ParticipantA",
+      "That on-site registration idea is actually really clever because it completely sidesteps the problem of people never getting the chance to serve in the first place. You're right, if the barrier to entry is \"go register now,\" a lot of people just never do it. But if you can register right there in the lobby, it turns jury service into a more accessible civic act rather than a bureaucratic hurdle. It also solves my worry about the \"knowledge gap\" you mentioned\u2014instead of taking an hour to quiz everyone, we just ensure they are legally eligible to serve, and then we can do our standard voir dire to test their actual knowledge of the case facts. It feels like a much more practical way to get a true cross-section without killing the efficiency of the trial schedule. Do you think the court clerks would actually have the time to help people fill out forms while other jurors are waiting in the hall?"
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a very doable workflow for the clerks; honestly, if we've got a waiting line in the lobby anyway, they might as well help everyone who walks in fill out the form so they aren't just sitting there reading papers for hours. I can definitely see that solving the efficiency problem while actually getting more voices in the room. It feels like we're finally balancing the \"fairness\" of having a cross-section with the practical reality that trials can't last for days just to sort out registration papers.\n\nI'm still a little nervous about the logistics though\u2014what if the courthouse lobby gets crowded with people trying to register, or what if someone tries to game the system by registering on the spot just to see the case and then deciding not to serve later? Would we need to add a quick background check or a short commitment statement right there before they even get to the judge's side? It seems like we'd want to make sure that once they walk into that jury room, they're actually locked in, so we don't end up with a jury that fell apart because half the people showed up only to change their minds after seeing the evidence."
+    ],
+    [
+      "ParticipantA",
+      "That's a really good point about locking people in, and adding a quick commitment statement makes total sense to prevent that \"gaming the system\" scenario. I think a simple written declaration where they promise to serve for the full duration and confirming they have no disqualifying biases could act as that safeguard without needing a full background check, which would just drag on the process.\n\nI suppose the real question then is whether we can get the court clerks trained to do this efficiently so we don't just trade one bottleneck for another. If we implement that spot registration with a commitment form, does that feel like it actually solves the original problem of excluding non-voters, or do you think there are still hidden biases in who chooses to show up and register on the spot?"
+    ],
+    [
+      "ParticipantB",
+      "That's a fair concern about the commitment statement acting as a real deterrent; if people realize they're legally bound the moment they sign that paper, they might avoid showing up altogether if they have a strong bias against the case. But I do think that's exactly the point of a jury\u2014we need people who are willing to listen to the evidence before deciding, not just the first 10 minutes. So maybe the key is to make sure that commitment statement is framed positively, like a \"promise to justice\" rather than a penalty, so it doesn't feel too heavy. And regarding the clerks' time, if we set up a dedicated kiosk with just a few key questions instead of a full form, maybe we could get those backgrounds checked faster. Do you think a streamlined version of that form would work, or would we need to wait until the morning of the trial to actually start the background checks to keep things moving?"
+    ],
+    [
+      "ParticipantA",
+      "Streamlining the form into just a few key questions is definitely the way to go, because we don't want to turn the registration line into a mini-employment agency waiting room. If we can get the clerks to verify basic eligibility and that one crucial commitment statement in under two minutes, then we can probably run those checks in parallel with the initial screening for disqualifying biases during the standard voir dire phase. That way, we aren't holding up the whole morning just to see if someone is eligible; we filter the legal right to serve upfront, and then we focus our time on the actual suitability for the specific case. It feels like the perfect balance between keeping the doors open for everyone and ensuring we don't waste resources on people who clearly aren't fit to serve."
+    ],
+    [
+      "ParticipantB",
+      "That parallel approach is brilliant because it really shifts the bottleneck from a long, static registration line to a dynamic conversation with the clerk. I can see how getting the eligibility out of the way in under two minutes means the real heavy lifting\u2014the digging into people's backgrounds and biases\u2014happens right where it belongs, during the actual questioning with the lawyers. It keeps the flow moving so we aren't just shuffling people around waiting for paperwork that might not matter anyway.\n\nBut I am still a tiny bit worried about the \"hidden biases\" you mentioned earlier regarding who actually shows up to that kiosk. If we make it so easy to register on the spot, do you think we might accidentally attract people who just want to see the case without really being interested in serving, and then filter them out later? Or does the requirement to sign that commitment statement act as a strong enough filter that only people genuinely willing to serve will bother to fill out the form in the first place?"
+    ],
+    [
+      "ParticipantA",
+      "You make a great point about the commitment statement acting as that crucial filter\u2014if someone is just curious and not actually willing to commit to the process, they probably won't bother stopping at the kiosk to sign that paper. It's like a self-selecting mechanism where the effort required to enter the pool weeds out the casual observers.\n\nI do wonder, though, if we need to explicitly warn them in the script the clerks use. Maybe instead of just asking for the signature, the clerk could say something like, \"By signing this, you are agreeing to serve for the full duration of the trial and are not eligible to withdraw based on the evidence alone.\" That way, anyone who fills it out truly understands the weight of the promise they're making. Does that kind of clear communication feel like it would scare away the bad actors, or do you think most people would just do it anyway because they actually want to be part of the justice system?"
+    ],
+    [
+      "ParticipantB",
+      "That is a really compelling script for the clerks to use; hearing that explicit warning upfront would definitely make me feel more comfortable about the commitment involved, and I think it would act as a great final filter for anyone who wasn't genuinely ready to take on the responsibility.\n\nIf the clerks really drive home that \"no evidence-only withdrawals\" rule, I suspect it would naturally weed out the people who were just curious and hadn't actually thought through the time commitment beforehand. So, while we still haven't solved the entire \"hidden bias\" problem\u2014because the people who *do* sign are still just a specific subset of non-voters\u2014I think this approach gets us much closer to a truly representative jury without the logistical nightmare of trying to quiz everyone on local statutes first.\n\nDoes having that clear, upfront expectation change your mind about whether the \"register on the spot\" method is better than just trying to push people to register before they even leave their homes? I feel like once the stakes are clearly explained at the door, the system becomes much more robust than it was in my original worries."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think once you lay out those clear expectations upfront, it shifts the whole dynamic for me. It's definitely worth reconsidering the \"push from home\" approach because the logistical hurdles there are just too high to overcome effectively. If we can make the on-site commitment so transparent that only genuinely willing people stop to sign, we're actually getting that authentic cross-section you were worried about without creating a massive administrative bottleneck.\n\nIt feels like the moment we make the rules explicit, we stop trying to guess who might be eligible and start actually engaging the people who are ready to serve. So, I'm pretty convinced that the kiosk with the clear warning is the smarter move to balance fairness and efficiency."
+    ],
+    [
+      "ParticipantB",
+      "I'm glad to hear that the transparency angle is resonating with you, because honestly, having people knowingly step into a room where they've already signed away their right to quit based on the evidence is a really powerful way to filter for actual commitment. It just feels like the system finally stops asking for the impossible\u2014trying to convince people to register months in advance when they're worried about the time\u2014and starts addressing the real issue: making sure that the people who *do* show up are actually ready to do the hard work of deliberation.\n\nThat said, I'm still a little curious about the long-term impact if we lean so heavily on that self-selection at the door. Are we risk-free, though, that we might end up excluding a whole demographic of non-voters who are passionate about the cause but just genuinely fear the time commitment? Like, if the warning is that scary, maybe we're losing the very people who care the most but just don't want to take the risk of seeing a case they hate. Does it feel like we'd lose too much diversity in that final group, or do you think we'd still capture enough voices to make it a fair cross-section?"
+    ],
+    [
+      "ParticipantA",
+      "You raise a really crucial point about the risk of self-censorship, and I admit I hadn't fully considered that the \"scary\" warning might actually shut out the passionate minority who are willing to do the work but fear the specific outcome. If the very people who care the most about a cause are scared off by the promise they can't quit until the end, we might end up with a jury that's diverse in demographics but monolithic in their worldview, missing out on the voices that would have challenged the prosecution or seen a different angle entirely.\n\nI think we might need a slight tweak to that script to address that fear without losing the commitment aspect. Maybe the clerk could reframe it not as a penalty for quitting based on evidence, but as a promise to listen to *all* sides of the story before making a final decision, emphasizing that their duty is to the process of deliberation itself, regardless of the verdict. Would you be open to that phrasing, or do you think we need to explore a different way to get those passionate non-voters in the door without triggering that hesitation?"
+    ],
+    [
+      "ParticipantB",
+      "That's a really thoughtful reframing, and I think that distinction between \"you can't quit based on evidence\" versus \"you must listen to all sides\" is the key to unlocking that passive diversity. If we frame it as a duty to the *process* rather than a penalty for a specific outcome, it might actually encourage those passionate non-voters who are worried about getting a verdict they disagree with to step forward.\n\nHonestly, that feels like the missing piece to get the full picture without scaring people away. It keeps the commitment real so we don't get juries that fall apart mid-trial, but it removes the stigma of being forced to ignore your gut instinct. Does that sound like a script clerks could actually deliver naturally, or does it feel like it requires too much training to get right?"
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a much more natural way for clerks to deliver it, and I think it's actually easier to train them on that phrasing because it shifts the focus from the legal restriction to the civic virtue of listening. It feels less like a threat and more like an invitation to do the hard work, which should help us capture those passionate non-voters who were previously sitting on the fence. If we get that tone right, I'm pretty confident we can close out this idea with a system that's both fair to the community and practical for the court schedule. Thanks for walking me through all these angles; it's been really helpful to hear your perspective."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a much more natural way for clerks to deliver it, and I think it's actually easier to train them on that phrasing because it shifts the focus from the legal restriction to the civic virtue of listening. It feels less like a threat and more like an invitation to do the hard work, which should help us capture those passionate non-voters who were previously sitting on the fence. If we get that tone right, I'm pretty confident we can close out this idea with a system that's both fair to the community and practical for the court schedule. Thanks for walking me through all these angles; it's been really helpful to hear your perspective."
+    ],
+    [
+      "ParticipantA",
+      "That makes perfect sense, and honestly, I think if we get that framing right, the clerks won't even need a ton of extra training; it's just a matter of reminding them to focus on the \"why\" rather than the \"restriction.\" It definitely feels like we've found a middle ground that keeps the doors open for the passionate non-voters you were worried about, without creating the administrative nightmare of testing everyone on statutes or risking trial delays. I think we might actually be ready to look at the pilot program details now to see how this would roll out in a real courtroom setting."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a solid plan for the pilot program, and honestly, I'm relieved that we've landed on something that doesn't feel like it's asking too much of the clerks or the people in the lobby. I think if we can get that \"listening to all sides\" phrasing right, we finally have a system that balances the need for local legal familiarity with the diversity of the actual community without turning jury selection into a month-long ordeal. I'm glad we could walk through all those worries together; it seems like a much more realistic path forward than just abolishing the voter requirement outright."
+    ],
+    [
+      "ParticipantA",
+      "I agree, it's really nice to have found a path that respects the logistical limits of the court system while still trying to be as inclusive as possible. If the pilot goes well, I'd be happy to help coordinate the training materials for the clerks to make sure they get that \"civic virtue\" tone right, because the wording is definitely going to make or break whether we actually get those passionate voices in the room."
+    ],
+    [
+      "ParticipantB",
+      "Yes, helping to draft those training materials sounds like a great next step, and I'd love to hop on a quick call later this week if you want to review the wording together to make sure that \"civic virtue\" tone comes across exactly right. I'm glad we've come this far together!"
+    ],
+    [
+      "ParticipantA",
+      "That sounds perfect, and I'd definitely count on you to help nail down that specific wording. If we can get the clerks to really emphasize the \"civic virtue\" aspect, I'm confident we'll be ready to launch the pilot before the next election cycle. Thanks for the great conversation today; this is exactly the kind of nuanced thinking we need to make our judicial system work better for everyone."
+    ],
+    [
+      "ParticipantB",
+      "You're absolutely right that getting that wording precise is critical, because if the clerks miss the nuance between \"duty to listen\" and \"restriction on withdrawal,\" we could end up scaring away the very people we're trying to include. I think the key is making sure the script explicitly mentions that the commitment is about the *process* of finding the right verdict, not about silencing a dissenting opinion. I'll keep that in mind as I draft the initial draft for you to review. Let me know if you have any specific phrases in mind for that script before we hop on the call, or should we just meet and brainstorm the wording live?"
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a great plan, and I think brainstorming the specific phrases live during our call will definitely help us catch any nuance before it gets written down. I'm looking forward to tackling that wording together; if we can lock in a script that clearly distinguishes between procedural commitment and dissent, I feel like we'll have a really strong foundation for the pilot. Let's definitely make that a priority for our meeting later this week."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a great plan, and I think brainstorming the specific phrases live during our call will definitely help us catch any nuance before it gets written down. I'm looking forward to tackling that wording together; if we can lock in a script that clearly distinguishes between procedural commitment and dissent, I feel like we'll have a really strong foundation for the pilot. Let's definitely make that a priority for our meeting later this week."
+    ],
+    [
+      "ParticipantA",
+      "Absolutely, I think that's the best approach. Bringing that distinction up live during our call will let us iterate on the phrasing in real-time, so we can make sure the nuance between procedural commitment and dissent comes across exactly right before it gets frozen in a document. I'm ready whenever you are to dive into the specific word choices."
+    ],
+    [
+      "ParticipantB",
+      "Understood, I'm all for brainstorming live so we can hammer out those specific phrases in real-time and make sure the nuance really lands. I've got a few ideas on how to phrase the \"duty to the process\" part that might help distinguish it from a hard restriction, so let's definitely focus on that during our call."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a really solid strategy, especially having you ready with some specific phrasing ideas. I think if we can get a draft on the table before we hop on the call, it might actually speed up our brainstorming session so we don't just keep circling back to the same basic concepts. Do you have any particular phrases you're already leaning towards that might help make that distinction between procedural duty and personal opinion?"
+    ],
+    [
+      "ParticipantB",
+      "That's a really good point about having a draft ready beforehand; I actually do have a few phrases I've been jotting down as I've been thinking about it, so I can definitely pull those up and share them with you before we jump on the call to save us some time debating the basics. Here's a couple of variations I'm leaning towards for that \"duty to the process\" part: \"Your commitment is to engage with every perspective presented during the trial to help the court reach a fair decision,\" or maybe \"We need jurors dedicated to the full journey of deliberation, listening to all evidence before forming a final view.\" Which of those resonates more with the tone you were thinking of, or do you think we should try to come up with something even more specific to the \"civic virtue\" angle?"
+    ],
+    [
+      "ParticipantA",
+      "Those two variations you just shared actually hit that balance really well. The first one about \"engaging with every perspective\" feels active and constructive, whereas the second one about the \"full journey\" is a bit more abstract, which might make it harder for someone to visualize exactly what that duty entails during the actual trial.\n\nI think I'm leaning toward your first option because it explicitly names \"every perspective presented,\" which directly addresses the fear of having to ignore evidence you disagree with. It turns the commitment into an active obligation to listen rather than a passive restriction on quitting. Plus, it keeps the language focused on the goal of a \"fair decision\" rather than just the process itself, which might resonate better with people who are passionate about a specific case outcome. Does that distinction help you decide which one to propose in the draft?"
+    ],
+    [
+      "ParticipantB",
+      "That's a really compelling distinction, and I think choosing the \"engaging with every perspective\" phrasing is definitely the smarter move for the draft. It feels much more empowering than just talking about the abstract \"journey,\" so candidates are likely to actually take it seriously rather than dismissing it as vague bureaucratic talk. If we go with that first option, does that mean the draft version you're thinking of will highlight that active duty to listen to opposing evidence right at the top of the script? I'd love to see how that looks in writing before we hop on the call and finalize it."
+    ],
+    [
+      "ParticipantA",
+      "Yes, highlighting that active duty to listen right at the top of the script seems like the perfect way to anchor the whole thing. If we put that specific phrase front and center, it immediately frames the commitment as something positive and empowering rather than a bureaucratic checkbox. I think seeing that clear, actionable sentence in the draft will give us a really good baseline to discuss on the call, so let's definitely prepare that section for our review later this week."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a perfect anchor for the draft. Putting that active duty front and center really does make it feel less like a bureaucratic hurdle and more like a meaningful role. I think if the first sentence of the script uses that \"engaging with every perspective\" phrasing, it will set the right tone immediately and give us a solid baseline to build the rest of the call around. I'm ready whenever you are to start discussing the specifics on the call later this week."
+    ],
+    [
+      "ParticipantA",
+      "Perfect, I'm ready to review those variations whenever you are. Let's get that draft prepared with the \"engaging with every perspective\" phrasing so we can hit the ground running when we hop on the call and finalize the script for the clerks."
+    ],
+    [
+      "ParticipantB",
+      "Got it, I'll definitely prep those variations and highlight that \"engaging with every perspective\" line at the top of the draft so we can hit the ground running on the call. I'm ready to start discussing the specifics whenever you are!"
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a solid plan; seeing that specific line highlighted in the draft will definitely give us the clarity we need to hit the ground running on the call. I'm ready to start discussing the specifics whenever you are!"
+    ],
+    [
+      "ParticipantB",
+      "That sounds perfect! I'm glad we both see the value in getting that specific line highlighted upfront\u2014it really does anchor the whole conversation for the clerks and make the distinction crystal clear before we even pick up the phone. I'll get that draft prepped with the variations and the highlighted phrase ready to go for our call later this week, so we can dive right into finalizing the script without wasting time on the basics. Talk soon!"
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 6,
+    "dup_kept": 2
+  },
+  "conversation_seed": 3094711186,
+  "run_id": "1e31ecb90cb675115abc6e929495eba459d7319c41c56019352dc3b61cd6ec45",
+  "run": {
+    "run_id": "1e31ecb90cb675115abc6e929495eba459d7319c41c56019352dc3b61cd6ec45",
+    "identity": {
+      "condition": "C2-P0",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "90e78653f87b3d00f02c3bc4759891c48c15c8cf",
+    "created_utc": "2026-11-17T01:12:19.933605+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

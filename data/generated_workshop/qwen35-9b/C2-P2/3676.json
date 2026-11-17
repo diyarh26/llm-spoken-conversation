@@ -1,0 +1,278 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 3676,
+  "topic": "Movies",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THOUGHT ABOUT THE LAST FEW MOVIES THEY SAW. WHAT MOVIES HAVE YOU SEEN LATELY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, hi. So, I was just watching this old Martin Scorsese thing last night... \"Taxi Driver\" or something, I think, with Robert De Niro. It's this gritty one where the guy's kind of crazy and driving around the city hitting on women. It's pretty intense. Have you seen any good movies lately?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, actually I saw that one, it's on the list, and it's pretty intense. I saw another one last night, \"The Godfather\", that was really good. But I saw this one yesterday about a car, it was pretty cool, I think it was \"Bugsy\". It's about a car mechanic, which is my job."
+    ],
+    [
+      "ParticipantA",
+      "Oh wow, that is a dream job for me to see on screen, I'm a teacher so I barely know anything about engines. Does it show what it's actually like fixing cars, or is it just like... uh, glamorized? I guess I'd assume the mechanic part is pretty boring, but I wouldn't know, I don't have that kind of patience."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, actually, you'd be surprised, I've worked on a lot of old classics and it's just nuts sometimes, like watching a car eat itself."
+    ],
+    [
+      "ParticipantA",
+      "That sounds wild, I guess I just worry that if it's too boring, nobody'll ever want to go into it, or that they'll think it's all just hot oil and grease."
+    ],
+    [
+      "ParticipantB",
+      "Well, I mean, it's not just hot oil, it's actually pretty stressful, like yesterday my boss called me in for a transmission leak and I'm trying to get the car started while I'm explaining to him why it's gonna cost him $400."
+    ],
+    [
+      "ParticipantA",
+      "That's gotta be the worst feeling, trying to start it while he's watching your hands like you're performing surgery. I guess that's why people think it's just grease, they don't know the pressure you're under."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a constant battle, honestly, like I'm constantly tripping over the customer's lack of patience and the car's stubbornness."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that sounds like the worst nightmare, honestly, I can't imagine having to keep talking to someone while you're fighting with a machine."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's like, nobody listens, you know? I mean, I tell them the brakes are worn out, they just want it to go, but then the next day they're back saying it still won't start. It's just... exhausting."
+    ],
+    [
+      "ParticipantA",
+      "I feel like that's just the bad ones, though, like people coming in and saying the radio died and it's actually a full blown engine failure."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's just the tragedy, they just want it fixed fast and cheap and don't realize that if you rush the timing on the valves, the whole thing blows up in their face."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess people just don't get that sometimes you gotta slow down to make sure it doesn't blow up, or they end up paying for the whole engine."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, exactly, it's like, you think you fixed it, you wipe it off, and then the guy taps it twice and says \"it's still not running\" and boom, you're back to square one."
+    ],
+    [
+      "ParticipantA",
+      "That is so frustrating, especially when you tell them you need to order parts and they just want a band-aid on a broken leg."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's exactly what I'm talking about, like they want a quick fix for a timing chain issue and then it rattles the whole block."
+    ],
+    [
+      "ParticipantA",
+      "That's just the thing though, it's not even about the money, it's that they just don't trust the word of a professional because they saw a video on TikTok about a five-minute fix."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's the thing, I just don't have time to tell them about the five-minute video fix because they've already booked me for that whole day, so I'm just trying to tell them what actually needs to be done before they call me back angry."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the scary part, like if you try to do a quick fix yourself and it blows up, now you're paying for the whole engine instead of just a part, and they're mad that you messed it up."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and if they don't listen then you're basically just guessing in the dark, so then they come back the next day saying it's still broken and now you have to take the whole motor apart to see what they broke themselves."
+    ],
+    [
+      "ParticipantA",
+      "I know that feeling, I think my parents did that to my car once and I had to pay to fix it because I didn't have the patience to wait for the right part."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and my cousin was the one who did it, he just went in there and ordered the wrong sensor from the internet and now my dad is paying him three times what it should cost."
+    ],
+    [
+      "ParticipantA",
+      "That's pretty wild, my dad actually did that with my bike once, bought a cheap sensor off some random site and now I have to pay him to fix the mess."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's just ridiculous, he thought he was saving me money but ended up spending double and now he's mad because I told him to wait for the part that actually fits."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the worst part, when your own dad ends up losing the whole fight just because he couldn't wait for the right part, you know?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's the worst part, when you have to explain to a grown man that his \"DIY\" disaster is now a $1,200 job and he still thinks he's the victim."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's just the psychology of it, you know? People think they're saving money but they're actually just feeding the problem, and then you're stuck with the bill and they're mad at you for telling them the truth."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's like you're trying to sell them the truth but they just want a story that makes them feel good, so then you're stuck watching them blow up at you for being the bad guy."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's just that whole \"be the hero\" thing, isn't it? You see that video and you think, \"I can do this,\" but then you're the one burning the house down or blowing up the car, and instead of being a hero, you're just the guy who lost three hundred bucks."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's exactly it, it's like you're trying to be the hero but then you're just the guy holding the bill for a fire you didn't start."
+    ],
+    [
+      "ParticipantA",
+      "That's such a harsh reality check though, it really does kill the whole hero fantasy pretty quick."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's like you're just holding the bag for their ego, and honestly, it takes a lot of patience not to just throw them out the door and say, \"Pay me twice what it should cost, just go."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's like you're just holding the bag for their ego, and honestly, it takes a lot of patience not to just throw them out the door and say, \"Pay me twice what it should cost, just go."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I mean, I actually just told my cousin that if he wants to save on the parts, he should just come by the shop and I'll let him use my tools, but he still thinks he's saving me money even though he's probably going to mess it up twice as bad."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I totally get that, it's just watching them fight a battle they didn't even know they were in while you're standing there trying to be the nice adult."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, he's already halfway through it and I'm praying he doesn't blow a hole in the firewall."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the thing though, if he blows a hole in the firewall while he's \"just tightening a hose,\" I'm not sure there's any amount of patience left in the world that's gonna save this one."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, here I am holding the line, hoping your dad doesn't rip the wire out of the wall right now."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I hope your dad didn't rip that wire out yet, because honestly I'm starting to feel like I should just call him and tell him to stop before he burns the whole house down."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, tell him to stop before he starts a fire in the living room, honestly."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 1,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1,
+    "dup_resamples": 3,
+    "dup_kept": 1
+  },
+  "conversation_seed": 1708788140,
+  "run_id": "507bd38eb429983ff60c66a88b311431f4d2e7c7fc968fbba36287b7cd01ead0",
+  "run": {
+    "run_id": "507bd38eb429983ff60c66a88b311431f4d2e7c7fc968fbba36287b7cd01ead0",
+    "identity": {
+      "condition": "C2-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "90e78653f87b3d00f02c3bc4759891c48c15c8cf",
+    "created_utc": "2026-11-17T08:57:56.189399+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

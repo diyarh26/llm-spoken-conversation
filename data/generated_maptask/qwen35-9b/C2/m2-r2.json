@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m2",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 387649072,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 42,
+    "dup_kept": 24
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, start here. Go straight down towards the wagon wheel."
+    ],
+    [
+      "Follower",
+      "Ooh, that's easy, I'll head down past the mine."
+    ],
+    [
+      "Giver",
+      "No, don't go past the mine, keep going until you see the white water on the left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm looking for the white water on the left."
+    ],
+    [
+      "Giver",
+      "Yes, on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I see the white water. I'm going to turn right towards the wagon wheel."
+    ],
+    [
+      "Giver",
+      "No, that's wrong, the wagon wheel is on your left, not the white water."
+    ],
+    [
+      "Follower",
+      "Oh, I'm an idiot, the wagon wheel is on the left. Okay, I'll turn left."
+    ],
+    [
+      "Giver",
+      "Keep going straight until you reach the cactus."
+    ],
+    [
+      "Follower",
+      "Okay, I'll head over to the cactus."
+    ],
+    [
+      "Giver",
+      "Wait, don't go to the cactus, keep going straight past it until you see the outlaws hideout on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going straight until I see the outlaws hideout on my left."
+    ],
+    [
+      "Giver",
+      "You're still going straight, you need to turn left at the outlaws hideout."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the outlaws hideout."
+    ],
+    [
+      "Giver",
+      "Right, keep going straight until you see the stone slabs."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going straight until I see the stone slabs."
+    ],
+    [
+      "Giver",
+      "Right, keep going straight until you reach the swan pond."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight now until I see the swan pond on my left."
+    ],
+    [
+      "Giver",
+      "Turn left at the swan pond."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the swan pond now."
+    ],
+    [
+      "Giver",
+      "Keep going straight until you see the saloon bar on your right."
+    ],
+    [
+      "Follower",
+      "Okay, I see the saloon bar on my right now."
+    ],
+    [
+      "Giver",
+      "You need to stop there, I don't want you going any further."
+    ],
+    [
+      "Follower",
+      "Wait, do I just stop right there?"
+    ],
+    [
+      "Giver",
+      "Yes, that's where you finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the swan pond now."
+    ],
+    [
+      "Giver",
+      "Wait, you said you were turning left already, why are you going straight again?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm confused, are we going straight or left now?"
+    ],
+    [
+      "Giver",
+      "Wait, look, you said you turned left at the swan pond, so you're coming back towards the saloon bar, right?"
+    ],
+    [
+      "Follower",
+      "Yes, I'm coming back towards the saloon bar."
+    ],
+    [
+      "Giver",
+      "Right, keep going straight from the swan pond until you see the saloon bar on your right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight from the swan pond towards the saloon bar."
+    ],
+    [
+      "Giver",
+      "Yes, just keep going straight, I said don't turn left yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight towards the saloon bar."
+    ],
+    [
+      "Giver",
+      "Yes, keep going straight towards the saloon bar, don't turn left yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'll just keep going straight from the swan pond towards the saloon bar."
+    ],
+    [
+      "Giver",
+      "Okay, just keep going straight, don't turn left again, I said keep going straight."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going straight towards the saloon bar."
+    ],
+    [
+      "Giver",
+      "Okay, keep going straight until you see the noose on your right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight from the saloon bar towards the noose."
+    ],
+    [
+      "Giver",
+      "Yes, you are going in the right direction, keep going straight until you reach the noose."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going straight until I see the noose."
+    ],
+    [
+      "Giver",
+      "Okay, once you see the noose, keep going straight until you reach the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight towards the noose."
+    ],
+    [
+      "Giver",
+      "Right, turn right at the noose."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn right at the noose."
+    ],
+    [
+      "Giver",
+      "Don't turn right yet, keep going straight until you see the finish on the left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight from the noose towards the finish."
+    ],
+    [
+      "Giver",
+      "Yes, keep going straight until you see the finish on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going straight until I see the finish on my left."
+    ],
+    [
+      "Giver",
+      "Okay, just keep going straight until you see the finish on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going straight until I see the finish on my left."
+    ],
+    [
+      "Giver",
+      "Right, once you see the finish, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight from the noose towards the finish."
+    ],
+    [
+      "Giver",
+      "Okay, just keep going straight from the noose until you see the finish on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight from the noose towards the finish."
+    ],
+    [
+      "Giver",
+      "Just keep going straight, you're on the right track."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight from the noose towards the finish."
+    ],
+    [
+      "Giver",
+      "Yeah, just keep going straight, don't turn left again, keep going straight towards the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm still heading straight towards the finish."
+    ],
+    [
+      "Giver",
+      "Just keep going straight, don't turn left again, keep going straight towards the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going straight towards the finish."
+    ],
+    [
+      "Giver",
+      "Yeah, keep going straight from the noose, don't turn left again, just head straight towards the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm still heading straight towards the finish."
+    ],
+    [
+      "Giver",
+      "Okay, don't worry, keep walking straight towards the stone slabs you passed earlier."
+    ],
+    [
+      "Follower",
+      "Wait, don't you mean the saloon bar? I didn't pass the stone slabs yet."
+    ],
+    [
+      "Giver",
+      "No, wait, look at your map again, you haven't passed the stone slabs yet because you are heading the wrong way entirely. You need to turn left at the swan pond, not keep going straight. Once you turn left, you will go past the stone slabs, then past the white water, and then past the diamond mine before you finally come back to the saloon bar on your right. You need to start by turning left at the swan pond."
+    ],
+    [
+      "Follower",
+      "Wait, you're confusing me, which way do I go now?"
+    ],
+    [
+      "Giver",
+      "Just turn left at the swan pond, that's where you need to go."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the swan pond."
+    ],
+    [
+      "Giver",
+      "Okay, once you turn left at the swan pond, go straight until you see the white water on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the swan pond."
+    ],
+    [
+      "Giver",
+      "Right, keep going straight from the white water until you see the diamond mine on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the swan pond."
+    ],
+    [
+      "Giver",
+      "Right, don't keep turning left at the swan pond again, you need to go straight from the swan pond towards the saloon bar first."
+    ],
+    [
+      "Follower",
+      "Okay, I'll go straight from the swan pond towards the saloon bar first, then turn left."
+    ],
+    [
+      "Giver",
+      "No, wait, you can't go to the saloon bar yet, you need to go left first. Turn left at the swan pond."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the swan pond."
+    ],
+    [
+      "Giver",
+      "Okay, don't turn left at the swan pond yet, just keep going straight from the swan pond towards the saloon bar."
+    ],
+    [
+      "Follower",
+      "Okay, I'll just keep going straight from the swan pond towards the saloon bar."
+    ],
+    [
+      "Giver",
+      "Wait, you need to stop going straight and turn left at the swan pond right now."
+    ],
+    [
+      "Follower",
+      "Wait, you keep telling me to go straight but then saying turn left? I'm so confused, which way do I actually go from the swan pond? Do I turn left first?"
+    ],
+    [
+      "Giver",
+      "Stop panicking, listen to me carefully: from the swan pond, you must turn left immediately."
+    ],
+    [
+      "Follower",
+      "Okay, I will turn left at the swan pond."
+    ],
+    [
+      "Giver",
+      "Okay, good, now that you have turned left at the swan pond, keep going straight until you see the white water on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the swan pond now and heading towards the white water."
+    ],
+    [
+      "Giver",
+      "Keep going straight until you see the diamond mine on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the swan pond now, but I don't see the white water on my left."
+    ],
+    [
+      "Giver",
+      "Wait, are you sure you turned left at the swan pond? You're still heading east towards the cactus."
+    ],
+    [
+      "Follower",
+      "I think I'm facing the wrong way, I'm looking at the cactus but I can't see the white water on my left."
+    ],
+    [
+      "Giver",
+      "You are heading towards the cactus, that's wrong, you need to be facing towards the white water."
+    ],
+    [
+      "Follower",
+      "I'm facing the cactus, but where is the white water? I can't see it on my left."
+    ],
+    [
+      "Giver",
+      "Look at your map, the white water is the rapids near the bottom left, turn left at the swan pond and head towards those rapids."
+    ],
+    [
+      "Follower",
+      "Okay, I see the cactus but still don't see the white water on my left, what do I do?"
+    ],
+    [
+      "Giver",
+      "Wait, look at your map again, you don't have the white water there, you have rapids instead. Turn left at the swan pond and head towards the rapids on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the swan pond and head towards the rapids on my left."
+    ],
+    [
+      "Giver",
+      "Okay, once you see the rapids, keep going straight until you see the outlaws hideout on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the swan pond and head towards the rapids on my left."
+    ],
+    [
+      "Giver",
+      "Keep going straight from the rapids until you see the outlaws hideout on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the swan pond and heading towards the rapids on my left."
+    ],
+    [
+      "Giver",
+      "Keep going straight from the rapids until you see the outlaws hideout on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the swan pond and heading towards the rapids on my left."
+    ],
+    [
+      "Giver",
+      "Keep going straight from the rapids until you see the outlaws hideout on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the swan pond and heading towards the rapids on my left."
+    ],
+    [
+      "Giver",
+      "Keep going straight from the rapids until you see the outlaws hideout on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going straight from the rapids until I see the outlaws hideout on my left."
+    ],
+    [
+      "Giver",
+      "Keep going straight from the rapids until you see the outlaws hideout on your left."
+    ],
+    [
+      "Follower",
+      "I'm still looking for the outlaws hideout on my left."
+    ],
+    [
+      "Giver",
+      "Keep going straight from the rapids until you see the outlaws hideout on your left."
+    ],
+    [
+      "Follower",
+      "I'm still heading towards the rapids, I can't see the outlaws hideout on my left."
+    ],
+    [
+      "Giver",
+      "Keep going straight from the rapids until you see the outlaws hideout on your left."
+    ],
+    [
+      "Follower",
+      "I still can't see the outlaws hideout on my left."
+    ],
+    [
+      "Giver",
+      "Keep going straight from the rapids until you see the outlaws hideout on your left."
+    ],
+    [
+      "Follower",
+      "Wait, I can't see the outlaws hideout on my left, I'm still looking near the cactus."
+    ],
+    [
+      "Giver",
+      "Keep going straight from the rapids until you see the outlaws hideout on your left."
+    ],
+    [
+      "Follower",
+      "I can't find the outlaws hideout on my left, it's not on my map at all."
+    ],
+    [
+      "Giver",
+      "Wait, you're looking for the wrong thing, keep going straight from the rapids until you see the manned fort on your left."
+    ],
+    [
+      "Follower",
+      "I'm still looking near the cactus, where do I go from here?"
+    ],
+    [
+      "Giver",
+      "Keep going straight from the rapids until you see the manned fort on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm confused, I turned left at the swan pond but I don't see the rapids on my left, they are over by the cactus. What do I do now?"
+    ],
+    [
+      "Giver",
+      "You turned left at the swan pond, so the rapids should be on your left now, not where the cactus is.\nKeep going straight from the swan pond towards the saloon bar until you see the saloon bar on your right.\nStop there."
+    ],
+    [
+      "Follower",
+      "Wait, you say turn left at the swan pond, but if I do that, the saloon bar is nowhere to be seen on my right, it's way off the map."
+    ],
+    [
+      "Giver",
+      "Wait, hold on, I think we are getting stuck in a loop.\nYou need to stop the left turn at the swan pond and keep going straight towards the saloon bar instead.\nDo you see the saloon bar on your right now?\nIf you do, stop there immediately, that is the finish.\nIf not, you are heading the wrong way again.\nPlease just look at your map and find the saloon bar on the right side.\nOnce you see it, stop. That's where you finish.\nAre you ready to stop now?"
+    ],
+    [
+      "Follower",
+      "Wait, if I go straight towards the saloon bar on the right, I will never see it because it's on the left side of my map, not the right. So I can't stop there."
+    ],
+    [
+      "Giver",
+      "Right, stop panicking, you have the map wrong, the saloon bar is on your right, look again and find it, then stop immediately."
+    ],
+    [
+      "Follower",
+      "Okay, I will stop right now."
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

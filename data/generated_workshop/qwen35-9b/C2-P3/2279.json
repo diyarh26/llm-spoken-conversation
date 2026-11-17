@@ -1,0 +1,277 @@
+{
+  "condition": "C2-P3",
+  "architecture": "C2",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 2279,
+  "topic": "Family Life",
+  "sb_prompt": "IF YOU HAVE CHILDRENY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 37,
+    "education": "a high-school education",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I actually picked electrician way back when I was like sixteen, just didn't really know why, but here I am."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, weird timing for me too, but I'm driving school buses now."
+    ],
+    [
+      "ParticipantA",
+      "You? How do you feel about it? Do you like it?"
+    ],
+    [
+      "ParticipantB",
+      "Not really, honestly, my cousin's kid was on one of those buses last year and it got pretty scary."
+    ],
+    [
+      "ParticipantA",
+      "Oh wow, really? That's terrible, I hate the thought of kids getting scared."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, he was screaming the whole way home, and my cousin had to pull over twice just to calm him down, it was a mess."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I can imagine it would be a nightmare if you were there too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, he kept hitting the windows and my cousin was like, \"Just breathe, buddy,\" but it wasn't working."
+    ],
+    [
+      "ParticipantA",
+      "That's so rough, did he ever calm down before you guys left?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, eventually, but only after we got off the bus and sat on the porch."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, glad he calmed down, but man, that sounds like a real nightmare."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's just hard when you see little ones crying over something so small."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think maybe it's just the routine that gets to them, you know?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, probably, but still, I'd prefer a calmer ride if I could."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, maybe it's just that routine getting to them, you know?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'd probably quit if I could, but the pay is good so I stay."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, the pay is good too, I guess that's why I stuck with it even when I didn't know why I picked it."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but that's the thing, I don't feel like I picked the job myself like you did."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess I just have to make peace with it and find the good parts in it somehow."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, sometimes I just feel like I'm just working for money instead of passion, but hey, kids are kids, I guess."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I mean, I do love seeing the places I fix up and how happy people get when the power comes back on, so I guess that's my happy spot."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess seeing the kids happy in the classroom after they get off the bus makes me feel good too, even if the ride is tough."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's just that feeling of knowing a house is gonna be safe because you fixed it, that's really satisfying."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe it's the long hours that make everything feel heavier, huh?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I mean, the long hours are real, but at least I pick my own battles, right?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess I just deal with the heavy stuff and hope they stay safe."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess I do feel a little heavy sometimes with the hours, but at least I choose my own battles, right?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that makes sense, I guess I just have to keep doing it until something changes."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, you're right, I guess I just have to keep plugging away until maybe I find something else I actually want."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe I'll look into driving for a different company or maybe just save up for a while."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, maybe you should start saving up now so you can take that step before you get stuck."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's probably what I'll do."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, start looking for places now, maybe with some of that extra money you're saving."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'll look into that first thing tomorrow."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, tell me more about what kind of jobs you're looking at."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'm thinking maybe a delivery route or something with less sitting around."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, delivery sounds way better than sitting still all day."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, less sitting and more moving around sounds way easier on the back too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, less sitting definitely sounds way easier on the back too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds pretty solid."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  },
+  "conversation_seed": 3708922598,
+  "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+  "run": {
+    "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+    "identity": {
+      "condition": "C2-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+    "created_utc": "2026-11-17T10:53:33.359476+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

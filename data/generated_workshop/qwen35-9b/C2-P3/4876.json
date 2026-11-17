@@ -1,0 +1,277 @@
+{
+  "condition": "C2-P3",
+  "architecture": "C2",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 4876,
+  "topic": "Child Care",
+  "sb_prompt": "FIND OUT WHAT CRITERIA THE OTHER CALLER WOULD USE IN SELECTING CHILD CARE SERVICES FOR A PRESCHOOLER.  IS IT EASY OR DIFFICULT TO FIND SUCH CARE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hey, so you picked up? I was just about to call a few people I know to see who's available, but I heard about some good options from a friend of a friend. Are you finding it easy to look for care, or is it a real hassle?"
+    ],
+    [
+      "ParticipantB",
+      "Honestly, it's been a nightmare, though I can't blame the other side too much. My cousin tried to get my kid into a center last year and she went through three different places before finding one that even wanted her."
+    ],
+    [
+      "ParticipantA",
+      "That's rough. I know how it feels because my own daughter was on and off the waitlist for a year, which is why I sometimes tell people about my job adjusting claims\u2014I see the mess when things go wrong. But honestly, picking a place yourself? That's where I get stuck. I guess I'm torn on it. Some days I think the standards are great, but other days I feel like the system is rigged or just too slow, and I don't know how to separate the good options from the bad without spending hours driving around. What about you? Did you look at the licensing or just go with what felt right?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I looked at the licensing first since my cousin is a teacher and she's good at spotting red flags, but honestly it got messy once we found a place that looked perfect on paper but the mom didn't seem to care if the teachers were actually trained."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, exactly, that's the worst part when the paper says one thing and the reality is something else."
+    ],
+    [
+      "ParticipantB",
+      "Exactly, and the worst thing is when you catch the place on a bad day and the staff is just stretched too thin, even if everything on the license is perfect."
+    ],
+    [
+      "ParticipantA",
+      "Right, so it's not just the paperwork then, it's the vibe of the room too. I feel like sometimes I have to trust my gut on that because I can't re-license a place if the teachers are burnt out."
+    ],
+    [
+      "ParticipantB",
+      "That's the thing, I guess you can't really fix the vibe if the staff is exhausted, so we ended up going with a small home day care run by a retired teacher who seemed genuinely invested."
+    ],
+    [
+      "ParticipantA",
+      "Small home care, huh? That's usually a relief if you can actually find someone that dedicated."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's way more personal but also way riskier if you don't vet them right."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but vetting a private teacher is way harder than just checking a center's wall, isn't it? You don't know what they're doing half the day when you're at work."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, definitely. You just have to do background checks and ask for references, but there's no physical place to walk in and see the class in action like you can at a center."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I get that. It's scary not being able to just walk in and see who's actually paying attention to the kids."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it is. Plus, if you pick a home, you don't have that safety net of other parents around to help if something goes wrong."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that safety net thing is terrifying to think about."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, plus if they cancel on you at the last minute, you're totally stuck with nowhere to go."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, last minute cancellations are the real killer. I remember once my boss had to call off my daughter and I was literally three miles away; had I not gone to work, she would have been stuck on my couch alone with nothing to do."
+    ],
+    [
+      "ParticipantB",
+      "That's the part that kills me, because centers usually give you a backup plan if they're full, but a home teacher just says \"no\" and you're screwed."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the thing, I never got that backup plan when I'm working, so I'm just left hanging with the kid."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, exactly, I think that's the hardest part about trusting a single person when you're working full-time."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it feels like you're just gambling with someone's schedule knowing you're working."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, exactly, that's the gamble you take if you lose it all on one person, but honestly, I think the state licensing does at least give you a minimum safety floor that a home setup can't promise."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess the licensing floor is the only thing keeping me from jumping ship, even though I wish it covered the human element too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I get that, but at least if the center hits a rough patch, there are usually two or three other teachers pitching in, so the kids aren't just left hanging."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but having a backup teacher is one thing, I guess, but what happens if that whole group gets sick at once?"
+    ],
+    [
+      "ParticipantB",
+      "That's the scary part, though, because if the whole staff is down you're basically locked out until someone comes in from another center, which rarely happens fast enough."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the part where you're just totally out of luck."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's just that moment of panic when you know you need the kid cared for but every single seat in that room is taken."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the part where you just have to hope your backup plan doesn't get sick too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's the thing, you're basically on borrowed time until they call you back."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the worst part, knowing you're holding your breath waiting for someone else to wake up."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, exactly, there's nothing you can do but stay on the line waiting for them to find someone."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess that's just how it goes, I guess I'm just stuck in that waiting loop."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess we're all just stuck waiting for someone else to solve it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess that's just how it goes."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess we're all just waiting on someone else to fix it for us."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess I'm just stuck in that waiting loop."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess that's just the reality."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess that's just the reality."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's just the reality."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 4
+  },
+  "conversation_seed": 2856343939,
+  "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+  "run": {
+    "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+    "identity": {
+      "condition": "C2-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+    "created_utc": "2026-11-17T10:53:33.359476+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

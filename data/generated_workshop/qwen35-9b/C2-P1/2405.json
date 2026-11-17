@@ -1,0 +1,278 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 2405,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 28,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "So, are you into computers, or is it just something you have to use for work?"
+    ],
+    [
+      "ParticipantB",
+      "It's definitely something I use for work mostly, though I've got a gaming setup in my room I'm kinda proud of. My cousin actually got his whole house wired smart last year, and it was such a mess at first but now he loves it."
+    ],
+    [
+      "ParticipantA",
+      "Oh wow, a smart house? That sounds intense! I work at a bank, so I'm used to seeing tech that's either super useful or just kinda broken. Have you actually used much of that stuff yourself, or is it mostly your cousin now?"
+    ],
+    [
+      "ParticipantB",
+      "Actually, I mostly just use my own laptop for work, but honestly, the gaming stuff is the only part I really know how to fix when things go wrong."
+    ],
+    [
+      "ParticipantA",
+      "That's awesome you can fix your own stuff, honestly I'm usually the one panicking when my receipt printer jams. Do you mostly just game on the weekends, or do you dabble in coding or anything?"
+    ],
+    [
+      "ParticipantB",
+      "Nah, I'm too lazy to code, but I love tweaking my scripts for the POS system and trying out different layouts for the customer screens."
+    ],
+    [
+      "ParticipantA",
+      "That's actually pretty cool, I guess I never thought of customizing the screen layouts, though I've definitely seen some weird stuff when I help my friend with his home office setup."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, my friend actually just swapped out his whole office setup last week and it was a total disaster, nothing worked right for like three days before he finally got it sorted."
+    ],
+    [
+      "ParticipantA",
+      "That is so frustrating, I hope he didn't lose all his files too, because that happens if you mess up the BIOS settings."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but he didn't lose anything, lucky him, though I would have totally backed up everything on my own drive just in case."
+    ],
+    [
+      "ParticipantA",
+      "Oh, that is so relieving, I would have been so stressed if he had lost everything, but hey, I'm glad you had your backup ready."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, honestly I wouldn't do that mess up, I'm too careful with my own data, but man, you gotta feel for him losing all that stuff."
+    ],
+    [
+      "ParticipantA",
+      "That's a good thing, honestly, just having a backup is a huge relief, though I still can't imagine having to redo all my tax records if my own backup ever failed."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I totally get that, I wouldn't dare go anywhere without a backup, but honestly, my own little setup is usually so stable I barely ever mess up, so I feel pretty confident I'd be fine even if things went wrong."
+    ],
+    [
+      "ParticipantA",
+      "That's a relief, honestly. I guess if I ever need to reinstall my whole drive, I'd probably just scream until someone shows up to fix it."
+    ],
+    [
+      "ParticipantB",
+      "Haha, you might actually have that covered since you work at a bank! I bet you guys are super organized with backups, which is why I never mess my own stuff up."
+    ],
+    [
+      "ParticipantA",
+      "Oh, you have no idea! We literally have to save everything for the federal reserve audits, so if I lose my drive, I'd probably get fired before I even finished screaming."
+    ],
+    [
+      "ParticipantB",
+      "Haha, okay, that actually scares me a little bit, having to save everything for audits and all that. Do you guys actually get to keep anything personal on the bank computers, or is it strictly no personal files allowed?"
+    ],
+    [
+      "ParticipantA",
+      "Strictly no personal files allowed, which is kinda depressing but also keeps me from losing my family photos, so I just keep those on a separate encrypted drive at home."
+    ],
+    [
+      "ParticipantB",
+      "That actually sounds like a relief, honestly, knowing they'll store my stuff safely. I guess I just never trusted anyone else to keep my family photos safe, but if you're doing it for the bank, I'm totally cool with that."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, actually, having that stuff locked down at home is better than just dumping it on a work computer where it's sitting in a server farm I can't access anyway."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I hear you, totally makes sense to keep memories safe at home, but honestly I still miss having my own stuff on the work computer sometimes, you know?"
+    ],
+    [
+      "ParticipantA",
+      "I miss it too sometimes, but my boss literally confiscated my phone last week so I couldn't even check my photos if I wanted to, so I guess I just gotta wait until I clock out."
+    ],
+    [
+      "ParticipantB",
+      "That actually sounds like a nightmare, can you believe he just took it right out of your hand?"
+    ],
+    [
+      "ParticipantA",
+      "Haha, honestly it was kinda dramatic, but hey, at least my screen was safe inside the safe!"
+    ],
+    [
+      "ParticipantB",
+      "Haha, yeah, that actually sounds kind of wild, but hey, at least you didn't lose the actual memories, right?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, at least the memories are safe, even if checking them felt like breaking the law for a second!"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that is actually kinda wild, I mean, breaking the law just to look at a family photo? That's gotta be one of the worst things ever."
+    ],
+    [
+      "ParticipantA",
+      "Haha, yeah, can you imagine trying to sneak a peek while your boss is walking around with a clip-on microphone?"
+    ],
+    [
+      "ParticipantB",
+      "Haha, don't even joke about the mic, I'd never pull that kind of stunt, plus I'd probably get fired before I even touched the phone."
+    ],
+    [
+      "ParticipantA",
+      "Haha, don't even joke about the mic, I'd never pull that kind of stunt, plus I'd probably get fired before I even touched the phone."
+    ],
+    [
+      "ParticipantB",
+      "Honestly, I think I'd probably try to hide the phone inside my apron pocket if I worked there, but I'd never do anything that risky."
+    ],
+    [
+      "ParticipantA",
+      "Honestly, I think hiding it in an apron would be the most obvious thing ever, but hey, at least you wouldn't get caught like I almost did!"
+    ],
+    [
+      "ParticipantB",
+      "I'd probably just hide it in the tip jar and hope nobody checks before I leave the table."
+    ],
+    [
+      "ParticipantA",
+      "Haha, tip jar? That's actually pretty genius, though I bet the manager would just walk right up and ask if you were saving money for your kids."
+    ],
+    [
+      "ParticipantB",
+      "Haha, true, but at least I don't have to worry about the federal audit team showing up to count the tips while I'm eating lunch!"
+    ],
+    [
+      "ParticipantA",
+      "Haha, true, but at least you don't have to worry about the feds auditing your tip jar while you're eating lunch!"
+    ],
+    [
+      "ParticipantB",
+      "That's actually a solid backup plan though, I guess I'll never have to hide my photos in a tip jar for real."
+    ],
+    [
+      "ParticipantA",
+      "Haha, good point, I guess I'll stick to my encrypted drive since I don't want the manager wondering why my lunch tip jar looks suspicious."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that actually sounds pretty safe, honestly, so maybe I should just buy one of those drives if you ever need a second opinion on what model to get."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1,
+    "dup_kept": 1
+  },
+  "conversation_seed": 1131147882,
+  "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+  "run": {
+    "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+    "identity": {
+      "condition": "C2-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "90e78653f87b3d00f02c3bc4759891c48c15c8cf",
+    "created_utc": "2026-11-17T07:24:13.295312+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m13",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1658220689,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 4,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 50,
+    "dup_kept": 38
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hello. I'll describe the route from start to finish. Okay, begin at the start point. From there, go west a little."
+    ],
+    [
+      "Follower",
+      "Okay, moving west a bit, I'm passing the extinct volcano on my left."
+    ],
+    [
+      "Giver",
+      "That's good, keep going west until you are opposite the tribal settlement on your right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading west now and I can see the tribal settlement on my right, so I'll keep going until I'm opposite it."
+    ],
+    [
+      "Giver",
+      "Okay, now turn left and head north until you reach the rope bridge, which is on your left."
+    ],
+    [
+      "Follower",
+      "Okay, turning left now and heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north until the rope bridge is directly on your left, then turn right."
+    ],
+    [
+      "Follower",
+      "Okay, I've turned right and I can see the rope bridge is now on my left, so I'll keep going north towards it."
+    ],
+    [
+      "Giver",
+      "Just keep going straight north towards it, don't turn yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Yeah, keep going straight north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "I keep going north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Don't worry about the rope bridge yet, I need you to look at the map now."
+    ],
+    [
+      "Follower",
+      "Okay, looking at my map, I see a collapsed shelter over there to the right. Is that the next landmark I need to pass?"
+    ],
+    [
+      "Giver",
+      "No, that's not it yet. You're going a little too far east. Turn left a bit more, towards the left side of your map. Keep going until you see the saxon barn on your right."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left a bit more and keep going until I see the saxon barn on my right."
+    ],
+    [
+      "Giver",
+      "Okay, once you see the saxon barn on your right, turn left and head west towards the pelicans. Keep going until you are opposite them on the left side."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left towards the pelicans and keep going west until I'm opposite them."
+    ],
+    [
+      "Giver",
+      "Good, once you are opposite the pelicans, turn right and head north towards the white mountain, which is on your right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the white mountain on my right."
+    ],
+    [
+      "Giver",
+      "Good, once you reach the white mountain, keep going north past it until you see the secret valley on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I've reached the white mountain and I'm continuing north. I'm passing it now and I can see the secret valley on my left."
+    ],
+    [
+      "Giver",
+      "Keep going north past the secret valley until you reach the golden beach on the left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north past the secret valley. I can see the golden beach on my left now."
+    ],
+    [
+      "Giver",
+      "Good, once you reach the golden beach, turn right and head east towards the submerged rocks. Keep going until you see the crevasse on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I've turned right and I'm heading east. I can see the golden beach on my left now, and moving forward I'm seeing the submerged rocks ahead of me on the left."
+    ],
+    [
+      "Giver",
+      "Keep going east until you see the crevasse on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading east towards the crevasse. I see it on my left now."
+    ],
+    [
+      "Giver",
+      "Okay, keep going east until you see the crevasse on your left, and once you see it, turn right and head south towards the collapsed shelter."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading south towards the collapsed shelter. I can see it on my right side now."
+    ],
+    [
+      "Giver",
+      "Good, keep going south until you see the collapsed shelter directly on your right, then turn left."
+    ],
+    [
+      "Follower",
+      "Okay, I've turned left and I can see the crevasse on my left now."
+    ],
+    [
+      "Giver",
+      "Okay, good, keep going west until you see the rope bridge on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading west and the rope bridge is now on my left."
+    ],
+    [
+      "Giver",
+      "Okay, once the rope bridge is directly on your left, turn right and head north towards the collapsed shelter. Keep going north until you see the collapsed shelter directly on your right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the collapsed shelter. I can see it on my right now, but it looks a bit further away than where I started. Should I keep going north until it's directly on my right?"
+    ],
+    [
+      "Giver",
+      "Yes, keep going north until it's directly on your right, then stop there. You've almost reached the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north until the collapsed shelter is directly on my right, then I'll stop there."
+    ],
+    [
+      "Giver",
+      "Okay, that's great, you're almost there. From that spot where you stopped, just walk straight east for a very short distance until you reach the golden beach, which is on your left. Once you are opposite the golden beach, turn right and head north towards the slate mountain. Keep going north until you see the slate mountain directly on your right. Stop there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading east for a short distance until I see the golden beach on my left, then I'll turn right and head north towards the slate mountain, keeping going until it's directly on my right."
+    ],
+    [
+      "Giver",
+      "Good, once you see the slate mountain, turn left and head west towards the secret valley. Keep going until you see the secret valley on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading west and I can see the secret valley on my left now."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left, then turn right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading west now and I can see the secret valley on my left. I'll keep going until it's directly on my left."
+    ],
+    [
+      "Giver",
+      "Okay, once you see the secret valley directly on your left, turn right and head south towards the golden beach, which is on your left. Keep going south until you see the golden beach directly on your left, then turn right and head east towards the extinct volcano. Keep going east until you see the extinct volcano directly on your right. Stop there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading south towards the golden beach and I can see it on my left now, but it looks a bit further away than where I started. Should I keep going south until it's directly on my left?"
+    ],
+    [
+      "Giver",
+      "Yes, keep going south until the golden beach is directly on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading south until the golden beach is directly on my left."
+    ],
+    [
+      "Giver",
+      "Yes, good. Once the golden beach is directly on your left, turn right and head east towards the extinct volcano. Keep going east until you see the extinct volcano directly on your right. That's where you need to stop."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading east towards the extinct volcano and I can see it on my right now, so I'll stop there."
+    ],
+    [
+      "Giver",
+      "Good, once you are opposite the tribal settlement on your right, turn left and head north until you reach the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I've turned left and I'm heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "I keep heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Yeah, keep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm still heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "I'm still heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "I'm still heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm still heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "I'm still heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "I'm still heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge.\nKeep going north towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm still heading north towards the rope bridge."
+    ],
+    [
+      "Giver",
+      "Okay, stop going north. You are not moving towards the rope bridge. Turn left. The rope bridge is on the left side of your map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left now. I can see the rope bridge on my left side. I'm going to keep heading north towards it until I reach it."
+    ],
+    [
+      "Giver",
+      "Okay, stop. You don't need to reach the rope bridge. Just turn left now, head west until you see the saxon barn on your right, then turn left again and head west towards the pelicans. Keep going until you are opposite them on the left, then turn right and head north towards the white mountain. Continue north past the white mountain until you see the secret valley on your left. Keep going north past the secret valley until you reach the golden beach on the left. Once you are at the golden beach, turn right and head east towards the submerged rocks. Keep going east until you see the crevasse on your left. Now, turn right and head south towards the collapsed shelter. Keep going south until you see the collapsed shelter directly on your right, then turn left. Head west until you see the rope bridge on your left. Once it is directly on your left, turn right and head north towards the collapsed shelter. Keep going north until you see the collapsed shelter directly on your right, then turn left again and head west towards the saxon barn. Keep going west until you see the saxon barn directly on your right, then turn left and head west towards the pelicans. Keep going west until you are opposite the pelicans on the left, then turn right and head north towards the white mountain. Keep going north past the white mountain until you see the secret valley on your left. Keep going north past the secret valley until you reach the golden beach on the left. Turn right and head east towards the submerged rocks. Keep going east until you see the crevasse on your left. Turn right and head south towards the collapsed shelter. Keep going south until you see the collapsed shelter directly on your right, then turn left and head west towards the rope bridge. Keep going west until you see the rope bridge on your left. Once it is directly on your left, turn right and head north towards the collapsed shelter. Keep going north until you see the collapsed shelter directly on your right, then turn left again and head west towards the saxon barn. Keep going west until you see the saxon barn directly on your right, then turn left and head west towards the pelicans. Keep going west until you are opposite the pelicans on the left, then turn right and head north towards the white mountain. Keep going north past the white mountain until you see the secret valley on your left. Keep going north past the secret valley until you reach the golden beach on the left. Turn right and head east towards the"
+    ],
+    [
+      "Follower",
+      "I think I'm going in circles with the pelicans and the barn. Should I stop heading west once I'm opposite the pelicans?"
+    ],
+    [
+      "Giver",
+      "No, keep going west until you are opposite the pelicans on the left side."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going west until I am opposite the pelicans on the left side."
+    ],
+    [
+      "Giver",
+      "Good, once you are opposite the pelicans, turn right and head north towards the white mountain, which is on your right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the white mountain."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the white mountain."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the white mountain."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the white mountain."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the white mountain. I can see it on my right now, so I'll keep going until I reach it."
+    ],
+    [
+      "Giver",
+      "Keep going north towards the white mountain."
+    ],
+    [
+      "Follower",
+      "Okay, I keep going north until I reach the white mountain."
+    ],
+    [
+      "Giver",
+      "Keep going north until you see the white mountain directly on your right, then stop there."
+    ],
+    [
+      "Follower",
+      "Okay, I've reached the white mountain on my right now, so I'm going to stop."
+    ],
+    [
+      "Giver",
+      "Good, once you see the white mountain directly on your right, turn left and head west towards the secret valley. Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading west towards the secret valley. I can see it on my left now, so I'll keep going until it's directly on my left."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading west now and I can see the secret valley on my left. I'll keep going until it's directly on my left."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading west towards the secret valley and I can see it on my left now. I'll keep going until it's directly on my left."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "I'm going west now and I can see the secret valley on my left. I'll keep going until it's directly on my left."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "I'm still heading west towards the secret valley."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "I'm going west now and I can see the secret valley on my left. I'll keep going until it's directly on my left."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going west until I see the secret valley directly on my left."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "I keep going west."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "I keep going west towards the secret valley."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "I'm going west now and I can see the secret valley on my left. I'll keep going until it's directly on my left."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "I keep going west until the secret valley is directly on my left."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "I'm still heading west until the secret valley is directly on my left."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "I keep going west until the secret valley is directly on my left."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "I keep going west until the secret valley is directly on my left."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "I keep going west until the secret valley is directly on my left."
+    ],
+    [
+      "Giver",
+      "Keep going west until you see the secret valley directly on your left."
+    ],
+    [
+      "Follower",
+      "I keep going west until the secret valley is directly on my left."
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m5",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 4122751153,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 31,
+    "dup_kept": 17
+  },
+  "turns": [
+    [
+      "Giver",
+      "Okay, so I'm at the start, which is near the bottom center. Just go straight up towards the edge of the paper, past the missionary camp on your left. Once you hit the top edge, turn right and keep going until you see the banana tree on your left side. Stop just before you reach it."
+    ],
+    [
+      "Follower",
+      "Okay, I've gone up past the camp and turned right. I'm heading towards the top edge now. I see a banana tree on my left... wait, that's a banana tree at the very top left corner of my map. If I keep going straight, I'll hit the edge of the paper before I can reach it. Is there another banana tree?"
+    ],
+    [
+      "Giver",
+      "No, that's not it, it's the banana tree I mentioned earlier, the one near the waterfall. You're looking at the wrong tree; the one on the top left is just a decoration and not part of the route. Turn back left immediately and head straight for the waterfall on your right side, don't go all the way up to the top edge yet."
+    ],
+    [
+      "Follower",
+      "Oh, okay, so I misunderstood. I'm looking at the wrong tree then. I'll turn back left and head straight for the waterfall on my right side. Do I just aim for the waterfall or is there another landmark I should pass first?"
+    ],
+    [
+      "Giver",
+      "Just aim directly for the waterfall, don't worry about passing anything else. Once you get there, turn left immediately and head down towards the straight river running through the middle. Keep going down the river until you reach the soft furnishings store on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight for the waterfall on my right now. Once I get there, I'll turn left and head down towards the river. I see the river flowing through the middle, but I don't see a soft furnishings store on my left side anywhere near the waterfall or down the river. Do you have a store on the left side of the river? I only see the straight river itself."
+    ],
+    [
+      "Giver",
+      "There isn't a store on your map, but don't worry about the name, just keep following the river down until you get close to the middle of the paper, then turn left and head straight for the ancient ruins."
+    ],
+    [
+      "Follower",
+      "Okay, I'm aiming for the middle of the paper now, but I still don't see any ruins on the left side. I only see the river and the rockfall nearby. Are you sure I'm supposed to find ruins? I don't see anything like that down here."
+    ],
+    [
+      "Giver",
+      "Wait, hold on, look at your map again near the waterfall, is there a gazelle on your right side of the waterfall? If you see that, keep going past it until you hit the lost steps on your left, then keep going down towards the ruined city which should be on your right side now."
+    ],
+    [
+      "Follower",
+      "Okay, I see the gazelle on the right of the waterfall now. I'll go past it to the lost steps on the left, but wait, I'm heading down the river and I don't see the lost steps on my left side at all. I only see the river and the rockfall. Maybe the lost steps aren't on my map? Where exactly should I turn off the river to find the steps?"
+    ],
+    [
+      "Giver",
+      "Hold on, you're looking at the river, but the lost steps are way up higher near the waterfall itself, right next to it on the left side, not down by the rockfall you're seeing. Turn off the river now, go straight left to those steps, then from there head up and right towards the ruined city which should be just across from the gazelle on the right."
+    ],
+    [
+      "Follower",
+      "Wait, I think I'm getting confused. The gazelle is on my map, near the waterfall, but the ruined city is way up near the top left corner, not down here by the river. If I go from the steps up towards the ruined city, I'll probably just hit the edge of the paper or go past it completely. Are you sure the ruined city is even on my map? I only see the rockfall and the river down here."
+    ],
+    [
+      "Giver",
+      "Wait, stop moving. Look at your map again; the gazelle is right next to the waterfall, and if you look closely at the space just above the waterfall, you should see a little group of stones there. Head straight up from the waterfall to those stones, don't try to go to the ruined city yet."
+    ],
+    [
+      "Follower",
+      "Wait, hold on, I don't see any stones right above the waterfall on my map, only the waterfall and the straight river continuing up. The space above the waterfall just shows the river leading into the rockfall. Are the stones actually near the rockfall instead? Because if I go up from the waterfall, I'm just running into the river again. Maybe the stones are closer to the rockfall and I need to stop there first?"
+    ],
+    [
+      "Giver",
+      "Stop, listen to me. Don't follow the river up to the rockfall. Turn left at the waterfall immediately, go straight up towards the top edge of your paper, ignore the river completely. You will find the stones there, right next to the top edge. That is where you stop. Do not look for a ruined city yet. Just go to the stones."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the waterfall and heading straight up. I don't see any stones above it on my map, just the river leading into the rockfall. Do you see stones anywhere else? Maybe near the rockfall?"
+    ],
+    [
+      "Giver",
+      "Stop, stop, stop. Do not look for the river or the rockfall at all. Look at the very bottom left corner of your map. You will see a little green banana tree there, almost in the corner. Go straight up from that banana tree until you hit the top edge of the paper, then turn right immediately and walk along that top edge until you see the white mountain on your right side. Walk right next to it, just don't touch it, and stop. That is the first part of the route. Do not go anywhere else yet."
+    ],
+    [
+      "Follower",
+      "Okay, I see the banana tree in the bottom left corner now. I'm going straight up from there, ignoring the river completely, until I hit the top edge. Then I'll turn right and head towards the white mountain on the right."
+    ],
+    [
+      "Giver",
+      "Keep going right along that top edge until you see the white mountain, then walk right up to it and stop."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up from the banana tree now, ignoring the river. I've hit the top edge and turned right. I'm walking along the top and I see the white mountain on the right side. I'll stop right next to it."
+    ],
+    [
+      "Giver",
+      "Okay, that's not quite right yet. From that white mountain, don't just stop. Keep walking straight down from it, past the lost steps on your left, until you reach the ancient ruins on your right side. Stop there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the mountain. I see the lost steps on my left, but wait, I don't see any ancient ruins on my right side at all. I just see the straight river flowing down past the steps. Are you sure there are ruins there? I only see the river and the rockfall nearby."
+    ],
+    [
+      "Giver",
+      "Wait, stop moving. You are completely wrong about the location of the ruins; the ruined city is actually right next to the waterfall on your map, not down by the river or rockfall. Forget the river entirely. From the lost steps you see on your left, just turn right immediately towards the waterfall, and you will see the ruined city sitting right there next to it. Stop there."
+    ],
+    [
+      "Follower",
+      "Wait, hold on, I don't see the ruined city next to the waterfall at all. I'm looking right there by the waterfall and I only see the river flowing through the middle and the gazelles on the right. There is no city there. If I go to the steps on the left and turn right, I'm just going to run straight into the river again. Did you mean the ruined city is somewhere else entirely? Because I don't see anything that looks like ruins near the waterfall, just the river and the waterfalls."
+    ],
+    [
+      "Giver",
+      "Stop, stop, stop. You are going down the wrong way. Turn around immediately and go back to the waterfall. From the waterfall, go straight left until you find the lost steps on your left side. Once you are at the lost steps, do not turn left towards the river. Instead, turn right and walk straight up towards the top edge of your paper until you see the white mountain on your right side. Stop right next to the mountain. Do not go anywhere else yet. Just stop by the mountain."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going back to the waterfall and turning left to the lost steps on the left. Then I'm turning right and heading up to the top edge to find the white mountain on the right and stop there."
+    ],
+    [
+      "Giver",
+      "Okay, that's a good start, but now from that white mountain, you need to go straight down towards the lost steps on the left side. Stop right at those steps, and that is your first stop. Don't look for the ruined city yet, just stop at the lost steps."
+    ],
+    [
+      "Follower",
+      "Okay, I'm back at the lost steps. I'll go straight down from them, past the river and the rockfall, until I find the ruined city on my right side. Is that right?"
+    ],
+    [
+      "Giver",
+      "No, stop going down the river. Turn around and go back up to the waterfall. From the waterfall, head straight down towards the bottom left corner of your paper until you find the banana tree there. Then go straight up from that banana tree, ignoring everything else, until you hit the top edge. Turn right immediately and walk along that top edge until you see the white mountain on your right. Stop right next to it. That is your first stop."
+    ],
+    [
+      "Follower",
+      "Wait, I think I've got it. I'm going back up to the waterfall, then down to the banana tree in the corner, up to the top edge, right to the mountain, and down to the lost steps. Okay, I'll draw a line from the start, up past the camp, then down to the waterfall, then left to the steps, then back up to the mountain, then down to the steps again. Is that the first part of the route?"
+    ],
+    [
+      "Giver",
+      "No, stop drawing that loop. That is not the route. You are completely lost. Forget everything you just drew. We have to start over, but this time listen very carefully. Go back to the START at the bottom. Go straight up past the missionary camp again, but this time, when you hit the top edge, turn LEFT immediately. Keep walking along the top edge to the very left corner of your paper. Once you are at the left corner, go straight down until you see the banana tree on your left. Stop right next to the banana tree. Do not look for the mountain yet. Just stop by the tree."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going back to the start, up past the camp, then left to the corner, down to the tree, and stopping there. Got it."
+    ],
+    [
+      "Giver",
+      "Okay, good. Now that you are standing by the banana tree on the left, look to your immediate right, just a little bit away from the tree. You will see a small group of stones there. Stop right next to those stones. That is your second stop."
+    ],
+    [
+      "Follower",
+      "Okay, I'm standing by the banana tree now. Looking to my immediate right, I see a small group of stones there. I'll stop right next to those stones."
+    ],
+    [
+      "Giver",
+      "Okay, that's great. Now look up from the stones. You need to go straight up until you see the white mountain on your right side. Stop right next to the mountain, don't go past it yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'm standing next to the stones now. Looking up towards the right, I see the white mountain there. I'll stop right next to it."
+    ],
+    [
+      "Giver",
+      "Okay, from the white mountain, go straight down towards the soft furnishings store on your left, but stop before you reach it. That is your third stop. Do not go all the way down to the river."
+    ],
+    [
+      "Follower",
+      "Okay, I'm standing next to the mountain now. I'm going straight down, but I'll stop just before I reach the store on the left. I don't see the store on my map, so I'll just stop before the empty space where it should be. Is that right?"
+    ],
+    [
+      "Giver",
+      "Okay, don't try to stop by an empty space. I can't see what you're looking at. Just close your eyes for a second, imagine the store is actually sitting on the bank of the straight river a little bit further down from where you are now, just past the point where the river curves towards the middle. Walk straight down from the mountain until you are right next to that river bend, and you will see the store on your left side. Stop right next to the store."
+    ],
+    [
+      "Follower",
+      "Okay, I'm standing by the mountain now. I'm going straight down, ignoring the river at the top, until I'm near the bottom left area. I can't see the store on my map, but I'll keep going down towards the bottom edge and stop just before I reach the bottom left corner, thinking that's where the store is."
+    ],
+    [
+      "Giver",
+      "Stop, stop, stop. You are drawing the wrong line. I am telling you to go down from the mountain to the river, but you are going all the way to the bottom edge. Do not go past the river. Walk down from the mountain, aim for the straight river that runs through the middle of the paper, and stop right next to the river on its left bank. That is where the store is, even though you can't see it on your map. Do not keep going down to the corner. Just stop by the river."
+    ],
+    [
+      "Follower",
+      "Okay, I'm standing by the mountain now. I'm going straight down, aiming for the straight river that runs through the middle of the paper, and I'll stop right next to the river on its left bank. I won't go to the bottom edge. Is that right?"
+    ],
+    [
+      "Giver",
+      "Okay, good, keep going down from the river, but don't turn left into the water. Turn right instead and head straight down towards the waterfall on your right side. Keep going down past the waterfall until you see the straight river again, and stop right next to it on the right bank. That is your fourth stop."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going down from the river bend, keeping the river on my left, and turning right to head towards the waterfall on the right. I'll keep going down past the waterfall until I see the river again on the right, and I'll stop there. Is that the fourth stop?"
+    ],
+    [
+      "Giver",
+      "Okay, once you are at the fourth stop by the river on the right, turn left immediately and head up towards the waterfall again, but this time don't go all the way up to the top edge yet. Keep going up past the waterfall until you see the straight river crossing it on your left, and stop right next to that crossing. That is your fifth stop."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up from that fifth stop, keeping the river on my left and aiming for the waterfall again. I'll keep going up past it until I see the river crossing on the left, and I'll stop right next to that crossing. Is that the next point?"
+    ],
+    [
+      "Giver",
+      "Okay, good. Once you are at that fifth stop by the crossing, turn left and head down the river towards the bottom edge. Keep going until you see the waterfall on your right side. Stop right next to the waterfall, but do not go past it yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up from the crossing, keeping the river on my left, and I'm going to aim for the waterfall on the right. I'll stop right next to the waterfall there."
+    ],
+    [
+      "Giver",
+      "Wait, no, you are heading up from the crossing but you said you are going to aim for the waterfall on the right. That is wrong. From the fifth stop by the crossing on the left, you must turn LEFT immediately and head down the river towards the bottom edge. Keep going down the river until you see the waterfall on your right side, then stop right next to it. Do not turn right or go anywhere else. Stop right there by the waterfall on the right bank."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up from the crossing, keeping the river on my left, and I'm going to aim for the waterfall on the right. I'll stop right next to the waterfall there."
+    ],
+    [
+      "Giver",
+      "Stop it immediately. You are going the wrong way. You need to turn LEFT at the crossing right now, not right. Head down the river towards the bottom edge, keeping the river on your left, until you see the waterfall on your right side. Then stop right next to the waterfall. Do not go to the river on the right bank yet. Just stop at the waterfall."
+    ],
+    [
+      "Follower",
+      "Stop, I am turning left immediately at the crossing and heading down the river. I will keep the river on my left until I see the waterfall on my right side, and I will stop right next to it."
+    ],
+    [
+      "Giver",
+      "Good, now that you are next to the waterfall on the right, turn left immediately and head straight up along the river again, keeping the river on your left, until you reach the lost steps on your left side. Stop right at those steps. That is your sixth stop."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the waterfall on the right bank now, so I'll turn left and head up the river keeping it on my left until I find the lost steps on my left side and stop right there."
+    ],
+    [
+      "Giver",
+      "Okay, good, now from those lost steps on your left, turn right immediately and head straight down the river towards the bottom edge. Keep going down the river until you see the fallen pillars on your right side, and stop right next to them. That is your seventh stop. Do not go any further. Just stop by the pillars."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the steps, keeping the river on my left until I see the pillars on the right, and I'll stop right next to them."
+    ],
+    [
+      "Giver",
+      "Okay, good, from those pillars on your right, turn left immediately and head straight down the river again towards the bottom edge, but this time keep going until you see the rope bridge on your left side. Stop right next to the bridge, don't go any further."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the pillars, keeping the river on my left until I see the rope bridge on my left side, and I'll stop right next to it. Is that the eighth stop?"
+    ],
+    [
+      "Giver",
+      "Okay, good, from that rope bridge on your left, turn right immediately and head straight up towards the waterfall on your right side. Keep going up towards the top edge until you see the waterfall again, and stop right next to it. That is your eighth stop."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up from the bridge, keeping the river on my left until I see the waterfall on my right, and I'll stop right next to it."
+    ],
+    [
+      "Giver",
+      "Okay, good, from that waterfall on your right, turn left immediately and head straight up towards the top edge of your paper. Keep walking along that top edge all the way to the very left corner. Once you are at the left corner, go straight down until you see the banana tree on your left side. Stop right next to that tree. Do not look for anything else yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up from the waterfall on the right, keeping the river on my left until I hit the top edge, then I'll go straight down to the left corner and stop next to the banana tree."
+    ],
+    [
+      "Giver",
+      "Okay, that is wrong. You are going to the wrong corner. From the waterfall on your right, turn left immediately and head down the river towards the bottom edge, keeping the river on your left, until you see the rope bridge on your left side. Stop right next to the bridge. Do not go to the top edge or the banana tree at all. Just stop by the bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm stopping right next to the rope bridge on the left side. I'm not going anywhere else yet."
+    ],
+    [
+      "Giver",
+      "Okay, since you are already by the bridge, just make a short line to the left of the bridge to mark where I want you to be, don't go anywhere else yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'm making a short line to the left of the bridge to mark the spot. I'm not going anywhere else yet."
+    ],
+    [
+      "Giver",
+      "Okay, good, since you are just marking that spot by the bridge, now turn right immediately and head straight down the river towards the bottom edge again. Keep going until you see the waterfall on your right side. Stop right next to the waterfall. Do not go past it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning right immediately from the bridge and heading straight down the river. I'll keep going until I see the waterfall on my right side, and I'll stop right next to it."
+    ],
+    [
+      "Giver",
+      "Keep going down from the waterfall until you see the straight river again on your right side, and stop right next to it. Do not go any further. Just stop by the river."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the waterfall, keeping the river on my right, and I'll stop right next to the river on the right bank."
+    ],
+    [
+      "Giver",
+      "Good, now from that river stop on your right, turn left immediately and head up the river towards the top edge, keeping the river on your left, until you see the straight river crossing it again. Stop right next to that crossing."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up from the river stop on the right, keeping the river on my left until I see the crossing, and I'll stop right next to it. Is that right?"
+    ],
+    [
+      "Giver",
+      "Okay, good, from that crossing, turn left immediately and head down the river towards the bottom edge. Keep going until you see the waterfall on your right side, then turn left again and head straight up towards the waterfall on your right. Keep going up past it until you see the straight river crossing it on your left, and stop right next to that crossing. That is your sixth stop."
+    ],
+    [
+      "Follower",
+      "Wait, I think I'm getting confused again. From the crossing, do I go down to the waterfall, then turn left and go up to the crossing again? It sounds like I'm going in circles. I'll go down to the waterfall, then turn left and head up to the crossing. Is that right?"
+    ],
+    [
+      "Giver",
+      "Stop right there, do not go down to the waterfall yet. From the crossing on your left, go straight up the river towards the top edge, keeping the river on your left, until you see the waterfall on your right side. Stop right next to the waterfall. Do not go down, do not go to the bottom, just go up to the waterfall and stop."
+    ],
+    [
+      "Follower",
+      "Okay, I'll go up from the crossing, keeping the river on my left, until I see the waterfall on my right and stop there."
+    ],
+    [
+      "Giver",
+      "Okay good, now from that waterfall on your right, turn left immediately and head straight down the river towards the bottom edge. Keep going until you see the lost steps on your left side, and stop right next to them. Do not go any further. Just stop by the steps."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the waterfall on the right, keeping the river on my left, until I see the lost steps on my left side, and I'll stop right next to them."
+    ],
+    [
+      "Giver",
+      "Okay, good, you are at the lost steps now, turn right immediately and head straight down the river towards the bottom edge. Keep going until you see the fallen pillars on your right side, and stop right next to them. Do not go any further. Just stop by the pillars."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the steps, keeping the river on my left until I see the pillars on the right, and I'll stop right next to them."
+    ],
+    [
+      "Giver",
+      "Okay, good, from those pillars on your right, turn left immediately and head straight down the river again towards the bottom edge, but this time keep going until you see the rope bridge on your left side. Stop right next to the bridge, don't go any further."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the pillars, keeping the river on my left until I see the rope bridge on the left side, and I'll stop right next to it. Is that the spot you wanted?"
+    ],
+    [
+      "Giver",
+      "Okay, good, you are at the bridge now. Since you have stopped there, just make a tiny little mark to the left of the bridge to show me you are there. Do not move any further yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'm making that tiny mark to the left of the bridge. I'm not moving any further yet."
+    ],
+    [
+      "Giver",
+      "Okay, since you made that mark, now turn right immediately from the bridge and head straight down the river towards the bottom edge again. Keep going until you see the waterfall on your right side, stop right next to it, then keep going down past the waterfall until you see the straight river on your right, and stop there. That is your spot for now. Do not go any further."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the bridge, keeping the river on my left until I see the waterfall on my right, and I'll stop right next to it. Then I'm going to keep going down past the waterfall until I see the straight river on my right, and I'll stop there."
+    ],
+    [
+      "Giver",
+      "Okay, you are there now, so just stop drawing. You have reached the fourth stop by the river on the right. I have been giving you directions to go further because you kept missing the landmarks on my map, but I need you to stop right here next to the river on the right side. Do not go any further down. Just stay there. We need to figure out the rest of the route from this point, but first, confirm you are exactly here."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the bridge, keeping the river on the left until I see the waterfall on the right, and I'll stop right next to it. Then I'm going to keep going down past the waterfall until I see the straight river on the right, and I'll stop there."
+    ],
+    [
+      "Giver",
+      "Wait, hold on, you just drew the line all the way to the bottom edge again? I said stop right next to the waterfall. You went too far. Erase that part. Stop right next to the waterfall on the right side. Do not draw any line past it. Just a dot there."
+    ],
+    [
+      "Follower",
+      "Wait, I'm erasing the line past the waterfall now and just putting a dot right next to the waterfall on the right side, stopping there."
+    ],
+    [
+      "Giver",
+      "Okay, you are just marking the spot next to the waterfall, don't erase anything, just leave the dot where you are. Now, do not go back up to the crossing at all. Turn right immediately and head straight down towards the bottom edge of the paper. Keep going down the river until you see the rope bridge on your left side. Stop right next to the bridge, and that is your fifth stop. We are making progress, just stop there for now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning right immediately from the dot next to the waterfall and heading straight down towards the bottom edge. I'll keep going down the river until I see the rope bridge on my left side, and I'll stop right next to it. Is that the fifth stop?"
+    ],
+    [
+      "Giver",
+      "Okay, good, since you are at the bridge, just stop drawing. Do not go any further yet. We need to figure out the next part of the route from here."
+    ],
+    [
+      "Follower",
+      "Okay, I'm stopping right next to the rope bridge on the left side. I'm not going any further yet."
+    ],
+    [
+      "Giver",
+      "Okay, good, since you are at the bridge, just stop drawing. Do not go any further yet. We need to figure out the next part of the route from here."
+    ],
+    [
+      "Follower",
+      "Okay, I'm staying right next to the rope bridge for now, just waiting for the next instructions."
+    ],
+    [
+      "Giver",
+      "Okay, since you are at the bridge, look up along the river towards the top edge until you see the straight river crossing it again. Stop right next to that crossing. That is your next point."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up from the bridge along the river towards the top edge until I see the crossing, and I'll stop right next to it. Is that right?"
+    ],
+    [
+      "Giver",
+      "Okay, good, keep going up from the crossing until you see the lost steps on your left side, and stop right next to them."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up from the crossing along the river towards the top edge until I see the lost steps on my left side, and I'll stop right next to them."
+    ],
+    [
+      "Giver",
+      "Good, once you are at those lost steps on the left, turn right immediately and head straight down towards the river. Keep going down past the waterfall until you see the fallen pillars on your right side. Stop right next to those pillars."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the steps, keeping the river on my left until I see the fallen pillars on the right, and I'll stop right next to them."
+    ],
+    [
+      "Giver",
+      "Okay, good, from those pillars on your right, turn left immediately and head straight down the river again towards the bottom edge, but this time keep going until you see the rope bridge on your left side. Stop right next to the bridge, don't go any further."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the pillars, keeping the river on the left until I see the rope bridge on the left side, and I'll stop right next to it. Is that the spot you wanted?"
+    ],
+    [
+      "Giver",
+      "Okay, good, from the rope bridge on your left, turn right immediately and head straight down the river towards the bottom edge. Keep going until you see the waterfall on your right side, and stop right next to it. Do not go any further. Just stop there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the bridge, keeping the river on the left until I see the waterfall on the right, and I'll stop right next to it."
+    ],
+    [
+      "Giver",
+      "Keep going down from the waterfall until you see the straight river again on your right side, and stop right next to it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the waterfall, keeping the river on the left until I see the straight river on the right side, and I'll stop right next to it."
+    ],
+    [
+      "Giver",
+      "Okay good, from that river stop on your right, turn left immediately and head up the river towards the top edge, keeping the river on your left, until you see the straight river crossing it again. Stop right next to that crossing. That is your next point."
+    ],
+    [
+      "Follower",
+      "Wait, I'm heading up from the river stop on the right, keeping the river on my left until I see the crossing, and I'll stop right next to it. Is that right?"
+    ],
+    [
+      "Giver",
+      "Okay good, from that crossing, turn left immediately and head down the river towards the bottom edge. Keep going until you see the waterfall on your right side, then turn left again and head straight up towards the waterfall on your right. Keep going up past it until you see the straight river crossing it on your left, and stop right next to that crossing. That is your next point."
+    ],
+    [
+      "Follower",
+      "Wait, what? You want me to go up past the waterfall to the crossing again? I just went down from the crossing to the waterfall and stopped. If I keep going up, I'm going to go past the waterfall and back to the crossing? So do I just go up to the crossing and stop there? Is that the point you wanted?"
+    ],
+    [
+      "Giver",
+      "No, stop! You are going the wrong way again. From that crossing, you must turn LEFT immediately and head down the river towards the bottom edge. Do not go up. Keep going down until you see the waterfall on your right side, and stop right next to it. That is your next point."
+    ],
+    [
+      "Follower",
+      "Wait, you said turn left immediately and head down? I thought we just went down from the crossing to the waterfall. If I turn left now, I'm going back the way I came. Do you mean keep going down to the waterfall, or do you mean turn right? I'm confused because if I keep going down I hit the waterfall, but if I turn left I'm going backwards up the river. Which way should I go?"
+    ],
+    [
+      "Giver",
+      "Stop, listen to me carefully. You are going in circles because you keep turning left when you should be turning right. From the crossing, do NOT turn left. Turn RIGHT immediately. Head down the river towards the bottom edge, keeping the river on your LEFT side. Keep going until you see the waterfall on your right side. Stop right next to the waterfall. Do not turn left at the waterfall to go back up. Just stop there at the waterfall."
+    ],
+    [
+      "Follower",
+      "Okay, I think I get it. I am turning right immediately at the crossing and heading down the river. I will keep the river on my left until I see the waterfall on my right, and I will stop right next to it. I won't turn left at the waterfall."
+    ],
+    [
+      "Giver",
+      "Good, excellent, now that you are by the waterfall on the right, turn left immediately and head straight up towards the top edge of the paper. Keep walking along that top edge all the way to the very left corner. Once you are at the left corner, go straight down until you see the banana tree on your left side. Stop right next to that tree. Do not look for anything else yet."
+    ],
+    [
+      "Follower",
+      "Wait, that's wrong again. I turned right from the crossing and went down to the waterfall, but now you're telling me to turn left and go up to the top edge? If I go up, I'll just go back the way I came to the crossing. How can I go down to the waterfall and then also go up to the corner? I'm completely lost."
+    ],
+    [
+      "Giver",
+      "Stop, listen to me. You are going the wrong way again. From that crossing, you must turn LEFT immediately and head down the river towards the bottom edge. Do not go up. Keep going down until you see the waterfall on your right side, and stop right next to it. That is your next point. Do not go to the top corner."
+    ],
+    [
+      "Follower",
+      "Wait, you said turn left immediately from the crossing to go down to the waterfall? But I just came down from the crossing to the waterfall. If I turn left now, I'm going back up the river the way I came. That doesn't make sense. If I go down from the crossing, I hit the waterfall on the right. How can I turn left at the waterfall to go down to the waterfall again? I think you want me to just keep going down straight past the waterfall without turning, right? Is that what you mean by turning left? Because if I don't turn, I'll just keep going down the river. Do you want me to keep going straight down? Or do I turn left somewhere else? I'm really confused now."
+    ],
+    [
+      "Giver",
+      "Stop, listen to me one last time very carefully. You are going crazy because you keep thinking the river goes up and down. Look at your map: the river starts at the top left corner and flows DOWN to the bottom right corner. There is only one way down. From the crossing, turn RIGHT immediately. Keep your LEFT hand on the river bank as you walk down. Do not turn left at all. Keep walking straight down the river until you see the waterfall on your right side. Stop right next to it. Do not go past it. Do not go to the top edge. Do not go to the banana tree. Just walk down the river to the waterfall and stop. That is it."
+    ],
+    [
+      "Follower",
+      "Okay, I think I finally get it. I am turning right immediately at the crossing and heading straight down the river, keeping the river on my left. I will keep going down until I see the waterfall on my right side, and I will stop right next to it. I won't turn left or go up to the corner. Just straight down to the waterfall."
+    ],
+    [
+      "Giver",
+      "Okay, good, you are by the waterfall on the right, now turn left immediately and head straight up the river towards the top edge, keeping the river on your left, until you see the lost steps on your left side, and stop right next to them."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up from the waterfall on the right, keeping the river on my left until I see the lost steps on the left side, and I'll stop right next to them."
+    ],
+    [
+      "Giver",
+      "Okay, good, from those lost steps on your left, turn right immediately and head straight down towards the bottom edge. Keep going until you see the fallen pillars on your right side, and stop right next to them. That is the next stop."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the steps, keeping the river on the left until I see the fallen pillars on the right, and I'll stop right next to them."
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

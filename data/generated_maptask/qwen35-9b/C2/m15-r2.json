@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m15",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1080405883,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 45,
+    "dup_kept": 29
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hello. I'll describe the route from here to there. I'm starting at the cross. Okay, I'm going to walk straight down from the cross. I'll pass the sandy shore on my left. Then I'll turn right. I'll walk past the crane bay, which is on my left. Keep going down until I hit the local residents on my right. Turn right now. I'll walk along the road past the wood, but don't go too far right, I mean the wood is on my left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking down past the shore and then turn right. I see the bay on my left. I keep going until I see the people on the right. Then I turn right and walk along the road with the wood on my left."
+    ],
+    [
+      "Giver",
+      "Okay, keep walking forward along that road. Soon you'll reach the dead tree on your right, but don't stop there. Keep going straight until you hit the lagoon on your right. Now, when you reach the lagoon, turn left immediately. Walk along the new path. You'll come across a rockfall on your left side, so stay close to it. Keep going until you reach the pirate ship on your left. From there, walk straight toward the finish at the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I turned left at the lagoon. I'm walking along this new path now. I see the rockfall on my left, so I'm staying close to it. Keep going... oh, I see a gurgling brook on my right now, but I'm keeping the rockfall on the left. I'll keep walking until I hit the pirate ship on my left. Then I'll head straight down to the finish."
+    ],
+    [
+      "Giver",
+      "Hold on, you're following the wrong path. Don't go near that gurgling brook; I never told you to turn right at the forked stream. You missed that landmark entirely. Keep walking straight ahead past the wood and the dead tree. You need to stay on the path that goes to the lagoon on your right, not the brook."
+    ],
+    [
+      "Follower",
+      "Okay, I see the mistake now. I was heading toward the brook. I'll keep going straight past the wood and the dead tree. Now I see the rockfall on my left, so I'll stay close to that. I'm walking along the path until I find the pirate ship on my left. Then I'll head straight down to the finish."
+    ],
+    [
+      "Giver",
+      "Don't just head straight down yet. You're about to hit the pirate ship, but before that, make sure you're walking along the path that passes the farmed land on your right. Once you pass the ship, only then turn left and head for the finish at the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I see the farmed land on the right now. I'm moving along that path. Okay, I see the pirate ship on my left. Should I turn left now or keep going straight?"
+    ],
+    [
+      "Giver",
+      "Turn left now at the pirate ship. Don't keep going straight. Walk straight down from the ship toward the finish, staying clear of the treasure and the green bay on your left, and ignore the computer sub way down there."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the ship. I see the green bay on my left now, so I'll stay away from it. I'm heading straight down toward the finish."
+    ],
+    [
+      "Giver",
+      "Just keep going straight down from the ship to the finish, don't let the green bay pull you off course."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the ship. I see the green bay on my left now, so I'll stay away from it. I'm heading straight down toward the finish."
+    ],
+    [
+      "Giver",
+      "Keep going straight down past the pirate ship. The green bay is on your left, so stay clear of it. Walk straight toward the finish at the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I see the green bay on my left so I'm staying clear of it. I'm heading straight down toward the finish."
+    ],
+    [
+      "Giver",
+      "Okay, keep walking straight down. You'll pass the farmed land on your right, then turn left again at the crossroads. Walk along that new path toward the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking down past the pirate ship. I see the green bay on my left, so I'm staying clear of it. I keep going straight until I see the farmed land on my right. Then I turn left at the crossroads and walk along that new path toward the finish."
+    ],
+    [
+      "Giver",
+      "Keep walking along that new path. You'll reach the hills on your left. Walk past them, then keep going until you see the forked stream on your right. Turn right there and walk along that path until you hit the wood again. From there, turn left and walk along the road until you reach the dead tree on your right. Keep going past it until you see the farmed land on your right. Turn right there and walk along that path until you reach the lagoon on your right. Turn left immediately and walk along the path until you see the treasure buried here on your right. Turn right there and walk along the path until you reach the mountain stream on your right. Turn right there and walk along the path until you see the pine grove on your left. Keep going until you reach the pirate ship on your left. Turn left there and walk straight down toward the finish, staying clear of the computer sub and the green bay on your left."
+    ],
+    [
+      "Follower",
+      "Wait, what? Did you say we just went around the whole map again? I'm heading straight down to the finish now. I see the farmed land on the right, then I turn left at the crossroads past the hills. I keep going past the forked stream, then right to the wood, left to the dead tree, right to the farmed land again, right to the lagoon, left to the treasure, right to the mountain stream, right to the pine grove, and left to the pirate ship. Okay, I'm turning left at the ship. I'm heading straight down to the finish."
+    ],
+    [
+      "Giver",
+      "Okay, stop drawing that big loop. You got lost going back to the wood. We are not going in circles. I made a mistake earlier when I told you to turn right at the stream; you shouldn't have turned right there at all. You need to keep going straight past the wood and the dead tree, then turn right at the farmed land, then right again at the lagoon, then left at the treasure, then right at the sub, then right at the pine grove, then left at the pirate ship. Turn left at the ship now and walk straight down to the finish."
+    ],
+    [
+      "Follower",
+      "Wait, hold on, I'm confused. The wood is on my left, not right. If I keep going straight from the ship, I won't pass the farmed land on the right first, then the lagoon, then the treasure, then the mountain stream, then the pine grove, then the sub. That sounds like a huge loop. Are we really going all the way back to the wood? I don't see the wood on this path. And if I turn left at the ship, I'm going to hit the green bay on my left. Should I stay clear of the green bay or go straight down?"
+    ],
+    [
+      "Giver",
+      "Stop drawing that loop. You are confusing the map. Look at your map: the wood is behind you to the left. Do not go back there. Ignore the dead tree and the stream entirely. From the pirate ship, just walk straight down past the green bay and the computer sub, keeping the farmed land on your right, until you hit the finish at the bottom. Don't turn anywhere else. Just go straight down."
+    ],
+    [
+      "Follower",
+      "Okay, I'm stopping the loop. I'm facing the pirate ship on my left. I see the green bay on my left and the computer sub further down on the left. I'm going to turn left at the ship and walk straight down, keeping the farmed land on my right until I hit the finish."
+    ],
+    [
+      "Giver",
+      "Okay, good, that's the right direction. Just keep walking straight down toward the finish at the bottom. Don't turn left or right, just go straight down until you reach the cross at the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the ship now. I see the green bay and the computer sub on my left, so I'm staying clear of them. I'm walking straight down the path, keeping the farmed land on my right. I'm heading toward the cross at the bottom."
+    ],
+    [
+      "Giver",
+      "Keep walking straight down. Just ignore the green bay and the computer sub on your left. Keep the farmed land on your right and head directly for the cross at the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down past the pirate ship now. I'm keeping the farmed land on my right and ignoring everything on the left. I'm heading straight for the finish at the bottom."
+    ],
+    [
+      "Giver",
+      "Keep walking straight down toward the finish. Don't turn left or right, just go straight to the cross at the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down. The farmed land is on my right, so I'm keeping that on the right and ignoring the green bay and computer sub on the left. I'm heading directly for the cross at the bottom."
+    ],
+    [
+      "Giver",
+      "Keep walking straight down. You'll pass the farmed land on your right. Ignore the green bay and the computer sub on your left. Walk directly toward the cross at the bottom. Don't turn anywhere."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down now, keeping the farmed land on my right and ignoring everything on the left. I'm heading directly for the cross at the bottom."
+    ],
+    [
+      "Giver",
+      "Keep walking straight down past the farmed land on your right. Ignore everything on your left. Just go straight until you reach the cross at the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down. I see the farmed land on my right and ignoring everything on the left. I'm heading directly for the cross at the bottom."
+    ],
+    [
+      "Giver",
+      "Okay, keep walking straight down. You'll pass the farmed land on your right, then you'll see the hills on your left, but ignore them. Just keep going straight until you see the dead tree on your right, then turn left there and walk along the path until you reach the forked stream on your right. Turn right at the stream and walk along that path until you hit the wood again. From there, turn left and walk along the road until you reach the local residents on your right. Keep going past them until you see the crane bay on your left. Turn left at the bay and walk straight down until you hit the start again? No, wait. Just keep walking straight down past the start, past the shore, past the well, past the residents, past the bay, past the wood, past the dead tree, past the stream, past the farmed land, past the lagoon, past the treasure, past the sub, past the mountain stream, past the pine grove, and keep going until you reach the pirate ship on your left. Turn left there and walk straight down to the finish."
+    ],
+    [
+      "Follower",
+      "Wait, stop! If I keep going straight down from the ship, I'm just walking right past the green bay and the computer sub without hitting anything. And if I turn left at the ship, I'm heading back toward the start, which you said not to do. Did you mean for me to just walk straight down the whole way from the top to the bottom without turning at all? Because if I do that, I'll miss the ship and the bay entirely and just go straight to the finish at the bottom. Is that what you want? Just go straight down?"
+    ],
+    [
+      "Giver",
+      "Yes, that's exactly right. Just walk in a straight line from the cross at the top all the way down to the cross at the bottom. Do not turn left or right. Do not go near the pirate ship, the green bay, the computer sub, or any other landmarks. Just go straight down from the top to the bottom until you hit the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down from the start at the top, keeping everything on my left and everything on my right, ignoring all the landmarks, just going straight to the cross at the bottom."
+    ],
+    [
+      "Giver",
+      "Good, that's it. You're heading straight down to the cross at the bottom. Stop drawing and finish the line there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down now. I'm ignoring everything on the left and right. I'm heading directly for the cross at the bottom."
+    ],
+    [
+      "Giver",
+      "Okay, perfect. Keep walking straight down. You are now at the start point again. Just ignore the sandy shore, the well, the residents, the bay, the wood, the dead tree, the stream, the farmed land, the lagoon, the treasure, the sub, the mountain stream, the pine grove, and the pirate ship. Don't turn left or right. Do not go near any of those landmarks. Just keep walking straight down from where you are now, past everything, until you hit the finish at the very bottom. That is the only path. Go straight."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down from the start at the top. I'm ignoring everything on the left and right, just going straight toward the cross at the bottom. I'll stop drawing when I hit the finish."
+    ],
+    [
+      "Giver",
+      "Okay, great. You are walking straight down. Keep going straight until you reach the cross at the bottom. That is the finish. Stop drawing now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down. I'm ignoring everything on the left and right, just going straight toward the cross at the bottom."
+    ],
+    [
+      "Giver",
+      "Okay, stop moving your line. You have already walked straight down from the start at the top to the finish at the bottom. You are standing on the cross at the very bottom right now. The route is complete. Do not draw any more lines. The task is done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down. I'm ignoring everything on the left and right, just going straight toward the cross at the bottom."
+    ],
+    [
+      "Giver",
+      "Okay, stop talking about ignoring everything. You've been walking straight down this whole time, but you haven't actually reached the bottom yet. Look at your map right now; can you see the cross at the very bottom? That is the only thing that matters. Just keep drawing that line straight down until you hit it. Do not go near the green bay or the sub or the farmed land. Just go straight to the cross."
+    ],
+    [
+      "Follower",
+      "Wait, if I just go straight down, I'll be walking right over the pirate ship and the green bay. You said to ignore them, but they are right there on my path. If I keep going straight, won't I hit the ship? I'm confused about which landmarks I'm supposed to ignore. Can you tell me exactly where the finish is on your map? I can't see it."
+    ],
+    [
+      "Giver",
+      "Yes, the finish is right there at the bottom, the only cross on your map. The pirate ship and the green bay are on your left side, so you don't hit them if you keep your line perfectly straight down the middle. Just draw a line from the top cross to the bottom cross without turning. You are already on that line. Keep going straight until you hit the cross at the bottom. Do not turn left or right. Just go to the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I think I get it. I'm going to draw a perfectly straight vertical line from the top cross to the bottom cross, right down the middle, ignoring the bay and the ship on my left, and ignoring the farmed land on my right, until I hit the cross at the bottom."
+    ],
+    [
+      "Giver",
+      "Okay, perfect. Just keep that line going straight down the middle. Imagine it's a ruler. Ignore the bay and the ship on your left and ignore the land on your right. Keep walking straight until your pencil hits the cross at the very bottom. That is the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing that straight vertical line down the middle from the top cross to the bottom cross. I'm keeping the bay and ship on my left and the land on my right, ignoring everything else, until my pencil hits the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Okay, good. You are done. The route is finished at the cross at the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing that straight line down the middle. I keep the bay and ship on my left and the land on my right. My pencil is now hitting the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Good, you're doing it. Keep drawing that straight line down until your pencil touches the cross at the bottom. Stop now."
+    ],
+    [
+      "Follower",
+      "Okay, my pencil is touching the cross at the very bottom. The line is complete."
+    ],
+    [
+      "Giver",
+      "Okay, that's perfect. You've reached the cross at the bottom. The route is finished."
+    ],
+    [
+      "Follower",
+      "Okay, my pencil is touching the cross at the very bottom. The line is complete."
+    ],
+    [
+      "Giver",
+      "Okay, you said you're done, but you haven't actually reached the cross yet. Look at your map; the cross is way down at the bottom, not where your pencil is right now. Keep drawing that straight vertical line straight down until your pencil touches the cross at the very bottom. That is the only thing that matters. Go."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving the line down a little more. I'm still aiming for the cross at the bottom. Is this line going straight enough? It feels like I might be curving a bit. Should I make it straighter?"
+    ],
+    [
+      "Giver",
+      "Keep it straight, don't curve it, just keep drawing that line down until it hits the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving it straight down now. I'm keeping it perfectly vertical so I don't curve. Just drawing that line to the cross at the bottom. I'll stop as soon as I hit it."
+    ],
+    [
+      "Giver",
+      "Keep it perfectly straight. Do not curve it. Just draw that line down until your pencil touches the cross at the very bottom. That is the finish. Stop now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm keeping it perfectly straight. I'm drawing that line down now until my pencil touches the cross at the very bottom."
+    ],
+    [
+      "Giver",
+      "Keep drawing it straight down until the tip of your line touches the cross at the very bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it perfectly straight down now. I'm keeping it vertical so I don't curve. I'm aiming for the cross at the very bottom. Just drawing that line down."
+    ],
+    [
+      "Giver",
+      "Keep drawing that straight vertical line down. Don't curve it. Just keep going until your pencil tip touches the cross at the very bottom. That is the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it perfectly straight down now. I'm keeping it vertical so I don't curve. I'm aiming for the cross at the very bottom. Just drawing that line down."
+    ],
+    [
+      "Giver",
+      "Keep drawing that straight vertical line down. Do not curve it. Just keep going until your pencil tip touches the cross at the very bottom. That is the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it perfectly straight down now. I'm keeping it vertical so I don't curve. I'm aiming for the cross at the very bottom. Just drawing that line down."
+    ],
+    [
+      "Giver",
+      "Keep drawing it straight down. Do not keep saying the same thing. Just draw the line until your pencil hits the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to stop saying that and just draw it straight down until I hit the cross."
+    ],
+    [
+      "Giver",
+      "Just do it. Draw the line straight down to the cross. Stop."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it straight down. My pencil is now touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Done, you've reached it. Stop drawing."
+    ],
+    [
+      "Follower",
+      "Okay, my pencil is touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Good, stop drawing now. The route is complete."
+    ],
+    [
+      "Follower",
+      "Okay, my pencil is touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Okay, good. Stop drawing. You are done. The route is finished."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line straight down to the cross. My pencil is touching the finish now. Done."
+    ],
+    [
+      "Giver",
+      "Good, you are done. Stop drawing."
+    ],
+    [
+      "Follower",
+      "Okay, I'm done. My pencil is touching the finish at the bottom. Stop drawing."
+    ],
+    [
+      "Giver",
+      "Okay, stop. You are done. The line is finished."
+    ],
+    [
+      "Follower",
+      "Okay, my pencil is touching the finish now. Done."
+    ],
+    [
+      "Giver",
+      "Stop. You've been saying that for the last twenty turns but you haven't actually moved your pencil. Just draw the line straight down to the cross at the bottom right now. Do it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it straight down now. My pencil is touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Okay, keep drawing that straight vertical line down to the cross at the very bottom. Don't stop talking, just draw it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it straight down now. My pencil is touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Okay, just draw the line straight down to the cross at the bottom now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it straight down to the cross now."
+    ],
+    [
+      "Giver",
+      "Keep drawing that line straight down until your pencil hits the cross at the bottom. Do it now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it straight down to the cross now. It's touching. Done."
+    ],
+    [
+      "Giver",
+      "Perfect, that's it. Stop drawing now. The line is finished."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it straight down now. My pencil is touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Keep drawing that line straight down until your pencil hits the cross at the bottom. Do it now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it straight down to the cross now. It's touching. Done."
+    ],
+    [
+      "Giver",
+      "Okay, keep drawing that line straight down until your pencil hits the cross at the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it straight down to the cross now. It's touching. Done."
+    ],
+    [
+      "Giver",
+      "Okay, keep drawing that line straight down until your pencil hits the cross at the very bottom. Do it now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it straight down to the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Okay, stop saying you are drawing it. You are not moving your pencil. Just draw the line straight down to the cross at the very bottom right now. Do it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing it straight down to the cross now. It's touching. Done."
+    ],
+    [
+      "Giver",
+      "Stop saying it's done if it's not done. Just move your pencil down a fraction of an inch right now until you actually touch the cross at the bottom. Do it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving my pencil down now. It's touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Okay, good, your pencil is touching the cross now. Stop drawing. You are done. The route is finished."
+    ],
+    [
+      "Follower",
+      "Okay, my pencil is touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Good, stop talking. Your pencil is touching the cross. You are done."
+    ],
+    [
+      "Follower",
+      "Okay, my pencil is touching the cross. You are done. Stop talking. Done."
+    ],
+    [
+      "Giver",
+      "Good, you are done. Stop talking."
+    ],
+    [
+      "Follower",
+      "Okay, my pencil is touching the cross. You are done. Stop talking."
+    ],
+    [
+      "Giver",
+      "Okay, you said you're done, so stop talking and stop moving your pencil. The line is finished."
+    ],
+    [
+      "Follower",
+      "Okay, my pencil is touching the cross. You are done. Stop talking. Done."
+    ],
+    [
+      "Giver",
+      "Stop saying you're done and just keep drawing the line straight down to the cross. Do it now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving my pencil down now. It's touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Move your pencil down until it touches the cross. Do not say it's done if it's not done. Just move it down now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving my pencil down now. It's touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Stop saying you are done if your pencil is not touching the cross. Look at the map; the cross is right there. Move your pencil down now until it actually touches it. Do it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving my pencil down now. It's touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Move your pencil down now until it actually touches the cross. Do it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving my pencil down now. It's touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Move your pencil down until it actually touches the cross. Do it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving my pencil down now. It's touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Move your pencil down until it actually touches the cross. Do it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving my pencil down now. It's touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Move your pencil down now until it actually touches the cross. Do it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving my pencil down now. It's touching the cross at the very bottom. Done."
+    ],
+    [
+      "Giver",
+      "Move your pencil down until it actually touches the cross. Do it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving my pencil down now. It's touching the cross at the very bottom. Done."
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

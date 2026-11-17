@@ -1,0 +1,277 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 2405,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 28,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hey, I'm actually the one who was curious about computers\u2014what about you? Do you work with them much?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, actually I do, mostly at work, but I'm kinda bad at it. Like, my cousin is a computer engineer or something, she says it's the best job ever, but honestly? I just use it to check my schedule and look up recipes. It's... kind of overwhelming sometimes. How about you? Do you get into the cool stuff like building them, or do you just use it too?"
+    ],
+    [
+      "ParticipantA",
+      "Oh wow, really? That is so funny because I feel like the exact opposite! I'm a bank teller so I deal with the computer all day, every day, but honestly it's kind of boring. Like, I just punch in numbers and hope the machine doesn't eat my card. My best friend, she's actually a computer engineer too, and she tells me it's the most exciting job in the world because you get to build the stuff yourself. But I think I'm lucky just to use it for checking accounts. Do you ever feel like you're missing out on the cool stuff, or are you just happy with the schedule thing?"
+    ],
+    [
+      "ParticipantB",
+      "Oh, totally. It's like... I'd love to build stuff sometimes, but honestly? I'm just scared I'd break the register if I touched it wrong. My cousin says I have \"no tech skills,\" but hey, at least I don't have to debug code for a living. Does your bank ever get you into the \"cool\" stuff, or is it all just... boring data entry?"
+    ],
+    [
+      "ParticipantA",
+      "Haha, that's exactly how I feel about the register too. My friend is always talking about how she could fix anything with a screwdriver, but she never actually lets me touch anything. I'm terrified of breaking things, so I just keep my hands to myself and stick to the transactions."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, exactly. It's like, if I tried to open up the laptop just to clean it, I'd probably spill coffee all over the motherboard and ruin it. I'd rather just be the person who makes the coffee so nobody breaks anything."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, totally, I'd rather just stand there and do the math than try to open the case and see what's inside."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds way safer than me trying to tinker with my own stuff and probably frying the Wi-Fi card."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's the smartest move. I actually saw my friend try to swap a keyboard on her own and she managed to crack the case but didn't know how to snap it back together, so she had to call someone else to fix it. Definitely not worth the headache."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, sounds like a real headache to hear about, but at least she didn't burn your desk or anything."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, for sure. I mean, my friend just called me the other day because she thought she fixed her printer, but now it's not printing at all. I said, \"Hey, you sure you didn't just unplug the power cord by accident?\" and she went, \"Well, maybe...\" so I guess she's still waiting for the real fix."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a classic case of \"make it better before you break it,\" which is why I'm stuck in the happy place of just ordering food."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's just funny 'cause I feel like I'm living in the slow lane of the tech world while she's zooming right past me."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I get that. It's like watching someone else's race and hoping they don't trip over their own feet."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, exactly, it's kind of wild how she went from \"I fixed it\" to \"I broke it\" in ten seconds flat, but hey, at least the customer didn't get mad since they just wanted a receipt, right?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, true, receipts are just receipts and nobody cares if the computer ate it, but it is kind of funny watching her try to explain to the guy at the help desk why she moved the plug and then put it back in wrong."
+    ],
+    [
+      "ParticipantA",
+      "Well, at least she didn't have to deal with an angry customer yelling because the printer jammed in the middle of lunch rush."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I'm glad she didn't have to explain that to a lunch rush customer because that would have been a nightmare."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I totally agree, but honestly I'd probably just stand there and watch her panic while the customer gets angrier and angrier."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, definitely, I'd rather just not be the one who had to go in there and tell him his printer was on, you know, or that he just needed to unplug it and plug it back in."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'd much rather just stay in the front line and watch someone else deal with the tech panic while I try to tell them why their total doesn't match up."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds way easier than having to explain to someone why their balance is off when they just used their card."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, and it's just the worst when the machine swallows the card and you're standing there waiting for the manager because you can't just... give them their money back."
+    ],
+    [
+      "ParticipantB",
+      "That is so true, and honestly that's usually the part where I just wish I had a backup plan because if the register freezes during dinner, I'm doomed."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the worst part, because usually the customer is just standing there tapping their foot waiting for the machine to decide if it's going to give them their money or not."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that is the absolute worst part because you're just standing there tapping your foot while the machine decides if it's going to give them their money or not."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, exactly, it feels like we're both just waiting for the machine to decide if it's going to let us through or throw us in the back."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's like the machine is just deciding our fates right now."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's just this weird limbo where the machine is the boss and we're just the ones holding the phones, right?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, exactly, it's like that one time when the register ate a $50 bill and I had to tell the lady she had to walk down the street to the bank because my manager wasn't here and I didn't want to lose the receipt, but then the register threw up her change so she left in a huff."
+    ],
+    [
+      "ParticipantA",
+      "That sounds like a disaster, and honestly, I kind of feel bad for you because usually the line is backed up behind her."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, at least I didn't have to stand in the line behind her and apologize to three different people while she was yelling at the machine."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's just that kind of chaos where you feel like you're the only one who knows the truth, but nobody else believes you."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's just frustrating when you know the answer but nobody listens until you're sweating bullets."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, exactly, it's like you're holding the whole restaurant together in your head while nobody else even knows the real answer."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I know right? It's just so annoying when people don't trust you to just say, \"Hey, here's the change, take it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that is exactly what happened and it was so weird because she just kept trying to explain that she didn't touch it when everyone could see she was holding the cable right before the power cut."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's just that kind of awkwardness where you know the cable was fine but nobody stops to listen until you're sweating bullets."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that is exactly the worst feeling, being the only one who knows what actually happened and everyone else just keeps yelling at you."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, exactly, I get it, it's just so frustrating when people don't trust you to just say, \"Hey, here's the change, take it."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 1,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1,
+    "dup_resamples": 2
+  },
+  "conversation_seed": 930713403,
+  "run_id": "507bd38eb429983ff60c66a88b311431f4d2e7c7fc968fbba36287b7cd01ead0",
+  "run": {
+    "run_id": "507bd38eb429983ff60c66a88b311431f4d2e7c7fc968fbba36287b7cd01ead0",
+    "identity": {
+      "condition": "C2-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "90e78653f87b3d00f02c3bc4759891c48c15c8cf",
+    "created_utc": "2026-11-17T08:57:56.189399+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

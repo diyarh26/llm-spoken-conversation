@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m12",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 3834423096,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 51,
+    "dup_kept": 30
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi, can you find the caravan park on your map?"
+    ],
+    [
+      "Follower",
+      "Yes, I see it."
+    ],
+    [
+      "Giver",
+      "Okay, from the caravan park, can you go up and left until you see the old mill on the right?"
+    ],
+    [
+      "Follower",
+      "Up and left from the caravan park, I see the old mill on the right."
+    ],
+    [
+      "Giver",
+      "Okay, from the old mill, go up and left until you see the forest on your right, then turn right and walk along the bottom edge of the forest until you reach the fenced meadow on your left."
+    ],
+    [
+      "Follower",
+      "Up and left from the old mill I see a golf course on my right, not a forest. Is this the right map?"
+    ],
+    [
+      "Giver",
+      "Yeah, no forest on your map, just a golf course there, but that's the spot, keep going up and left until you see the fence on the left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going up and left until I see the fence on the left."
+    ],
+    [
+      "Giver",
+      "Okay, so when you hit that picket fence on the left, turn right and keep going straight along the top edge of the fence until you see the monument on your left."
+    ],
+    [
+      "Follower",
+      "Uh oh, the monument is on my left already, I missed the turn."
+    ],
+    [
+      "Giver",
+      "That's okay, just turn right now and walk along the bottom of that picket fence until you see the caravan park again."
+    ],
+    [
+      "Follower",
+      "Right, so I turn right at the picket fence, walk along the bottom, hit the caravan park again, then turn left and go down until I see the old mill on the right, then turn right again and keep going up and left until I see the fenced meadow on the left."
+    ],
+    [
+      "Giver",
+      "Right, okay, from the fenced meadow go up and right until you see the trig point on your right, then turn left and keep going up and left until you see the monument on your left."
+    ],
+    [
+      "Follower",
+      "Up and right from the meadow I see the trig point on the right, okay, so I turn left and keep going up and left... but I don't see the monument on my left, I see the golf course."
+    ],
+    [
+      "Giver",
+      "Don't worry about the golf course, just keep going up and left until you see the monument on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up and left past the golf course, but the monument is way down below me now. I think I've gone too far north already."
+    ],
+    [
+      "Giver",
+      "You're heading in the wrong direction, actually. Keep going up and left, but don't turn right at the fence; just keep moving past the golf course until you see the monument on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going back down a bit past the golf course and heading up and left again to try and find the monument on my left."
+    ],
+    [
+      "Giver",
+      "Okay, forget the golf course for a moment. When you turn right at that picket fence, don't walk along the bottom towards the caravan park. Instead, turn left at the picket fence and walk straight along the top edge until you see the monument on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the picket fence and walk along the top edge until I see the monument on my left."
+    ],
+    [
+      "Giver",
+      "Okay, once you see the monument on your left, turn right and walk along the bottom edge of that monument until you see the abandoned cottage on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I see the monument on my left, so I'm turning right now and walking along the bottom edge of it, but I don't see any abandoned cottage on my left yet."
+    ],
+    [
+      "Giver",
+      "Keep going along the bottom of the monument until you see the cottage on your left, and once you see it, turn left and walk down the road towards the caravan park."
+    ],
+    [
+      "Follower",
+      "I'll keep walking along the bottom of the monument until I see the cottage on my left."
+    ],
+    [
+      "Giver",
+      "Just keep going along the bottom of the monument until you see the cottage on your left, don't worry about the caravan park for now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking along the bottom of the monument, but there isn't a cottage on the left at all, just empty space. What do I do?"
+    ],
+    [
+      "Giver",
+      "Hold on, that's the problem. The abandoned cottage isn't near the monument on my map; it's way down lower, near the caravan park. You need to turn left at the picket fence, walk along the top edge to find the monument, then turn right at the monument, walk down until you hit the caravan park, and THEN turn left again to find the cottage."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the picket fence and walk along the top edge to find the monument, then turn right at the monument and walk down until I hit the caravan park, and THEN turn left again to find the cottage."
+    ],
+    [
+      "Giver",
+      "Right, once you hit the caravan park, turn left and keep going down until you see the old mill on your right, then turn right again and keep going up and left until you see the fenced meadow on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left at the picket fence and walk along the top edge to find the monument, then turn right at the monument and walk down until I hit the caravan park, and then turn left again to find the cottage, then turn right and keep going up and left until I see the fenced meadow on the left."
+    ],
+    [
+      "Giver",
+      "Okay, once you see the fenced meadow, go down and right until you see the nuclear test site on your left, then turn left and keep going down until you see the trig point on your right, then turn right and walk along the bottom of the trig point until you see the east lake on your right, then turn right and walk along the bottom of the lake until you see the finish line on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'm turning right at the meadow now, heading down and right until I see the nuclear test site on my left."
+    ],
+    [
+      "Giver",
+      "Keep going down and right until you see the nuclear test site on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'm heading down and right from the meadow now, but I'm not seeing the nuclear test site on my left at all."
+    ],
+    [
+      "Giver",
+      "Just keep going down and right until you hit the bottom edge of the fenced meadow, and the nuclear test site will be right there on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep going down and right from the meadow. I'll walk along the bottom edge of the meadow until I see that spot on my left and I think I'll find it then."
+    ],
+    [
+      "Giver",
+      "Keep going down and right from the meadow, it's just below the bottom edge."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep going down and right from the meadow, but as I look to my left, I don't see the nuclear test site at all, I just see empty space, so what do I do?"
+    ],
+    [
+      "Giver",
+      "Don't worry about the site on your map; just keep going down and right until you hit the bottom edge of the meadow, and you'll see the finish line right there on your left instead."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep going down and right from the meadow, and I think I'll find the finish line there."
+    ],
+    [
+      "Giver",
+      "Okay, just keep going down and right from the meadow, you'll hit the bottom edge soon enough."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep going down and right from the meadow and see what I find on the left."
+    ],
+    [
+      "Giver",
+      "Keep going down and right until you hit the bottom edge of the meadow, and you'll see the finish line right there on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep going down and right from the meadow and keep looking left for that finish line."
+    ],
+    [
+      "Giver",
+      "Keep going down and right, and you should see the finish line on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep going down and right from the meadow and keep looking left for that finish line."
+    ],
+    [
+      "Giver",
+      "Keep looking left, it's just there right at the edge of the meadow."
+    ],
+    [
+      "Follower",
+      "I'm going down and right from the meadow now and keeping an eye on the left for the finish line."
+    ],
+    [
+      "Giver",
+      "Keep looking left, it's just there right at the edge of the meadow."
+    ],
+    [
+      "Follower",
+      "Right, I'm going down and right from the meadow now. I'll keep looking left for the finish line. If I don't see it on the left, maybe I'll just look ahead?"
+    ],
+    [
+      "Giver",
+      "Look ahead and keep going down and right, the finish line is right there just ahead of you."
+    ],
+    [
+      "Follower",
+      "I'm going down and right and looking left, but I still don't see the finish line."
+    ],
+    [
+      "Giver",
+      "Keep going down and right, look straight ahead, the finish line is right there just in front of you."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving down and right from the meadow now. I still don't see anything on my left, but I'm looking straight ahead as you said. I can see the fenced meadow right in front of me at the bottom edge. There's nothing there though. Just empty space. I think I'm in the wrong place completely. Did I start at the right spot?"
+    ],
+    [
+      "Giver",
+      "Yeah, you're starting at the wrong spot. You need to move left first before going down, then go way up to the top edge of your map, keep left until you see the farmed land, then go down and right to the east lake, and follow it down to find the finish line on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'll move left first to find the caravan park again, then go up to the top edge to look for the farmed land."
+    ],
+    [
+      "Giver",
+      "Okay, go left from the caravan park, keep going left until you hit the edge of your map, then turn up and go straight up to the very top to find the farmed land."
+    ],
+    [
+      "Follower",
+      "Right, I'll go left from the caravan park to the edge, turn up and go straight to the top to find the farmed land."
+    ],
+    [
+      "Giver",
+      "Okay, once you hit the farmed land at the top, turn right and walk down the side of it until you see the west lake on your left, then turn right and walk along the bottom of the lake until you see the finish line on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll go left from the caravan park to the edge, then up to the top to find the farmed land."
+    ],
+    [
+      "Giver",
+      "Right, you go up to the top edge, but don't walk the whole way; keep going up a bit further along that edge until you see the farmed land on the right, then turn left and walk down the side of the farmed land until you see the west lake on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'll go left from the caravan park to the edge, then up to the top edge and keep going up a bit further until I see the farmed land on the right, then turn left and walk down the side of it until I see the west lake on my left."
+    ],
+    [
+      "Giver",
+      "Keep going up along that edge until you see the farmed land on your right."
+    ],
+    [
+      "Follower",
+      "Right, I'll go left from the caravan park to the edge, then up to the top edge and keep going up a bit further until I see the farmed land on my right."
+    ],
+    [
+      "Giver",
+      "Go left from the caravan park until you hit the edge of the map, then turn up and walk straight up that edge until you see the farmed land on your right."
+    ],
+    [
+      "Follower",
+      "Right, I'll go left from the caravan park until I hit the edge, then turn up and walk straight up that edge until I see the farmed land on my right."
+    ],
+    [
+      "Giver",
+      "Okay, once you find the farmed land on your right, turn left and walk down its side until you see the west lake on your left, then turn right and walk along the bottom of that lake until you see the finish line on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'll go left from the caravan park until I hit the edge, then turn up and walk straight up that edge until I see the farmed land on my right."
+    ],
+    [
+      "Giver",
+      "Turn up and keep going up along that edge, the farmed land is just there on the right."
+    ],
+    [
+      "Follower",
+      "Right, I'll go left from the caravan park until I hit the edge, then turn up and walk straight up that edge until I see the farmed land on my right."
+    ],
+    [
+      "Giver",
+      "Go up a little bit further along that edge and then turn left to see the farmed land on your right."
+    ],
+    [
+      "Follower",
+      "Right, I'm going up that edge a bit further until I see the farmed land on my right, then turn left and walk down its side until I see the west lake on my left."
+    ],
+    [
+      "Giver",
+      "Keep going down the side of the farmed land until you see the west lake on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll go left from the caravan park until I hit the edge, then turn up and walk straight up that edge until I see the farmed land on my right, then turn left and walk down its side until I see the west lake on my left."
+    ],
+    [
+      "Giver",
+      "Keep going down the side of the farmed land until you see the west lake on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the edge and I see the farmed land on my right now, so I'm turning left to walk down its side. I'll keep going down until I see the west lake on my left."
+    ],
+    [
+      "Giver",
+      "Keep going down until you see the west lake on your left."
+    ],
+    [
+      "Follower",
+      "I'm going down the side of the farmed land now and I'm keeping an eye out for the west lake on my left."
+    ],
+    [
+      "Giver",
+      "Keep going down, you should see the west lake on your left soon."
+    ],
+    [
+      "Follower",
+      "Right, I'm going down the side of the farmed land now. I can see the west lake on my left coming up. I'll keep going down a bit further to find it."
+    ],
+    [
+      "Giver",
+      "Keep going down the side of the farmed land, the west lake is just coming up on your left now."
+    ],
+    [
+      "Follower",
+      "I'm going down the side of the farmed land and the west lake is definitely coming up on my left now."
+    ],
+    [
+      "Giver",
+      "Keep going down the side of the farmed land, the west lake is just coming up on your left now."
+    ],
+    [
+      "Follower",
+      "Right, I'm going down the side of the farmed land and the west lake is definitely coming up on my left now. I'll keep going down a bit further to find it."
+    ],
+    [
+      "Giver",
+      "Keep going down, the west lake is just right there on your left now."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep going down along the side of the farmed land until I see the west lake on my left."
+    ],
+    [
+      "Giver",
+      "Keep going down along the side of the farmed land until you see the west lake on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep going down along the side of the farmed land until I see the west lake on my left."
+    ],
+    [
+      "Giver",
+      "Keep going down along the side of the farmed land until you see the west lake on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'm going down along the side of the farmed land and the west lake is right there on my left now."
+    ],
+    [
+      "Giver",
+      "Right, once you see the west lake on your left, turn right and walk along the bottom edge of that lake until you see the finish line on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going down the side of the farmed land and the west lake is right there on my left now. I'll turn right and walk along the bottom edge of the lake until I see the finish line on my left."
+    ],
+    [
+      "Giver",
+      "Turn right and walk along the bottom edge of the lake until you see the finish line on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'll turn right now and walk along the bottom of the lake. I'm keeping an eye out for the finish line on my left."
+    ],
+    [
+      "Giver",
+      "Keep walking along the bottom edge of the lake until you see the finish line on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'll turn right and walk along the bottom edge of the lake until I see the finish line on my left."
+    ],
+    [
+      "Giver",
+      "Keep walking along the bottom of the lake, you should hit the finish line pretty soon on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'm walking along the bottom edge of the lake now and I'm keeping an eye out for the finish line on my left."
+    ],
+    [
+      "Giver",
+      "Keep walking along the bottom of the lake, you should hit the finish line pretty soon on your left."
+    ],
+    [
+      "Follower",
+      "Right, I'm walking along the bottom edge of the lake now and I'm keeping an eye out for the finish line on my left."
+    ],
+    [
+      "Giver",
+      "Keep walking along the bottom of the lake, you should hit the finish line pretty soon on your left."
+    ],
+    [
+      "Follower",
+      "I'm walking along the bottom edge of the lake now and still don't see the finish line on my left, I just see empty space there."
+    ],
+    [
+      "Giver",
+      "Just keep going along the bottom of the lake until you see the finish line on your left, it's right there at the southern end."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep walking along the bottom edge of the lake until I see the finish line on my left."
+    ],
+    [
+      "Giver",
+      "Keep going along the bottom of the lake, you'll see the finish line on your left pretty soon."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep walking along the bottom edge of the lake until I see the finish line on my left."
+    ],
+    [
+      "Giver",
+      "Keep going along the bottom of the lake, you'll see the finish line on your left pretty soon."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep walking along the bottom edge of the lake until I see the finish line on my left."
+    ],
+    [
+      "Giver",
+      "Keep going along the bottom of the lake, you'll see the finish line on your left pretty soon."
+    ],
+    [
+      "Follower",
+      "Right, I'm keeping going along the bottom edge of the lake and I think I'll see the finish line on my left pretty soon."
+    ],
+    [
+      "Giver",
+      "Keep going along the bottom of the lake, you'll see the finish line on your left pretty soon."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep walking along the bottom edge of the lake and I'll make sure to look left for the finish line."
+    ],
+    [
+      "Giver",
+      "Keep going along the bottom of the lake, you'll see the finish line on your left pretty soon."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep walking along the bottom edge of the lake and I'll make sure to look left for the finish line."
+    ],
+    [
+      "Giver",
+      "Keep going along the bottom of the lake, you'll see the finish line on your left pretty soon."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep walking along the bottom edge of the lake and I'll make sure to look left for the finish line."
+    ],
+    [
+      "Giver",
+      "Keep going along the bottom of the lake, you'll see the finish line on your left pretty soon."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep walking along the bottom edge of the lake and I'll make sure to look left for the finish line."
+    ],
+    [
+      "Giver",
+      "Keep going along the bottom of the lake, you'll see the finish line on your left pretty soon."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep walking along the bottom edge of the lake and I'll make sure to look left for the finish line.\nRight, I'll keep walking along the bottom edge of the lake and I'll make sure to look left for the finish line.\nRight, I'll keep walking along the bottom edge of the lake and I'll make sure to look left for the finish line."
+    ],
+    [
+      "Giver",
+      "Keep walking along the bottom of the lake, you'll see the finish line on your left pretty soon."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep walking along the bottom edge of the lake and I'll make sure to look left for the finish line."
+    ],
+    [
+      "Giver",
+      "Keep walking along the bottom of the lake, you'll see the finish line on your left pretty soon."
+    ],
+    [
+      "Follower",
+      "I'm keeping going along the bottom edge of the lake and I'll make sure to look left for the finish line."
+    ],
+    [
+      "Giver",
+      "Keep walking along the bottom of the lake, you'll see the finish line on your left pretty soon."
+    ],
+    [
+      "Follower",
+      "Right, I'll keep walking along the bottom edge of the lake and I'll make sure to look left for the finish line."
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

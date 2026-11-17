@@ -1,0 +1,276 @@
+{
+  "condition": "C2-P3",
+  "architecture": "C2",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 4048,
+  "topic": "Drug Testing",
+  "sb_prompt": "HOW DO YOU FEEL ABOUT THE PRACTICE OF SOME COMPANIES OR GOVERNMENT AGENCIES TESTING EMPLOYEES OR PROSPECTIVE EMPLOYEES FOR DRUGS?  IS RANDOM SPOT TESTING JUSTIFIED?  WHAT LIMITS SHOULD THERE BE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 28,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 40,
+    "education": "a college degree",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, so here's the thing... I've been on the fence about this whole drug testing thing for a while now. I'm an accountant so I deal with numbers and rules, but the moment you start testing people, it feels weirdly invasive. I made up my mind years ago that it's mostly a privacy nightmare, but I can't really put my finger on exactly why. Do you have any thoughts on that?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I get that privacy angle, but I'm a teacher and I've got a former student who was getting high at school, and honestly, it changed my perspective on why some testing might actually make sense."
+    ],
+    [
+      "ParticipantA",
+      "Wait, really? That's... that's a whole different story. Did you tell him?"
+    ],
+    [
+      "ParticipantB",
+      "No, I didn't tell him, that wasn't the point. It was the principal who found him. He was smoking in the hallway, the principal caught him red-handed, and they pulled the test immediately after. He tested positive for THC. It wasn't about suspicion or a random spot check, but catching him in the act first. The test was just the confirmation to get the facts straight before anyone else knew."
+    ],
+    [
+      "ParticipantA",
+      "That's... actually a pretty solid reason. If it's just to confirm what we already know, maybe it's not so invasive."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's exactly why I think random spot testing is a no-go though, because without a real reason to suspect someone, you're just fishing for trouble."
+    ],
+    [
+      "ParticipantA",
+      "So what if you're fishing for trouble, though? Don't you think if you're just going in blind, you might actually catch someone who never would have admitted it?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, fair point, but then you're just guessing who to pick and most of the time you're picking the wrong guy anyway."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but what about the ones who never got caught in the first place? Don't you think we're letting real problems slide just because we're too afraid to pick the right guy?"
+    ],
+    [
+      "ParticipantB",
+      "I mean, yeah, there's a risk, but you can't just start accusing everyone and call it a safety measure."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess the risk is real... but does that mean we should just stop testing people who aren't doing anything wrong?"
+    ],
+    [
+      "ParticipantB",
+      "That's a good point, but if we stop testing everyone, aren't we just trusting people to be honest when they might not be?"
+    ],
+    [
+      "ParticipantA",
+      "That's true, but if we just trust them, aren't we asking them to do the hard work of being honest while we do the hard work of policing them?"
+    ],
+    [
+      "ParticipantB",
+      "I mean, that's the whole point though, isn't it? We're not just supposed to be the cops; we're supposed to be the safety net so people don't have to be the ones doing the dirty work of figuring out who's lying."
+    ],
+    [
+      "ParticipantA",
+      "I mean, if we're the safety net, doesn't that mean the net is just a giant lie?"
+    ],
+    [
+      "ParticipantB",
+      "Well, maybe the net is a lie, but the fish are still swimming around in there somewhere if we don't check."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I see what you're saying about the net, but it still feels like we're just building traps to catch people who aren't even trying to break the rules in the first place."
+    ],
+    [
+      "ParticipantB",
+      "Look, if you stop checking, the people who *are* doing it just won't stop, and then suddenly you're paying for accidents instead of trying to prevent them."
+    ],
+    [
+      "ParticipantA",
+      "That's a fair point about the accidents, but if we just go with the flow and nobody gets tested beforehand, aren't we letting the whole system rot from the inside out?"
+    ],
+    [
+      "ParticipantB",
+      "Right, but the rot part is exactly where I think the balance gets messed up, because if you're testing everyone all the time, you're not catching the rot, you're just making sure it's under the microscope until it's too expensive to keep doing it."
+    ],
+    [
+      "ParticipantA",
+      "So what happens when the cost gets too high and they just stop testing?"
+    ],
+    [
+      "ParticipantB",
+      "Then you're just swapping the problem for a bill and hoping nobody gets hurt in the meantime."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but if we just swap the problem for a bill, isn't that just kicking the can down the road until someone gets hurt because nobody checked?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but until the can finally hits the floor, you're still letting people drive drunk on the highway just to save the insurance premiums, aren't you?"
+    ],
+    [
+      "ParticipantA",
+      "So you're saying we're just letting drunk drivers roam free just to save on premiums? That sounds pretty risky to me."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but that's only if you keep the seatbelt laws strict and the random checkpoints real, otherwise you're just paying for the funeral before the crash even happens."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but seatbelts don't make cars safer, they just make the crash less expensive for the insurance company."
+    ],
+    [
+      "ParticipantB",
+      "Then maybe the point isn't to keep the highway perfectly clean, but to make sure that when a crash does happen, at least someone is wearing a seatbelt."
+    ],
+    [
+      "ParticipantA",
+      "So you're just saying we should stop trying to catch the bad guys before they crash and just make sure they don't die if they do?"
+    ],
+    [
+      "ParticipantB",
+      "No, but it means we catch more people alive than dead so they can actually fix their mistakes before they end up in the morgue."
+    ],
+    [
+      "ParticipantA",
+      "I guess you have a point about keeping people alive, but isn't it weird that we'd rather pay the insurance premium than just make sure they don't drive at all?"
+    ],
+    [
+      "ParticipantB",
+      "I guess you're right, it's a weird trade-off between total safety and total freedom."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but if we just let them drive drunk and hope they survive, isn't that just asking for a lot more funerals down the road?"
+    ],
+    [
+      "ParticipantB",
+      "Then maybe we stop paying for all those funerals instead of just waiting for them to happen naturally."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but if we stop paying for the funerals, aren't we just letting the next guy behind the wheel take that chance?"
+    ],
+    [
+      "ParticipantB",
+      "Then we just let the next guy behind the wheel take that chance."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but if we just let the next guy take that chance, isn't that exactly what I was worried about in the first place?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but until we stop paying for the funerals, we're still letting the next guy take that chance."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but if we're just paying for the funerals instead of stopping the driving, aren't we still letting the guy behind the wheel take the chance?"
+    ],
+    [
+      "ParticipantB",
+      "Then maybe the point isn't to stop the driving, but to make sure the guy behind the wheel isn't dead when he crashes."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  },
+  "conversation_seed": 3034381690,
+  "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+  "run": {
+    "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+    "identity": {
+      "condition": "C2-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+    "created_utc": "2026-11-17T10:53:33.359476+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

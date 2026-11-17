@@ -1,0 +1,74 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m9",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 2944168394,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hello, can you hear me? Okay, good. I'm going to give you directions from here to the finish. We're starting at the same cross. First, move your pencil to the left, then up a bit. Keep going left until you reach the stony desert on your side. Make sure you pass it on your left. Now, draw a line towards the top, heading right. You'll pass the site of the plane crash on your right. Keep going right until you hit the collapsed shelter, which should be on your right too. Now, turn your pencil left and head towards the savannah. It's on your right side. Draw past it and keep going left until you see the slate mountain. Pass the mountain on your left. Now, turn right and head down towards the hot wells. They should be on your right. Keep going down until you reach the white mountain. It's on your right side. Now, turn your pencil left and head towards the lake. The lake is on your right. Draw a line past it and keep going left. You'll reach the roman baths on your left. Now, turn your pencil left again and head towards the antelope. It's on your left. Draw a line towards the antelope, then turn right and head towards the finish point. That's it. Can you draw the whole line? Let me know when you're done."
+    ],
+    [
+      "Follower",
+      "Got it. Okay, I moved past the desert. Hmm, something is wrong. There's a collapsed shelter on the right here, just like you said, but I also see a waterhole right next to it. You didn't mention that. Wait, did you say \"collapsed shelter\" before? I think I just went too far left. Okay, I'm going to move my pencil back to the right, away from the waterhole, until I find the shelter. Okay, found it. Now I'll go left towards the savannah. Oh no, I see a waterhole near the savannah too. Did you say anything about a waterhole? You never mentioned it. I'm going to draw a line past the savannah anyway. Wait, next you said the slate mountain. Where is the slate mountain? I don't see it. I see the savannah, but no mountain. Maybe I'm in the wrong place? Okay, I'll stop here for a second. Can you tell me if there is a mountain near the savannah on your map? Because I can't find one."
+    ],
+    [
+      "Giver",
+      "Wait, I didn't say anything about a waterhole. That's not on my map at all. And there is definitely a mountain near the savannah. It's right there, just a bit to the left of where you are looking. Can you see it? It's the slate mountain. Turn your pencil left from the savannah and keep going until you hit that mountain. Pass it on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I see it now. I'm going to turn my pencil left from the savannah and keep going until I hit the slate mountain. Passing the mountain on the left. Now, turn right and head down towards the hot wells. They should be on your right. Keep going down until you reach the white mountain. It's on your right side. Now, turn your pencil left and head towards the lake. The lake is on your right. Draw a line past it and keep going left. You'll reach the roman baths on your left. Now, turn your pencil left again and head towards the antelope. It's on your left. Draw a line towards the antelope, then turn right and head towards the finish point. I'm drawing it all now."
+    ],
+    [
+      "Giver",
+      "Okay, the line you just drew is completely wrong. You went way too far left and missed the route entirely. You need to start over from the START point. Go straight up from the start, then turn left slightly to pass the stony desert on your left side. Then head right towards the plane crash on the right. Keep going right until you hit the collapsed shelter on the right. Turn left and head towards the savannah on the right. Pass it and keep going left until you see the slate mountain on your left. Turn right and head down towards the hot wells on the right. Keep going down until you reach the white mountain on your right. Turn left and head towards the lake on the right. Draw a line past it and keep going left. You'll reach the roman baths on your left. Turn left again and head towards the antelope on the left. Draw a line towards the antelope, then turn right and head towards the finish point. That is the correct path. Don't draw any lines near the waterhole or round rocks, they are not on my map. Can you draw the correct line now?"
+    ],
+    [
+      "Follower",
+      "Oh my god, I'm so stupid. I'm starting over right now. I'll go straight up from the start, then turn left to pass the desert on my left. Then right to the plane crash on the right. Keep going right until I hit the collapsed shelter on the right. Now left towards the savannah on the right. Pass it and go left until I see the slate mountain on my left. Turn right and head down towards the hot wells on the right. Keep going down until I reach the white mountain on the right. Turn left and head towards the lake on the right. Draw a line past it and keep going left. I'll reach the roman baths on the left. Turn left again and head towards the antelope on the left. Draw a line towards the antelope, then turn right and head towards the finish point. Okay, I'm drawing it now."
+    ],
+    [
+      "Giver",
+      "Okay, just keep going. Make sure you stay very close to the desert on your left and the crash site on your right as you head up. Don't get distracted by the rocks or the elephants. Once you hit the shelter, turn left immediately towards the savannah. Pass the savannah, then turn left again to find the mountain. Keep the mountain on your left as you head down. Turn right towards the hot wells. Keep going down until you hit the white mountain on your right. Turn left towards the lake. Keep the lake on your right as you head left. Pass the lake, turn left to find the baths. Keep the baths on your left as you head left and down. Turn left again towards the antelope. Keep the antelope on your left. Once you are near the antelope, turn right and head straight for the finish. That is the exact path. Draw it carefully and let me know when it is done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing straight up now. Passing the desert on my left. Then heading right towards the crash site. Keeping it on my right. Now going right until I hit the collapsed shelter. Turn left immediately towards the savannah. Passing it, then turning left again to find the slate mountain. Keeping the mountain on my left as I head down. Turn right towards the hot wells. Heading down until I hit the white mountain on my right. Turn left towards the lake. Keeping the lake on my right as I head left. Passing the lake, turn left to find the roman baths. Keeping the baths on my left as I head left and down. Turn left again towards the antelope. Keeping the antelope on my left. Once I'm near it, I'll turn right and head straight for the finish. Drawing it carefully now."
+    ],
+    [
+      "Giver",
+      "Okay, I see you are following the path now. Just make sure you don't wander off towards the elephants or the round rocks again. Keep your pencil tight against the stony desert on the left and the crash site on the right. Once you get to the shelter, immediately turn left towards the savannah. After you pass the savannah, look for the mountain on your left. If you can't find it, you might be going the wrong way. Turn right towards the hot wells, then down to the white mountain. From there, go left past the lake and down to the baths. Finally, head to the antelope and turn right to the finish. Keep going slowly and draw the whole line."
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting up from the cross. Passing the desert on my left. Heading right towards the crash site. It's on my right. Keep going right until I hit the shelter. Turn left immediately towards the savannah. Pass it, then turn left to find the mountain. I see a big white shape there, hopefully that's it. Keep the mountain on my left as I head down. Turn right towards the hot springs. Keep going down until I hit the white mountain. Turn left towards the lake. Keeping the lake on my right. Passing it, turn left to find the baths. Keep the baths on my left. Turn left again towards the antelope. Keep the antelope on my left. Once I'm near it, I'll turn right and head straight for the finish. Drawing it now."
+    ]
+  ],
+  "n_turns": 10,
+  "ended_by": "closing"
+}

@@ -1,0 +1,276 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I manage a grocery store, so I'm mostly just used to organizing produce, but I actually have this weird little patch of soil behind my house that I do try to keep alive..."
+    ],
+    [
+      "ParticipantB",
+      "Actually, that sounds way more relaxing than what I do; my cousin's garden is basically a war zone with these aphids that just won't die."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, honestly I'm kind of skeptical too; I just keep thinking maybe it's better to buy a fresh one from the store every week than to fight bugs and weeds all season."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I get that, but my cousin just gave up on that war zone last summer and bought all these fancy self-watering planters, so now she actually sits on her porch instead of yelling at bugs."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's honestly the only way I'm sticking with it, too; once she got those waterers, she stopped screaming at the weeds and actually started sitting out there again."
+    ],
+    [
+      "ParticipantB",
+      "That's wild, she sounds like she actually found the peace she was looking for."
+    ],
+    [
+      "ParticipantA",
+      "Honestly, I think it just depends on whether you can keep the bugs away before you lose your mind."
+    ],
+    [
+      "ParticipantB",
+      "I mean, if I had a garden I'd probably just buy everything already potted up and dump it out the back door."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's probably the smartest move I've made so far anyway."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, honestly I probably wouldn't even put the dirt in the ground if I could help it."
+    ],
+    [
+      "ParticipantA",
+      "I guess you're right about just buying the pots, honestly."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I bet you'd be way happier that way, plus it'd save you from stepping in every single mud puddle."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, no mud in the door jam then."
+    ],
+    [
+      "ParticipantB",
+      "That'd be a game changer, honestly."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, maybe I should just start collecting plants from the store and just dump them on the porch."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds way easier than digging in the dirt, I'd definitely do that."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'd probably just let the store guys deliver them and never even look at the soil again."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, if you can just skip the whole digging thing, you might as well just call it gardening from that point forward."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, honestly that sounds like the only way I'd actually stick with it without losing my mind."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, honestly, if I didn't have to explain to my boss why I was late because I was staring at a fern, I'd probably just go with the pre-potted stuff too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, maybe I should just let you tell me which ones look healthy and I'll take those off your shelf."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, if you come by I'll show you the ones that actually look like they're going to make it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm totally down to see what you've got on the shelves."
+    ],
+    [
+      "ParticipantB",
+      "Deal, but give me a sec to put down my phone before I walk out."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'll swing by later, just let me know what time."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, shoot, whatever time works, I'll text you."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, text me whenever you're free."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, text me when you're free."
+    ],
+    [
+      "ParticipantA",
+      "Okay, sounds good, text me."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, shoot, whatever works for you."
+    ],
+    [
+      "ParticipantA",
+      "Got it, I'll text you."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, shoot, whenever you're free."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, text me whenever you're free."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, whatever works for you."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, just hit me up whenever."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, shoot, just let me know whenever you're ready."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, shoot, whenever you're ready."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, shoot, just let me know whenever."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, shoot, just let me know whenever."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, shoot, just let me know whenever."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  },
+  "conversation_seed": 3525435588,
+  "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+  "run": {
+    "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+    "identity": {
+      "condition": "C2-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "90e78653f87b3d00f02c3bc4759891c48c15c8cf",
+    "created_utc": "2026-11-17T07:24:13.295312+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m12",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1794187756,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 75,
+    "dup_kept": 67
+  },
+  "turns": [
+    [
+      "Giver",
+      "I'm at the start, go west to the caravan park."
+    ],
+    [
+      "Follower",
+      "okay, i see the caravan park, so i'm going west towards it."
+    ],
+    [
+      "Giver",
+      "keep going west until the caravan park is on your left."
+    ],
+    [
+      "Follower",
+      "wait, is the caravan park on my left now?"
+    ],
+    [
+      "Giver",
+      "no, it's on your right, keep going west past it until you see the old mill on your right."
+    ],
+    [
+      "Follower",
+      "okay, i see the mill wheel on my right, is that the old mill?"
+    ],
+    [
+      "Giver",
+      "no, the mill wheel is not the old mill, the old mill is further south and you need to look for the fenced meadow on your left."
+    ],
+    [
+      "Follower",
+      "ah okay so i keep going west past the caravan park then i turn north until the fenced meadow is on my left and then i follow it south?"
+    ],
+    [
+      "Giver",
+      "no you don't turn north you keep going west until you see the old mill on your right then turn north."
+    ],
+    [
+      "Follower",
+      "ah okay so i keep going west past the caravan park then i turn north until i see the old mill on my right."
+    ],
+    [
+      "Giver",
+      "right, keep going north until you see the abandoned cottage on your left."
+    ],
+    [
+      "Follower",
+      "okay i see the cottage on my left."
+    ],
+    [
+      "Giver",
+      "keep going north past the cottage until you see the trig point on your right."
+    ],
+    [
+      "Follower",
+      "ah okay so i keep going north past the cottage and i see the trig point on my right now."
+    ],
+    [
+      "Giver",
+      "keep going north until you see the monument on your left."
+    ],
+    [
+      "Follower",
+      "ok i'm looking for the monument on my left."
+    ],
+    [
+      "Giver",
+      "carry on past the monument until you see the nuclear test site on your right."
+    ],
+    [
+      "Follower",
+      "okay i see the monument on my left so i keep going north past it until i see the nuclear test site on my right."
+    ],
+    [
+      "Giver",
+      "no wait the caravan park is on your right, keep going west past it until you see the old mill on your right."
+    ],
+    [
+      "Follower",
+      "wait, you said the caravan park is on my right? i thought it was on the left when i started going west. did i go the wrong way?"
+    ],
+    [
+      "Giver",
+      "yes, you are confused, stop going north and go back west to the caravan park."
+    ],
+    [
+      "Follower",
+      "wait, so i need to go back down to where i started? i am currently way up north near the monument and the test site. do i just walk all the way back west to the caravan park?"
+    ],
+    [
+      "Giver",
+      "yes, go back all the way west past the caravan park until you see the old mill on your right, then turn north again."
+    ],
+    [
+      "Follower",
+      "okay i'm going back west now past the caravan park until i see the old mill on my right."
+    ],
+    [
+      "Giver",
+      "keep going west until the old mill is on your right."
+    ],
+    [
+      "Follower",
+      "i see the old mill on my right now so i'm turning north."
+    ],
+    [
+      "Giver",
+      "keep going north past the old mill until you see the fenced meadow on your left."
+    ],
+    [
+      "Follower",
+      "okay i see the fenced meadow on my left so i'm turning south."
+    ],
+    [
+      "Giver",
+      "no wait turn east along the fenced meadow until you see the golf course on your right."
+    ],
+    [
+      "Follower",
+      "wait, i don't see a golf course on my map, what is that?"
+    ],
+    [
+      "Giver",
+      "that's the forest on my map, just keep going east along the meadow until the forest is on your right."
+    ],
+    [
+      "Follower",
+      "ok so i'll keep going east along the meadow until the forest is on my right."
+    ],
+    [
+      "Giver",
+      "ok so keep going east along the meadow until you see the forest on your right."
+    ],
+    [
+      "Follower",
+      "okay, i'm going east along the meadow now and i see the forest on my right."
+    ],
+    [
+      "Giver",
+      "good, carry on east until you see the monument on your left."
+    ],
+    [
+      "Follower",
+      "i see the monument on my left."
+    ],
+    [
+      "Giver",
+      "good, continue east along the meadow past the monument until you see the nuclear test site on your right."
+    ],
+    [
+      "Follower",
+      "ok so i'll keep going east along the meadow until i see the nuclear test site on my right."
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the nuclear test site on your right."
+    ],
+    [
+      "Follower",
+      "okay i'm going east along the meadow until i see the nuclear test site on my right."
+    ],
+    [
+      "Giver",
+      "good, keep going east along the meadow until you see the nuclear test site on your right."
+    ],
+    [
+      "Follower",
+      "okay i'm going east along the meadow until i see the nuclear test site on my right."
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the nuclear test site on your right."
+    ],
+    [
+      "Follower",
+      "okay i'm going east along the meadow until i see the nuclear test site on the right."
+    ],
+    [
+      "Giver",
+      "no the caravan park is on my left not your right, stop going east along the meadow and turn north again until you see the old mill on your right."
+    ],
+    [
+      "Follower",
+      "okay, so i turn north and keep going until i see the old mill on my right."
+    ],
+    [
+      "Giver",
+      "keep going north until you see the nuclear test site on your right."
+    ],
+    [
+      "Follower",
+      "okay i keep going north past the nuclear test site until i see the fenced meadow on my left."
+    ],
+    [
+      "Giver",
+      "no wait, turn south along the meadow until you see the picket fence on your right."
+    ],
+    [
+      "Follower",
+      "wait, you said turn south? but i'm already going south along the meadow, aren't i? i just kept going past the old mill and the cottage until i hit the meadow. did i miss something?"
+    ],
+    [
+      "Giver",
+      "no, you are going the wrong way, turn east along the meadow again."
+    ],
+    [
+      "Follower",
+      "i am confused, if i turn east i will go back towards the caravan park and the start, not towards the finish, and there is no picket fence on my right."
+    ],
+    [
+      "Giver",
+      "yes, turn east along the meadow until you see the forest on your right, then keep going east past the forest until you see the monument on your left."
+    ],
+    [
+      "Follower",
+      "okay so i'm going to turn east along the meadow and keep going until i see the forest on my right."
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the forest on your right."
+    ],
+    [
+      "Follower",
+      "okay i'm going east along the meadow now and i'll look for the forest on my right."
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the forest on your right."
+    ],
+    [
+      "Follower",
+      "okay i'm going east along the meadow now and i'm looking for the forest on my right."
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the forest on your right."
+    ],
+    [
+      "Follower",
+      "okay i'm going east along the meadow now and i'm looking for the forest on your right."
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the forest on your right."
+    ],
+    [
+      "Follower",
+      "okay i'm going east along the meadow now and i'm looking for the forest on your right."
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the forest on your right."
+    ],
+    [
+      "Follower",
+      "okay i'm still going east along the meadow now and i'm looking for the forest on your right."
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the forest on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going east along the meadow and i'm looking for the forest on my right"
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the forest on your right"
+    ],
+    [
+      "Follower",
+      "okay i'm still going east along the meadow and i'm looking for the forest on my right"
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the forest on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going east along the meadow and i'm looking for the forest on my right"
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the forest on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going east along the meadow and i'm looking for the forest on my right"
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the forest on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going east along the meadow and i'm looking for the forest on my right"
+    ],
+    [
+      "Giver",
+      "keep going east along the meadow until you see the forest on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going east along the meadow and i'm looking for the forest on your right"
+    ],
+    [
+      "Giver",
+      "i can't see the forest on your side, turn right from the meadow and go west until you see the picket fence on your right."
+    ],
+    [
+      "Follower",
+      "okay, so i'll turn right from the meadow and go west until i see the picket fence on my right."
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right."
+    ],
+    [
+      "Follower",
+      "i'm turning right from the meadow and going west now and i'm looking for the picket fence on my right."
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right."
+    ],
+    [
+      "Follower",
+      "i see the picket fence on my right now."
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right."
+    ],
+    [
+      "Follower",
+      "okay, i'm keeping going west along the meadow now and i'm looking for the picket fence on my right."
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right."
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i am still going west along the meadow and i am looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right."
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i am still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right."
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right."
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right."
+    ],
+    [
+      "Follower",
+      "i am still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right."
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "still going west along the meadow and i'm looking for the picket fence on my right"
+    ],
+    [
+      "Giver",
+      "keep going west along the meadow until you see the picket fence on your right"
+    ],
+    [
+      "Follower",
+      "i'm still going west along the meadow and i'm looking for the picket fence on my right"
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

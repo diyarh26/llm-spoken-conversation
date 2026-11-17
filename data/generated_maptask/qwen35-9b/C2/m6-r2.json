@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m6",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 2682062359,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 48,
+    "dup_kept": 36
+  },
+  "turns": [
+    [
+      "Giver",
+      "Can you see the START at the bottom left of your map?"
+    ],
+    [
+      "Follower",
+      "Yeah, I see the cross right there. What's the first thing you want me to draw?"
+    ],
+    [
+      "Giver",
+      "First, head down a bit, then go left past the diamond mine on the left side of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down and then left. But wait, there's no diamond mine on the left side of my map at all. I only see one down there. Is that the one?"
+    ],
+    [
+      "Giver",
+      "Yeah, that's the one, just draw a line from the start, go down a tiny bit, then turn left towards it."
+    ],
+    [
+      "Follower",
+      "Oh, okay, thanks. So I'll draw it straight down to that one mine, then turn left towards it?"
+    ],
+    [
+      "Giver",
+      "Yeah, the mine is on the left side of that line you just drew, so keep going down past it and then turn left again towards the walled city up there."
+    ],
+    [
+      "Follower",
+      "Okay, so I draw a line down to the mine, pass it on the right, turn left towards the walled city... wait, the walled city isn't there. I only see a ghost town."
+    ],
+    [
+      "Giver",
+      "No, the walled city is there on the left, but first you need to draw a line that goes *past* the mine on the right side before you turn left towards it."
+    ],
+    [
+      "Follower",
+      "Wait, I'm confused. If I go down to the mine, pass it on the right, and then turn left towards the city... but the city isn't there, only the ghost town is. Are you telling me to ignore the ghost town completely and keep going until I find the city?"
+    ],
+    [
+      "Giver",
+      "Yeah, just keep drawing that line straight down past the mine without turning, and eventually the walled city will appear on your left side as you keep going."
+    ],
+    [
+      "Follower",
+      "Okay, I'll just draw a straight line down from the start past the mine without turning left yet. But wait, I'm going further down and I don't see a walled city at all. I only see a ghost town and a saloon bar. Did you say I should keep going down past all these other buildings until I find the city? Because if I keep going straight down, I'm just hitting more stuff on the right and nothing on the left."
+    ],
+    [
+      "Giver",
+      "Keep going straight down past that ghost town and the bar, don't turn yet, and you'll hit the walled city on the left soon enough."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a straight line down past the ghost town and the bar, but I still don't see anything on the left side that looks like a city, just empty space and the pole. Did I go too far south already?"
+    ],
+    [
+      "Giver",
+      "No, stop drawing that straight line down, you're going too far south. Look at the left side of your map again, do you see that carved wooden pole higher up? Turn left towards that pole now, don't keep going down past it."
+    ],
+    [
+      "Follower",
+      "Okay, I see the pole now on the left. I'll turn left towards it and draw the line to it."
+    ],
+    [
+      "Giver",
+      "Yeah, once you hit that pole, keep going down and to the left towards the walled city, then turn right towards the flat rocks."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left towards the pole on the left side, draw a line to it, and then keep going down and left towards the walled city. Once I reach the city, I'll turn right towards the flat rocks on the left. But wait, looking at the map, that flat rocks spot is on the right side of my path, not the left. Are you sure I should turn towards it? Because it looks like it's on the other side of my line. Do I just keep going past it?"
+    ],
+    [
+      "Giver",
+      "Yeah, the flat rocks are on the left side of your line, just keep going left past them."
+    ],
+    [
+      "Follower",
+      "Wait, I think I misunderstood. If the rocks are on the left side of my line, that means my line has to curve left to get them on the left, right? I was drawing it too straight. Okay, I'm going to draw a line from the pole, curve left so the rocks end up on my left, and keep going."
+    ],
+    [
+      "Giver",
+      "Keep going down from the rocks, then make a sharp turn right to head up towards the buffalo on the right side."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a line from the pole that curves left so the rocks end up on my left side. I'm keeping it going down a bit... wait, there's a stone creek further down that I'm passing. Now I'm going to turn sharply right towards the buffalo on the right."
+    ],
+    [
+      "Giver",
+      "Yeah, keep going down past that stone creek, then turn right towards the buffalo on your right side."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing down past the pole and the rocks, then turning right towards the buffalo. Wait, I just passed a stone creek on the way down, did I go too far south before turning?"
+    ],
+    [
+      "Giver",
+      "No, you need to turn right towards the buffalo now, don't keep going down past the creek."
+    ],
+    [
+      "Follower",
+      "Okay, I see the stone creek just above the pole now, so I'm not going too far down. I'll turn right sharply towards the buffalo on the right side now."
+    ],
+    [
+      "Giver",
+      "Okay, good, once you're aiming for the buffalo, keep going down past it until you hit the cattle ranch on the left side."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning right towards the buffalo now, keeping it on my right side as I head down... wait, I just passed the buffalo, it's right there on the right. Should I keep going down past it or stop right next to it?"
+    ],
+    [
+      "Giver",
+      "Stop right next to the buffalo, don't keep going past it yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'll stop drawing right next to the buffalo on my right side."
+    ],
+    [
+      "Giver",
+      "Good, once you hit the cattle ranch on the left, turn right towards the fort on the right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down past the buffalo to find the cattle ranch on my left. Once I hit that ranch, I'll turn right towards the fort on the right side."
+    ],
+    [
+      "Giver",
+      "Good, now draw a line from that ranch up towards the fort on your right side."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a line from the ranch up towards the fort on the right."
+    ],
+    [
+      "Giver",
+      "Good, keep drawing that line straight up from the fort towards the top left corner, don't turn yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing that line straight up from the fort towards the top left corner as you said, but I'm getting a bit worried because I don't see any other landmarks on the left side of my map up here, just empty space. Did you mean for me to keep going all the way to the very top edge? Or is there something else I should be looking out for on the left while I draw this line?"
+    ],
+    [
+      "Giver",
+      "Keep going up straight past the edge of the map, and the FINISH mark will appear way up at the top left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a straight line up from the fort... wait, I think I see it now. Way up near the top edge, there's a cross in the top left corner. Is that the finish mark?"
+    ],
+    [
+      "Giver",
+      "Yeah, that's the finish mark, stop drawing right there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a straight line up from the fort past that empty space... wait, I don't see the cross yet. Is there something else I'm supposed to be looking for? Like, do I have to pass any other landmarks on the left before I hit the finish? Because I've gone pretty far up and I still just see blank space on my map. Should I turn left towards anything specific before I reach the top edge?"
+    ],
+    [
+      "Giver",
+      "No, don't turn left yet, keep going straight up, the finish is right there in the corner you're heading towards."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a straight line up from the fort past that empty space... wait, I think I see it now. Way up near the top edge, there's a cross in the top left corner. Is that the finish mark?"
+    ],
+    [
+      "Giver",
+      "Yeah, keep drawing that line straight up from the fort, don't stop, the cross is right there in the top left corner you're heading towards."
+    ],
+    [
+      "Follower",
+      "Wait, you said to keep going straight up, but I'm worried I'm going too far. If I keep drawing past that cross you just told me is there, I'll be drawing into empty space above it. Does the line stop exactly at the cross, or do I need to draw it a bit higher? Because if I stop right at the cross, the line just ends there. But if I keep going up, I'm just adding extra line to nowhere. Can you clarify if I should stop exactly at the cross or go past it?"
+    ],
+    [
+      "Giver",
+      "Stop exactly at the cross, don't draw any further past it."
+    ],
+    [
+      "Follower",
+      "Okay, I'll stop drawing exactly at the cross in the top left corner."
+    ],
+    [
+      "Giver",
+      "That's perfect, you've reached the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I'll stop drawing exactly at the cross in the top left corner."
+    ],
+    [
+      "Giver",
+      "Okay, good. Now look at the top left corner where you just stopped. Can you see anything near that finish mark that isn't on your map?"
+    ],
+    [
+      "Follower",
+      "Yeah, I see the cross. But wait, right next to it in that corner, there's a little thing on my map that you haven't mentioned yet. It looks like a little carved wooden pole sticking up. Does that belong on your map too, or is it something extra that I shouldn't be drawing?"
+    ],
+    [
+      "Giver",
+      "No, that pole is on your map too, I missed telling you about it earlier. Keep going up from there a tiny bit and you'll see the finished route line end right at the cross. Stop drawing now."
+    ],
+    [
+      "Follower",
+      "Wait, if the pole is on your map, why was it on the left side of the line when I was supposed to have it on the left? I thought I had to keep the rocks on the left, which meant curving left. Now that you say the pole is on your map, maybe my line is wrong? Did I miss the pole earlier and should have curved around it? I'm getting confused about whether the pole is supposed to be on the left or right of the line. Should I erase part of the line and redraw it to put the pole on the left side like the rocks were? Or does the route just end at the cross regardless? I'm not sure if I need to change my drawing at all since you said the pole is on both maps. Can you tell me exactly where the line should go relative to the pole before I stop at the cross?"
+    ],
+    [
+      "Giver",
+      "No, keep the pole on the right side of your line, that's where it needs to be on your map. Just make sure your line stays to the right of it as it comes up from below, and then stop exactly at the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I understand. I'll make sure the pole stays on the right side of the line as I come up from below, and I'll stop drawing exactly at the cross. Thanks for clarifying that. I think I'm done now."
+    ],
+    [
+      "Giver",
+      "No, you got that wrong. The pole is not on your map at all. It's a landmark on my map only. Your map has a different pole way up near the top, not near the finish. Ignore the pole you see near the corner and keep drawing your line straight up to the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I see. I'll ignore that pole near the corner and just draw my line straight up from the fort to the cross in the top left. Is that right?"
+    ],
+    [
+      "Giver",
+      "Yeah, that's right, just draw a straight line from the fort up to that cross."
+    ],
+    [
+      "Follower",
+      "Wait, so I should just draw a straight line from the fort right up to the cross in the top left, ignoring that pole I see near the corner completely? And not worry about curving around anything else since there aren't any landmarks on the left side up there anyway?"
+    ],
+    [
+      "Giver",
+      "Yeah, that is exactly right. Just draw a straight line from the fort up to the cross. You don't need to worry about curving around anything or looking for other landmarks on the left side up there since there aren't any. Keep drawing that straight line until your line hits the cross and you are done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a straight line from the fort up to the cross in the top left. I'll ignore that pole near the corner completely since it's not on your map. I'll keep going straight up until my line hits the cross and then stop. I think that's it now. I've reached the finish line."
+    ],
+    [
+      "Giver",
+      "Good, you're almost there, just keep going straight up from the fort until your pencil touches that cross and stop right there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing that straight line from the fort up to the cross now, ignoring the pole near the corner completely. I'll keep going straight up until my pencil touches that cross and then stop. I think that's it now. I've reached the finish line."
+    ],
+    [
+      "Giver",
+      "Good, keep drawing that line straight up from the fort until your pencil touches that cross and stop right there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing that straight line from the fort up to the cross now, ignoring the pole near the corner completely. I'll keep going straight up until my pencil touches that cross and then stop. I think that's it now. I've reached the finish line."
+    ],
+    [
+      "Giver",
+      "Keep going up from the fort until the line touches the cross, don't stop early."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going up from the fort now, ignoring that pole near the corner. I'll keep the pencil moving straight up until it touches the cross and then stop."
+    ],
+    [
+      "Giver",
+      "Keep moving that pencil straight up, don't stop now, go until it hits the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving the pencil straight up now, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up straight, don't stop yet, the cross is right at the top."
+    ],
+    [
+      "Follower",
+      "I'm going up straight now from the fort and I'll stop right when the pencil hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going straight up from the fort until the line hits the cross, don't stop early."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving the pencil straight up now from the fort, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up straight from the fort until the line hits the cross, don't stop early."
+    ],
+    [
+      "Follower",
+      "I'm going up straight from the fort now, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up from the fort until the line hits the cross, don't stop early."
+    ],
+    [
+      "Follower",
+      "I'm moving the pencil straight up from the fort now, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up straight, don't stop yet, the cross is right at the top."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving the pencil straight up from the fort now, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going straight up until the line hits the cross, don't stop early."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving the pencil straight up from the fort now, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up straight from the fort until the line hits the cross, don't stop early."
+    ],
+    [
+      "Follower",
+      "I'm going up straight from the fort now, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going straight up, don't stop early."
+    ],
+    [
+      "Follower",
+      "I'm going up straight from the fort now, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going straight up, don't stop early."
+    ],
+    [
+      "Follower",
+      "Okay, I'm just going up straight now from the fort, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going straight up from the fort until the line hits the cross, don't stop early."
+    ],
+    [
+      "Follower",
+      "I'm going up straight from the fort now, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up, don't stop, the cross is right at the top edge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving the pencil up straight from the fort now, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up straight, don't stop yet, the cross is right at the top."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going up straight now from the fort, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going straight up, don't stop yet, the cross is right at the top."
+    ],
+    [
+      "Follower",
+      "Okay, I'm just going up straight now from the fort, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up straight from the fort until the line hits the cross, don't stop early."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving the pencil up straight now from the fort, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up straight from the fort until the line hits the cross, don't stop early."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving the pencil up straight now from the fort, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up straight, don't stop yet, the cross is right at the top."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving the pencil straight up now from the fort, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up straight, don't stop yet, the cross is right at the top."
+    ],
+    [
+      "Follower",
+      "I'm moving the pencil straight up now from the fort, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up straight from the fort until the line hits the cross, don't stop early."
+    ],
+    [
+      "Follower",
+      "I'm going up straight now from the fort, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up straight until the line hits the cross, don't stop early."
+    ],
+    [
+      "Follower",
+      "Okay, I'm just going up straight now from the fort, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Keep going up straight from the fort until the line hits the cross, don't stop early."
+    ],
+    [
+      "Follower",
+      "Okay, I'm just going up straight now from the fort, ignoring that pole, and I'll stop as soon as the line hits the cross."
+    ],
+    [
+      "Giver",
+      "Okay, that's enough of that, just stop drawing now that you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I'll stop drawing exactly there."
+    ],
+    [
+      "Giver",
+      "Okay, good, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I'll stop drawing exactly there."
+    ],
+    [
+      "Giver",
+      "Good, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I'll stop drawing exactly there."
+    ],
+    [
+      "Giver",
+      "Good, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm stopping drawing exactly there."
+    ],
+    [
+      "Giver",
+      "Okay, I'm done talking, you're done. Stop drawing now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm stopping drawing exactly there."
+    ],
+    [
+      "Giver",
+      "Okay, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I'll stop drawing exactly there."
+    ],
+    [
+      "Giver",
+      "Stop drawing now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm stopping drawing exactly there."
+    ],
+    [
+      "Giver",
+      "Stop drawing now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm stopping drawing exactly there."
+    ],
+    [
+      "Giver",
+      "Stop drawing now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm stopping drawing exactly there."
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}
