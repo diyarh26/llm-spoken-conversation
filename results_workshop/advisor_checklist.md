@@ -39,9 +39,12 @@ from humans; the recomputation reproduces the published coarse JSDs exactly befo
 
 Decision: C1 is closest to humans at every prompt level, with and without merging. With
 statement and opinion merged, the two-model agents (C4) are the farthest on average and at
-P1 and P2; at P0, C2 is farthest (its echo loops). Suggested wording: "the result holds
-even when statement and opinion are merged: C1 remains closest to human dialogue-act use
-and the C4 agents remain farthest (except at P0, where C2's echo loops dominate)".
+P1 and P2. At P0, C2 is slightly farther (0.158 vs 0.149). This is not caused by C2-P0's
+repeated turns (16% of its turns): with them removed it is 0.147, tied with C4-P0 (0.149);
+its distance comes from opinion over-use (47% of units vs 14% in humans). Suggested wording:
+"the result holds even when statement and opinion are merged: C1 remains closest to human
+dialogue-act use at every prompt level, and the agents (C4) remain farthest at P1 and P2.
+At P0, C2 and C4 are about equally far."
 Merging shrinks every distance, most for C2 (opinion over-use was a large part of its gap).
 
 ## 3. Memorisation: no evidence
