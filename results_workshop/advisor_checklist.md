@@ -58,3 +58,21 @@ excluding n-grams of the P2 excerpts shown in the prompt; leave-one-out human ba
 
 Matches are generic phrases ("what do you think about the idea of"), not recalled
 passages. Decision: no memorisation concern; report the numbers.
+
+## Qwen3.5-9B dialogue acts (C1/C2, P0-P3)
+
+Source: `results_workshop/qwen35-9b/dialogue_acts/` (same DialogTag tagger and human
+reference as the published run; the tagger's human distribution and its gold-vs-tagger
+calibration, JSD 0.074 fine / 0.035 coarse, reproduce the published values exactly).
+
+Coarse JSD from humans (tagger vs tagger), original / statement+opinion merged:
+
+| | P0 | P1 | P2 | P3 | Mean |
+|---|---|---|---|---|---|
+| Qwen C1 | 0.100 / 0.081 | 0.057 / 0.057 | 0.038 / 0.038 | 0.054 / 0.053 | 0.062 / **0.057** |
+| Qwen C2 | 0.208 / 0.170 | 0.161 / 0.142 | 0.152 / 0.140 | 0.120 / 0.107 | 0.160 / **0.140** |
+| Vicuna C1 (published) | 0.131 | 0.123 | 0.129 | - | 0.128 |
+| Vicuna C2 (published) | 0.244 | 0.167 | 0.188 | - | 0.200 |
+
+C1 is closer to humans than C2 at every prompt level, with and without merging; the
+noise floors (95th percentile, coarse) are <= 0.0014, far below every distance.
