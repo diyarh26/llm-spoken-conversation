@@ -24,6 +24,25 @@ significant for C4-P1 (only 18 length-matched pairs). Qwen3.5-9B (combined ALIGN
 `results_workshop/alignment_combined/`): every condition aligns more than humans after
 length control (+0.09 to +0.17, all p < 0.001).
 
+### Advisor's method: non-adjacent baseline (`results_workshop/alignment_baseline/`)
+
+The steps the advisor asked for, run on Vicuna (600), Qwen (400) and the 50 topic-matched
+Switchboard calls. Per conversation: adjacent-turn similarity minus the similarity of
+cross-speaker turns at least 5 apart. Then repeated with every turn cut to its first 15
+words, and with only similar-length pairs (shorter/longer >= 0.5).
+
+| Corrected minus humans | Full turns | First 15 words | Similar-length pairs |
+|---|---|---|---|
+| Vicuna, 12 conditions | +0.043 to +0.108 | +0.041 to +0.083 | +0.024 to +0.072 |
+| Qwen C2, P0-P3 | +0.039 to +0.052 | +0.037 to +0.053 | +0.017 to +0.028 |
+| Qwen C1, P0-P3 | +0.076 to +0.081 | +0.068 to +0.070 | +0.027 (P0); +0.009 to +0.013 (P1-P3, CI includes 0) |
+
+Decision (unchanged): keep the figure with the corrected numbers. The gap survives all
+three versions in every Vicuna condition and in Qwen C2. For Qwen C1 it survives two of
+three, but on similar-length pairs it shrinks to about +0.01 at P1-P3, which is not
+distinguishable from humans. Most of the raw gap is length or general similarity: adjacent
+similarity alone puts LLMs 0.1-0.4 above humans.
+
 ## 2. Dialogue acts with statement and opinion merged: the result holds
 
 Source: `results/dialogue_acts/da_distribution_coarse_by_condition.csv` (tagger-labelled
