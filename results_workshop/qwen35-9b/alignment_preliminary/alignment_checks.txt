@@ -1,0 +1,51 @@
+# Alignment robustness checks (ALIGN cosine_semanticL)
+
+## Overall
+condition  count  mean   std
+    C1-P0   2762 0.568 0.114
+    C1-P1   1263 0.566 0.150
+    C1-P2   1707 0.521 0.169
+    C1-P3   1384 0.542 0.142
+    C2-P0   1694 0.918 0.035
+    C2-P1   1903 0.719 0.109
+    C2-P2   1869 0.737 0.102
+    C2-P3   1911 0.630 0.145
+       SB   2273 0.453 0.242
+
+## 1. Earlier vs Later (per-conversation halves, Wilcoxon signed-rank)
+condition  n_conversations  earlier  later  delta  wilcoxon_p
+    C1-P0               50    0.584  0.564 -0.020       0.002
+    C1-P1               50    0.576  0.576 -0.000       0.759
+    C1-P2               50    0.533  0.535  0.002       0.605
+    C1-P3               50    0.556  0.548 -0.008       0.466
+    C2-P0               50    0.912  0.922  0.010       0.000
+    C2-P1               50    0.729  0.709 -0.019       0.022
+    C2-P2               49    0.747  0.726 -0.021       0.001
+    C2-P3               50    0.641  0.619 -0.022       0.110
+       SB               50    0.477  0.461 -0.016       0.521
+
+## 1b. Same, without the last 2 turn pairs (closings)
+condition  n_conversations  earlier  later  delta  wilcoxon_p
+    C1-P0               50    0.584  0.573 -0.012       0.065
+    C1-P1               50    0.571  0.603  0.032       0.002
+    C1-P2               50    0.529  0.551  0.022       0.035
+    C1-P3               50    0.550  0.576  0.026       0.014
+    C2-P0               50    0.911  0.923  0.012       0.000
+    C2-P1               50    0.729  0.710 -0.019       0.017
+    C2-P2               48    0.748  0.725 -0.022       0.000
+    C2-P3               50    0.642  0.622 -0.020       0.121
+       SB               50    0.477  0.460 -0.017       0.352
+
+## 2. Length control (OLS, SEs clustered by conversation; differences vs SB)
+log-length slopes: words1 +0.089, words2 +0.083 (alignment per log-word)
+condition  pairs_with_length  raw_diff_vs_SB  adjusted_diff_vs_SB  adjusted_p  matched_5_40w_mean  matched_5_40w_pairs
+    C1-P0               2762           0.115                0.094       0.000               0.570                 2687
+    C1-P1               1263           0.113                0.088       0.000               0.584                 1057
+    C1-P2               1707           0.068                0.083       0.000               0.551                 1317
+    C1-P3               1384           0.090                0.090       0.000               0.557                 1156
+    C2-P0               1694           0.466                0.080       0.000               0.944                    5
+    C2-P1               1903           0.267                0.160       0.000               0.703                 1477
+    C2-P2               1869           0.284                0.147       0.000               0.709                 1139
+    C2-P3               1911           0.177                0.143       0.000               0.630                 1687
+       SB               2273           0.000                0.000         NaN               0.492                  707
+
