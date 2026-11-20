@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 613452847,
+  "conversation_no": 2897,
+  "topic": "Job Benefits",
+  "sb_prompt": "WHAT DO YOU CONSIDER THE MOST IMPORTANT BENEFITS BESIDES SALARY IN A JOB WITH A LARGE ORGANIZATION?  HOW SATISFIED ARE YOU WITH THE CURRENT BENEFITS OF YOUR JOB?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 50,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Can I speak to... um, I'm calling about the study on job benefits.\nParticipantB: Oh, the one from the local paper? Yeah, I saw that.\nParticipantA: Right. So, what do you consider the most important benefits besides salary in a job with a large organization?\nParticipantB: Hmm. Good question. I've thought about that for years. For me, it's definitely the healthcare. Like, no way you can work without that.\nParticipantA: Yeah, that's the one thing that sits fine with me. The dental and vision stuff.\nParticipantB: Right? Exactly.\nParticipantA: But then the other parts... the free snacks? That's kind of nice, but honestly, I don't need them.\nParticipantB: Oh, really? I actually think that's pretty cool though. Like, people need a break.\nParticipantA: I get it, but I don't eat that much at work. I just work.\nParticipantB: Well, maybe it's just the office energy. You know, everyone's stressed.\nParticipantA: Yeah, I am stressed sometimes. My boss is always hollering at us.\nParticipantB: Oh gosh, that sucks. Do you have a gym membership included?\nParticipantA: We do. But I haven't used it once. I just take my lunch break to smoke outside.\nParticipantB: Really? That's weird. I mean, I don't smoke. I just walk. But knowing they pay for it makes me feel like I *should* go.\nParticipantA: Maybe if you were younger? I'm thirty-five now, I'm pretty set in my ways.\nParticipantB: I'm fifty. I actually made up my mind about this years ago. I knew I wanted healthcare more than anything else.\nParticipantA: Yeah, healthcare is huge. What about retirement? Do you like your 401k match?\nParticipantB: Oh, absolutely. That's the other big one for me. My company matches dollar for dollar. That makes me feel secure.\nParticipantA: Do you? I have a 401k, but the match is only fifty cents on the dollar. It feels like a joke honestly.\nParticipantB: Wow. That is low. I wouldn't even consider another job with that.\nParticipantA: Yeah, that's frustrating. I mean, I'm stable, so it doesn't bother me *that* much. But sometimes I think about it.\nParticipantB: Well, at least your benefits are better than some people's. Like, I know a guy who only gets dental.\nParticipantA: Oh no, what's he like?\nParticipantB: He's just so nervous all the time. I think he just needs more support overall.\nParticipantA: Yeah, that's true. People need more than just a paycheck.\nParticipantB: Exactly. And the mental health stuff? Your company covers that?\nParticipantA: Oh yeah, fully. And I actually used it last year.\nParticipantB: Really? That's great. I wish I had the confidence to use it.\nParticipantA: Well, you should. It helped me a lot.\nParticipantB: Maybe I will next time. Thanks for talking about it.\nParticipantA: No problem. Thanks.\nParticipantB: Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 729,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

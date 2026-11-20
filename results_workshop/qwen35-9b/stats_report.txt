@@ -1,0 +1,74 @@
+========================================================================
+STATISTICS REPORT
+generated convs: 400   Switchboard convs: 50   prompt levels: ['P0', 'P1', 'P2', 'P3']
+========================================================================
+
+[1] WORDS / TURN  -  DV ~ Corpus*Section + (1|ConvID)
+  C1-P0 vs SB  -  words ~ Corpus*Section + (1|ConvID)
+    C(corpus)[T.LLM]                 beta=    3.43  p=0.000665
+    C(section)[T.Later]              beta=   -0.99  p=0.0157
+    C(corpus)[T.LLM]:C(section)[T.Later] beta=   -1.92  p=0.00575
+  C2-P0 vs SB  -  words ~ Corpus*Section + (1|ConvID)
+    C(corpus)[T.LLM]                 beta=  123.31  p=2.04e-303
+    C(section)[T.Later]              beta=   -0.99  p=0.168
+    C(corpus)[T.LLM]:C(section)[T.Later] beta=   -5.92  p=4.19e-05
+  C1-P1 vs SB  -  words ~ Corpus*Section + (1|ConvID)
+    C(corpus)[T.LLM]                 beta=    4.96  p=9.21e-06
+    C(section)[T.Later]              beta=   -0.99  p=0.0305
+    C(corpus)[T.LLM]:C(section)[T.Later] beta=   -3.01  p=0.00283
+/tmp/claude-0/-home-user-llm-spoken-conversation-new/58d458f3-c870-56bf-b43a-27590dbf8fb6/scratchpad/venv/lib/python3.13/site-packages/statsmodels/regression/mixed_linear_model.py:2384: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  rslt = super().fit(
+/home/user/llm-spoken-conversation-new/analysis/stats.py:211: ConvergenceWarning: Retrying MixedLM optimization with lbfgs
+  res = md.fit(reml=True)
+  C2-P1 vs SB  -  words ~ Corpus*Section + (1|ConvID)
+    C(corpus)[T.LLM]                 beta=   17.01  p=5.35e-58
+    C(section)[T.Later]              beta=   -0.99  p=0.0366
+    C(corpus)[T.LLM]:C(section)[T.Later] beta=   -7.38  p=7.55e-16
+  C1-P2 vs SB  -  words ~ Corpus*Section + (1|ConvID)
+    C(corpus)[T.LLM]                 beta=    1.17  p=0.273
+    C(section)[T.Later]              beta=   -0.99  p=0.0248
+    C(corpus)[T.LLM]:C(section)[T.Later] beta=   -1.65  p=0.0529
+  C2-P2 vs SB  -  words ~ Corpus*Section + (1|ConvID)
+    C(corpus)[T.LLM]                 beta=   22.66  p=8.4e-67
+    C(section)[T.Later]              beta=   -0.99  p=0.0419
+    C(corpus)[T.LLM]:C(section)[T.Later] beta=   -8.83  p=9.63e-21
+/tmp/claude-0/-home-user-llm-spoken-conversation-new/58d458f3-c870-56bf-b43a-27590dbf8fb6/scratchpad/venv/lib/python3.13/site-packages/statsmodels/regression/mixed_linear_model.py:2384: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  rslt = super().fit(
+/home/user/llm-spoken-conversation-new/analysis/stats.py:211: ConvergenceWarning: Retrying MixedLM optimization with lbfgs
+  res = md.fit(reml=True)
+  C1-P3 vs SB  -  words ~ Corpus*Section + (1|ConvID)
+    C(corpus)[T.LLM]                 beta=    2.76  p=0.0103
+    C(section)[T.Later]              beta=   -0.99  p=0.0286
+    C(corpus)[T.LLM]:C(section)[T.Later] beta=   -2.41  p=0.0124
+  C2-P3 vs SB  -  words ~ Corpus*Section + (1|ConvID)
+    C(corpus)[T.LLM]                 beta=    7.27  p=1.77e-11
+    C(section)[T.Later]              beta=   -0.99  p=0.0292
+    C(corpus)[T.LLM]:C(section)[T.Later] beta=   -5.03  p=9.17e-09
+
+[2] MARKER RATES per 100 words vs SB  (Mann-Whitney; SB ref oh/okay/uh-huh = 0.57/0.16/1.03)
+  C1-P0:  oh 0.20 vs 0.66 (p=6.4e-08)  okay 0.17 vs 0.22 (p=0.29)  uh-huh 0.00 vs 1.03 (p=1.3e-19)
+  C1-P1:  oh 0.66 vs 0.66 (p=0.45)  okay 0.20 vs 0.22 (p=0.7)  uh-huh 0.00 vs 1.03 (p=1.3e-19)
+  C1-P2: SKIPPED (few-shot excerpt -> circular for lexical markers)
+  C1-P3:  oh 0.73 vs 0.66 (p=0.17)  okay 0.14 vs 0.22 (p=0.054)  uh-huh 0.00 vs 1.03 (p=1.3e-19)
+  C2-P0:  oh 0.07 vs 0.66 (p=2.6e-13)  okay 0.01 vs 0.22 (p=1.7e-12)  uh-huh 0.00 vs 1.03 (p=1.3e-19)
+  C2-P1:  oh 0.07 vs 0.66 (p=1.5e-13)  okay 0.03 vs 0.22 (p=8.2e-12)  uh-huh 0.00 vs 1.03 (p=1.3e-19)
+  C2-P2: SKIPPED (few-shot excerpt -> circular for lexical markers)
+  C2-P3:  oh 0.10 vs 0.66 (p=1.1e-11)  okay 0.05 vs 0.22 (p=2.1e-08)  uh-huh 0.00 vs 1.03 (p=1.3e-19)
+
+[3] ALIGNMENT (cosine_semanticL)
+  P0: SB=0.560  C1=0.611  C2=0.880  C3=0.751  C4=0.852
+  P1: SB=0.560  C1=0.614  C2=0.516  C3=0.740  C4=0.861
+  P2: SB=0.560  C1=0.632  C2=0.510  C3=0.765  C4=0.833
+
+[4] INDEPENDENCE GRADIENT  C1->C2->C3->C4  (words/turn, per prompt level)
+    rho<0: w/turn falls along the gradient; dist = abs(mean - SB mean)
+  P0: SB=14.4 | C1=16.7(dist 2.3)  C2=134.7(dist 120.3)
+        Spearman rho=+0.87 p=2.88e-31  Kruskal p=6.86e-18  closest to SB: C1
+  P1: SB=14.4 | C1=17.8(dist 3.4)  C2=27.4(dist 13.0)
+        Spearman rho=+0.75 p=1.59e-19  Kruskal p=6.7e-14  closest to SB: C1
+  P2: SB=14.4 | C1=14.7(dist 0.3)  C2=32.3(dist 17.9)
+        Spearman rho=+0.84 p=2.45e-28  Kruskal p=4.33e-17  closest to SB: C1
+  P3: SB=14.4 | C1=16.0(dist 1.5)  C2=18.9(dist 4.5)
+        Spearman rho=+0.33 p=0.000753  Kruskal p=0.000971  closest to SB: C1
+
+Note: each condition uses whatever convs are present. Markers for P2 are omitted as circular.

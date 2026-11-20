@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2438331075,
+  "conversation_no": 3636,
+  "topic": "Camping",
+  "sb_prompt": "FIND OUT FROM THE OTHER CALLER WHAT KIND OF CAMPING THEY HAVE DONE.  HOW DOES IT COMPARE WITH YOUR OWN EXPERIENCES?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 49,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Can I ask you about camping? That's the reason I called.\nParticipantB: Yeah, sure. I've done a bit.\nParticipantA: Really? What kind of camping is it for you?\nParticipantB: Mostly just pulling over to a quiet spot and setting up a tent, you know? Nothing fancy.\nParticipantA: Oh, I do that too sometimes. But I guess my version is a little more rugged.\nParticipantB: Rugged? How so?\nParticipantA: Well, last year I went with my buddy Dave, who built my cabin. We drove miles into the woods to find a flat rock.\nParticipantB: A rock?\nParticipantA: Yeah, no tent at all. Just sleeping on the ground with a foam pad. Dave insisted it was the \"pure\" way.\nParticipantB: Wow. That sounds... intense. I never really thought about doing that.\nParticipantA: It was rough, honestly. Back pain for days, but man, the stars at night were insane.\nParticipantB: Yeah, the stars are nice. But I've heard stories about bugs and rats.\nParticipantA: Oh, absolutely. That's why I mostly do car camping now. I still bring my own wood for the fire, but I sleep in my truck.\nParticipantB: Sleeping in the truck? Is that safe?\nParticipantA: Pretty much, if you lock the doors. Dave actually taught me how to rig the bed so it's cozy.\nParticipantB: That sounds practical. I usually just sit in the car if I want to stay up late.\nParticipantA: That's fine too. Honestly, I think camping is great for escaping, but maybe not for everyone.\nParticipantB: Yeah, that's what I've felt for a long time. I like the idea of it, but the reality just never clicks for me.\nParticipantA: What parts don't sit right with you?\nParticipantB: Maybe just the isolation? I get worried about being too far from help if something goes wrong.\nParticipantA: Fair point. That's why I stick to areas near towns or where Dave knows the locals.\nParticipantB: I guess that makes sense. I kind of prefer staying in a cabin with a real bed and a light switch.\nParticipantA: Hey, that's a solid choice. Dave keeps a cabin stocked right there. If you ever want to visit, you're welcome to stay there.\nParticipantB: Oh, that would be nice. No tent, no bugs, just a real place to sleep.\nParticipantA: Sounds like a plan. I'll text you if the weather holds next weekend.\nParticipantB: I'd like that. Thanks for explaining it to me.\nParticipantA: No problem. It's just different for everyone, I think.\nParticipantB: Yeah, exactly. Thanks again.\nParticipantA: You too. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 632,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

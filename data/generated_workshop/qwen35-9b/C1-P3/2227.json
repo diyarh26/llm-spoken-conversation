@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2891919506,
+  "conversation_no": 2227,
+  "topic": "Tv Programs",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER'S FAVORITE TV SHOWS ARE AND WHY.  ARE YOUR INTERESTS SIMILAR OR DIFFERENT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 16,
+    "education": "a high-school education",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey there!\nParticipantA: Yeah, looking for someone to chat with about TV shows. I was wondering if you're interested?\nParticipantB: Oh, sure. Definitely. What's on your mind?\nParticipantA: Well, I'm pretty into old stuff. You know, those classic dramas from the 70s or 80s. Nothing with too much flashing neon or special effects.\nParticipantB: Hmm, interesting. I'm actually a bit torn on that. I love the classics sometimes, but honestly, I can't handle the slow pacing.\nParticipantA: The slow stuff? That's usually where the character depth is, right? It takes time to let them breathe.\nParticipantB: Maybe, but I have this one show I swear by where everything happens in real-time. Like, no cuts, no time jumps. Just people talking in a diner for three episodes straight.\nParticipantA: Wait, three episodes? Just sitting in a diner? That sounds exhausting to me. My attention span can't handle that kind of static.\nParticipantB: It's not just sitting there! They're having intense arguments, secrets getting revealed, the whole drama is just building up in that one room. It feels very real, you know?\nParticipantA: I get what you're saying about the realism, but I prefer when the story moves. If the camera doesn't move, my feet start itching after ten minutes.\nParticipantB: Oh, I totally get that. I just find the lack of editing makes it hit harder. Like it's actually happening right now. Plus, I went through a rough breakup last year and re-watched it a dozen times.\nParticipantA: Oh, I'm sorry to hear about that. That's heavy stuff. I've never really watched TV for that reason, mostly just to pass time on my breaks at the factory.\nParticipantB: Yeah, mine are different. When things are going good, I binge-watch those action series. When life is hard, I go for the slow-burn emotional ones. It's like a mood ring.\nParticipantA: That's a weird analogy, but I kind of see where you're coming from. I guess I just need a change of scenery. If nothing happens, it feels like I'm stuck in a factory loop again.\nParticipantB: Haha, fair point. I can relate to that. Sometimes I just want to escape my own head, and a show where people are always talking helps me forget my job for a bit.\nParticipantA: True, I need the distraction too. But for me, it has to be a puzzle. Something I need to figure out by the end.\nParticipantB: Oh, I hate puzzles! I hate guessing what happens next. If I can't predict the twist, it annoys me. I like knowing the characters are struggling, but I don't care if they win or lose, as long as it feels real.\nParticipantA: That's a tough way to view it. Usually, the point of TV is the resolution, isn't it?\nParticipantB: Maybe not for everyone. I think it's about the journey, not the destination. Anyway, do you have a favorite right now?\nParticipantA: Honestly? I'm on a show called \"The Heist.\" It's all about this group planning a big robbery. Very logical, no emotional fluff.\nParticipantB: Okay, that sounds more like your style then. Does it solve the mystery before the season ends?\nParticipantA: Yes, every single episode. It's about the planning, the tension, the execution. Very satisfying when they pull it off.\nParticipantB: That sounds actually pretty fun. Maybe I'll give it a try next time I need a break from the heavy stuff.\nParticipantA: Yeah, you could check it out. Just don't get too attached to the characters, they might do something crazy.\nParticipantB: (laughs) I promise I won't cry if they mess up. Thanks for chatting!\nParticipantA: Sure thing. Good luck with the heist show.\nParticipantB: You too! Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 880,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

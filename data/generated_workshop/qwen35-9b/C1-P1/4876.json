@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2799620954,
+  "conversation_no": 4876,
+  "topic": "Child Care",
+  "sb_prompt": "FIND OUT WHAT CRITERIA THE OTHER CALLER WOULD USE IN SELECTING CHILD CARE SERVICES FOR A PRESCHOOLER.  IS IT EASY OR DIFFICULT TO FIND SUCH CARE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Are you calling from the insurance office or something?\nParticipantA: No, no, just a friend I met at the grocery store last week. I'm actually here to ask about your thoughts on child care.\nParticipantB: Oh, sure, I guess so. That's actually why I picked up. I'm the manager at the store down the street, and I deal with it all the time.\nParticipantA: Nice. I'm an adjuster, so I don't deal with the kids directly, but I see the parents a lot. I'm curious what you're looking for right now.\nParticipantB: Well, honestly, it's a nightmare. For me, it's hard to find care that actually fits. I need someone who's safe, obviously, but also has a degree or at least some training.\nParticipantA: Right, safety is key. I had a situation last year where I sent my nephew to a place because I had to work late. The mom wasn't happy because the sitter was new and didn't know the routine.\nParticipantB: Exactly! That's my biggest worry. My cousin's kid, he's four, and we've been trying to find a preschooler spot for six months. Nothing we found has the stability we need.\nParticipantA: That sounds frustrating. Do you think the government needs to do more to fund these spots? I've seen some programs, but they are so limited.\nParticipantB: Yeah, absolutely. But it's not just money; it's about finding people who care. My cousin's daughter has a nanny who's been amazing, but we can't afford it. It's just impossible right now.\nParticipantA: I get that. Sometimes it feels like finding good care is harder than finding a car that doesn't break down. I've told people about my nephew's experience, and everyone says they don't know anyone good either.\nParticipantB: Tell me about it. We tried a few places near the store, and the turnover was insane. One week it's nice, next week the teacher is crying and leaves. It's just not realistic for us.\nParticipantA: Yeah, consistency is huge. When you're an adult, you want things to work, you don't want constant chaos. Did you find anything that stuck, even if it's not perfect?\nParticipantB: Not really. We're still looking. Maybe we'll try a co-op with other parents? Someone suggested that. At least then you have a community.\nParticipantA: A co-op sounds good. Maybe less pressure than a formal school. I guess I feel the same way\u2014I'd rather have a trusted person than a chaotic environment, even if I can't afford the best.\nParticipantB: Exactly. It's a toss-up. If we found something reliable, we'd take it. But right now, it feels like we're chasing our tails.\nParticipantA: Yeah, it is. Well, I'm glad to hear you're asking about it. I know a guy who runs a small preschool; maybe he could help you if you want to ask him.\nParticipantB: Oh, really? That would be great. Who is it?\nParticipantA: His name is Dave. He's a retired teacher, pretty reasonable. He has a spot or two open next month.\nParticipantB: Dave? Okay, I'll look him up. Thanks, that might actually solve our problem if he's actually stable.\nParticipantA: No problem. Good luck, and I hope you find something that works for everyone.\nParticipantB: Thanks. Same to you. Maybe I'll call you later to let you know.\nParticipantA: Sure, shoot. Take care.\nParticipantB: You too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 798,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

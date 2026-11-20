@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m8",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1763509773,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 16,
+    "dup_kept": 3
+  },
+  "turns": [
+    [
+      "Giver",
+      "hello, can you hear me?"
+    ],
+    [
+      "Follower",
+      "yes, I can hear you. what is my first landmark?"
+    ],
+    [
+      "Giver",
+      "go to the west of the telephone kiosk, then turn right."
+    ],
+    [
+      "Follower",
+      "I'm at the telephone kiosk. Is west to the left or right?"
+    ],
+    [
+      "Giver",
+      "West is to the left."
+    ],
+    [
+      "Follower",
+      "thanks, moving left to the kiosk."
+    ],
+    [
+      "Giver",
+      "keep going until you see the stone circle on your left."
+    ],
+    [
+      "Follower",
+      "I'm looking left, but I don't see a stone circle. Is it possible it's not on my map?"
+    ],
+    [
+      "Giver",
+      "It's there, just down that little lane to the left of the broken gate. Keep walking there."
+    ],
+    [
+      "Follower",
+      "I don't see a lane there either, only a meadow and the east lake."
+    ],
+    [
+      "Giver",
+      "wait, hold on, which gate is it? the broken gate or the farmer's gate?"
+    ],
+    [
+      "Follower",
+      "farmer's gate."
+    ],
+    [
+      "Giver",
+      "That's the one, sorry for the mix-up. Keep walking left along the meadow until you hit the little stile on the left, then turn right."
+    ],
+    [
+      "Follower",
+      "okay, moving left until I hit the stile then turning right."
+    ],
+    [
+      "Giver",
+      "go there now and stop, then turn right immediately."
+    ],
+    [
+      "Follower",
+      "ok, i stopped, now turning right."
+    ],
+    [
+      "Giver",
+      "keep going until you see the ruined monastery on your left."
+    ],
+    [
+      "Follower",
+      "I'm moving right now, I see the ruined monastery on my left."
+    ],
+    [
+      "Giver",
+      "keep going until you see the great viewpoint on your left."
+    ],
+    [
+      "Follower",
+      "ok, i see the great viewpoint now, but i don't see a ruined monastery on my left, only a dutch elm."
+    ],
+    [
+      "Giver",
+      "oh sorry, you've got the wrong viewpoint, that one is for the east lake, keep going further north along the meadow and you'll find the right one past the stile."
+    ],
+    [
+      "Follower",
+      "oh okay, moving north along the meadow now."
+    ],
+    [
+      "Giver",
+      "keep going north until you see the great viewpoint on your left again, that's the one just above the east lake."
+    ],
+    [
+      "Follower",
+      "wait, north along the meadow? but the ruined monastery is to the south of the meadow, isn't it? i thought we were coming from there."
+    ],
+    [
+      "Giver",
+      "yes, you're right, that is the wrong viewpoint, ignore the one near the east lake completely, just keep walking north along that meadow until you hit the little stile on your left."
+    ],
+    [
+      "Follower",
+      "i can't find the stile on the left though, there's nothing there, just open meadow."
+    ],
+    [
+      "Giver",
+      "hold on, look at the bottom of the meadow near the start, is there a little stone circle there on your map?"
+    ],
+    [
+      "Follower",
+      "yes, there is, i see it now."
+    ],
+    [
+      "Giver",
+      "yes, look to the right of the stone circle, that's where the stile is, keep going north from there."
+    ],
+    [
+      "Follower",
+      "right where the stone circle is?"
+    ],
+    [
+      "Giver",
+      "yes, right next to it, right there."
+    ],
+    [
+      "Follower",
+      "right there? next to the stone circle? okay i see it now, moving north."
+    ],
+    [
+      "Giver",
+      "keep going north along the meadow until you see the great viewpoint on your left."
+    ],
+    [
+      "Follower",
+      "okay, i'm heading north along the meadow now."
+    ],
+    [
+      "Giver",
+      "yes, and don't stop at that viewpoint yet, keep going straight ahead until you see the rocket launch pad on your right side, stop just before it, then turn left immediately."
+    ],
+    [
+      "Follower",
+      "okay, i see the rocket launch pad on my right, so i'm going to stop just before it and turn left."
+    ],
+    [
+      "Giver",
+      "turn left now and keep going straight until you see the ruined monastery on your left."
+    ],
+    [
+      "Follower",
+      "moving north until I hit the stile on the left."
+    ],
+    [
+      "Giver",
+      "keep going north along the meadow until you see the ruined monastery on your left."
+    ],
+    [
+      "Follower",
+      "wait, hold on, i'm confused, which ruined monastery are we talking about? the one to the left of the meadow or the one to the right?"
+    ],
+    [
+      "Giver",
+      "the one to the right of the meadow, near the rocket launch pad, let's try again."
+    ],
+    [
+      "Follower",
+      "sorry, hold on, i was going the wrong way, i'm heading north now along the meadow."
+    ],
+    [
+      "Giver",
+      "yes, keep going straight ahead north along the meadow until you see the ruined monastery on your left, that's the one near the rocket launch pad."
+    ],
+    [
+      "Follower",
+      "oh wait, hold on, i think i'm going the wrong way again, are we coming from the start or near the east lake? because the ruined monastery is near the rocket launch pad which is way up north, and i'm currently heading south away from it, so am i supposed to turn around and head back north? or is there a different start point? i'm very confused about the direction."
+    ],
+    [
+      "Giver",
+      "yes, you are heading the wrong way, turn immediately and head back north again."
+    ],
+    [
+      "Follower",
+      "okay, i'm turning around and heading north now along the meadow towards the ruined monastery."
+    ],
+    [
+      "Giver",
+      "keep going until you see the dead tree on your left, then turn right and stop."
+    ],
+    [
+      "Follower",
+      "moving north along the meadow now."
+    ],
+    [
+      "Giver",
+      "yes, that's the right way, keep going straight north along the meadow and you will see the dead tree on your left in just a moment."
+    ],
+    [
+      "Follower",
+      "okay, moving north now, i see the dead tree on my left, so i'll turn right and stop right there."
+    ],
+    [
+      "Giver",
+      "stop there, don't keep going, turn right immediately."
+    ],
+    [
+      "Follower",
+      "oops, i turned right too soon, i'm still facing north along the meadow."
+    ],
+    [
+      "Giver",
+      "stop moving forward, just turn right immediately where you are, don't go any further north."
+    ],
+    [
+      "Follower",
+      "stop there, i'll turn right immediately and not go any further north."
+    ],
+    [
+      "Giver",
+      "oh wait, that's not right, we need to find the dead tree on the left, not the dutch elm, so keep going north a bit further along the meadow until you see the dead tree on your left, then turn right."
+    ],
+    [
+      "Follower",
+      "okay, i see the dead tree on my left now, so i will turn right and stop."
+    ],
+    [
+      "Giver",
+      "keep going straight north along the meadow until you see the great viewpoint on your left, that is the one just above the east lake."
+    ],
+    [
+      "Follower",
+      "okay, i see the great viewpoint on my left now, just above the east lake."
+    ],
+    [
+      "Giver",
+      "wait, no, that is the wrong viewpoint, ignore that one completely, keep going straight ahead north along the meadow until you see the dead tree on your left again, that is the one at the top near the farmer's gate, stop just before it."
+    ],
+    [
+      "Follower",
+      "wait, hold on, if i keep going north from where i turned right, i'm going to walk straight through the meadow and hit the farmer's gate way up north, right? and the dead tree is next to it, so i'll just miss the turn to the finish line completely, aren't we supposed to turn right earlier?"
+    ],
+    [
+      "Giver",
+      "yes, we are supposed to turn right earlier, but not yet, you are heading the right way, keep going north along the meadow until you see the dead tree on the left again, then turn right and stop immediately, do not walk past it."
+    ],
+    [
+      "Follower",
+      "okay, i see the dead tree on the left now, so i'll turn right and stop right before it."
+    ],
+    [
+      "Giver",
+      "okay, once you stop, turn right and head towards the meadow, but stop just before you hit the overnight accommodation on your left."
+    ],
+    [
+      "Follower",
+      "okay, i see the meadow on my right, but i don't see the overnight accommodation on my left, just open meadow. is it possible it's not on my map?"
+    ],
+    [
+      "Giver",
+      "yes, that overnight accommodation is the one marked 'popular tourist spot' on your map, not 'overnight accommodation', look to your left just past that spot and you will see it there."
+    ],
+    [
+      "Follower",
+      "wait, so i need to turn right towards the meadow and stop just before the popular tourist spot?"
+    ],
+    [
+      "Giver",
+      "yes, turn right now towards the meadow and stop just before the popular tourist spot on your left."
+    ],
+    [
+      "Follower",
+      "okay, i see the popular tourist spot on my left now, so i'm turning right towards the meadow and stopping just before it."
+    ],
+    [
+      "Giver",
+      "yes, that is the right place, now from there keep going straight ahead north until you see the great viewpoint on your left, ignore the meadow on your right this time, just follow the path until you hit the viewpoint."
+    ],
+    [
+      "Follower",
+      "okay, i'm heading north now, ignoring the meadow on my right, and i see the great viewpoint on my left, just above the east lake, is that the right one?"
+    ],
+    [
+      "Giver",
+      "no, that's the wrong one again, that's the one near the east lake, keep going straight north from where you stopped until you see the great viewpoint on your left that is just above the meadow, not the one near the lake."
+    ],
+    [
+      "Follower",
+      "okay, i see the great viewpoint on my left now, just above the meadow, not the one near the lake."
+    ],
+    [
+      "Giver",
+      "yes, that is the correct one now, just keep going straight ahead north from where you are until you see the great viewpoint on your left for a second time, and when you see it, turn right immediately and do not keep walking past it."
+    ],
+    [
+      "Follower",
+      "ok, i see the great viewpoint on my left for a second time now, so i'll turn right immediately and stop."
+    ],
+    [
+      "Giver",
+      "yes, good, now turn right and head straight down towards the east lake, you will see a stile on your right side, stop just before you hit it, do not walk past it."
+    ],
+    [
+      "Follower",
+      "okay, i see the stile on my right now, so i'm stopping just before it and not walking past."
+    ],
+    [
+      "Giver",
+      "okay, from where you are, look to your right and keep walking until you see the ruined monastery on your left, then turn left and stop immediately."
+    ],
+    [
+      "Follower",
+      "moving right towards the ruined monastery, where am i supposed to turn left?"
+    ],
+    [
+      "Giver",
+      "keep walking towards the ruined monastery until you are right next to it, then turn left immediately."
+    ],
+    [
+      "Follower",
+      "okay, i'm walking right towards the ruined monastery, i see it on my left now, so i'll turn left immediately and stop."
+    ],
+    [
+      "Giver",
+      "no, you don't turn left, you turn right immediately, then head towards the FINISH point."
+    ],
+    [
+      "Follower",
+      "okay, i see the ruined monastery on my left now so i'll turn right immediately and head towards the finish."
+    ],
+    [
+      "Giver",
+      "go straight ahead towards the FINISH point and stop when you reach it."
+    ],
+    [
+      "Follower",
+      "right, i'm heading straight for the finish line now."
+    ],
+    [
+      "Giver",
+      "keep going straight ahead towards the finish line and stop when you reach it."
+    ],
+    [
+      "Follower",
+      "okay i see the ruined monastery on my left now so i'll turn right immediately and head towards the finish."
+    ],
+    [
+      "Giver",
+      "keep going straight ahead towards the finish line and do not stop until you reach it."
+    ],
+    [
+      "Follower",
+      "okay i'm heading straight for the finish line now, do not stop until i reach it."
+    ],
+    [
+      "Giver",
+      "keep going straight ahead towards the finish line."
+    ],
+    [
+      "Follower",
+      "i am heading straight for the finish line."
+    ],
+    [
+      "Giver",
+      "keep going straight ahead towards the finish line."
+    ],
+    [
+      "Follower",
+      "keep going straight ahead towards the finish line."
+    ],
+    [
+      "Giver",
+      "keep going."
+    ],
+    [
+      "Follower",
+      "keep going"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "keep going"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "keep going"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "i'm heading straight for the finish line"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "keep going"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "keep going"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "keep going"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "keep going"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "keep going"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "keep going"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "keep going"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "i keep going"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "i'm heading straight for the finish line"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "keep going"
+    ],
+    [
+      "Giver",
+      "keep going\nkeep going\nkeep going\nkeep going\nkeep going\nkeep going\nkeep going\nkeep going\nkeep going\nkeep going\nkeep going\nkeep going"
+    ],
+    [
+      "Follower",
+      "i can't seem to reach the finish line"
+    ],
+    [
+      "Giver",
+      "keep going you have to keep going"
+    ],
+    [
+      "Follower",
+      "keep going"
+    ],
+    [
+      "Giver",
+      "keep going"
+    ],
+    [
+      "Follower",
+      "wait, i think i'm going in circles again, i've been walking for a long time and i can't see the finish line or any landmarks near it anymore, i'm just walking through open space, what should i do?"
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

@@ -1,0 +1,196 @@
+{
+  "condition": "C2-P3",
+  "architecture": "C2",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, so mine's out in the suburbs, pretty basic but it's got a big kitchen which is what I really needed."
+    ],
+    [
+      "ParticipantB",
+      "Oh yeah, mine's right downtown, super old and kind of creepy, but I love the space."
+    ],
+    [
+      "ParticipantA",
+      "Creepy? That's rough, but I guess the high ceilings are nice too."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, the high ceilings made it feel huge, like I could just breathe easier in there."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's totally different from where I grew up, but I guess having room to spread out is nice even if the place feels a little spooky."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess it's just the lighting, it's got that weird yellow cast that makes everything feel a bit off."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that yellow light stuff hits different when you're carrying 20,000 pounds in a cab for six hours a day, you'd never want to be stuck in there if the engine died."
+    ],
+    [
+      "ParticipantB",
+      "You know, I totally get that fear, I actually drove my ex's car home once and she wouldn't let me park it in her driveway so I had to sleep in the driveway, it was scary as hell."
+    ],
+    [
+      "ParticipantA",
+      "That's actually pretty funny, I wouldn't let anyone sleep out there either."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it was a total nightmare waking up to someone banging on the hood."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, waking up to someone banging on the hood would have me right out of there."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but honestly, my apartment has those windows right on the street so I'm more worried about people staring than cars crashing."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but at least my house is totally private, I just don't get it why anyone would want to live right on the edge of a busy road."
+    ],
+    [
+      "ParticipantB",
+      "Right, but you get it, living away from the chaos is way safer than staring at all those taillights day in and day out."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that street stuff just gives me the creeps when I'm hauling a load and can't see where I'm going."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I get it, but I feel like if I ever did drive my truck into that street, it would be a total disaster waiting to happen."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, you'd be lucky to have the mirror angle right if you were trying to fit that rig down there."
+    ],
+    [
+      "ParticipantB",
+      "That's just my luck, most of them just swerve right out of the way."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, usually they see you coming."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but sometimes they don't see you at all."
+    ]
+  ],
+  "n_turns": 22,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  },
+  "conversation_seed": 483569930,
+  "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+  "run": {
+    "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+    "identity": {
+      "condition": "C2-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+    "created_utc": "2026-11-17T10:53:33.359476+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

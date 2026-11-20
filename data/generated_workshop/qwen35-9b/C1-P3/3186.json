@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2163072480,
+  "conversation_no": 3186,
+  "topic": "Restaurants",
+  "sb_prompt": "WHAT KIND OF DINING OUT DO YOU ENJOY? WHAT THINGS DO YOU LOOK FOR IN A RESTAURANT THAT WOULD GET YOU TO GO BACK AGAIN?  SEE WHETHER THE OTHER CALLER'S PREFERENCES ARE SIMILAR TO YOURS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 58,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "an insurance adjuster",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Yeah, sure, no problem. You asked about dining out?\nParticipantB: Oh, definitely. I love that stuff.\nParticipantA: Cool. Where do you usually hit for dinner?\nParticipantB: Mostly just the old Italian joint on 4th Street.\nParticipantA: Oh, the one with the red checkered tablecloths?\nParticipantB: Yep, that's the one. You know, the food is pretty good, but the real reason I go back is the manager.\nParticipantA: Really? A manager? Hmm, interesting.\nParticipantB: Yeah, he's got this way of just making you feel important, even if you're eating alone.\nParticipantA: I guess I've heard that before, about feeling special.\nParticipantB: Do you like that kind of atmosphere, the fancy stuff?\nParticipantA: Nah, not really. I'm more of a simple guy.\nParticipantB: Oh, like a burger joint or something?\nParticipantA: Yeah, kind of. I like places where the food is just honest, no frills.\nParticipantB: That makes sense. I actually used to be into that kind of place, you know?\nParticipantA: Wait, really? Like the cheap spots?\nParticipantB: Yeah, back in the day I was always looking for the best deal, the biggest steak for the lowest price.\nParticipantA: Oh, I know exactly what you mean! I used to be that way too.\nParticipantB: Right? But lately, I just don't care about the price tag so much anymore.\nParticipantA: Yeah, I get that. Sometimes you just want to eat good food, not worry about how much it costs.\nParticipantB: Exactly. It's like... you stop trying to save money and just try to be happy.\nParticipantA: That's a good way to put it. I think I'm there too, honestly.\nParticipantB: Me too. Though, you know, I still have that old habit sometimes.\nParticipantA: Yeah, I do too. It's weird, isn't it? How you change over time?\nParticipantB: Definitely. So, what's your go-to place now? The simple kind?\nParticipantA: There's a spot near the river, nobody really knows it.\nParticipantB: Oh? What's it called?\nParticipantA: It's just \"Joe's,\" but they make the best grilled cheese you ever tasted.\nParticipantB: Grilled cheese? That's your meal?\nParticipantA: For me, yeah. Sometimes you just need something simple and warm.\nParticipantB: That sounds nice. I might have to check it out sometime.\nParticipantA: You should. The guy who runs it, he's got a story about it.\nParticipantB: Oh? What's the story?\nParticipantA: Well, back when I first started working on cars, I'd come there after a long shift.\nParticipantB: After work?\nParticipantA: Yeah. I'd sit there eating and just thinking, dreaming of being rich or something.\nParticipantB: Ah, I see. Feeling like you were somewhere else?\nParticipantA: Exactly. And sometimes I'd meet some folks there who'd ask me about cars.\nParticipantB: Like you were an expert?\nParticipantA: Yeah, they'd ask, \"Hey, how's that engine?\" and I'd tell 'em everything I knew.\nParticipantB: Did they believe you?\nParticipantA: Most of the time, yeah. They'd nod and say, \"Wow, thanks.\" It made me feel good.\nParticipantB: That's cool. I used to do something similar, but different.\nParticipantA: Oh, how?\nParticipantB: Well, I worked in insurance for a long time. I'd sit in these little offices.\nParticipantA: Right, the adjuster stuff.\nParticipantB: Yeah. And I'd meet people from all over. I'd tell them stories about claims I'd seen.\nParticipantA: Like, \"Oh, your neighbor had a fire?\"\nParticipantB: Yeah, exactly. \"My cousin's house got flooded.\" I'd just sit there telling these tall tales.\nParticipantA: People believed you?\nParticipantB: Most of the time, yeah. They'd lean in and listen, like I was the expert.\nParticipantA: It's funny, you used to be into cheap food, and now you like the simple stuff.\nParticipantB: It is funny. And I used to be into telling people these big stories.\nParticipantA: Yeah, I remember that too.\nParticipantB: But lately... I don't do it as much.\nParticipantA: Hmm? Why not?\nParticipantB: Maybe because I don't care so much about impressing people anymore?\nParticipantA: Oh, I see. Maybe you just want to eat good food and talk about life.\nParticipantB: Exactly. Just two guys having a meal, no big stories, no tricks.\nParticipantA: That sounds about right.\nParticipantB: Yeah, it does.\nParticipantA: Well, I think I gotta run. My shift at the shop ends soon.\nParticipantB: Oh, really? It's been nice chatting.\nParticipantA: Yeah, you too. That grilled cheese place is worth a try, you know.\nParticipantB: I'll keep that in mind. Thanks for the tip.\nParticipantA: No problem. Take care.\nParticipantB: You too. Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 1187,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

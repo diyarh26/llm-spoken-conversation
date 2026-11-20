@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m10",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 2969270277,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1,
+    "dup_resamples": 37,
+    "dup_kept": 22
+  },
+  "turns": [
+    [
+      "Giver",
+      "start at the cross and go south to the diamond mine on the left, then head north past the mine towards the highest viewpoint on the right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the diamond mine. I'm heading north now. The route goes right towards the highest viewpoint. That's quite far up. I'm looking for it."
+    ],
+    [
+      "Giver",
+      "Yeah, it's pretty high up. Just keep going north from the mine, but you're going to pass a few things on the way. There's a field station on the far left, then you'll hit some springboks on the left a bit further up. Keep heading towards the viewpoint. The route actually swings right past them before it goes back towards the right side. So, just keep going north past the springboks, turn right towards the viewpoint, and then you can start heading down the other side."
+    ],
+    [
+      "Follower",
+      "Okay, I see the field station on the far left, I passed it. Then I see the springboks on my left a bit further up. So I'm heading towards them, but then I need to turn right towards the viewpoint?"
+    ],
+    [
+      "Giver",
+      "Yeah, don't turn right yet, just keep going north past the springboks until you hit the rope bridge way up there on the left, then you can swing back right towards the viewpoint."
+    ],
+    [
+      "Follower",
+      "Wait, you said the rope bridge is way up there on the left? I only see an overgrown gully near the middle, but no bridge. I'm heading right towards the viewpoint now."
+    ],
+    [
+      "Giver",
+      "No, the rope bridge is near the viewpoint on the right, not on the left. The overgrown gully on your map is just a distraction; ignore it. You need to keep going north past the springboks until you reach the highest viewpoint on the right side of your map. Once you get there, turn right and head down towards the safari truck which is below the viewpoint."
+    ],
+    [
+      "Follower",
+      "Okay, I see the springboks on the left now. I'm heading straight for the highest viewpoint on the right, ignoring that gully. Got it, I'm aiming for the viewpoint."
+    ],
+    [
+      "Giver",
+      "Keep going straight up towards the highest viewpoint on the right, just make sure you don't turn into that gully on your map, once you reach the viewpoint turn right and head down towards the safari truck."
+    ],
+    [
+      "Follower",
+      "Okay, I'm aiming for that viewpoint now. Once I get there, I'll turn right and head down towards the safari truck."
+    ],
+    [
+      "Giver",
+      "Right, get to the viewpoint and turn right immediately, then keep heading down that slope past the gully on your map until you see the safari truck at the bottom of the slope; stop when you reach it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading towards the viewpoint. I'll turn right as soon as I get there. I'm drawing that line now, aiming straight for the truck below."
+    ],
+    [
+      "Giver",
+      "Good, now keep going down from the truck. You need to pass the field station that's just below it on the right side of your map, and keep heading left towards the banana tree."
+    ],
+    [
+      "Follower",
+      "Wait, I just drew a line straight down from the viewpoint, but I can't find that field station below the truck. I only see the safari truck. Did I miss it? And I'm heading left towards the banana tree... but that's way down near the bottom left, not just below the truck. What am I supposed to pass exactly?"
+    ],
+    [
+      "Giver",
+      "Sorry, my mistake, you were right about the field station being on the right just below the truck. The banana tree is way down below that on the left, but you don't need to go there yet. Just keep heading down from the truck, turn left towards the banana tree once you see it, and draw a line to it."
+    ],
+    [
+      "Follower",
+      "Okay, I see the truck now. I'll draw down to it and then turn left to find that banana tree way below."
+    ],
+    [
+      "Giver",
+      "Right, get to the truck and draw a line straight down to it, then turn left towards the banana tree once you see it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing down to the truck now. I see it just below the viewpoint. I'll stop there and then turn left to find that banana tree way down."
+    ],
+    [
+      "Giver",
+      "Good, draw the line to the truck, you'll see the field station right below it on your right side, but don't go there yet, just get to the truck first."
+    ],
+    [
+      "Follower",
+      "Okay, I see the truck. I'm drawing a line to it now. Once I hit it, I'll turn left to find that banana tree way down."
+    ],
+    [
+      "Giver",
+      "Okay, just get that line drawn to the truck right now, and once you're there, I'll tell you where to go next."
+    ],
+    [
+      "Follower",
+      "Okay, I've drawn the line to the truck now. I see it just below the viewpoint. I'm stopping here and waiting for the next directions."
+    ],
+    [
+      "Giver",
+      "Okay, now from the truck go right up the hill a bit, pass the crocodiles on your left, then turn left again to head towards the rockfall at the top left."
+    ],
+    [
+      "Follower",
+      "Wait, pass the crocodiles on my left? I don't see any crocodiles on my map, only the gully near the middle. And where is this rockfall you mentioned? I only see that rockfall way up near the top left of my map."
+    ],
+    [
+      "Giver",
+      "I can see why you're confused, ignore that gully on your map completely. The crocodiles are right next to it. You just need to go up towards the rockfall on the left side and draw a line to it."
+    ],
+    [
+      "Follower",
+      "Wait, you said pass the crocodiles on the left? I don't see any crocodiles at all on my map, only that overgrown gully. And you want me to go to the rockfall on the left side? That's way up near the top left, I thought we were coming down?"
+    ],
+    [
+      "Giver",
+      "Ignore the gully completely, just head straight up from the truck until you hit the rockfall on the left, that's the next spot."
+    ],
+    [
+      "Follower",
+      "Okay, I'm ignoring that gully then. I'm heading straight up from the truck now towards that rockfall on the left."
+    ],
+    [
+      "Giver",
+      "Keep going straight up until you hit the rockfall on the left and draw a line to it, then I'll tell you what to do next."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight up now towards that rockfall on the left. I don't see any crocodiles, but I'm ignoring that gully anyway. Just keep going up until I hit the rockfall."
+    ],
+    [
+      "Giver",
+      "Keep going straight up to the rockfall, ignore the gully, and draw a line to it once you reach it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up towards the rockfall on the left now, ignoring that gully."
+    ],
+    [
+      "Giver",
+      "Keep going up until you hit the rockfall and draw the line to it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up to the rockfall now and drawing the line there."
+    ],
+    [
+      "Giver",
+      "Good, once you hit the rockfall, I'll tell you where to go next."
+    ],
+    [
+      "Follower",
+      "Okay, I've drawn the line to the rockfall now. I'm stopping here and waiting for the next directions."
+    ],
+    [
+      "Giver",
+      "Good, now from the rockfall head straight down towards the great lake at the bottom left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight down from the rockfall now towards the great lake at the bottom left."
+    ],
+    [
+      "Giver",
+      "Keep going straight down to the great lake at the bottom left."
+    ],
+    [
+      "Follower",
+      "I'm heading down towards the lake now, ignoring the warehouse on the right, and I can see the lake in front of me."
+    ],
+    [
+      "Giver",
+      "Good, keep going straight down until you hit the great lake at the bottom left, don't turn right into that warehouse you see on your map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line to the lake now. I see it clearly in front of me and I'm ignoring that warehouse on the right, so I'll stop drawing as soon as I hit the water."
+    ],
+    [
+      "Giver",
+      "Good, now from the lake go up the hill a bit past the springboks again on the left, but this time turn right towards the field station that's just below the highest viewpoint on your map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the rockfall towards the lake first. Once I hit the lake, I'll go up past the springboks on the left to find that field station below the viewpoint."
+    ],
+    [
+      "Giver",
+      "Right, once you hit the lake, look a bit to the right and find the springboks again, then head up past them towards the field station that's just below the highest viewpoint."
+    ],
+    [
+      "Follower",
+      "Okay, I hit the lake. Now I'm heading up past the springboks on the left towards the field station below the viewpoint."
+    ],
+    [
+      "Giver",
+      "Right, just keep heading up from the lake past the springboks until you reach that field station below the viewpoint."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up from the lake now. I can see the springboks on the left, so I'm going past them towards the field station. I see a field station on the far left and another one a bit more towards the middle, below the viewpoint. I'll draw a line to that one."
+    ],
+    [
+      "Giver",
+      "Okay, once you hit that field station below the viewpoint, I'll tell you where to go next."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up from the lake past the springboks on the left now. I see the field station below the viewpoint on the right side, so I'm drawing a line straight to it."
+    ],
+    [
+      "Giver",
+      "Good, once you hit that field station, draw a line to the right to go past the safari truck, then turn left towards the banana tree again."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the field station now. I'm drawing a line to the right towards the safari truck, and then I'll turn left to find that banana tree again."
+    ],
+    [
+      "Giver",
+      "Right, get to the field station, draw a line to the safari truck which is just to the right of it, and once you're there, turn left to head towards the banana tree again."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the field station now. I see the safari truck just to the right of it, so I'll draw a line straight to that, and then I'll turn left to find the banana tree again."
+    ],
+    [
+      "Giver",
+      "Good, once you hit the truck, turn left towards the banana tree again and draw a line straight to it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading to the field station now. I see it below the viewpoint on the right side, so I'll draw a line to it. Once I hit it, you can tell me where to go next."
+    ],
+    [
+      "Giver",
+      "Good, once you hit the truck, turn left towards the banana tree again and draw a line straight to it."
+    ],
+    [
+      "Follower",
+      "Okay, I hit the field station now, I see the truck just to the right of it, so I'm drawing a line to the truck. I'm stopping there and waiting for the next directions."
+    ],
+    [
+      "Giver",
+      "Once you hit the truck, turn left towards the banana tree again and draw a line straight to it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the truck now, I'm turning left to head towards the banana tree again."
+    ],
+    [
+      "Giver",
+      "Keep going straight left from the truck until you see the banana tree on the left and draw a line to it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading left from the truck now. I can see the banana tree on the left side, so I'm drawing a straight line to it."
+    ],
+    [
+      "Giver",
+      "Good, keep going straight left from the truck until you see the banana tree on the left and draw a line to it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading left from the truck now. I can see the banana tree on the left side, so I'm drawing a straight line to it."
+    ],
+    [
+      "Giver",
+      "Good, now from the banana tree head right past the gold mine on your left and then turn right towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the banana tree now. I'm heading right past the gold mine on my left, but I don't see any rope bridge on my map, only that crocodile thing on the right. I'm going to keep going towards the right side of the map."
+    ],
+    [
+      "Giver",
+      "Ignore the crocodiles on your map, they aren't there. The rope bridge is right next to the highest viewpoint up at the top right. You need to go all the way back up there to the viewpoint first before you can find the bridge."
+    ],
+    [
+      "Follower",
+      "Wait, what? Go back up to the viewpoint first? I thought we were coming down from there. So I need to draw a line all the way back up from the banana tree, past the gold mine, to the highest viewpoint again? And then what? Do I go to the rope bridge from there?"
+    ],
+    [
+      "Giver",
+      "Yes, go back up to the viewpoint first, then from the viewpoint go left down towards the rope bridge which is just below it on the left side."
+    ],
+    [
+      "Follower",
+      "Wait, so I have to go back up to the viewpoint first? From the banana tree? That seems like a big loop. Okay, I'll draw a line from the banana tree back up to the highest viewpoint on the right. Once I'm there, do I just go straight left to the rope bridge?"
+    ],
+    [
+      "Giver",
+      "Yes, draw a line straight up from the banana tree past the gold mine to the highest viewpoint on the right, then from the viewpoint draw a line down left to the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a line straight up from the banana tree past the gold mine back to the highest viewpoint on the right. Once I hit that, I'll turn left and draw a line down to the rope bridge."
+    ],
+    [
+      "Giver",
+      "Okay, once you hit the rope bridge, draw a line down past the giraffes on your right until you reach the great lake on the left side again, but this time go all the way to the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a line straight up from the banana tree to the viewpoint. Once I hit it, I'll turn left down to the rope bridge."
+    ],
+    [
+      "Giver",
+      "Yes, draw the line up to the viewpoint first, then from there go straight down left towards the rope bridge, and once you hit the bridge I'll tell you what to do next."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line up to the viewpoint now, past the gold mine. Once I hit that, I'll turn left and draw down to the rope bridge."
+    ],
+    [
+      "Giver",
+      "Good, keep going down the left side from the bridge until you see the giraffes on your right, and draw a line straight to them."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the rope bridge now. I see the giraffes on the right side, so I'm drawing a line straight to them."
+    ],
+    [
+      "Giver",
+      "Good, keep going down left past the giraffes until you reach the great lake on the left side again."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down left from the rope bridge now. I can see the giraffes on the right side, so I'm drawing a line straight past them towards the great lake on the left. I'm ignoring that disused warehouse on the right edge as I go."
+    ],
+    [
+      "Giver",
+      "Good, once you hit the lake, keep going straight down to the finish line which is just below it on the left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down left from the rope bridge now. I can see the giraffes on the right side, so I'm drawing a line straight past them towards the great lake on the left. I'm ignoring that disused warehouse on the right edge as I go. Keep going straight down to the finish line which is just below it on the left."
+    ],
+    [
+      "Giver",
+      "Good, once you hit the lake, keep going straight down to the finish line which is just below it on the left."
+    ],
+    [
+      "Follower",
+      "Okay, I hit the lake now. I'm keeping going straight down past it towards the finish line which is just below it on the left."
+    ],
+    [
+      "Giver",
+      "Good, once you hit the lake, keep going straight down to the finish line which is just below it on the left."
+    ],
+    [
+      "Follower",
+      "Okay, I've drawn the line down to the finish line now. I see the lake above it and the finish cross just below it on the left. I'm stopping here."
+    ],
+    [
+      "Giver",
+      "Good, just stop drawing there once you hit the cross, that's the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I've drawn the line to the cross. I see the finish line just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "Good, you're there at the finish cross, so I'll stop the directions now."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "Good, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "Okay, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "Okay, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "You're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "You're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "You're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "You're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "You're done."
+    ],
+    [
+      "Follower",
+      "Okay, I've marked the cross at the bottom. I'm done."
+    ],
+    [
+      "Giver",
+      "Good, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "Okay, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "Okay, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "Okay, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "You're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "Okay, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "Okay, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "Okay, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "Okay, you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish cross just below the lake on the left. I'm stopping here now."
+    ],
+    [
+      "Giver",
+      "You're done."
+    ],
+    [
+      "Follower",
+      "I see the cross just below the lake. I'm done."
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

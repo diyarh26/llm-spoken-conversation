@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1536642070,
+  "conversation_no": 2557,
+  "topic": "Recycling",
+  "sb_prompt": "WHAT IS BEING DONE IN YOUR COMMUNITY OR AREA ABOUT RECYCLING WASTE MATERIALS?  DO YOU THINK MORE SHOULD BE DONE?  DO YOU HAVE ANY IDEAS ON HOW TO ENCOURAGE MORE RECYCLING OR ON WHAT OTHER MATERIALS SHOULD BE INCLUDED?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 55,
+    "education": "a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 46,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Is this a good time?\nParticipantB: Yeah, sure, what's up?\nParticipantA: My name's Linda. I work at the bank.\nParticipantB: Oh, hi Linda. I'm Sarah. I'm a mechanic down at the shop on 4th.\nParticipantA: Nice to meet you. So, we were told to talk about recycling. What's going on in your neighborhood about that?\nParticipantB: Well, honestly? Not much. We have the big blue bin for paper and the green one for cans and bottles. That's it.\nParticipantA: Okay. The blue bin is fine. I really don't mind separating the paper. It feels good to just put the mail in there.\nParticipantB: Yeah, the paper stuff is easy. But the rest? It's just a mess. People throw everything in the green bin and then it ends up in a landfill.\nParticipantA: Oh, that's frustrating. My friend Brenda lives in the next town over. She's been trying to push for more rules.\nParticipantB: Really? What happened?\nParticipantA: She got on the city council and complained about the trash being too heavy for the trucks. They said they'd try to do better, but nothing's changed yet.\nParticipantB: Ugh, politics. That's usually how it goes. I know a guy, Dave, who runs a recycling center nearby. He says the city just doesn't want to pay for the extra stuff.\nParticipantA: That makes sense. Money is tight everywhere. Do you think more should be done? Like, maybe making it mandatory?\nParticipantB: I'd say yes. But how? If I just tell people to do it, they'll just ignore it. People are lazy sometimes.\nParticipantA: True. But maybe if there was a reward? Like, if you recycle enough, you get a discount at the bank?\nParticipantB: (Laughs) At the bank? That's a funny idea. Maybe a coupon? Like, bring in ten cans and get a free car wash?\nParticipantA: Oh, a car wash! That would be fun. I'd do it in a heartbeat.\nParticipantB: Yeah, people love free stuff. But seriously, I have an idea about what else to include.\nParticipantA: What do you mean?\nParticipantB: Plastic bags. Right now, we can't throw them in the green bin. We have to put them in a separate bag and put that in the green bin. It's a pain.\nParticipantA: I hate that. I always forget. My brother-in-law, he's the one who taught me how to separate things. He said if you don't do it right, the whole bin gets dumped.\nParticipantB: Yeah, that's the problem. Contamination. We need a better system for the bags. Maybe a curbside pickup for them?\nParticipantA: That might work. We could have a special day a month for plastics.\nParticipantB: Yeah, that'd be good. Less hassle for everyone. What about electronics? Phones, old computers?\nParticipantA: Oh, we have a drop-off box at the bank for those. We call it \"e-waste.\"\nParticipantB: Oh, really? That's great. I have two old printers I'm throwing out next week. Where are those boxes?\nParticipantA: Just ask the guy at the counter. He'll point them out to you.\nParticipantB: Okay, I'll do that. Thanks for the tip, Linda.\nParticipantA: No problem. It's good to know we're doing a little bit right.\nParticipantB: Yeah, better than nothing.\nParticipantA: Yeah. Well, I should get back to work.\nParticipantB: Okay, bye Linda.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 824,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

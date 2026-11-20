@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 246112116,
+  "conversation_no": 4346,
+  "topic": "Public Education",
+  "sb_prompt": "DISCUSS WITH THE OTHER CALLER WHETHER THERE IS SOMETHING SERIOUSLY WRONG WITH OUR PUBLIC SCHOOL SYSTEMS TODAYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a high-school education",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey, you there?\nParticipantA: Yeah, hi.\nParticipantB: Hi there. So, we got that call about talking schools?\nParticipantA: Right. Yeah. What do you think, honestly?\nParticipantB: Honestly? I'm a bit skeptical.\nParticipantA: Skeptical how?\nParticipantB: Just feels like... things are broken, maybe? Or just different now? Hard to say.\nParticipantA: That's actually how I feel too. Kind of.\nParticipantB: Yeah? What do you mean?\nParticipantA: I've been a plumber for about five years. I see kids in construction every day.\nParticipantB: Oh, really? That's cool. What do you see?\nParticipantA: Some of them know their stuff, you know? Like, they can figure out the blueprints pretty well.\nParticipantB: That's good to hear.\nParticipantA: But others... they just stand there looking lost. Like, totally lost.\nParticipantB: That's sad.\nParticipantA: Yeah. And I don't know why it happens. I made up my mind years ago that I couldn't fix it from the outside.\nParticipantB: Same here. I've been a teller for a decade. I see the same kids come in for loans, or help with taxes.\nParticipantA: Right?\nParticipantB: Some are brilliant at math, can calculate interest rates in their head.\nParticipantA: Wow.\nParticipantB: Others just give up. Like, \"Math doesn't matter.\" And I don't get why.\nParticipantA: It's like the system just dropped them.\nParticipantB: Exactly. Feels like we're waiting for a bus that never comes.\nParticipantA: Yeah. And I never could say why I thought that back in high school. Just felt wrong somehow.\nParticipantB: Yeah, me too. Felt like I was walking through mud.\nParticipantA: Weird, right? We're both 29, same age, but we got stuck doing different things.\nParticipantB: Exactly. Me telling you guys your taxes, you teaching them how to fix pipes.\nParticipantA: Yeah. Maybe the system is just broken, plain and simple.\nParticipantB: Seems like it.\nParticipantA: Yeah. I just wish I knew why I decided to leave teaching before I ever started.\nParticipantB: Maybe you just knew your place was elsewhere.\nParticipantA: Maybe. I'm glad I'm out there fixing pipes though. Feels real.\nParticipantB: Same. Fixing things is solid.\nParticipantA: Yeah. Thanks for talking about it.\nParticipantB: Sure. Take care.\nParticipantA: You too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 592,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

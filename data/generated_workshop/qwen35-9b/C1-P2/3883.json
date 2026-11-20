@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 4256150122,
+  "conversation_no": 3883,
+  "topic": "Clothing And Dress",
+  "sb_prompt": "THE TOPIC IS CLOTHING.  PLEASE FIND OUT HOW THE OTHER CALLER TYPICALLY DRESSES FOR WORK.  HOW MUCH VARIATION IS THERE FROM DAY TO DAY?  HOW MUCH VARIATION IS THERE FROM SEASON TO SEASON?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 30,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 57,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: So, you're a dental hygienist. That's interesting. What kind of clothes do you wear to work?\nParticipantB: Oh, mostly scrubs. I've had a pair of green scrubs for like ten years. Sometimes I wear the blue ones, but it's basically the same thing.\nParticipantA: Same thing? Really? I mean, I'm a supervisor at a factory and I'm told I have to wear the uniform, but honestly?\nParticipantB: Yeah?\nParticipantA: I've started wearing jeans and my boots a lot. My manager says, \"No, you need the coveralls,\" but my old coveralls got all worn out and itchy. So now I just wear dark denim and my steel-toes.\nParticipantB: Jeans? In a factory? I would get scared. If you were tripping over stuff, you'd be covered in oil or whatever.\nParticipantA: Well, we have mats everywhere now, and the floors are pretty clean. Plus, I can't wear the heavy coveralls when I'm on my feet all day. My legs kill me. So I just wear the boots and jeans. It's actually more comfortable.\nParticipantB: Hmm. That's... different from what I know. My boss, he gets mad if anyone comes in without the full outfit. But my best friend, she works in the same place as me, she did the same thing. She stopped wearing the coveralls two years ago.\nParticipantA: Oh? Did she get in trouble?\nParticipantB: No, she just stopped complaining about her knees. She said the coveralls made her sweat so much she'd smell like oil by lunch. But my boss says, \"It's the company policy,\" so now she wears them on Tuesdays, Thursdays, and Fridays, and jeans on the other days.\nParticipantA: That sounds reasonable. See, I only wear the coveralls when we're doing a safety inspection or when there's a spill. The rest of the time, it's jeans.\nParticipantB: Yeah, that makes sense. I guess people are more comfortable now. Do you change clothes depending on the season? Like, do you wear different pants in winter?\nParticipantA: Oh, definitely. In the summer, I wear short-sleeve shirts with the jeans. In the winter, I wear the long-sleeve thermal shirt under the coveralls, but if I'm not doing an inspection, I just put a heavy sweater and a coat over the jeans.\nParticipantB: A coat over the jeans? That's a lot of layers. Do you take the coat off inside?\nParticipantA: Yeah, I leave it on the rack. Or sometimes I just wear a hoodie. It's the only way to keep from freezing.\nParticipantB: Okay, that sounds pretty flexible. I think my friend actually just bought winter boots that go with her jeans now. She says the factory floor isn't that cold anymore because of the heaters.\nParticipantA: Yeah, they upgraded the heating last year. It's actually pretty nice. Most people don't even wear the coveralls anymore unless the boss is watching.\nParticipantB: Well, that's good to hear. At least you're not stuck in those itchy suits all the time. Do you think young people would wear jeans everywhere?\nParticipantA: Probably. My assistant, she's twenty-two, she wears leggings and sneakers. We had to tell her to get steel-toed boots, but otherwise, she dresses however she wants.\nParticipantB: Oh, leggings? That's bold for a factory. But yeah, I bet she's right. Comfort is everything. How much does your wardrobe change from day to day? Like, do you wear the same thing every morning?\nParticipantA: Not at all. Sometimes I wear black jeans, sometimes blue. And my boots, I rotate them so they don't get too dirty. But the shirts? I have maybe ten different ones. I try to mix it up so I don't look like I'm wearing the same thing for six months.\nParticipantB: That's nice. I wish I could do that. My scrubs are the same color, but I change the tops. I have like fifteen shirts I rotate. But the bottoms are always the same green.\nParticipantA: Yeah, I get that. It's boring, but at least it's clean. Hey, do you ever get tired of the \"uniform\" look? Like, do you ever want to dress up?\nParticipantB: All the time. I went to lunch with my friend last week, and she was wearing a nice floral dress. She looked great. But when she got back to work, she had to change back into the scrubs immediately.\nParticipantA: That's tough. I just had lunch yesterday in my jeans, and my co-worker asked if I was going to the office party. I said, \"No, I'm wearing factory jeans.\" She looked confused, but then we went to the bar and I changed into a skirt.\nParticipantB: A skirt? Really?\nParticipantA: Yeah. It was fine. Everyone else was in jeans too, so nobody cared. But yeah, it's nice to have options.\nParticipantB: I'm glad you have options. I think the thing is, once you get used to the jeans, you never want to go back to the coveralls. It just feels lighter.\nParticipantA: Exactly. It feels like freedom, not like a prison uniform. Well, I've got to get back to the floor. The shift is starting.\nParticipantB: Okay, well, good luck. Maybe I'll try the jeans thing next time my boss isn't looking.\nParticipantA: Don't tell me yet. Maybe next month. Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 1233,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

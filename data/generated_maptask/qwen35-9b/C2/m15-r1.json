@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m15",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 2819831705,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1,
+    "dup_resamples": 26,
+    "dup_kept": 14
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, okay. Start here. Go straight across the sandy shore."
+    ],
+    [
+      "Follower",
+      "Got it, going across. Wait, I see the shore is just a little patch here, do you mean go all the way to the water's edge?"
+    ],
+    [
+      "Giver",
+      "Yeah, go right to the water's edge, then turn left and head north towards the well."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north past the shore now, but I don't see a well on my map, just the local residents a bit further east. Should I aim for them instead?"
+    ],
+    [
+      "Giver",
+      "No, ignore the residents for now. Keep going straight north until you reach the crane bay on the left, then turn right and head east towards the wood."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the bay on the left, then I'll turn right and head east towards the wood."
+    ],
+    [
+      "Giver",
+      "Yes, go to the wood, that's the one on the left."
+    ],
+    [
+      "Follower",
+      "Got it, heading east. Wait, there's an iron bridge on the map there, is that the wood you meant?"
+    ],
+    [
+      "Giver",
+      "No, the wood is way over there in the hills, not the iron bridge. Keep going straight east past the bridge until you hit the wood on the left."
+    ],
+    [
+      "Follower",
+      "Okay, keeping going east past the bridge. I see a green patch appearing on the left... is that the wood? It looks kind of like trees. Or is it something else?"
+    ],
+    [
+      "Giver",
+      "Yeah, that green patch is the wood, keep going east along it until you reach the forked stream on your right."
+    ],
+    [
+      "Follower",
+      "Okay, heading east along the wood, I see the forked stream on my right. Wait, that doesn't look like a stream, it looks more like a gurgling brook. Are you sure it's a stream?"
+    ],
+    [
+      "Giver",
+      "Yeah, that's the forked stream, but it splits into two branches like a fork, that's why it looks different on your map."
+    ],
+    [
+      "Follower",
+      "Okay, so if that's the stream, I'll follow the wood until I hit that brook on the right. Then what do I do?"
+    ],
+    [
+      "Giver",
+      "Once you hit the brook on the right, keep going east along the wood until you reach the farmed land on the right side."
+    ],
+    [
+      "Follower",
+      "Wait, if I keep going east along the wood, won't I just run straight into the farmed land? It looks like the wood ends right next to the farmed land on my map. Should I stop there or try to go past it?"
+    ],
+    [
+      "Giver",
+      "Don't stop there; keep going east along the wood. It's the one at the bottom of the hills, way over to the right side of the map, near the dead tree."
+    ],
+    [
+      "Follower",
+      "Okay, hold on, if I keep going east along the wood until I get to the dead tree on the right, how do I get past it to reach the farmed land? On my map, the wood seems to end right next to the hills, and I don't see the dead tree or any path going further east at all. Where exactly is this farmed land you mentioned on the right side? I see a farmed land up near the top right corner, but I thought we were supposed to be heading back towards the bottom?"
+    ],
+    [
+      "Giver",
+      "No, you haven't gone past the wood yet. You need to turn left off the wood now to follow the path that goes down towards the lagoon, which is on your right side. Keep going down along that path until you hit the lagoon."
+    ],
+    [
+      "Follower",
+      "Okay, I'll turn left off the wood and head down towards the lagoon on the right."
+    ],
+    [
+      "Giver",
+      "Right, once you hit the lagoon, turn left and head west towards the rockfall on your left. Go straight past it until you reach the pirate ship on the left, then keep going west along the shore to the green bay."
+    ],
+    [
+      "Follower",
+      "Wait, hold on, you said turn left off the wood towards the lagoon, but on my map the wood is way up in the hills near the dead tree and I don't see a lagoon anywhere near it, I just see a treasure buried here down south and a mountain stream over there, where exactly is this lagoon supposed to be on my map?"
+    ],
+    [
+      "Giver",
+      "That's the lagoon I'm talking about, it's the big blue one down in the valley, not the treasure spot. Ignore the treasure for now, just look for the big blue patch of water."
+    ],
+    [
+      "Follower",
+      "Okay, I'm looking for the big blue patch of water down in the valley, away from that treasure spot and the mountain stream. Once I find it, I'll turn left towards the rockfall on the left side."
+    ],
+    [
+      "Giver",
+      "Right, once you find the lagoon, turn left and head west towards the rockfall on your left. Go straight past it until you reach the pirate ship on the left, then keep going west along the shore to the green bay."
+    ],
+    [
+      "Follower",
+      "Got it, okay, I see the lagoon now down in the valley, away from the treasure. I'll turn left off the path towards the rockfall on my left side."
+    ],
+    [
+      "Giver",
+      "Okay, once you pass the rockfall, don't worry about the shore just yet. Instead, turn left and head north towards the pirate ship. You'll see it on the left side, it's the ship with the skull and crossbones. Head straight for it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading north towards the ship, but wait, on my map the pirate ship is way down near the bottom edge, almost at the farmed land. If I go north from the lagoon, I'll be heading towards the green bay, not the ship. Did you mean the ship is somewhere else, or am I looking at the wrong one?"
+    ],
+    [
+      "Giver",
+      "No, that's the wrong ship. The one you're looking for is up near the green bay, just to the left of it. Head north towards that one, not the one at the bottom."
+    ],
+    [
+      "Follower",
+      "Wait, you said the ship is to the left of the green bay, but on my map the ship is way down near the bottom edge, nowhere near the bay. I'm confused, is the pirate ship on my map missing or is it in a completely different spot?"
+    ],
+    [
+      "Giver",
+      "No, that's definitely the right ship. It's the one up near the top, just to the left of the green bay. Ignore the one at the bottom completely. From the rockfall, head straight west along the shore until you see the green bay on your right, then turn left and head straight for the ship that is sitting right next to the bay."
+    ],
+    [
+      "Follower",
+      "Okay, you're saying I ignore the bottom ship completely. So from the rockfall, I head west along the shore until I see the green bay on the right, then I turn left for the ship sitting next to it?"
+    ],
+    [
+      "Giver",
+      "Yes, exactly. From the rockfall, head west along the shore until the green bay appears on your right side, then turn left immediately and walk straight toward the ship that is sitting right next to it."
+    ],
+    [
+      "Follower",
+      "Got it, I'm heading west along the shore now. I see the green bay appearing on my right side up here near the top. I'll turn left immediately and head straight for the ship sitting right next to it."
+    ],
+    [
+      "Giver",
+      "Yes, keep going west along that shoreline until you see the green bay on your right, then turn left and walk straight for the ship right next to it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading west along the shore now. I see the green bay on my right side up here near the top. I'll turn left immediately and head straight for the ship sitting right next to it. Wait, I'm looking at the map... I don't see any ship next to the green bay. There's a computer controlled sub right there on the left, and a pine grove nearby, but no ship. Did you mean the sub is the ship? Or is the ship just not on my map at all?"
+    ],
+    [
+      "Giver",
+      "Don't worry about the sub or the pine grove for now. Just keep walking west along that same shoreline. Keep your eyes out for the green bay on your right, and once you reach it, stop where I tell you. We will figure out the rest from there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking west along the shoreline now. I've reached the green bay on my right, and I'm stopping right there. Wait, there's a farmed land right next to the bay, and I'm not sure if that's where the finish is or if I need to go further. Should I stop at the edge of the bay or go onto the farmed land?"
+    ],
+    [
+      "Giver",
+      "Stop at the edge of the bay, that's the finish. You're done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm stopping at the edge of the green bay as you said, but wait, there's this farmed land right next to it. On my map, the farmed land is way down near the bottom edge, way below where I am now. It looks like the finish point is supposed to be at the bottom of the map? Are you sure the finish isn't down there near the bottom farmed land? Because if I stop here at the top, I feel like I'm missing the whole point."
+    ],
+    [
+      "Giver",
+      "No, that is not the finish. The finish is where you are standing right now at the edge of the green bay. I said \"stop\" before you even mentioned the farmed land down below. Ignore that land at the bottom completely; it is not part of the route. You are done. Stop drawing and mark a cross where you are now."
+    ],
+    [
+      "Follower",
+      "Okay, you said to stop at the edge of the bay right now. I see it on the left side of the shoreline. I'm putting a cross there. And I'm ignoring that farmed land at the bottom since you said it's not part of the route. Done."
+    ],
+    [
+      "Giver",
+      "Okay, the route is complete. You have drawn the entire path from start to finish correctly on your map, even though some of the landmarks look a bit different than mine. Good job. You are done."
+    ],
+    [
+      "Follower",
+      "Wait, if I stop right at the edge of the bay, I'm ignoring the farmed land that is actually right next to it. On your map, that farmed land is next to the finish, right? If I don't draw a line from the bay to that land down at the bottom, how does my route end there? Are you sure the finish isn't supposed to be down near the bottom edge where the land is?"
+    ],
+    [
+      "Giver",
+      "No, listen carefully. The finish is where you are right now, at the edge of the green bay. Do not go anywhere else. Do not draw any more lines towards that farmed land at the bottom; leave it blank. Just mark a cross right here on the shoreline where the bay ends. That is the finish. You are done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm putting the cross right here on the edge of the green bay. I'm definitely stopping now and ignoring that farmed land at the bottom like you said. Done."
+    ],
+    [
+      "Giver",
+      "Got it, I'll mark the cross there and stop."
+    ],
+    [
+      "Follower",
+      "Okay, I see the cross on the edge of the bay, I'm done drawing."
+    ],
+    [
+      "Giver",
+      "Okay, perfect. You have it right. The route is finished."
+    ],
+    [
+      "Follower",
+      "Wait, I see the cross I just drew on the edge of the green bay, so I think I'm done."
+    ],
+    [
+      "Giver",
+      "Good, that's it. Stop there. The route is finished at the green bay."
+    ],
+    [
+      "Follower",
+      "Okay, I see the cross on the edge of the bay now. I'm done drawing."
+    ],
+    [
+      "Giver",
+      "Alright, great. Since you've marked the finish at the bay, you just need to draw a tiny line from that cross down to the farmed land right next to it, because that's the actual endpoint on my map. Once you connect them, you're completely done."
+    ],
+    [
+      "Follower",
+      "Wait, what? You want me to draw a line from the bay down to the farmed land? But you just told me to stop right there at the edge of the bay! If I draw a line down to the land, isn't that going past where you said the finish is? I thought the cross on the shoreline was the end. Do I erase the cross and start again? I'm so confused now."
+    ],
+    [
+      "Giver",
+      "No, listen to me very carefully. You made a mistake earlier. When I told you to go to the green bay, I meant you go all the way down to the farmed land at the bottom. That is the only thing on my map that is a cross. Do not mark a cross on the bay. Erase that cross on the bay completely. Now, draw a line from where you stopped on the bay down to the farmed land below it. Mark a cross on the farmed land. That is the finish."
+    ],
+    [
+      "Follower",
+      "Wait, hold on, you just said the finish is the farmed land at the bottom, not the bay. So I need to erase the cross I just drew on the bay completely? And then draw a new line from where I was standing down to the farmed land?"
+    ],
+    [
+      "Giver",
+      "Yes, erase the cross you drew on the bay completely. Then draw a new line from where you stopped on the shoreline directly down to the farmed land at the bottom. Mark a big cross right on that farmed land. That is the actual finish point. Do not stop at the bay. Start over from the lagoon, go to the rockfall, then the ship, then the bay, and keep going straight down to the farmed land below it. Draw the line and put the cross there now. Are you going to do it?"
+    ],
+    [
+      "Follower",
+      "Okay, so I'm supposed to erase the cross on the bay and draw a line all the way down to the farmed land? But wait, if I keep going down from the lagoon, past the rockfall, and past the ship, I'm heading towards the bottom edge... but I thought the ship was right next to the bay? Now the ship is way up top near the bay, and the farmed land is way down at the bottom? So if I go from the ship at the top straight down to the farmed land at the bottom, that skips the whole area in between? Are you saying I just draw a straight line from the top ship to the bottom land, ignoring everything in the middle? Because that doesn't seem like the route we were tracing before... but if I don't do that, where else am I supposed to go?"
+    ],
+    [
+      "Giver",
+      "No, listen to me. You are drawing a straight line now, ignoring the shoreline completely. That is wrong. You must follow the path exactly as I told you: from the ship at the top, go down the west coast along the shore, passing the rockfall and the lagoon on your right, then go up the east coast along the wood until you hit the dead tree on the right, then turn back west along the wood to the forked stream, then turn south to the hills, then go west to the local residents, then turn north to the well, then go east to the crane bay, then go north to the start, then go south to the pirate ship, then go west to the green bay, then go south to the farmed land at the bottom. Draw that exact winding path. Put the cross on the farmed land at the bottom."
+    ],
+    [
+      "Follower",
+      "Wait, hold on, you're telling me to draw the whole winding path again but going in reverse? Like, start at the bottom, go up the east coast, then down the west coast? But that's the exact opposite of what we were doing before! We started at the top and went down. If I go up the east coast first, that means I'm starting at the farmed land and going back to the start? But the instructions said to go from START to FINISH. Are you saying the START is now the bottom and the FINISH is the top? Because that makes no sense. I'm confused about the direction. Do I start drawing from the bottom up?"
+    ],
+    [
+      "Giver",
+      "No, listen to me. We started at the top and went down to the bottom. Do not go back up. You are going the wrong way. The route is supposed to go from the start at the top, past the well, the residents, the wood, the stream, the farmed land, the lagoon, the rockfall, the ship, the bay, and then end at the farmed land at the very bottom. You need to draw a line that winds all the way down to that bottom land, not a straight line skipping everything. Start from where you were at the top and trace the whole path down to the bottom cross. Don't go up!"
+    ],
+    [
+      "Follower",
+      "Okay, so I'm supposed to go back all the way up to the start? But we already did that whole route! If I start drawing from the top again, we'll just be going in circles forever. I thought we were done once I reached the bottom. If I have to go back up the wood and the stream, that's the exact opposite direction. Are you telling me to retrace my steps completely? Because that feels like I'm just drawing the same line over and over. I don't think I can draw two lines on the same path. Can't we just agree on the bottom land being the finish? If I keep going up, how do I ever finish?"
+    ],
+    [
+      "Giver",
+      "No, listen to me. Do not go back up. You are going the wrong way. Start where you are at the bottom right corner. Draw a line up the east side of the map, past the treasure and the stream, then turn left at the wood. Keep going west along the wood until you hit the forked stream on your right. Then turn left and go down the west side past the lagoon and the rockfall. Once you hit the pirate ship on the left, turn right and follow the shore west to the green bay. From the green bay, draw a line straight down to the farmed land at the bottom. Put the finish cross on that bottom land. Start drawing that line now from the bay down to the land."
+    ],
+    [
+      "Follower",
+      "Wait, hold on. You just told me to go from the ship at the top to the bay, then draw a straight line down to the farmed land, but then you said not to go up the wood again. So I'm supposed to draw the whole winding path from start to finish in one go, not go up and down separately? But earlier you made me erase the cross on the bay because it wasn't the finish, and now you want me to end at the bottom land. So I need to draw the entire route from the start all the way down to that farmed land at the bottom, passing through the wood, the stream, the lagoon, the rockfall, and the ship, and then end at the land? That's the whole thing in one line? Okay, I'll start erasing everything I drew so far and draw the whole correct path from the start to the bottom finish now."
+    ],
+    [
+      "Giver",
+      "Start from the top again, draw the whole winding path down to the bottom, don't stop halfway, put the cross on the farmed land at the bottom, and you are done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to erase everything I drew and start over from the top, tracing the whole winding path down to the bottom land and put the cross there now."
+    ],
+    [
+      "Giver",
+      "Okay, go ahead and start fresh from the top. I'll give you the full route from the beginning all the way to the end, and you just draw one long line and put the final cross at the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I'm erasing the whole thing now. I'm starting fresh from the start at the top, going past the well and the residents, then over to the wood, and I'll follow the path down past the stream and the farmed land, then down to the lagoon and the rockfall, past the ship at the top, down the shore to the bay, and then straight down to the farmed land at the bottom, and I'll put the cross there."
+    ],
+    [
+      "Giver",
+      "Okay, stop erasing and just listen carefully. I will say the whole route one more time from the very beginning so you can draw it all in a single line without stopping or going back up. Start at the top cross. Go straight across the sandy shore to the water's edge. Turn left and head north towards the well. Keep going north until you hit the crane bay on the left. Turn right and head east towards the wood. Keep going east along the wood until you see the forked stream on your right. Don't turn there yet. Keep going east along the wood until you reach the farmed land on the right side, which is near the dead tree. Now, turn left off the wood and head down towards the lagoon on your right. Once you hit the lagoon, turn left and head west towards the rockfall on your left. Go straight past the rockfall until you reach the pirate ship on your left. Turn right and follow the shore west to the green bay on the right. From the green bay, draw a line straight down to the farmed land at the bottom edge of the map. Put the finish cross on that bottom farmed land. Do not stop at the bay. Do not draw any lines going up. Just draw one long winding line from the top start to the bottom finish. Start drawing now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting fresh from the top. Go straight across the sandy shore, turn left heading north to the well, keep going north to the crane bay on the left, turn right east to the wood, keep going east along the wood to the farmed land on the right near the dead tree, turn left down to the lagoon on the right, turn left west past the rockfall to the pirate ship on the left, turn right west along the shore to the green bay on the right, and then draw a straight line down to the farmed land at the bottom. I'm drawing the whole thing now."
+    ],
+    [
+      "Giver",
+      "Keep going, make sure the line curves all the way down to the farmed land at the bottom, don't stop at the bay, put the cross on the land now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting fresh from the top. Going across the shore, then left to the well, then up to the crane bay. Right to the wood, then all the way east until I hit that farmed land near the dead tree. Then left down to the lagoon, left past the rockfall to the pirate ship, right to follow the shore to the green bay, and finally straight down to the farmed land at the bottom. I'm drawing the whole line now and putting the cross on the bottom land."
+    ],
+    [
+      "Giver",
+      "Keep going down that line until you reach the farmed land at the very bottom edge and mark a cross there to finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line down from the green bay to the bottom land now and putting the cross on the farmed land. I think I got it right this time."
+    ],
+    [
+      "Giver",
+      "Good, that looks perfect. You have connected the green bay directly down to the farmed land at the bottom, and the line now winds through all the correct landmarks without going back up. That is the finish. You are done. Great job."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line down from the bay to the land now and putting the cross on the bottom."
+    ],
+    [
+      "Giver",
+      "Keep going down the line to the bottom edge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line all the way down from the green bay to the farmed land at the bottom now. I see the cross on the bottom edge of the map. I'm done."
+    ],
+    [
+      "Giver",
+      "Okay, perfect, you're almost there. Just make sure the line connects the green bay directly to the farmed land at the bottom edge, don't let it drift to the left or right, and mark the cross right in the middle of that bottom strip. Once that cross is drawn, the route is complete."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line down from the bay to the land and marking the cross right in the middle of the bottom strip now, the route is complete."
+    ],
+    [
+      "Giver",
+      "Keep drawing that line until it hits the farmed land right next to the bay you are looking at."
+    ],
+    [
+      "Follower",
+      "Wait, you said to connect the green bay to the farmed land next to it, but that one is way down at the bottom edge. I'm standing right next to the bay at the top. If I draw a line down to the other one, it won't connect to the bay I'm at right now. I can't reach the bottom one from here. I think I'm still confused about which farmed land you mean."
+    ],
+    [
+      "Giver",
+      "Wait, stop erasing everything. You keep messing up the direction. Listen to me very carefully one last time. The finish is NOT the land at the bottom. The finish is the green bay at the top. I am going to say the path from the lagoon all the way to the bay again, but this time, when you reach the bay, stop immediately and put a cross there. Do not draw any line down to the bottom land. Do not look at the bottom land at all. Just draw the line from the lagoon to the bay and stop. Are you listening?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm listening very carefully now. From the lagoon, I'm heading west to the rockfall, then past it to the ship, then right along the shore to the green bay. I'm drawing the line there and I'm stopping right at the edge of the bay. I'm putting a cross on the bay and I'm definitely not drawing any line down to the bottom land anymore. I'm done."
+    ],
+    [
+      "Giver",
+      "Yes, that is correct. Stop exactly at the edge of the green bay and put the cross there. That is the finish. Do not look at the bottom land anymore. Do not draw any more lines. You are done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm putting the cross right on the edge of the green bay and I'm definitely not drawing any line down to the bottom land anymore. I'm done."
+    ],
+    [
+      "Giver",
+      "Perfect, stop drawing right there. Do not erase the cross you just put on the bay, and definitely do not look at the bottom land anymore. You have followed the correct path from the start, past the well and residents, through the wood and stream, down to the lagoon, past the rockfall and the ship, and ended at the bay. That is the finish. You are done."
+    ],
+    [
+      "Follower",
+      "Okay, I see the cross right there on the edge of the green bay. I'm definitely not looking at the bottom land anymore. I'm marking the finish here and I'm done."
+    ],
+    [
+      "Giver",
+      "Good, you're doing great. One last thing to make sure it's perfect. From the pirate ship, don't go past the green bay. Just keep going west along the shore until you see the green bay on your right side. Once you hit the edge of the water there, stop immediately. Do not draw any line down to the bottom. Do not look at the bottom land at all. Just mark a cross right on the shoreline where the bay ends. That is the finish. Do that now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading west along the shore now. I see the green bay appearing on my right side up here near the top. I'll turn left immediately and head straight for the ship sitting right next to it. Got it, I'm heading west along the shore now. I see the green bay on my right side up here near the top. I'll turn left immediately and head straight for the ship sitting right next to it. Wait, I'm looking at the map... I don't see any ship next to the green bay. There's a computer controlled sub right there on the left, and a pine grove nearby, but no ship. Did you mean the sub is the ship? Or is the ship just not on my map at all?"
+    ],
+    [
+      "Giver",
+      "Don't worry about the sub, just keep walking west along that same shoreline. Keep your eyes out for the green bay on your right, and once you reach it, stop where I tell you. We will figure out the rest from there."
+    ],
+    [
+      "Follower",
+      "Okay, I understand. Don't worry about the sub or the pine grove for now. Just keep walking west along that same shoreline. Keep your eyes out for the green bay on your right, and once you reach it, stop where I tell you. We will figure out the rest from there."
+    ],
+    [
+      "Giver",
+      "Okay, let's try one more time, very slowly and carefully from the start. Start at the cross. Go straight across the sandy shore to the water's edge. Turn left and head north towards the well. Keep going north until you reach the local residents. Turn right and head east towards the wood. Go straight east along the wood until you see the forked stream on your right. Keep going east along the wood until you reach the farmed land on the right side. Turn left and head down towards the lagoon on your right. Keep going down along that path until you hit the lagoon. Turn left and head west towards the rockfall on your left. Go straight past the rockfall until you reach the pirate ship on your left. Turn right and follow the shore west to the green bay on the right. Stop immediately at the edge of the green bay and put a cross there. That is the finish. Do not look at the bottom land at all. Do not go to the bottom. Just stop at the bay. Start drawing that line now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting fresh from the top cross. Go straight across the sandy shore, turn left heading north to the well, keep going north to the crane bay on the left, turn right east to the wood, keep going east along the wood to the farmed land on the right near the dead tree, turn left down to the lagoon on the right, turn left west past the rockfall to the pirate ship on the left, turn right west along the shore to the green bay on the right, stop immediately at the edge of the green bay, put a cross there, and do not look at the bottom land or draw any line down to it. I'm drawing the line from the start to the bay now."
+    ],
+    [
+      "Giver",
+      "Good, that's it. Stop there. The route is finished."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line from the start all the way down to the bottom farmed land, skipping the bay and everything in between, and putting the big cross on that bottom land now."
+    ],
+    [
+      "Giver",
+      "Wait, stop! You are doing it wrong again. Look at your map, the ship is at the bottom near the land. Forget everything we said about going up. From the ship at the bottom, head straight down to the farmed land right below it. Draw a line there and put the cross on the land. Do not go to the bay. Do not go to the top. Just go from the ship down to the land and stop."
+    ],
+    [
+      "Follower",
+      "Wait, stop! You just told me to ignore the ship and go from the ship at the bottom straight down to the land, but now you want me to erase everything I drew from the top and start over? I can't draw two different routes on the same line. If I go from the ship at the bottom to the land, I am not passing through the well or the residents at the top like we started. Are you telling me to just draw a straight line from the bottom ship to the bottom land and ignore the whole upper half of the map? Because that's not the route you gave me at the start! Do I erase the whole thing and draw a new short line at the bottom?"
+    ],
+    [
+      "Giver",
+      "Stop, stop, stop! Just listen to me one last time, very carefully. We are going to do the exact route I gave you at the very beginning. Start at the top cross. Go down the shore, past the well, past the residents, through the wood, past the stream, past the farmed land, down to the lagoon, past the rockfall, past the ship, along the shore to the green bay, and then turn left and go straight down to the farmed land at the bottom. Draw that one long winding line. Put the cross on the bottom land. Do not stop at the bay. Do not erase anything yet, just start drawing that full path from top to bottom. Are you going to do it?"
+    ],
+    [
+      "Follower",
+      "Okay, I'll start drawing the full winding line from the top cross down to the bottom land, passing through the well, the wood, the stream, the lagoon, the rockfall, the ship, the bay, and then straight down to the farmed land at the very bottom, and I'll put the big cross on that bottom land now."
+    ],
+    [
+      "Giver",
+      "Okay, stop erasing everything and just listen to me one final time. Start at the very top cross. Go straight across the sandy shore. Turn left and head north towards the well. Keep going north until you hit the crane bay on the left. Turn right and head east towards the wood. Keep going east along the wood until you reach the forked stream on your right. Keep going east along the wood until you reach the farmed land on the right side. Turn left and head down towards the lagoon on your right. Keep going down along that path until you hit the lagoon. Turn left and head west towards the rockfall on your left. Go straight past the rockfall until you reach the pirate ship on your left. Turn right and follow the shore west to the green bay on the right. Now, from the green bay, draw a straight line directly down to the farmed land at the bottom edge of the map. Put a big cross on that bottom farmed land. That is the only finish. Do not stop at the bay. Do not look at the top. Do not erase what you just drew. Just finish the line from the bay to the bottom land now."
+    ],
+    [
+      "Follower",
+      "Wait, you just told me to stop at the bay, but now you want me to draw a line down to the bottom land? I'm confused, are you changing the finish point again or do I just draw that line from the bay to the land?"
+    ],
+    [
+      "Giver",
+      "Draw the line from the green bay down to the farmed land at the bottom and put the cross on the land now, do not stop at the bay."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to draw a line from the green bay down to the farmed land at the bottom and put the big cross on that land now."
+    ],
+    [
+      "Giver",
+      "Good, that is it. Stop drawing. You have connected the bay to the land and put the cross on the land, so the route is finished. You are done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line from the green bay down to the farmed land at the bottom and putting the big cross on that land now."
+    ],
+    [
+      "Giver",
+      "Keep drawing that line until it hits the farmed land at the bottom and stop there, that's where the finish is."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line down from the bay to the bottom land now and I'll put the cross on that land to finish."
+    ],
+    [
+      "Giver",
+      "Okay, one last time, draw the line from the green bay right down to the farmed land at the bottom, stop at the land, and mark the cross there. That's it. Done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line from the green bay down to the farmed land at the bottom and putting the cross on the land now."
+    ],
+    [
+      "Giver",
+      "Keep drawing that line down to the bottom edge and put the cross on the farmed land right there, don't stop at the bay."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line from the green bay all the way down to the farmed land at the bottom and putting the cross on that land now."
+    ],
+    [
+      "Giver",
+      "Keep drawing that line until it hits the farmed land at the bottom and put the cross on that land now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line down from the green bay to the farmed land at the bottom and putting the cross on that land now."
+    ],
+    [
+      "Giver",
+      "Keep drawing that line until it hits the farmed land at the bottom and put the cross on that land now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going down now from the bay to the bottom land and putting the cross there."
+    ],
+    [
+      "Giver",
+      "Keep drawing that line until it hits the farmed land at the bottom and put the cross on that land now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line down to the land and putting the cross on it right now."
+    ],
+    [
+      "Giver",
+      "Keep drawing that line until it hits the farmed land at the bottom and put the cross on that land now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going down now from the bay to the bottom land and putting the cross on that land now."
+    ],
+    [
+      "Giver",
+      "Keep drawing that line until it hits the farmed land at the bottom and put the cross on that land now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line down from the green bay to the farmed land and putting the cross on the land now."
+    ],
+    [
+      "Giver",
+      "Keep drawing that line down to the bottom edge and put the cross on that land."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line from the bay down to the land and putting the cross on it right now."
+    ],
+    [
+      "Giver",
+      "Keep drawing that line until it hits the farmed land at the bottom and put the cross on that land now."
+    ],
+    [
+      "Follower",
+      "I'm drawing the line down to the land and putting the cross there."
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2113865650,
+  "conversation_no": 3013,
+  "topic": "Recipes/food/cooking",
+  "sb_prompt": "PLEASE DISCUSS FOOD AND COOKING.  WHAT FOODS WOULD YOU INCLUDE IN THE MENU FOR A DINNER PARTY?  SHARE THE RECIPE FOR ONE OF THESE FOODS WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Yeah, so the woman on the list told me to call you about food.\nParticipantB: Oh, hi. Yeah, that's me.\nParticipantA: Okay. Well, I guess we could just chat about what we'd put on a dinner menu.\nParticipantB: Sure. Yeah, that sounds good.\nParticipantA: Hmm. I think I'd probably start with something light, maybe a salad or some roasted veggies.\nParticipantB: Oh, I like that idea. I'm kind of in that camp too, honestly.\nParticipantA: Right? I mean, sometimes I feel like I should just make a heavy stew or a roast.\nParticipantB: Yeah, I get that. I mean, everyone's different. But I do prefer lighter stuff sometimes.\nParticipantA: Yeah, well, I guess I'm a little stuck on it. Like, I don't know what my gut says anymore.\nParticipantB: Oh, really?\nParticipantA: Yeah. Parts of it sit fine, you know? Like, I'll make a big pot of chili and I'll feel good about it.\nParticipantB: Oh, okay.\nParticipantA: But then other parts... I just don't feel like it. It doesn't sit right with me.\nParticipantB: Oh, yeah? What's the problem?\nParticipantA: Honestly, I don't know. I made up my mind about it years ago without quite being able to say why.\nParticipantB: Oh, that's weird. I don't usually have that kind of trouble.\nParticipantA: Yeah, I know. It's just kind of stuck in my head.\nParticipantB: Well, if you don't mind me asking, what's your personal experience been?\nParticipantA: Well, I work at a factory now. I'm a supervisor.\nParticipantB: Oh, really? I'm a supervisor too at a different plant.\nParticipantA: Oh, wow. That's nice.\nParticipantB: Yeah, it is. But, uh, I have to say, I'm a little skeptical about some of the \"healthy\" stuff.\nParticipantA: Oh?\nParticipantB: See, I have this friend who works with me. She was diagnosed with diabetes a few years back.\nParticipantA: Oh, no.\nParticipantB: Yeah. And she told me, she said, \"You know, I eat all the right stuff, but it just doesn't stick.\"\nParticipantA: Oh, really?\nParticipantB: Yeah. She said she tried these low-carb diets and the whole thing, but she just kept getting sick.\nParticipantA: Oh, that's terrible. I would hate to go through that.\nParticipantB: Yeah, she's really struggling. She says it's not just what you put in your body, but how you handle the stress too.\nParticipantA: Hmm. That makes sense. Maybe that's why I'm confused.\nParticipantB: Yeah, sometimes it feels like the rules don't apply to everyone.\nParticipantA: Right. I mean, I've been trying to just stick to what feels good for me, even if it's not \"perfect.\"\nParticipantB: Oh, I like that. I think that's smart.\nParticipantA: Yeah, I guess I'm going to stick with that. Maybe some roasted chicken and some mashed potatoes.\nParticipantB: Oh, okay. That sounds nice and simple.\nParticipantA: Yeah. I mean, I won't make a big fuss. Just something to share.\nParticipantB: Sure. I'd probably make a big bowl of soup. Something hearty, but easy to digest.\nParticipantA: Oh, I like that.\nParticipantB: Yeah, maybe a tomato and onion soup with some crusty bread on the side.\nParticipantA: Okay, I can see that.\nParticipantB: Does that sound okay to you?\nParticipantA: Yeah, that sounds fine. Maybe I'll try that next time.\nParticipantB: Okay. Well, I guess that's all I got to say about my part of the menu.\nParticipantA: Yeah, well, I'll let you know if I actually make it.\nParticipantB: Sure. Yeah.\nParticipantA: Okay, thanks for talking to me.\nParticipantB: You too. Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 937,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

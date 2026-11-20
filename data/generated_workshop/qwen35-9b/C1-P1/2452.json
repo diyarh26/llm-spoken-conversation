@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 731242892,
+  "conversation_no": 2452,
+  "topic": "Middle East",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THINKS ABOUT CURRENT US POLICY IN THE MIDDLE EAST. SHOULD US POLICY BE CHANGED OR NOT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 2,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey!\nParticipantB: How's it going?\nParticipantA: Pretty good, just came out of the shop. You?\nParticipantB: Yeah, mostly just working on a deck that didn't fit right. Frustrating stuff.\nParticipantA: Oh, carpentry?\nParticipantB: Yeah, I'm a carpenter. Nice to meet you.\nParticipantA: Me too, I'm a mechanic. I've been thinking about the Middle East a lot lately, actually.\nParticipantB: Oh, yeah? That's heavy stuff. What's your take on it?\nParticipantA: Honestly, I think the US needs to stop trying to dictate everything. It feels like we're just throwing money at problems that don't care about the cash.\nParticipantB: I get that, and I agree the policy is messy. But I've seen the reality on the ground, you know?\nParticipantA: Tell me about it.\nParticipantB: Well, I spent six months in Jordan once, helping a guy fix up a village near the border.\nParticipantA: Oh wow, really?\nParticipantB: Yeah, and you know, we had to fix a school roof. The US sent a guy who talked a lot but didn't really listen to what the locals needed.\nParticipantA: Oh, that sucks.\nParticipantB: Exactly. He wanted to build this fancy gym, but the kids just needed better heating for the classrooms. We ended up building the gym anyway, but nobody uses it.\nParticipantA: Man, that's frustrating. I see that kind of thing at my shop too, honestly.\nParticipantB: Really? How's that?\nParticipantA: Well, I helped a guy rebuild his pickup truck. He said he needed a winch because of the mud, but the US dealer sent him a fancy suspension kit instead.\nParticipantB: Oof, that's not helpful at all.\nParticipantA: Exactly! And then I fixed the truck for him, and he said, \"You know, the US policy is getting weird,\" like he felt bad about the whole situation.\nParticipantB: Yeah, I think people are starting to see that our hand isn't really being played anymore.\nParticipantA: Totally. It feels like we're just shouting into the void sometimes.\nParticipantB: Maybe it's time to change course a bit. Focus on the people, not the politics.\nParticipantA: Yeah, I think so too. If you were in charge, what would you do differently?\nParticipantB: Honestly? I'd just listen more. Let the locals build the schools themselves. Give them the tools and let them decide.\nParticipantA: That makes sense. Less micromanaging, more empowerment.\nParticipantB: Exactly. I think that's the key.\nParticipantA: Yeah, I'll keep that in mind. Thanks for chatting about it.\nParticipantB: No problem, glad we talked. Take care.\nParticipantA: You too, bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 639,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2632796859,
+  "conversation_no": 2533,
+  "topic": "Baseball",
+  "sb_prompt": "FIND OUT THE OTHER CALLER'S FAVORITE PRO BASEBALL TEAM AND WHERE IT'S HEADED THIS YEAR.  DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 34,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Hey, is this a good time to chat?\nParticipantB: Yeah, I'm working on a car so it's quiet out there. What's up?\nParticipantA: Oh, right, we were supposed to talk baseball. Just asking... who's your favorite team?\nParticipantB: The Brewers, obviously. I'm a mechanic, so I follow Milwaukee pretty closely.\nParticipantA: Nice. I'm on the fence about them. I work at a factory right near their stadium, so I see the crowds all the time. Sometimes it feels exciting, sometimes it just feels like people are stuck in traffic waiting for a game that won't start.\nParticipantB: Ah, that's interesting. Yeah, the traffic can be a nightmare if the weather turns. But honestly? I'm skeptical. They had a great run last year, but injuries are killing their rotation this time around.\nParticipantA: Yeah, that's what got me. My cousin's son used to play for them in the minor leagues. He told me the coaching staff is pushing way too hard this spring, and it's taking a toll on the pitching. He said the guy who threw 200 innings last year looks pretty shaken up.\nParticipantB: See, that sounds familiar. I know a guy who works at a physical therapy clinic for athletes, and he says the workload was crazy. So yeah, I don't think they make the playoffs this year. Probably a top five finish, maybe even six, but not contenders.\nParticipantA: I totally get that. It's bittersweet though, right? Because when they do look good, it feels like magic seeing the lights at my plant reflect off the stadium, but the doubt sets in real fast.\nParticipantB: Exactly. It's fun to watch the little kids run the bases, but if the roster falls apart mid-season, it gets depressing real quick.\nParticipantA: Yeah, same here. Maybe we'll see a miracle act in September?\nParticipantB: Maybe. Or maybe we'll just watch them struggle and move on to the next team.\nParticipantA: Sounds about right. Thanks for chatting, actually.\nParticipantB: No problem. Good luck with the shift.\nParticipantA: You too. Bye!\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 493,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

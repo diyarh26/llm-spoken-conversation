@@ -1,0 +1,415 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m9",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 428782549,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Hi there? Can you hear me?\nFollower: Yeah, I can hear you fine. I'm ready.\nGiver: Okay, great. Let's do this. I'll give you directions to draw a line from Start to Finish on your map. You draw it, then I check if you're following the right path relative to the landmarks. If we agree, you keep going. Ready?\nFollower: Ready.\nGiver: Start. Where is that on your map?\nFollower: Oh, right there. Bottom, middle-ish. Looks like a cross.\nGiver: Okay, so you're at the bottom. Now, move your pencil slightly left and up, towards the stony desert. Draw a line over there.\nFollower: Wait, the stony desert? Is that the one at the bottom right corner?\nGiver: Yes, that's the one. Move your line just to the left of it. Go up a bit, then curve left towards the top of the stony desert.\nFollower: Okay, I'm there. It's near the bottom left now. Next?\nGiver: Now, head towards the site of the plane crash. That's near the top right. Draw a line from where you are up towards it.\nFollower: Okay, drawing up towards the crash site.\nGiver: Stop there. Now, turn left and go down towards the collapsed shelter.\nFollower: Whoa, wait. I don't see a collapsed shelter here.\nGiver: What? Where?\nFollower: I have a collapsed shelter, but it's way up near the middle left, not down here near my line. Did you draw it wrong?\nGiver: No, no, you're drawing the line wrong. You're going to the wrong place. Look, do you see a savannah?\nFollower: Yeah, right at the top right.\nGiver: Good. From your start, go up past the savannah. Don't go near the collapsed shelter yet. Go up towards the savannah, then curve left towards the slate mountain.\nFollower: Wait, where is the slate mountain? I see a hot springs, but no mountain.\nGiver: Oh, the slate mountain. It's the one near the top left. Go towards that.\nFollower: Okay, I see it now. Drawing towards the white mountain... wait, no, the slate mountain. Okay, I'm going there.\nGiver: Okay, once you reach the slate mountain, turn right and go down towards the hot wells.\nFollower: Hot wells? I have hot springs. Is that the same?\nGiver: Yes, hot springs, that's fine. Go down towards the hot springs.\nFollower: Okay, I'm heading down. Next, go left towards the lake.\nGiver: The lake?\nFollower: Yeah, the big blue thing at the top.\nGiver: Okay, go left towards the lake. Pass it, then turn right towards the roman baths.\nFollower: I see the roman baths. Okay, going there.\nGiver: Good. Now, from the roman baths, go left towards the antelope.\nFollower: Antelope? I see one, but it's far away. Okay, going there.\nGiver: Once you hit the antelope, turn right and go down towards the stony desert.\nFollower: Wait, the stony desert is at the bottom. But I thought we were going up to the finish?\nGiver: The finish is near the top. The stony desert is just a landmark you pass near on the left side. Don't go to the bottom stony desert yet. Go left, past the lake, then turn right towards the finish.\nFollower: Okay, I see the finish now. It's marked with a cross. I'm going there.\nGiver: Okay, draw the line. Make sure you pass the collapsed shelter on your right side.\nFollower: Wait, I don't see the collapsed shelter on the right. It's on my left!\nGiver: What? That's impossible.\nFollower: It's definitely on the left here. Maybe you're going to the wrong map?\nGiver: No, the collapsed shelter is near the stony desert. Are you drawing the line too far left?\nFollower: Oh, I see. I was aiming for the wrong shelter. Okay, moving the line right.\nGiver: Okay, now the line should be on the right of the shelter. From there, go up towards the savannah.\nFollower: Okay, going up.\nGiver: Pass the savannah on your right. Then go left towards the slate mountain.\nFollower: Wait, I passed the savannah already. Where do I go now?\nGiver: From the savannah, go left towards the collapsed shelter. Then go up towards the white mountain.\nFollower: Okay, going up to the white mountain.\nGiver: Pass the white mountain on your right. Then go left towards the lake.\nFollower: Okay, going left towards the lake.\nGiver: Pass the lake on your right. Then go left towards the roman baths.\nFollower: Okay, passing the lake. Now going left towards the roman baths.\nGiver: Pass the roman baths on your left. Then go right towards the antelope.\nFollower: Okay, going right towards the antelope.\nGiver: Pass the antelope on your left. Then go right towards the site of the plane crash.\nFollower: Okay, going right towards the plane crash.\nGiver: Pass the plane crash on your right. Then go down towards the finish.\nFollower: Okay, going down towards the finish.\nGiver: Draw the line.\nFollower: Okay, line drawn.\nGiver: Did you pass all the landmarks correctly?\nFollower: Let me check. I passed the stony desert on the left?\nGiver: Yes.\nFollower: And the plane crash on the right?\nGiver: Yes.\nFollower: Collapsed shelter on the right?\nGiver: Yes.\nFollower: Savannah on the right?\nGiver: Yes.\nFollower: Slate mountain on the left?\nGiver: Yes.\nFollower: Hot wells... oh, I drew it on the left!\nGiver: What? The hot wells should be on the right.\nFollower: Oh no. I thought the hot springs were different. Okay, erasing and redrawing.\nGiver: Okay, draw it on the right side of the line now.\nFollower: Okay, done.\nGiver: Good. Now, go left towards the white mountain.\nFollower: Going left towards the white mountain.\nGiver: Pass it on your right. Then go left towards the lake.\nFollower: Okay, passing the white mountain. Going left towards the lake.\nGiver: Pass the lake on your right. Then go left towards the roman baths.\nFollower: Okay, passing the lake. Going left towards the roman baths.\nGiver: Pass the roman baths on your left. Then go right towards the antelope.\nFollower: Okay, passing the roman baths. Going right towards the antelope.\nGiver: Pass the antelope on your left. Then go right towards the site of the plane crash.\nFollower: Okay, passing the antelope. Going right towards the plane crash.\nGiver: Pass the plane crash on your right. Then go down towards the finish.\nFollower: Okay, going down towards the finish.\nGiver: Draw the line.\nFollower: Okay, line drawn.\nGiver: Did you pass all the landmarks correctly?\nFollower: Let me check. Stony desert left? Yes. Plane crash right? Yes. Collapsed shelter right? Yes. Savannah right? Yes. Slate mountain left? Yes. Hot wells right? Yes. White mountain right? Yes. Lake right? Yes. Roman baths left? Yes. Antelope left? Yes.\nGiver: Perfect. You've reached the finish.\nFollower: Great! Thanks for your help.\nGiver: You're welcome. Good job.\nFollower: Bye!",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi there? Can you hear me?"
+    ],
+    [
+      "Follower",
+      "Yeah, I can hear you fine. I'm ready."
+    ],
+    [
+      "Giver",
+      "Okay, great. Let's do this. I'll give you directions to draw a line from Start to Finish on your map. You draw it, then I check if you're following the right path relative to the landmarks. If we agree, you keep going. Ready?"
+    ],
+    [
+      "Follower",
+      "Ready."
+    ],
+    [
+      "Giver",
+      "Start. Where is that on your map?"
+    ],
+    [
+      "Follower",
+      "Oh, right there. Bottom, middle-ish. Looks like a cross."
+    ],
+    [
+      "Giver",
+      "Okay, so you're at the bottom. Now, move your pencil slightly left and up, towards the stony desert. Draw a line over there."
+    ],
+    [
+      "Follower",
+      "Wait, the stony desert? Is that the one at the bottom right corner?"
+    ],
+    [
+      "Giver",
+      "Yes, that's the one. Move your line just to the left of it. Go up a bit, then curve left towards the top of the stony desert."
+    ],
+    [
+      "Follower",
+      "Okay, I'm there. It's near the bottom left now. Next?"
+    ],
+    [
+      "Giver",
+      "Now, head towards the site of the plane crash. That's near the top right. Draw a line from where you are up towards it."
+    ],
+    [
+      "Follower",
+      "Okay, drawing up towards the crash site."
+    ],
+    [
+      "Giver",
+      "Stop there. Now, turn left and go down towards the collapsed shelter."
+    ],
+    [
+      "Follower",
+      "Whoa, wait. I don't see a collapsed shelter here."
+    ],
+    [
+      "Giver",
+      "What? Where?"
+    ],
+    [
+      "Follower",
+      "I have a collapsed shelter, but it's way up near the middle left, not down here near my line. Did you draw it wrong?"
+    ],
+    [
+      "Giver",
+      "No, no, you're drawing the line wrong. You're going to the wrong place. Look, do you see a savannah?"
+    ],
+    [
+      "Follower",
+      "Yeah, right at the top right."
+    ],
+    [
+      "Giver",
+      "Good. From your start, go up past the savannah. Don't go near the collapsed shelter yet. Go up towards the savannah, then curve left towards the slate mountain."
+    ],
+    [
+      "Follower",
+      "Wait, where is the slate mountain? I see a hot springs, but no mountain."
+    ],
+    [
+      "Giver",
+      "Oh, the slate mountain. It's the one near the top left. Go towards that."
+    ],
+    [
+      "Follower",
+      "Okay, I see it now. Drawing towards the white mountain... wait, no, the slate mountain. Okay, I'm going there."
+    ],
+    [
+      "Giver",
+      "Okay, once you reach the slate mountain, turn right and go down towards the hot wells."
+    ],
+    [
+      "Follower",
+      "Hot wells? I have hot springs. Is that the same?"
+    ],
+    [
+      "Giver",
+      "Yes, hot springs, that's fine. Go down towards the hot springs."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down. Next, go left towards the lake."
+    ],
+    [
+      "Giver",
+      "The lake?"
+    ],
+    [
+      "Follower",
+      "Yeah, the big blue thing at the top."
+    ],
+    [
+      "Giver",
+      "Okay, go left towards the lake. Pass it, then turn right towards the roman baths."
+    ],
+    [
+      "Follower",
+      "I see the roman baths. Okay, going there."
+    ],
+    [
+      "Giver",
+      "Good. Now, from the roman baths, go left towards the antelope."
+    ],
+    [
+      "Follower",
+      "Antelope? I see one, but it's far away. Okay, going there."
+    ],
+    [
+      "Giver",
+      "Once you hit the antelope, turn right and go down towards the stony desert."
+    ],
+    [
+      "Follower",
+      "Wait, the stony desert is at the bottom. But I thought we were going up to the finish?"
+    ],
+    [
+      "Giver",
+      "The finish is near the top. The stony desert is just a landmark you pass near on the left side. Don't go to the bottom stony desert yet. Go left, past the lake, then turn right towards the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish now. It's marked with a cross. I'm going there."
+    ],
+    [
+      "Giver",
+      "Okay, draw the line. Make sure you pass the collapsed shelter on your right side."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see the collapsed shelter on the right. It's on my left!"
+    ],
+    [
+      "Giver",
+      "What? That's impossible."
+    ],
+    [
+      "Follower",
+      "It's definitely on the left here. Maybe you're going to the wrong map?"
+    ],
+    [
+      "Giver",
+      "No, the collapsed shelter is near the stony desert. Are you drawing the line too far left?"
+    ],
+    [
+      "Follower",
+      "Oh, I see. I was aiming for the wrong shelter. Okay, moving the line right."
+    ],
+    [
+      "Giver",
+      "Okay, now the line should be on the right of the shelter. From there, go up towards the savannah."
+    ],
+    [
+      "Follower",
+      "Okay, going up."
+    ],
+    [
+      "Giver",
+      "Pass the savannah on your right. Then go left towards the slate mountain."
+    ],
+    [
+      "Follower",
+      "Wait, I passed the savannah already. Where do I go now?"
+    ],
+    [
+      "Giver",
+      "From the savannah, go left towards the collapsed shelter. Then go up towards the white mountain."
+    ],
+    [
+      "Follower",
+      "Okay, going up to the white mountain."
+    ],
+    [
+      "Giver",
+      "Pass the white mountain on your right. Then go left towards the lake."
+    ],
+    [
+      "Follower",
+      "Okay, going left towards the lake."
+    ],
+    [
+      "Giver",
+      "Pass the lake on your right. Then go left towards the roman baths."
+    ],
+    [
+      "Follower",
+      "Okay, passing the lake. Now going left towards the roman baths."
+    ],
+    [
+      "Giver",
+      "Pass the roman baths on your left. Then go right towards the antelope."
+    ],
+    [
+      "Follower",
+      "Okay, going right towards the antelope."
+    ],
+    [
+      "Giver",
+      "Pass the antelope on your left. Then go right towards the site of the plane crash."
+    ],
+    [
+      "Follower",
+      "Okay, going right towards the plane crash."
+    ],
+    [
+      "Giver",
+      "Pass the plane crash on your right. Then go down towards the finish."
+    ],
+    [
+      "Follower",
+      "Okay, going down towards the finish."
+    ],
+    [
+      "Giver",
+      "Draw the line."
+    ],
+    [
+      "Follower",
+      "Okay, line drawn."
+    ],
+    [
+      "Giver",
+      "Did you pass all the landmarks correctly?"
+    ],
+    [
+      "Follower",
+      "Let me check. I passed the stony desert on the left?"
+    ],
+    [
+      "Giver",
+      "Yes."
+    ],
+    [
+      "Follower",
+      "And the plane crash on the right?"
+    ],
+    [
+      "Giver",
+      "Yes."
+    ],
+    [
+      "Follower",
+      "Collapsed shelter on the right?"
+    ],
+    [
+      "Giver",
+      "Yes."
+    ],
+    [
+      "Follower",
+      "Savannah on the right?"
+    ],
+    [
+      "Giver",
+      "Yes."
+    ],
+    [
+      "Follower",
+      "Slate mountain on the left?"
+    ],
+    [
+      "Giver",
+      "Yes."
+    ],
+    [
+      "Follower",
+      "Hot wells... oh, I drew it on the left!"
+    ],
+    [
+      "Giver",
+      "What? The hot wells should be on the right."
+    ],
+    [
+      "Follower",
+      "Oh no. I thought the hot springs were different. Okay, erasing and redrawing."
+    ],
+    [
+      "Giver",
+      "Okay, draw it on the right side of the line now."
+    ],
+    [
+      "Follower",
+      "Okay, done."
+    ],
+    [
+      "Giver",
+      "Good. Now, go left towards the white mountain."
+    ],
+    [
+      "Follower",
+      "Going left towards the white mountain."
+    ],
+    [
+      "Giver",
+      "Pass it on your right. Then go left towards the lake."
+    ],
+    [
+      "Follower",
+      "Okay, passing the white mountain. Going left towards the lake."
+    ],
+    [
+      "Giver",
+      "Pass the lake on your right. Then go left towards the roman baths."
+    ],
+    [
+      "Follower",
+      "Okay, passing the lake. Going left towards the roman baths."
+    ],
+    [
+      "Giver",
+      "Pass the roman baths on your left. Then go right towards the antelope."
+    ],
+    [
+      "Follower",
+      "Okay, passing the roman baths. Going right towards the antelope."
+    ],
+    [
+      "Giver",
+      "Pass the antelope on your left. Then go right towards the site of the plane crash."
+    ],
+    [
+      "Follower",
+      "Okay, passing the antelope. Going right towards the plane crash."
+    ],
+    [
+      "Giver",
+      "Pass the plane crash on your right. Then go down towards the finish."
+    ],
+    [
+      "Follower",
+      "Okay, going down towards the finish."
+    ],
+    [
+      "Giver",
+      "Draw the line."
+    ],
+    [
+      "Follower",
+      "Okay, line drawn."
+    ],
+    [
+      "Giver",
+      "Did you pass all the landmarks correctly?"
+    ],
+    [
+      "Follower",
+      "Let me check. Stony desert left? Yes. Plane crash right? Yes. Collapsed shelter right? Yes. Savannah right? Yes. Slate mountain left? Yes. Hot wells right? Yes. White mountain right? Yes. Lake right? Yes. Roman baths left? Yes. Antelope left? Yes."
+    ],
+    [
+      "Giver",
+      "Perfect. You've reached the finish."
+    ],
+    [
+      "Follower",
+      "Great! Thanks for your help."
+    ],
+    [
+      "Giver",
+      "You're welcome. Good job."
+    ],
+    [
+      "Follower",
+      "Bye!"
+    ]
+  ],
+  "n_turns": 96,
+  "ended_by": "single_generation"
+}

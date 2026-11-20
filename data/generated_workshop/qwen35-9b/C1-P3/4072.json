@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3965932417,
+  "conversation_no": 4072,
+  "topic": "News Media",
+  "sb_prompt": "DISCUSS HOW YOU AND THE OTHER CALLER KEEP UP ON CURRENT EVENTS.      DO YOU GET MOST OF YOUR NEWS FROM TVOR PEOPLE YOU KNOW?  ARE YOU SATISFIED WITH THE QUALITY OF COVERAGE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 24,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 25,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Yeah, who is this?\nParticipantA: Just a random call, honestly. The thing about news. How do you keep up on current events?\nParticipantB: Oh, mostly podcasts and scrolling my phone while at the gym. You?\nParticipantA: That's what I use too, mostly. But honestly, I find it all kind of... mixed.\nParticipantB: Mixed how?\nParticipantA: It depends. Sometimes the stories feel real, you know? Like they actually matter. Other times it feels like people are just trying to sell something or get clicks.\nParticipantB: Yeah, I get that. I've been thinking about this for years. I just can't put my finger on why I feel the way I do about it.\nParticipantA: See, that's the thing. I have a cousin who works in politics, so I hear the real stuff from him, and then I compare it to what's on TV, and it's a weird mix.\nParticipantB: Oh, that makes sense. My boss is an accountant, kind of like you, but he reads the papers every morning. He's always got a strong opinion on everything, which is cool.\nParticipantA: That's nice. I don't really have anyone like that in my life. My mechanic friends just talk about cars and oil changes mostly.\nParticipantB: Haha, fair enough. But even without that, I feel like I know more about what's happening than most people.\nParticipantA: Is that a good thing? Knowing more stuff?\nParticipantB: Definitely. It helps me understand the world a bit better, even if I don't know everything.\nParticipantA: I guess it does. It's just that sometimes the coverage feels so shallow, like they don't explain the why behind things.\nParticipantB: True. They love to show the pictures but skip the details. Though, I've made up my mind years ago about how I view it all, so I don't mind the gaps.\nParticipantA: Made up your mind? About news? That's interesting. What do you think?\nParticipantB: Well, I think most of it is noise, but the important stuff usually comes through eventually. It's just a matter of learning to separate the signal from the static.\nParticipantA: I see. I guess I'm still trying to figure out where the signal is. My cousin helps me with that sometimes.\nParticipantB: Yeah, having someone close to talk to helps a lot. Do you talk to him much about it?\nParticipantA: Yeah, we text a lot. Sometimes he sends me articles and says, \"Read this, it's real.\"\nParticipantB: That sounds helpful. It's nice to have a sanity check in this crazy world.\nParticipantA: Yeah, it is. Thanks for chatting about it. It was good to hear another perspective.\nParticipantB: No problem. Good luck with the parts this week.\nParticipantA: Thanks, you too. Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 651,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

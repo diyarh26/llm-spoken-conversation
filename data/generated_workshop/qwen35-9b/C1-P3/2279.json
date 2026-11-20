@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3693481917,
+  "conversation_no": 2279,
+  "topic": "Family Life",
+  "sb_prompt": "IF YOU HAVE CHILDRENY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 37,
+    "education": "a high-school education",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: This is Mark.\nParticipantA: Oh, hi Mark. This is Sarah.\nParticipantB: Yeah, sure. What's up?\nParticipantA: Just wanted to chat about family life. You have kids?\nParticipantB: Yep, two boys, ages 7 and 5.\nParticipantA: Nice. I have three girls, oldest is ten now.\nParticipantB: Ten? That's not that long ago. We're only a year apart.\nParticipantA: Yeah, crazy how fast they grow. Sometimes I still remember when I carried them all.\nParticipantB: Exactly. My little one was carried too. It's wild.\nParticipantA: Do you feel like you have it figured out with parenting?\nParticipantB: Honestly? A little skeptical sometimes. My cousin drove a school bus for years, same as me. He says the kids are tougher than we give them credit for. He's still talking about it.\nParticipantA: Oh, really? That's interesting. I feel like I made up my mind way back when I was younger about being an electrician. Just knew I had to do it.\nParticipantB: Oh, electrician? That's cool. I don't know much about the work, but it sounds like you'd be around people a lot, or just alone?\nParticipantA: Mostly alone, mostly just me, my truck, and the job. But I like it. I have so many opinions about wiring and stuff. It just feels right.\nParticipantB: Huh. My cousin says the job is hard because you can't fix everything just by talking to people.\nParticipantA: That's true. Sometimes you just have to get the job done, no matter what. But I love figuring out the problems. It's satisfying.\nParticipantB: Yeah, my cousin says that's the same with kids. You can't just wish them to behave; you gotta set boundaries.\nParticipantA: Yeah, boundaries are key. I think about that a lot with the girls. They test me every day.\nParticipantB: Totally. My older one just asked for a new bike this week. I said no, she cried for twenty minutes, then got over it.\nParticipantA: Haha, that sounds familiar. My youngest did that yesterday. Took me an hour to explain why we couldn't buy her another toy.\nParticipantB: Man, you're tough! I'm starting to think I need some of that \"just get it done\" energy.\nParticipantA: Maybe. But hey, you're doing the bus thing too, right? That's a people job.\nParticipantB: Yep. Different kind of tough. Gotta keep the schedule, keep the kids happy, deal with parents.\nParticipantA: Sounds intense. Do you think it's better than being alone with a job?\nParticipantB: Maybe? Hard to say. My cousin says he loves the bus life, but he's definitely burned out sometimes.\nParticipantA: Yeah, I guess I burn out too sometimes. Just need a break from the shop.\nParticipantB: True. Well, glad we talked. My cousin would probably tell me to quit if I was listening.\nParticipantA: Haha, yeah. Well, take care, Mark.\nParticipantB: You too, Sarah. Take it easy.\nParticipantA: Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 725,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

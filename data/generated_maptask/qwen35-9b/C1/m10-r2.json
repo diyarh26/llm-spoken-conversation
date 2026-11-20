@@ -1,0 +1,403 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m10",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1908369179,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Hi, can you hear me?\nFollower: Yeah, I can. Ready?\nGiver: Okay. Let's get started. Find the cross marked START.\nFollower: Got it. It's right near the top left.\nGiver: Good. Now, look at the diamond mine. Where is it on your map?\nFollower: Ah, that's the one with the little diamond shape. It's a bit lower than the start.\nGiver: Perfect. It's pretty close to the start, just to the right.\nFollower: Okay, I see it.\nGiver: Now, pretend you are walking from the START towards that mine. Don't go directly to it. Walk straight up a bit first.\nFollower: Straight up? Like, north?\nGiver: Yes. Walk up until you are level with the top edge of the diamond mine.\nFollower: Okay, I'm walking up... now I'm past the mine.\nGiver: Good. Now turn right and walk towards the mine.\nFollower: Okay, turning right. I'm heading towards it now.\nGiver: Stop when you are right next to it. That's your first segment.\nFollower: Okay, I've reached the mine.\nGiver: Now, from the mine, walk diagonally up and to the left.\nFollower: Up and left? Towards the top?\nGiver: Yes. Walk towards the highest viewpoint, but stop before you reach it.\nFollower: Okay, I'm going up and left... wait, I'm almost at the viewpoint.\nGiver: No, stop short! Don't touch the viewpoint. Just get as close as you can without hitting it.\nFollower: Okay, stopping just before it.\nGiver: Now turn right and walk towards the springboks.\nFollower: Springboks? I don't see any animals on my map.\nGiver: Just keep going in that direction. Walk towards the general area of the springboks, but stop when you hit the overgrown gully.\nFollower: Oh! The gully? Okay, I see that. I'm walking towards it now.\nGiver: Good. Stop right at the edge of the gully.\nFollower: Okay, stopped.\nGiver: Now turn left and walk down towards the field station. Which one?\nFollower: There are two field stations.\nGiver: The one that is higher up. The top one.\nFollower: Ah, the one near the top left corner. Okay, walking down towards that one.\nGiver: Stop when you are close to it, but not right on top of it.\nFollower: Okay, stopped near the top station.\nGiver: Now walk towards the banana tree.\nFollower: Okay, walking towards the banana tree.\nGiver: Stop when you are right next to it.\nFollower: Okay, next to the banana tree.\nGiver: Now walk diagonally down and to the left.\nFollower: Down and left? Towards the gold mine?\nGiver: No, don't go to the gold mine. Walk towards the rockfall instead.\nFollower: Wait, where is the rockfall?\nGiver: It's way down near the bottom left. Keep walking down and left until you hit the rockfall.\nFollower: Okay, walking down... oh no, I missed the banana tree!\nGiver: What? You missed the banana tree?\nFollower: I thought the gold mine was the next stop. I went straight to the gold mine.\nGiver: Oh, that's the problem! I said go to the rockfall. The gold mine is just a landmark you pass. You need to go to the rockfall.\nFollower: Oh no. Okay, let me retrace. Back to the banana tree.\nGiver: Yes, go back to the banana tree. Then walk towards the rockfall.\nFollower: Okay, back to the banana tree... now walking towards the rockfall.\nGiver: Good. Stop when you reach the rockfall.\nFollower: Okay, reached the rockfall.\nGiver: Now turn right and walk up towards the rope bridge.\nFollower: Okay, turning right... walking up... I see the rope bridge.\nGiver: Good. Stop right next to the rope bridge.\nFollower: Okay, next to the bridge.\nGiver: Now walk towards the safari truck.\nFollower: The safari truck? I see it, but it's pretty far away.\nGiver: Keep going towards it. Walk all the way to it.\nFollower: Okay, walking towards the truck... oh, I'm passing a giraffe now.\nGiver: Yes, you should pass the giraffes on your right side. Keep going until you reach the truck.\nFollower: Okay, passing the giraffes... reaching the truck.\nGiver: Good. Now turn left and walk down towards the disused warehouse.\nFollower: Disused warehouse? I don't see that on my map.\nGiver: Just keep walking down and left. You'll hit the warehouse eventually.\nFollower: Okay, walking down... I don't see any warehouse. Just trees and rocks.\nGiver: It's the big square shape near the bottom. You might have missed it because it's hidden behind some rocks.\nFollower: Ah, there it is! The disused warehouse. Okay, I'm walking towards it.\nGiver: Stop when you are close to it.\nFollower: Okay, stopped near the warehouse.\nGiver: Now walk towards the crocodiles.\nFollower: Crocodiles? I see them in the water. Okay, walking towards the crocodiles.\nGiver: Stop when you are right next to them.\nFollower: Okay, next to the crocodiles.\nGiver: Now turn right and walk down towards the great lake.\nFollower: The great lake? That's the big blue area at the bottom.\nGiver: Yes. Walk towards it. But wait, don't go straight there. First, walk past the safari truck again, but this time go further left.\nFollower: Wait, I already passed the truck. I thought I was done.\nGiver: No, you haven't finished yet. From the crocodiles, walk left until you are above the great lake. Then walk down to the lake.\nFollower: Okay, walking left... above the lake... now walking down to the lake.\nGiver: Stop when you are right next to the lake.\nFollower: Okay, next to the lake.\nGiver: Now walk towards the FINISH. It's marked with a cross.\nFollower: Where is the finish? I don't see it.\nGiver: It's at the very bottom left corner. Near the lake.\nFollower: Ah, there it is! The finish line. Okay, walking towards it.\nGiver: Stop when you reach it.\nFollower: Okay, I've reached the finish!\nGiver: Great job. Did you make it?\nFollower: Yes! I followed the route correctly.\nGiver: Excellent. Thanks for your help.\nFollower: You're welcome. Bye!\nGiver: Bye!",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi, can you hear me?"
+    ],
+    [
+      "Follower",
+      "Yeah, I can. Ready?"
+    ],
+    [
+      "Giver",
+      "Okay. Let's get started. Find the cross marked START."
+    ],
+    [
+      "Follower",
+      "Got it. It's right near the top left."
+    ],
+    [
+      "Giver",
+      "Good. Now, look at the diamond mine. Where is it on your map?"
+    ],
+    [
+      "Follower",
+      "Ah, that's the one with the little diamond shape. It's a bit lower than the start."
+    ],
+    [
+      "Giver",
+      "Perfect. It's pretty close to the start, just to the right."
+    ],
+    [
+      "Follower",
+      "Okay, I see it."
+    ],
+    [
+      "Giver",
+      "Now, pretend you are walking from the START towards that mine. Don't go directly to it. Walk straight up a bit first."
+    ],
+    [
+      "Follower",
+      "Straight up? Like, north?"
+    ],
+    [
+      "Giver",
+      "Yes. Walk up until you are level with the top edge of the diamond mine."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking up... now I'm past the mine."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right and walk towards the mine."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. I'm heading towards it now."
+    ],
+    [
+      "Giver",
+      "Stop when you are right next to it. That's your first segment."
+    ],
+    [
+      "Follower",
+      "Okay, I've reached the mine."
+    ],
+    [
+      "Giver",
+      "Now, from the mine, walk diagonally up and to the left."
+    ],
+    [
+      "Follower",
+      "Up and left? Towards the top?"
+    ],
+    [
+      "Giver",
+      "Yes. Walk towards the highest viewpoint, but stop before you reach it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going up and left... wait, I'm almost at the viewpoint."
+    ],
+    [
+      "Giver",
+      "No, stop short! Don't touch the viewpoint. Just get as close as you can without hitting it."
+    ],
+    [
+      "Follower",
+      "Okay, stopping just before it."
+    ],
+    [
+      "Giver",
+      "Now turn right and walk towards the springboks."
+    ],
+    [
+      "Follower",
+      "Springboks? I don't see any animals on my map."
+    ],
+    [
+      "Giver",
+      "Just keep going in that direction. Walk towards the general area of the springboks, but stop when you hit the overgrown gully."
+    ],
+    [
+      "Follower",
+      "Oh! The gully? Okay, I see that. I'm walking towards it now."
+    ],
+    [
+      "Giver",
+      "Good. Stop right at the edge of the gully."
+    ],
+    [
+      "Follower",
+      "Okay, stopped."
+    ],
+    [
+      "Giver",
+      "Now turn left and walk down towards the field station. Which one?"
+    ],
+    [
+      "Follower",
+      "There are two field stations."
+    ],
+    [
+      "Giver",
+      "The one that is higher up. The top one."
+    ],
+    [
+      "Follower",
+      "Ah, the one near the top left corner. Okay, walking down towards that one."
+    ],
+    [
+      "Giver",
+      "Stop when you are close to it, but not right on top of it."
+    ],
+    [
+      "Follower",
+      "Okay, stopped near the top station."
+    ],
+    [
+      "Giver",
+      "Now walk towards the banana tree."
+    ],
+    [
+      "Follower",
+      "Okay, walking towards the banana tree."
+    ],
+    [
+      "Giver",
+      "Stop when you are right next to it."
+    ],
+    [
+      "Follower",
+      "Okay, next to the banana tree."
+    ],
+    [
+      "Giver",
+      "Now walk diagonally down and to the left."
+    ],
+    [
+      "Follower",
+      "Down and left? Towards the gold mine?"
+    ],
+    [
+      "Giver",
+      "No, don't go to the gold mine. Walk towards the rockfall instead."
+    ],
+    [
+      "Follower",
+      "Wait, where is the rockfall?"
+    ],
+    [
+      "Giver",
+      "It's way down near the bottom left. Keep walking down and left until you hit the rockfall."
+    ],
+    [
+      "Follower",
+      "Okay, walking down... oh no, I missed the banana tree!"
+    ],
+    [
+      "Giver",
+      "What? You missed the banana tree?"
+    ],
+    [
+      "Follower",
+      "I thought the gold mine was the next stop. I went straight to the gold mine."
+    ],
+    [
+      "Giver",
+      "Oh, that's the problem! I said go to the rockfall. The gold mine is just a landmark you pass. You need to go to the rockfall."
+    ],
+    [
+      "Follower",
+      "Oh no. Okay, let me retrace. Back to the banana tree."
+    ],
+    [
+      "Giver",
+      "Yes, go back to the banana tree. Then walk towards the rockfall."
+    ],
+    [
+      "Follower",
+      "Okay, back to the banana tree... now walking towards the rockfall."
+    ],
+    [
+      "Giver",
+      "Good. Stop when you reach the rockfall."
+    ],
+    [
+      "Follower",
+      "Okay, reached the rockfall."
+    ],
+    [
+      "Giver",
+      "Now turn right and walk up towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, turning right... walking up... I see the rope bridge."
+    ],
+    [
+      "Giver",
+      "Good. Stop right next to the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, next to the bridge."
+    ],
+    [
+      "Giver",
+      "Now walk towards the safari truck."
+    ],
+    [
+      "Follower",
+      "The safari truck? I see it, but it's pretty far away."
+    ],
+    [
+      "Giver",
+      "Keep going towards it. Walk all the way to it."
+    ],
+    [
+      "Follower",
+      "Okay, walking towards the truck... oh, I'm passing a giraffe now."
+    ],
+    [
+      "Giver",
+      "Yes, you should pass the giraffes on your right side. Keep going until you reach the truck."
+    ],
+    [
+      "Follower",
+      "Okay, passing the giraffes... reaching the truck."
+    ],
+    [
+      "Giver",
+      "Good. Now turn left and walk down towards the disused warehouse."
+    ],
+    [
+      "Follower",
+      "Disused warehouse? I don't see that on my map."
+    ],
+    [
+      "Giver",
+      "Just keep walking down and left. You'll hit the warehouse eventually."
+    ],
+    [
+      "Follower",
+      "Okay, walking down... I don't see any warehouse. Just trees and rocks."
+    ],
+    [
+      "Giver",
+      "It's the big square shape near the bottom. You might have missed it because it's hidden behind some rocks."
+    ],
+    [
+      "Follower",
+      "Ah, there it is! The disused warehouse. Okay, I'm walking towards it."
+    ],
+    [
+      "Giver",
+      "Stop when you are close to it."
+    ],
+    [
+      "Follower",
+      "Okay, stopped near the warehouse."
+    ],
+    [
+      "Giver",
+      "Now walk towards the crocodiles."
+    ],
+    [
+      "Follower",
+      "Crocodiles? I see them in the water. Okay, walking towards the crocodiles."
+    ],
+    [
+      "Giver",
+      "Stop when you are right next to them."
+    ],
+    [
+      "Follower",
+      "Okay, next to the crocodiles."
+    ],
+    [
+      "Giver",
+      "Now turn right and walk down towards the great lake."
+    ],
+    [
+      "Follower",
+      "The great lake? That's the big blue area at the bottom."
+    ],
+    [
+      "Giver",
+      "Yes. Walk towards it. But wait, don't go straight there. First, walk past the safari truck again, but this time go further left."
+    ],
+    [
+      "Follower",
+      "Wait, I already passed the truck. I thought I was done."
+    ],
+    [
+      "Giver",
+      "No, you haven't finished yet. From the crocodiles, walk left until you are above the great lake. Then walk down to the lake."
+    ],
+    [
+      "Follower",
+      "Okay, walking left... above the lake... now walking down to the lake."
+    ],
+    [
+      "Giver",
+      "Stop when you are right next to the lake."
+    ],
+    [
+      "Follower",
+      "Okay, next to the lake."
+    ],
+    [
+      "Giver",
+      "Now walk towards the FINISH. It's marked with a cross."
+    ],
+    [
+      "Follower",
+      "Where is the finish? I don't see it."
+    ],
+    [
+      "Giver",
+      "It's at the very bottom left corner. Near the lake."
+    ],
+    [
+      "Follower",
+      "Ah, there it is! The finish line. Okay, walking towards it."
+    ],
+    [
+      "Giver",
+      "Stop when you reach it."
+    ],
+    [
+      "Follower",
+      "Okay, I've reached the finish!"
+    ],
+    [
+      "Giver",
+      "Great job. Did you make it?"
+    ],
+    [
+      "Follower",
+      "Yes! I followed the route correctly."
+    ],
+    [
+      "Giver",
+      "Excellent. Thanks for your help."
+    ],
+    [
+      "Follower",
+      "You're welcome. Bye!"
+    ],
+    [
+      "Giver",
+      "Bye!"
+    ]
+  ],
+  "n_turns": 93,
+  "ended_by": "single_generation"
+}

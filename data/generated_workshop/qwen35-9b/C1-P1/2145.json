@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 688445558,
+  "conversation_no": 2145,
+  "topic": "Women's Roles",
+  "sb_prompt": "DISCUSS THE CHANGES IN THE ROLES OF WOMEN IN AMERICAN SOCIETY OVER THE PAST GENERATION OR TWO.  WHICH CHANGES HAVE BEEN THE MOST SIGNIFICANT? DO YOU HAVE AN OPINION ON WHAT FURTHER CHANGES WILL TAKE PLACE OVER THE NEXT GENERATION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 44,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 45,
+    "education": "a college degree",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Yeah, hi. Is this the number I have?\nParticipantB: Yeah, it's me. Who's calling?\nParticipantA: Hey, I'm just supposed to call a stranger and talk about women's roles in society over the last couple generations.\nParticipantB: Oh, right. The assignment. Yeah, I got that too.\nParticipantA: Okay, well, I work as a bank teller, so I see a lot of people come through. It's kinda interesting watching it change.\nParticipantB: Yeah, I'm a mechanic, so I'm around guys all day. But honestly, I kind of made up my mind about this stuff a long time ago.\nParticipantA: Really? What do you mean?\nParticipantB: Well, when I was young, it was pretty clear who did what. Now it's all over the place, and sometimes I just don't get how everyone sees it differently.\nParticipantA: Oh, that makes sense. I have a friend, Sarah, who used to work in a bank here in town. She's actually retired now. She told me stories about when she started.\nParticipantB: Oh yeah? What did she say?\nParticipantA: She said women were barely ever allowed to be tellers back then. My aunt used to say, \"That's for men's work.\" But now? It's like half the people in my branch are women.\nParticipantB: Yeah, I guess I've seen that shift too. I mean, I fix cars, and back in the day, if you were a woman in my shop, you were usually just cleaning or something.\nParticipantA: Right? And now?\nParticipantB: Now there are female mechanics. Like, seriously. One of my best friends is one. She's got her own shop now.\nParticipantA: Oh wow. That's cool. But I get why you might be skeptical. I mean, I see some pushback still. Like, older guys at the bank sometimes get weird when a woman handles a big loan or asks about investing.\nParticipantB: Yeah, that's the thing. People act like things haven't changed. They say, \"Women are too emotional for money\" or \"Women don't belong in the garage.\" But that's just old thinking.\nParticipantA: True. My friend Sarah says that's the main battle. It's not even about being good at it anymore; it's just breaking the mindset.\nParticipantB: Yeah, exactly. I think the biggest change isn't just that women are doing the jobs, but that they're leading. Like, women running the banks or owning the auto shops.\nParticipantA: That's huge. I've never thought about it that way. I just saw more women in uniform, but yeah, having them in charge is different.\nParticipantB: Definitely. What do you think will happen next? Do you think there's more change coming?\nParticipantA: Hmm. Maybe not about jobs. I think the change is deeper now. Like, how women view money or family stuff. Maybe less pressure to choose one thing or the other?\nParticipantB: Oh, I like that. Yeah, I think the next generation won't even ask \"should she do it?\" They'll just ask \"what do *they* want?\"\nParticipantA: Yeah, that sounds about right. It's more about balance than exclusion.\nParticipantB: Exactly. Seems like we're just catching up now.\nParticipantA: Yeah. Well, I think that's about it. Thanks for talking.\nParticipantB: Yeah, same here. Good chatting.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 773,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

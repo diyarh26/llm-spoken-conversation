@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3845294658,
+  "conversation_no": 2993,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey!\nParticipantA: Sorry I didn't leave a name, but I was supposed to call you about cars?\nParticipantB: Oh, yeah, hi! Yeah, that's right. I'm Mike.\nParticipantA: I'm Sarah. I'm guessing you're the one who asked for a chat about what I might buy next?\nParticipantB: That's me. So, what kind of car do you think you might buy next?\nParticipantA: Hmm, honestly, I don't know. It's kind of weird.\nParticipantB: Weird how?\nParticipantA: I've had this car for ten years. It's an older model, pretty reliable, but it's starting to show its age. The parts are getting expensive.\nParticipantB: Right, that happens. My buddy Dave, he's a mechanic, his old truck just blew a head gasket last month. It's a nightmare.\nParticipantA: Yeah, exactly. That's the part that sits fine with me\u2014reliability. But the other part... the cost.\nParticipantB: The cost?\nParticipantA: Yeah, I have a degree and work at the bank, so I have a little budget, but I just feel like I'm trading in a car for a car. I don't really want to feel like I'm \"upgrading\" just to pay more money to the dealer.\nParticipantB: Oh, I get that. My dad's a carpenter, we built that truck for him. Solid oak, reinforced frame. It's been beat up but it just keeps going.\nParticipantA: Wow, a built truck? That's cool. So you're looking for something durable?\nParticipantB: Yeah, definitely. But here's the thing that bugs me. My friend says the new stuff is safer, better tech, but it costs twice as much. He's on the fence too, you know?\nParticipantA: That's the exact same feeling I have! Parts of it sit fine\u2014the safety, the tech\u2014but the price tag just feels wrong. Like, why do I need all that if I just want to get from point A to point B without breaking my back?\nParticipantB: Exactly. It's like... I built furniture my whole life. I know how to fix a wobbly leg. I don't need a $50,000 sedan with self-parking if I can just tighten a bolt myself. But then I think, \"But what if I can't fix it?\"\nParticipantA: That's true. It's a gamble. I've made my mind up about this years ago, though. I just don't know why.\nParticipantB: What do you mean? Made up your mind about what?\nParticipantA: Well, I used to think I'd buy a luxury car. Something fancy. But then I realized... I actually prefer the older, simpler stuff. I don't care about the leather seats or the fancy screens.\nParticipantB: Wait, really? That's surprising. I thought you'd want the shiny new thing.\nParticipantA: It's the practicality. My car is a beater, sure, but I know exactly how it works. If it breaks, I know the answer. With these new cars, if the computer glitches, I'm stuck.\nParticipantB: Man, that makes sense. My friend Dave is always worried his car is going to fail him because he can't read the manual. He keeps buying the new stuff and now he's paying a mechanic $200 a visit.\nParticipantA: See, that's the part that doesn't sit well with me. Losing control. I like knowing what's under the hood.\nParticipantB: Yeah, I get that. But then again, maybe I need the newer stuff just in case. I don't know. It's a mess in my head too.\nParticipantA: It is a mess. It's like I'm standing at a crossroads. One way is safe but expensive and confusing. The other way is cheap, familiar, and maybe a little risky.\nParticipantB: Yeah, that's fair. I guess I'm leaning toward something older, too. Like a used pickup. Something I can actually work on if I need to.\nParticipantA: That sounds good. Maybe we're on the same page after all?\nParticipantB: Yeah, maybe. Though I probably still need to check the market prices.\nParticipantA: Yeah, you definitely do that. I'd do the same.\nParticipantB: Okay, well, thanks for talking it out.\nParticipantA: Yeah, same here. Good chatting.\nParticipantB: Bye!\nParticipantA: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 995,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 466868650,
+  "conversation_no": 4048,
+  "topic": "Drug Testing",
+  "sb_prompt": "HOW DO YOU FEEL ABOUT THE PRACTICE OF SOME COMPANIES OR GOVERNMENT AGENCIES TESTING EMPLOYEES OR PROSPECTIVE EMPLOYEES FOR DRUGS?  IS RANDOM SPOT TESTING JUSTIFIED?  WHAT LIMITS SHOULD THERE BE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 28,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 40,
+    "education": "a college degree",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey, hello there.\nParticipantA: You got through?\nParticipantB: Yeah, just hanging out on the line. Who's this?\nParticipantA: It's me. Random number. Hey, so I guess we're supposed to talk about drug testing?\nParticipantB: Yeah, that's the one. Random spot testing for companies or government.\nParticipantA: Right. Okay, well, I work in accounting, so I know this stuff happens a lot.\nParticipantB: Oh, that makes sense. I'm a high school teacher, so I see it in the world too.\nParticipantA: Yeah, my boss started doing random testing five years ago.\nParticipantB: Five years ago? Wow. That was the height of the panic, wasn't it?\nParticipantA: I guess. We did it for a while, then just stopped. Nobody complained much.\nParticipantB: Really? That's interesting. I know a guy, his brother, works at a logistics firm. They test everyone weekly.\nParticipantA: Weekly? Man, that sounds intense.\nParticipantB: Yeah, but he told me, his brother says it messed up the whole culture. People just stopped bringing their best selves in.\nParticipantA: See, that's what I thought too. But I never could say why exactly. Just felt wrong somehow.\nParticipantB: Yeah, I get that. It feels like you're judging someone before they even get a chance to prove themselves.\nParticipantA: Exactly. If I wanted to hide a prescription med for my mom, or something, the test would catch it.\nParticipantB: Oh, that's a good point. People have lives outside the job.\nParticipantA: Right. But then, what if someone is actually doing drugs on the clock? Shouldn't we check?\nParticipantB: That's the thing, isn't it? How do you know it's not just a reaction to stress or a past issue?\nParticipantA: True. I mean, if I'm the hiring manager, I want my numbers to be right.\nParticipantB: But testing before you even hire? That's invasive, right? You know, I've heard stories about people turning down jobs because of it.\nParticipantA: Yeah, that happened to a guy I knew. He lost a great accounting job over a prescription that was cleared.\nParticipantB: That sucks. So in your experience, did the random testing actually catch anything real?\nParticipantA: Honestly? Probably not much. Just a few people who were on the edge, maybe.\nParticipantB: So you think it's a waste?\nParticipantA: I think it's more about control than safety. Feels like they're policing, not protecting.\nParticipantB: Yeah, that makes sense. I think if there's a reasonable suspicion, like a smell or a crash at work, then maybe test.\nParticipantA: Reasonable suspicion, yeah. That feels fairer than just picking names out of a hat.\nParticipantB: Exactly. If it's random, it punishes the innocent. If it's targeted, it catches the problem.\nParticipantA: Okay, that's a pretty solid argument.\nParticipantB: It is. My brother actually quit the job because of the weekly tests. He said it made him paranoid.\nParticipantA: Oh, really? So he left it all on the table just because?\nParticipantB: Yeah. Said he'd rather take a calculated risk than be treated like a criminal every day.\nParticipantA: That's tough. I guess if I were him, I'd feel the same.\nParticipantB: Yeah. So what would you say if your boss came to you and said, \"We're cutting the random tests, but if you get caught, you're fired\"?\nParticipantA: I'd say, \"Sure, let's try that. Let's focus on results and behavior instead of peeing in a cup.\"\nParticipantB: Now we're talking. I think that's the way it should go.\nParticipantA: Yeah, I agree. Seems more respectful.\nParticipantB: Definitely. Well, I've got a class to prep for.\nParticipantA: Oh, okay. No problem. Thanks for chatting.\nParticipantB: Yeah, you too. Good luck with your numbers.\nParticipantA: Thanks, bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 931,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

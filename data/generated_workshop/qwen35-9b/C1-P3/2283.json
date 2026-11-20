@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2470239282,
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hi there.\nParticipantA: Hey, sorry to bother you, but I'm trying to find out what you do in the way of lawn and garden work. Does that happen to be your thing?\nParticipantB: Oh, uh, not really. I work as a pharmacist, actually.\nParticipantA: Oh, nice. That's pretty cool. I'm a grocery store manager.\nParticipantB: Right. So, how does that involve gardening at all?\nParticipantA: Well, I manage the produce section mostly, but I do help keep the store windows and a little plot out back looking decent.\nParticipantB: Hmm. I see. I've got a friend who's into it; he's got this huge plot behind his place.\nParticipantA: Oh yeah? Does he enjoy doing it?\nParticipantB: Sometimes. Honestly, a little bit of it. We've been talking about it, but he says it's more of a chore than a hobby.\nParticipantA: That makes sense. I feel the same way. I used to think I'd love gardening, but then I tried it and my back gave out after an hour.\nParticipantB: Yeah, I get that. My friend complains about the weeds and the bugs all the time.\nParticipantA: True. I've told a few people that story about the back plot failing on me. It's just hard work.\nParticipantB: Yeah, it is. I'm glad I stuck to the medicine side of things. No digging for me.\nParticipantA: Me too. It's nice not to have to worry about the weather ruining your day.\nParticipantB: Exactly. So, does your store have any specific garden stuff you manage?\nParticipantA: Mostly just keeping the display tables clean and maybe planting some seasonal flowers in the windows to make them look nice.\nParticipantB: Oh, that's a good use of it. You make it look good for the customers.\nParticipantA: Yeah, that's the goal. Just a little bit of green. Nothing like the heavy lifting.\nParticipantB: Right. I'm with you on that. My friend might enjoy it, but I definitely don't.\nParticipantA: I guess we're both lucky we don't have to deal with the dirt that much.\nParticipantB: Yeah, sounds like a plan. Thanks for chatting about this.\nParticipantA: No problem. Take care.\nParticipantB: You too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 525,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

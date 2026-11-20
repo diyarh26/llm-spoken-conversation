@@ -1,8 +1,7 @@
 """Prompt design rules, enforced.
 
 The study's central safeguard against circular evaluation: no prompt in the main design
-(P0-P2) ever names or shows the listener behaviour that is measured. P3 is the one
-exploratory condition that shows it on purpose, and is reported separately."""
+(P0-P2) ever names or shows the listener behaviour that is measured."""
 
 from __future__ import annotations
 
@@ -76,9 +75,18 @@ def test_p2_differs_from_p1_only_by_the_examples(personas, fake_fewshot):
         assert " ".join(instruction_text(p2).split()) == " ".join(p1.split())
 
 
-def test_p3_is_the_declared_exception(personas, monkeypatch):
-    monkeypatch.setattr(templates, "_p3_fewshot_block", lambda: "")
-    assert any(MEASURED.search(p) for p in all_prompts("P3", *personas))
+def test_p3_differs_from_p1_only_by_the_listener_option(personas):
+    for p1, p3 in zip(all_prompts("P1", *personas), all_prompts("P3", *personas), strict=True):
+        assert templates.P3_LISTENER_OPTION in p3
+        assert " ".join(p3.replace(templates.P3_LISTENER_OPTION, "").split()) == " ".join(
+            p1.split()
+        )
+
+
+def test_p3_permits_listening_without_quoting_measured_forms(personas):
+    # Permission only: P3 never shows or names the forms the listener metric counts.
+    for prompt in all_prompts("P3", *personas):
+        assert not MEASURED.search(prompt), prompt
 
 
 def test_persona_cards_are_seeded_and_stable(personas):

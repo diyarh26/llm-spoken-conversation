@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2861653931,
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey! How's it going?\nParticipantA: Pretty good, just on the road. What about you?\nParticipantB: Oh, just finishing up a dinner shift. It's been a long night.\nParticipantA: Yeah, I get that. You working in a city?\nParticipantB: Yep, downtown. That's where I live actually, just a walk up.\nParticipantA: Ah, nice. I live way out in the suburbs, like twenty miles outside.\nParticipantB: Wow, really? Must be a big place out there. Is your house a nice size?\nParticipantA: It's... actually pretty standard for the area. Three bedrooms, two baths, a big yard. Nothing fancy, just basic.\nParticipantB: Oh, I hear that a lot. My place is different though. It's a smaller place, you know, just a studio in the city.\nParticipantA: A studio? That's tough, huh?\nParticipantB: Yeah, it is. Sometimes I wish I had a real bedroom and a kitchen to myself. Last week I tried to cook a full meal and spilled pasta all over the linoleum because there's no counter space.\nParticipantA: Oh man, that sounds stressful. My kitchen is huge, actually.\nParticipantB: Really? How big are you talking?\nParticipantA: Like, twenty feet of cabinets. I've got a huge island. Sometimes I feel like I'm driving a tank just trying to make a sandwich.\nParticipantB: That's funny. I guess it's weird. I like having everything close by, no driving to get coffee, but I miss having somewhere to just relax without cleaning up a mess immediately.\nParticipantA: Yeah, I get that. I mean, I love the quiet out here, but sometimes I just want to grab a beer and sit on my porch without thinking about traffic or noise.\nParticipantB: Totally. For me, it's the opposite. I love the people and the energy, but sometimes I feel so cramped. Did you ever think about moving closer to the city?\nParticipantA: Honestly? No. I was a truck driver for a while, actually, and I lived in a little motel room for two years straight.\nParticipantB: Oh wow, really? That must have been rough.\nParticipantA: Yeah, sometimes it was. But I really liked the freedom. I could sleep in my truck if I needed to, and I knew where I was safe. Plus, I don't have to deal with a landlord or paying for a yard I don't own.\nParticipantB: That's a good point. I've thought about getting a bigger place out there, but the rent would be crazy. And honestly, I don't think I'd miss the city that much once I left.\nParticipantA: Nah, I wouldn't trade it. I know some people say it's boring out here, but I prefer not waking up to sirens.\nParticipantB: I can relate. I still get nightmares sometimes from the busy streets. Do you ever talk about your house with people?\nParticipantA: Sometimes. Usually when I'm at a rest stop or visiting family. They always ask, \"Do you have a nice home?\" and I say, \"Yeah, it's fine, nothing special,\" but then they ask about the yard or the truck, and I just tell them what I have.\nParticipantB: Yeah, I do that too. When I'm at a coffee shop, people ask, \"Does your place have a living room?\" and I just say, \"It's cozy, but tight.\" It seems like a lot of people assume you need a huge place to be happy.\nParticipantA: I get that. I think people forget that a small space can feel big if you use it right.\nParticipantB: True. I've learned to maximize every inch. I have a cute bed that folds down and a tiny table that works as a desk. It's not perfect, but it works for me.\nParticipantA: Sounds smart. I'm glad you don't feel trapped in that little place of yours.\nParticipantB: Me too. I'm actually pretty happy with it. It's just... different than what most people have.\nParticipantA: Yeah, definitely. It's cool to see how two totally different setups can work for different people.\nParticipantB: Exactly. Well, I gotta go, I have a table waiting for me.\nParticipantA: Oh, okay. Good luck with the dinner rush.\nParticipantB: Thanks! You too, take care of that big house of yours.\nParticipantA: Will do. Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 991,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

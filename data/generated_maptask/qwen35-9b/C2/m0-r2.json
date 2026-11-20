@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m0",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 3697395732,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 1,
+    "dup_resamples": 18,
+    "dup_kept": 4
+  },
+  "turns": [
+    [
+      "Giver",
+      "Can you find the camera shop on your map?"
+    ],
+    [
+      "Follower",
+      "Yeah, I found it. Just down from the start."
+    ],
+    [
+      "Giver",
+      "Good. From there, draw a line straight down and left to the bottom of your map."
+    ],
+    [
+      "Follower",
+      "Okay, I've drawn a line down and left. I can't see any landmarks there though, just empty space."
+    ],
+    [
+      "Giver",
+      "Don't worry about the empty space for now, just keep going past that van on the left until you hit the allotments."
+    ],
+    [
+      "Follower",
+      "Okay, I drew the line. I see a van on the left, but I don't see any allotments. There's a level crossing near the van instead."
+    ],
+    [
+      "Giver",
+      "No, ignore the level crossing, keep going up from the van until you reach the flight museum on the right."
+    ],
+    [
+      "Follower",
+      "Okay, I see the flight museum on the right. I'll draw the line up to it now."
+    ],
+    [
+      "Giver",
+      "Okay, but wait, you've drawn the line going straight up from the van. You need to draw it down first, then turn left, then down again to go round the corner, then up past the allotments to the flight museum. Can you try drawing that zig-zag path instead?"
+    ],
+    [
+      "Follower",
+      "Okay, I'll try drawing that zig-zag path again, down to the van, left, down past it, and then up to the flight museum. Does that look right?"
+    ],
+    [
+      "Giver",
+      "Good, but you're going the wrong way from the van. You need to go up first, not down, to get past the van on the left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to start at the van and go up past it towards the flight museum."
+    ],
+    [
+      "Giver",
+      "Okay, stop drawing the line. That van is parked on the right side, not the left. Look for the camera shop, draw a line to it, then turn left and keep going down until you hit the bottom edge. Then turn right and go up past the van you *do* see on the left side. Keep going up until you reach the allotments on your right. Then turn left and go up to the flight museum."
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting at the camera shop and going down to the bottom, then right... wait, I don't see a van on the left at all, just empty space. Is there supposed to be a van there? And I still don't see any allotments on my right."
+    ],
+    [
+      "Giver",
+      "Wait, let's start fresh. Look at the bottom left corner of your map, near the start. Is there a van parked there?"
+    ],
+    [
+      "Follower",
+      "Yeah, I'm looking at the bottom left corner near the start... I still can't see a van there. Just empty space. Is it possible you're talking about a different van? Maybe the one near the bottom edge?"
+    ],
+    [
+      "Giver",
+      "Yeah, look at the very bottom edge, towards the middle, not the corner. There's a van parked right there, just below the start area. Can you find that one?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm looking at the bottom edge... I see a van parked there. Is this the one you're talking about?"
+    ],
+    [
+      "Giver",
+      "Yes, that's the one. Now draw a line from there straight down to the bottom edge of your map."
+    ],
+    [
+      "Follower",
+      "Okay, I've drawn the line down to the bottom edge."
+    ],
+    [
+      "Giver",
+      "Right, once you hit the bottom edge, turn right and draw a line across to the middle. Keep going until you hit that van on the left side. Once you're past it, turn left and draw the line up towards the flight museum on the right."
+    ],
+    [
+      "Follower",
+      "Okay, I've drawn the line down to the bottom edge, then right across to the middle. Now I'm turning left and going up. I see a van on the left side now, I'm going past it... wait, there's a level crossing right there, but I'm ignoring that. I'm heading up towards the flight museum. I can see the flight museum on the right. I'm drawing the line up to it now."
+    ],
+    [
+      "Giver",
+      "Good, but stop! You are going the wrong way past the van. You need to turn right first, then go up, then left to the flight museum. You're heading straight up now, aren't you?"
+    ],
+    [
+      "Follower",
+      "Oh, I see what you mean. I was going straight up past the van, but I should turn right first to go around it, then up, and then left towards the flight museum. Okay, I'll try that zig-zag again."
+    ],
+    [
+      "Giver",
+      "No, wait, don't turn right at all. The van is parked on your left, so you just need to draw the line straight up past it. Once you're clear of the van, keep going straight up until you reach the flight museum on the right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going up past the van now, keeping it on my left, until I hit the flight museum on the right."
+    ],
+    [
+      "Giver",
+      "Good, keep going up from the flight museum until you see the telephone box on your right, then draw the line to it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going up past the van, keeping it on my left, until I hit the flight museum on the right. Now I'm heading up further... wait, the telephone box is on my right, just a bit further up. I'm drawing the line to it now."
+    ],
+    [
+      "Giver",
+      "Okay, now from the telephone box, go down past the disused monastery on your left until you hit the youth hostel on your right, then turn left and keep going down to the alpine garden."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going down past the monastery on the left... wait, I don't see a monastery here, just empty space. And I don't see a youth hostel on the right either. Is it possible you're talking about a different spot? Maybe near the bottom?"
+    ],
+    [
+      "Giver",
+      "Wait, hold on, I don't think I mentioned the youth hostel. It's actually further up. You need to keep going up past the telephone box first, and then turn left to find the disused monastery on your left. Once you're past that, turn right to find the youth hostel on your right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going up past the telephone box now... wait, I see a level crossing just below it, but I'm ignoring that. I'm heading straight up past the telephone box... but I still don't see anything on my left or right that matches what you're saying. There's nothing there, just empty space. Are you sure those landmarks are actually on my map?"
+    ],
+    [
+      "Giver",
+      "Yeah, look for the alpine garden near the middle of your map, roughly in the middle vertically, on the left side.\nOnce you find that, go down from there to the bottom edge.\nThen turn right and go across to the right side of your map.\nKeep going down past the level crossing until you hit the yacht club at the very bottom right corner.\nThen turn left and go up until you find the alpine garden again.\nGo down again past it until you hit the disused monastery on your left.\nThen go up past the monastery to the flight museum on the right.\nFinally, go down from the flight museum past the level crossing to the alpine garden to finish."
+    ],
+    [
+      "Follower",
+      "Okay, I see the alpine garden on the left now. I'll draw the line down from there to the bottom edge. Then I'll turn right and go across to the level crossing. I'm going down past that to the yacht club at the bottom right. Then I'm turning left and coming back up to the alpine garden. From there, I'm going down past it to find the monastery on the left. Once I'm past the monastery, I'll go up to the flight museum on the right. Finally, I'll draw the line down from the flight museum, past the level crossing, and into the alpine garden to finish."
+    ],
+    [
+      "Giver",
+      "Wait, hold on. You've gone the wrong way again. You need to start from the camera shop, go down to the bottom edge, turn right, go across until you hit the van on the left, then turn left and go up past the van until you reach the flight museum on the right. Then from there, go down past the flight museum, turn left, go up past the telephone box on the left, turn right to find the youth hostel on the right, then go left down to the alpine garden. Finally, go up past the alpine garden to the disused monastery, then right to the east lake, then left down to the finish. Can you try that full route again without stopping?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to start fresh from the camera shop. I'll draw the line down to the bottom edge, turn right, go across until I hit the van on the left, then turn left and go up past the van until I reach the flight museum on the right. Then from there, I'll go down past the flight museum, turn left, go up past the telephone box on the left, turn right to find the youth hostel on the right, then go left down to the alpine garden. Finally, I'll go up past the alpine garden to the disused monastery, then right to the east lake, then left down to the finish. Okay, drawing that now."
+    ],
+    [
+      "Giver",
+      "Hold on, stop everything. You are going down to the alpine garden again, but you're in the wrong place. You need to go up first from the flight museum to find the telephone box on your left, then turn right to the youth hostel on your right, then turn left and go down to the alpine garden. From there, go up again to the disused monastery on the left, then turn right to the east lake on the right, and finally turn left to go down to the finish. Can you try the whole thing again?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting fresh at the camera shop and going down to the bottom edge. Then I turn right and go across until I hit the van on the left. Once I'm past it, I turn left and go up past the van until I reach the flight museum on the right. Then I go down past the flight museum, turn left, go up past the telephone box on the left, turn right to find the youth hostel on the right, then go left down to the alpine garden. From there, I go up again to the disused monastery on the left, then turn right to the east lake on the right, and finally turn left to go down to the finish. Okay, drawing that now."
+    ],
+    [
+      "Giver",
+      "Hold on, stop drawing. You've confused the landmarks again. Look, there is no youth hostel on your map at all. There's a level crossing near the middle, but that's it. The alpine garden is actually on the left side, near the middle. You need to go up from the flight museum, turn left to find the alpine garden, then go down from it to the bottom edge. Once you're at the bottom, turn right and go all the way to the right corner to find the yacht club. From there, turn left and go up past the alpine garden again, then turn right to go past the east lake on your right, and finally turn left to go down to the finish. Can you try that again?"
+    ],
+    [
+      "Follower",
+      "Okay, I see the alpine garden on the left now. I'll go down from there to the bottom edge, turn right and go all the way to the right corner to find the yacht club. From there, I'll turn left and go up past the alpine garden again, then turn right to go past the east lake on my right, and finally turn left to go down to the finish. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Wait, stop! You're going the wrong way at the finish. You need to turn left from the east lake, not down. Once you turn left, keep going down until you hit the picket fence on your left. That's the alpine garden on your map, right? Go down past it until you reach the finish near the picket fence."
+    ],
+    [
+      "Follower",
+      "Okay, I'll go down from the east lake to the picket fence, then turn left and keep going down until I hit the finish near it. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Good, once you hit the finish, stop drawing. Are you sure you got to the picket fence first before you got to the finish?"
+    ],
+    [
+      "Follower",
+      "Yeah, I've drawn the line down past the east lake to the picket fence. I can see the fence on the left now. I'm drawing it further down to the finish... wait, no, the finish is above the fence. I'm going the wrong way again. I should have turned left from the lake and gone down to the finish directly. Okay, let me try that. I'll go down from the lake to the finish. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Wait, stop drawing. You've gone down to the finish but the finish is actually up near the top of the map, not down at the bottom. You need to go up from the picket fence to the finish. Can you go back up and draw the line to the finish now?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm going back up from the picket fence to the finish now."
+    ],
+    [
+      "Giver",
+      "Keep going up from the finish to the east lake on your right, then turn left and go down to the disused monastery on your left. From there, go up past the monastery to the flight museum on your right, then go down past it to the telephone box on your left. Turn right to the youth hostel on your right, then go left down to the alpine garden. Finally, go up past the alpine garden, turn right to the east lake again, turn left, and keep going down past the picket fence to the finish."
+    ],
+    [
+      "Follower",
+      "Wait, that's completely backwards. You said to go up from the finish, but the finish is way up at the top and the picket fence is below it. I can't go up from the finish if I haven't even drawn to it yet. I'll start at the top near the finish, go down past the east lake on my right, turn left to go down past the picket fence on my left, and stop there. Is that the right way?"
+    ],
+    [
+      "Giver",
+      "No, that's backwards. The finish is up near the top. You need to start from the bottom near the picket fence and go UP to the finish. Don't draw to the finish yet, just draw from the fence up to the finish. Then stop."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to start from the bottom near the picket fence and go up to the finish now. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Good, keep going up past the finish now to the east lake on your right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going up past the finish to the east lake on my right. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Stop drawing. You've gone up past the finish already. You need to turn left from the finish and go down to the disused monastery on your left."
+    ],
+    [
+      "Follower",
+      "Wait, hold on. I'm confused about the directions. You said to go up past the finish, but I just drew a line from the picket fence up to the finish. Now you're saying I need to turn left from the finish and go down to the monastery? That doesn't make sense because I'm already at the finish, which is above the fence. Shouldn't I go from the monastery up to the finish instead?"
+    ],
+    [
+      "Giver",
+      "No, I need you to go back to the alpine garden and come down from there to the picket fence on the left first."
+    ],
+    [
+      "Follower",
+      "Wait, hold on, I think I'm getting lost again. If I go back to the alpine garden, that's way up near the middle, and the picket fence is way down at the bottom left. How do I get from up there down to the bottom without passing the finish? Did you mean to say I should start from the monastery and go down to the fence, and only then worry about the finish? Because right now, the finish is above the fence, so going down from the garden means I'll hit the fence first, then the finish is still above me. Should I just go down to the fence and stop there, ignoring the finish for now?"
+    ],
+    [
+      "Giver",
+      "No, that's not right at all. You need to keep going up from the picket fence to the finish first, don't stop at the fence. Once you've drawn the line up to the finish, then keep going up past it to the east lake. Then turn left and go down to the disused monastery. From there, go up past the monastery to the flight museum, then down to the telephone box, right to the youth hostel, left down to the alpine garden, up past it to the monastery again, right to the east lake, left, and finally down past the picket fence to the finish. Can you draw the whole thing in one go?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting fresh from the bottom near the picket fence and going all the way up past the finish to the east lake, then turning left and going down to the monastery, up past it to the museum, down to the telephone box, right to the hostel, left down to the garden, up past it to the monastery again, right to the lake, left, and finally down past the fence to the finish. Drawing the whole thing now."
+    ],
+    [
+      "Giver",
+      "Hold on, stop. You've drawn a huge loop that goes way past the finish line and comes back down again. That's not right. The route has to go straight from the start, down to the van, up to the museum, down to the telephone box, right to the hostel, down to the alpine garden, up to the monastery, right to the east lake, and then turn left and go straight down to the finish. Don't draw any extra loops. Just draw that path once."
+    ],
+    [
+      "Follower",
+      "Okay, I'll try that again without drawing any extra loops. I'll start from the camera shop, go down to the bottom, turn right, hit the van, turn left, go up past the van to the flight museum, then down past it to the telephone box, turn right to the youth hostel, left down to the alpine garden, up past it to the monastery, right to the east lake, then turn left and go straight down to the finish. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Stop drawing. You're going the wrong way again. You need to go up to the finish from the lake, not down. Once you hit the finish, stop immediately. Don't go any further."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going up from the lake to the finish now, then I'll stop immediately. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Stop, you're going up again but you're going the wrong way. You need to turn left from the east lake and go straight down past the finish line to the picket fence. Once you hit the fence, stop drawing."
+    ],
+    [
+      "Follower",
+      "Wait, you said to go down from the lake to the fence, but the finish is way up at the top! I can't draw a line down past the finish if the finish is above the lake. The only way to get to the finish is to go up from the lake. Is there a different finish on your map? Or are we talking about a different map entirely? I don't see a finish below the lake. Should I just draw the line from the lake up to the finish again?"
+    ],
+    [
+      "Giver",
+      "Wait, stop. You're confusing the locations. The finish is the cross above the picket fence, not below it. You need to draw the line from the finish down to the picket fence. I'm not talking about going up to the finish yet, I'm talking about going down from it. Do you see the cross? Draw a line straight down from that cross to the fence below it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to draw a line straight down from the cross above the fence to the fence below it. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Good, keep going down past the fence, turn right and go up to the yacht club on the right, then turn left and come back down to the allotments. Once you hit the van on the left, turn left and go up to the picket fence. Now turn right and go up past it to the finish. Can you draw that final bit?"
+    ],
+    [
+      "Follower",
+      "Wait, hold on. You said to keep going down past the fence, but the finish is right above the fence! If I go down from the finish, I'm going away from it. And if I go up to the finish, I'm not going down past the fence first. Are we talking about two different finishes? One above the fence and one below? I can only see one cross above the fence. If I draw a line up to the cross, I've hit the finish. But then I can't go down to the fence. And if I go down to the fence, I haven't reached the finish yet. I'm confused. Should I just draw a line up to the finish and stop, ignoring the fence part? Or do you mean I should go down to the fence first, then draw a separate line up to the finish later? I don't know where to draw this next bit."
+    ],
+    [
+      "Giver",
+      "Stop trying to do two separate lines. There is only one finish, the cross above the fence. Just draw a straight line from that cross down to the fence below it. That is it for this bit."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to draw a straight line from the cross down to the fence below it now. Drawing that."
+    ],
+    [
+      "Giver",
+      "Good, that's the right bit done. Now you need to find the disused monastery on your map and draw a line from the alpine garden up to it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm looking for the alpine garden and the monastery on my map. I can see the alpine garden on the left side, roughly in the middle. But I don't see a disused monastery anywhere near it, just empty space. Do you think the monastery might be near the flight museum or the telephone box instead?"
+    ],
+    [
+      "Giver",
+      "No, the monastery is just a bit above the alpine garden, right there in the empty space. You missed it. Go up from the garden to find the monastery, then turn right to go to the east lake, turn left, and keep going down to the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm looking for the alpine garden on the left side... I see it there. And just above it in the empty space, I'm going to draw the line up to find the monastery. Then from there, I'll turn right to go to the east lake. From the lake, I'll turn left and draw a line down to the finish. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Wait, stop drawing that line again. You can't just draw it up to the monastery if you haven't come from the yacht club first. The route has to go down from the alpine garden to the bottom edge, turn right to the yacht club, then turn left and go up past the alpine garden again, then right to the east lake, turn left and go down past the finish to the picket fence, and only then can you draw up to the monastery. Okay, forget the monastery for a second. Just draw the line from the yacht club up to the alpine garden, then right to the lake, left, and down to the finish. Stop when you hit the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'll try that again. I'll start at the yacht club, go up to the alpine garden, then right to the lake, left, and down to the finish. Stop when I hit the cross. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Stop, you're going the wrong way again. You need to go up from the yacht club to the alpine garden, then right to the east lake, turn left and go down past the finish to the picket fence, and only then can you draw up to the monastery. Wait, no, let's forget the monastery for a second. Just draw the line from the yacht club up to the alpine garden, then right to the lake, left, and down to the finish. Stop when you hit the cross."
+    ],
+    [
+      "Follower",
+      "Wait, you're going in circles. The instructions keep changing. You said to go from the yacht club up to the alpine garden, then right to the lake, then left down to the finish, but now you're saying I need to go up to the monastery first? Which one do I do first, the alpine garden or the monastery? And if I go from the yacht club to the alpine garden, isn't that going the wrong way? The alpine garden is below the monastery on my map. If I go up from the club, I hit the monastery first, not the garden. So how do I get from the yacht club to the alpine garden without passing the monastery? Do I have to go past the monastery and then come back down to the garden? That seems impossible since the garden is right there below it. I'm totally lost. Can you just give me a simple, straight route from the start to the finish without all these extra steps? I just need to draw one line from the start to the finish. Please, just tell me where to start and where to end."
+    ],
+    [
+      "Giver",
+      "Just draw a straight line from the camera shop at the start, down to the bottom edge, then across to the van on the left, then up past it to the flight museum, down to the telephone box, right to the youth hostel, left down to the alpine garden, up past it to the monastery on your left, right to the east lake, turn left and go straight down to the finish. That is the only route. Do not go anywhere else. Can you draw it now?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting fresh at the camera shop. I'll draw a line straight down to the bottom edge, turn right and go across until I hit the van on the left. Once I'm past it, I'll turn left and go up to the flight museum on the right. Then down past the museum to the telephone box on the left, turn right to the youth hostel on the right, then left down to the alpine garden. From there, up past it to the monastery on the left, right to the east lake on the right, turn left and go straight down to the finish. Okay, drawing that now."
+    ],
+    [
+      "Giver",
+      "Stop drawing that loop. You're going way off track. Just draw the line from the camera shop straight down to the bottom edge, then turn right and go across until you hit the van on your left. Once you are past the van, turn left and go up to the flight museum on your right. From the museum, go down to the telephone box on your left, then turn right to the youth hostel on your right. Now turn left and go down to the alpine garden. Go up from the garden to the monastery on your left, then turn right to the east lake on your right, turn left, and go straight down to the finish. Can you do that now?"
+    ],
+    [
+      "Follower",
+      "Okay, I'll try that again. I'll start from the camera shop and go straight down to the bottom edge, then turn right and go across until I hit the van on my left. Once I'm past it, I'll turn left and go up to the flight museum on your right. From the museum, I'll go down to the telephone box on your left, then turn right to the youth hostel on your right. Now I'll turn left and go down to the alpine garden. Then up past it to the monastery on your left, then right to the east lake on your right, turn left, and go straight down to the finish. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Stop. You're going in circles. Just draw the line from the camera shop down to the bottom edge, turn right, hit the van on the left, turn left, go up to the flight museum, down to the telephone box, right to the youth hostel, left to the alpine garden, up to the monastery on the left, right to the east lake, turn left, and go straight down to the finish. That is the only way. Draw it now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to stop drawing that loop now. I'll start fresh from the camera shop, go down to the bottom edge, turn right, hit the van on the left, turn left, go up to the flight museum, down to the telephone box, right to the youth hostel, left to the alpine garden, up to the monastery on the left, right to the east lake, turn left, and go straight down to the finish. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Keep going. Draw a line from the camera shop straight down to the bottom edge, then turn right and go across to the van on the left, then turn left and go up past it to the flight museum, down to the telephone box, right to the youth hostel, left down to the alpine garden, up past it to the monastery, right to the east lake, turn left, and go straight down to the finish. Do not draw any extra loops. Just draw that path once."
+    ],
+    [
+      "Follower",
+      "Okay, I'll stop drawing now. I'm just going to draw a straight line from the camera shop down to the bottom edge, then turn right and go across until I hit the van on the left. Once I'm past it, I'll turn left and go up to the flight museum. Then down to the telephone box, right to the youth hostel, left down to the alpine garden, up to the monastery on the left, right to the east lake, turn left, and go straight down to the finish. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Hold on, stop drawing. You keep going in circles and drawing the whole route over and over. Just draw the line from the camera shop straight down to the bottom edge, then turn right and go across until you hit the van on the left, then turn left and go up past it to the flight museum, down to the telephone box, right to the youth hostel, left down to the alpine garden, up past it to the monastery on the left, right to the east lake, turn left, and go straight down to the finish. Do not draw any extra loops. Just draw that path once. Can you do it?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to try that one last time. I'll draw the whole route from start to finish without any loops. Starting at the camera shop, down to the bottom edge, right to the van, left up to the museum, down to the telephone box, right to the youth hostel, left down to the garden, up to the monastery, right to the lake, left, and straight down to the finish. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Stop drawing. You keep saying you'll draw it but you haven't drawn the line yet. Just draw the single straight path I told you. Don't wait for the monastery to \"appear\" or anything. Just go down from the shop, up past the van, and follow the rest of the way to the finish. Draw it now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to stop waiting and just draw the line. Starting at the camera shop, down to the bottom, right to the van, left up to the museum, down to the telephone box, right to the hostel, left down to the garden, up to the monastery, right to the lake, left, and straight down to the finish. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Keep drawing. Don't stop. Just keep going from the garden up to the monastery, then right to the lake, left, and straight down to the finish. You are doing it. Finish it now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the whole line now. Starting at the camera shop down to the bottom, right to the van, left up past it to the museum, down to the telephone box, right to the hostel, left down to the garden, up past it to the monastery, right to the lake, left, and straight down to the finish."
+    ],
+    [
+      "Giver",
+      "Keep drawing. Don't stop until you hit the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I see the garden, I'm going up to the monastery, then right to the lake, left, and straight down to the finish. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Keep drawing straight down from the lake to the finish, don't go left to the monastery first, just draw down to the finish now."
+    ],
+    [
+      "Follower",
+      "Wait, you said to go straight down from the lake to the finish, but if I go straight down I'll hit the picket fence on the left first. The finish is above the fence, so I can't reach it without passing the fence. Did you mean to skip the fence? Or do I just draw a line that goes past the fence and ends at the finish? I'm confused again."
+    ],
+    [
+      "Giver",
+      "Don't worry about the fence, just draw a line straight down from the lake to the finish and stop there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a straight line down from the lake to the finish now."
+    ],
+    [
+      "Giver",
+      "Okay, I'll draw a straight line down from the lake to the finish and stop there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line straight down from the lake to the finish now."
+    ],
+    [
+      "Giver",
+      "Wait, stop! You are drawing the line wrong. You can't just draw a line from the lake to the finish without going past the fence first. You need to go left from the lake, down past the fence, and then turn up to the finish. Draw it now."
+    ],
+    [
+      "Follower",
+      "Wait, stop! I'm confused again. You said to go straight down from the lake to the finish, but if I do that, I hit the picket fence on the left first. The finish is above the fence. So I have to go left from the lake to the fence, then up to the finish? Or just draw a line that skips the fence? I don't know where the finish actually is relative to the fence on my map. Should I just draw a line from the lake down to the fence and stop there?"
+    ],
+    [
+      "Giver",
+      "Just draw a line from the lake straight down to the cross above it. Don't worry about the fence on the left, ignore it completely. Just go straight down to the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to draw a straight line from the lake straight down to the cross and stop there, ignoring the fence. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Okay, just draw it. Don't think about the fence at all. Just go from the lake straight down to the cross above it. That is the finish. Stop drawing now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm just drawing a straight line from the lake straight down to the cross and stopping there."
+    ],
+    [
+      "Giver",
+      "Good, that's it. You have reached the finish. Stop drawing."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a straight line from the lake straight down to the cross above it and stopping there, ignoring the fence."
+    ],
+    [
+      "Giver",
+      "Good, that's perfect. Stop drawing now. You've reached the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line straight down from the lake to the cross and stopping there."
+    ],
+    [
+      "Giver",
+      "Good, that's it. You have reached the finish. Stop drawing now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the straight line from the lake down to the cross now."
+    ],
+    [
+      "Giver",
+      "Stop drawing, you're doing it again. Just draw a straight line down from the lake to the cross above it and stop."
+    ],
+    [
+      "Follower",
+      "Wait, stop. You keep telling me to draw a straight line down to the cross, but on my map, the cross is way up near the top and the lake is above it. I can't draw down from the lake to the cross because the cross isn't below the lake on my map. I don't see a cross down there at all. Is the finish maybe near the picket fence like you said earlier? I don't see any cross there either. I'm lost again. I think we might have different maps."
+    ],
+    [
+      "Giver",
+      "Wait, stop. You're confusing the locations again. The cross is the finish, it's right above the picket fence on your map. If you can't see it, then we must be looking at completely different maps and this task isn't possible. I can't give you directions for a place I can't find on your map."
+    ],
+    [
+      "Follower",
+      "I don't see the cross near the lake either. I just see the lake and the fence to the left, but no cross above them. It really looks like we have completely different maps. This task isn't possible. I give up."
+    ],
+    [
+      "Giver",
+      "I don't believe you. The finish is right there on my map above the fence. If you can't see it, you must have the wrong map. I am ending the call now."
+    ],
+    [
+      "Follower",
+      "I don't see the cross above the fence on my map at all, just empty space. It looks like we definitely have different maps. I give up."
+    ],
+    [
+      "Giver",
+      "I'm hanging up now, I don't believe you."
+    ],
+    [
+      "Follower",
+      "I don't see the cross above the fence on my map at all, just empty space. It looks like we definitely have different maps. I give up."
+    ],
+    [
+      "Giver",
+      "Right, look at the picket fence on the left of your map. Draw a straight line up from the top of that fence to the cross directly above it. That is the finish on my map. Stop drawing once you reach the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a straight line up from the top of the picket fence to the cross above it. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Good, keep going up from that cross to the east lake on your right, turn left, and come straight down past the disused monastery to the alpine garden. Then turn right and go down to the yacht club at the bottom right. From there, turn left and come all the way up past the alpine garden again to the flight museum on your right. Now go down from the museum to the telephone box on your left, turn right to the youth hostel on your right, turn left down to the alpine garden once more, go up past it to the monastery, turn right to the east lake, turn left, and finally go straight down past the picket fence to the finish. Can you draw that whole route now?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting fresh at the bottom near the picket fence and going up to the finish, then up past the finish to the east lake, turn left and down to the monastery, up past it to the museum, down to the telephone box, right to the youth hostel, left down to the alpine garden, up past it to the monastery again, right to the east lake, left, and down past the fence to the finish. Drawing that now."
+    ],
+    [
+      "Giver",
+      "Stop! You keep drawing that loop again. That's it. Just draw the line from the camera shop straight down to the bottom, turn right, hit the van on the left, turn left, go up to the museum, down to the telephone box, right to the hostel, left to the garden, up to the monastery, right to the lake, turn left, and go straight down to the finish. Draw it now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to stop drawing that loop again. I'll start fresh from the camera shop, go down to the bottom edge, turn right to the van, left up to the museum, down to the telephone box, right to the hostel, left down to the garden, up to the monastery, right to the lake, turn left, and go straight down to the finish. Drawing that now."
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

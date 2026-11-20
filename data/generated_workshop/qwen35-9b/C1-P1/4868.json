@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 798991128,
+  "conversation_no": 4868,
+  "topic": "Family Finance",
+  "sb_prompt": "DOES YOUR FAMILY KEEP A MONTHLY BUDGETCAN YOU GIVE A GENERAL DESCRIPTION OF YOUR PROCEDURES",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "a dental hygienist",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 56,
+    "education": "some college",
+    "occupation": "a farmer",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Hi there, I didn't realize I'd get a call like this. Who am I talking to?\nParticipantA: Just Mike. Dental hygienist. And you?\nParticipantB: Sarah. I'm a farmer, out near the valley.\nParticipantA: Oh, that's nice. So, the question was... does your family keep a monthly budget?\nParticipantB: Yeah, we do, kind of. More like a rolling list, honestly.\nParticipantA: A rolling list? That sounds rough if things go wrong.\nParticipantB: It's not rough, it's just... life happens. My cousin lost a cow last winter, and suddenly the budget had to bend.\nParticipantA: Right, I get that. We're the same age, right?\nParticipantB: Yeah, just turned fifty-six a couple months back.\nParticipantA: Me too. I'm in the same boat, actually. I keep a budget, but I never really figured out why.\nParticipantB: That's interesting. Usually people say they do it to save, but you?\nParticipantA: I guess I just feel safer with it. Like, if I know exactly where every cent goes, I can't get shocked.\nParticipantB: That makes sense. But I feel like it stifles things sometimes. Like, can't you just buy the good eggs today and worry about it tomorrow?\nParticipantA: Yeah, but then you're worried all day. I think knowing the numbers helps me sleep at night, even if I don't use the money for that.\nParticipantB: Hmm. My dad always said that kind of thinking is for people who are afraid.\nParticipantA: Afraid? Of what?\nParticipantB: Of the unknown. He's got a friend who's got the house paid off and just throws money at repairs as they come up. No spreadsheets.\nParticipantA: Really? That's a bold move.\nParticipantB: Sure, it's risky. But he says the stress of tracking every nickel kills more than the money ever does.\nParticipantA: I never thought about it that way. Maybe I'm just being a stick-in-the-mud.\nParticipantB: Nah, I think you're just cautious. My cousin's budget is a mess, but he's happy. Yours seems tight, but you're calm.\nParticipantA: Maybe you're right. I think I just liked the control, and now I'm wondering if I lost something by holding onto it.\nParticipantB: You never lose anything, you just trade off things. Maybe you traded some peace of mind for some peace of paper.\nParticipantA: That's a good way to put it. I guess I'll try loosening the reins a little.\nParticipantB: Good idea. Don't let the budget run your life, let the life run the budget.\nParticipantA: Fair enough. Thanks for talking, Sarah.\nParticipantB: You too, Mike. Good luck out there.\nParticipantA: Goodbye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 656,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

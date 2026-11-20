@@ -1,0 +1,215 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m10",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 3153775206,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Okay, start drawing from the cross.\nFollower: Got it, starting now.\nGiver: Go straight down towards the diamond mine.\nFollower: Okay, heading down.\nGiver: Don't go all the way to the mine yet. Stop halfway.\nFollower: Halfway there.\nGiver: Now turn left, towards the highest viewpoint.\nFollower: Turning left.\nGiver: Don't touch the viewpoint. Aim for the space just past it.\nFollower: Aiming for the space. Okay, turning left.\nGiver: Now go down towards the springboks.\nFollower: Going down.\nGiver: Stop before you hit them. Go a bit further down past them.\nFollower: Okay, past them. Now turn left.\nGiver: Left again, aiming for the safari truck.\nFollower: Heading for the truck.\nGiver: Don't hit the truck. Go past it, then turn right.\nFollower: Okay, past the truck. Turning right.\nGiver: Now go down towards the field station.\nFollower: Going down.\nGiver: Stop near the field station. Turn left.\nFollower: Near the station. Left.\nGiver: Keep going left until you see a banana tree.\nFollower: Okay, left. Saw the banana tree.\nGiver: Don't touch the tree. Go a bit further down, then turn right.\nFollower: Okay, further down. Right.\nGiver: Now head down towards the gold mine.\nFollower: Heading down.\nGiver: Don't go to the mine. Go past it, then turn left.\nFollower: Okay, past the mine. Left.\nGiver: Go down towards the rope bridge.\nFollower: Going down.\nGiver: Stop near the bridge. Turn right.\nFollower: Near the bridge. Right.\nGiver: Keep going right until you see the giraffes.\nFollower: Okay, right. Saw the giraffes.\nGiver: Don't touch them. Go a bit further right, then turn down.\nFollower: Okay, further right. Turning down.\nGiver: Go down past the giraffes towards the great lake.\nFollower: Going down.\nGiver: Stop before the lake. Turn left.\nFollower: Before the lake. Left.\nGiver: Go all the way down to the finish line.\nFollower: Okay, going down.\nGiver: There you go, that's the finish.\nFollower: Done.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Okay, start drawing from the cross."
+    ],
+    [
+      "Follower",
+      "Got it, starting now."
+    ],
+    [
+      "Giver",
+      "Go straight down towards the diamond mine."
+    ],
+    [
+      "Follower",
+      "Okay, heading down."
+    ],
+    [
+      "Giver",
+      "Don't go all the way to the mine yet. Stop halfway."
+    ],
+    [
+      "Follower",
+      "Halfway there."
+    ],
+    [
+      "Giver",
+      "Now turn left, towards the highest viewpoint."
+    ],
+    [
+      "Follower",
+      "Turning left."
+    ],
+    [
+      "Giver",
+      "Don't touch the viewpoint. Aim for the space just past it."
+    ],
+    [
+      "Follower",
+      "Aiming for the space. Okay, turning left."
+    ],
+    [
+      "Giver",
+      "Now go down towards the springboks."
+    ],
+    [
+      "Follower",
+      "Going down."
+    ],
+    [
+      "Giver",
+      "Stop before you hit them. Go a bit further down past them."
+    ],
+    [
+      "Follower",
+      "Okay, past them. Now turn left."
+    ],
+    [
+      "Giver",
+      "Left again, aiming for the safari truck."
+    ],
+    [
+      "Follower",
+      "Heading for the truck."
+    ],
+    [
+      "Giver",
+      "Don't hit the truck. Go past it, then turn right."
+    ],
+    [
+      "Follower",
+      "Okay, past the truck. Turning right."
+    ],
+    [
+      "Giver",
+      "Now go down towards the field station."
+    ],
+    [
+      "Follower",
+      "Going down."
+    ],
+    [
+      "Giver",
+      "Stop near the field station. Turn left."
+    ],
+    [
+      "Follower",
+      "Near the station. Left."
+    ],
+    [
+      "Giver",
+      "Keep going left until you see a banana tree."
+    ],
+    [
+      "Follower",
+      "Okay, left. Saw the banana tree."
+    ],
+    [
+      "Giver",
+      "Don't touch the tree. Go a bit further down, then turn right."
+    ],
+    [
+      "Follower",
+      "Okay, further down. Right."
+    ],
+    [
+      "Giver",
+      "Now head down towards the gold mine."
+    ],
+    [
+      "Follower",
+      "Heading down."
+    ],
+    [
+      "Giver",
+      "Don't go to the mine. Go past it, then turn left."
+    ],
+    [
+      "Follower",
+      "Okay, past the mine. Left."
+    ],
+    [
+      "Giver",
+      "Go down towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Going down."
+    ],
+    [
+      "Giver",
+      "Stop near the bridge. Turn right."
+    ],
+    [
+      "Follower",
+      "Near the bridge. Right."
+    ],
+    [
+      "Giver",
+      "Keep going right until you see the giraffes."
+    ],
+    [
+      "Follower",
+      "Okay, right. Saw the giraffes."
+    ],
+    [
+      "Giver",
+      "Don't touch them. Go a bit further right, then turn down."
+    ],
+    [
+      "Follower",
+      "Okay, further right. Turning down."
+    ],
+    [
+      "Giver",
+      "Go down past the giraffes towards the great lake."
+    ],
+    [
+      "Follower",
+      "Going down."
+    ],
+    [
+      "Giver",
+      "Stop before the lake. Turn left."
+    ],
+    [
+      "Follower",
+      "Before the lake. Left."
+    ],
+    [
+      "Giver",
+      "Go all the way down to the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, going down."
+    ],
+    [
+      "Giver",
+      "There you go, that's the finish."
+    ],
+    [
+      "Follower",
+      "Done."
+    ]
+  ],
+  "n_turns": 46,
+  "ended_by": "single_generation"
+}

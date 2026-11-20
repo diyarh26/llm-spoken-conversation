@@ -1,0 +1,225 @@
+{
+  "condition": "C2-P3",
+  "architecture": "C2",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 3186,
+  "topic": "Restaurants",
+  "sb_prompt": "WHAT KIND OF DINING OUT DO YOU ENJOY? WHAT THINGS DO YOU LOOK FOR IN A RESTAURANT THAT WOULD GET YOU TO GO BACK AGAIN?  SEE WHETHER THE OTHER CALLER'S PREFERENCES ARE SIMILAR TO YOURS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 58,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "an insurance adjuster",
+    "stance": 2,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm actually pretty skeptical about all the hype these days, honestly. It's just not like what it used to be for us regular folks."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I totally get that. When I first started out as an adjuster, I thought every place was some high-end spot too, but looking back, I realized I probably just missed out on the real food places anyway."
+    ],
+    [
+      "ParticipantA",
+      "That's fair, though I think it's just that most places now are all about the show and not the food. Like that diner down on 4th, I've been there maybe a dozen times and the meatloaf is still the best thing I ever ate."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I've got that feeling too. Like, the best place I ever ate was this tiny spot in the suburbs nobody's heard of. Just simple stuff, really. No fancy menu, just a guy making great steaks and grilled cheese. I actually went there last week and didn't tell anyone."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the thing, you never have to worry about wasting your lunch break on some overpriced salad just to look like you're trying."
+    ],
+    [
+      "ParticipantB",
+      "Right, exactly. It's about getting full on thirty bucks and not having to act like anything."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's what I'm saying."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's a total relief to just sit back and eat without feeling like you're performing."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the best part, nobody's waiting on you to check your watch."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, exactly, nobody's making you feel small just because you're eating with a hammer on your wrist."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, nothing says dining out like a good slice of pie and no one asking you about your credit score."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I remember one time I sat there and the waiter kept asking if I needed more water even though I'd just finished a glass."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's just annoying when they act like you're some stranger in a fancy suit instead of a regular guy."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, plus nobody cares if you just want a sandwich and a beer without worrying about what they think you're ordering."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'm pretty much the same. I'll just grab a burger and a coke and not worry about what they think of me."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's the only way to do it, keep it simple."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, me too, I usually just head down to the old place on Elm and hit the same burger spot every time."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's where I usually head when I just want something quick and honest."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that place is pretty much the same for me."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, same thing, just a good burger and a cold drink, that's all I need."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think that's about it for me."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds perfect."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, same here, just a simple meal is best."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds perfect."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess I'll head out now, thanks for listening."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, no problem, talk soon."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, you too, have a good one."
+    ]
+  ],
+  "n_turns": 29,
+  "seed_turns": 2,
+  "ended_by": "mutual_closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  },
+  "conversation_seed": 1530858521,
+  "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+  "run": {
+    "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+    "identity": {
+      "condition": "C2-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+    "created_utc": "2026-11-17T10:53:33.359476+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

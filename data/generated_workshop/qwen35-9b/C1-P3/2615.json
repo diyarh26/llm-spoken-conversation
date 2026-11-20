@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3778863429,
+  "conversation_no": 2615,
+  "topic": "Auto Repairs",
+  "sb_prompt": "WHAT WAS THE LAST AUTO REPAIR YOU PERFORMED OR HAD DONE ON YOUR CAR? ARE THERE SOME TYPES OF REPAIRS OR MAINTENANCE TASKS YOU PREFER TO DO YOURSELF?  DISCUSS YOUR EXPERIENCES IN THIS AREA WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 50,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Yeah, hi. How's it going?\nParticipantA: Pretty good, actually. Just thinking about cars a lot lately.\nParticipantB: Oh, really? Why's that?\nParticipantA: It's weird, I don't know. I just made up my mind years ago that I'd handle my own stuff, but I can't really say why.\nParticipantB: Hmm, that makes sense. I'm in the same boat. I'm an accountant, so numbers are my thing, but I love working on cars.\nParticipantA: That's cool. What was the last thing you fixed or had done?\nParticipantB: My brakes squeaked like crazy, so I got them replaced. Had to do it last month.\nParticipantA: Oh, brakes are no fun. Did you do that yourself?\nParticipantB: No, definitely not. I tried to, but I stripped a bolt and panicked. Had a local mechanic do it.\nParticipantA: Yeah, I get that. For me, I've been swapping out air filters and checking tires for years.\nParticipantB: Oh, you do your own oil changes?\nParticipantA: Yeah, mostly. I bought the kit and the shop vac for the old oil. It's just satisfying, you know?\nParticipantB: Totally. There's something about seeing the fluid come out that feels like a win.\nParticipantA: Exactly. It makes me feel like I'm not just a passenger. Does your work keep you from wanting to tinker more?\nParticipantB: Sometimes. Tax season is a nightmare, so I can't always get under the hood. But when I do, I stick to simple stuff.\nParticipantA: I agree. I wouldn't try to fix the transmission myself. Too scary.\nParticipantB: Agreed. Transmissions are for pros. What about tires? You said you check them.\nParticipantA: Yeah, I rotate them every 5,000 miles. I use a jack and a cross-pattern. Takes me maybe twenty minutes.\nParticipantB: That's impressive. I'll never live that long or have the patience for that.\nParticipantA: Nah, it's just the feeling of knowing exactly where my car is. Also, it saves me twenty bucks.\nParticipantB: Good point. Saving money is a huge motivator for me too, honestly.\nParticipantA: Yeah, plus knowing the mechanic won't try to nickel-and-dime me.\nParticipantB: Exactly. Trust is hard to build sometimes. Have you ever had a bad experience at a shop?\nParticipantA: Actually, yes. My suspension got messed up once, and they charged me three times what it should have cost.\nParticipantB: Ouch. That's frustrating. Why do you think that happens?\nParticipantA: I guess they think we don't know enough to argue, or they just want the big ticket.\nParticipantB: Yeah, that happens. I always get three quotes before I call anyone. Never hurts to shop around.\nParticipantA: Smart. I'm starting to do that too, even for small stuff.\nParticipantB: Good idea. If you're unsure, just ask for the parts list. If they won't show you, run.\nParticipantA: True. I learned that lesson the hard way. Anyway, I think I'm good for now.\nParticipantB: Me too. Thanks for talking about this. It was nice to hear.\nParticipantA: You too. Good luck with the taxes next year!\nParticipantB: Will do. Bye!\nParticipantA: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 770,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

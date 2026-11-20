@@ -1,0 +1,151 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m2",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1743051049,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Hi, I'm starting at the cross. Can you see your start too?\nFollower: Yeah, I see the cross at the bottom left.\nGiver: Okay, go up a little, past the wagon wheel. Keep it to the left of that wheel.\nFollower: Okay, I'm heading up. There's a mine on my left. Are you past the wheel?\nGiver: Yes, I'm past it. Now turn right, towards the open space. Go about halfway there.\nFollower: Okay, turning right. I see a diamond mine on my left. Are you going left of the mine?\nGiver: Yes, keep the mine on your left. Now go down towards the rocks.\nFollower: Okay, heading down. I see rocks at the bottom.\nGiver: Stop there. I need you to go back up, past the rocks, towards the white water.\nFollower: Wait, I see rapids instead of white water. Is that the same place?\nGiver: Yeah, that's it. Go up to the rapids. Then turn right, towards the outlaws' hideout.\nFollower: Okay, turning right. I see the outlaws' hideout. Are you going left of it?\nGiver: Yes, keep the hideout on your left. Now go down a bit, then turn left towards the stone slabs.\nFollower: Okay, heading left. I see the stone slabs.\nGiver: Go past the slabs. Now turn right, towards the stone creek.\nFollower: Okay, turning right. I see the stone creek.\nGiver: Keep the creek on your right. Go up, past the swamp.\nFollower: Wait, I don't see a swamp on my map. Is there one?\nGiver: Oh, maybe it's hidden. Just go up straight. Then turn right, towards the noose.\nFollower: Okay, turning right. I see the noose.\nGiver: Keep the noose on your right. Go up, past the noose. Then turn left, towards the swan pond.\nFollower: Okay, turning left. I see a swan pond!\nGiver: Yes, keep the swan pond on your left. Now go down, past the saloon bar.\nFollower: Okay, I see the saloon bar.\nGiver: Keep the bar on your right. Go up to the finish line.\nFollower: Okay, heading up. Is that the finish?\nGiver: Yes! You made it.\nFollower: Great, I've drawn the line all the way to the finish.\nGiver: Perfect. Good job.\nFollower: Thanks!",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi, I'm starting at the cross. Can you see your start too?"
+    ],
+    [
+      "Follower",
+      "Yeah, I see the cross at the bottom left."
+    ],
+    [
+      "Giver",
+      "Okay, go up a little, past the wagon wheel. Keep it to the left of that wheel."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up. There's a mine on my left. Are you past the wheel?"
+    ],
+    [
+      "Giver",
+      "Yes, I'm past it. Now turn right, towards the open space. Go about halfway there."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. I see a diamond mine on my left. Are you going left of the mine?"
+    ],
+    [
+      "Giver",
+      "Yes, keep the mine on your left. Now go down towards the rocks."
+    ],
+    [
+      "Follower",
+      "Okay, heading down. I see rocks at the bottom."
+    ],
+    [
+      "Giver",
+      "Stop there. I need you to go back up, past the rocks, towards the white water."
+    ],
+    [
+      "Follower",
+      "Wait, I see rapids instead of white water. Is that the same place?"
+    ],
+    [
+      "Giver",
+      "Yeah, that's it. Go up to the rapids. Then turn right, towards the outlaws' hideout."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. I see the outlaws' hideout. Are you going left of it?"
+    ],
+    [
+      "Giver",
+      "Yes, keep the hideout on your left. Now go down a bit, then turn left towards the stone slabs."
+    ],
+    [
+      "Follower",
+      "Okay, heading left. I see the stone slabs."
+    ],
+    [
+      "Giver",
+      "Go past the slabs. Now turn right, towards the stone creek."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. I see the stone creek."
+    ],
+    [
+      "Giver",
+      "Keep the creek on your right. Go up, past the swamp."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see a swamp on my map. Is there one?"
+    ],
+    [
+      "Giver",
+      "Oh, maybe it's hidden. Just go up straight. Then turn right, towards the noose."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. I see the noose."
+    ],
+    [
+      "Giver",
+      "Keep the noose on your right. Go up, past the noose. Then turn left, towards the swan pond."
+    ],
+    [
+      "Follower",
+      "Okay, turning left. I see a swan pond!"
+    ],
+    [
+      "Giver",
+      "Yes, keep the swan pond on your left. Now go down, past the saloon bar."
+    ],
+    [
+      "Follower",
+      "Okay, I see the saloon bar."
+    ],
+    [
+      "Giver",
+      "Keep the bar on your right. Go up to the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, heading up. Is that the finish?"
+    ],
+    [
+      "Giver",
+      "Yes! You made it."
+    ],
+    [
+      "Follower",
+      "Great, I've drawn the line all the way to the finish."
+    ],
+    [
+      "Giver",
+      "Perfect. Good job."
+    ],
+    [
+      "Follower",
+      "Thanks!"
+    ]
+  ],
+  "n_turns": 30,
+  "ended_by": "single_generation"
+}

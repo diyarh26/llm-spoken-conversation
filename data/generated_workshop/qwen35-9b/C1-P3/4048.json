@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1353927880,
+  "conversation_no": 4048,
+  "topic": "Drug Testing",
+  "sb_prompt": "HOW DO YOU FEEL ABOUT THE PRACTICE OF SOME COMPANIES OR GOVERNMENT AGENCIES TESTING EMPLOYEES OR PROSPECTIVE EMPLOYEES FOR DRUGS?  IS RANDOM SPOT TESTING JUSTIFIED?  WHAT LIMITS SHOULD THERE BE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 28,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 40,
+    "education": "a college degree",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hi there, how's it going?\nParticipantA: Pretty good, just finishing up some numbers. What about you?\nParticipantB: I'm okay, teaching a double period right now. So, you were supposed to call about drug testing?\nParticipantA: Yeah, the whole thing. Random spot checks at work or for jobs.\nParticipantB: Oh, that brings up a lot. I actually think it's justified a lot of the time.\nParticipantA: Really? I'm actually pretty skeptical about it. Been thinking about it for years, honestly.\nParticipantB: Yeah? What's your main worry?\nParticipantA: Just feels like it's an invasion of privacy. Like, you can't really force someone to open up their body like that.\nParticipantB: I get that, but have you considered that some jobs are just too dangerous to risk?\nParticipantA: True, but does random testing really catch the people who are actually using?\nParticipantB: It catches a lot, but my brother-in-law told me a story that really changed how I see it.\nParticipantA: Oh? What happened with him?\nParticipantB: He works in construction, and they do random tests. He got caught once, had to take time off, but he's been clean ever since.\nParticipantA: Hmm, that's interesting. I've never seen that happen. It feels like it might make people actually stop.\nParticipantB: Exactly. It creates that accountability. Plus, it shows the company they care about safety.\nParticipantA: I guess I haven't thought about it from that angle. Safety is important, I'll grant you that.\nParticipantB: Right? And if we didn't test, accidents could happen. People could get hurt.\nParticipantA: Yeah, that makes sense. Maybe I'm just too used to thinking about privacy above everything else.\nParticipantB: Fair enough. But what kind of limits would you actually be okay with?\nParticipantA: Well, I wouldn't mind it for jobs where safety is key, like driving or heavy machinery.\nParticipantB: Okay, that sounds reasonable. What about office jobs, like accounting?\nParticipantA: For sure, not for me. I feel like that's a step too far for a desk job.\nParticipantB: I see. I guess I'd probably draw the line there too. Maybe just for high-risk roles?\nParticipantA: Yeah, maybe. It seems like a weird mismatch otherwise. Why do you feel so strongly about it?\nParticipantB: Honestly, because I've seen what happens when there are no consequences. People just get sloppy.\nParticipantA: That's a scary thought. I suppose if I were in a position of responsibility, I'd want to know.\nParticipantB: It's about trust, really. You want to trust them not to put others at risk.\nParticipantA: I guess I can get behind that. Just hate the random part, though. Feels like a roll of the dice.\nParticipantB: It is a bit of a gamble, but the stakes are worth it. What if the tests were positive, would they fire you?\nParticipantA: That's the thing... I don't know. I guess that depends on whether they offer rehab or just fire you.\nParticipantB: Ideally, they offer a chance to get help first. Like my brother-in-law got.\nParticipantA: That would make a big difference. If there's a path to fixing it, maybe it's less scary.\nParticipantB: Yeah, exactly. Punitive vs. corrective makes a huge difference.\nParticipantA: Okay, I think I have a slightly different view now. Maybe not totally changed, but less skeptical.\nParticipantB: That's good. Glad we talked about it.\nParticipantA: Yeah, same here. Thanks for your time.\nParticipantB: No problem. Take care.\nParticipantA: You too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 839,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

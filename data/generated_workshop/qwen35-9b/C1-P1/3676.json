@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 4168480543,
+  "conversation_no": 3676,
+  "topic": "Movies",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THOUGHT ABOUT THE LAST FEW MOVIES THEY SAW. WHAT MOVIES HAVE YOU SEEN LATELY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hi there! How's your day going?\nParticipantA: Pretty good, just teaching my honors lit class right now. It's wild how much that group cares about the director's cut stuff.\nParticipantB: Oh, really? Same here, my buddy Dave and I just hit up the drive-in last night. He's crazy picky about the sound mixing, though.\nParticipantA: Yeah, it's the same with me. One kid in my class thinks the third act of *Oppenheimer* was totally overrated because it didn't explore the moral ambiguity enough.\nParticipantB: Hah, that sounds like Dave. He said the same thing about *Dune*, actually. He's convinced the pacing killed the tension in the second half.\nParticipantA: I totally get that. I told my students the political subplot dragged a bit, but honestly, the visuals saved it. It's just a matter of what you prioritize, I guess.\nParticipantB: Exactly. For me, if the dialogue isn't snappy, the explosions don't matter. Dave got annoyed by all the exposition in *Avatar*, too.\nParticipantA: That's fair. I'm more of a story-driven person myself. I actually tried to re-watch *The Godfather* last week just to see how the scenes held up.\nParticipantB: Nice! My cousin shows me old classics sometimes. He says the acting in *Pulp Fiction* is what keeps it alive even if the plot is a bit weird.\nParticipantA: True. I love the non-linear structure of that one. It's how you piece it together that makes it work. Did you see anything else recently?\nParticipantB: Yeah, *Barbie*. Everyone talked about it everywhere. Dave thought it was a joke, but I actually liked the commentary on gender roles, even if it was a bit silly.\nParticipantA: Oh, the Barbie movie? I saw that with a group of parents. Everyone was laughing at the jokes, but I found myself thinking about the message too. It's interesting seeing it through different eyes.\nParticipantB: That's what I tell Dave. He thinks it's just a toy commercial, but the deeper stuff got me. Speaking of, any new shows you've been watching?\nParticipantA: Actually, I'm re-reading some classic novels for my summer reading list, so I'm a bit slow on the new releases. But I did watch *The Bear* recently.\nParticipantA: It was intense.\nParticipantB: Oh, I love that show! Dave thinks it's too stressful, but I think the kitchen chaos is the whole point. It feels real.\nParticipantA: Totally. It captures the pressure of high-stakes environments really well. Maybe I'll watch the next one, though I'm not sure if I can handle the stress.\nParticipantB: You should give it a try! It's not as bad as they say. Hey, well, I've got to get back to the shop, Dave is calling about a transmission issue.\nParticipantA: Ah, got it. Good luck with that! It was nice chatting about movies.\nParticipantB: Me too! Bye!\nParticipantA: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 680,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

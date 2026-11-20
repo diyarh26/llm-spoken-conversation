@@ -1,0 +1,372 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m14",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 816907615,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 9,
+    "dup_kept": 4
+  },
+  "turns": [
+    [
+      "Giver",
+      "Start is here, move left to the river, then turn left again. Keep going straight past the river to the carved stones."
+    ],
+    [
+      "Follower",
+      "Yeah, I'm there at the river... wait, turn left? I just turned left! Oh, I see the river on my map, but it's not a landmark, it's just a line. I think I passed it already. Does \"the river\" mean the ditch? I drew a line past the ditch and onto the path. Is that right?"
+    ],
+    [
+      "Giver",
+      "No, that's not the river I mean. The ditch is over there by the gallows. The river is right next to the diamond mine on my map. You need to turn left at the mine, go past the stones on the right, and head toward the graveyard. Keep going past the great rock, then swing left past the gold mine and the trout farm. Continue past the cavalry, heading down toward the cattle stockade. Once you pass the stockade, turn right and head up toward the bandit territory. When you reach the parched river bed, turn left immediately and go straight to the finish line."
+    ],
+    [
+      "Follower",
+      "Wait, you're saying I missed the river? Okay, I'll go back to the diamond mine. Turn left there? Wait, I don't see a river next to the mine, just the mine. Maybe the river is the small ditch running through the stones? No, you said the ditch is by the gallows. I'm totally lost. Do I go left at the mine anyway? Or do I keep going straight past the stones? I drew my line past the stones on the left, but you said keep them on the right. Okay, I'll turn left at the mine, pass the stones on the right... but I don't see a great rock on the right of the stones. I see a ravine there instead. Did you mean the ravine?"
+    ],
+    [
+      "Giver",
+      "No, don't go to the ravine. You have the wrong map features there. On my map, right next to the carved stones, there is a big rock, not a ditch. Look for the great rock immediately to the right of the stones. That's the one. Once you see the great rock, keep going straight. Don't turn yet. Just follow the road past the gold mine which will be on your left side. Keep going until you see the trout farm on your left as well. Then continue past the trout farm and you will see the cavalry on your right."
+    ],
+    [
+      "Follower",
+      "Okay, I see the great rock now, it's definitely there. I'll keep going straight past the gold mine... wait, is the trout farm on my left? No, the trout farm is up here at (45, 46). The gold mine is at (20, 36). They're not close to each other like you said. Where is the trout farm supposed to be? I don't see it anywhere near the gold mine. And I don't see a cavalry on the right either, just open space. Did you move the trout farm and the cavalry? Because on my map, the cavalry is way down at the bottom. I'm confused."
+    ],
+    [
+      "Giver",
+      "Wait, you're looking at the wrong map entirely. The trout farm isn't near the gold mine on my map; it's way further down. After you pass the gold mine, keep going straight for a long time until you reach the cavalry on the right. That's where the farm is."
+    ],
+    [
+      "Follower",
+      "Wait, hold on. You said the cavalry is on the right after the gold mine, but on my map, the cavalry is way down at the bottom, near the cattle stockade. Is the cavalry on my map supposed to be where the trout farm is on yours? Because that's the only thing I see on the right that looks like a farm. I don't see any cavalry units anywhere near the gold mine. Should I just head straight down to the cattle stockade instead?"
+    ],
+    [
+      "Giver",
+      "No, don't head to the stockade yet. Keep going straight past the gold mine until you hit the edge of the map, then turn left and go down to the trout farm. Once you pass the farm, you'll see the cavalry on your right. That is where you need to turn. Do not look for the farm near the mine; it's much further south than that."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going back to the mine and turning left. I'll head past the stones on the right... wait, I see the great rock now. I'll keep going straight past the gold mine. But I don't see a farm on the left yet. I'm going to keep walking until I hit the edge of the map, then turn left and go down. Once I see the farm, I'll turn right to find the cavalry. Okay, moving out."
+    ],
+    [
+      "Giver",
+      "Okay, listen, stop turning left at the mine. That's wrong. You need to go straight past the mine first, then turn left there. Once you do that, look for the trout farm on your left side. It's actually way down near the bottom of your map, not near the mine. Keep going until you see it, then turn right to find the cavalry on your right."
+    ],
+    [
+      "Follower",
+      "Wait, you said \"turn left at the mine\" but then immediately said \"once you pass the farm... turn right to find the cavalry.\" On my map, the cavalry is right there at the bottom, way past the stockade. If I turn left at the mine, I'll never see the farm on the left, I'll just go straight to the bottom edge. Does the farm actually exist on my map near the bottom? Because I only see the trout farm at (45, 46), which is way up high. Are you telling me to ignore the trout farm on my map and pretend there's one down here? And if I turn right to find the cavalry, where exactly do I turn? Right at the edge? Because that's where the cavalry is. Should I just draw a line from the mine straight down to the bottom?"
+    ],
+    [
+      "Giver",
+      "Stop right there. You are drawing a line to the bottom of the map because you missed the farm completely. Look at the bottom left corner of your map, near the cattle stockade, and you will see the bandit territory next to it. That is the only place you should be heading. Do not go straight to the bottom edge; turn right once you pass the stockade so you go up toward the bandit territory."
+    ],
+    [
+      "Follower",
+      "Wait, okay, so you're saying I need to turn right past the stockade? But on my map, if I turn right from the stockade, I'm heading up toward the bandit territory, which is exactly where I want to go. Does that mean the whole bottom part of my map is wrong and I should have been going up this whole time? Because I've been drawing a line all the way down to the bottom edge and then looping back. If I turn right at the stockade, does my line go straight up to the bandit territory immediately? Because I don't see the trout farm or the cavalry anywhere near that spot on my map. I only see the stockade and the bandit land right next to each other. So am I just supposed to connect them directly?"
+    ],
+    [
+      "Giver",
+      "No, listen to me very carefully. You are completely wrong about where to turn. You do not turn at the stockade yet. You turn right at the stockade to go *up* toward the bandit territory, yes, but that is only because you missed a huge chunk of the route earlier. The problem is you went straight down to the bottom edge when you should have kept going up and to the left after the gold mine. You need to retrace your steps. Go back to the gold mine, keep going straight past it to the trout farm on the left, then come back up past the farm, swing right to hit the cavalry on the right, and *then* go down to the stockade. If you just go straight to the bandit territory now, you are skipping the cavalry and the farm entirely. Start over from the gold mine and follow the path I gave you exactly."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to erase everything down to the bottom edge and start over. I'll go back to the gold mine, head straight past it until I see the trout farm on the left, then come back up the same way to the cavalry on the right, and only then head down to the stockade. Sorry about that."
+    ],
+    [
+      "Giver",
+      "Got it, so head straight past the gold mine, keep going left until you see the trout farm, then once you pass it, turn right to find the cavalry, and only after that turn left again to head down toward the stockade."
+    ],
+    [
+      "Follower",
+      "Okay, I'm back at the gold mine now. I'm heading straight left... wait, that's wrong. You said keep going straight past the mine. Okay, I'm moving straight up, not left. I don't see the farm yet, it's way down. I'm heading north past the stones and the rock... actually, I'm passing the trout farm on my left now, it's at (45, 46). Okay, good. Now I pass the farm. Do I turn right now to find the cavalry? Because if I turn right, I'm heading down toward the stockade again, and you said I need to find the cavalry first."
+    ],
+    [
+      "Giver",
+      "No, stop! You just turned right at the farm, but you need to keep going straight past the farm until you see the cavalry on your right side first. Only after you pass the cavalry should you turn left to go down to the stockade. Do not turn yet, keep going up."
+    ],
+    [
+      "Follower",
+      "Wait, you want me to keep going up past the farm? But the cavalry is on the right side of the map all the way down near the bottom. If I keep going up, the cavalry is going to be on my left eventually, not the right. How can I find the cavalry on the right if it's not even on the right half of my map anymore? I think we might be lost. Do you mean the cavalry is somewhere else on my map that I'm not seeing? Because I only see that one cavalry icon way down at the bottom. Should I just keep going up until the edge and then turn left?"
+    ],
+    [
+      "Giver",
+      "Stop, you are confusing left and right again. Look at my map: the cavalry is to the right of the trout farm, but it is way down below, near the bottom edge. You need to go straight past the trout farm, keep going down until you hit the cavalry on your right side, and only then turn left to go down to the stockade."
+    ],
+    [
+      "Follower",
+      "Wait, hold on. You said keep going down until you hit the cavalry on the right, but on my map, the cavalry is way down at the bottom near the stockade. If I keep going down, I'm just going straight to the stockade without seeing the cavalry first. Is the cavalry actually up near the trout farm on your map? Because I don't see it anywhere near the farm at all. I only see that one icon way down at the bottom. If I go straight down, do I just pass the farm and then immediately turn left to the stockade without actually seeing the cavalry on the right? Because if I do that, I'm skipping the cavalry step entirely. Should I just draw a line from the farm straight down to the stockade, or do I have to find some other cavalry spot I'm missing?"
+    ],
+    [
+      "Giver",
+      "No, I'm saying go down. Look at your map: the trout farm is way up high near the top, and the cavalry is way down low near the bottom. You have to go straight down past the farm all the way to where the cavalry is sitting right there near the bandit territory. You keep going down until you hit that cavalry icon on the right side. Once you are right next to the cavalry, that is the spot to turn left toward the stockade. Don't turn yet, keep going down."
+    ],
+    [
+      "Follower",
+      "Okay, I think I see it now. If I keep going straight down from the farm, I'll pass open space for a while, and then I'll hit the cavalry on my right side near the bottom. So I'm just going to draw a line straight down past the farm until I reach the cavalry, and then I'll turn left to head toward the stockade."
+    ],
+    [
+      "Giver",
+      "Okay, keep going down straight from the farm until you hit that cavalry icon on your right side near the bottom, and then turn left toward the stockade."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving straight down past the farm... wait, I just passed the trout farm at (45, 46) and I'm heading south... oh no. I see the cattle stockade right here at (50, 77), and I see the bandit territory right next to it at (16, 80). But I don't see the cavalry anywhere on my map between the farm and the stockade. I only see the cavalry way over here at the bottom near the bandit land. Do I just draw a line straight from the farm to the stockade, ignoring the cavalry completely? Because I can't find it on my map, so how can I turn left to find it? Should I just assume it's somewhere in the open space I'm passing through right now?"
+    ],
+    [
+      "Giver",
+      "Listen, I need you to look at the top part of your map, right below the trout farm. Do you see a little blue wavy line marking the river there? That is the river I was talking about earlier. You need to turn left at that river, not at the farm. Once you turn left at the river, follow that path down. If you keep going straight down from the farm, you are skipping the whole river section and missing the cavalry which is located right next to that river on my map, not down at the bottom near the stockade. You have to find the river first, turn left there, and then the cavalry will be on your right side a little bit further down that path."
+    ],
+    [
+      "Follower",
+      "Wait, you're saying the river is right below the farm? But on my map, the farm is at (45, 46) and there's nothing below it but empty space until I hit the cavalry way down at the bottom. There's no river down there, just open land. Did you put a river on your map that I don't have? If I turn left at the farm, I'll just go into a blank spot. How can I turn left if there's no river to follow? And if I keep going down to the bottom like I was doing, I'll never see the cavalry because it's right next to the bandit territory at the top left, not on the right side. I'm really confused now. Should I just draw a line from the farm straight to the bottom edge and pretend I passed the cavalry, or do you think I'm missing something else entirely?"
+    ],
+    [
+      "Giver",
+      "Stop, you are going the wrong way. The river is not down there; look at the top of your map, just above the trout farm. There is a small blue squiggle there. That is the river I mean. You have to turn left at that river, not at the farm. Once you turn left, follow that path down and the cavalry will appear on your right side a little further along. Do not go straight to the bottom; go to the river first."
+    ],
+    [
+      "Follower",
+      "Wait, you're saying the river is *above* the farm? But on my map, there is nothing above the farm at (45, 46) except the carved stones way up high. I see the trout farm, and directly above it is just blank space until I hit the stones. There is no blue squiggle anywhere near the farm on my map. Are you telling me I need to turn left into the air? Because if I turn left from the farm, I'm just going into empty space. If I keep going down, I hit the stockade and skip the cavalry entirely. I don't see any river on my map that matches yours. I'm going to keep going down to the stockade because that's the only logical path I have."
+    ],
+    [
+      "Giver",
+      "Listen, stop drawing lines in empty space. Look at the very top left of your map, near the START cross. You have a little red line there. That is the river. You need to turn left at that spot, not at the farm. Once you turn left there, follow that path down and the cavalry will be on your right side a little further along. Do not go straight to the bottom; go to the river first."
+    ],
+    [
+      "Follower",
+      "Wait, what? You said the river is at the top left near the START? But I've already passed the START! I'm way down at the bottom half of the map right now. If the river is up there, I should have turned left ages ago. I don't see any red line near the START on my map, just the gallows and some open space. And I definitely don't see a river up there. Okay, so where is this river you keep talking about? Is it the little blue line I thought I saw near the farm? Because I'm pretty sure that was it. If I turn left at the farm, I just go into empty space and miss the stockade. I'm going to keep going down to the stockade."
+    ],
+    [
+      "Giver",
+      "Stop, you are completely confused about everything. Let me start over from the beginning and be very clear. From the START, do not turn left at all. Go straight up past the diamond mine, keep going past the carved stones on your right, and ignore the graveyard on the left. Just go straight past those. Keep going until you hit the great rock on the right side. Once you are past the great rock, keep going straight. Then you will see the gold mine on your left. Keep going past the gold mine, and you will see the trout farm on your left as well. Do not turn there. Keep going straight past the trout farm, and then you will see the cavalry on your right side. Once you are right next to the cavalry, turn left and head down to the cattle stockade. From the stockade, turn right and go up to the bandit territory. Then turn left at the river bed and go straight to the finish. Do you understand this new path?"
+    ],
+    [
+      "Follower",
+      "Okay, you're right, I was going straight past the mine and stones. I'll go straight up to the great rock on the right. Then I keep going straight past the gold mine on the left. Then I keep going past the trout farm on the left. Then I see the cavalry on the right, okay? I'll turn left there to go down to the stockade, then right to the bandit territory, and finally left at the river bed to the finish. Let me start drawing that again."
+    ],
+    [
+      "Giver",
+      "Okay, wait. Don't draw anything yet. You are mixing up the landmarks again. Listen carefully. On my map, the cavalry is next to the trout farm, they are right next to each other. On your map, they are not together. You need to find the cavalry on the right side, right next to where the trout farm is on *my* map, which is way up near the top, not down at the bottom. Do not look for the cavalry near the cattle stockade. Once you find the cavalry icon on the right, next to the farm, that is where you turn left to go down to the stockade. Do you see the cavalry on the right side of the farm on your map now?"
+    ],
+    [
+      "Follower",
+      "Wait, you said the cavalry is next to the farm on your map, but on mine they are miles apart. The farm is way up here at the top and the cavalry is way down at the bottom. If I turn left at the farm, I'm heading toward the open space, not the stockade. If I keep going down to the stockade, I'm skipping the cavalry step entirely because it's not on the right side near the farm here. Which one is actually next to which on your map? Because I can't find a cavalry unit near the farm at all on my side. Should I just draw a line straight down from the farm to the stockade and pretend I passed it, or do I have to go back up to the top to find a different cavalry spot I'm missing?"
+    ],
+    [
+      "Giver",
+      "Look, stop overthinking it. On my map, the cavalry is right next to the trout farm, side by side. You have to find that specific pair on your map. If you can't find them next to each other, then you don't have the right map to begin with. Just draw a line from the farm straight down to the cattle stockade for now, and we'll figure out the cavalry part later if we get there. Don't look for the river yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'll just draw a straight line from the farm straight down to the stockade. I can't find the cavalry anywhere, so I'm going to skip that part and assume it's just in the open space there. I'm heading down now."
+    ],
+    [
+      "Giver",
+      "Wait, stop right there. You are drawing a straight line to the stockade, but you are completely skipping the cavalry step. I explicitly told you that on my map, the cavalry is right next to the trout farm. You have to find that specific spot on your map first. Once you are next to the farm, you turn right to find the cavalry immediately there, not down at the bottom. If you can't find the cavalry next to the farm, then you are missing a huge chunk of my map and we need to discuss what you are seeing versus what I see. Do not draw that line yet; stop and look at the area next to the farm again."
+    ],
+    [
+      "Follower",
+      "Wait, I'm going to stop right now. You keep saying I have to find the cavalry right next to the farm on *your* map, but I literally cannot find a cavalry icon anywhere near the farm on *my* map. I see the farm, I see the stones above it, I see the river below it, but there is absolutely no cavalry unit sitting there next to it. If I turn right at the farm, I'm heading into open space. If I keep going down, I hit the stockade. There is no spot where the cavalry and farm are side-by-side for me. Do I just assume the cavalry is hidden in the open space right next to the farm on my map, or are we actually working with two completely different maps? Because I can't find the spot you're describing."
+    ],
+    [
+      "Giver",
+      "Just look at the farm on your map and draw a short line to the right, even if there isn't a symbol there, then turn left and head down to the stockade."
+    ],
+    [
+      "Follower",
+      "Okay, I'll just draw a short line to the right of the farm where I imagine the cavalry is, then turn left and head down to the stockade."
+    ],
+    [
+      "Giver",
+      "Okay, look, just draw that little line to the right of the farm where I said the cavalry is, even if it's blank on your map, then turn left and head straight down to the stockade. Once you hit the stockade, turn right to go up toward the bandit territory."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a short line to the right of the farm, just like you said. Then I'll turn left and head straight down to the stockade. Once I hit the stockade, I'll turn right to go up toward the bandit territory. Are you clear on that?"
+    ],
+    [
+      "Giver",
+      "Good, now that you've drawn the imaginary cavalry spot, turn left at the stockade and go up toward the bandit territory. Keep going up until you hit the bandit territory on the left side, then turn right and head down to the parched river bed. Once you're at the river bed, turn left immediately and go straight to the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing that little line to the right of the farm now, assuming that's where the cavalry is even if it's blank. Then I'll turn left and head straight down to the stockade. Once I hit the stockade, I'll turn right and go up toward the bandit territory. Then I'll turn left at the river bed and go straight to the finish line."
+    ],
+    [
+      "Giver",
+      "Hold on, stop drawing that line. You drew it to the right of the farm, but on my map, the cavalry is to the right of the farm, not the left. You need to turn right at the farm to find the cavalry, then turn left to go down. Also, when you reach the bandit territory, you need to turn left, not right, because the river bed is to the left of the bandit territory, not below it."
+    ],
+    [
+      "Follower",
+      "Wait, I think I messed up the direction at the farm. You said I need to turn right to find the cavalry, but I drew a line to the right. If the cavalry is on the right of the farm, I should turn right, not left. Let me erase that line and turn right instead to find the cavalry first. Then I can turn left to go down to the stockade. Okay, I'm erasing that and turning right now."
+    ],
+    [
+      "Giver",
+      "Wait, look again. At the farm, you need to turn right, but you have to turn right *toward* the cavalry, not just straight down. Once you turn right, you will see the cavalry on that side. After you pass the cavalry, you can turn left to go down to the stockade. Don't turn left at the farm yet."
+    ],
+    [
+      "Follower",
+      "Wait, I'm confused about the right turn. If I turn right at the farm, I'm heading toward the top edge of my map, away from the stockade. How can I turn right to find the cavalry and then turn left to go down to the stockade if turning right takes me away from the stockade? The cavalry is way down at the bottom on my map. Do you mean I should turn right just a little bit to my right, stay near the farm, and then eventually turn left to go down? Because if I turn fully right, I'm going up. Should I just draw a little line to the right of the farm, mark that as the cavalry spot, and then immediately turn left to go down?"
+    ],
+    [
+      "Giver",
+      "No, don't turn right fully. Just draw a tiny dot immediately to the right of the farm to mark where the cavalry is supposed to be, even though you can't see it there. Then, from that imaginary spot, turn left and head straight down to the stockade."
+    ],
+    [
+      "Follower",
+      "Okay, I'll just draw a tiny dot to the right of the farm right now to mark where the cavalry is, even though it's blank on my map. Then I'll turn left from there and head straight down to the stockade."
+    ],
+    [
+      "Giver",
+      "Good, now once you hit the stockade, turn right and go up toward the bandit territory."
+    ],
+    [
+      "Follower",
+      "Okay, I'm putting a tiny dot to the right of the farm to mark that imaginary cavalry spot, and now I'm turning left and heading straight down to the stockade. Once I get there, I'll turn right and go up toward the bandit territory."
+    ],
+    [
+      "Giver",
+      "Keep going up from the stockade until you see the bandit territory on the left side, then turn right and head down to the parched river bed."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving up from the stockade now. I'm looking for the bandit territory on the left side so I can turn right and head down to the parched river bed."
+    ],
+    [
+      "Giver",
+      "Keep going up. You are looking for the bandit territory on your map on the left side of the path you are following right now. Look at your map, find that patch of land labeled bandit territory just above the stockade. Once you are right next to it, that is the spot to turn right and head down to the parched river bed. Do not look for anything else up there; just look for the bandit territory on the left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving up now. I see the cattle stockade, then I'm heading up toward the bandit territory... wait, on my map, the bandit territory is way over to the left, not on the left side of my current path. It's up here at (16, 80) while I'm coming down from the stockade. If I keep going up, I'll just hit the top edge. Should I stop going up immediately and turn right toward the parched river bed? Because if I turn right now, I'm heading toward the top right corner, away from the bandit territory. Do I just draw a line straight up to the top edge and pretend I found the river bed? Because I don't see the river bed on my map at all, only the parched river bed way down at (37, 81)."
+    ],
+    [
+      "Giver",
+      "Stop, look at your map again. The bandit territory is right next to the cattle stockade. You are going the wrong way. When you are at the stockade, you need to turn right and go up, but you must turn right *before* you reach the top edge. Keep going up from the stockade until you see the bandit territory on your left side, then turn right to head down to the parched river bed. Do not go to the top edge; turn right at the bandit territory. Then go down to the river bed and finish."
+    ],
+    [
+      "Follower",
+      "Wait, if the bandit territory is right next to the stockade on your map, why does it look so far away from my path? I'm heading up from the stockade now, but the territory is way over to the left. If I turn right immediately, I'm going into the open space on the right side of the map, away from the territory. Do I just keep going straight up until the edge, find the river bed there, and draw the line to the finish? Because I can't seem to find the bandit territory on my left side at all."
+    ],
+    [
+      "Giver",
+      "You are heading the wrong way again. Stop going straight up to the edge. The bandit territory is right next to the stockade on my map, but on your map it is over to the left. You need to stop going up and turn right toward that territory on your left side, even though it looks far away. Once you see it on your left, turn right and go down to the river bed. Do not draw a line to the top edge yet. Look for the bandit land on your left now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to stop going straight up. I'm going to turn right toward the bandit territory on my left side, even though it looks far away, and then I'll head down to the parched river bed."
+    ],
+    [
+      "Giver",
+      "Okay, now look at your map. The bandit territory is right there at the top left corner, near the START cross. You have to turn right immediately after passing the stockade to face that territory, even though it's way off to the left. Once you are facing it, you are now at the correct spot to turn right and go down to the parched river bed. Do not keep going straight up; turn right toward the bandit land first."
+    ],
+    [
+      "Follower",
+      "Okay, I'm stopping going straight up. I'm turning right now toward the bandit territory on my left side, even though it's way over there near the start. Once I face that, I'll turn right and head down to the parched river bed."
+    ],
+    [
+      "Giver",
+      "Okay, listen. You keep saying the bandit territory is far away to the left, but you are looking at the wrong place. On my map, the bandit territory is right next to the stockade, not near the start. You need to turn right immediately from the stockade toward the bandit land that is sitting right next to it. Once you are facing that land, turn right again to head down to the parched river bed. Do not look for the start cross; do not look for anything else. Just turn right from the stockade toward the bandit land right next to it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to turn right from the stockade toward the bandit territory right next to it, then turn right again and head down to the parched river bed."
+    ],
+    [
+      "Giver",
+      "Wait, stop. You are turning right from the stockade, but you are turning into the open space on the right side of the map. You need to turn right *toward* the bandit territory. Look at your map: the bandit territory is right there at (16, 80), which is to the left of the stockade. You have to turn left at the stockade to face it, then turn right to head down to the river bed. Do not turn right immediately; you are missing the territory entirely."
+    ],
+    [
+      "Follower",
+      "Wait, if I turn left at the stockade, I'm heading up toward the bandit territory which is right there at (16, 80), and then I can turn right to go down to the river bed? That makes more sense than going into empty space. Okay, I'm turning left now to face the bandit land, then I'll turn right to head down to the river bed."
+    ],
+    [
+      "Giver",
+      "Yes, that is correct. Turn left at the stockade to face the bandit territory on the left, and then immediately turn right to head down to the parched river bed."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the stockade to face the bandit land, then I'll turn right and head down to the parched river bed."
+    ],
+    [
+      "Giver",
+      "Okay, keep going down from the river bed straight to the finish line. Do not look for anything else; just draw a line from the river bed directly to the finish cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the stockade to face the bandit territory, then turning right to head down to the parched river bed. I'm looking for the river bed now... wait, I see the parched river bed right here at (37, 81). Okay, I'll turn left immediately and go straight to the finish line. I'm drawing the line from the river bed to the finish now."
+    ],
+    [
+      "Giver",
+      "Perfect, just draw the line from the river bed straight down to the finish cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line from the river bed straight down to the finish cross."
+    ],
+    [
+      "Giver",
+      "Good, now look at your map. The finish line is right there at the bottom left corner. Just draw a straight line from the river bed right there to that cross. Don't look for any other landmarks. You're done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line from the river bed straight down to the finish cross now."
+    ],
+    [
+      "Giver",
+      "Good, just draw a straight line from the river bed right there to that cross. Don't look for any other landmarks. You're done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing that straight line from the river bed right there to the finish cross now."
+    ],
+    [
+      "Giver",
+      "Good, just draw a straight line from the river bed right there to that cross. Don't look for any other landmarks. You're done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing that straight line from the river bed straight down to the finish cross now."
+    ],
+    [
+      "Giver",
+      "Perfect, that's the last step. Once you've drawn that line, you're all done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing that straight line from the river bed right there to the finish cross now."
+    ],
+    [
+      "Giver",
+      "Okay, I see you're drawing the line to the finish now, so you've reached the end. Just make sure to stop exactly at the cross. Are you sure you've got it right? Did you pass the cavalry and the stockade on the way there? We need to be careful because sometimes the line looks a bit crooked. Just draw it straight from the river bed to the cross and you should be good. Good job, that's the final step."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing that straight line from the river bed right there to the finish cross now. Once I finish drawing it, I'll be at the cross."
+    ]
+  ],
+  "n_turns": 84,
+  "ended_by": "closing"
+}

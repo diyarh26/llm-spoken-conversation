@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1979000014,
+  "conversation_no": 3691,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hi there!\nParticipantA: Yeah, I was just waiting for the call. You're from that list the agency sent out, right?\nParticipantB: Oh, yeah. My boss put out a request for everyone to call a random person. Weird, huh?\nParticipantA: Totally. Look, I'm not really a pet person myself, to be honest. I've got a dog, but he's basically just a security guard.\nParticipantB: Same here. I work at the bank all day, people bring in their pets sometimes. I only have a cat, kind of a pet rock.\nParticipantA: Right? My cousin had a cat once, and he was obsessed with it. Said it saved his marriage or something.\nParticipantB: Yeah, that sounds familiar. My sister has a golden retriever and she's practically glued to him.\nParticipantA: Huh. That's interesting. I never really thought about pets like that, mostly just think they're work.\nParticipantB: Tell me about it. But my sister says they keep you grounded. She's been married to that dog for years.\nParticipantA: See, my guy just chases the mailman. I'm just glad he eats his kibble.\nParticipantB: Mine does too, though it takes him forever to decide which bowl is dinner.\nParticipantA: Yeah, that part is universal. I think the whole \"emotional support\" thing is a bit much, honestly.\nParticipantB: Fair point. My sister gets emotional every time he sheds on the couch. It's like a constant cleanup crew.\nParticipantA: Exactly. I'd rather just focus on the house hunting stuff. Real estate is enough to stress me out without animal drama.\nParticipantB: Agreed. Though I suppose if I had a kid, maybe I'd think differently.\nParticipantA: True. My friend's kid has a hamster and the kid is obsessed. Seems like a good thing for them.\nParticipantB: Maybe. Anyway, what kind of pets do you think are actually worth it?\nParticipantA: I don't know. Maybe low maintenance ones? Like a lizard or something?\nParticipantB: A lizard? Oh, that's new. I've never seen anyone with a lizard, they usually have big dogs or cats.\nParticipantA: Maybe. Or just a fish. Easy to ignore.\nParticipantA: Anyway, I gotta go, my next listing is calling.\nParticipantB: Okay, same here. Thanks for talking.\nParticipantA: You too.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 551,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

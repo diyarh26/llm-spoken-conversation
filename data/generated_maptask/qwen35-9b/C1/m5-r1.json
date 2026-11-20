@@ -1,0 +1,1383 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m5",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1145182512,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Okay, start here, right?\nFollower: Yeah, this cross.\nGiver: Good. Now look to your left, just under the cross. There's a camp there.\nFollower: Ah, the missionary camp. I see it.\nGiver: So draw a line from the start, going left towards the camp.\nFollower: Okay, drawing left... wait, do I go all the way to it?\nGiver: No, not quite. Stop a bit before you actually touch the camp buildings. Just pass it on your left side.\nFollower: Got it. Moving left, passing the camp...\nGiver: Then turn right. Go up a bit.\nFollower: Up? Okay, turning right and heading up.\nGiver: Keep going up until you hit the mountain.\nFollower: There's a mountain... wait, that's not right. That's a rockfall on my map.\nGiver: Ah, right, skip that. Keep going up, further up. There's a white mountain near the top edge.\nFollower: Okay, passing the rockfall... here's the white mountain.\nGiver: Right. Pass the mountain on your right side, then turn left.\nFollower: Left of the mountain. Okay, going left now.\nGiver: Keep going left until you hit the store.\nFollower: Store? Oh, the soft furnishings store.\nGiver: Yes. The one with the cushions.\nFollower: Okay, found it. Passing the store on my left.\nGiver: Good. Now turn right. Go down towards the ruins.\nFollower: Down? Wait, that's the ruined city on my map.\nGiver: Yeah, the ancient ruins. Find the ancient ruins.\nFollower: Ah, okay. Here they are. Different name on my map, but looks like ruins.\nGiver: Right. Pass the ruins on your right side. Then turn left.\nFollower: Left. Okay, heading left.\nGiver: Keep going left. There are stones there.\nFollower: Stones. Okay, passing the stones on my left.\nGiver: Good. Now turn right, heading up towards the waterfall.\nFollower: Up? Wait, that's the waterfall on my map.\nGiver: No, the big one. The actual waterfall. Look for the big water feature.\nFollower: Ah, okay. There's a waterfall over there.\nGiver: Yes. Pass the waterfall on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left. You'll see the rope bridge.\nFollower: Rope bridge. Okay, passing the rope bridge on my left.\nGiver: Good. Now turn right, heading up towards the waterfall... wait, no.\nFollower: Wait, which waterfall?\nGiver: The big one. I said pass the waterfall on your right. We're heading towards the gorillas now.\nFollower: Gorillas? Oh, those animals.\nGiver: Yeah. Go up towards the gorillas.\nFollower: Okay, heading up. There's a banana tree here on my map, not gorillas.\nGiver: Right, ignore the tree. Look for the animals. They should be up near the bottom left.\nFollower: Ah, here they are. Okay, passing the gorillas on my right.\nGiver: Right. Now turn left. Go up past the waterfall.\nFollower: Okay, past the waterfall. Wait, I think I'm going up too much.\nGiver: No, keep going up. We need to get to the lost steps.\nFollower: Lost steps? Oh, those stairs.\nGiver: Yes. Find the lost steps.\nFollower: Okay, found them. Passing them on my left.\nGiver: Good. Now turn right. Go down towards the pillars.\nFollower: Down? Wait, that's the fallen pillars on my map.\nGiver: Yes. The fallen pillars. Pass them on your right.\nFollower: Okay. So I'm going down... wait, that puts me near the river on my map.\nGiver: Don't worry about the river. Just get to the pillars.\nFollower: Okay, there they are. Passing the pillars on my right.\nGiver: Good. Now turn left. Go up.\nFollower: Up. Okay.\nGiver: Keep going up. You'll see the gazelles.\nFollower: Gazelles. Okay, passing the gazelles on my left.\nGiver: Right. Now turn right. Go up towards the soft furnishings store again? No, wait.\nFollower: What now?\nGiver: Ah, we're going back up. Go up towards the mountain again.\nFollower: The white mountain? Okay, going up towards the mountain.\nGiver: Pass the mountain on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the start area again.\nFollower: Wait, the start? Are we going back to the start?\nGiver: No, almost. Keep going left until you pass the stones again. Then turn right.\nFollower: Okay, passing the stones... turning right.\nGiver: Go up towards the waterfall.\nFollower: Okay, up to the waterfall.\nGiver: Pass the waterfall on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left. You'll see the lost steps again.\nFollower: Lost steps. Okay, passing them on my left.\nGiver: Right. Now turn right. Go down.\nFollower: Down? Okay.\nGiver: Go down towards the rope bridge.\nFollower: Rope bridge. Okay, passing it on my right.\nGiver: No, pass it on your left.\nFollower: Left. Okay.\nGiver: Good. Now turn right. Go up towards the waterfall.\nFollower: Wait, we're doing a loop? Up to the waterfall?\nGiver: Yes. Pass the waterfall on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the start.\nFollower: Start? But that's where we began.\nGiver: No, not the start. The missionary camp. Pass the camp on your left.\nFollower: Okay, passing the camp.\nGiver: Now turn right. Go up towards the mountain.\nFollower: Mountain. Okay.\nGiver: Pass the mountain on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the store.\nFollower: Store. Okay.\nGiver: Pass the store on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the ruins.\nFollower: Ruins. Okay.\nGiver: Pass the ruins on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the stones.\nFollower: Stones. Okay.\nGiver: Pass the stones on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the waterfall.\nFollower: Waterfall. Okay.\nGiver: Pass the waterfall on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the lost steps.\nFollower: Lost steps. Okay.\nGiver: Pass the lost steps on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the pillars.\nFollower: Pillars. Okay.\nGiver: Pass the pillars on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Go up towards the gazelles.\nFollower: Gazelles. Okay.\nGiver: Pass the gazelles on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the store again? No, wait.\nFollower: What now?\nGiver: Ah, we're going up to the mountain again. Pass the mountain on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the start.\nFollower: Start? Okay, I'm here.\nGiver: No, keep going left. Past the camp. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the mountain.\nFollower: Mountain. Okay.\nGiver: Pass the mountain on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the store.\nFollower: Store. Okay.\nGiver: Pass the store on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the ruins.\nFollower: Ruins. Okay.\nGiver: Pass the ruins on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the stones.\nFollower: Stones. Okay.\nGiver: Pass the stones on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the waterfall.\nFollower: Waterfall. Okay.\nGiver: Pass the waterfall on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the lost steps.\nFollower: Lost steps. Okay.\nGiver: Pass the lost steps on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the pillars.\nFollower: Pillars. Okay.\nGiver: Pass the pillars on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Go up towards the gazelles.\nFollower: Gazelles. Okay.\nGiver: Pass the gazelles on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the store.\nFollower: Store. Okay.\nGiver: Pass the store on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the ruins.\nFollower: Ruins. Okay.\nGiver: Pass the ruins on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the stones.\nFollower: Stones. Okay.\nGiver: Pass the stones on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the waterfall.\nFollower: Waterfall. Okay.\nGiver: Pass the waterfall on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the lost steps.\nFollower: Lost steps. Okay.\nGiver: Pass the lost steps on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the pillars.\nFollower: Pillars. Okay.\nGiver: Pass the pillars on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Go up towards the gazelles.\nFollower: Gazelles. Okay.\nGiver: Pass the gazelles on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the store.\nFollower: Store. Okay.\nGiver: Pass the store on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the ruins.\nFollower: Ruins. Okay.\nGiver: Pass the ruins on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the stones.\nFollower: Stones. Okay.\nGiver: Pass the stones on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the waterfall.\nFollower: Waterfall. Okay.\nGiver: Pass the waterfall on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the lost steps.\nFollower: Lost steps. Okay.\nGiver: Pass the lost steps on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the pillars.\nFollower: Pillars. Okay.\nGiver: Pass the pillars on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Go up towards the gazelles.\nFollower: Gazelles. Okay.\nGiver: Pass the gazelles on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the store.\nFollower: Store. Okay.\nGiver: Pass the store on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the ruins.\nFollower: Ruins. Okay.\nGiver: Pass the ruins on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the stones.\nFollower: Stones. Okay.\nGiver: Pass the stones on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the waterfall.\nFollower: Waterfall. Okay.\nGiver: Pass the waterfall on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the lost steps.\nFollower: Lost steps. Okay.\nGiver: Pass the lost steps on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the pillars.\nFollower: Pillars. Okay.\nGiver: Pass the pillars on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Go up towards the gazelles.\nFollower: Gazelles. Okay.\nGiver: Pass the gazelles on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the store.\nFollower: Store. Okay.\nGiver: Pass the store on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the ruins.\nFollower: Ruins. Okay.\nGiver: Pass the ruins on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the stones.\nFollower: Stones. Okay.\nGiver: Pass the stones on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the waterfall.\nFollower: Waterfall. Okay.\nGiver: Pass the waterfall on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the lost steps.\nFollower: Lost steps. Okay.\nGiver: Pass the lost steps on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the pillars.\nFollower: Pillars. Okay.\nGiver: Pass the pillars on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Go up towards the gazelles.\nFollower: Gazelles. Okay.\nGiver: Pass the gazelles on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the store.\nFollower: Store. Okay.\nGiver: Pass the store on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the ruins.\nFollower: Ruins. Okay.\nGiver: Pass the ruins on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the stones.\nFollower: Stones. Okay.\nGiver: Pass the stones on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the waterfall.\nFollower: Waterfall. Okay.\nGiver: Pass the waterfall on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the lost steps.\nFollower: Lost steps. Okay.\nGiver: Pass the lost steps on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the pillars.\nFollower: Pillars. Okay.\nGiver: Pass the pillars on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Go up towards the gazelles.\nFollower: Gazelles. Okay.\nGiver: Pass the gazelles on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the store.\nFollower: Store. Okay.\nGiver: Pass the store on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the ruins.\nFollower: Ruins. Okay.\nGiver: Pass the ruins on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the stones.\nFollower: Stones. Okay.\nGiver: Pass the stones on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the waterfall.\nFollower: Waterfall. Okay.\nGiver: Pass the waterfall on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Keep going left until you hit the lost steps.\nFollower: Lost steps. Okay.\nGiver: Pass the lost steps on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the pillars.\nFollower: Pillars. Okay.\nGiver: Pass the pillars on your right. Then turn left.\nFollower: Left. Okay.\nGiver: Go up towards the gazelles.\nFollower: Gazelles. Okay.\nGiver: Pass the gazelles on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go up towards the store.\nFollower: Store. Okay.\nGiver: Pass the store on your left. Then turn right.\nFollower: Right. Okay.\nGiver: Go down towards the ruins.\nFollower: Ruins. Okay.\nGiver: Pass the ruins on your right. Then turn left.\nFollower: Left. Okay",
+  "hit_token_cap": true,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Okay, start here, right?"
+    ],
+    [
+      "Follower",
+      "Yeah, this cross."
+    ],
+    [
+      "Giver",
+      "Good. Now look to your left, just under the cross. There's a camp there."
+    ],
+    [
+      "Follower",
+      "Ah, the missionary camp. I see it."
+    ],
+    [
+      "Giver",
+      "So draw a line from the start, going left towards the camp."
+    ],
+    [
+      "Follower",
+      "Okay, drawing left... wait, do I go all the way to it?"
+    ],
+    [
+      "Giver",
+      "No, not quite. Stop a bit before you actually touch the camp buildings. Just pass it on your left side."
+    ],
+    [
+      "Follower",
+      "Got it. Moving left, passing the camp..."
+    ],
+    [
+      "Giver",
+      "Then turn right. Go up a bit."
+    ],
+    [
+      "Follower",
+      "Up? Okay, turning right and heading up."
+    ],
+    [
+      "Giver",
+      "Keep going up until you hit the mountain."
+    ],
+    [
+      "Follower",
+      "There's a mountain... wait, that's not right. That's a rockfall on my map."
+    ],
+    [
+      "Giver",
+      "Ah, right, skip that. Keep going up, further up. There's a white mountain near the top edge."
+    ],
+    [
+      "Follower",
+      "Okay, passing the rockfall... here's the white mountain."
+    ],
+    [
+      "Giver",
+      "Right. Pass the mountain on your right side, then turn left."
+    ],
+    [
+      "Follower",
+      "Left of the mountain. Okay, going left now."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the store."
+    ],
+    [
+      "Follower",
+      "Store? Oh, the soft furnishings store."
+    ],
+    [
+      "Giver",
+      "Yes. The one with the cushions."
+    ],
+    [
+      "Follower",
+      "Okay, found it. Passing the store on my left."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right. Go down towards the ruins."
+    ],
+    [
+      "Follower",
+      "Down? Wait, that's the ruined city on my map."
+    ],
+    [
+      "Giver",
+      "Yeah, the ancient ruins. Find the ancient ruins."
+    ],
+    [
+      "Follower",
+      "Ah, okay. Here they are. Different name on my map, but looks like ruins."
+    ],
+    [
+      "Giver",
+      "Right. Pass the ruins on your right side. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay, heading left."
+    ],
+    [
+      "Giver",
+      "Keep going left. There are stones there."
+    ],
+    [
+      "Follower",
+      "Stones. Okay, passing the stones on my left."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right, heading up towards the waterfall."
+    ],
+    [
+      "Follower",
+      "Up? Wait, that's the waterfall on my map."
+    ],
+    [
+      "Giver",
+      "No, the big one. The actual waterfall. Look for the big water feature."
+    ],
+    [
+      "Follower",
+      "Ah, okay. There's a waterfall over there."
+    ],
+    [
+      "Giver",
+      "Yes. Pass the waterfall on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left. You'll see the rope bridge."
+    ],
+    [
+      "Follower",
+      "Rope bridge. Okay, passing the rope bridge on my left."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right, heading up towards the waterfall... wait, no."
+    ],
+    [
+      "Follower",
+      "Wait, which waterfall?"
+    ],
+    [
+      "Giver",
+      "The big one. I said pass the waterfall on your right. We're heading towards the gorillas now."
+    ],
+    [
+      "Follower",
+      "Gorillas? Oh, those animals."
+    ],
+    [
+      "Giver",
+      "Yeah. Go up towards the gorillas."
+    ],
+    [
+      "Follower",
+      "Okay, heading up. There's a banana tree here on my map, not gorillas."
+    ],
+    [
+      "Giver",
+      "Right, ignore the tree. Look for the animals. They should be up near the bottom left."
+    ],
+    [
+      "Follower",
+      "Ah, here they are. Okay, passing the gorillas on my right."
+    ],
+    [
+      "Giver",
+      "Right. Now turn left. Go up past the waterfall."
+    ],
+    [
+      "Follower",
+      "Okay, past the waterfall. Wait, I think I'm going up too much."
+    ],
+    [
+      "Giver",
+      "No, keep going up. We need to get to the lost steps."
+    ],
+    [
+      "Follower",
+      "Lost steps? Oh, those stairs."
+    ],
+    [
+      "Giver",
+      "Yes. Find the lost steps."
+    ],
+    [
+      "Follower",
+      "Okay, found them. Passing them on my left."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right. Go down towards the pillars."
+    ],
+    [
+      "Follower",
+      "Down? Wait, that's the fallen pillars on my map."
+    ],
+    [
+      "Giver",
+      "Yes. The fallen pillars. Pass them on your right."
+    ],
+    [
+      "Follower",
+      "Okay. So I'm going down... wait, that puts me near the river on my map."
+    ],
+    [
+      "Giver",
+      "Don't worry about the river. Just get to the pillars."
+    ],
+    [
+      "Follower",
+      "Okay, there they are. Passing the pillars on my right."
+    ],
+    [
+      "Giver",
+      "Good. Now turn left. Go up."
+    ],
+    [
+      "Follower",
+      "Up. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going up. You'll see the gazelles."
+    ],
+    [
+      "Follower",
+      "Gazelles. Okay, passing the gazelles on my left."
+    ],
+    [
+      "Giver",
+      "Right. Now turn right. Go up towards the soft furnishings store again? No, wait."
+    ],
+    [
+      "Follower",
+      "What now?"
+    ],
+    [
+      "Giver",
+      "Ah, we're going back up. Go up towards the mountain again."
+    ],
+    [
+      "Follower",
+      "The white mountain? Okay, going up towards the mountain."
+    ],
+    [
+      "Giver",
+      "Pass the mountain on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the start area again."
+    ],
+    [
+      "Follower",
+      "Wait, the start? Are we going back to the start?"
+    ],
+    [
+      "Giver",
+      "No, almost. Keep going left until you pass the stones again. Then turn right."
+    ],
+    [
+      "Follower",
+      "Okay, passing the stones... turning right."
+    ],
+    [
+      "Giver",
+      "Go up towards the waterfall."
+    ],
+    [
+      "Follower",
+      "Okay, up to the waterfall."
+    ],
+    [
+      "Giver",
+      "Pass the waterfall on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left. You'll see the lost steps again."
+    ],
+    [
+      "Follower",
+      "Lost steps. Okay, passing them on my left."
+    ],
+    [
+      "Giver",
+      "Right. Now turn right. Go down."
+    ],
+    [
+      "Follower",
+      "Down? Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the rope bridge."
+    ],
+    [
+      "Follower",
+      "Rope bridge. Okay, passing it on my right."
+    ],
+    [
+      "Giver",
+      "No, pass it on your left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Good. Now turn right. Go up towards the waterfall."
+    ],
+    [
+      "Follower",
+      "Wait, we're doing a loop? Up to the waterfall?"
+    ],
+    [
+      "Giver",
+      "Yes. Pass the waterfall on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the start."
+    ],
+    [
+      "Follower",
+      "Start? But that's where we began."
+    ],
+    [
+      "Giver",
+      "No, not the start. The missionary camp. Pass the camp on your left."
+    ],
+    [
+      "Follower",
+      "Okay, passing the camp."
+    ],
+    [
+      "Giver",
+      "Now turn right. Go up towards the mountain."
+    ],
+    [
+      "Follower",
+      "Mountain. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the mountain on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the store."
+    ],
+    [
+      "Follower",
+      "Store. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the store on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the ruins."
+    ],
+    [
+      "Follower",
+      "Ruins. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the ruins on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the stones."
+    ],
+    [
+      "Follower",
+      "Stones. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the stones on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the waterfall."
+    ],
+    [
+      "Follower",
+      "Waterfall. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the waterfall on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the lost steps."
+    ],
+    [
+      "Follower",
+      "Lost steps. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the lost steps on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the pillars."
+    ],
+    [
+      "Follower",
+      "Pillars. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the pillars on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the gazelles."
+    ],
+    [
+      "Follower",
+      "Gazelles. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the gazelles on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the store again? No, wait."
+    ],
+    [
+      "Follower",
+      "What now?"
+    ],
+    [
+      "Giver",
+      "Ah, we're going up to the mountain again. Pass the mountain on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the start."
+    ],
+    [
+      "Follower",
+      "Start? Okay, I'm here."
+    ],
+    [
+      "Giver",
+      "No, keep going left. Past the camp. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the mountain."
+    ],
+    [
+      "Follower",
+      "Mountain. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the mountain on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the store."
+    ],
+    [
+      "Follower",
+      "Store. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the store on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the ruins."
+    ],
+    [
+      "Follower",
+      "Ruins. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the ruins on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the stones."
+    ],
+    [
+      "Follower",
+      "Stones. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the stones on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the waterfall."
+    ],
+    [
+      "Follower",
+      "Waterfall. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the waterfall on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the lost steps."
+    ],
+    [
+      "Follower",
+      "Lost steps. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the lost steps on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the pillars."
+    ],
+    [
+      "Follower",
+      "Pillars. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the pillars on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the gazelles."
+    ],
+    [
+      "Follower",
+      "Gazelles. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the gazelles on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the store."
+    ],
+    [
+      "Follower",
+      "Store. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the store on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the ruins."
+    ],
+    [
+      "Follower",
+      "Ruins. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the ruins on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the stones."
+    ],
+    [
+      "Follower",
+      "Stones. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the stones on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the waterfall."
+    ],
+    [
+      "Follower",
+      "Waterfall. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the waterfall on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the lost steps."
+    ],
+    [
+      "Follower",
+      "Lost steps. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the lost steps on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the pillars."
+    ],
+    [
+      "Follower",
+      "Pillars. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the pillars on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the gazelles."
+    ],
+    [
+      "Follower",
+      "Gazelles. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the gazelles on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the store."
+    ],
+    [
+      "Follower",
+      "Store. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the store on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the ruins."
+    ],
+    [
+      "Follower",
+      "Ruins. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the ruins on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the stones."
+    ],
+    [
+      "Follower",
+      "Stones. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the stones on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the waterfall."
+    ],
+    [
+      "Follower",
+      "Waterfall. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the waterfall on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the lost steps."
+    ],
+    [
+      "Follower",
+      "Lost steps. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the lost steps on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the pillars."
+    ],
+    [
+      "Follower",
+      "Pillars. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the pillars on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the gazelles."
+    ],
+    [
+      "Follower",
+      "Gazelles. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the gazelles on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the store."
+    ],
+    [
+      "Follower",
+      "Store. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the store on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the ruins."
+    ],
+    [
+      "Follower",
+      "Ruins. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the ruins on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the stones."
+    ],
+    [
+      "Follower",
+      "Stones. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the stones on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the waterfall."
+    ],
+    [
+      "Follower",
+      "Waterfall. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the waterfall on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the lost steps."
+    ],
+    [
+      "Follower",
+      "Lost steps. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the lost steps on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the pillars."
+    ],
+    [
+      "Follower",
+      "Pillars. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the pillars on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the gazelles."
+    ],
+    [
+      "Follower",
+      "Gazelles. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the gazelles on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the store."
+    ],
+    [
+      "Follower",
+      "Store. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the store on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the ruins."
+    ],
+    [
+      "Follower",
+      "Ruins. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the ruins on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the stones."
+    ],
+    [
+      "Follower",
+      "Stones. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the stones on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the waterfall."
+    ],
+    [
+      "Follower",
+      "Waterfall. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the waterfall on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the lost steps."
+    ],
+    [
+      "Follower",
+      "Lost steps. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the lost steps on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the pillars."
+    ],
+    [
+      "Follower",
+      "Pillars. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the pillars on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the gazelles."
+    ],
+    [
+      "Follower",
+      "Gazelles. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the gazelles on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the store."
+    ],
+    [
+      "Follower",
+      "Store. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the store on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the ruins."
+    ],
+    [
+      "Follower",
+      "Ruins. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the ruins on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the stones."
+    ],
+    [
+      "Follower",
+      "Stones. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the stones on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the waterfall."
+    ],
+    [
+      "Follower",
+      "Waterfall. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the waterfall on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the lost steps."
+    ],
+    [
+      "Follower",
+      "Lost steps. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the lost steps on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the pillars."
+    ],
+    [
+      "Follower",
+      "Pillars. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the pillars on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the gazelles."
+    ],
+    [
+      "Follower",
+      "Gazelles. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the gazelles on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the store."
+    ],
+    [
+      "Follower",
+      "Store. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the store on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the ruins."
+    ],
+    [
+      "Follower",
+      "Ruins. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the ruins on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the stones."
+    ],
+    [
+      "Follower",
+      "Stones. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the stones on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the waterfall."
+    ],
+    [
+      "Follower",
+      "Waterfall. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the waterfall on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Keep going left until you hit the lost steps."
+    ],
+    [
+      "Follower",
+      "Lost steps. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the lost steps on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the pillars."
+    ],
+    [
+      "Follower",
+      "Pillars. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the pillars on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the gazelles."
+    ],
+    [
+      "Follower",
+      "Gazelles. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the gazelles on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go up towards the store."
+    ],
+    [
+      "Follower",
+      "Store. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the store on your left. Then turn right."
+    ],
+    [
+      "Follower",
+      "Right. Okay."
+    ],
+    [
+      "Giver",
+      "Go down towards the ruins."
+    ],
+    [
+      "Follower",
+      "Ruins. Okay."
+    ],
+    [
+      "Giver",
+      "Pass the ruins on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Left. Okay"
+    ]
+  ],
+  "n_turns": 338,
+  "ended_by": "single_generation"
+}

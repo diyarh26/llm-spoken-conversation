@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2802794796,
+  "conversation_no": 3573,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 67,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Yeah, hi there.\nParticipantA: Good to hear your voice.\nParticipantB: I am. How are things?\nParticipantA: Pretty good, mostly. Just finished a long haul.\nParticipantB: Oh, the road?\nParticipantA: Yeah, truck driver. Just came back from out west.\nParticipantB: Wow, you drive? I thought you were in the office.\nParticipantA: Yeah, I do. It's a grind, but I like the freedom.\nParticipantB: I can imagine. I'm a factory supervisor, actually.\nParticipantA: No way! That's cool. What kind of factory do you run?\nParticipantB: Electronics, mostly. Small batch, so it's stressful.\nParticipantA: Ah, yeah, that sounds intense. Lots of deadlines, right?\nParticipantB: All day long. But honestly, I need a break from the noise.\nParticipantA: Same here. Sitting in the cab is quiet, but it's lonely sometimes.\nParticipantB: Exactly. That's why I've been thinking about buying a car.\nParticipantA: Oh, really? What are you looking at?\nParticipantB: Something reliable. Nothing fancy. Maybe a nice mid-size SUV.\nParticipantA: Interesting. I'm looking at a big diesel pickup.\nParticipantB: A truck? For what? You work as a trucker.\nParticipantA: Yeah, I need something that can haul my own gear if I break down.\nParticipantB: Huh, I never thought about that. I just want comfort, really.\nParticipantA: Fair enough. Comfort is nice after sitting in a cab all day.\nParticipantB: True. But I worry a truck would be too big for my garage.\nParticipantA: Oh, don't worry. A truck fits in most places. Plus, I love towing.\nParticipantB: Towing? Do you tow much?\nParticipantA: Occasionally. I like the idea of hauling a boat or a camper.\nParticipantB: That sounds fun. I just want to drive home and relax.\nParticipantA: Totally different vibes, then. You want quiet, I want utility.\nParticipantB: Yeah, pretty much. I feel like my car should just work, you know?\nParticipantA: Makes sense. I picked my truck because it gets good miles and is tough.\nParticipantB: Oh, fuel economy is huge for me. I'm stuck in traffic often.\nParticipantA: Traffic? Where do you live?\nParticipantB: Suburbs. Lots of stop-and-go on the way to the plant.\nParticipantA: Ah, that changes everything. A heavy truck would kill your gas.\nParticipantB: Exactly! That's why I was leaning toward a smaller SUV or crossover.\nParticipantA: Oh, I get it. Maybe we're not so different after all.\nParticipantB: Yeah. You need a beast for the road, I need a sedan for the commute.\nParticipantA: Fair trade. Maybe I'll look at a smaller truck next time, but I need the power.\nParticipantB: And maybe I'll check out a bigger SUV for the weekend trips.\nParticipantA: That could work. Just depends on what you find, right?\nParticipantB: Yeah. Hopefully something that doesn't cost a fortune to fix.\nParticipantA: True. I've learned to fix my own truck parts by now.\nParticipantB: Oh, really? That's impressive. I'd never try that.\nParticipantA: Not yet. But I'd rather not pay double for a mechanic's visit.\nParticipantB: Wise. I guess we both want value, just in different ways.\nParticipantA: Absolutely. If I find a deal on a used Ford, I'll probably take it.\nParticipantB: And if I see a Honda with low miles, I might just buy it.\nParticipantA: Sounds like a plan. You have any specific models in mind?\nParticipantB: Maybe a RAV4 or something similar. Nothing too flashy.\nParticipantA: Got it. I'll keep looking for a 2500 duty. Heavy stuff.\nParticipantB: Okay. Well, good luck with your search.\nParticipantA: Thanks. Same to you.\nParticipantB: Yeah, take care.\nParticipantA: You too. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 942,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3510518410,
+  "conversation_no": 2993,
+  "topic": "Buying A Car",
+  "sb_prompt": "WHAT KIND OF CAR DO YOU THINK YOU MIGHT BUY NEXT?  WHAT SORTS OF THINGS WILL ENTER INTO YOUR DECISION?  SEE IF YOUR REQUIREMENTS AND THE OTHER CALLER'S REQUIREMENTS ARE SIMILAR.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 47,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey there!\nParticipantA: Can I ask you something about cars?\nParticipantB: Sure, yeah, what's up?\nParticipantA: I was thinking about what kind of car I might buy next.\nParticipantB: Oh, really? That's a big decision.\nParticipantA: Yeah, kind of. I've been thinking about it for a while.\nParticipantB: What kind of car are you thinking about?\nParticipantA: Well, I'm torn. I like the reliability of a sedan, but I also want something a bit nicer.\nParticipantB: Huh, that sounds familiar. I'm in the same boat.\nParticipantA: Really? What about you?\nParticipantB: I've been looking at trucks. They're tough, you know? My buddy Dave bought one last year.\nParticipantA: Oh, Dave. I know him a little bit.\nParticipantB: Yeah, he's the one who told me about it. Said it saved his back with the heavy lifting.\nParticipantA: That makes sense. I work at the bank all day, so I don't do heavy lifting, but...\nParticipantB: ...but you still need to haul stuff sometimes, right?\nParticipantA: Well, not really. Mostly I just drive to work and maybe go to the gym. But it's annoying driving an old sedan when the market is so cheap right now.\nParticipantB: Exactly! That's what it's like. I love the idea of a nice truck, but my wallet says no.\nParticipantA: Yeah, my budget says no too. I think I'd stick with my current car for a bit longer.\nParticipantB: Fair enough. I'm waiting for a good deal, you know? Maybe in a year or two.\nParticipantA: Me too. Sometimes I feel like upgrading, but then I think, \"Why rush?\"\nParticipantB: Yeah, it's weird. Parts of it sit fine, like the idea of a newer model, but parts don't, like the cost.\nParticipantA: Exactly. I made up my mind about it years ago, honestly. Just not sure why.\nParticipantB: Hmm, I guess we're similar then. Both stuck in the middle.\nParticipantA: Yeah, seems like it.\nParticipantB: Well, I think I'll keep looking for now.\nParticipantA: Me too. Thanks for talking about it.\nParticipantB: No problem, take care.\nParticipantA: Bye.\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 541,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

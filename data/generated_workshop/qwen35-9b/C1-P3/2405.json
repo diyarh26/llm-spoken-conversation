@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 4166675534,
+  "conversation_no": 2405,
+  "topic": "Computers",
+  "sb_prompt": "FIND OUT THE OTHER CALLERS' PREFERENCE AND LEVEL OF INTEREST IN PERSONAL COMPUTERS.  HOW DOES IT COMPARE TO YOUR INTEREST AND PREFERENCE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 28,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Yeah, hi there.\nParticipantA: Hi. So, I was told to call a stranger and ask about computers.\nParticipantB: Oh, okay. Well, that's actually the first time I've heard someone mention computers like that.\nParticipantA: Really? Most people I talk to just say they \"need one\" for work or school.\nParticipantB: Exactly. I mean, I work in a restaurant, so I just need to know how to log in and process a tab. I don't really get into the nitty-gritty of it.\nParticipantA: Oh, that makes sense. I'm a bank teller, so I deal with computers all day long. It's honestly become kind of interesting to me over time.\nParticipantB: Wait, really? Like, you enjoy talking about the tech stuff behind the counter?\nParticipantA: Yeah! Sometimes I just love explaining how the fraud detection systems actually work. My cousin is a cybersecurity guy, and he told me about a time he helped a bank stop a huge heist. It shaped how I look at my job.\nParticipantB: Wow, that sounds intense. Have you ever had anything like that happen at your bank?\nParticipantA: Not a heist, but last month a guy tried to cash a check that was definitely altered. The system flagged it instantly, but he kept trying to argue with the machine. It was wild.\nParticipantB: That's actually pretty cool. I've had a few weird moments with computers too. Like, once my register froze right in the middle of a rush, and I had to manually write down every single item.\nParticipantA: Oh no, that sounds stressful! Did you get it sorted out eventually?\nParticipantB: Yeah, the manager came over with a laptop and started typing away while I held up the line. It was a nightmare.\nParticipantA: That's crazy. I've never had to deal with that kind of manual fallback. My systems are usually pretty airtight because of what my cousin showed me about backup protocols.\nParticipantB: Huh. Maybe I should try to learn a bit more about those backups. I just feel like I'm always playing catch-up on the tech side.\nParticipantA: You should ask your manager about training! Honestly, knowing more about the backend stuff makes my job so much less frustrating.\nParticipantB: I will definitely ask about that next week. Thanks for sharing your story.\nParticipantA: No problem! It's actually fun to talk about this stuff. I feel like most people don't realize how much happens behind the scenes.\nParticipantB: Yeah, that's true. I always thought it was just \"magic buttons,\" but hearing you talk about it makes it sound real.\nParticipantA: Well, it is real. Anyway, I'm gonna get back to the bank before my next customer comes through.\nParticipantB: Okay, good luck with that. It was nice chatting with you.\nParticipantA: You too! Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 651,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

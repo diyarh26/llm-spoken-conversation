@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3192576701,
+  "conversation_no": 2615,
+  "topic": "Auto Repairs",
+  "sb_prompt": "WHAT WAS THE LAST AUTO REPAIR YOU PERFORMED OR HAD DONE ON YOUR CAR? ARE THERE SOME TYPES OF REPAIRS OR MAINTENANCE TASKS YOU PREFER TO DO YOURSELF?  DISCUSS YOUR EXPERIENCES IN THIS AREA WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 50,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Yeah, hey. So, what was the last auto repair you had done or performed on your car?\nParticipantB: Oh, funny you ask. I just had my brakes done last week. Dealer shop, actually.\nParticipantA: Man, that's a good one. I did my own oil change about two months ago.\nParticipantB: Nice. I actually prefer not doing that stuff myself. It's just... messy and scary if you don't know what you're doing.\nParticipantA: I get that, but honestly, I feel like there's something wrong with the way people treat the garage. I've just always felt like I should be able to do it.\nParticipantB: I hear you. It's weird because I'm an accountant, so numbers make sense to me, but under the hood? It's a black box. Just doesn't click.\nParticipantA: That's exactly it! It's like magic to me sometimes. I've just made up my mind years ago that I'm going to learn it, even though I can't really say why.\nParticipantB: Yeah, same here. I guess I just assumed someone else would do it. But I do like the stuff that doesn't involve taking the engine apart.\nParticipantA: Exactly! Like changing the wipers or maybe cleaning out the cabin filter. That's where I'm at.\nParticipantB: Yeah, easy wins. I'll stick to those.\nParticipantA: Totally. Though, man, I think the brakes were a smart move. If you let those drag, your tires go flat in weeks.\nParticipantB: You're right about that. Safety first. I'd rather pay the extra hundred bucks than have a rotor fail on the highway.\nParticipantA: Fair enough. I've got a drill and a jack, so I feel safe messing with suspension bolts, but I don't know about rotors.\nParticipantB: See, that's the thing. It's that fear. I know how to balance a ledger, but I don't know how to torque a lug nut properly.\nParticipantA: Haha, true. I just wing it a little bit. But honestly, it feels good to do it yourself. You feel like you own the machine again.\nParticipantB: I get that feeling too, but I'm lazy when it comes to mechanics. I just pay the guy.\nParticipantA: Well, if you ever need help with a tire change or something simple, I might be able to help you out over the phone next time.\nParticipantB: That would be cool. Maybe I'll give you a call when I need to change my own oil.\nParticipantA: Sounds like a plan. Hey, do you have any other maintenance tasks you prefer to do yourself?\nParticipantB: Yeah, actually. I just washed my car engine last month with some degreaser. I felt like I needed to see under the hood.\nParticipantA: Oh, nice! That's right up my alley. Did you get it running better afterwards?\nParticipantB: No, but it looked clean. Felt good. Maybe I'll try that on my own car.\nParticipantA: You should. It's kind of satisfying. Like cleaning a house, but for the car.\nParticipantB: Yeah, maybe. Well, I'm gonna head out. Thanks for talking about it.\nParticipantA: Yeah, no problem. Same here. Good talking to you.\nParticipantB: You too. Bye!\nParticipantA: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 753,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m15",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 3006068465,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Hi, can you hear me?\nFollower: Yeah, I can hear you fine.\nGiver: Okay. Let's do this. You have the map here?\nFollower: Yep, got it.\nGiver: Good. We're going to draw a route from START to FINISH. Follow my instructions exactly and draw a line on your map.\nFollower: Understood.\nGiver: Start at the cross marked START. From there, head right and slightly down.\nFollower: Okay.\nGiver: Go until you're just above the sandy shore. Then turn left.\nFollower: I'm doing that now.\nGiver: Turn left again, aiming towards the well.\nFollower: Right, passing the well on my left.\nGiver: Good. Continue straight for a bit, then make a sharp right angle.\nFollower: Done.\nGiver: Now head towards the local residents.\nFollower: Wait, I don't see the local residents there.\nGiver: What? I just told you to go towards them.\nFollower: I see them further down the path, past where you want me to go. I think they're not where you think they are.\nGiver: That's weird. Just follow the well and keep going left until you hit the residents.\nFollower: Okay, heading to the residents now.\nGiver: Once you're near the residents, turn right towards the crane bay.\nFollower: I don't see the crane bay. I only see the residents.\nGiver: The crane bay is just past the residents on your map, right?\nFollower: No, I don't see it at all. Maybe it's not on my map?\nGiver: It's there. Just keep going left after the residents, and you'll see it.\nFollower: Okay, continuing left. Wait, I'm confused. Should I go past the residents or stop there?\nGiver: Go past the residents. Turn right towards the crane bay.\nFollower: Okay, turning right. Wait, I see something else. There's an iron bridge here, but I don't see a crane bay.\nGiver: Ignore the bridge. Just head towards the crane bay.\nFollower: I can't find the crane bay. It's not on my map.\nGiver: That's strange. Okay, forget the crane bay. Just keep going left until you hit the forked stream.\nFollower: Okay, heading left. I see the forked stream.\nGiver: Good. Turn right at the stream.\nFollower: Done.\nGiver: Now head towards the farmed land.\nFollower: Wait, there's no farmed land there. I see a mountain stream.\nGiver: Just keep going. The farmed land is right next to the mountain stream on your map.\nFollower: Oh, okay. I see the farmed land now. Heading there.\nGiver: Once you're at the farmed land, turn left.\nFollower: Okay, turning left.\nGiver: Head towards the dead tree.\nFollower: I see the dead tree. Turning towards it.\nGiver: Good. Pass the dead tree and keep going left.\nFollower: Wait, I don't see the lagoon you mentioned. I only see the lagoon further down.\nGiver: The lagoon is right there. Turn right at the lagoon.\nFollower: Okay, turning right at the lagoon.\nGiver: Head towards the rockfall.\nFollower: I see the rockfall. Heading there.\nGiver: Pass the rockfall and turn left.\nFollower: Okay, turning left.\nGiver: Head towards the pirate ship.\nFollower: I see the pirate ship. Turning towards it.\nGiver: Good. Pass the pirate ship and turn right.\nFollower: Wait, I don't see a pirate ship there. I only see a computer controlled sub.\nGiver: The pirate ship is right there. Just past the sub.\nFollower: Oh, I see it now. Turning right.\nGiver: Now head towards the green bay.\nFollower: I see the green bay. Heading there.\nGiver: Once you're at the green bay, turn left.\nFollower: Okay, turning left.\nGiver: Head towards the FINISH.\nFollower: I see the FINISH. Done.\nGiver: Great. Did you get it?\nFollower: Yep, looks like it.\nGiver: Perfect. Thanks.\nFollower: No problem.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi, can you hear me?"
+    ],
+    [
+      "Follower",
+      "Yeah, I can hear you fine."
+    ],
+    [
+      "Giver",
+      "Okay. Let's do this. You have the map here?"
+    ],
+    [
+      "Follower",
+      "Yep, got it."
+    ],
+    [
+      "Giver",
+      "Good. We're going to draw a route from START to FINISH. Follow my instructions exactly and draw a line on your map."
+    ],
+    [
+      "Follower",
+      "Understood."
+    ],
+    [
+      "Giver",
+      "Start at the cross marked START. From there, head right and slightly down."
+    ],
+    [
+      "Follower",
+      "Okay."
+    ],
+    [
+      "Giver",
+      "Go until you're just above the sandy shore. Then turn left."
+    ],
+    [
+      "Follower",
+      "I'm doing that now."
+    ],
+    [
+      "Giver",
+      "Turn left again, aiming towards the well."
+    ],
+    [
+      "Follower",
+      "Right, passing the well on my left."
+    ],
+    [
+      "Giver",
+      "Good. Continue straight for a bit, then make a sharp right angle."
+    ],
+    [
+      "Follower",
+      "Done."
+    ],
+    [
+      "Giver",
+      "Now head towards the local residents."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see the local residents there."
+    ],
+    [
+      "Giver",
+      "What? I just told you to go towards them."
+    ],
+    [
+      "Follower",
+      "I see them further down the path, past where you want me to go. I think they're not where you think they are."
+    ],
+    [
+      "Giver",
+      "That's weird. Just follow the well and keep going left until you hit the residents."
+    ],
+    [
+      "Follower",
+      "Okay, heading to the residents now."
+    ],
+    [
+      "Giver",
+      "Once you're near the residents, turn right towards the crane bay."
+    ],
+    [
+      "Follower",
+      "I don't see the crane bay. I only see the residents."
+    ],
+    [
+      "Giver",
+      "The crane bay is just past the residents on your map, right?"
+    ],
+    [
+      "Follower",
+      "No, I don't see it at all. Maybe it's not on my map?"
+    ],
+    [
+      "Giver",
+      "It's there. Just keep going left after the residents, and you'll see it."
+    ],
+    [
+      "Follower",
+      "Okay, continuing left. Wait, I'm confused. Should I go past the residents or stop there?"
+    ],
+    [
+      "Giver",
+      "Go past the residents. Turn right towards the crane bay."
+    ],
+    [
+      "Follower",
+      "Okay, turning right. Wait, I see something else. There's an iron bridge here, but I don't see a crane bay."
+    ],
+    [
+      "Giver",
+      "Ignore the bridge. Just head towards the crane bay."
+    ],
+    [
+      "Follower",
+      "I can't find the crane bay. It's not on my map."
+    ],
+    [
+      "Giver",
+      "That's strange. Okay, forget the crane bay. Just keep going left until you hit the forked stream."
+    ],
+    [
+      "Follower",
+      "Okay, heading left. I see the forked stream."
+    ],
+    [
+      "Giver",
+      "Good. Turn right at the stream."
+    ],
+    [
+      "Follower",
+      "Done."
+    ],
+    [
+      "Giver",
+      "Now head towards the farmed land."
+    ],
+    [
+      "Follower",
+      "Wait, there's no farmed land there. I see a mountain stream."
+    ],
+    [
+      "Giver",
+      "Just keep going. The farmed land is right next to the mountain stream on your map."
+    ],
+    [
+      "Follower",
+      "Oh, okay. I see the farmed land now. Heading there."
+    ],
+    [
+      "Giver",
+      "Once you're at the farmed land, turn left."
+    ],
+    [
+      "Follower",
+      "Okay, turning left."
+    ],
+    [
+      "Giver",
+      "Head towards the dead tree."
+    ],
+    [
+      "Follower",
+      "I see the dead tree. Turning towards it."
+    ],
+    [
+      "Giver",
+      "Good. Pass the dead tree and keep going left."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see the lagoon you mentioned. I only see the lagoon further down."
+    ],
+    [
+      "Giver",
+      "The lagoon is right there. Turn right at the lagoon."
+    ],
+    [
+      "Follower",
+      "Okay, turning right at the lagoon."
+    ],
+    [
+      "Giver",
+      "Head towards the rockfall."
+    ],
+    [
+      "Follower",
+      "I see the rockfall. Heading there."
+    ],
+    [
+      "Giver",
+      "Pass the rockfall and turn left."
+    ],
+    [
+      "Follower",
+      "Okay, turning left."
+    ],
+    [
+      "Giver",
+      "Head towards the pirate ship."
+    ],
+    [
+      "Follower",
+      "I see the pirate ship. Turning towards it."
+    ],
+    [
+      "Giver",
+      "Good. Pass the pirate ship and turn right."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see a pirate ship there. I only see a computer controlled sub."
+    ],
+    [
+      "Giver",
+      "The pirate ship is right there. Just past the sub."
+    ],
+    [
+      "Follower",
+      "Oh, I see it now. Turning right."
+    ],
+    [
+      "Giver",
+      "Now head towards the green bay."
+    ],
+    [
+      "Follower",
+      "I see the green bay. Heading there."
+    ],
+    [
+      "Giver",
+      "Once you're at the green bay, turn left."
+    ],
+    [
+      "Follower",
+      "Okay, turning left."
+    ],
+    [
+      "Giver",
+      "Head towards the FINISH."
+    ],
+    [
+      "Follower",
+      "I see the FINISH. Done."
+    ],
+    [
+      "Giver",
+      "Great. Did you get it?"
+    ],
+    [
+      "Follower",
+      "Yep, looks like it."
+    ],
+    [
+      "Giver",
+      "Perfect. Thanks."
+    ],
+    [
+      "Follower",
+      "No problem."
+    ]
+  ],
+  "n_turns": 66,
+  "ended_by": "single_generation"
+}

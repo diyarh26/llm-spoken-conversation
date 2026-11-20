@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3664808756,
+  "conversation_no": 3508,
+  "topic": "Recycling",
+  "sb_prompt": "WHAT IS BEING DONE IN YOUR COMMUNITY OR AREA ABOUT RECYCLING WASTE MATERIALS?  DO YOU THINK MORE SHOULD BE DONE?  DO YOU HAVE ANY IDEAS ON HOW TO ENCOURAGE MORE RECYCLING OR ON WHAT OTHER MATERIALS SHOULD BE INCLUDED?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 45,
+    "education": "a college degree",
+    "occupation": "a carpenter",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 38,
+    "education": "a college degree",
+    "occupation": "a carpenter",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Yeah, hi there. How's it going?\nParticipantA: Good, good. Thanks for calling. I was just looking at the bins out back and thinking about it.\nParticipantB: Oh, yeah? What's up with the bins?\nParticipantA: Well, honestly, it feels like we're trying too hard and not getting much for it. My buddy Dave, he's got a workshop downtown, he told me last week they're choking on plastic bags.\nParticipantB: Ugh, plastic bags. Yeah, that's the worst part. My cousin works at the transfer station and he says they just burn half of it because it's too light to sort.\nParticipantA: Right? Exactly. It's just so wasteful. Dave says if we could just mandate a specific compostable bag type, maybe we'd save money, but the city won't do anything.\nParticipantB: That's frustrating. I feel the same way. My cousin says the city is stuck in the 90s with what they accept.\nParticipantA: Do you think they should just start taking electronics? My friend says people throw away phones and computers all the time.\nParticipantB: Oh, for sure. Electronics are a huge deal. My cousin says if we had a drop-off for batteries and phones, people would actually try harder to recycle.\nParticipantA: I like that idea. Maybe we could push for a community center spot? Dave says the city council is listening to stuff like that.\nParticipantB: Yeah, that might work. My cousin says the current system is broken without a dedicated place.\nParticipantA: What about glass? We have separate bins for glass, but do people actually use them?\nParticipantB: My cousin says nobody uses them. It's mostly just regular trash getting in the glass bin. It's a mess.\nParticipantA: Ugh, that's annoying. We should tell people to label the bins better. Maybe put pictures on them?\nParticipantB: Good point. Pictures would help a lot. My cousin says the words are too technical for most folks.\nParticipantA: Yeah, simple icons. Like a leaf or something.\nParticipantB: Sure, that could make a difference.\nParticipantA: So, do you think more needs to be done, or are we just being realistic?\nParticipantB: I think we definitely need to do more. The current stuff isn't enough.\nParticipantA: Me too. Dave says change is slow but it's coming.\nParticipantB: Yeah, hopefully. It's important.\nParticipantA: Well, I've got to get back to work. Dave is waiting on me.\nParticipantB: Oh, okay. Good luck.\nParticipantA: Thanks. Goodbye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 597,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

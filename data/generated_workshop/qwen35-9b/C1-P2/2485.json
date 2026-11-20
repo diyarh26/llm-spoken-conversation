@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1517412166,
+  "conversation_no": 2485,
+  "topic": "Family Reunions",
+  "sb_prompt": "DISCUSS PLANNING A FAMILY REUNION.  DRAW ON YOUR EXPERIENCES AND THOSE OF THE OTHER CALLER FOR MAKING THE NEXT GET-TOGETHER SUCCESSFUL AND MEMORABLE.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 45,
+    "education": "a high-school education",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 35,
+    "education": "a college degree",
+    "occupation": "a school bus driver",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Hi, this is Susan. Is this Mary?\nParticipantB: Yeah, it's Mary.\nParticipantA: Hey Mary, thanks for taking my call. I was hoping we could chat about family reunions. I've been thinking a lot about planning one lately.\nParticipantB: Oh, sure. Yeah, that's a good topic. My mom actually just made a big fuss about how we should do one this summer.\nParticipantA: That's great! My aunt tried to organize one last year and it kind of fell apart. Everyone was mad. I know exactly how that goes.\nParticipantB: Oh really? Tell me about that. Did you know my cousin on my mom's side? He had a huge meltdown at the last family thing.\nParticipantA: Yeah, I know him! He's the one who wouldn't RSVP. He showed up two hours late eating a cold pizza in the driveway. My aunt, she cried. She really did.\nParticipantB: Wow, that sounds tough. He's pretty much like that. Always making things awkward. I think that's why my mom is so stressed now. She's trying to figure out how to keep everyone from freaking out.\nParticipantA: That is exactly why I think we need to plan the next one carefully. I have this idea, you know? Maybe we don't invite everyone at once? Like, break it into smaller groups?\nParticipantB: Hmm. I guess that could work. My husband thinks it's a bad idea though. He says family is family, you just get them all in one room.\nParticipantA: But what if we just pick a few families first? Like, my husband's side and my mom's side, but keep them separate for dinner, then mix them for a game or something later?\nParticipantB: Oh, I see. That might actually be good. My sister-in-law always feels left out when it's a huge crowd. She's shy, you know?\nParticipantA: Exactly! And I could make a really nice potluck if we do smaller groups. Everyone brings one dish. I'll bring the salad and the bread.\nParticipantB: That sounds nice. I can bring a casserole. My mom's famous green bean casserole. She's the only one who makes it right.\nParticipantA: Oh, I love green bean casserole! That would be perfect. So, if we split the groups, who would you want to invite first?\nParticipantB: Well, I think I'd want to get the cousins on my dad's side first. They haven't seen each other in years. My uncle Bob is getting pretty old, you know.\nParticipantA: Oh, I'm sorry to hear that. Is he sick?\nParticipantB: No, just old. And his wife, she's really tight with my mom. If we just have the two of them and a couple of cousins, it won't be so overwhelming.\nParticipantA: That makes sense. I think I'd invite my brother and his family. He lives in the next town over, so it's easy for them.\nParticipantB: Yeah, that could work. Maybe we call them next week? And figure out the date. I know my boss is crazy busy, so I'm not sure when I can get off work.\nParticipantA: Oh, I get it. I work in an office, people think I'm just sitting there all day, but I have to answer phones and stuff. Sometimes I can't just leave if someone needs me.\nParticipantB: Oh, sorry to hear that. I drive a school bus. So I'm on the road all day. Sometimes I don't even get home until after my kids' dinner.\nParticipantA: No way! That's tough. I've heard stories about drivers, but I didn't think you actually drove a bus.\nParticipantB: Yeah, it's a lot. But the kids are good. One of them, actually, her dad has some health issues. She comes to my place sometimes after school to visit.\nParticipantA: Oh, really? That's nice of you. That's a lot of responsibility.\nParticipantB: Yeah. And because of that, I'm a little worried about a big reunion. If everyone comes together and there's drama, like my cousin Bob did last time, I don't think I can handle it.\nParticipantA: I totally get that. Last time my aunt cried because Bob showed up late. It was really hard on her. Maybe doing smaller groups helps avoid that kind of stress.\nParticipantB: Yeah, I think that's the key. If we keep it small, my mom won't be stressed, and my sister-in-law won't feel left out. And we can see how it goes before inviting everyone else.\nParticipantA: That sounds like a solid plan. Maybe we can try just your side of the family first? Like the cousins and your mom?\nParticipantB: Hmm, maybe not my mom. She needs her peace and quiet mostly. How about just the cousins? And maybe one or two aunts?\nParticipantA: Okay, so just the cousins on your dad's side and maybe one aunt? And I'll bring my brother and his family as a separate group?\nParticipantB: Yeah, that sounds manageable. I can talk to my mom and see if she wants to meet them too, but not at the same time.\nParticipantA: And I'll call my brother tomorrow to see if he can make it. He usually does, but he gets busy.\nParticipantB: Okay. Well, thanks for calling. I feel a little less stressed already just talking about splitting it up.\nParticipantA: Yeah, me too. It seems so much easier to manage. Okay, well I gotta run, my line is probably ringing for another caller soon.\nParticipantB: Oh, okay. Good luck with it.\nParticipantA: Thanks, bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 1264,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

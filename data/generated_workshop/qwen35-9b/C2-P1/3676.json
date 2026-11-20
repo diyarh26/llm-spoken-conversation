@@ -1,0 +1,277 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 3676,
+  "topic": "Movies",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THOUGHT ABOUT THE LAST FEW MOVIES THEY SAW. WHAT MOVIES HAVE YOU SEEN LATELY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've seen a few lately\u2014how about you? I saw that new sci-fi thing last night and honestly, I thought it was okay but a bit messy, kind of like grading a student's essay where they tried hard but missed the point."
+    ],
+    [
+      "ParticipantB",
+      "Oh, wow, that sounds exactly like fixing a car where all the parts are there but they don't quite line up, you know? Yeah, I saw that one too, actually. It was kind of a mess, honestly."
+    ],
+    [
+      "ParticipantA",
+      "Haha, right? It's like trying to tune an engine with parts from three different years; nothing ever works right. I actually saw *The Holdovers* a few weeks back, though\u2014that one felt real, like watching a real conversation between a teacher and a student who's struggling. You don't see a lot of that in the scripts anymore."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds real. I actually know a guy named Leo who's a high school teacher, and he told me about seeing that one with him, said it actually brought him to tears watching that kid figure things out."
+    ],
+    [
+      "ParticipantA",
+      "That's wild, man; I'm a teacher so that movie hit way harder than most stuff because it actually showed how hard it is to reach a kid who's checked out, like when my own nephew was going through a rough patch and he started showing up to class again after I just kept showing up to see him."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that hits different when you're living it, though I can only guess how it feels from the outside."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it was just seeing him write that one sentence on the exam and finally look up at me like he actually cared about what I said, kind of like fixing an old engine where you finally find that missing spark plug and suddenly it just roars to life."
+    ],
+    [
+      "ParticipantB",
+      "That's a beautiful way to look at it, honestly, though I'll admit I don't really get the \"spark plug\" part\u2014I'm more used to just yanking the whole engine out and rebuilding it from scratch if something's dead."
+    ],
+    [
+      "ParticipantA",
+      "Right, so for me it's all about finding that one missing piece, but I guess you're more used to ripping the whole thing apart and starting over, which makes total sense coming from the shop."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe I'm just used to banging heads against walls until something moves, but I get it, the feeling of the thing clicking into place is pretty special."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's just that moment when you stop fighting the machine and actually start trusting it again, which is a whole different kind of satisfaction than just throwing parts at it."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess I just don't have the patience for the slow build, but I respect that you found the moment where it actually worked for you."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, totally, and honestly it's nice to know someone gets that you can't just force it, you gotta wait for the right connection to happen."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I get it, but sometimes you gotta yank the whole thing apart to see if there's even an engine under there."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, point taken, I guess sometimes you just have to pull the head off to see if there's anything left inside, even if you hate doing it."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess if that kid just vanished forever, I'd probably feel like the car got totaled and there's nothing left to do but throw the keys in the trunk and leave."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's a harsh way to look at it, but you're right\u2014if the kid just ghosts you and never shows up, then yeah, it feels like the whole project is busted and there's no point in digging any deeper."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, man, you're probably right, I just get scared that if I don't dig deep enough, I'm gonna miss the only thing that was working there."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I get that fear, but honestly, with my own nephew, that quiet moment where he looked up was the only thing that made me keep trying instead of just giving up on him like you'd throw a wrecked car out the door."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I get that fear, but honestly with my own shop, sometimes the silence is so loud that I'm just scared to pull that whole thing apart because what's underneath might be nothing but junk."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that silence is the worst part though, isn't it? It feels like staring at an empty engine block wondering if you ever put a real motor in there at all."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it really is, like staring at a block of cast iron wondering if you ever put the real thing in there to begin with."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's just that silence is the hardest part, staring at that empty block wondering if you ever put anything real in there to begin with."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess the hardest part is knowing sometimes there's just no motor under there, but if I don't check every bolt, I'll never know."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the thing, isn't it? You gotta check every bolt to make sure there's even something worth fixing, but if you keep yanking things apart and find nothing, you just end up staring at that metal block wondering what you did with the rest of your life."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess I'm just terrified that if I stop looking for the engine and just stare at the metal, I'll never know why I started fixing cars in the first place."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's exactly it\u2014you know, I got nervous enough to call my own parents the other day to ask if I should quit teaching if I didn't find the right \"engine\" in those kids by next year, but they told me if I stop looking, I might never know who I even am."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's exactly why I stay up late checking every bolt, because if I stop looking, I'll never know why I started fixing cars in the first place, and honestly, I'm scared I might be staring at an empty block right now wondering where I went wrong."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the scary part, isn't it? Knowing that if I stop knocking on doors, I'll never know if I'm the guy who helps them turn over or just the guy standing there staring at the dead block while they drive away."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I know that feeling, man, because honestly if I stopped checking every bolt on my own car I'd probably have been driving a heap of rust to work this whole time."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think I'm gonna go back to school tomorrow and keep knocking on doors, even if it's just hoping that somewhere underneath it all there's still a motor running."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's probably the only reason I'm still here, checking under the hood every single day hoping I didn't just throw away the only thing that ever worked."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's just that I can't stop checking under the hood, man, because if I stop I'm afraid I'll never know if I ever actually put anything real into this life of mine."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess I'm just terrified that if I stop looking, I'll never know what I'm doing wrong under the hood."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess I'll just keep knocking on doors until I either find the engine or I finally admit I was standing on an empty block all along."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess I'll just keep yanking bolts until I either find the engine or I have to admit the whole thing was a heap of rust all along."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but at least I'm still knocking on doors, even if the house is empty; I'm scared that if I stop calling, I'll never know if the silence is just quiet or if there's nobody there at all."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, man, I think that's it\u2014sometimes you just gotta keep knocking on the door even if the house feels empty, because if you don't try, you never know if it's just quiet or if nobody's home at all."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, man, that's probably it\u2014I'm just scared that if I stop knocking, I'll never know if I ever actually taught anyone anything real."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, man, that's probably it\u2014I'm just scared that if I stop yanking those bolts, I'll never know if I'm the mechanic or just a guy staring at a pile of junk."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 2
+  },
+  "conversation_seed": 1442793270,
+  "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+  "run": {
+    "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+    "identity": {
+      "condition": "C2-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "90e78653f87b3d00f02c3bc4759891c48c15c8cf",
+    "created_utc": "2026-11-17T07:24:13.295312+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

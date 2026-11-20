@@ -163,21 +163,22 @@ def _p1_style() -> str:
     )
 
 
-def _p3_style() -> str:
-    # P3 (exploratory, INSTRUCTED — not part of the non-circular P0–P2 design): the P1 line
-    # with short spoken reactions shown by example. It names no act and gives no order;
-    # but it does show exactly the forms the metric counts, so P3 results are reported as
-    # "shown/instructed", never as emergent behavior.
-    return (
-        "Talk the way people actually do out loud on the phone — casual and uneven: "
-        'sometimes a sentence or two, sometimes just a word or two, like "uh-huh", '
-        '"yeah", "right" or "oh, really?". Let the conversation end naturally when it '
-        "feels finished; don't pad it out."
-    )
+# P3 (exploratory, INSTRUCTED — listener-gap test, outside the non-circular P0–P2 design):
+# P1 plus ONE sentence that explicitly permits a listener-only turn. It shows no example
+# and quotes no measured form, so P3−P1 isolates the effect of permission alone. If
+# listener turns stay near zero under P3, the gap is not a prompting artefact. Reported
+# as instructed, never as emergent.
+P3_LISTENER_OPTION = (
+    "Whenever someone would really just be listening while the other person talks, their "
+    "turn can be nothing more than a brief listener response of a word or two, and then "
+    "the other person carries on."
+)
 
 
 def _style(level: str) -> str:
-    return _p3_style() if level == "P3" else _p1_style()
+    if level == "P3":
+        return f"{_p1_style()} {P3_LISTENER_OPTION}"
+    return _p1_style()
 
 
 def _turn_status(history: list, max_turns: int | None) -> str:
@@ -242,8 +243,6 @@ def _fewshot_block(level: str, conversation_no: int | None = None, k: int = 2) -
     turn behavior. The only thing P2 adds over P1 is the examples themselves, so the P2−P1
     contrast isolates the effect of showing real conversation (a steerability probe). P2's
     marker/backchannel rates are therefore example-driven, reported as such."""
-    if level == "P3":
-        return _p3_fewshot_block()
     if level != "P2" or conversation_no is None:
         return ""
     try:
@@ -262,38 +261,6 @@ def _fewshot_block(level: str, conversation_no: int | None = None, k: int = 2) -
         f"\n\nHere are {len(picks)} short excerpts from real recorded telephone conversations "
         "between strangers on DIFFERENT topics, to show how this kind of call actually "
         f"sounds:\n\n{blocks}\n(End of examples.)\n"
-    )
-
-
-# P3 uses the SAME two pool excerpts for every conversation: the two richest in listener
-# behavior by their gold SwDA labels (6–7 backchannel-type turns of 12 each, incl. a
-# backchannel question, a turn continued through the partner's backchannel, and
-# unfinished turns). Chosen by gold-label counts over the 10-excerpt pool.
-P3_EXAMPLE_IDS = (3352, 2909)  # FISHING, IMMIGRATION
-
-
-def _p3_fewshot_block() -> str:
-    """P3: the fixed excerpts, each turn followed by its gold dialogue act in plain words."""
-    try:
-        from analysis.swda import load_fewshot_pool
-
-        by_id = {e["conversation_no"]: e for e in load_fewshot_pool()}
-        picks = [by_id[c] for c in P3_EXAMPLE_IDS if c in by_id]
-    except Exception:
-        picks = []
-    if len(picks) != len(P3_EXAMPLE_IDS):
-        # Never run P3 silently without its examples — that would be a different condition.
-        raise RuntimeError("P3 examples unavailable: extract the SwDA corpus (swda.zip)")
-    blocks = "\n\n".join(
-        f"Example {i} — two strangers talking about {e['topic'].title()}:\n{e['labeled_text']}"
-        for i, e in enumerate(picks, 1)
-    )
-    return (
-        f"\n\nHere are {len(picks)} short excerpts from real recorded telephone conversations "
-        "between strangers on DIFFERENT topics, to show how this kind of call actually "
-        "sounds. To help you, each example turn is followed by a label in [brackets] saying "
-        "what kind of turn it is. The labels are only for you — never write them in the "
-        f"conversation.\n\n{blocks}\n(End of examples.)\n"
     )
 
 

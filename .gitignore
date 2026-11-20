@@ -34,6 +34,8 @@ data/align/_work/
 *.zip
 # Unmodified public Christopher Potts SwDA distribution; see docs/SWDA_SOURCE.md.
 !/swda.zip
+!/data/maptask/archives/hcrcmaptask.nxtformatv2-1.zip
+!/data/maptask/archives/transcripts.zip
 
 # --- OS cruft ---
 .DS_Store
@@ -51,3 +53,9 @@ CLAUDE.md
 
 # Conversation explorer: the data bundle is rebuilt by explorer/build.py (and on deploy)
 explorer/data/
+
+# Editable-install metadata (pip install -e .)
+*.egg-info/
+
+# HCRC Map Task raw downloads (CC BY 4.0; re-download with python -m maptask.corpus --download)
+data/maptask_raw/

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1906052966,
+  "conversation_no": 3691,
+  "topic": "Pets",
+  "sb_prompt": "FIND OUT WHAT KIND OF PETS THE OTHER CALLER HAS.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 52,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 2,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 36,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Yeah, hi. Just wanted to see if I could ask you something real quick.\nParticipantB: Sure, shoot. What's up?\nParticipantA: I'm actually a real estate agent, just trying to chat with random people. Do you have any pets? Like dogs or cats?\nParticipantB: Oh, yeah, I do. Just a cat. A little orange tabby.\nParticipantA: Nice. I have a dog, a big golden retriever named Buster.\nParticipantB: That's cute. My cat's name is Mittens.\nParticipantA: Ah, Mittens. Well, you know, it's funny you ask about pets. I'm actually kind of skeptical about keeping them.\nParticipantB: Skeptical? What about?\nParticipantA: My buddy Dave, he's been married to his dog for like twenty years. His wife passed away a few years back, and he just couldn't let go. He refused to get another dog or even a cat. Just stuck with Buster. And honestly, it was kind of sad to watch him sit alone all day.\nParticipantB: Oh wow, that's really heavy. That's not what I thought at all.\nParticipantA: Yeah, it messed with me a little. So I've been thinking, maybe pets are just more trouble than they're worth? Like, maybe it's better to have a human roommate?\nParticipantB: Wait, really? Because my sister went through something similar. Her husband died, and she got a dog to help her cope. She said it was actually a lifesaver. She had to learn how to love another being again.\nParticipantA: Hmm. That's interesting. My friend Dave wouldn't hear of it. He said he couldn't trust another animal to be there for him the way his wife was. But your sister... that sounds different.\nParticipantB: Yeah, totally different. It depends on the person, I guess. For my sister, the dog was a bridge back to feeling okay. For Dave, it felt like a reminder he couldn't move on.\nParticipantA: That's a tough thing to decide. I think I just want a friend who won't pass away so fast. But yeah, maybe I'm being too cynical.\nParticipantB: Nah, it's understandable. You don't want to be alone, but you also don't want to lose someone else suddenly.\nParticipantA: Exactly. So, does your cat, Mittens, have any quirks? Like, does she give you grief?\nParticipantB: All the time. She knocks stuff off tables. And she sleeps on my bank teller uniform every morning.\nParticipantA: [Laughs] Oh no. That's annoying. Buster does the exact same thing. He'll jump on the counter while I'm working a showing.\nParticipantB: Ugh, same here. But at least he's warm. Sometimes I just want to kick him off.\nParticipantA: [Laughs] I feel you. It's a lot of responsibility, isn't it?\nParticipantB: Yeah, it is. But also... I really like him. Even when he kicks me off the bed.\nParticipantA: True. Maybe I'm just worried about losing someone I care about. But yeah, you're right, it's better than being alone.\nParticipantB: Definitely. Well, I gotta run, I've got a shift starting soon at the bank.\nParticipantA: Oh, okay. No problem. Thanks for chatting, by the way.\nParticipantB: You too. Take care!\nParticipantA: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 770,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,512 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m0",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 4167222500,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 1,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 32,
+    "dup_kept": 19
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi, can you see the big parking lot with the van in it? Go to that one."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to that parking lot."
+    ],
+    [
+      "Giver",
+      "Okay, turn left there. Go straight until you see a fence on your left. Keep going past the fence and then turn right."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning right now. I can't see a fence on my left though, just a lake. Do you mean the fence is on my right?"
+    ],
+    [
+      "Giver",
+      "No, the fence is on your left. Turn around and go back the way you came, then turn right at the fence."
+    ],
+    [
+      "Follower",
+      "Oh, sorry! I see the fence on my right now. I'm turning right at the fence."
+    ],
+    [
+      "Giver",
+      "Okay, once you are past the fence, go straight ahead until you come to a road. Turn left onto that road and keep going straight. You will see a garden on your right, make sure you pass it. Keep going until you reach a junction with a telephone box on your left. At that junction, turn right. Walk along the path next to the telephone box, then turn left again. Go straight past the telephone box until you see a monastery on your left. Turn right at the monastery and follow the path. You will reach the finish line there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning right at the fence now. I'm going straight ahead until I come to a road. I'll turn left onto that road and keep going straight. I can see a garden on my right, so I'll make sure to pass it. I'm keeping going until I reach a junction with a telephone box on my left. At that junction, I'll turn right. I'll walk along the path next to the telephone box, then turn left again. I'm going straight past the telephone box until I see a monastery on my left. I'll turn right at the monastery and follow the path. I hope this gets me to the finish line."
+    ],
+    [
+      "Giver",
+      "Just to be sure, can you tell me what landmarks you see immediately after turning right at the fence? Specifically, do you see the youth hostel or the disused monastery?"
+    ],
+    [
+      "Follower",
+      "No, I don't see either of those. I only see a flight museum on my left."
+    ],
+    [
+      "Giver",
+      "Right, the flight museum is a new thing on your map, ignore that. Don't go there. Keep going straight past the garden until you hit the road again, then turn left."
+    ],
+    [
+      "Follower",
+      "Okay, I'll keep going straight past the garden until I hit the road again, then turn left."
+    ],
+    [
+      "Giver",
+      "Wait, you're turning left? That's the wrong way. You need to keep going straight past the garden until you hit the road again, then turn left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm keeping going straight past the garden until I hit the road again, then turning left."
+    ],
+    [
+      "Giver",
+      "Don't turn left yet. Go straight on that road until you see the flight museum on your left, ignore it, and keep going until you hit the allotments on your right. Then turn left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going straight on that road until I see the flight museum on my left, I'll ignore it, and keep going until I hit the allotments on my right. Then I'll turn left."
+    ],
+    [
+      "Giver",
+      "Okay, once you turn left at the allotments, keep going straight on that path until you reach a road. At that junction, turn right. Follow the path alongside the road until you come to a large lake on your right. Keep going past the lake until you see a small hut on your right. Walk past the hut. Then, turn left onto the next path you see. Follow that path all the way until you reach the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the allotments now. I'm going straight on this path until I reach the road. At the junction, I'll turn right. I see a large lake on my right, so I'll keep going past it until I see the small hut. I'm walking past the hut now. Then I'll turn left onto the next path I see and follow it all the way."
+    ],
+    [
+      "Giver",
+      "Good, keep going past the lake until you see the hut. Have you seen a hut yet?"
+    ],
+    [
+      "Follower",
+      "No, I haven't seen a hut yet. I'm just walking past the lake. Do you mean the small hut near the end? I think I'm starting too early. What is it near?"
+    ],
+    [
+      "Giver",
+      "No, I mean the thatched mud hut. It's quite close to the finish line. You're just looking at the big lake there. Don't turn left yet. Keep walking along the path you're on. Just keep going straight. You'll see the hut on your right side very soon. Don't turn until you pass it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm keeping going straight past the lake and I don't see any hut on my right yet, just more water. Should I go further down the path?"
+    ],
+    [
+      "Giver",
+      "Yeah, keep walking straight along that path. You're just following the edge of the big lake right now. Don't look for a turn yet, just keep going until the water ends and you see land on your right side again. That's where the hut is waiting for you."
+    ],
+    [
+      "Follower",
+      "Okay, I'm keeping going straight. I can see the water ending now and some land on the right. Is that where the hut is?"
+    ],
+    [
+      "Giver",
+      "Yeah, that's it, that's the land. Now turn left there and go straight past the hut. Keep going until you see the monastery on your left, then turn right at the monastery. Follow that path all the way to the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the land and going straight past the hut. I'm keeping going until I see the monastery on my left."
+    ],
+    [
+      "Giver",
+      "Keep going straight past the hut, don't turn yet, just walk along that path until you spot the monastery on your left side."
+    ],
+    [
+      "Follower",
+      "I'm going straight past the hut now and looking for the monastery on my left."
+    ],
+    [
+      "Giver",
+      "Keep going straight along that path until you spot the monastery on your left side."
+    ],
+    [
+      "Follower",
+      "I'm still walking straight along that path and I can't see the monastery on my left yet."
+    ],
+    [
+      "Giver",
+      "Don't give up. Keep walking straight past the hut. The monastery isn't on the left; it's the flight museum further up ahead on your left. Turn left at the flight museum, then turn right immediately after. Follow that path to the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the flight museum now and then immediately turning right. I'll follow that path."
+    ],
+    [
+      "Giver",
+      "Right, so you are at the junction after the hut, turn right immediately onto that new path. Walk along it until you see the disused monastery on your left. Once you see it, turn right again and follow that path straight to the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning right at the junction after the hut now. I'm walking along that path and looking for the disused monastery on my left."
+    ],
+    [
+      "Giver",
+      "Keep looking to your left along this path, it's definitely there, just be careful not to mix it up with the flight museum again."
+    ],
+    [
+      "Follower",
+      "I'm walking along the path now, looking left... wait, I see a road on my left, not a garden. Is that the monastery? It looks like a big building."
+    ],
+    [
+      "Giver",
+      "No, that road is not the monastery. That is just a different road you've turned onto by mistake. You need to stay on the path you were just walking along. Keep walking straight past the hut. The monastery is further down that same path on your left side, not on a road to your left. Don't turn left yet. Keep going straight until you see the disused monastery building on your left."
+    ],
+    [
+      "Follower",
+      "Oh god, I'm walking straight past the hut then. I'm keeping my eyes peeled to the left for that big building. I don't see a road on the left anymore, I'm definitely still on the path."
+    ],
+    [
+      "Giver",
+      "Keep going straight. You will see the disused monastery on your left soon, just keep walking."
+    ],
+    [
+      "Follower",
+      "I'm walking straight now, I'm keeping an eye out to the left for the monastery building."
+    ],
+    [
+      "Giver",
+      "Keep going straight, don't turn yet, just keep walking along that path until you see the monastery building on your left."
+    ],
+    [
+      "Follower",
+      "Still walking straight, still can't see the monastery on the left."
+    ],
+    [
+      "Giver",
+      "Keep going, it's definitely there on that same path, it's just a bit further up than you think. Keep walking straight."
+    ],
+    [
+      "Follower",
+      "I'm still walking straight and I still can't see the monastery on the left. Did I go too far? Maybe I missed a turn somewhere?"
+    ],
+    [
+      "Giver",
+      "No, you haven't gone too far. You are looking for the wrong thing. The monastery isn't on a road; it's right next to the flight museum. Turn left at the flight museum, then turn right onto the path next to it. That's where the monastery is on your left. Go there now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning left at the flight museum now and then turning right onto the path next to it. I'm looking for the monastery on my left."
+    ],
+    [
+      "Giver",
+      "Okay, you're still looking at the wrong building. Ignore the flight museum completely. The monastery is not near the museum at all. It is further up the path you are on right now. Keep walking straight past the hut, then past the lake edge, then past the land, and then past the garden again. Keep going until you reach the junction where you turn right for the second time after the hut. Once you are on that second path, look to your left. The monastery is there, right next to the disused monastery building. You are looking for it on a different road than the one you are currently on. Just keep walking straight along this new path. The building will be on your left side very soon. Don't turn until you see it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm still going straight on this second path. I've passed the lake and the land again. I'm really starting to panic because I still can't see any building on my left. Is it possible the monastery is on your map but not on mine? Because I just see a long stretch of this path and nothing else."
+    ],
+    [
+      "Giver",
+      "Calmer, okay? It's definitely on your map. Look back at the spot where you turned right after the big lake. That was the first turn. Now, ignore everything else and keep walking straight on that exact same path you were just on. Do not turn left at the road. Do not turn right at the museum. Just walk straight. If you keep going straight, you will hit a junction. At that junction, turn right. Now, look to your left on this new path. The building is there."
+    ],
+    [
+      "Follower",
+      "Okay, I think I understand. I'm going to walk straight on the path past the lake and the land, ignoring the museum and the road, until I hit that junction you mentioned. Then I'll turn right onto that specific path and look to my left for the building. I'll keep going straight until I see it."
+    ],
+    [
+      "Giver",
+      "Okay, let's reset completely. Go back all the way to the start point where the cross is. From there, walk along the path to the camera shop, turn left, walk to the next junction, turn left again, go to the van, turn left, walk past the van, turn left at the fence, then go straight to the garden, turn left, go straight to the road, turn left, go straight past the flight museum, turn left at the allotments, turn left again, go straight to the lake, turn left, go straight past the hut, turn left, go straight until you see the monastery on your left, then turn right and follow that path to the finish. Do you see the start point?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm going back to the start now. I see the cross. I'm walking to the camera shop, turning left there, walking to the junction, turning left again. I'm going to the van, turning left, walking past the van, turning left at the fence, going straight to the garden, turning left, going straight to the road, turning left, going straight past the flight museum, turning left at the allotments, turning left again, going straight to the lake, turning left, going straight past the hut, turning left, going straight until I see the monastery on my left, then turning right and following that path to the finish."
+    ],
+    [
+      "Giver",
+      "No, stop. You don't go past the flight museum. You don't go to the allotments. You just keep going straight past the fence and the garden until you hit the road where the van is. Turn left at the van, then go straight. Once you are past the van, turn left again. Keep going straight until you see the youth hostel on your right. At that point, turn right. Follow that path until you see the disused monastery on your left. Then turn right and walk straight to the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going straight past the van and then turning left. I'm going straight until I see the youth hostel on my right. I'll turn right at the hostel and follow that path until I see the disused monastery on my left. Then I'll turn right and follow that path to the finish line."
+    ],
+    [
+      "Giver",
+      "Okay, I'm confused. You are turning left at the van, which is wrong. You need to turn left at the fence first. Then go straight past the garden and turn left at the van. Wait, you are still turning left at the van. You missed the fence completely. Go back to the fence. Do not turn left there. Go straight past the fence. Do not go to the van yet. Keep going straight past the garden until you see the youth hostel on your right. Stop. Turn right there. Do not turn left. Do not go to the van. Turn right at the hostel. Follow that path. You will see the disused monastery on your left. Turn right at the monastery. Then walk straight to the finish. Do you understand?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm going back to the fence now. I'm going straight past it and past the garden, ignoring the van completely, until I see the youth hostel on my right. I'll turn right there and follow that path to the finish."
+    ],
+    [
+      "Giver",
+      "Wait, no, that's still wrong. You need to go straight past the fence, past the garden, and then at the road where the van is, turn left. Then go straight until you see the youth hostel on your right. Then turn right at the hostel. Follow that path until you see the disused monastery on your left. Then turn right at the monastery. Then walk straight to the finish. Do you understand?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm going back to the fence now. I'm going straight past it and past the garden, and I'm going to keep going until I see the road with the van on it. Then I'll turn left at the van. After that, I'll go straight until I see the youth hostel on my right. I'll turn right at the hostel and follow that path until I see the disused monastery on my left. Then I'll turn right at the monastery and walk straight to the finish. Do you understand?"
+    ],
+    [
+      "Giver",
+      "Yes, I understand. Okay, start again from the very beginning at the cross. Go straight along the path until you see the camera shop on your left. Do not turn there. Keep going straight until you see the parked van on your left. Do not turn there either. Keep going straight past the van until you see the allotments on your right. Do not turn there. Keep going straight past the allotments until you see the large lake on your right. Do not turn there. Keep going straight past the lake until you see the small hut on your right. Do not turn there. Keep going straight past the hut. Do not turn left yet. Keep going straight until you see the disused monastery building on your left. Once you see it, turn right immediately and follow that path straight to the finish line. Do you understand?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting from the cross again. I'm going straight past the camera shop. I'm continuing straight until I see the parked van on my left. I'm not turning yet. I'm going straight past the van until I see the allotments on my right. I'm not turning there either. I'm going straight past the allotments until I see the large lake on my right. I'm not turning there. I'm going straight past the lake until I see the small hut on my right. I'm not turning there. I'm going straight past the hut. I'm not turning left yet. I'm going straight until I see the disused monastery building on my left. Once I see it, I'll turn right immediately and follow that path straight to the finish line. Do you understand?"
+    ],
+    [
+      "Giver",
+      "Good. Just keep going straight. You will see the disused monastery on your left very soon. Turn right there and follow the path to the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going straight past the hut now. I'm keeping my eyes peeled to the left for that big building. I think I see something on the left now, it looks like a large structure. Is that the monastery? Should I turn right now?"
+    ],
+    [
+      "Giver",
+      "Yes, that is the monastery. Turn right now and walk straight along that path until you reach the finish line."
+    ],
+    [
+      "Follower",
+      "Yes, I see it, it looks like a big stone building on the left. Okay, I'm turning right now and walking straight towards the finish line."
+    ],
+    [
+      "Giver",
+      "Good, keep walking straight along that new path. You are very close now. The finish line is right at the end of this path. Just follow it straight ahead. Don't look for any more landmarks, just keep going until you see the line drawn on your map. Are you sure you are still on the right path and haven't turned left accidentally?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning right now and walking straight towards the finish line. I see the finish line straight ahead at the end of this path. I'm following it. Do I need to do anything else?"
+    ],
+    [
+      "Giver",
+      "Yes, that is correct. Keep walking straight along that path until you see the line drawn on your map. Are you sure you are still on the right path and haven't turned left accidentally?\nOkay, let's just confirm one last time. You are on the path that goes past the monastery on your left, right? Just follow that path to the very end where the cross is. You should see the finish line right ahead of you now. Are you there yet?"
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish line right ahead of me now. I'm turning right at the monastery and walking straight along that path. I'm definitely on the right path and I haven't turned left accidentally. Yes, I am there."
+    ],
+    [
+      "Giver",
+      "Yes, you are there. Perfect. You have successfully followed the route from start to finish. Congratulations. Well done."
+    ],
+    [
+      "Follower",
+      "Yes, I am there. The finish line is right in front of me now. I'm just walking straight to it. I've got it. Thanks for your help."
+    ],
+    [
+      "Giver",
+      "You are there. Perfect. You have successfully followed the route from start to finish. Congratulations. Well done."
+    ],
+    [
+      "Follower",
+      "You're welcome! I'm glad we got it right. Thanks for walking me through it."
+    ],
+    [
+      "Giver",
+      "You're welcome! I'm glad we got it right. Thanks for walking me through it."
+    ],
+    [
+      "Follower",
+      "You're welcome! I'm glad we got it right. Thanks for walking me through it."
+    ],
+    [
+      "Giver",
+      "You're very welcome, and I'm glad we got it right too. Thanks for sticking with it all the way to the end."
+    ],
+    [
+      "Follower",
+      "No, that's it! I can see the finish line right in front of me now. I'm going straight to it. Thanks!"
+    ],
+    [
+      "Giver",
+      "Right, don't say thank you yet, just keep walking straight along that path to the very end where the cross is. You will see the finish line right ahead of you now. Are you there yet?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm keeping going straight along that path towards the cross at the end. I'm definitely not turning left. I'm just walking straight to where the line is. Okay, I'm there."
+    ],
+    [
+      "Giver",
+      "Perfect, that's it, just walk straight to the cross and you're done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight now towards the cross at the end. I haven't turned left. I'm just walking to where the line is."
+    ],
+    [
+      "Giver",
+      "Keep walking straight along that path to the very end where the cross is."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight now towards the cross at the end. I haven't turned left. I'm just walking to where the line is."
+    ],
+    [
+      "Giver",
+      "Keep going straight. Just a little bit more and you'll hit the cross."
+    ],
+    [
+      "Follower",
+      "Okay, keep going straight, just a little bit more and I'll hit the cross."
+    ],
+    [
+      "Giver",
+      "Keep going straight, just a little bit more and you'll hit the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight now, just a little bit more and I'll hit the cross."
+    ],
+    [
+      "Giver",
+      "Keep going, you're almost there, just a little bit further and you'll hit the cross at the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going straight now, just a little bit more and I'll hit the cross."
+    ],
+    [
+      "Giver",
+      "Keep going, just a little bit more and you'll hit the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going straight, just a little bit more and I'll hit the cross."
+    ],
+    [
+      "Giver",
+      "Keep going, just a little bit more and you'll hit the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going straight, just a little bit more and I'll hit the cross."
+    ],
+    [
+      "Giver",
+      "Keep going, just a little bit more and you'll hit the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going straight now, just a little bit more and I'll hit the cross."
+    ],
+    [
+      "Giver",
+      "Keep going, just a little bit more and you'll hit the cross."
+    ],
+    [
+      "Follower",
+      "I'm going straight now, just a little bit more and I'll hit the cross."
+    ],
+    [
+      "Giver",
+      "Keep going, just a little bit more and you'll hit the cross."
+    ],
+    [
+      "Follower",
+      "I'm going straight, just a little bit more and I'll hit the cross."
+    ],
+    [
+      "Giver",
+      "Come on, please move forward. I can see the finish line is just right there in front of you now. Just walk past that point and you will reach the cross. Don't stop yet, keep going straight for a moment."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving forward past that point now, just keeping straight for a moment, and I can see the cross ahead."
+    ],
+    [
+      "Giver",
+      "Keep going straight, just a little bit more and you'll hit the cross."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving forward, I'm going to keep going straight, I'm going to turn left at the fence, I'm going to turn left at the van, I'm going to turn left at the allotments, I'm going to turn left at the lake, I'm going to turn left at the hut, I'm going to turn left at the monastery, I'm going to turn right at the monastery, and I'm going to walk straight to the finish."
+    ],
+    [
+      "Giver",
+      "Wait, stop! You are going back to the wrong things again! Do not turn left at the fence, do not turn left at the van, do not turn left at the allotments, do not turn left at the lake, do not turn left at the hut, do not turn left at the monastery! Just keep going straight the whole time from the start point until you see the disused monastery on your left, then turn right and walk straight to the finish line. Don't turn left anywhere else!"
+    ],
+    [
+      "Follower",
+      "Okay, I'm going straight from the start, past the camera shop, past the van, past the allotments, past the lake, past the hut, and I'm not turning left anywhere, just keeping going straight until I see the disused monastery on my left, then I'll turn right and walk straight to the finish line."
+    ],
+    [
+      "Giver",
+      "Okay, keep going straight past the camera shop, past the van, past the allotments, past the lake, past the hut, and you will see the disused monastery on your left very soon. Once you see it, turn right immediately and walk straight to the finish. Don't turn left anywhere else. Do you see the monastery now?"
+    ],
+    [
+      "Follower",
+      "I keep going straight past the camera shop, past the van, past the allotments, past the lake, past the hut, and I'm looking for the monastery on my left. I can't see it yet."
+    ],
+    [
+      "Giver",
+      "Don't panic. You are definitely walking in the right direction on the second path. Keep your eyes on the left side. The disused monastery is right there, just a little bit further up along this same path you are on. It's a big building. Keep going straight until you see it on your left. Then you can turn right."
+    ],
+    [
+      "Follower",
+      "Keep going straight, I'm looking to my left now. I see a big building on the left, is that the disused monastery?"
+    ],
+    [
+      "Giver",
+      "Yes, that big building is the disused monastery. Turn right immediately and walk straight to the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I see it on my left now, it looks like the big building you said. I'm turning right immediately and walking straight to the finish line."
+    ],
+    [
+      "Giver",
+      "Good, keep walking straight along that new path until you reach the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I see the big building on my left now, that's the monastery. I'm turning right immediately and walking straight to the finish line."
+    ],
+    [
+      "Giver",
+      "Good, keep walking straight along that new path until you reach the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning right now and walking straight along that new path until I reach the finish line."
+    ],
+    [
+      "Giver",
+      "Keep walking straight along that new path until you reach the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I see the big building on my left, that must be the disused monastery. I'm turning right now and walking straight to the finish line."
+    ],
+    [
+      "Giver",
+      "Keep walking straight along that new path until you reach the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning right now and walking straight to the finish line. I see it ahead. Just keep going straight along this path. I'm going to walk to the finish. I'm almost there. I can see the line. Okay, I'm walking straight to the cross now. I'm done. I've got it. Thanks. I'm finished. Yes, I'm there. Okay, that's it. I'm walking straight to the finish line. I see the cross. I'm done. Thank you. Bye."
+    ],
+    [
+      "Giver",
+      "You're welcome! I'm glad we got it right. Thanks for walking me through it.\nYou're very welcome, and I'm glad we got it right too. Thanks for sticking with it all the way to the end.\nNo, that's it! I can see the finish line right in front of me now. I'm going straight to it. Thanks!\nRight, don't say thank you yet, just keep walking straight along that path to the very end where the cross is. You will see the finish line right ahead of you now. Are you there yet?\nOkay, I'm keeping going straight along that path towards the cross at the end. I'm definitely not turning left. I'm just walking straight to where the line is. Okay, I'm there.\nPerfect, that's it, just walk straight to the cross and you're done.\nOkay, I'm walking straight now towards the cross at the end. I haven't turned left. I'm just walking to where the line is.\nKeep walking straight along that path to the very end where the cross is.\nOkay, I'm walking straight now towards the cross at the end. I haven't turned left. I'm just walking to where the line is.\nKeep going straight. Just a little bit more and you'll hit the cross.\nOkay, keep going straight, just a little bit more and I'll hit the cross.\nKeep going straight, just a little bit more and you'll hit the cross.\nOkay, I'm walking straight now, just a little bit more and I'll hit the cross.\nKeep going, you're almost there, just a little bit further and you'll hit the cross at the finish.\nOkay, I'm going straight now, just a little bit more and I'll hit the cross.\nKeep going, just a little bit more and you'll hit the cross.\nOkay, I'm going straight, just a little bit more and I'll hit the cross.\nKeep going, just a little bit more and you'll hit the cross.\nOkay, I'm going straight, just a little bit more and I'll hit the cross.\nKeep going, just a little bit more and you'll hit the cross.\nOkay, I'm going straight now, just a little bit more and I'll hit the cross.\nKeep going, just a little bit more and you'll hit the cross.\nI'm going straight now, just a little bit"
+    ]
+  ],
+  "n_turns": 119,
+  "ended_by": "closing"
+}

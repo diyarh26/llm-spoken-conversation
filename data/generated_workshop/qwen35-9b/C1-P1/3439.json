@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 101564228,
+  "conversation_no": 3439,
+  "topic": "Credit Card Use",
+  "sb_prompt": "PLEASE DISCUSS CREDIT CARDS.  FIND OUT HOW THE OTHER CALLER MAKES USE OF CREDIT CARDS.  HOW DO THEY COMPARE TO YOUR OWN?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 51,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 1,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Yeah, sure, go ahead.\nParticipantA: Oh, hi. I'm actually just calling because I was asked to chat about credit cards, and I figure you're pretty much my equal in that... well, not necessarily, but you know?\nParticipantB: Right, right. Yeah, I get that. I'm doing the same thing. It's a bit weird talking to a stranger about money, isn't it?\nParticipantA: A little. Yeah, definitely. So, what's your story?\nParticipantB: Well, I work in an office, front desk, so I see a lot of people come in. I'm twenty-six, just graduated. I had one for years, the little blue one from the bank.\nParticipantA: Oh, the blue one? That's the old school stuff. I'm fifty-one, got a degree from community college, work as an insurance adjuster. I've had a card forever.\nParticipantB: Right, yeah. And honestly, it sits kind of funny with me. Part of it is good, you know? It helps if you have an emergency. But then other parts... well, I don't like it.\nParticipantA: Yeah, me too. It's a mixed bag. I've made up my mind years ago about it without really being able to say why exactly. Just felt wrong, I guess?\nParticipantB: Exactly! It feels like a trap sometimes. My cousin, she's in debt up to her ears because of one. She's thirty, married, house payment, car payment, and this card just ate her whole paycheck.\nParticipantA: Oh man, that sucks. That's why I stopped using it for day-to-day stuff years ago. I only use it for travel or big bills once in a while. Never for coffee.\nParticipantB: Good for you. I still use mine occasionally, but mostly just emergencies. Food, gas, something broke. But I never buy the stuff I don't need.\nParticipantA: Yeah, I think that's the key. If you don't have the stuff, don't buy it. My card just sits there paying interest if I don't pay it off every month.\nParticipantB: Right, that's the scary part. The interest. You know, my cousin told me about how she got screwed over. Said she owed like four times what she had.\nParticipantA: Four times? Wow. That's a nightmare. I'm glad I didn't end up there.\nParticipantB: Yeah, me too. I feel like I'm walking a tightrope. If I use it too much, I'm in trouble. If I don't use it at all, my credit score drops.\nParticipantA: That's the other thing that bugs me. The fine print. I don't read it. I just know I have to be careful.\nParticipantB: Exactly. And it's just... it feels like someone else is spending your money. Even if it's just a few bucks a month.\nParticipantA: Yeah, I feel that. Like the bank is always watching.\nParticipantB: Well, I think I'm doing okay so far. Just paying it off every month. No debt hanging over my head.\nParticipantA: That's good. That's a good strategy. Just live within your means, I guess.\nParticipantB: Yeah, exactly. My cousin's mistake was thinking she could pay it off later. She couldn't.\nParticipantA: Yeah, that's the thing. I never want to be in that position. I made my peace with it years ago. It's a tool, not a toy.\nParticipantB: Totally agree. It's a tool, but a dangerous one.\nParticipantA: Right. Well, I think that's enough for now. I should probably stop.\nParticipantB: Yeah, me too. Thanks for chatting.\nParticipantA: No problem. Take care.\nParticipantB: You too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 851,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

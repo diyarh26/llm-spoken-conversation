@@ -1,0 +1,220 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m3",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 2921281141,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 6,
+    "dup_kept": 3
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hey, I'm starting at the cross. Go straight down, keeping the cliffs on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down the path. I'm passing the forge on my left, but there's also a green bay up top to my right. I'll keep the pine forest on my left and head towards the bakery. I'm going to draw a line there."
+    ],
+    [
+      "Giver",
+      "Wait, hold on. The forge is at the bottom, not up near the green bay. Turn back up towards the old pine, then go straight down past the pine forest. Keep the bakery on your right, not the left."
+    ],
+    [
+      "Follower",
+      "Right, you're right. I'm turning back up towards the old pine, then heading down past the forest. I'll make sure to keep the bakery on my right this time."
+    ],
+    [
+      "Giver",
+      "Right, keep going down past the forest until you hit the wheatfields. Once you're there, turn right and head straight toward the bakery. Make sure you keep the bakery on your right side as you pass it. Then, when you reach the canal, turn left and follow the canal all the way to the crane bay. Once you're at the bay, turn left again and head inland toward the rocket warehouse. Keep the warehouse on your left. Then turn right and head down toward the cave. Go right past the cave, then turn left and head straight up toward the old lighthouse. Once you're at the lighthouse, turn right and walk down the path to the finish. Are you at the lighthouse yet?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving down past the pine forest now. I see the bakery on my right and the wheatfields there too, so I'm turning right toward the bakery. Once I pass it, I'll follow the canal to the left to get to the crane bay, then head inland toward the rocket warehouse. I'm keeping the warehouse on my left. After that, I'll turn right to find the cave, go past it, and head up to the old lighthouse. Then I'll turn right and go down to the finish."
+    ],
+    [
+      "Giver",
+      "Don't turn into the green bay; keep going down until you hit the wheatfields, then turn right toward the bakery."
+    ],
+    [
+      "Follower",
+      "Right, I'm heading straight down past the forest now, away from the green bay. I'll keep the bakery on my right, cross over it, and then head left along the canal until I hit the crane bay. From there I'll turn inland to the rocket warehouse, keep it on my left, then turn right toward the cave. I'll go past the cave and head up to the lighthouse, then turn right and go down to the finish."
+    ],
+    [
+      "Giver",
+      "Good, now you're on the right track. Just keep going straight past the bakery and the wheatfields until you see the canal on your right. Follow it left all the way until you hit the crane bay."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading straight down the path past the old pine, away from that green bay at the top. I'm going to make sure I keep the pine forest on my left until I reach the wheatfields. Once I'm at the fields, I'll turn right and head for the bakery, making sure to pass it on my right side. Then I'll follow the canal on my left to get to the crane bay. From the bay, I'll go inland to the rocket warehouse, keeping it on my left, then turn right past the cave and head up to the old lighthouse. Finally, I'll turn right and walk down to the finish line."
+    ],
+    [
+      "Giver",
+      "Okay, wait. You said you're going left along the canal? That's wrong. The canal is on your right. Turn right immediately after the bakery and keep the canal on your right side as you go up. Don't follow it to the left. Just follow it until you see the crane bay on your left, then turn left toward the rocket warehouse."
+    ],
+    [
+      "Follower",
+      "Okay, wait, I was confused about the canal direction. If the canal is on my right, I need to turn right after the bakery, not left. So I'll go straight past the bakery, keep the wheatfields on my left, and then head right along the canal until I see the crane bay on my left. Once I hit the bay, I'll turn left toward the rocket warehouse, keep it on my left, then turn right to find the cave, go past it, and head up to the lighthouse. Finally, turn right and walk down to the finish."
+    ],
+    [
+      "Giver",
+      "Wait, hold on. If you keep the canal on your right, you're heading away from the crane bay. The canal runs along the edge of the wheatfields, so you need to turn right at the bakery and follow it *towards* the canal, keeping it on your right, until you reach the crane bay on the left. Then turn left to the warehouse."
+    ],
+    [
+      "Follower",
+      "Right, so I turn right at the bakery heading up towards the canal on my right, not left. I keep following it up until the crane bay appears on my left. Once I see the bay, I turn left to go inland to the rocket warehouse, keep it on my left, then turn right to the cave, go past it, head up to the lighthouse, turn right, and walk down to the finish."
+    ],
+    [
+      "Giver",
+      "Okay, listen carefully. You have the cave on your map but I don't, so ignore it. Do not go near the cave yet. From the warehouse, head straight up the coast, not inland, until you reach the old lighthouse at the very bottom edge. Then turn right and walk down the path to the finish. Are you at the lighthouse now?"
+    ],
+    [
+      "Follower",
+      "Okay, got it. I'll ignore the cave entirely. I'll go straight up from the warehouse along the coast until I see the lighthouse at the bottom edge, then turn right and walk down to the finish."
+    ],
+    [
+      "Giver",
+      "Hold on, wait. You're going straight up the coast? No, that's wrong. The coast is to the east. You need to head *west* inland from the warehouse. Keep the warehouse on your left, go straight up until you hit the old lighthouse. Then turn right and walk down to the finish. Are you there now?"
+    ],
+    [
+      "Follower",
+      "Okay, got it. I'll stop heading up the coast and turn left instead to head west inland from the warehouse, keeping it on my left as I go up until I hit the old lighthouse. Then I'll turn right and walk down to the finish."
+    ],
+    [
+      "Giver",
+      "Good, from the lighthouse just turn right and walk straight down the path to the finish. Are you there yet?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm turning right at the lighthouse and walking straight down the path. I'm heading for the finish line."
+    ],
+    [
+      "Giver",
+      "Are you there yet?"
+    ],
+    [
+      "Follower",
+      "I'm turning right at the lighthouse and walking down the path toward the finish."
+    ],
+    [
+      "Giver",
+      "Are you at the finish line yet?"
+    ],
+    [
+      "Follower",
+      "I'm turning right and walking down the path. I'm heading for the finish line."
+    ],
+    [
+      "Giver",
+      "I'm asking, are you at the finish line yet?"
+    ],
+    [
+      "Follower",
+      "I'm heading down the path now. I should be almost there."
+    ],
+    [
+      "Giver",
+      "Keep going down the path, just a bit further, and you should hit the finish line right there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down the path now, keeping the old lighthouse on my left as I go. I should be almost there."
+    ],
+    [
+      "Giver",
+      "Keep going straight down that path, just past the lighthouse, and you'll see the finish line right there at the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down past the lighthouse now. I'm looking for the finish line."
+    ],
+    [
+      "Giver",
+      "Yeah, keep going down past the lighthouse, but watch out, the finish line is right there at the bottom edge, don't go too far south past it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down past the lighthouse now. I'm looking for the finish line at the bottom."
+    ],
+    [
+      "Giver",
+      "Keep going straight down, just a little bit further, and you will see the finish line right there at the bottom edge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down past the lighthouse now, keeping it on my left as I go. I'm looking for the finish line at the bottom."
+    ],
+    [
+      "Giver",
+      "Keep going straight down past the lighthouse, just a tiny bit further, and you will see the finish line right there at the bottom edge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down past the lighthouse now, keeping it on my left as I go. I'm looking for the finish line at the bottom."
+    ],
+    [
+      "Giver",
+      "Keep going straight down past the lighthouse, just a tiny bit further, and you will see the finish line right there at the bottom edge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down past the lighthouse now, keeping it on my left as I go. I'm looking for the finish line at the bottom."
+    ],
+    [
+      "Giver",
+      "Stop repeating yourself. Just draw a line from the lighthouse to the finish line at the bottom edge of the map, straight down. Are you done?"
+    ],
+    [
+      "Follower",
+      "Okay, you're right, I've been looping. I'm going to draw a straight line from the lighthouse down to the finish line at the bottom edge now. I'm done."
+    ],
+    [
+      "Giver",
+      "Good, keep that line going straight down until you hit the cross at the bottom, that's the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a straight line down from the lighthouse to the cross at the bottom edge."
+    ],
+    [
+      "Giver",
+      "Good, that looks right. Now that you have the line drawn from the lighthouse down to the cross, you are finished. We can hang up."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line straight down from the lighthouse to the cross at the bottom. I'm done."
+    ],
+    [
+      "Giver",
+      "Good, I see you've finished the line. Are you at the finish line now?"
+    ],
+    [
+      "Follower",
+      "Okay, I've just drawn the line from the lighthouse down to the cross at the bottom. I'm done."
+    ]
+  ],
+  "n_turns": 46,
+  "ended_by": "closing"
+}

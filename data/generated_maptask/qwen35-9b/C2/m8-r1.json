@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m8",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1116883436,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 1,
+    "multi_turn_emissions": 1,
+    "dup_resamples": 69,
+    "dup_kept": 58
+  },
+  "turns": [
+    [
+      "Giver",
+      "Start is over there. Go up to the edge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the edge. I see the telephone kiosk there, just like you said. What's next?"
+    ],
+    [
+      "Giver",
+      "Go past the kiosk, keep going up left until you hit the stone circle on your left, then turn right and follow the path along the bottom edge to the start of the hill."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see a stone circle on my map at all. What is it? Is it the broken gate? Because that's the only thing near the bottom edge here."
+    ],
+    [
+      "Giver",
+      "No, that's not it. The stone circle is right here, just west of the start, on the very edge. You don't have it on your map, but you're standing next to it. Turn right from the kiosk, walk past the circle on your left, then follow the path down the left edge to the bottom corner."
+    ],
+    [
+      "Follower",
+      "Okay, where exactly is this circle? I'm looking at the bottom left corner and I only see a broken gate right there, nothing else. Can you tell me what to do from the kiosk to the gate? Just walk straight down?"
+    ],
+    [
+      "Giver",
+      "Yes, just walk straight down from the kiosk to the gate, then ignore it and keep going up the left edge until you hit the edge of the map, then turn right at the very top left corner."
+    ],
+    [
+      "Follower",
+      "Okay, I'll walk straight down to the broken gate. Wait, I see something here... just west of the gate, on the very edge, there's a little circle of stones. Is that the stone circle you're talking about? It's not on my map, but it's right there. So I walk to the gate, look left, see the circle, turn right and go up the left edge to the corner?"
+    ],
+    [
+      "Giver",
+      "Yes, that's the one. Now turn right and go up the left edge to the very top left corner of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking down to the gate, looking left for the stones, and when I see them, I'll turn right and head up to that corner."
+    ],
+    [
+      "Giver",
+      "Okay, now that you're at the top left corner, turn right and head down the left edge until you reach the stile, which is the one I marked on my map at the bottom of that little dip, then keep going past it on the right side of the path until you see the dead tree on your left, and once you pass it, turn right again to follow the path up towards the ruined monastery, then keep going straight until you reach the meadow on the right, turn left there and follow the path down until you see the great viewpoint on your left, then turn right and follow the path down to the FINISH. Wait, no, let me start again from where you are. You're at the top left corner, turn right, go down to the stile, then go past it and you'll see the dead tree on your left, turn right there, go up to the monastery, then go down to the meadow, turn left, go up to the viewpoint, then turn right and go down to the FINISH."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the top left corner now. I'll turn right and head down the left edge until I reach the stile at the bottom of the dip, then keep going past it on the right side of the path until I see the dead tree on my left, and once I pass it, I'll turn right again to follow the path up towards the ruined monastery."
+    ],
+    [
+      "Giver",
+      "Good, so from the corner, go down to the stile at the bottom of the dip, walk past it, see the dead tree on your left, turn right, go up to the monastery, then come down to the meadow on the right, turn left, go up to the viewpoint on your left, and finally turn right to go down to the FINISH."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down to the stile at the bottom of that dip, walking past it until I see the dead tree on my left, then I'll turn right and head up towards the monastery."
+    ],
+    [
+      "Giver",
+      "Wait, hold on. You're heading up to the monastery, but you need to go down to the meadow first. From the stile, keep going past the dead tree on your left, then turn right again, but this time head down towards the meadow on the right. Once you're at the meadow, turn left and follow the path up to the great viewpoint on your left. Then, turn right and follow the path down to the FINISH. Don't go up to the monastery at all yet, keep going down to the meadow."
+    ],
+    [
+      "Follower",
+      "Wait, hold on. You said don't go to the monastery at all, keep going down to the meadow? Okay, so from the stile, I walk past the dead tree, turn right, and head straight down to the meadow on the right. Once I get to the meadow, I turn left and follow the path up to the viewpoint? But the viewpoint is way up near the top, isn't it? That seems like a long way back up. Is that right?"
+    ],
+    [
+      "Giver",
+      "Yes, it is, but don't worry about the distance yet, just keep going straight down from the dead tree until you see the meadow on your right side, then turn left there and follow the path up to the viewpoint, then turn right and go all the way down to the FINISH."
+    ],
+    [
+      "Follower",
+      "Okay, so I'll walk past the dead tree, head straight down to the meadow on the right, turn left there, follow the path up to the viewpoint, then turn right and go down to the finish."
+    ],
+    [
+      "Giver",
+      "Yes, the viewpoint is up there at the top near the edge, so you have to go up there first before coming back down. Just keep going straight down from the dead tree until you see the meadow on your right, turn left, follow that path up to the viewpoint, and then once you are at the viewpoint, turn right and follow the path down to the FINISH."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking past the dead tree now, heading straight down the path on the right. I see the meadow just ahead on my right side. I'll turn left there and follow that path up to the viewpoint. Wait, I see a \"popular tourist spot\" on my map near where the path goes up... is that the viewpoint? It's right there at the top. I'll follow the path up to that spot, then turn right and head down to the finish."
+    ],
+    [
+      "Giver",
+      "No, that's not the viewpoint. That tourist spot is down near the rocket launch pad; the viewpoint is way up at the top edge, near the great viewpoint I marked. You've passed it already. You're supposed to turn left at the meadow and keep going up to the edge, then come back down to the finish."
+    ],
+    [
+      "Follower",
+      "Wait, I think I see what you mean now. I was heading straight down past the dead tree, but looking closer at the map, the meadow is actually to the right of that dead tree. So I should have turned left at the meadow, not gone all the way down past it. Okay, I'll turn left now at the meadow and follow the path up to the viewpoint."
+    ],
+    [
+      "Giver",
+      "Good, keep going up that path past the tourist spot until you hit the top edge of the map, then look for the great viewpoint which is just off the edge there, turn left towards it, walk past it, then turn right and head down towards the FINISH."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path now. Wait, I see the \"popular tourist spot\" right there... is that the viewpoint you're talking about? It's exactly where the path hits the top edge. I'll turn left there, walk past it, and then turn right to head down to the finish."
+    ],
+    [
+      "Giver",
+      "No, wait, that tourist spot is not the viewpoint. That one is down near the rocket launch pad. The viewpoint I'm talking about is the one at the very top edge, near the great viewpoint. You need to keep going up past that tourist spot until you hit the top edge of the map, then look for the great viewpoint which is just off the edge there, turn left towards it, walk past it, then turn right and head down towards the FINISH."
+    ],
+    [
+      "Follower",
+      "Wait, I think I'm confused. You keep saying the tourist spot is down near the rocket launch pad, but I'm already at the top edge of the map. Where is the \"great viewpoint\" you keep mentioning? I only see that one tourist spot up here at the top, and nothing else nearby. Can you tell me which one is the real viewpoint? Is it the one right here at the top, or did I miss something up near the edge?"
+    ],
+    [
+      "Giver",
+      "The one you are looking at right now, at the very top edge, is the one. Just ignore the other one down low. Once you are at that top viewpoint, turn right and walk straight down towards the ruined monastery, then keep going down past the monastery to the FINISH."
+    ],
+    [
+      "Follower",
+      "Okay, got it. I'm at the top edge near that spot. I'll turn right and head down towards the ruined monastery, passing it, and then continue straight down to the FINISH. I think that's it."
+    ],
+    [
+      "Giver",
+      "Good, keep going down past the monastery until you reach the FINISH, which is right there on the path just below it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the top edge towards the monastery. I see the ruined monastery on my left now, so I'll pass it and keep going straight down the path to the finish."
+    ],
+    [
+      "Giver",
+      "Keep going down, you've passed the monastery, just follow the path straight down to the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down now, I've passed the monastery, and I see the finish just ahead on the path."
+    ],
+    [
+      "Giver",
+      "Good, keep going down the path from the top edge, past the ruined monastery, and you will reach the FINISH just below it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down the path now. I've passed the monastery on my left, and I can see the finish just ahead on the path."
+    ],
+    [
+      "Giver",
+      "Keep going down past the monastery and you'll hit the finish straight away, it's just below it on the path."
+    ],
+    [
+      "Follower",
+      "Okay, I see the finish just below the monastery on the path. I'll keep going down there now."
+    ],
+    [
+      "Giver",
+      "Keep going down the path, you're very close now, the finish is just below the monastery on your left."
+    ],
+    [
+      "Follower",
+      "I'll keep walking down the path from the top edge. I'm passing the ruined monastery on my left now. The finish should be just below it on the path, right? I'm heading straight down towards it."
+    ],
+    [
+      "Giver",
+      "Right, keep going down the path from where you are now, past the monastery if you haven't already, and the finish is just below it on the path, so just keep walking straight down there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down the path now. I've passed the ruined monastery on my left, so I'll keep going down towards the finish. It should be just below the monastery on the path."
+    ],
+    [
+      "Giver",
+      "Keep going down the path straight ahead, ignore everything on your map that isn't on my route, just follow the line down from where you are now and you will hit the finish immediately."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down the path now. I've passed the ruined monastery on my left, so I'll keep going down towards the finish. It should be just below the monastery on the path."
+    ],
+    [
+      "Giver",
+      "Keep going straight down from where you are right now."
+    ],
+    [
+      "Follower",
+      "I'm walking straight down the path now, ignoring everything else, I'll keep going down towards the finish."
+    ],
+    [
+      "Giver",
+      "Keep going straight down the path from where you are now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down the path from where I am right now. I've passed the monastery on my left, so I'm just keeping going down. I think the finish should be just below it, right on this line I've drawn. Let me just keep walking straight down here to see if I hit it."
+    ],
+    [
+      "Giver",
+      "Keep going straight down from where you are now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down the path from where I am right now. I've passed the ruined monastery on my left, so I'll keep going down towards the finish. It should be just below the monastery on the path. I'll keep walking straight down here to see if I hit it."
+    ],
+    [
+      "Giver",
+      "Keep going straight down from where you are now."
+    ],
+    [
+      "Follower",
+      "I'll keep walking straight down from where I am right now."
+    ],
+    [
+      "Giver",
+      "Keep going straight down from where you are now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down from where I am right now. I've passed the monastery on my left, so I'll keep going down towards the finish. It should be just below the monastery on the path. I'll keep walking straight down here to see if I hit it. I just need to keep going straight down from where I am right now. I've passed the ruined monastery on my left, so I'm just keeping going down. I think the finish should be just below it, right on this line I've drawn. Let me just keep walking straight down here to see if I hit it. Keep going down the path from where you are now. I'm passing the ruined monastery on my left now. The finish should be just below it on the path, right? I'm heading straight down towards it. Keep going down the path straight ahead, ignore everything on your map that isn't on my route, just follow the line down from where you are now and you will hit the finish immediately. Okay, I'm walking straight down the path now. I've passed the ruined monastery on my left, so I'll keep going down towards the finish. It should be just below the monastery on the path. I'll keep walking straight down here to see if I hit it. Okay, I'm walking straight down the path from where I am right now. I've passed the monastery on my left, so I'm just keeping going down. I think the finish should be just below it, right on this line I've drawn. Let me just keep walking straight down here to see if I hit it. Keep going straight down from where you are now. Okay, I'm walking straight down the path from where I am right now. I've passed the ruined monastery on my left, so I'll keep going down towards the finish. It should be just below the monastery on the path. I'll keep walking straight down here to see if I hit it. Keep going straight down from where you are now. I'll keep walking straight down from where I am right now. Keep going down the path from where you are now."
+    ],
+    [
+      "Giver",
+      "Keep going down from where you are now."
+    ],
+    [
+      "Follower",
+      "I'm still just walking straight down. I've gone way past the monastery already. Is the finish right here where I am, or do I need to turn somewhere? I can't see it on my map at all."
+    ],
+    [
+      "Giver",
+      "Keep going straight down, just follow the line you've drawn from the viewpoint."
+    ],
+    [
+      "Follower",
+      "I'm just going straight down the path. I can't see the finish anywhere. I don't know if I'm supposed to turn left or right or something. Can you tell me where exactly I need to turn to get to the finish?"
+    ],
+    [
+      "Giver",
+      "Don't turn left or right at all. Just keep walking in a straight line down the path you are on right now, and you will hit the finish immediately."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going straight down this path now, I don't see the finish anywhere, maybe I need to turn left or right?"
+    ],
+    [
+      "Giver",
+      "Stop, you don't need to turn at all, just keep walking straight down the path you are on right now and you will hit the finish immediately."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking straight down from where I am right now. I've passed the monastery on my left, so I'll keep going down towards the finish. It should be just below the monastery on the path. I'll keep walking straight down here to see if I hit it. Keep going down the path from where you are now. I'm passing the ruined monastery on my left now. The finish should be just below it on the path, right? I'm heading straight down towards it. Keep going down the path straight ahead, ignore everything on your map that isn't on my route, just follow the line down from where you are now and you will hit the finish immediately. Okay, I'm walking straight down the path now. I've passed the ruined monastery on my left, so I'll keep going down towards the finish. It should be just below the monastery on the path. I'll keep walking straight down here to see if I hit it. Keep going straight down from where you are now. Okay, I'm walking straight down the path from where I am right now. I've passed the monastery on my left, so I'm just keeping going down. I think the finish should be just below it, right on this line I've drawn. Let me just keep walking straight down here to see if I hit it. Keep going down the path from where you are now. I'm passing the ruined monastery on my left now. The finish should be just below it on the path, right? I'm heading straight down towards it. Keep going down the path straight ahead, ignore everything on your map that isn't on my route, just follow the line down from where you are now and you will hit the finish immediately. Okay, I'm walking straight down the path now. I've passed the ruined monastery on my left, so I'll keep going down towards the finish. It should be just below the monastery on the path. I'll keep walking straight down here to see if I hit it. Keep going straight down from where you are now. I'll keep walking straight down from where I am right now. Keep going down the path from where you are now."
+    ],
+    [
+      "Giver",
+      "Keep going straight down the path from where you are now."
+    ],
+    [
+      "Follower",
+      "I keep going down. I've passed the monastery. I still don't see the finish anywhere on my map. It's just a blank space below the monastery. Do I need to look for a specific symbol or mark on my map that I'm missing? Or am I just supposed to keep walking off the edge? I can't find the cross for the finish."
+    ],
+    [
+      "Giver",
+      "No, you are looking in the wrong place. The finish is not below the monastery on your map. You have drawn the line too far to the left; the actual finish is way over to the east, near the dead tree and the rocket launch pad area. Stop going down the left side and go right. Turn right at the monastery and head east past the dead tree, then turn left at the meadow, go up to the viewpoint, and then turn right and head down to the finish."
+    ],
+    [
+      "Follower",
+      "Wait, what? You're telling me I'm on the wrong side? But I thought I was going down to the meadow on the right after the dead tree, and then up to the viewpoint, and then down to the finish. You just said don't go up to the monastery at all, keep going down to the meadow. So I went down to the meadow, turned left, went up to the viewpoint, turned right, and came down past the monastery. Now you're saying I should have turned right at the monastery and gone east? But the meadow was on the right of the dead tree... I'm so confused. Do you mean I should have turned right at the dead tree instead of the meadow? Because the meadow is way down south."
+    ],
+    [
+      "Giver",
+      "Stop, listen to me carefully, you have been going in the wrong direction from the very beginning. From the stile, you need to keep going straight up the path past the dead tree on your left, do not turn right, do not go down to the meadow at all, just keep going straight up until you see the ruined monastery, turn left there to go up the hill, and keep going up to the top edge, then turn right and walk down that long path to the east, past the meadow and the dead tree area, until you see the FINISH cross way over to the right side of the map."
+    ],
+    [
+      "Follower",
+      "Wait, okay, I think I understand now. I'll stop going down the left side. So from where I am now, I'm going to turn right and head east past the dead tree, then turn left at the meadow, go up to the viewpoint, and then turn right and head down to the finish. Is that right?"
+    ],
+    [
+      "Giver",
+      "No, that is completely wrong. You have drawn the route entirely incorrectly on your map because you followed the wrong landmarks. Do not go down to the meadow at all. From the stile, you must walk straight up the path, keeping the dead tree on your left, until you reach the ruined monastery. At the monastery, turn left and go straight up the hill to the top edge of the map. Once you are at the top edge, turn right and walk straight down the long path towards the east, ignoring the tourist spot and the meadow completely, until you see the FINISH cross on the right side of the path. Start over from the stile and follow this exact path."
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting over from the stile. I'll walk straight up the path past the dead tree on my left, not down to the meadow, until I reach the ruined monastery, turn left and go up to the top edge, then turn right and walk straight down the long path towards the east to find the finish."
+    ],
+    [
+      "Giver",
+      "Good, so from the stile, go up the path past the dead tree on your left, keep going until you hit the ruined monastery, turn left there and go straight up to the top edge of the map, then turn right and head down that long path towards the east, ignoring the tourist spot and the meadow, until you see the FINISH cross on the right side."
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting over at the stile. I'll walk straight up the path past the dead tree on my left, keeping going until I hit the ruined monastery. Then I'll turn left and go up the hill to the top edge of the map, turn right, and head straight down the long path towards the east, ignoring the tourist spot and the meadow completely, until I see the FINISH cross on the right side. I'm heading up now."
+    ],
+    [
+      "Giver",
+      "Good, keep going up the path past the dead tree on your left until you see the ruined monastery, then turn left and head straight up to the top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path now past the dead tree on my left until I see the ruined monastery, then I'll turn left and go up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up until you hit the ruined monastery, then turn left and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Good, keep going up until you hit the ruined monastery, then turn left and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Good, keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Good, keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Good, keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Good, keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Good, keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Good, keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Good, keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ],
+    [
+      "Giver",
+      "Good, keep going up the path past the dead tree on your left, make sure you don't turn right, and keep going until you hit the ruined monastery, then turn left there and keep going up until you reach the very top edge of the map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up the path past the dead tree on my left, I see the ruined monastery ahead, and I'm going to turn left there and keep going up to the top edge."
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

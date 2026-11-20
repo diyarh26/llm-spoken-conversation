@@ -1,0 +1,199 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m13",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 1033409876,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Hi, are you there?\nFollower: Yes, I'm here. What do you want me to draw?\nGiver: Start at the big X near the bottom and draw a line all the way up to the finish line.\nFollower: Okay, I'm looking at the bottom. There's an extinct volcano just above the start. Should I go past it?\nGiver: No, go to the left of the volcano first. Then turn right, towards the tribal settlement on the edge.\nFollower: Got it. Left of the volcano, then right at the tribal settlement. Drawing that part now.\nGiver: Good. Once you hit the settlement, keep going left until you reach the rope bridge.\nFollower: Okay, moving left... wait, I don't see a rope bridge on my map.\nGiver: Ah, check near the bottom right. It's close to the collapsed shelter.\nFollower: Ah, there it is! Between the shelter and the edge?\nGiver: No, the shelter is on the right side of the path. The bridge is to the left of the shelter. Draw from the settlement left, past the crevasse, to the bridge.\nFollower: Okay, I see the crevasse now. I'll draw left from the settlement, pass the crevasse, then turn down to the bridge.\nGiver: Right. Once you hit the bridge, turn right again. Head towards the collapsed shelter.\nFollower: Okay, turned right at the bridge. Now I'm heading for the shelter.\nGiver: Watch out, the shelter is on your right side of the path. Don't go straight into it.\nFollower: Understood. I'm passing the shelter on the right. Now I need to go left to the saxon barn.\nGiver: Yes. After the barn, you'll need to go left towards the pelicans.\nFollower: Wait, I don't see pelicans on my map.\nGiver: You'll find them near the golden beach. Go left from the barn towards the water.\nFollower: Okay, heading left from the barn. I see a golden beach there. Are those the pelicans?\nGiver: Yes, the pelicans are right there on the beach. Pass them on your right. Now head left towards the white mountain.\nFollower: Okay, passing the pelicans, heading left. I see the white mountain. Should I go above or below it?\nGiver: Below it. Pass the white mountain on your right. Then turn right towards the secret valley.\nFollower: Okay, passing the white mountain on the right. Turning right towards the secret valley.\nGiver: Careful, the secret valley is on the left side of the path. Make sure you pass it on the right.\nFollower: Got it. Passing the valley on the right. Now I need to head left towards the golden beach at the top.\nGiver: Yes, that's the one near the slate mountain. But wait, check where the slate mountain is on your map.\nFollower: I see the slate mountain, but it's further right than I thought. Is it next to the golden beach?\nGiver: It should be to the right of the golden beach. If it's not, you might be on the wrong path. Just go left until you hit the golden beach near the top.\nFollower: Okay, heading left. I found the golden beach. It looks right next to the slate mountain now.\nGiver: Good. Once you're on that beach, turn right. You should see the secret valley on your left now.\nFollower: Okay, turned right at the top beach. I see the secret valley on the left. Drawing a line to it.\nGiver: From the valley, head right towards the finish line. That's the big X near the middle.\nFollower: Okay, heading right from the valley. I'm looking for the finish line.\nGiver: It's just below the slate mountain. Make sure you don't go too high.\nFollower: I see the X. Looks like I've connected everything.\nGiver: Good job. Did you pass the right landmarks in the right order?\nFollower: Yes, volcano, settlement, bridge, shelter, barn, pelicans, white mountain, valley, and finish.\nGiver: Perfect. I'm going to check my map.\nFollower: Done!\nGiver: Great. Thanks.\nFollower: You too. Bye.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi, are you there?"
+    ],
+    [
+      "Follower",
+      "Yes, I'm here. What do you want me to draw?"
+    ],
+    [
+      "Giver",
+      "Start at the big X near the bottom and draw a line all the way up to the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I'm looking at the bottom. There's an extinct volcano just above the start. Should I go past it?"
+    ],
+    [
+      "Giver",
+      "No, go to the left of the volcano first. Then turn right, towards the tribal settlement on the edge."
+    ],
+    [
+      "Follower",
+      "Got it. Left of the volcano, then right at the tribal settlement. Drawing that part now."
+    ],
+    [
+      "Giver",
+      "Good. Once you hit the settlement, keep going left until you reach the rope bridge."
+    ],
+    [
+      "Follower",
+      "Okay, moving left... wait, I don't see a rope bridge on my map."
+    ],
+    [
+      "Giver",
+      "Ah, check near the bottom right. It's close to the collapsed shelter."
+    ],
+    [
+      "Follower",
+      "Ah, there it is! Between the shelter and the edge?"
+    ],
+    [
+      "Giver",
+      "No, the shelter is on the right side of the path. The bridge is to the left of the shelter. Draw from the settlement left, past the crevasse, to the bridge."
+    ],
+    [
+      "Follower",
+      "Okay, I see the crevasse now. I'll draw left from the settlement, pass the crevasse, then turn down to the bridge."
+    ],
+    [
+      "Giver",
+      "Right. Once you hit the bridge, turn right again. Head towards the collapsed shelter."
+    ],
+    [
+      "Follower",
+      "Okay, turned right at the bridge. Now I'm heading for the shelter."
+    ],
+    [
+      "Giver",
+      "Watch out, the shelter is on your right side of the path. Don't go straight into it."
+    ],
+    [
+      "Follower",
+      "Understood. I'm passing the shelter on the right. Now I need to go left to the saxon barn."
+    ],
+    [
+      "Giver",
+      "Yes. After the barn, you'll need to go left towards the pelicans."
+    ],
+    [
+      "Follower",
+      "Wait, I don't see pelicans on my map."
+    ],
+    [
+      "Giver",
+      "You'll find them near the golden beach. Go left from the barn towards the water."
+    ],
+    [
+      "Follower",
+      "Okay, heading left from the barn. I see a golden beach there. Are those the pelicans?"
+    ],
+    [
+      "Giver",
+      "Yes, the pelicans are right there on the beach. Pass them on your right. Now head left towards the white mountain."
+    ],
+    [
+      "Follower",
+      "Okay, passing the pelicans, heading left. I see the white mountain. Should I go above or below it?"
+    ],
+    [
+      "Giver",
+      "Below it. Pass the white mountain on your right. Then turn right towards the secret valley."
+    ],
+    [
+      "Follower",
+      "Okay, passing the white mountain on the right. Turning right towards the secret valley."
+    ],
+    [
+      "Giver",
+      "Careful, the secret valley is on the left side of the path. Make sure you pass it on the right."
+    ],
+    [
+      "Follower",
+      "Got it. Passing the valley on the right. Now I need to head left towards the golden beach at the top."
+    ],
+    [
+      "Giver",
+      "Yes, that's the one near the slate mountain. But wait, check where the slate mountain is on your map."
+    ],
+    [
+      "Follower",
+      "I see the slate mountain, but it's further right than I thought. Is it next to the golden beach?"
+    ],
+    [
+      "Giver",
+      "It should be to the right of the golden beach. If it's not, you might be on the wrong path. Just go left until you hit the golden beach near the top."
+    ],
+    [
+      "Follower",
+      "Okay, heading left. I found the golden beach. It looks right next to the slate mountain now."
+    ],
+    [
+      "Giver",
+      "Good. Once you're on that beach, turn right. You should see the secret valley on your left now."
+    ],
+    [
+      "Follower",
+      "Okay, turned right at the top beach. I see the secret valley on the left. Drawing a line to it."
+    ],
+    [
+      "Giver",
+      "From the valley, head right towards the finish line. That's the big X near the middle."
+    ],
+    [
+      "Follower",
+      "Okay, heading right from the valley. I'm looking for the finish line."
+    ],
+    [
+      "Giver",
+      "It's just below the slate mountain. Make sure you don't go too high."
+    ],
+    [
+      "Follower",
+      "I see the X. Looks like I've connected everything."
+    ],
+    [
+      "Giver",
+      "Good job. Did you pass the right landmarks in the right order?"
+    ],
+    [
+      "Follower",
+      "Yes, volcano, settlement, bridge, shelter, barn, pelicans, white mountain, valley, and finish."
+    ],
+    [
+      "Giver",
+      "Perfect. I'm going to check my map."
+    ],
+    [
+      "Follower",
+      "Done!"
+    ],
+    [
+      "Giver",
+      "Great. Thanks."
+    ],
+    [
+      "Follower",
+      "You too. Bye."
+    ]
+  ],
+  "n_turns": 42,
+  "ended_by": "single_generation"
+}

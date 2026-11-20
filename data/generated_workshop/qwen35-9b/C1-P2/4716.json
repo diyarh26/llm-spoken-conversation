@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2909117765,
+  "conversation_no": 4716,
+  "topic": "Gun Control",
+  "sb_prompt": "DISCUSS GUN CONTROL.  WHERE DO YOU AND THE OTHER CALLER STAND ON A SCALE FROM 1 TO 10",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "an electrician",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 26,
+    "education": "a college degree",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: So, about this gun control stuff... I guess I'm leaning towards a seven or an eight? Like, I think we need some real regulation, but I don't want to ban everything.\nParticipantA: Oh, really? A seven or eight? I think I'm probably around a two or three. I'm pretty firm on keeping things loose, but I definitely don't want to see my neighbors with nothing to protect their families.\nParticipantB: That makes sense. I mean, I know a guy, his cousin actually, who works as a private contractor. He's got a rifle and he says it keeps him safe on the property.\nParticipantA: Oh, yeah? That's interesting. I've never met anyone who actually needed it for that. Most people just buy a handgun because they see it on TV or something. It feels like a hobby to me, honestly.\nParticipantB: Yeah, that's what my cousin says too. He thinks it's just a passion, like fishing or hunting. But he also says if something happens in the woods, he can stop it before it gets bad.\nParticipantA: Well, I get the safety angle, I suppose. But when I was thinking about becoming an electrician, I started thinking about safety too. Not with guns. With wires.\nParticipantB: Oh, you're an electrician?\nParticipantA: Yeah, I am. Been doing it for about ten years now. Started when I was like nineteen or twenty. I just... I never asked why really. I just knew it felt right to work with my hands.\nParticipantB: That's cool. So, how does that make you feel about the whole gun thing? Like, does working with high-voltage stuff change your mind?\nParticipantA: Nah, not really. If anything, it makes me think people shouldn't be messing with dangerous things unless they have to. My job is dangerous if you mess up. Like, touching a live line without checking... boom, that's it. You don't get a second chance.\nParticipantB: True. But with guns, people argue that you need to be able to defend yourself right now, not wait for the police to get there.\nParticipantA: I get that. But I've seen too many times where \"self-defense\" turns into a shooting because someone panicked or got it wrong. It's like trying to fix a complex panel without the right tools; you usually end up breaking more than you fix.\nParticipantB: Hmm. I guess you make a good point. My cousin says he knows how to use it safely. He's trained, you know?\nParticipantA: Well, sure. Everyone says that. But I still think the law should be tighter. Just enough so that a normal person can't just pick one up off the street.\nParticipantB: Fair enough. I'm not saying ban them all, but maybe tighter background checks and restrictions on the big rifles? Maybe that gets us to a five or six?\nParticipantA: Maybe a five sounds reasonable. Let's say five.\nParticipantB: Okay, five. And you? Still holding at a two or three?\nParticipantA: Yeah, still there. Maybe a three. I'd rather have people asking questions about what they own than having the government decide what's safe for them.\nParticipantB: Huh. I never thought about it like that. Just trusting people to make their own choices, even if it's risky.\nParticipantA: Yeah. It's like my job. I trust that if you're going to handle electricity, you know what you're doing. If you don't, don't touch it.\nParticipantB: Okay, that actually makes sense. So, a three for you?\nParticipantA: Yeah, a three.\nParticipantB: And I'll settle on a five.\nParticipantA: Alright. Seems like a decent middle ground.\nParticipantB: Yeah, seems fair. Thanks for talking to me about it.\nParticipantA: Yeah, thanks. Good talking to you.\nParticipantB: Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 872,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

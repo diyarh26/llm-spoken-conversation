@@ -1,0 +1,124 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m14",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 3569173773,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 6,
+    "dup_kept": 4
+  },
+  "turns": [
+    [
+      "Giver",
+      "Right, we start here and head down towards the diamond mine, then over to the graveyard."
+    ],
+    [
+      "Follower",
+      "Okay, I've got the diamond mine on the left, head down to it, then over to the graveyard on the left."
+    ],
+    [
+      "Giver",
+      "Then from the graveyard, go right towards the carved stones, but don't go all the way there, turn left to pass between the stones and the indian country, keep going left until you're below the gold mine, then head right towards the trout farm."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading towards the carved stones now, but I can't find the indian country anywhere to pass between, so I'm just going to keep going left until I'm below the gold mine, then head right towards the trout farm."
+    ],
+    [
+      "Giver",
+      "Right, the indian country is just below the diamond mine on your map, so you need to pass between that and the stones, keep going left past the gold mine, then head right towards the trout farm."
+    ],
+    [
+      "Follower",
+      "Okay, I see the indian country now, I'll head towards the diamond mine, pass between that and the stones, then keep going left past the gold mine before heading right towards the trout farm."
+    ],
+    [
+      "Giver",
+      "Right, once you pass the gold mine, don't go straight to the trout farm yet, instead head left a bit towards the great rock before turning right to reach it, then head left past the trout farm, keep going left until you pass the cavalry, then head right towards the cattle stockade, then down towards the bandit territory, then right past the parched river bed, then down and left until you're at the finish point."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading towards the great rock now, passing it on the right, then back left past the trout farm, keeping going left until I pass the cavalry, then heading right towards the cattle stockade, down towards the bandit territory, right past the parched river bed, and finally down and left to the finish point."
+    ],
+    [
+      "Giver",
+      "Right, wait, you went too far south; you missed the cavalry on the way to the trout farm, you need to turn right to it first, then keep going left past the trout farm, then head right towards the cattle stockade, then down towards the bandit territory, then right past the parched river bed, then down and left until you're at the finish point."
+    ],
+    [
+      "Follower",
+      "Oh sorry, my bad, I'll head right towards the cavalry first before going left past the trout farm."
+    ],
+    [
+      "Giver",
+      "Right, once you pass the cavalry, head straight left towards the trout farm, go all the way past it, then turn right towards the cattle stockade, then head down towards the bandit territory, then go right past the parched river bed, and finally come down and left until you hit the finish point."
+    ],
+    [
+      "Follower",
+      "Okay, I'll head right towards the cavalry first, then turn left to pass the trout farm, heading right towards the cattle stockade, down towards the bandit territory, right past the parched river bed, and finally down and left to the finish point."
+    ],
+    [
+      "Giver",
+      "Right, once you've passed the parched river bed, you need to keep going down until you hit the finish point, don't try to draw any more lines."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the parched river bed until I hit the finish point."
+    ],
+    [
+      "Giver",
+      "Okay, once you reach the finish point, just stop drawing, don't add anything else."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down and I can see the finish point now, I'll draw the line to it and stop."
+    ],
+    [
+      "Giver",
+      "That's it, you can stop now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down and I can see the finish point now, I'll draw the line to it and stop."
+    ],
+    [
+      "Giver",
+      "Okay, once you reach the finish point, just stop drawing, don't add anything else."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down and I can see the finish point now, I'll draw the line to it and stop."
+    ],
+    [
+      "Giver",
+      "Okay, I see you're close to the finish, just make sure you go straight down to it and stop."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down and I can see the finish point now, I'll draw the line to it and stop."
+    ]
+  ],
+  "n_turns": 22,
+  "ended_by": "closing"
+}

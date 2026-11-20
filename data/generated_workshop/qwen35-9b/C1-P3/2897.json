@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 159974382,
+  "conversation_no": 2897,
+  "topic": "Job Benefits",
+  "sb_prompt": "WHAT DO YOU CONSIDER THE MOST IMPORTANT BENEFITS BESIDES SALARY IN A JOB WITH A LARGE ORGANIZATION?  HOW SATISFIED ARE YOU WITH THE CURRENT BENEFITS OF YOUR JOB?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 50,
+    "education": "a college degree",
+    "occupation": "an office receptionist",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Yeah, hey. You said you wanted to chat about job benefits?\nParticipantA: Yeah, sure. Just wondering what folks like you and me actually think matters out there.\nParticipantB: Oh, okay. I've been thinking about this stuff for a long time. It's just... weirdly important to me.\nParticipantA: Huh? What do you mean by weirdly important?\nParticipantB: Well, I don't know. I just feel like health insurance is non-negotiable. Like, if you don't have it, you're screwed.\nParticipantA: Yeah, totally. That's the only part that really matters to me. The rest is just fluff.\nParticipantB: Right? But I also care about the 401k match. And maybe flex time?\nParticipantA: Flex time? Hmm. I work in accounting, so I'm usually glued to a spreadsheet. I'd love more freedom honestly.\nParticipantB: Oh, the grind. Yeah, that's my job too, sort of. I'm a receptionist.\nParticipantA: Oh, really? That sounds tough. People talk a lot about how receptionists have it easier than accountants.\nParticipantB: People say that, sure. But I actually think the stress is different. We handle the front line.\nParticipantA: I guess. I have mixed feelings. I love the stability, but I hate the overtime when audits hit.\nParticipantB: Yeah, I get that. Overtime is a killer. Do you get paid extra for it?\nParticipantA: Sometimes. Sometimes not. It's just... inconsistent. That part really bothers me.\nParticipantB: Man, that's frustrating. I hate uncertainty.\nParticipantA: I know. I had a client last year who needed work at midnight. I didn't get a dime for it.\nParticipantB: Oh no! That sucks. Did you tell anyone about it?\nParticipantA: Yeah, I tell people. It's just something I bring up when we're having drinks. \"Hey, remember that time I worked for free?\"\nParticipantB: Haha, yeah, that's a good story. It makes the whole benefits thing feel more real.\nParticipantA: Exactly. It highlights how broken the system can be. Even with a degree, you're just a cog.\nParticipantB: True. I made up my mind years ago that if I didn't get a good package, I'd leave.\nParticipantA: Really? When was that?\nParticipantB: Like, ten years ago. I just knew I needed something that actually stuck.\nParticipantA: What did you get? Did you switch jobs then?\nParticipantB: Yeah, I did. Found a place that offered vision care and a better retirement match.\nParticipantA: Oh, nice. That sounds way better than my current setup.\nParticipantB: It's a relief, honestly. Now I actually use the gym membership.\nParticipantA: That's great. I've been sitting at my desk so much my back is killing me.\nParticipantA: You know, I guess I'm just glad you found something you like.\nParticipantB: Me too. It feels like finally knowing what I want.\nParticipantA: Yeah. Maybe I'll keep looking. The stability is nice, but I need the peace of mind.\nParticipantB: Definitely. Good luck with it.\nParticipantA: Thanks. Yeah, I'll keep it in mind.\nParticipantB: Sure thing.\nParticipantA: Okay, well, I gotta run. Thanks for talking.\nParticipantB: No problem. Take care.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 781,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

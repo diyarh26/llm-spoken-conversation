@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3287644186,
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey! How's your day going?\nParticipantA: Pretty good, actually. Just getting back to work.\nParticipantB: Oh, cool. What do you do?\nParticipantA: I manage a grocery store downtown.\nParticipantB: Oh, nice. That sounds busy. Do you get to do any gardening or yard work?\nParticipantA: Not really, mostly just managing people and stock. Sometimes I help pull weeds if my hands are free, but it's not my thing.\nParticipantB: Ah, okay. That makes sense. I'm a pharmacist, so I sit behind a desk all day.\nParticipantA: Oh, that's interesting. I heard pharmacists have to work outside sometimes? Is that true?\nParticipantB: Yeah, technically, but honestly? No. I barely touch grass. Actually, my cousin's wife is a landscape designer, though. She's my family's gardener basically.\nParticipantA: Oh, really? That's cool. My aunt used to garden all the time, then she got sick and couldn't lift the heavy stuff anymore. She just sat on the porch now.\nParticipantB: Oh no, that's tough. Yeah, that's exactly why I don't get into it. It's too much physical work for me. Do you like it when you do pull weeds though?\nParticipantA: Honestly? Not really. It's just chores. Sometimes I feel bad helping, but it's part of the job. I wish I had a green thumb like your cousin's wife.\nParticipantB: Yeah, I definitely envy her. I know a guy who's trying to build a raised bed garden but he's struggling. He keeps forgetting to water or the plants are dying.\nParticipantA: Ugh, that's annoying. I told my mom about my aunt and she said if I just buy pre-grown stuff from the store, it would be easier. She says it's easier than starting from seed.\nParticipantB: That sounds like a good idea. Maybe you should ask her about it next time you visit. I bet she'd have some tips.\nParticipantA: Yeah, maybe I will. But I'm still skeptical about gardening anyway. Seems like too much trouble for just flowers.\nParticipantB: I get that. I prefer buying plants to look good without the work. Does your store sell those kinds of plants?\nParticipantA: Yeah, actually. We have a big section with pre-grown stuff. People love buying those when they don't want the hassle.\nParticipantB: Perfect! I'll probably pick something up from you guys next week. Thanks for talking, it was nice.\nParticipantA: No problem. Glad we could chat. Take care!\nParticipantB: You too!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 585,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

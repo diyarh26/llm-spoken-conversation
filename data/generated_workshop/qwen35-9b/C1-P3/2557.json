@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2817947175,
+  "conversation_no": 2557,
+  "topic": "Recycling",
+  "sb_prompt": "WHAT IS BEING DONE IN YOUR COMMUNITY OR AREA ABOUT RECYCLING WASTE MATERIALS?  DO YOU THINK MORE SHOULD BE DONE?  DO YOU HAVE ANY IDEAS ON HOW TO ENCOURAGE MORE RECYCLING OR ON WHAT OTHER MATERIALS SHOULD BE INCLUDED?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 55,
+    "education": "a high-school education",
+    "occupation": "a bank teller",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 46,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Hi, my name is Sarah. Do you know how we're doing with recycling around here?\nParticipantB: Hey Sarah, I'm Mike. Yeah, we've got some bins out front, but honestly, it feels pretty much the same as it did five years ago.\nParticipantA: Oh yeah? I feel the same way. My boss says we have to separate plastics, but half the people in my line just toss everything in the big black bag.\nParticipantB: Exactly! My cousin owns a scrap yard, and he tells me they're drowning in plastic bottles that nobody actually recycles properly.\nParticipantA: That's kinda discouraging. I told my daughter, \"Just recycle what you want to,\" and she laughed at me. She says people just don't care enough to check the labels.\nParticipantB: Tell me about it. My shop is full of folks who ask, \"Can I put this battery in the bin?\" and I have to tell them no, they gotta bring it to the center.\nParticipantA: Yeah, that's the thing. We have rules, but nobody follows them. I feel like if we made it easier, maybe people would try harder?\nParticipantB: I totally agree. We need better signs. Like, big, clear pictures of what goes where. Not just words, pictures.\nParticipantA: Good idea. My customers are older, like me. They remember when we used to recycle less, but they don't know the new stuff either.\nParticipantA: Maybe we could put those pictures on the side of the street?\nParticipantB: Yeah, that would help. And maybe add some other things? Like electronics?\nParticipantA: Oh, electronics? I don't know. I know my brother-in-law fixes computers, and he says people throw their old phones in the trash all the time.\nParticipantB: Exactly! He says the metal inside is worth a lot more than we're getting for glass bottles. We should definitely add that.\nParticipantA: Hmm, that does sit right with me. I guess if they knew it was valuable, they might not throw it away.\nParticipantB: Right? My cousin says the value is going up. It's like finding gold in the junk.\nParticipantA: Maybe we should talk to the city council about the pictures and the electronics?\nParticipantB: Good idea. I'll ask my cousin if he knows anyone on the council. He knows a guy who works there.\nParticipantA: Oh, really? That's nice. I'll tell my boss about the pictures. Maybe she'll listen this time.\nParticipantB: Hope she does. We really need to do better, or we're just wasting good stuff.\nParticipantA: Yeah, I agree. It's frustrating when you do it right and someone else just tosses your paper in the burn bag.\nParticipantB: Exactly. It makes you feel like your effort doesn't matter.\nParticipantA: Well, I guess we both agree on the pictures and the electronics.\nParticipantB: Yeah, those are two solid steps forward.\nParticipantA: Thanks for talking to me, Mike. I feel a little more hopeful now.\nParticipantB: No problem, Sarah. Call me if you hear anything from your boss or the city.\nParticipantA: Will do. Take care.\nParticipantB: You too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 721,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m6",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 926494463,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 8,
+    "dup_kept": 3
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hi, I'll give you directions from the start. Start at the top left. Go straight down to the fast running creek on the right. Then turn left and go down to the diamond mine."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the start. I see the fast running creek to my right. I'll go down to it and turn left."
+    ],
+    [
+      "Giver",
+      "Go to the diamond mine, turn left, and go down to the walled city."
+    ],
+    [
+      "Follower",
+      "Wait, that was wrong. There's no walled city there. I see a desert and a diamond mine, but no city. Where is the walled city on your map?"
+    ],
+    [
+      "Giver",
+      "Oh, you're missing the fast flowing river on the right; go there first, then left to the diamond mine, then left again to the graveyard, then down to the walled city."
+    ],
+    [
+      "Follower",
+      "Okay, got it. I'll go down past the creek to the diamond mine, then left to the graveyard. Is the walled city just below the graveyard on your map?"
+    ],
+    [
+      "Giver",
+      "Yeah, basically. It's directly underneath the graveyard. Once you reach the walled city, keep going down to find the flat rocks to your left, then turn right and head up towards the apache camp."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving down past the creek to the diamond mine. Left to the graveyard. And... I'm looking down, but I only see the graveyard. There's nothing directly underneath it. Is there a different landmark I should look for before I turn left to find the flat rocks?"
+    ],
+    [
+      "Giver",
+      "No, don't turn left yet. Go straight down from the graveyard past the bottom of it, then turn right immediately to avoid the flat rocks on your left and head up towards the apache camp."
+    ],
+    [
+      "Follower",
+      "Got it, so I'm at the graveyard. Do I just go straight down past it without turning left, and then turn right to go up towards the apache camp?"
+    ],
+    [
+      "Giver",
+      "Yeah, just go straight down past the graveyard for a bit, then turn right towards the apache camp on your right. Don't worry about the flat rocks or the walled city right now, just head up towards the apache camp."
+    ],
+    [
+      "Follower",
+      "Okay, so I'm at the graveyard, I go straight down past it, then turn right towards the apache camp?"
+    ],
+    [
+      "Giver",
+      "Wait, hold on. I think you have to turn left first to get to the diamond mine before you go down. You said you're at the graveyard, but you need to go down to the diamond mine first, then turn left to the graveyard, then go down past it again. Then turn right immediately to avoid the flat rocks on your left and head up towards the apache camp. Don't go straight down from the graveyard yet, you need to be at the diamond mine first."
+    ],
+    [
+      "Follower",
+      "Wait, hold on. You said go to the diamond mine first, then left to the graveyard. I went to the diamond mine and turned left, but when I got there I didn't see the fast flowing river on the right, so I didn't stop for it. Is the river between the creek and the mine? And why did I go straight to the graveyard then? I need to know where to turn."
+    ],
+    [
+      "Giver",
+      "Wait, I need to stop and clarify the order. You missed the fast flowing river completely. Start at the top left, go down to the fast flowing river on the right, then turn left, go down to the diamond mine, then turn left to the graveyard. Now, once you are at the graveyard, do NOT turn left yet. Go straight down past the graveyard for a bit, then turn right immediately to head up towards the apache camp. Just go straight down past the graveyard first, then turn right."
+    ],
+    [
+      "Follower",
+      "Wait, you're confusing me. I went down from the start, saw the fast running creek on the right, turned left, went down to the diamond mine, then turned left again. I'm currently at the diamond mine. Did I just miss the fast flowing river completely? Is the river supposed to be on the right side of the diamond mine? And if so, should I have turned right there first? I'm really confused about the order."
+    ],
+    [
+      "Giver",
+      "Yeah, you missed it completely. The fast flowing river is way up high on the right, right next to the start. You went straight past it. So you have to go back up to the river, turn left to the diamond mine, then left to the graveyard, then go straight down again before turning right towards the apache camp."
+    ],
+    [
+      "Follower",
+      "Wait, so I have to go all the way back up to the river? Okay. So the order is start, down to the river, left to the mine, left to the graveyard, straight down past it, then right to the apache camp? Is the apache camp up at the top again?"
+    ],
+    [
+      "Giver",
+      "No, the apache camp is way up there at the top right, you just head straight down from the graveyard to get back to the river area, then you'll find the camp."
+    ],
+    [
+      "Follower",
+      "Wait, hold on. You said the apache camp is up at the top right? That doesn't make sense because we already went up there to get to the graveyard. If I go back down to the river, then left to the mine, then left to the graveyard, how can I go down to get back to the river area and then find the camp up at the top again? I'm getting lost. Can you just tell me the exact order of landmarks again from the start to the camp?"
+    ],
+    [
+      "Giver",
+      "No, don't go back up. The apache camp is right there at the top right, so after you pass the graveyard, just turn right and head straight up towards it."
+    ],
+    [
+      "Follower",
+      "Wait, that makes no sense. If the camp is at the top right, I already passed it when I went down to the graveyard. If I go straight down past the graveyard, I'm going further away from the top, so how can I turn right and head up to the camp? Did you mean the camp is down there somewhere else? Because if I head straight down, I'll never reach the top right."
+    ],
+    [
+      "Giver",
+      "Wait, I think I've been describing the wrong apache camp. There are two of them. The one you should be heading towards is the one way down near the bottom. Forget the one at the top right. Okay, let's start fresh and get the whole route right this time. From the START, go straight down. When you see the fast running creek on your right, turn left. Keep going down until you hit the diamond mine. Now turn left again and go down to the graveyard. Once you are at the graveyard, do not turn left yet. Go straight down past it. Then, look for the carved wooden pole to your right. Turn right towards it and keep going down."
+    ],
+    [
+      "Follower",
+      "Wait, you want me to go down past the graveyard to find the pole on the right? Okay, I'm at the graveyard now. I'm going to go straight down past it to look for the pole. Where exactly is the pole in relation to the graveyard? Is it below it?"
+    ],
+    [
+      "Giver",
+      "Yeah, the carved wooden pole is directly to the right and slightly below the graveyard, so from the graveyard, just turn right and head down towards it."
+    ],
+    [
+      "Follower",
+      "Okay, so I'm going to go straight down from the graveyard past the bottom of it, and while I'm doing that I'll look to my right for the carved wooden pole. Once I see it, I'll turn right towards it."
+    ],
+    [
+      "Giver",
+      "Okay, wait, I think I made a mistake in my last explanation. You don't just go straight down; you need to actually move towards the pole. From the graveyard, turn right and head down specifically towards the carved wooden pole. It should be roughly level with the bottom of the graveyard or just slightly below it on your right side. Once you reach the pole, that is a checkpoint. Do not head up towards the apache camp yet. Just get to the pole first. Are you near the pole now?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm going down from the graveyard now, looking to my right for the carved wooden pole. I see the pole on the right, just below the graveyard level. I'll turn towards it."
+    ],
+    [
+      "Giver",
+      "Keep going down towards the pole until you get right next to it, then once you are standing at the pole, turn left and keep going down to the walled city."
+    ],
+    [
+      "Follower",
+      "Wait, the walled city? That's way up there above the graveyard. If I turn left from the pole, I'll be going back up towards the city, not down. Are you sure the city is down near the pole? Because on my map, the city is the second highest thing after the desert. If I go down from the pole, I'll just hit the bottom of the map."
+    ],
+    [
+      "Giver",
+      "Oh, you're absolutely right, I got the direction wrong. From the pole, you need to go UP towards the walled city, not down. The city is actually above the pole, to the left of it. Once you reach the city, then you go down to find the flat rocks on your left."
+    ],
+    [
+      "Follower",
+      "Okay, I understand. So from the pole, I turn left and go up towards the walled city? Just to confirm, once I'm at the city, do I then turn left to find the flat rocks?"
+    ],
+    [
+      "Giver",
+      "Yes, go up towards the city from the pole, then once you reach it, turn left to find the flat rocks on your left side."
+    ],
+    [
+      "Follower",
+      "Okay, I'm moving up from the pole towards the walled city now. I can see the city above and to the left of the pole. I'm heading straight for it."
+    ],
+    [
+      "Giver",
+      "Keep going straight up to the city, don't stop until you reach it."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up now. I'm looking for the flat rocks on my left. I can see the flat rocks to the left of me. I'm going to turn left and head down towards them."
+    ],
+    [
+      "Giver",
+      "Okay, once you are at the flat rocks, turn right and head up towards the stone creek. Go up to the stone creek, then turn left and go down to the buffalo on your right. Then turn left again to find the carved wooden pole on your left, which is near the bottom. Once you are at that pole, turn right and go up to the fort, then down to the cattle ranch, and finally turn left to get to the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going up from the flat rocks towards the stone creek now. Once I get there, I'll turn left to head down for the buffalo. Then I'll turn left again to find the other pole on my left. From there, I'll head up to the fort, then down to the ranch, and finally turn left to reach the finish."
+    ],
+    [
+      "Giver",
+      "Wait, I think I messed up that last part about the pole. You don't turn left to find the pole on your left; the buffalo is on your right, and the pole is on your left, but you need to go down to the pole first before heading up to the fort. So from the stone creek, go down to the buffalo, then turn left immediately to the pole, then from the pole turn right to the fort. Does that make sense?"
+    ],
+    [
+      "Follower",
+      "Okay, so from the stone creek I go down to the buffalo on my right, then turn left to the pole, then right to the fort?"
+    ],
+    [
+      "Giver",
+      "Yes, that's the order. Go down to the buffalo, then turn left to the pole, then right to the fort. Okay, go down to the buffalo now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down from the stone creek to find the buffalo on my right now."
+    ],
+    [
+      "Giver",
+      "Go down a bit past the buffalo to the right, then turn left immediately to find the carved wooden pole near the bottom."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading down past the buffalo to the right now. Where exactly is this pole? I'm looking at my map and I see a carved wooden pole way down near the bottom left, but the one I just passed was near the walled city. Is the pole I need the one way down at the bottom? Because if I keep going straight down, I'll hit the edge of the map before I find it. Also, did I miss anything else? I don't see a stone creek or the buffalo on my map like you described. Just the graveyard, the desert, and the walled city. How do I find the stone creek and the buffalo?"
+    ],
+    [
+      "Giver",
+      "Wait, stop. You are on the wrong map. I need to tell you exactly where the landmarks are on *my* map, and you have to find the ones that are missing on yours. First, from your START, go straight down until you see the fast running creek on your right side. You don't have that creek on your map, but it's right there. Go down to it. Then turn left and keep going down to the diamond mine. Once you are at the diamond mine, turn left again and go down to the graveyard. Now, look at the graveyard. Do not turn left yet. Go straight down past the bottom of the graveyard for a bit, then turn right immediately to avoid the flat rocks. Head up towards the apache camp on your right. Do you see the apache camp there?"
+    ],
+    [
+      "Follower",
+      "Wait, I don't see an apache camp on my map at all. I only see a ghost town and a saloon bar up there. And I definitely don't see any flat rocks near the graveyard either. Where are the flat rocks and the apache camp supposed to be? Are they hidden or something? And where is the stone creek if I don't see it down there? I'm getting really lost because I can't find any of these landmarks on my map at all."
+    ],
+    [
+      "Giver",
+      "Stop and listen carefully. You don't have the apache camp or the flat rocks on your map, so don't look for them. You just need to go straight down from the graveyard to the bottom edge of your map without turning left. That's where the flat rocks are on my map, even though they aren't yours. Once you hit the bottom, don't worry about them, just keep going to the very bottom edge. When you are at the very bottom of your map, turn left immediately and walk as far left as you can go until you hit the edge of your map on the west side. Do that now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going down past the graveyard to the bottom edge now, turning left and heading west to the edge."
+    ],
+    [
+      "Giver",
+      "Keep going straight down to the very bottom edge of your map, then turn left immediately and walk as far west as you can until you hit the edge of your map. Once you are at the west edge, turn right and start walking up. Keep going up until you see the ghost town on your map, which is where the walled city should be. Once you are at the ghost town, stop. Do not go any further up yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going down past the graveyard to the bottom edge, then turning left to the west side. I'm walking along the bottom edge now. Once I hit the west edge, I'll turn right and start walking up the left side. I'm heading up now... okay, I see the ghost town above me, so I'll stop there. Do I stop exactly at the ghost town?"
+    ],
+    [
+      "Giver",
+      "Yes, stop exactly at the ghost town, that is where the walled city is on my map. Now, look to your left and down. Can you see the fast running creek on your map?"
+    ],
+    [
+      "Follower",
+      "I don't see a fast running creek on my map either. Where is it? I only see a fast running creek way up near the start, not down here near the bottom. And I definitely don't see the flat rocks anywhere on my map. Are you sure the flat rocks are on my map? Because I can't find them. And what about the stone creek? I don't see that anywhere either. Just the ghost town and the saloon bar up there. This is really confusing. If the flat rocks aren't on my map, how am I supposed to know where to turn? I'm just walking along the bottom edge here. I don't see anything to the left or right. Maybe I should just stop at the ghost town since that's where you said the city is? But then how do I get to the finish? You said to go to the finish at the bottom left, but I'm already at the bottom left. Do I stop now?"
+    ],
+    [
+      "Giver",
+      "Okay, don't stop at the ghost town yet. You need to keep going down from there to the very bottom edge of your map, then turn left again and go as far west as you can. Once you are at the absolute bottom left corner of your map, that is where the finish line is on my map, so you just need to reach that corner."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going down past the ghost town to the very bottom edge, then turning left to the west side. I'm walking along the bottom edge now... okay, I've reached the absolute bottom left corner of my map. Is this the finish line you're talking about?"
+    ],
+    [
+      "Giver",
+      "Yes, that's the finish line, so you can hang up now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm walking down the left edge now, looking for the finish. Since I don't see any landmarks near the bottom left like the cattle ranch or fort you mentioned, and I don't even see the diamond mine or the graveyard down here on my map, it looks like my map is just missing most of the stuff you have. If my map only has the ghost town, the saloon bar, and the fast running creek at the top, then the bottom left corner must be the finish since there's nothing else here. I'm reaching the bottom left corner now, so I think I've got it."
+    ],
+    [
+      "Giver",
+      "Wait, hold on. You're at the bottom left corner, but you missed the whole middle section of the route. You haven't drawn the line up the side yet. You need to go all the way up the left edge of your map from where you are now, past the ghost town and the saloon bar, all the way up to the very top left corner near the start. Once you reach the top, turn right and go down to the diamond mine. That is where the route actually starts. Okay, go up the left side now."
+    ],
+    [
+      "Follower",
+      "Wait, hold on. You want me to go all the way up the left edge past the ghost town and the saloon bar? But I thought we were already done at the bottom left corner? And if I go all the way up to the top, do I just stop there? What about the diamond mine? You said to go down to it after I reach the top. Okay, I'm going up the left side now."
+    ],
+    [
+      "Giver",
+      "Keep going up straight along the left edge until you hit the top corner of your map. Don't stop anywhere in the middle, just go all the way up to the very top left. Once you are at the top corner, turn right immediately and go down towards the diamond mine. You need to get to the diamond mine, and then you can draw the rest of the route from there to the finish. Go up now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going up the left side now past the ghost town and the saloon bar to the top corner. Once I hit the top, I'll turn right and go down towards the diamond mine. I see the mine on the right side now, so I'll head there. But wait, I'm realizing my map is really missing a lot of stuff compared to yours. I only see the start, the creek, the mine, the camp, the city, the rocks, the ghost town, the bar, the creek again, the pole, the buffalo, the fort, and the ranch. I don't see the graveyard anywhere down here. And I don't see the flat rocks or the stone creek. If I go to the mine, how do I draw the route without those other spots? Should I just skip them and go straight from the start to the mine? Or does the route on your map go through places I can't see? I'm confused about what part of the line I need to draw on my map if the landmarks are in different places or missing. Do I just connect the start to the mine directly?"
+    ],
+    [
+      "Giver",
+      "No, you have to draw the line through the landmarks on my map, even if they aren't on yours. You just connect the dots I give you. From the start, go to the diamond mine, then to the graveyard, then the walled city, then the flat rocks, then the stone creek, then the buffalo, then the pole at the bottom, then the fort, the cattle ranch, and finish. Just draw lines between those points in order. Ignore your missing landmarks and just follow my sequence. Start at the mine now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting at the mine. I'll just draw a line straight to the graveyard on your map, even though I can't see it there. Then I'll go down to the city, left to the rocks, up to the creek, down to the buffalo, left to the bottom pole, up to the fort, down to the ranch, and finally left to the finish. I'm just connecting the dots you listed. Okay, line drawn from mine to graveyard. Next, graveyard to city."
+    ],
+    [
+      "Giver",
+      "Okay, keep going down from the city to the flat rocks, then down to the stone creek, then down to the buffalo on your right. Then turn left to the pole near the bottom, turn right to the fort, down to the cattle ranch, and finally turn left to the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'll just draw lines connecting those points in the order you said, ignoring that I can't see the graveyard, flat rocks, or stone creek on my map. I'll connect the mine to the city, then down to the rocks, up to the creek, down to the buffalo, left to the pole, right to the fort, down to the ranch, and finally left to the finish. I'm drawing that line now."
+    ],
+    [
+      "Giver",
+      "Okay, draw a straight line from the diamond mine down to the walled city, then down to the flat rocks, then up to the stone creek, then down to the buffalo, then left to the pole, then right to the fort, down to the ranch, and finally left to the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm just going to draw a line connecting the mine to the city, then down to the rocks, up to the creek, down to the buffalo, left to the pole, right to the fort, down to the ranch, and finally left to the finish. I'll just connect the dots you listed."
+    ],
+    [
+      "Giver",
+      "Wait, I think you're connecting them wrong. Don't just draw a straight line between them; you have to go past the diamond mine first. From the start, go down, then left to the mine, then left to the graveyard, then down past it to the pole, then up to the city, then left to the flat rocks, then down to the stone creek, then down to the buffalo, then left to the bottom pole, then right to the fort, down to the ranch, and finally left to the finish. Follow that exact order."
+    ],
+    [
+      "Follower",
+      "Wait, that order is completely backwards. You said go to the mine, then the graveyard, then the city, but on your map, the city is way above the graveyard. If I go from the mine down to the city, I'm going up past the graveyard. And you said go to the flat rocks then the stone creek, but the rocks are below the city and the creek is way higher up. How can I go down to the rocks then up to the creek? Also, you mentioned a pole near the bottom, but I only see one pole way up at the top near the city. Did you mean the other pole? I'm so confused, is the route supposed to go up and down constantly?"
+    ],
+    [
+      "Giver",
+      "Okay, let's start over one more time and be very clear. From your START, go straight down to the fast running creek on your right. Then turn left and go down to the diamond mine. From the mine, go straight down to the graveyard. Then go straight down past the graveyard all the way to the bottom of your map, but do not turn left to the flat rocks yet, they aren't on your map. Just keep going down to the bottom edge. Now, look to your right near the bottom for the carved wooden pole and turn right towards it. Once you are at that pole, turn left and go up to the ghost town. That is the walled city. From the ghost town, turn left and go down to find the flat rocks on my map (even though you don't have them, just go down left from the city). From the flat rocks, go up to the stone creek. From the stone creek, go down to the buffalo on your right. From the buffalo, turn left to the pole near the bottom. From that pole, turn right to the fort. From the fort, go down to the cattle ranch. Finally, turn left to the finish at the bottom left corner. Draw the line connecting all those points in that exact order. Start at the mine now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to start at the mine. From there, I'll go down to the graveyard, then down past it to the bottom edge. Then I'll look right for the pole, go to it, then up to the ghost town. From the ghost town, I'll go down left for the flat rocks, up to the stone creek, down to the buffalo, left to the pole at the bottom, right to the fort, down to the ranch, and finally left to the finish. I'll draw the whole line now."
+    ],
+    [
+      "Giver",
+      "Okay, forget everything else. I will give you the exact steps one by one. Start at the START point. Go straight down to the fast flowing river on the right. Turn left immediately. Go straight down to the diamond mine. Turn left immediately. Go straight down to the graveyard. Turn left immediately. Go straight down to the walled city. Turn left immediately. Go straight down to the flat rocks. Turn right immediately. Go straight up to the apache camp. Turn left immediately. Go straight up to the carved wooden pole on the right. Turn left immediately. Go straight down to the stone creek. Turn right immediately. Go straight down to the buffalo on the right. Turn left immediately. Go straight down to the carved wooden pole at the bottom. Turn right immediately. Go straight up to the fort. Turn left immediately. Go straight down to the cattle ranch. Turn left immediately. Go straight down to the finish. Do you understand? Start now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting at the start now. I'll go down to the river on the right, turn left to the mine, left to the graveyard, left to the city, left to the rocks, right to the camp, left to the pole, left to the creek, right to the buffalo, left to the bottom pole, right to the fort, left to the ranch, and finally left to the finish. I'm drawing the whole line now."
+    ],
+    [
+      "Giver",
+      "Wait, you can't go straight from the start to the finish like that; you have to stop at every single point in the middle. I need you to draw the line step-by-step, not all at once. First, draw a line from the START straight down to the fast flowing river on the right. Then turn left and draw a line straight down to the diamond mine. Then turn left and draw a line straight down to the graveyard. Then turn left and draw a line straight down to the walled city. Do you have the city now?"
+    ],
+    [
+      "Follower",
+      "Okay, I'll do it step by step. I'll draw a line from the START down to the river on the right, then left to the mine, then left to the graveyard, then left to the city. I'm starting that now."
+    ],
+    [
+      "Giver",
+      "Okay, don't draw the line all the way to the city yet. Stop right at the diamond mine. Just draw a line from the start to the river, then from the river to the mine, and then from the mine to the graveyard. Stop there. I will give you the next part after you draw that. Are you ready?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line from the start to the river, then to the mine, then to the graveyard. I've stopped at the graveyard. Do you want me to draw the next part to the walled city now?"
+    ],
+    [
+      "Giver",
+      "Okay, yes, draw the line from the graveyard to the walled city now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line from the graveyard to the city now. I'm just connecting those two dots since I can't actually see the city on my map. I'll stop there when I'm done."
+    ],
+    [
+      "Giver",
+      "Wait, I don't want you to just connect them; you need to go *past* the graveyard first. From the graveyard, go straight down past it all the way to the bottom edge of your map, then turn right to find the carved wooden pole. Once you are at the pole, turn left and go up to the ghost town, which is where the walled city is. Then turn left again and go down to find the flat rocks. From the rocks, go up to the stone creek, then down to the buffalo, then left to the bottom pole, right to the fort, down to the ranch, and finally left to the finish. Do you understand? Start at the mine now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting at the mine. I'm drawing a line down to the graveyard first, then straight down past it to the bottom edge. Then I'll look right for the pole, go to it, then up to the ghost town. From there I'll go down left for the rocks, up to the creek, down to the buffalo, left to the bottom pole, right to the fort, down to the ranch, and finally left to the finish. I'll do the whole thing now."
+    ],
+    [
+      "Giver",
+      "Wait, stop drawing the whole line at once again. You're going to get it wrong. I need you to do it one tiny step at a time. Start at the diamond mine. From the mine, draw a line straight down to the graveyard on your map. Stop exactly at the graveyard. Do not go past it yet. Just draw the line from the mine to the graveyard and tell me when you are done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting at the mine now. I'll draw a line straight down to the graveyard. I see the desert to my left and the ghost town above, but I don't see the graveyard on my map at all. I'm going to draw the line down from the mine to where the graveyard should be on your map, even though it's not there. I'll stop exactly when I reach that point."
+    ],
+    [
+      "Giver",
+      "Okay, don't worry if you can't see the graveyard, just keep going straight down from the mine to the very bottom edge of your map. Once you hit the bottom, turn right immediately to find the carved wooden pole. Draw a line from the mine down to that pole and stop there."
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting at the mine now. I'll draw a line straight down to the very bottom edge of my map since I can't see the graveyard. Then I'll turn right and draw a line to the pole on the right side. I'll stop there."
+    ],
+    [
+      "Giver",
+      "Wait, that's not quite right. You went down to the bottom edge, but you missed the graveyard completely. You need to stop exactly at the graveyard before you turn right to the pole. Draw a line from the mine down to the graveyard and stop there. Do not go to the bottom yet. Are you done?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a line from the mine straight down to the graveyard now, I'll stop there."
+    ],
+    [
+      "Giver",
+      "Okay, good. Now that you have drawn the line from the mine to the graveyard, draw a line from the graveyard straight down to the bottom edge of your map and stop there. Do not turn right to the pole yet."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a line straight down from the mine to the bottom edge of my map now since I can't see the graveyard, and I'll stop there."
+    ],
+    [
+      "Giver",
+      "No, don't draw to the bottom yet. Stop right at the graveyard. Just draw the line from the mine to the graveyard and tell me you are done. Do not go past it."
+    ],
+    [
+      "Follower",
+      "Okay, I'll draw the line straight down from the mine to the graveyard and stop there. I see the desert to my left, but no graveyard, so I'll just draw to where you said it should be and let you know."
+    ],
+    [
+      "Giver",
+      "Okay, one more time, I need you to listen very carefully. Stop drawing everything else. Just focus on the first two steps. Step one: draw a line from the START at the top left directly down to the fast flowing river on your right. Step two: from that river, draw a line straight down to the diamond mine. That is all for now. Do not draw anything else. Do not go to the graveyard yet. Just draw the line from the start to the river, and then from the river to the mine, and stop exactly at the mine. Are you ready to start just that part?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm starting at the start now. I'll draw a line straight down to the fast running creek on the right. Then I'll turn left and draw a line straight down to the diamond mine. I'm stopping there now."
+    ],
+    [
+      "Giver",
+      "Okay, good, that is the first part done. Now draw a line from the diamond mine straight down to the walled city. Stop exactly at the city and tell me."
+    ],
+    [
+      "Follower",
+      "Okay, I'll draw the line from the mine straight down to the city. Since I can't see the city on my map, I'll just draw a line down past the ghost town to where you said it is and stop there. I'm done."
+    ],
+    [
+      "Giver",
+      "Wait, stop right there. You can't go straight from the mine to the city like that. You missed the graveyard completely. From the mine, you must draw a line straight down to the graveyard first. Stop exactly at the graveyard. Do not go to the city yet. Tell me when you have drawn the line to the graveyard."
+    ],
+    [
+      "Follower",
+      "Okay, I'll draw the line from the mine straight down to the graveyard and stop there. I see the desert to my left but no graveyard on my map, so I'll just draw to the point you said it should be and let you know."
+    ],
+    [
+      "Giver",
+      "Okay, just draw the line from the mine straight down to the graveyard and stop there. Do not go any further to the city or anything else. Just connect the mine to the graveyard on my map."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line straight down from the mine to the graveyard and stopping there. I see the desert to my left but no graveyard on my map, so I'll just draw to the point you said it should be and let you know."
+    ],
+    [
+      "Giver",
+      "Okay, I understand you can't see it, so just keep drawing that line straight down past the desert until you hit the very bottom edge of your map. Once you are at the bottom edge, turn right immediately and draw a line to the carved wooden pole on your right. Stop exactly when you reach the pole. Do not go any further."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a line straight down from the mine past the desert to the bottom edge, then turning right and drawing a line to the pole on the right. I'll stop there."
+    ],
+    [
+      "Giver",
+      "Wait, hold on, stop drawing to the pole yet. Once you reach the bottom edge, look to your right and find the carved wooden pole, then draw a line from the bottom edge straight to that pole and stop there. Do not go up yet."
+    ],
+    [
+      "Follower",
+      "Wait, you want me to stop at the pole? But I just finished drawing the line from the bottom edge to the pole. If I stop there, haven't I already reached the checkpoint? And you said don't go up yet, but don't I need to go up to the city eventually? I'm so confused about where the route actually goes now. Do you want me to stop at the pole and then just wait for your next instruction, or should I go up to the city now? I really need to know if I should draw a line up from the pole or not."
+    ],
+    [
+      "Giver",
+      "Wait, no, that's not right at all. You just drew a line from the bottom edge to the pole, but you missed the graveyard completely again! Listen carefully: from the diamond mine, you must draw a line straight down to the graveyard first. Stop exactly at the graveyard. Do not go past it to the bottom edge or the pole. Just draw the line from the mine to the graveyard and stop there. Are you done?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line straight down from the mine to the graveyard now. I still don't see the graveyard on my map, but I'm drawing to the spot you said it should be and I'll stop exactly there. Done."
+    ],
+    [
+      "Giver",
+      "Okay, good, I know you can't see it. Now, from that same point where you stopped (the graveyard), draw a line straight down past it to the very bottom edge of your map and stop there. Do not turn right to the pole yet. Just connect the mine to the bottom edge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a line straight down from the mine past the desert to the bottom edge, stopping there."
+    ],
+    [
+      "Giver",
+      "Wait, no, don't draw to the bottom edge yet. You missed the walled city. From the graveyard, draw a line straight up to the ghost town, which is where the city is. Stop exactly there. Do not go down to the bottom edge. Just the city now."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a line straight up from the graveyard to the ghost town now. I'll stop exactly at the ghost town."
+    ],
+    [
+      "Giver",
+      "Okay, stop drawing that line up. You made a mistake. Don't go to the ghost town yet. Once you are at the graveyard, you need to go straight down past it to the bottom edge of your map. Stop there. Do not go up to the city at all. Just draw the line down to the bottom edge and tell me when you are done."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going to draw a line straight down from the graveyard past the desert to the bottom edge now and I'll stop there."
+    ],
+    [
+      "Giver",
+      "Wait, I am really confused now. You keep saying you will draw to the bottom edge, but I am telling you to draw to the graveyard or the city, and then you say you are drawing to the bottom edge again. Let me be very specific one last time. From the diamond mine, draw a line straight down to the graveyard. Stop exactly at the graveyard. Do not draw past it. Do not draw to the bottom edge. Just the mine to the graveyard. Are you done?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line straight down from the mine to the graveyard and stopping exactly there. Done."
+    ],
+    [
+      "Giver",
+      "Okay, good. That is the second step done. Now, from that graveyard, draw a line straight down to the very bottom edge of your map and stop there. Do not turn right to the pole yet. Just connect the mine to the bottom edge."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line straight down from the graveyard to the bottom edge now and I'll stop there."
+    ],
+    [
+      "Giver",
+      "Wait, stop. I keep getting confused with you. Let's do this one more time, very slowly and clearly. Forget the bottom edge and the pole for a second. From the diamond mine, you need to draw a line straight down to the walled city. Stop exactly at the walled city. Do not go to the bottom edge yet, just the mine to the city. Are you ready to draw that?"
+    ],
+    [
+      "Follower",
+      "Okay, I'll draw the line straight down from the mine to the walled city and stop exactly there. I see the ghost town below me, so I'll draw past it to the city and let you know when I'm done."
+    ],
+    [
+      "Giver",
+      "Wait, no, you're doing it wrong again. You can't go straight from the mine to the city. From the mine, you must draw a line straight down to the graveyard first. Stop exactly at the graveyard. Do not go past it to the city or the bottom edge. Just the mine to the graveyard. Are you done?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line straight down from the mine to the graveyard and stopping exactly there. Done."
+    ],
+    [
+      "Giver",
+      "Okay, one last time, I'm going to be very clear because you keep making mistakes. From the diamond mine, you do NOT go to the city or the bottom edge. You go straight down to the graveyard and stop exactly there. Do not draw any other lines yet. Just the mine to the graveyard. Are you ready?"
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing the line straight down from the diamond mine to the graveyard and stopping exactly there. I don't see it on my map but I'm stopping at the spot you said it should be. I'm done."
+    ],
+    [
+      "Giver",
+      "Okay, good, that is the third step done. Now, from that graveyard, draw a line straight up to the ghost town on your map, which is where the walled city is on my map. Stop exactly at the ghost town and tell me."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going up from the graveyard to the ghost town now, and I'll stop exactly there."
+    ],
+    [
+      "Giver",
+      "Okay, good, stop there. Do not go any further up yet. Just draw the line from the graveyard to the ghost town and tell me when you are done."
+    ],
+    [
+      "Follower",
+      "Okay, I've drawn the line from the graveyard up to the ghost town and I'm stopping there."
+    ],
+    [
+      "Giver",
+      "Okay, good, you are at the city now. Next, from the ghost town, draw a line straight down to the left to find the flat rocks on my map, even though you can't see them, and stop exactly there. Do not go to the stone creek yet. Just the city to the rocks."
+    ],
+    [
+      "Follower",
+      "Okay, I'm drawing a line straight down to the left from the ghost town to find the flat rocks and stopping there."
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}

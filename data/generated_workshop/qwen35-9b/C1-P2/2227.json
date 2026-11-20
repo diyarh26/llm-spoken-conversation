@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 913709202,
+  "conversation_no": 2227,
+  "topic": "Tv Programs",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER'S FAVORITE TV SHOWS ARE AND WHY.  ARE YOUR INTERESTS SIMILAR OR DIFFERENT?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 22,
+    "education": "a college degree",
+    "occupation": "a factory supervisor",
+    "stance": 2,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 16,
+    "education": "a high-school education",
+    "occupation": "a factory supervisor",
+    "stance": 1,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hey, hi.\nParticipantB: Oh, hey.\nParticipantA: Yeah, so I was wondering, just out of curiosity, what kind of shows do you usually watch?\nParticipantB: Oh, well, I mostly just catch the soap operas and the reality stuff. You know, things like *The Bachelor* or *General Hospital*.\nParticipantA: Okay.\nParticipantB: Why?\nParticipantA: Just trying to figure out if we have similar tastes or not. I mostly just watch sports stuff and maybe some old movies.\nParticipantB: Yeah, that sounds pretty different. I don't really get into sports stuff.\nParticipantA: Right.\nParticipantB: Although, I do like the reality shows because, you know, it's just real people doing real things. Sometimes it's a little crazy though.\nParticipantA: Yeah, I guess that makes sense. Sometimes the people on TV seem pretty dramatic.\nParticipantB: For sure. Like, last week on *The Real Housewives*, someone was actually fired from a job because of a text message?\nParticipantA: Wow, really?\nParticipantB: Yeah, it was over something really stupid. I mean, it's just people's lives, but sometimes it feels like too much.\nParticipantA: That sounds intense. I guess I'd probably just watch the game and ignore all the drama.\nParticipantB: Well, I kind of feel that way too sometimes. Like, the stuff on the news is bad, but the stuff on the reality shows... it's just so exaggerated.\nParticipantA: Yeah, that's what I think. It's like watching a movie where everything happens too fast.\nParticipantB: Exactly. And honestly, I have this friend who goes to these weird festivals, and she says the people there act just like the people on those shows.\nParticipantA: Oh, really? What kind of festivals?\nParticipantB: Well, she goes to these music festivals out in the desert, and she says everyone there is just acting so wild and strange. Like, it's almost like a performance.\nParticipantA: Hmm. I've never been to a festival like that. I usually just stay home.\nParticipantB: Yeah, me too. My boss takes us to a factory event once a year, but it's mostly just eating pizza and listening to a speaker. It's not exactly exciting.\nParticipantA: Oh, that sounds kind of boring, actually.\nParticipantB: Well, it is a bit, but hey, at least we're all in it together. My boss says he's been doing this for years, so he knows all the tricks.\nParticipantA: Yeah, experience matters, I guess. Even if it's not super fun.\nParticipantB: Right? It's weird because sometimes I think the shows on TV are closer to real life than what happens at work.\nParticipantA: Oh, really?\nParticipantB: Yeah, like, on *The Office*, people just talk to each other all day and make mistakes. But at my job, everyone is just so focused on the machines. It's very different.\nParticipantA: Oh, I see. My job is similar to yours, actually. We both supervise people. But at my place, it's more about safety and making sure the lines run right.\nParticipantB: Yeah, I do that too, mostly. But sometimes I think the shows make it look way more chaotic than it really is.\nParticipantA: That's a good point. Maybe they just exaggerate it for the ratings.\nParticipantB: Probably. Anyway, I think we have different interests, but I guess that's okay.\nParticipantA: Yeah, totally. Different strokes for different folks, I guess.\nParticipantB: Right. Well, I'm gonna go check if my shift is ending soon.\nParticipantA: Okay, same here. Nice talking to you.\nParticipantB: You too. Bye.\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 839,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

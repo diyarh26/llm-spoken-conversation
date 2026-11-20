@@ -1,0 +1,276 @@
+{
+  "condition": "C2-P3",
+  "architecture": "C2",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 2283,
+  "topic": "Gardening",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER DOES IN THE WAY OF LAWN AND GARDEN WORK.DOES THE OTHER CALL ENJOY DOING IT?  COMPARE THIS TO YOUR OWN SITUATION.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 24,
+    "education": "a college degree",
+    "occupation": "a pharmacist",
+    "stance": 2,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hey, so I'm a manager at a grocery store, but I actually manage a little patch of land behind the store too."
+    ],
+    [
+      "ParticipantB",
+      "Oh, nice. I'm a pharmacist, but honestly, I know a guy who's got his hands full with a garden and he's not having it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, well, that's my take too, actually. My tomatoes kept dying this year no matter what I did, feels like something's wrong with the soil or maybe just bad luck."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, he's been trying to fix it for months with all these fancy organic stuff he read online and nothing's working, honestly feels like a waste of time sometimes."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, man, that's exactly what happened to me too, it just feels like throwing good money after bad."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess you just learn to move on and plant something else instead."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, whatever grows, it's gotta be edible, right?"
+    ],
+    [
+      "ParticipantB",
+      "I mean, as long as I can make the houseplants alive, I'll take it."
+    ],
+    [
+      "ParticipantA",
+      "Haha, houseplants are fine too, just don't get them out there where the deer can eat them."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, deer are the worst, they strip the whole bush bare in seconds."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, they get in the vegetable patch too sometimes."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, they just eat everything."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, they're just relentless, never give up."
+    ],
+    [
+      "ParticipantB",
+      "They just tear right out the stems and leave nothing behind."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, they just go for everything."
+    ],
+    [
+      "ParticipantB",
+      "It's just annoying when you work so hard on it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it makes you wonder if you're even doing anything right."
+    ],
+    [
+      "ParticipantB",
+      "It's just frustrating when all that effort goes to waste."
+    ],
+    [
+      "ParticipantA",
+      "It's like the ground just doesn't want anything to take root."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, sometimes you just have to accept that nature has its own plans."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, sometimes you just give up and let it be."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it's just part of the struggle."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, you just let the ground rest for a year or two and try something different."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe just focus on the herbs that come back every spring."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, maybe I should just try those herbs next spring."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds like a solid plan."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that sounds like a solid plan."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's probably the smartest move."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that sounds like a solid plan."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, definitely."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's probably what I'll do."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, if those herbs take, you might finally have something that actually survives."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, maybe some parsley."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, parsley is tough stuff, you gotta keep it fed or it disappears."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, and if it disappears again, I'm done with the garden for good."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's probably it then."
+    ],
+    [
+      "ParticipantA",
+      "I'd rather just buy them from the store."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, there's a better way to get that stuff without all the grief."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, the store definitely has better stuff than anything I can grow."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, don't bother, just pick it up fresh."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0
+  },
+  "conversation_seed": 219749997,
+  "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+  "run": {
+    "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+    "identity": {
+      "condition": "C2-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+    "created_utc": "2026-11-17T10:53:33.359476+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

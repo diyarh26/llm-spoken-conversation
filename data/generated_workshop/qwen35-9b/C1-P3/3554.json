@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2668049670,
+  "conversation_no": 3554,
+  "topic": "Exercise And Fitness",
+  "sb_prompt": "DO YOU DO ANY EXERCISE REGULARLY TO MAINTAIN YOUR HEALTH OR FITNESS LEVEL?  IF SOOR DO IT AS A TASK?  COMPARE YOUR HABITS AND YOUR MOTIVES",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 31,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 2,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantB: Yeah, hi.\nParticipantA: You got through. Great. So, do you do any exercise regularly to maintain your health or fitness level?\nParticipantB: Yeah, definitely. I'm a nurse, so I'm on my feet all shift, but I try to run a few miles a couple of times a week.\nParticipantA: Oh, that's nice. I actually do too, though more like... walking the dog and maybe some light weights at home.\nParticipantB: Right, see, I feel like if I don't hit the gym or run hard, I'm going to get out of shape fast. Like, physically.\nParticipantA: I agree with that part. The health stuff makes total sense to me.\nParticipantB: Exactly. But sometimes... honestly, sometimes I feel like it's just a chore. Like a task I have to tick off.\nParticipantA: Oh, I know exactly what you mean about the task part. That's actually the thing that bothers me a little.\nParticipantB: Yeah?\nParticipantA: I made up my mind years ago, like back in college, that I needed to move more. I just knew I had to do it.\nParticipantB: Oh, really? Was it something specific?\nParticipantA: No, it was just... a feeling. Like, \"this is what healthy people do.\" But doing it feels like a burden sometimes, not like... fun or something I really want.\nParticipantB: Yeah, that hits home. My friend Sarah, she's a physical therapist, she's dealing with burnout right now. She used to love yoga, but now she just sees it as another thing she has to force herself through.\nParticipantA: Wow, that's tough. I guess mine isn't quite that bad, but I do have days where I hate going to the park.\nParticipantB: Yeah, and she says that's normal. That it's okay if you don't love every bit of it.\nParticipantA: I didn't even think of it that way. I thought if I hated it, I was doing something wrong.\nParticipantB: Nonsense. It's about consistency, not love.\nParticipantA: That makes me feel a bit better, honestly.\nParticipantB: It does. So, how does your week look? Any specific days you look forward to?\nParticipantA: Tuesdays. Mostly just because I hate the rain most then, so the walk feels better.\nParticipantB: That's a good reason. Weather dependent?\nParticipantA: Kind of. Yeah.\nParticipantB: Cool. Well, I'm gonna hit the track in about twenty minutes.\nParticipantA: Oh, nice. Good luck with it!\nParticipantB: Thanks, you too.\nParticipantA: Bye!\nParticipantB: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 609,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

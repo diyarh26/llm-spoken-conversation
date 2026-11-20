@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P3",
+  "architecture": "C1",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 1057548530,
+  "conversation_no": 3676,
+  "topic": "Movies",
+  "sb_prompt": "FIND OUT WHAT THE OTHER CALLER THOUGHT ABOUT THE LAST FEW MOVIES THEY SAW. WHAT MOVIES HAVE YOU SEEN LATELY?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 35,
+    "education": "some college",
+    "occupation": "a high-school teacher",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 1
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: You there?\nParticipantB: Yeah, sure.\nParticipantA: Hi, I'm calling because I was asked to chat with a stranger about movies. What's your name?\nParticipantB: I'm Sarah.\nParticipantA: Oh, nice to meet you. I'm Mark.\nParticipantB: Nice to meet you too, Mark.\nParticipantA: So, what movies have you seen lately?\nParticipantB: Well, I just saw *Dune: Part Two* and *The Fall Guy*.\nParticipantA: Oh, cool. I saw those, too. What did you think?\nParticipantB: I thought *Dune* was amazing, honestly. The visuals were insane.\nParticipantA: Yeah, I thought that was great, but I hated the second half a bit.\nParticipantB: Really? Why?\nParticipantA: Well, the plot got a little muddy. It felt like it dragged on for too long.\nParticipantB: Hmm, I actually loved the pacing. It built up so much tension.\nParticipantA: Oh, really? That's interesting. I guess I just prefer shorter stories sometimes.\nParticipantB: Yeah, me too, but this one just kept pulling me in.\nParticipantA: Well, I guess everyone sees it differently. What about *The Fall Guy*? Did you like that?\nParticipantB: Oh, that was fun! I loved it with Ryan Gosling and Emily Blunt.\nParticipantA: Yeah, that was a fun one. Very light.\nParticipantB: Definitely. It was a nice escape from everything else.\nParticipantA: True. Hey, you work as a mechanic, right? Do you like action movies or something else?\nParticipantB: Yeah, I'm a mechanic. I actually prefer stuff that makes sense mechanically.\nParticipantA: Oh, really? That's cool. I'm a teacher, so I get asked a lot about movies.\nParticipantB: Oh, really? What do you usually tell people?\nParticipantA: Well, I tell them that if the science is wrong, it bugs me. Like in *Dune*, the suit mechanics were a little off.\nParticipantB: Haha, yeah. There was that scene where the air ran out?\nParticipantA: Exactly! A guy in a pressurized suit breathing like he's in a vacuum? No way.\nParticipantB: Yeah, that doesn't make any sense. I told my brother about it.\nParticipantA: Oh? What did he say?\nParticipantB: He said, \"Just go with the flow, Mark.\" But I can't get past it.\nParticipantA: Haha, fair point. My brother-in-law is a doctor, he'd say the same thing.\nParticipantB: Yeah, he's the same way. Always fact-checking.\nParticipantA: Well, I guess for teachers, you have to balance the story with the truth sometimes.\nParticipantB: True. Anyway, thanks for chatting. I really liked hearing your take.\nParticipantA: Thanks for yours, Sarah. It was fun talking.\nParticipantB: Yeah, you too. Good luck with your teaching!\nParticipantA: Thanks! Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 698,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+  "run": {
+    "run_id": "f244cc4750afe38f9ab8651dc59514e9e10205234fe211ddfcbb2b0780c966c4",
+    "identity": {
+      "condition": "C1-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:56:20.483360+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

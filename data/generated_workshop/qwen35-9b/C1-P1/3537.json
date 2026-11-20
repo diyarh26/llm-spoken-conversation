@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3692543983,
+  "conversation_no": 3537,
+  "topic": "Universal Health Ins",
+  "sb_prompt": "DO YOU BELIEVE THAT THE US GOVERNMENT SHOULD PROVIDE UNIVERSAL HEALTH INSURANCE",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 51,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 0,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 32,
+    "education": "some college",
+    "occupation": "a nurse",
+    "stance": 0,
+    "anchor": 0
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hello!\nParticipantA: Yeah, hey. You called from the list about the health insurance stuff, right?\nParticipantB: That's right. Yeah, same here.\nParticipantA: Cool. I'm actually kind of blown away by how messy that whole debate is.\nParticipantB: Tell me about it. It feels like people are just shouting past each other.\nParticipantA: Exactly. I've been a real estate agent for about ten years now, and seeing that stuff hit the news while I'm showing houses is wild.\nParticipantB: How's that?\nParticipantA: Well, my cousin, he's a doctor, he's basically fought this war his whole career. He told me that if we went fully government-run, the quality of care in places like his hospital would tank just like the housing market in the 70s.\nParticipantB: Oh man, my uncle is a nurse, actually. He's been working in ERs for twenty years.\nParticipantA: Oh, really? That's crazy close to my cousin.\nParticipantB: Yeah, and he says exactly what your cousin says. He told me last week that if we nationalize everything, the people who actually work the system get crushed by bureaucracy and patient care drops.\nParticipantA: Wow, that's actually the first time I've heard a medical pro say that so bluntly. Everyone else just talks about \"access.\"\nParticipantB: Yeah, but he says access without quality is just a death sentence. He's seen it happen. He lost a patient last year because the wait time was too long and they didn't have coverage to get a specialist in.\nParticipantA: That's heavy stuff. My cousin is pretty passionate about keeping it private to protect that direct doctor-patient relationship.\nParticipantB: Yeah, he says it's about trust. \"Trust is the currency,\" he told me. \"You can't print trust.\"\nParticipantA: That actually makes sense. When I show a house, if the seller is shady, I don't care how cheap the house is, I walk away.\nParticipantB: Exactly! Same thing. If you trust the doctor, you'll go see them even if you have to pay more.\nParticipantA: I guess I didn't realize that was the core of it. I thought it was just about money saving.\nParticipantB: It's mostly about who holds the power. Your cousin thinks patients should be the bosses of their own care.\nParticipantA: Yeah, that's what he says. \"Why should the government decide if you get an MRI?\"\nParticipantB: Right. And if they lose that power, people just stop going. He says we're already seeing a gap in rural areas.\nParticipantA: Hey, that actually hits home. I just listed a property in a small town, and the owner told me they can't get basic care for his mom.\nParticipantB: That sucks. That's exactly why I worry. The system is already stretched thin.\nParticipantA: Yeah. I think maybe a mix? Like, the government covers the basics, but you choose the doctor?\nParticipantB: That sounds like what my uncle wants too. He calls it \"not letting anyone fall through the cracks.\"\nParticipantA: I like that. \"Not letting anyone fall.\" It sounds humane.\nParticipantB: Yeah, my uncle says that's the only way it works. No one left behind.\nParticipantA: Maybe that's the middle ground? Less shouting, more helping.\nParticipantB: Sounds reasonable. If we can keep the quality high, why not cover the basics?\nParticipantA: Yeah. My cousin says he'd take that deal in a heartbeat.\nParticipantB: Me too. Honestly, as a nurse, seeing people suffer because they can't afford a visit is worse than dealing with insurance paperwork.\nParticipantA: Agreed. Paperwork is annoying enough. We don't need to break the doctors to fix it.\nParticipantB: Right. Thanks for talking about this, man.\nParticipantA: Sure thing. Good luck with the discussion.\nParticipantB: You too. Bye!\nParticipantA: Bye!",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 883,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

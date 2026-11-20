@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 2433158098,
+  "conversation_no": 2546,
+  "topic": "Capital Punishment",
+  "sb_prompt": "COMPARE YOUR OPINIONS AND THOSE OF THE OTHER CALLER ON CAPITAL PUNISHMENT.  DO EITHER OF YOU THINK IT SHOULD BE RESTRICTED TO CERTAIN CRIMES OR CIRCUMSTANCES?  HOW DO THE POLICIES AND PRACTICES OF YOUR STATE FIT WITH YOUR OPINIONS?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a carpenter",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 38,
+    "education": "some college",
+    "occupation": "a real estate agent",
+    "stance": 1,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hey, yeah, I called you about the capital punishment thing.\nParticipantB: Oh, hi. Yeah, sure. I was just thinking about that too.\nParticipantA: Right? It's... complicated for me.\nParticipantB: Yeah, totally. I feel the same way, kind of.\nParticipantA: See, I'm a carpenter, so I deal with hands-on stuff every day. People's lives, stuff breaking, fixing it.\nParticipantB: Oh, cool. Yeah, I'm in real estate, so I see a lot of houses being bought and sold, people moving in.\nParticipantA: But you know, my uncle, he went to prison for something really serious. Like, he actually did it.\nParticipantB: Oh, really? That's... heavy.\nParticipantA: Yeah. He didn't get the death penalty. And honestly, that makes me worry.\nParticipantB: Yeah, I get that. If it's murder, you know, it feels like... justice should be done.\nParticipantA: Exactly. But then I see all the mistakes. The guy who shot his wife and kid, he should pay. But what about the guy who had mental issues?\nParticipantB: Oh man. Yeah, that's where I struggle. Like, if someone isn't fully responsible...\nParticipantA: Right? My uncle says the system is broken. People get on the wrong side of it.\nParticipantB: Yeah, I've been on that fence for years. I don't know why, but I just... I don't feel good about executing anyone, even if they're guilty.\nParticipantA: Hmm. I guess part of me thinks it's necessary for the worst crimes, but the system is just so messy.\nParticipantB: Totally. And honestly, the way my state handles it... it feels pretty shaky.\nParticipantA: Yeah, ours is similar. Lots of appeals, lots of delays. Feels like people are just waiting to make mistakes.\nParticipantB: Exactly. And the cost? We're spending millions on lawyers and courts for people we might kill.\nParticipantA: Wow. Yeah, that hits home. My buddy, he's a lawyer, he said it's a waste of taxpayer money.\nParticipantB: Yeah, I mean, if we're gonna pay to kill someone, maybe we should just pay to keep them locked up for life?\nParticipantA: Yeah, that's what I'm starting to lean towards. Just locking them up.\nParticipantB: Me too. It just... doesn't sit right. Even if they did it.\nParticipantA: I guess my uncle's situation kinda scared me off. If he could have been innocent, I'd never want that hanging over it.\nParticipantB: Yeah, that's the thing. Once you pull the trigger, you can't un-kill. It's too final.\nParticipantA: Yeah, can't undo it. So I think maybe we should stop it altogether?\nParticipantB: I'm with you there. Seems like the state is playing too risky with people's lives.\nParticipantA: Yeah. Thanks for talking about it, man. It's a heavy topic.\nParticipantB: Yeah, it is. Same here. Thanks for calling.\nParticipantA: Yeah, you too. Take care.\nParticipantB: You too. Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 712,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

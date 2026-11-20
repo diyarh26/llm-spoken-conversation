@@ -1,0 +1,278 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 2711,
+  "topic": "Vacation Spots",
+  "sb_prompt": "PLEASE DISCUSS TYPES OF VACATIONS AND TRIPS YOU ENJOY.  FIND OUT WHETHER THE OTHER CALLER CAN INTEREST YOU IN A VACATION SPOT YOU HAVEN'T VISITED.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 37,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 0,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 25,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, how about that? I just got back from a road trip last month and honestly, it was kind of a disaster. We drove through the whole Midwest just to see some waterfalls and I think we only saw like three before my car broke down."
+    ],
+    [
+      "ParticipantB",
+      "Man, that sucks, but honestly that sounds like a better story than the one I heard from my cousin last week who drove his rig straight into a sinkhole in West Virginia."
+    ],
+    [
+      "ParticipantA",
+      "Wait, really? A sinkhole? That's wild, I thought they only happened in movies."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, my cousin said the truck just tipped sideways like it was on a trampoline, no warning at all. We thought he was just going to be stuck in a cave, but turns out he flipped on his side and the bottom of the cab got buried. He had to wait three days for a tow truck to come out and drag the thing out. It was terrifying, honestly."
+    ],
+    [
+      "ParticipantA",
+      "That is some nightmare fuel. Honestly, after what happened to you, I'm pretty much terrified of driving through West Virginia too, even though my car wasn't exactly a heavy rig."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, honestly you should stick to the coast if you want to avoid the scary stuff. I'd tell you about that little cabin I found near the Great Smoky Mountains, but I don't want you to drive through there in case it's hiding another surprise like West Virginia."
+    ],
+    [
+      "ParticipantA",
+      "Honestly, I'm kind of glad I didn't try the Smokies then, my car probably would have just sunk right in too."
+    ],
+    [
+      "ParticipantB",
+      "Haha, don't worry, you'll be fine if you just stick to paved roads and don't try to park on any suspicious mud!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that sounds a lot safer than trying to find a spot on the side of the highway. I was actually thinking about going to New Orleans next month, just to see the food and the music, but I've heard the roads there can get pretty flooded sometimes. Have you ever been down south, or is that just where your cousin ended up?"
+    ],
+    [
+      "ParticipantB",
+      "Oh yeah, I've been down there a few times, mostly just hauling around, but it's a whole different vibe up close. The roads are fine as long as you stay on them, and the music? Man, if you can find a live jazz spot or a good blues bar, that's the real deal compared to listening to a CD on the highway."
+    ],
+    [
+      "ParticipantA",
+      "That's cool, but honestly New Orleans might be a bust if I can't get a ride back up north. I don't really trust those buses out there, so if you've got a friend who drives a truck or something, could you maybe help me get there and back?"
+    ],
+    [
+      "ParticipantB",
+      "Haha, no way, I can't drag your car out if it breaks down; I'm just a driver, not a tow truck company, so you're definitely on your own up there."
+    ],
+    [
+      "ParticipantA",
+      "Haha, fair enough, guess I'll just have to pack a really good set of jumper cables then."
+    ],
+    [
+      "ParticipantB",
+      "Jumper cables won't help if the engine blows out, so maybe just stick to New York or Chicago? Those places have plenty of trains and hotels with rooms, so you don't have to worry about being stranded on the side of the road with a dead battery."
+    ],
+    [
+      "ParticipantA",
+      "Oh, Chicago sounds like a solid backup plan then, at least the highways are usually pretty clear out there."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, Chicago's a good call, especially if you just take the L train downtown to see the lake; honestly, that's the kind of view I usually just see from my seat at 3 a.m. while driving through the night."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, seeing the lake from a seat at 3 a.m. sounds kinda eerie, but maybe I'll take the train too just to see the city lights instead of just staring at a highway for hours."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe I'll show you a few good spots in Chicago on my map app when I'm in town, but honestly, you should probably just book a hotel first and see if you can find a decent ride somewhere before you even leave."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, fair point, I guess I'll just book a hotel first and hope I don't end up stranded in a puddle in the middle of nowhere."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, just make sure you don't pick a hotel near the airport, those roads always turn into mud pits in the rain, and then you're stuck waiting for a ride that never comes."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'll definitely look at hotels away from the airport, hopefully I won't end up stuck in a mud pit waiting for a ride that never shows up."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, just pick something with a reliable Uber or Lyft nearby, because honestly, if you book a hotel in a remote neighborhood, you might end up waiting in the rain for three hours and the driver won't even show up."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, good point, I guess I'll just download the app and hope a driver actually shows up before the rain starts."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, just download the app and hope a driver actually shows up before the rain starts."
+    ],
+    [
+      "ParticipantA",
+      "I guess I'll just hope the app works better than my own car did last time."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but apps can be shady too, I've had drivers ghost me in the middle of nowhere before, so maybe just stick to places where you can walk from the station to the hotel without carrying a heavy rig up three flights of stairs."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, walking sounds easier than dragging a suitcase up stairs, plus I don't think I can carry a suitcase and a car seat at the same time anyway."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, if you're worried about the stairs, maybe look for a hotel with a pool elevator or a rooftop deck so you can just sit outside and watch the city glow without even having to carry your bags."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, a rooftop deck sounds way better than lugging heavy bags up stairs, especially since I still might have to deal with the car if I rent one down there."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, honestly you should just grab a hotel with a pool elevator or a rooftop deck so you can just sit outside and watch the city glow without even having to carry your bags."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, a rooftop deck sounds way better than lugging heavy bags up stairs, especially since I still might have to deal with the car if I rent one down there."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, honestly if you find one with a pool elevator or rooftop deck that's probably the smartest play so you don't have to haul anything heavy up those flights."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's actually a pretty smart move, honestly, I'd probably just book that one with the rooftop deck and skip the heavy bags entirely."
+    ],
+    [
+      "ParticipantB",
+      "That's the plan, just book the one with the deck and leave your heavy stuff in the car."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I'll leave the heavy stuff in the car and just take a light bag to the deck, maybe grab a beer and watch the lights come on from there."
+    ],
+    [
+      "ParticipantB",
+      "That sounds like a solid plan, but one thing to keep in mind is that most rooftop decks in Chicago are locked after midnight or don't allow outside alcohol, so you might want to check the policy before you book."
+    ],
+    [
+      "ParticipantA",
+      "Oh man, that's a bummer if they ban alcohol, guess I'll just grab a beer right outside on the patio instead and hope the cops don't care about my car sitting there."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, just grab a spot with an open-air patio and no age restrictions so you don't get kicked out for a cold beer."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's actually a relief, because if they kick me out of a bar because I'm wearing a server uniform, that would be a total nightmare, so I guess I'll just book the patio place and hope for the best."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, just make sure you don't get your uniform confiscated before you even get your first drink."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 5,
+    "dup_kept": 1
+  },
+  "conversation_seed": 3921183499,
+  "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+  "run": {
+    "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+    "identity": {
+      "condition": "C2-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "90e78653f87b3d00f02c3bc4759891c48c15c8cf",
+    "created_utc": "2026-11-17T07:24:13.295312+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3988996936,
+  "conversation_no": 4363,
+  "topic": "Football",
+  "sb_prompt": "PLEASE DISCUSS PROFESSIONAL FOOTBALL.  FIND OUT THE OTHER CALLER'S FAVORITE PRO FOOTBALL TEAM AND WHERE IT'S HEADED THIS YEAR.       DO YOU AGREE WITH THE CALLER'S PREDICTION?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 27,
+    "education": "a college degree",
+    "occupation": "a librarian",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 22,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hey.\nParticipantB: Hey there.\nParticipantA: Yeah, so how's it going?\nParticipantB: Pretty good, I guess. Just working on some brakes right now. You?\nParticipantA: Same here. Just shelving some books. It's quiet enough, I suppose.\nParticipantB: Quiet's a good thing, right?\nParticipantA: Yeah, mostly. But sometimes it gets lonely, you know?\nParticipantB: Tell me about it. It's just me and the engine noises sometimes.\nParticipantA: Oh, right. So anyway, why did you call?\nParticipantB: Just to chat about football. What do you think about the Rams?\nParticipantA: Oh, the Rams? Hmm.\nParticipantB: Yeah? You follow them?\nParticipantA: Not really. I'm not a huge fan. I kinda watched them in the nineties and... I dunno. It just didn't click for me.\nParticipantB: Oh, really? That's interesting. I thought they were supposed to be heading somewhere big this year.\nParticipantA: Yeah, I heard that too. But I don't know. Something feels off about it.\nParticipantB: Off how?\nParticipantA: I can't really say why. It's just been my feeling for a long time. Like, they're going in the wrong direction.\nParticipantB: Hmm. Well, I've been thinking that too for years, honestly. Can't quite put it into words.\nParticipantA: Oh? What about?\nParticipantB: The offense, maybe? Or the coaching? I don't know. It just feels like they're stuck in a rut.\nParticipantA: Yeah, stuck. That sounds about right.\nParticipantB: But honestly, even though I don't like it, I'm still rooting for them to find a way out of it.\nParticipantA: I guess I do too. Even if I don't like the team, I kinda hope they turn it around.\nParticipantB: Yeah, that's the thing. You can dislike your team and still want them to succeed. Weird, huh?\nParticipantA: A little. But maybe that's just human nature.\nParticipantB: Yeah, probably. So, if they do find some success this year, would you change your mind?\nParticipantA: Maybe. If they actually do something different. Like, stop making the same mistakes.\nParticipantB: Yeah, that's the key. If they stop the mistakes, maybe I'll be happy too.\nParticipantA: Alright. Well, I guess we'll see.\nParticipantB: Yeah. Guess we'll see. Thanks for talking, man.\nParticipantA: Yeah, you too. Good luck with the brakes.\nParticipantB: Thanks, you too.\nParticipantA: Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 607,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P2",
+  "architecture": "C1",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 661704010,
+  "conversation_no": 4346,
+  "topic": "Public Education",
+  "sb_prompt": "DISCUSS WITH THE OTHER CALLER WHETHER THERE IS SOMETHING SERIOUSLY WRONG WITH OUR PUBLIC SCHOOL SYSTEMS TODAYY",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 29,
+    "education": "a high-school education",
+    "occupation": "a plumber",
+    "stance": 1,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 29,
+    "education": "some college",
+    "occupation": "a bank teller",
+    "stance": 2,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hey, how are you?\nParticipantB: Pretty good, how about you?\nParticipantA: I'm okay. I'm calling because I was asked to talk to someone about public schools.\nParticipantB: Yeah, same here. You know, I've been thinking about that a lot lately.\nParticipantA: Me too. It's kind of on my mind, even though I don't talk about it much.\nParticipantB: Yeah, it's weird. I made up my mind years ago, just couldn't really say why.\nParticipantA: Oh, really? That's interesting. I'm a plumber, so I spend a lot of time in buildings.\nParticipantB: Oh, wow. A plumber? That's cool.\nParticipantA: Yeah. I see the schools all the time. Sometimes I think things are fine, sometimes I don't.\nParticipantB: Yeah, exactly. It's like a mix bag. Like, some kids do great, some don't.\nParticipantA: Yeah, I guess that's the thing. If the pipes don't work, the school shuts down, but if the kids aren't learning... that's harder to fix.\nParticipantB: True. I work at a bank, so I talk to a lot of parents about their kids.\nParticipantA: Oh, really? Do they complain much?\nParticipantB: Not really complaints. More like confusion. Like they don't know how to help their kids at home.\nParticipantA: Hmm. That makes sense. I remember my own school days were tough, didn't know what to do with it all.\nParticipantB: Yeah, me too. I went to college, but even then, I wasn't sure what I was getting out of it.\nParticipantA: Yeah, that's the thing. The system feels big, and you just float through it.\nParticipantB: Yeah, like a machine that's been running for too long. Some parts work, some don't.\nParticipantA: Exactly. I think maybe we need to stop assuming everyone learns the same way.\nParticipantB: Oh, I agree with that. Some kids need more help, but maybe not in the way we give it.\nParticipantA: Yeah. Like, if a kid is really into fixing things, why make them sit still for hours?\nParticipantB: Good point. I've seen that with my nieces. They get bored easily in class.\nParticipantA: Yeah, and that's where the trouble starts. They stop trying, and then it gets worse.\nParticipantB: Yeah, that's scary. You can't just force them to learn if they don't want to.\nParticipantA: Right. And I don't know, maybe the teachers aren't trained for that anymore.\nParticipantB: Maybe. I feel like we changed the rules, but didn't change the job.\nParticipantA: Yeah, that's it. I just feel like something is off, but I can't point my finger.\nParticipantB: Me neither. It's like, we know it's wrong, but we can't say exactly what.\nParticipantA: Yeah. I guess we just have to hope someone fixes it before it's too late.\nParticipantB: Yeah. I think that's about it. Thanks for talking about it.\nParticipantA: Yeah, thanks. I didn't think I could say much, but it helps to hear someone else say it.\nParticipantB: Same here. Good talking to you.\nParticipantA: You too. Bye.\nParticipantB: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 753,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+  "run": {
+    "run_id": "8956360b9063c5714b29ef9c28019607b8f07a4bb3a2c0c675336ce69d2926c9",
+    "identity": {
+      "condition": "C1-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T20:11:42.882478+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

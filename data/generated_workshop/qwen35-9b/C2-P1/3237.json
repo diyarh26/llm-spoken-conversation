@@ -1,0 +1,213 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 3237,
+  "topic": "Houses",
+  "sb_prompt": "FIND OUT ABOUT THE OTHER CALLER'S HOME.  IS IT A TYPICAL HOME FOR THE AREA?  HOW DOES IT COMPARE TO YOUR HOME?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 34,
+    "education": "some college",
+    "occupation": "a truck driver",
+    "stance": 2,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 33,
+    "education": "some college",
+    "occupation": "a restaurant server",
+    "stance": 1,
+    "anchor": 0
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hey, so I'm a truck driver and I'm kind of skeptical about this whole house thing, but yeah, I was driving through here last week and saw this neighborhood you're in. Does it look like a typical area around here?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, it looks pretty standard for the county, honestly. I work in a restaurant downtown and I've got a little place out there myself, but mine is a fixer-upper with a pool, so definitely not typical. What's with the skepticism?"
+    ],
+    [
+      "ParticipantA",
+      "Nah, I just remember driving through that same stretch ten years ago when the houses were all brand new and looked exactly like this, but everyone said they'd be gone by next year. My house is a trailer in the middle of nowhere with a view of corn, so this feels kinda fancy to me. Do you think your pool is more of a fixer-upper or is it pretty much done?"
+    ],
+    [
+      "ParticipantB",
+      "Haha, yeah, the pool is definitely the \"fixer\" part of it\u2014pretty much done, honestly, but I still have to scrape the algae out of the corners every week."
+    ],
+    [
+      "ParticipantA",
+      "Haha, algae sounds like a nightmare, I'd rather just stare at corn fields than fight green slime."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess you could say that, but honestly, the corn looks boring compared to a tiled deck, so I'm stuck with the headache of cleaning it."
+    ],
+    [
+      "ParticipantA",
+      "You know, corn fields are pretty peaceful, no customers to yell at or dishes to wash."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that sounds like a vacation spot, not a daily life, so maybe I'll just enjoy the pool without thinking too much about it."
+    ],
+    [
+      "ParticipantA",
+      "I bet you're used to more drama with your guests than just cleaning green slime."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I deal with drama all the time, actually\u2014like that time a guy brought his toddler to dinner and threw a plate right in front of me."
+    ],
+    [
+      "ParticipantA",
+      "Oh my god, what a nightmare, did he get away with it?"
+    ],
+    [
+      "ParticipantB",
+      "Well, the manager said if the kid was under 5 he gets a free ice cream cone, but he was 7, so he got sent home and yelled at by the other moms."
+    ],
+    [
+      "ParticipantA",
+      "Oh my god, really? That is the worst! Did the mom actually make him go home or just give him the cone?"
+    ],
+    [
+      "ParticipantB",
+      "She gave him the cone but made him apologize first, though honestly I'm more worried about my own pool than other people's bad parenting."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, sorry about the kid, that's a nightmare, but honestly I'm glad your pool's mostly done, because staring at corn all day is nice but a house with a deck feels like a real upgrade."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, totally, I guess I can get behind a nice deck after a long shift, but I'm still going to have to scrub that algae this weekend."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, good for you to stay, but honestly I'd rather just park the rig out there and watch the sun go down on the fields than deal with scrubbing decks."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, looks like I'm stuck with the scrubbing then, but at least the tile is pretty."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, maybe you'll love it once you get past the first week, I just hope that algae doesn't turn into something worse."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe you'll be right, but honestly, algae grows fast in the summer so I'm probably gonna have to jump in just to keep it from looking like a swamp by Tuesday."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, sounds like you're going to be busy before you know it, but at least you'll have a place to relax once you're done."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's probably it, plus my manager keeps threatening to drain it if I don't get the corners clear by Sunday."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, good luck getting that cleared before Sunday then, I'd hate to see you get in trouble with your boss."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I know what you're saying, but honestly I feel like if I just scrub the tiles real fast, the algae will just grow back bigger and meaner."
+    ]
+  ],
+  "n_turns": 26,
+  "seed_turns": 2,
+  "ended_by": "closing",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  },
+  "conversation_seed": 2766694842,
+  "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+  "run": {
+    "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+    "identity": {
+      "condition": "C2-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "90e78653f87b3d00f02c3bc4759891c48c15c8cf",
+    "created_utc": "2026-11-17T07:24:13.295312+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

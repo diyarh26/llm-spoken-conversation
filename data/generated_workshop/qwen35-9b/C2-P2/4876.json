@@ -1,0 +1,277 @@
+{
+  "condition": "C2-P2",
+  "architecture": "C2",
+  "prompt_level": "P2",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 4876,
+  "topic": "Child Care",
+  "sb_prompt": "FIND OUT WHAT CRITERIA THE OTHER CALLER WOULD USE IN SELECTING CHILD CARE SERVICES FOR A PRESCHOOLER.  IS IT EASY OR DIFFICULT TO FIND SUCH CARE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, so I'm actually an insurance adjuster, which means I'm constantly digging into these kinds of situations when things go wrong, and honestly, it's a mix for me. Part of the process feels necessary, but then there's this whole other side where people just seem to be doing it wrong from the start. You?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, definitely a mix for me too, I mean I manage a grocery store and the parents here are always fighting over the spots, honestly it's a nightmare trying to find good care that isn't just watching kids all day. My cousin actually uses a place downtown and she says the curriculum is great but the turnover is insane and they never know who's coming to pick up the little ones."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I've got a niece I watch sometimes and she's been through a few different spots, one was terrible and another was fine, honestly hard to tell which is which just from the ads."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess you just can't tell the difference without being there, I mean I'm always looking at the ads when I can't find a spot but they say all the right things."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but the parents are usually the ones to blame for that, they just don't pick the place right in the first place."
+    ],
+    [
+      "ParticipantB",
+      "No, wait, that's not really fair to the parents, honestly it's more about supply and demand than them just being careless."
+    ],
+    [
+      "ParticipantA",
+      "You know, I get that, but sometimes it's just the parents who don't read the fine print or check references before they sign that paper."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I get that, but you can't really check references or read fine print if there's literally no one to call or no space available in the neighborhood."
+    ],
+    [
+      "ParticipantA",
+      "Look, I get what you're saying about the supply, but if a mom doesn't ask for a list of teachers' resumes or a tour before signing anything, that's just on them, isn't it?"
+    ],
+    [
+      "ParticipantB",
+      "Well, look, you're talking about the parents, I'm talking about the market, and honestly, if there isn't a place to look in the first place, what resume are you supposed to ask for? My cousin's kid goes there downtown and they just take whoever shows up, no screening whatsoever, so the staff changes every other week."
+    ],
+    [
+      "ParticipantA",
+      "Look, I'm not saying parents are perfect, but if there's no screening at all, that's negligence on their part to not ask the basic questions first."
+    ],
+    [
+      "ParticipantB",
+      "Actually, that's not fair to tell the mom to just ask the question if there's literally no one to ask. You'd be setting her up to fail because the whole list is blank."
+    ],
+    [
+      "ParticipantA",
+      "I guess I'm saying if you know there's a line of desperate parents waiting, the person running the place has a duty to vet them, not just wave them through."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but my cousin isn't the one running it, so she doesn't have that power to force them to hire anyone specific, she's just stuck with whoever they let in the door that week."
+    ],
+    [
+      "ParticipantA",
+      "Look, I get that you're stuck with what they give you, but if you're a parent showing up, don't you have a right to at least ask who's watching your kid before you hand over the money?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but realistically, if you're the parent walking in and the place is already full with other kids, what exactly are you supposed to do? I mean, you can't hold them there waiting for a resume check if they're saying \"no thank you\" to new families, right?"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess you're right, but if they turn you away, don't you at least deserve a reason why? Like, are they just full, or is there something wrong with the place? Because if it's the latter, you need to know before you drive over there."
+    ],
+    [
+      "ParticipantB",
+      "You know, I guess you're right that you deserve an answer, but sometimes the reason is just that the license expired mid-week or the bus driver quit, so they literally can't open the doors yet."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that makes sense, but if you can't even get through the door because the license is gone, how do you start looking in the first place? It feels like the whole system is just shut off before you even get to ask questions."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but you can't start looking if the only doors in the area are locked, so what questions are you supposed to ask?"
+    ],
+    [
+      "ParticipantA",
+      "I mean, it's like you're driving blindfolded, isn't it? How do you pick anything if you can't even get inside to see if the floor is clean or if the teacher looks like they know how to hold a child?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I mean, you can't drive blindfolded, you just have to keep checking every single door you find, even if the sign says closed, because that's the only way you'll know who's actually there vs who just quit."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but checking every single door is exhausting and you might waste an hour just driving around to places that are locked before you find one that's actually open."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I get that it's exhausting, but honestly, you can't just give up on the kid. You have to knock on every door until you find one that's actually open, even if it feels like you're spinning your wheels, because eventually you're gonna find a spot."
+    ],
+    [
+      "ParticipantA",
+      "That's just ridiculous though, isn't it? Spending an hour driving around just to find out half the places don't even have a license anymore? My niece's mom did that last week and she ended up driving two hours to get to a spot that actually had a teacher on duty."
+    ],
+    [
+      "ParticipantB",
+      "That's just what it is, though. You spend the time hunting, you find one that's open, you grab the spot, and you pray they actually have enough staff to handle the ratio because finding a place isn't the hard part, keeping the kid safe while you're stuck in traffic is."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but if you're spending two hours hunting just for a spot, how is that really safe? Because you end up so tired and rushed, you don't even notice the red flags when you finally get in the door."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess you're right, but once you finally get in, seeing that 4-to-1 ratio with three different people helping is the only way to know it's actually safe."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but seeing that ratio is only half the battle if the teachers are all strangers who just happened to show up that morning, right?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but even if the ratio looks good on paper, you never know if the teacher is actually trained or just filling a spot because the regular person got sick, and honestly, when you're rushing after two hours of driving, you just want them to be happy so you can leave, you don't have time to vet them."
+    ],
+    [
+      "ParticipantA",
+      "That's a fair point about the ratio, but if the teachers are strangers who don't know the kids, how do you even know they aren't having a meltdown right now while you're stuck in that traffic?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but you can't just sit in the car for two hours watching them, you have to get them somewhere safe, so once you're inside you have to trust that someone's actually paying attention and not just zoning out until you're late for work."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but if you're rushing and the teachers are all new faces, how are you supposed to tell the difference between someone who's trained and someone who's just filling a hole until their regular person calls in sick?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but you can't just sit there staring at a stranger's face for two hours hoping to spot a meltdown, and honestly, if you have to guess who's safe and who isn't, you're probably going to pick the wrong one."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but if you're that desperate, you can't afford to gamble on a stranger's face just because they're smiling at you."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but if you can't spot the red flags in five minutes, you're stuck trusting the smile, and that's exactly when the burnout starts showing."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but if you have to guess who's safe just because they're smiling, you're probably picking the wrong one, and that's exactly when the burnout starts."
+    ],
+    [
+      "ParticipantB",
+      "You know, maybe the best bet is just to look for those places that explicitly say \"no staff changes\" on the sign, even if that means driving further out of town."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but if the sign just says \"staffing may vary,\" isn't that basically telling me to take my chances?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, maybe I should just call my cousin's place and demand a contract that locks in the same teachers for a whole year, or... uh, you know, maybe I should just hire my own sitter while I'm at work instead of trying to force a private school to stay open."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 3
+  },
+  "conversation_seed": 1073185904,
+  "run_id": "507bd38eb429983ff60c66a88b311431f4d2e7c7fc968fbba36287b7cd01ead0",
+  "run": {
+    "run_id": "507bd38eb429983ff60c66a88b311431f4d2e7c7fc968fbba36287b7cd01ead0",
+    "identity": {
+      "condition": "C2-P2",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b03055c1bf2d91e00260c90df33618ecdf1a10e9c8c8d570218b5900788a0ff8"
+    },
+    "git_commit": "90e78653f87b3d00f02c3bc4759891c48c15c8cf",
+    "created_utc": "2026-11-17T08:57:56.189399+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "condition": "C1-P1",
+  "architecture": "C1",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_seed": 3030237513,
+  "conversation_no": 4072,
+  "topic": "News Media",
+  "sb_prompt": "DISCUSS HOW YOU AND THE OTHER CALLER KEEP UP ON CURRENT EVENTS.      DO YOU GET MOST OF YOUR NEWS FROM TVOR PEOPLE YOU KNOW?  ARE YOU SATISFIED WITH THE QUALITY OF COVERAGE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "woman",
+    "age": 24,
+    "education": "some college",
+    "occupation": "a car mechanic",
+    "stance": 1,
+    "anchor": 1
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 25,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "raw_output": "ParticipantA: Hello!\nParticipantB: Hey! Yeah, I'm good. You?\nParticipantA: I'm alright, just tired. How do you keep up on the news?\nParticipantB: Honestly? Mostly from people I know. My accountant friends and the guys who work at the factory.\nParticipantA: Oh, really? I get most of mine from the TV news or reading stuff online.\nParticipantB: Do you? I feel like the people talking to me on the news are just trying to sell something.\nParticipantA: Yeah, sometimes that hits a nerve. Like, the way they talk about mechanics, it just doesn't feel real to me.\nParticipantB: Hmm, I guess I've always felt that way, too. Like, people are so worried about one thing or another all the time.\nParticipantA: Actually, my cousin was a mechanic for years. He told me everything behind the scenes, and it made me see the news differently.\nParticipantB: Wait, your cousin? That's interesting. Does he deal with the same stuff the news says is happening?\nParticipantA: Yeah, sometimes. Like, when they talk about car safety, he'd laugh and say, \"That's not how it works.\" It's kind of jarring.\nParticipantB: I never thought about that before. I just took the news at face value. What do you think about it now?\nParticipantA: It's mixed. Parts of it sit fine with me, but other parts just feel off. Like, they exaggerate some things to get ratings.\nParticipantB: I think that's exactly why I don't trust it. I made up my mind years ago, just didn't know why until now.\nParticipantA: Maybe that's why we talk so differently. You trust the people you know, I trust the TV sometimes, but not always.\nParticipantB: Yeah, I think that makes sense. I'll stick with my friends for the real stories. What about you?\nParticipantA: I guess I'll stick with my cousin too, honestly. He knows the real deal.\nParticipantA: Anyway, I should probably head to work. Shift starts soon.\nParticipantB: Oh, okay. Same here, I'm heading out too. Thanks for talking.\nParticipantA: Yeah, you too. Take care.\nParticipantB: You too, bye!\nParticipantA: Bye.",
+  "seed_turns": 2,
+  "hit_token_cap": false,
+  "n_new_tokens": 508,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+  "run": {
+    "run_id": "18ab09961e3b26a6af76597e30073c20838ba062e6cad479f55f67ea173a7491",
+    "identity": {
+      "condition": "C1-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 4096,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+    "created_utc": "2026-11-16T19:33:24.262872+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

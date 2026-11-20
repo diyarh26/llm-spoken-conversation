@@ -1,0 +1,195 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m14",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 2706666153,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Okay, starting point. From there, go one step left, then two steps down.\nFollower: One left, two down. Got it.\nGiver: Now, go left again until you see the diamonds on your left.\nFollower: Left until diamonds on the left. Okay, I see them.\nGiver: From the diamonds, go left and down a bit. You'll hit a spot with some rocks nearby.\nFollower: Left and down. I see a spot with rocks. Wait, are those the carved stones?\nGiver: No, those are the carved stones on the right. Keep going left. You need to go past the stones to the left side.\nFollower: Oh, right. I was looking at the wrong side. Okay, going left now.\nGiver: Good. Now go down and left a bit more until you pass a graveyard on your left.\nFollower: Down and left. Ah, there's the graveyard.\nGiver: Perfect. From the graveyard, go right and down until you see a big rock on your right.\nFollower: Right and down. I see the big rock.\nGiver: Good. Now go left and down a bit. You're heading towards the Indian Country.\nFollower: Left and down. Okay, heading to the Indian Country.\nGiver: Actually, don't go all the way there yet. Just go left a little, then down.\nFollower: Left a little, then down.\nGiver: Now go right until you pass the Indian Country on your right.\nFollower: Right. Okay, I see the Indian Country.\nGiver: Good. From there, go left and down until you see the gold mine on your left.\nFollower: Left and down. Oh, I see the gold mine!\nGiver: Perfect. Now go left and down a bit more to a spot that's open.\nFollower: Left and down. Okay, here we are.\nGiver: From this open spot, go right until you see the trout farm on your left.\nFollower: Right. Okay, I see the trout farm on my left.\nGiver: Good. Now go left and down a bit. You'll pass a spot with some cavalry on your right.\nFollower: Left and down. I see the cavalry.\nGiver: Perfect. From the cavalry, go left and down until you see a big rock on your right.\nFollower: Left and down. Wait, I see a big rock, but it's way down here. Is that the one?\nGiver: That's the second big rock. Keep going left and down.\nFollower: Okay, I'm going further down.\nGiver: Yes, go down until you see the cattle stockade on your right.\nFollower: Down. Oh, I see the cattle stockade on my right.\nGiver: Good. From there, go left and down until you see the bandit territory on your right.\nFollower: Left and down. I see the bandit territory.\nGiver: Perfect. Now go left and down a bit.\nFollower: Left and down.\nGiver: Good. Now go right until you hit a spot where the path ends.\nFollower: Right. Okay, I'm near the end.\nGiver: From that spot, go left and down to the finish line.\nFollower: Left and down. There it is! I've reached the finish!\nGiver: Great job!",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Okay, starting point. From there, go one step left, then two steps down."
+    ],
+    [
+      "Follower",
+      "One left, two down. Got it."
+    ],
+    [
+      "Giver",
+      "Now, go left again until you see the diamonds on your left."
+    ],
+    [
+      "Follower",
+      "Left until diamonds on the left. Okay, I see them."
+    ],
+    [
+      "Giver",
+      "From the diamonds, go left and down a bit. You'll hit a spot with some rocks nearby."
+    ],
+    [
+      "Follower",
+      "Left and down. I see a spot with rocks. Wait, are those the carved stones?"
+    ],
+    [
+      "Giver",
+      "No, those are the carved stones on the right. Keep going left. You need to go past the stones to the left side."
+    ],
+    [
+      "Follower",
+      "Oh, right. I was looking at the wrong side. Okay, going left now."
+    ],
+    [
+      "Giver",
+      "Good. Now go down and left a bit more until you pass a graveyard on your left."
+    ],
+    [
+      "Follower",
+      "Down and left. Ah, there's the graveyard."
+    ],
+    [
+      "Giver",
+      "Perfect. From the graveyard, go right and down until you see a big rock on your right."
+    ],
+    [
+      "Follower",
+      "Right and down. I see the big rock."
+    ],
+    [
+      "Giver",
+      "Good. Now go left and down a bit. You're heading towards the Indian Country."
+    ],
+    [
+      "Follower",
+      "Left and down. Okay, heading to the Indian Country."
+    ],
+    [
+      "Giver",
+      "Actually, don't go all the way there yet. Just go left a little, then down."
+    ],
+    [
+      "Follower",
+      "Left a little, then down."
+    ],
+    [
+      "Giver",
+      "Now go right until you pass the Indian Country on your right."
+    ],
+    [
+      "Follower",
+      "Right. Okay, I see the Indian Country."
+    ],
+    [
+      "Giver",
+      "Good. From there, go left and down until you see the gold mine on your left."
+    ],
+    [
+      "Follower",
+      "Left and down. Oh, I see the gold mine!"
+    ],
+    [
+      "Giver",
+      "Perfect. Now go left and down a bit more to a spot that's open."
+    ],
+    [
+      "Follower",
+      "Left and down. Okay, here we are."
+    ],
+    [
+      "Giver",
+      "From this open spot, go right until you see the trout farm on your left."
+    ],
+    [
+      "Follower",
+      "Right. Okay, I see the trout farm on my left."
+    ],
+    [
+      "Giver",
+      "Good. Now go left and down a bit. You'll pass a spot with some cavalry on your right."
+    ],
+    [
+      "Follower",
+      "Left and down. I see the cavalry."
+    ],
+    [
+      "Giver",
+      "Perfect. From the cavalry, go left and down until you see a big rock on your right."
+    ],
+    [
+      "Follower",
+      "Left and down. Wait, I see a big rock, but it's way down here. Is that the one?"
+    ],
+    [
+      "Giver",
+      "That's the second big rock. Keep going left and down."
+    ],
+    [
+      "Follower",
+      "Okay, I'm going further down."
+    ],
+    [
+      "Giver",
+      "Yes, go down until you see the cattle stockade on your right."
+    ],
+    [
+      "Follower",
+      "Down. Oh, I see the cattle stockade on my right."
+    ],
+    [
+      "Giver",
+      "Good. From there, go left and down until you see the bandit territory on your right."
+    ],
+    [
+      "Follower",
+      "Left and down. I see the bandit territory."
+    ],
+    [
+      "Giver",
+      "Perfect. Now go left and down a bit."
+    ],
+    [
+      "Follower",
+      "Left and down."
+    ],
+    [
+      "Giver",
+      "Good. Now go right until you hit a spot where the path ends."
+    ],
+    [
+      "Follower",
+      "Right. Okay, I'm near the end."
+    ],
+    [
+      "Giver",
+      "From that spot, go left and down to the finish line."
+    ],
+    [
+      "Follower",
+      "Left and down. There it is! I've reached the finish!"
+    ],
+    [
+      "Giver",
+      "Great job!"
+    ]
+  ],
+  "n_turns": 41,
+  "ended_by": "single_generation"
+}

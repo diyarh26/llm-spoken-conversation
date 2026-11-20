@@ -1,0 +1,278 @@
+{
+  "condition": "C2-P3",
+  "architecture": "C2",
+  "prompt_level": "P3",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 2615,
+  "topic": "Auto Repairs",
+  "sb_prompt": "WHAT WAS THE LAST AUTO REPAIR YOU PERFORMED OR HAD DONE ON YOUR CAR? ARE THERE SOME TYPES OF REPAIRS OR MAINTENANCE TASKS YOU PREFER TO DO YOURSELF?  DISCUSS YOUR EXPERIENCES IN THIS AREA WITH THE OTHER CALLER.",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 41,
+    "education": "some college",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 2
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "man",
+    "age": 50,
+    "education": "some college",
+    "occupation": "an accountant",
+    "stance": 0,
+    "anchor": 2
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I haven't touched a wrench in years. My last real repair was probably that time I had to flush my radiator, but honestly I ended up just buying a new radiator and having someone install it."
+    ],
+    [
+      "ParticipantB",
+      "Oh wow, that's actually smart to just replace it rather than trying to clean the old one up; I usually just swap out the brakes myself since I have the jacks and the stand, though my last actual repair was replacing a alternator belt that snapped on a Tuesday morning."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, belts are annoying; they just snap without warning, but replacing them is pretty straightforward if you just follow the routing diagram in the manual."
+    ],
+    [
+      "ParticipantB",
+      "Right, but the hardest part is usually just getting the tension relief tab to release without snapping the belt itself."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, exactly, once I pried that tab up too hard it just snapped in half and I had to order the whole belt again."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's the thing; once you lose that tension the belt usually just slips off the pulleys before you can even get it back on."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I got lucky and didn't snap mine, but I still spent an hour wrestling the alternator belt off while trying to get that tensioner to hold without a tool."
+    ],
+    [
+      "ParticipantB",
+      "That's the nightmare scenario; once it slips, it's a total mess."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, honestly I just feel like modern cars are too complicated for a guy like me to trust myself with anymore."
+    ],
+    [
+      "ParticipantB",
+      "Exactly, one of these days some sensor's gonna fail and I'll be locked out of my own car."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, it's just too many of those little plastic clips you can't even get a tool on."
+    ],
+    [
+      "ParticipantB",
+      "It's just frustrating when a simple clip breaks your whole foot and you're stuck in the shop for three hours."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's exactly why I stopped trying; I figure it's better to pay the extra $50 for the mechanic to just swap the clip while I wait in the store parking lot."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, honestly sometimes I feel the same way, but I guess it's just cheaper to do it myself if I can get it done in half an hour."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I get that, but for me the extra $50 is worth not worrying about scratching my paint or dropping a wrench on my foot."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but honestly I'd rather do it myself if I could just get the paint down there without ruining the sealant first."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that sealant stuff is sticky and makes a mess if you don't have the right scraper."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, once you get the old gunk mixed with the new stuff, you're basically blind trying to push the clip back in without cracking it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess I'll just stop trying to save the fifty bucks then."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, once you get the old gunk mixed with the new stuff, you're basically blind trying to push the clip back in without cracking it."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I totally get that; once it's a souped mess you just don't want to risk it."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, plus the clips are getting brittle on newer models so they just snap off in your hand if you tug too hard."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the thing; you can't really get a good grip on them once they're dried out."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, sometimes I wonder if I'm just stubborn about doing it myself or if I'm actually just being cheap."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, maybe you are being cheap, but I think it's mostly just stubbornness."
+    ],
+    [
+      "ParticipantB",
+      "I guess I am being cheap, but honestly I'm just scared of what the insurance company will say if I mess up the frame."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's a valid fear, honestly; I wouldn't want to risk bending a frame rail either."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, probably wouldn't mess with the frame myself; that's too risky if I mess up the alignment."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess it's better to just leave the frame alone and let the pros handle the alignment; I'll go pay the extra twenty to have them do it."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's probably the smartest call you can make; once that frame's twisted even a millimeter, your whole suspension throws off and you're looking at a bill that'll eat your whole insurance deductible before you even start driving."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, you're probably right; if the frame's off by even a millimeter, your suspension is gonna throw off so bad you'll eat your deductible before you even get to the store."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's a good point; I'd rather not risk throwing off my whole truck just to save the twenty."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, good call; I probably would have saved a fortune if I'd just paid up and stopped second-guessing myself."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, honestly I think I'll just leave that to the pros too."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, good call on that; I'd much rather not mess up the alignment if I'm just trying to fix a belt."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, you're probably right; I'd rather not mess with the alignment on a truck just because I wanted to save twenty bucks."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I totally agree; sometimes it's just not worth the headache if you're already deep in the weeds."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, honestly sometimes saving a few bucks is just a recipe for a day at the mechanic that'll cost you double."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, exactly; I'd rather just pay the extra and get back to grocery shopping than sit in a shop for three hours."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, you're absolutely right; I'll just take my truck in and get it done."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 2,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 2,
+    "dup_resamples": 5,
+    "dup_kept": 1
+  },
+  "conversation_seed": 2703890058,
+  "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+  "run": {
+    "run_id": "edd9727225666dd0f866b2c41ef397ba3a80a7329529ae553c78051d64b3c4d5",
+    "identity": {
+      "condition": "C2-P3",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+    "created_utc": "2026-11-17T10:53:33.359476+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

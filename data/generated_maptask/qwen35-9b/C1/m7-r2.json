@@ -1,0 +1,187 @@
+{
+  "domain": "maptask",
+  "architecture": "C1",
+  "map": "m7",
+  "rep": 2,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 50100308,
+  "git_commit": "d9774f81b301153bd7a320aa150e9388ea4c8ee1",
+  "raw_output": "Giver: Hey, are you ready to start?\nFollower: Yeah, I'm ready.\nGiver: Okay, first thing, find the burnt forest. It's just to the right of our start point.\nFollower: Oh, right there. Got it.\nGiver: Good. Now, go left from the start, then turn right towards that forest. Keep going left until you're near the ravine.\nFollower: Wait, where's the ravine on your map? I see one over here, but it looks a bit lower down.\nGiver: Oh, you mean the one next to the pine grove? Yeah, that's the one. We pass the pine grove on the left.\nFollower: Ah, okay. So I go past the pine grove, then turn right towards the ravine.\nGiver: Exactly. Once you hit the ravine, turn right and head down. Keep going down until you reach the tilled land.\nFollower: Okay, found the tilled land. Now what?\nGiver: Turn left. Go left until you see the boat house on your right.\nFollower: Whoa, I don't see a boat house over here. I have a carpenter's cottage instead.\nGiver: Oh, that's weird. Maybe your map is shifted? Just keep going left until you find the pine grove again.\nFollower: Okay, I'm heading back towards the pine grove. Wait, do I pass the pine grove again?\nGiver: No, don't go back to the first pine grove. Go left from the tilled land until you hit the ravine again. Then turn right and follow the ravine until you get to the boat house.\nFollower: Okay, I'm following the ravine now. Wait, this boat house is way further up than the one near the pine grove. Is that right?\nGiver: Yeah, there are two boat houses. The second one is near the hidden cave. Keep going until you see the boat house on your right side.\nFollower: Okay, I see it now. This one is definitely further north. What's next?\nGiver: Turn left immediately. Head left until you reach the concealed hideout.\nFollower: Found it! Now turn right and go right until you see the coconut palm.\nGiver: Perfect. Go right until you hit the coconut palm. Then turn right and go down towards the pebbled shore.\nFollower: Okay, I'm at the coconut palm. Turning right now. Whoa, the pebbled shore is way further down on my map.\nGiver: That's okay, just keep going right until you see the crane bay. Then turn left towards the shore.\nFollower: Okay, I'm near the crane bay. I'm heading left now.\nGiver: Good. Go left until you reach the pebbled shore. Then turn left and head down towards the flag ship.\nFollower: Found the shore. Okay, I'm going down. Wait, I see a washed stones area here, is that relevant?\nGiver: Ignore the washed stones. Just keep going down until you see the flag ship. Then turn left towards the finish line.\nFollower: Okay, I see the flag ship. Turning left now. Wait, the finish line is way up near the top on your map, right?\nGiver: Yeah, the finish is near the top, just left of the flag ship. Keep going left until you hit the finish.\nFollower: Okay, I'm heading up and left. Wait, I think I'm going the wrong way. Shouldn't I be going down?\nGiver: No, you're going the right way. The finish is near the top, just left of the flag ship. Make sure you turn left before you hit the flag ship.\nFollower: Oh, okay, I got confused. I thought the finish was further down. Okay, turning left now.\nGiver: Good. Keep going left until you reach the finish.\nFollower: I found it! The cross is right there.\nGiver: Perfect. You made it.\nFollower: Thanks!\nGiver: Great job.\nFollower: Bye!\nGiver: Bye.",
+  "hit_token_cap": false,
+  "decoding": {
+    "max_new_tokens": 4096,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "turns": [
+    [
+      "Giver",
+      "Hey, are you ready to start?"
+    ],
+    [
+      "Follower",
+      "Yeah, I'm ready."
+    ],
+    [
+      "Giver",
+      "Okay, first thing, find the burnt forest. It's just to the right of our start point."
+    ],
+    [
+      "Follower",
+      "Oh, right there. Got it."
+    ],
+    [
+      "Giver",
+      "Good. Now, go left from the start, then turn right towards that forest. Keep going left until you're near the ravine."
+    ],
+    [
+      "Follower",
+      "Wait, where's the ravine on your map? I see one over here, but it looks a bit lower down."
+    ],
+    [
+      "Giver",
+      "Oh, you mean the one next to the pine grove? Yeah, that's the one. We pass the pine grove on the left."
+    ],
+    [
+      "Follower",
+      "Ah, okay. So I go past the pine grove, then turn right towards the ravine."
+    ],
+    [
+      "Giver",
+      "Exactly. Once you hit the ravine, turn right and head down. Keep going down until you reach the tilled land."
+    ],
+    [
+      "Follower",
+      "Okay, found the tilled land. Now what?"
+    ],
+    [
+      "Giver",
+      "Turn left. Go left until you see the boat house on your right."
+    ],
+    [
+      "Follower",
+      "Whoa, I don't see a boat house over here. I have a carpenter's cottage instead."
+    ],
+    [
+      "Giver",
+      "Oh, that's weird. Maybe your map is shifted? Just keep going left until you find the pine grove again."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading back towards the pine grove. Wait, do I pass the pine grove again?"
+    ],
+    [
+      "Giver",
+      "No, don't go back to the first pine grove. Go left from the tilled land until you hit the ravine again. Then turn right and follow the ravine until you get to the boat house."
+    ],
+    [
+      "Follower",
+      "Okay, I'm following the ravine now. Wait, this boat house is way further up than the one near the pine grove. Is that right?"
+    ],
+    [
+      "Giver",
+      "Yeah, there are two boat houses. The second one is near the hidden cave. Keep going until you see the boat house on your right side."
+    ],
+    [
+      "Follower",
+      "Okay, I see it now. This one is definitely further north. What's next?"
+    ],
+    [
+      "Giver",
+      "Turn left immediately. Head left until you reach the concealed hideout."
+    ],
+    [
+      "Follower",
+      "Found it! Now turn right and go right until you see the coconut palm."
+    ],
+    [
+      "Giver",
+      "Perfect. Go right until you hit the coconut palm. Then turn right and go down towards the pebbled shore."
+    ],
+    [
+      "Follower",
+      "Okay, I'm at the coconut palm. Turning right now. Whoa, the pebbled shore is way further down on my map."
+    ],
+    [
+      "Giver",
+      "That's okay, just keep going right until you see the crane bay. Then turn left towards the shore."
+    ],
+    [
+      "Follower",
+      "Okay, I'm near the crane bay. I'm heading left now."
+    ],
+    [
+      "Giver",
+      "Good. Go left until you reach the pebbled shore. Then turn left and head down towards the flag ship."
+    ],
+    [
+      "Follower",
+      "Found the shore. Okay, I'm going down. Wait, I see a washed stones area here, is that relevant?"
+    ],
+    [
+      "Giver",
+      "Ignore the washed stones. Just keep going down until you see the flag ship. Then turn left towards the finish line."
+    ],
+    [
+      "Follower",
+      "Okay, I see the flag ship. Turning left now. Wait, the finish line is way up near the top on your map, right?"
+    ],
+    [
+      "Giver",
+      "Yeah, the finish is near the top, just left of the flag ship. Keep going left until you hit the finish."
+    ],
+    [
+      "Follower",
+      "Okay, I'm heading up and left. Wait, I think I'm going the wrong way. Shouldn't I be going down?"
+    ],
+    [
+      "Giver",
+      "No, you're going the right way. The finish is near the top, just left of the flag ship. Make sure you turn left before you hit the flag ship."
+    ],
+    [
+      "Follower",
+      "Oh, okay, I got confused. I thought the finish was further down. Okay, turning left now."
+    ],
+    [
+      "Giver",
+      "Good. Keep going left until you reach the finish."
+    ],
+    [
+      "Follower",
+      "I found it! The cross is right there."
+    ],
+    [
+      "Giver",
+      "Perfect. You made it."
+    ],
+    [
+      "Follower",
+      "Thanks!"
+    ],
+    [
+      "Giver",
+      "Great job."
+    ],
+    [
+      "Follower",
+      "Bye!"
+    ],
+    [
+      "Giver",
+      "Bye."
+    ]
+  ],
+  "n_turns": 39,
+  "ended_by": "single_generation"
+}

@@ -1,0 +1,364 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m4",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 3429654805,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 1,
+    "multi_turn_emissions": 1,
+    "dup_resamples": 21,
+    "dup_kept": 9
+  },
+  "turns": [
+    [
+      "Giver",
+      "hello? can you hear me?"
+    ],
+    [
+      "Follower",
+      "yes i can hear you fine. where do i start?"
+    ],
+    [
+      "Giver",
+      "find the site of the forest fire and start there."
+    ],
+    [
+      "Follower",
+      "right where the start is."
+    ],
+    [
+      "Giver",
+      "no wait, find the start."
+    ],
+    [
+      "Follower",
+      "right, so i'm at the start. what's the first thing to do?"
+    ],
+    [
+      "Giver",
+      "go to the cornfields, then the picnic site, then the adventure playground, then the granite quarry."
+    ],
+    [
+      "Follower",
+      "right okay so from the start i go to the cornfields then the picnic site then the adventure playground and then the granite quarry."
+    ],
+    [
+      "Giver",
+      "keep going down towards the waterfall but stop before you reach the fallen cairn."
+    ],
+    [
+      "Follower",
+      "right okay so i've drawn a line from the start to the cornfields and then to the picnic site and then to the adventure playground and then to the granite quarry and then i'm heading down towards the waterfall but i've stopped before i reach the fallen cairn."
+    ],
+    [
+      "Giver",
+      "right, just a tiny bit more towards the waterfall, not all the way."
+    ],
+    [
+      "Follower",
+      "all right, i've just moved the line a little bit further down, but i'm still not sure where to go next."
+    ],
+    [
+      "Giver",
+      "don't draw it through the cornfields, just past them on the left, then turn right towards the picnic site."
+    ],
+    [
+      "Follower",
+      "right okay so i'll draw the line just past the cornfields on the left then turn right towards the picnic site."
+    ],
+    [
+      "Giver",
+      "go straight up to the train crossing then turn left and go along the path towards the waterfall."
+    ],
+    [
+      "Follower",
+      "right okay i'll draw the line up to the train crossing then turn left and head along the path towards the waterfall."
+    ],
+    [
+      "Giver",
+      "go left towards the fallen cairn then turn right and head straight up towards the granite quarry."
+    ],
+    [
+      "Follower",
+      "right okay i'll draw the line left towards the fallen cairn then turn right and head straight up towards the granite quarry."
+    ],
+    [
+      "Giver",
+      "no wait, you're going the wrong way, go right towards the east lake instead."
+    ],
+    [
+      "Follower",
+      "right okay i'll draw the line right towards the east lake."
+    ],
+    [
+      "Giver",
+      "go straight down towards the east lake and keep going until you pass the fallen cairn, then turn left and head down towards the granite quarry."
+    ],
+    [
+      "Follower",
+      "oh wait, that's not right, i thought i was going towards the east lake but you said go right, i've drawn it straight down towards the east lake already and i'm not sure where i am now."
+    ],
+    [
+      "Giver",
+      "you've drawn it straight down towards the east lake already, so that's wrong, you need to go right towards the east lake instead, then come back down past the fallen cairn and turn left towards the granite quarry."
+    ],
+    [
+      "Follower",
+      "right okay so i'll draw it going right towards the east lake first, then come back down past the fallen cairn, and turn left towards the granite quarry."
+    ],
+    [
+      "Giver",
+      "okay, so i've drawn it going right towards the east lake first, then come back down past the fallen cairn, and turn left towards the granite quarry."
+    ],
+    [
+      "Follower",
+      "all right i've drawn the line going right towards the east lake first, then come back down past the fallen cairn, and turned left towards the granite quarry. what's next?"
+    ],
+    [
+      "Giver",
+      "go straight up towards the limestone cliffs then turn left and head down towards the finish."
+    ],
+    [
+      "Follower",
+      "right okay i'll draw the line up towards the limestone cliffs then turn left and head down towards the finish."
+    ],
+    [
+      "Giver",
+      "i've drawn it up to the limestone cliffs then down towards the finish."
+    ],
+    [
+      "Follower",
+      "okay i've drawn it up to the limestone cliffs then turned left and am heading down towards the finish now."
+    ],
+    [
+      "Giver",
+      "yes, continue down from the limestone cliffs towards the finish."
+    ],
+    [
+      "Follower",
+      "right okay i'm heading down from the limestone cliffs towards the finish."
+    ],
+    [
+      "Giver",
+      "keep going down towards the finish."
+    ],
+    [
+      "Follower",
+      "right okay i'll keep going down from the limestone cliffs towards the finish."
+    ],
+    [
+      "Giver",
+      "what is finish and where is it?"
+    ],
+    [
+      "Follower",
+      "i don't see a finish marked on my map."
+    ],
+    [
+      "Giver",
+      "i'm sorry, you don't see a finish on your map but it should be there, can you tell me where the train crossing is on your map?"
+    ],
+    [
+      "Follower",
+      "i'll look for the train crossing and tell you where it is."
+    ],
+    [
+      "Giver",
+      "keep going down from the limestone cliffs towards the finish."
+    ],
+    [
+      "Follower",
+      "wait, i'm heading down from the limestone cliffs towards the finish but i still can't see a finish marked on my map, can you tell me what i should look for instead?"
+    ],
+    [
+      "Giver",
+      "just ignore the finish for a moment and tell me where the privately owned fields are on your map."
+    ],
+    [
+      "Follower",
+      "right okay so i'll look for the privately owned fields on my map and let you know where they are."
+    ],
+    [
+      "Giver",
+      "right okay so i'm looking for the privately owned fields on my map."
+    ],
+    [
+      "Follower",
+      "i've found the privately owned fields, they're just above the granite quarry on my map."
+    ],
+    [
+      "Giver",
+      "okay so from the privately owned fields go left towards the granite quarry and then turn right and head down towards the farmyard."
+    ],
+    [
+      "Follower",
+      "right okay so i'll go left towards the granite quarry and then turn right and head down towards the farmyard."
+    ],
+    [
+      "Giver",
+      "okay, so i'll draw the line left towards the granite quarry and then turn right and head down towards the farmyard."
+    ],
+    [
+      "Follower",
+      "right okay so i'll go left towards the granite quarry and then turn right and head down towards the farmyard."
+    ],
+    [
+      "Giver",
+      "wait no you have to draw the line from the privately owned fields to the granite quarry first before you go to the farmyard."
+    ],
+    [
+      "Follower",
+      "right okay so i'll draw the line from the privately owned fields to the granite quarry first and then i'll go to the farmyard."
+    ],
+    [
+      "Giver",
+      "okay so i'll draw the line from the privately owned fields to the granite quarry first and then i'll go to the farmyard.\ngo straight down from the privately owned fields to the farmyard.\nwait no don't go to the granite quarry yet, just go straight down from the privately owned fields towards the farmyard.\nand once you get near the farmyard turn left and follow the path up towards the picnic site.\nand then turn left and go up to the adventure playground.\nand then turn left and go down towards the site of the forest fire.\nand once you are just past the site of the forest fire turn right and go up towards the granite quarry.\nwait no go left from the site of the forest fire towards the site of the forest fire? no wait go left from the adventure playground towards the waterfall.\ngo left from the adventure playground towards the waterfall.\nand once you pass the waterfall turn right and go up towards the fallen cairn.\nand once you are just past the fallen cairn turn left and go down towards the east lake.\nand once you pass the east lake turn right and go down towards the train crossing.\nand once you pass the train crossing turn left and go down towards the site of the forest fire.\nand once you are just past the site of the forest fire turn right and go up towards the granite quarry? no wait go down towards the granite quarry.\nno wait go straight down from the granite quarry to the farmyard.\ngo straight down from the granite quarry to the farmyard.\nand once you are at the farmyard you have finished the route.\nyou have finished the route.\ndid you reach the farmyard?\nhave you reached the farmyard?\nare you at the farmyard yet?\nare you there?\nokay so i'll draw the line from the privately owned fields to the granite quarry first and then i'll go to the farmyard.\ngo straight down from the privately owned fields to the farmyard.\nand make sure you don't go through the cornfields.\njust go straight down.\nkeep going down.\nare you there yet?\nokay so i'll draw the line from the privately owned fields to the granite quarry first and then i'll go to the farmyard.\ngo straight down from the privately owned fields to the farmyard.\nand make sure you don't go through the cornfields.\njust go straight down.\nkeep going down."
+    ],
+    [
+      "Follower",
+      "okay so i'll draw the line from the privately owned fields to the farmyard."
+    ],
+    [
+      "Giver",
+      "right then once you reach the farmyard you're done."
+    ],
+    [
+      "Follower",
+      "right okay i'll draw the line straight down from the privately owned fields to the farmyard."
+    ],
+    [
+      "Giver",
+      "oh wait, i made a mistake in my last instruction, you need to go from the privately owned fields to the granite quarry first, then from the granite quarry go down to the farmyard."
+    ],
+    [
+      "Follower",
+      "right okay so i'll go from the privately owned fields to the granite quarry first, then down to the farmyard."
+    ],
+    [
+      "Giver",
+      "right, once you've drawn the line from the privately owned fields to the granite quarry, then go down from the granite quarry to the farmyard."
+    ],
+    [
+      "Follower",
+      "right okay i'll draw the line from the privately owned fields to the granite quarry first, then go down from the granite quarry to the farmyard."
+    ],
+    [
+      "Giver",
+      "right okay i'll draw the line from the privately owned fields to the granite quarry first, then go down from the granite quarry to the farmyard."
+    ],
+    [
+      "Follower",
+      "okay i'll draw the line from the privately owned fields to the granite quarry first, then go down from the granite quarry to the farmyard."
+    ],
+    [
+      "Giver",
+      "right then once you reach the farmyard you're done."
+    ],
+    [
+      "Follower",
+      "right okay i'll draw the line from the privately owned fields to the granite quarry first, then go down from the granite quarry to the farmyard."
+    ],
+    [
+      "Giver",
+      "there is no farmyard on your map, the route ends at the granite quarry."
+    ],
+    [
+      "Follower",
+      "i think i need to go to the granite quarry then, since there's no farmyard on my map."
+    ],
+    [
+      "Giver",
+      "right, just draw the line from the privately owned fields to the granite quarry then stop there, that's the finish for you."
+    ],
+    [
+      "Follower",
+      "okay i'll draw the line from the privately owned fields to the granite quarry then stop there."
+    ],
+    [
+      "Giver",
+      "right so once you've drawn the line from the privately owned fields to the granite quarry just stop there and don't draw anything further."
+    ],
+    [
+      "Follower",
+      "all right i'll draw the line from the privately owned fields to the granite quarry and stop there."
+    ],
+    [
+      "Giver",
+      "right, that's it, you're done."
+    ],
+    [
+      "Follower",
+      "all right i've drawn the line from the privately owned fields to the granite quarry and stopped there."
+    ],
+    [
+      "Giver",
+      "yes that should be enough, just make sure the line goes straight to the granite quarry and doesn't wander off."
+    ],
+    [
+      "Follower",
+      "right okay i'll draw the line from the privately owned fields to the granite quarry and stop there."
+    ],
+    [
+      "Giver",
+      "yes, is that done? just one more thing, make sure you don't go through the cornfields on the way."
+    ],
+    [
+      "Follower",
+      "right okay i'll make sure the line goes straight to the granite quarry and doesn't wander off or go through the cornfields."
+    ],
+    [
+      "Giver",
+      "right then just make sure the line goes straight to the granite quarry and doesn't wander off."
+    ],
+    [
+      "Follower",
+      "okay i'll draw the line straight to the granite quarry and make sure it doesn't go through the cornfields."
+    ],
+    [
+      "Giver",
+      "that's good, just check that the line doesn't wander off to the right towards the cornfields."
+    ],
+    [
+      "Follower",
+      "right okay i'll draw the line straight to the granite quarry and make sure it doesn't go through the cornfields."
+    ],
+    [
+      "Giver",
+      "just make sure the line doesn't go right towards the cornfields on the way there."
+    ],
+    [
+      "Follower",
+      "right okay i'll draw the line straight to the granite quarry and make sure it doesn't go through the cornfields."
+    ],
+    [
+      "Giver",
+      "right okay so i'll draw the line straight to the granite quarry and make sure it doesn't go through the cornfields.\ndo you see the granite quarry on your map?\nit's a little pit or something, near the middle.\nis it the one that says granite quarry?\nyes it should be there, go straight to it.\ndon't let the line wander off to the right.\njust a straight line from where you are now to the granite quarry.\nare you looking at the granite quarry now?\nyes that's it, stop there.\nthat's the finish for you.\nright, so once you've drawn the line there just stop.\ndon't draw anything further.\nare you sure you can see the granite quarry?\nit's at the top left area, just above the privately owned fields.\ngo straight up to it.\nright, go straight up to the granite quarry and stop.\nokay i'll do that.\nright, draw the line straight up to the granite quarry.\nmake sure it's a straight line.\ndon't go near the cornfields.\njust go straight there.\nis that done?\nyes, draw the line to the granite quarry and stop.\nright, that's the end.\ngood job.\nokay, we're finished.\nhave you drawn the line to the granite quarry?\nyes.\nright, then you're done.\nthat's it.\nokay, bye.\nwait, did you get it right?\nyes, the line goes to the granite quarry.\nright, check that it doesn't go through the cornfields.\nokay, i'll check.\nright, make sure it's straight.\nyes, good.\nright, stop there.\nokay, all done.\nbye."
+    ],
+    [
+      "Follower",
+      "right okay i'll draw the line straight up to the granite quarry and make sure it doesn't go through the cornfields and stop there."
+    ]
+  ],
+  "n_turns": 82,
+  "ended_by": "closing"
+}

@@ -1,0 +1,277 @@
+{
+  "condition": "C2-P1",
+  "architecture": "C2",
+  "prompt_level": "P1",
+  "model": "Qwen/Qwen3.5-9B",
+  "conversation_no": 4876,
+  "topic": "Child Care",
+  "sb_prompt": "FIND OUT WHAT CRITERIA THE OTHER CALLER WOULD USE IN SELECTING CHILD CARE SERVICES FOR A PRESCHOOLER.  IS IT EASY OR DIFFICULT TO FIND SUCH CARE?",
+  "persona_a": {
+    "label": "ParticipantA",
+    "gender": "man",
+    "age": 55,
+    "education": "some college",
+    "occupation": "an insurance adjuster",
+    "stance": 1,
+    "anchor": 0
+  },
+  "persona_b": {
+    "label": "ParticipantB",
+    "gender": "woman",
+    "age": 42,
+    "education": "a college degree",
+    "occupation": "a grocery store manager",
+    "stance": 0,
+    "anchor": 1
+  },
+  "turns": [
+    [
+      "ParticipantA",
+      "Hello!"
+    ],
+    [
+      "ParticipantB",
+      "Hello!"
+    ],
+    [
+      "ParticipantA",
+      "Hey, so you got the call too? I was just about to hit that button. I'm an insurance adjuster by the way, and honestly, picking childcare for a preschooler is a nightmare if you look at it from a liability standpoint, though my own kid is actually in a place that works out fine. What about you? Are you doing this for your own family or just curious?"
+    ],
+    [
+      "ParticipantB",
+      "Yeah, actually for my own kid, and honestly it's brutal because as a store manager I see parents trying to juggle shifts with nothing available."
+    ],
+    [
+      "ParticipantA",
+      "That's rough, I totally get the juggling act, especially with shifts. My daughter is in a spot where the owners have been there twenty years, but man, the waitlist is insane lately; we actually had to wait three months before they even called us back."
+    ],
+    [
+      "ParticipantB",
+      "Three months?! That's crazy, but honestly, that's exactly why I'm so picky; I know a single mom next door who looked at five different spots before settling on a tiny family home down the street."
+    ],
+    [
+      "ParticipantA",
+      "That's really admirable of her though, finding a family home usually means you have to vet the parents just as hard as the program itself."
+    ],
+    [
+      "ParticipantB",
+      "It's crazy though, vetting a family is so much scarier than vetting a licensed center, I mean, if they slip up you're stuck with it, plus my neighbor mentioned she found out the dad was arrested last year and she had nowhere else to go."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, man, that's a whole other level of risk I never thought about; I'm pretty sure my kids' spot would have closed down if the owner had a record like that, and honestly, that's the part of this whole search that makes my head spin a little bit."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, honestly that's why I always go straight for the licensed centers if I can, even if the waitlist is long, because at least the paperwork proves they have some standards."
+    ],
+    [
+      "ParticipantA",
+      "Right, but I guess that's why I'm stuck too, since my job means I can't just bail out if they screw up, so I'm praying that license is actually real and not just a piece of paper."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, exactly, and I guess that's the trade-off, you never get the safety net of an insurance claim if something goes wrong at a home, but at least the teachers there are trained to actually handle the kids right."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, trained teachers are a breath of fresh air if they don't end up playing games with your kid's schedule because the bus is late."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, and honestly the schedule thing is huge for me too, because when my kid gets sick I need to know the teacher can jump in without me losing my store hours."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, the schedule thing is terrifying too, because if the bus is late you basically lose your whole day and get fired for it."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's exactly why I'm terrified too because if the kid is sick and I'm stuck at the store, I could lose my whole shift and get in trouble with my boss."
+    ],
+    [
+      "ParticipantA",
+      "I guess that's why I'm actually glad my kid is with someone who knows exactly when to pick them up, even if it means I have to sneak off early sometimes."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I get that, and honestly I'm just lucky my mom can swap in at the last minute so I don't have to worry about my hours."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the thing with my job, I'm constantly trying to figure out if I should trust someone's word or just demand receipts before I sign anything."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess that's why I just try to keep a backup plan ready in case someone flakes on the promise."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, having a backup is the only way to stay sane, though I still feel weird just handing my kid off to a stranger no matter how much they promise."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I totally feel that about the stranger thing, which is why I'd never do it with my own little one."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's exactly my fear too, handing them to a total stranger, though I guess I just have to trust my gut or something goes wrong and I'm on the hook for everything."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess I just have to trust my mom's word since she's the only one I can rely on in a pinch."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, but at least you have her there, I just don't have that safety net when it comes to someone I don't know."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's exactly why I'm holding out hope that my mom's house has a proper license, even if she just runs it as a side thing."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the whole thing, I just hope she actually pulled the paperwork together before the state came knocking."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I guess that's the scary part because if she doesn't have the paperwork, I literally can't put my kid in there even if she's perfect."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess that's the whole dilemma, because if the paperwork doesn't exist I'm legally on the hook if anything happens, but if I wait for the paperwork the waitlist eats up every single moment I have left to find a spot."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's the killer, there's no way to win, either you wait forever or you gamble on a stranger and hope you didn't just set your kid up for a lawsuit."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, so I guess I'm just stuck in the middle trying to figure out if the license is worth the wait or if I should just take the gamble."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, I think I'd take the gamble if it meant getting him into a good spot sooner rather than just watching him from the car window all day."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I guess I'm just going to take the gamble if I can find a licensed spot sooner rather than sitting in the car like a lunatic."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but honestly I'd rather wait a little longer if it means the teachers actually know how to handle a meltdown than just have them in a room with a stranger who has no idea what's going on."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, that's the thing, I don't want them just sitting there while I'm stressing out, even if it means waiting a little longer to make sure they're actually safe."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, because honestly nothing screams \"trauma\" like a kid screaming in a room with no one to calm them down."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, exactly, and if we can't get a spot soon, I'm just going to pray my gut is right about that one place even though the paperwork still hasn't arrived."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, that's exactly my fear too, if they mess up there's no one to call and I'm just stuck with the mess."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I know that feeling all too well, but honestly, by the time the state inspects that place, I'm going to be sitting in the car window for who knows how long."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, if they don't pass the inspection you'd be in real trouble, but honestly I think I'll take the risk just so I don't have to watch him from the car forever."
+    ],
+    [
+      "ParticipantA",
+      "Yeah, I think I might just bite the bullet and wait another month to make sure the inspection passes before I risk gambling with a stranger."
+    ],
+    [
+      "ParticipantB",
+      "Yeah, but if they don't pass the inspection you're stuck with the kid in the car while you work, so I'll probably just trust my mom and hope for the best."
+    ]
+  ],
+  "n_turns": 42,
+  "seed_turns": 2,
+  "ended_by": "turn_cap",
+  "multi_turn_emissions": 0,
+  "decoding": {
+    "max_new_tokens": 512,
+    "min_new_tokens": 2,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "stop_at_sentence": false,
+    "max_turns": 40
+  },
+  "quality_counters": {
+    "hit_token_cap": 0,
+    "multi_turn_emissions": 0,
+    "dup_resamples": 1
+  },
+  "conversation_seed": 2595890467,
+  "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+  "run": {
+    "run_id": "043df376f0cfc05db1ad00a7fe6182bffa63091c671f487baf387e296aafe38a",
+    "identity": {
+      "condition": "C2-P1",
+      "models": {
+        "ParticipantA": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        },
+        "ParticipantB": {
+          "name": "Qwen/Qwen3.5-9B",
+          "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+        }
+      },
+      "precision": "nf4",
+      "thinking": "off",
+      "sampling_defaults": {
+        "top_k": 0,
+        "min_p": 0.0,
+        "do_sample": true
+      },
+      "seed": 20261115,
+      "decoding": {
+        "max_new_tokens": 512,
+        "min_new_tokens": 2,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "stop_at_sentence": false,
+        "max_turns": 40
+      },
+      "source_sha256": "478eef02f4fc63d25db913782472ac9e5fbef4dfafc243ada96ef399755cc488",
+      "packages": {
+        "torch": "2.12.0+cu126",
+        "transformers": "5.12.1",
+        "accelerate": "1.14.0",
+        "bitsandbytes": "0.46.1",
+        "huggingface-hub": "1.33.0"
+      },
+      "devices": {
+        "single": null,
+        "a": null,
+        "b": null
+      },
+      "input_sha256": "b6c743a7e596a438c9fbe6c2bc36815249bf9fa7f99f3468c7a7daa17af1a18f"
+    },
+    "git_commit": "90e78653f87b3d00f02c3bc4759891c48c15c8cf",
+    "created_utc": "2026-11-17T07:24:13.295312+00:00",
+    "hardware": {
+      "cuda": "12.6",
+      "gpus": [
+        {
+          "name": "NVIDIA A40",
+          "total_memory": 47699722240
+        }
+      ]
+    }
+  }
+}

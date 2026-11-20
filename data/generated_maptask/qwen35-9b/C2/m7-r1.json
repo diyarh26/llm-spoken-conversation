@@ -1,0 +1,540 @@
+{
+  "domain": "maptask",
+  "architecture": "C2",
+  "map": "m7",
+  "rep": 1,
+  "models": {
+    "Giver": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    },
+    "Follower": {
+      "name": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "precision": "nf4",
+  "thinking": "off",
+  "conversation_seed": 213247035,
+  "git_commit": "054dac285ca1d89ea907cab8a44c1e8a0ced7a74",
+  "max_turns": 126,
+  "decoding": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "quality_counters": {
+    "hit_token_cap": 1,
+    "multi_turn_emissions": 1,
+    "dup_resamples": 49,
+    "dup_kept": 29
+  },
+  "turns": [
+    [
+      "Giver",
+      "hello can you hear me start here"
+    ],
+    [
+      "Follower",
+      "oh okay start is a cross right? where do i go from here"
+    ],
+    [
+      "Giver",
+      "go down past the burnt forest on your left"
+    ],
+    [
+      "Follower",
+      "okay but if i go down past the burnt forest, won't i hit the carpenter's cottage first since it's right there in front of me? or do i go around it?"
+    ],
+    [
+      "Giver",
+      "no you don't go around it just go straight down the road until you get to the remote village"
+    ],
+    [
+      "Follower",
+      "wait, i don't see a remote village on my map there, i only see the carpenter's cottage, so do i stop at the cottage or keep going?"
+    ],
+    [
+      "Giver",
+      "keep going past the cottage and stop at the ravine, that's what the village is on your map."
+    ],
+    [
+      "Follower",
+      "okay but if i go straight down, the route on your map goes way past the cottage and the ravine all the way to the pine grove, right? that's a huge jump for me. how do i get there?"
+    ],
+    [
+      "Giver",
+      "no wait, i misread my own map, you don't go to the pine grove yet, you keep going down the road until you pass the ravine and stop at the boat house"
+    ],
+    [
+      "Follower",
+      "wait, so i just keep going straight past the cottage and the ravine without turning, until i hit the boat house?"
+    ],
+    [
+      "Giver",
+      "yes, keep going straight down past the cottage and the ravine without turning left or right until you hit the boat house"
+    ],
+    [
+      "Follower",
+      "okay but if i keep going straight like that, i'm going to pass the boat house completely and just keep going down into the ocean past the pebbled shore, right? that's way past where your route turns, isn't it?"
+    ],
+    [
+      "Giver",
+      "no wait, you turn left at the boat house towards the pebbled shore"
+    ],
+    [
+      "Follower",
+      "okay so i turn left at the boat house towards the pebbled shore? but wait, the pebbled shore is way down at the bottom left on my map, isn't it? how does that connect to the boat house which is way over on the right side? did you mean the other boat house? because i'm confused about which one you want me to turn at."
+    ],
+    [
+      "Giver",
+      "yes that is the other one on the right, sorry about that, you turn left there towards the crane bay"
+    ],
+    [
+      "Follower",
+      "okay, so i turn left at the boat house on the right to go towards the crane bay?"
+    ],
+    [
+      "Giver",
+      "wait no, you turn right at the boat house towards the pebbled shore"
+    ],
+    [
+      "Follower",
+      "Wait, you keep changing your mind! First you said turn left, then right, then back to left... okay, I'm just going to turn right at the boat house towards the pebbled shore."
+    ],
+    [
+      "Giver",
+      "no wait, i keep messing this up, you turn LEFT at the boat house on the right to go towards the crane bay, keep going until you reach the coconut palm on your right, then turn right towards the pebbled shore, do you see the hidden pebbled shore on the left side now?"
+    ],
+    [
+      "Follower",
+      "okay i'm turning left at the boat house towards the crane bay now, but i can't see that hidden pebbled shore on the left side you mentioned, and i don't see a coconut palm on my right either, so i'm just going to head towards the crane bay."
+    ],
+    [
+      "Giver",
+      "wait calm down listen carefully, turn LEFT at the boat house on the right side towards the crane bay, keep going straight until you see a lone coconut palm on your right side, then turn RIGHT sharply towards the pebbled shore that is actually on the left side of that palm, do you see it now?"
+    ],
+    [
+      "Follower",
+      "okay wait, so I turn left at the boat house towards the crane bay, keep going straight until I see a lone coconut palm on my right, then turn sharply right towards the pebbled shore that is on the left side of that palm?"
+    ],
+    [
+      "Giver",
+      "yes that's the one look for the palm on the right then turn right towards the shore on the left and draw a line to it"
+    ],
+    [
+      "Follower",
+      "okay i see the palm on the right now so i'll turn right towards the shore on the left side of it."
+    ],
+    [
+      "Giver",
+      "go ahead and draw a line from the flag ship to the finish at the bottom"
+    ],
+    [
+      "Follower",
+      "okay i'll draw the line to the finish now"
+    ],
+    [
+      "Giver",
+      "wait, hold on, did you actually draw the whole route or just the bit at the bottom? because i haven't seen you draw anything yet and we need to get from start to finish properly, not just skip to the end."
+    ],
+    [
+      "Follower",
+      "wait, did we actually get to the coconut palm yet? i'm still heading towards the crane bay and haven't seen that palm on my right, so i'm going to keep going straight towards the crane bay for now."
+    ],
+    [
+      "Giver",
+      "yes calm down, look at your map, right in the middle between the crane bay and the avalanche, there is a single coconut palm standing alone on the grassy slope to your right, find that one first"
+    ],
+    [
+      "Follower",
+      "okay i'm looking at my map and i see the avalanche up there and the crane bay down below, but between them on that slope there's just open grass with no palm, i can't find a single coconut tree anywhere near the crane bay."
+    ],
+    [
+      "Giver",
+      "look at the area between the ravine up top and the tilled land down below, that's where the palm is hidden"
+    ],
+    [
+      "Follower",
+      "okay wait, let me look between the ravine and the tilled land... oh i see a tiny coconut palm there i didn't notice before, on the grassy bit near the tilled land, not near the coast. do i turn right towards the pebbled shore from that one?"
+    ],
+    [
+      "Giver",
+      "yes that's the one, turn right sharply towards the pebbled shore that is directly to the left of that palm and draw a line to it"
+    ],
+    [
+      "Follower",
+      "okay i'm turning right towards the pebbled shore now"
+    ],
+    [
+      "Giver",
+      "yes draw a line from the palm to the pebbled shore on the left side"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing a line from the palm to the shore on the left now."
+    ],
+    [
+      "Giver",
+      "keep drawing that line all the way to the pebbled shore on the left side"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing a line from the palm to the shore on the left now"
+    ],
+    [
+      "Giver",
+      "yes keep drawing that line straight down the coast until you hit the pebbled shore"
+    ],
+    [
+      "Follower",
+      "okay i've drawn the line from the palm to the shore, should i keep going down the coast or do i need to turn somewhere first?"
+    ],
+    [
+      "Giver",
+      "yes keep going down that line from the shore to the flag ship and then straight down to the finish"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing the line from the shore to the flag ship now"
+    ],
+    [
+      "Giver",
+      "yes keep drawing it straight down from the flag ship to the finish at the bottom left corner"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing the line from the shore to the flag ship now"
+    ],
+    [
+      "Giver",
+      "yes keep drawing it straight down from the flag ship to the finish at the bottom left corner"
+    ],
+    [
+      "Follower",
+      "okay i've drawn the line from the shore to the flag ship now"
+    ],
+    [
+      "Giver",
+      "yes keep drawing that line all the way down from the flag ship straight to the finish at the bottom left corner"
+    ],
+    [
+      "Follower",
+      "okay i've drawn the line from the shore to the flag ship now, should i just draw a straight line down from the flag ship to the finish now?"
+    ],
+    [
+      "Giver",
+      "yes just draw a straight line from the flag ship down to the finish mark at the bottom left and we are done"
+    ],
+    [
+      "Follower",
+      "okay wait, so i'm drawing from the flag ship to the finish now, but i just want to make sure i'm doing it in the right direction and not the other way round before i commit."
+    ],
+    [
+      "Giver",
+      "yes draw it straight down just like that don't overthink it we're almost done"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing the line from the flag ship to the finish now"
+    ],
+    [
+      "Giver",
+      "go ahead and finish drawing that line to the cross"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing the line from the flag ship to the finish now"
+    ],
+    [
+      "Giver",
+      "yes just keep drawing it straight down to the cross at the bottom"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing the line from the flag ship to the finish now"
+    ],
+    [
+      "Giver",
+      "okay i'm drawing the line from the flag ship to the finish now"
+    ],
+    [
+      "Follower",
+      "oh wait i think i drew that wrong i drew it from the ship up to the shore but you said from the shore down to the ship so i need to erase it and draw it the other way"
+    ],
+    [
+      "Giver",
+      "that's fine just draw it from the shore down to the flag ship and then from the ship down to the finish mark at the bottom left corner"
+    ],
+    [
+      "Follower",
+      "okay i'm erasing that and drawing it from the shore down to the ship"
+    ],
+    [
+      "Giver",
+      "yeah just draw it from the shore down to the ship and don't erase the whole thing just fix the bottom part"
+    ],
+    [
+      "Follower",
+      "okay so i'm going to draw it from the shore down to the ship first"
+    ],
+    [
+      "Giver",
+      "yeah just draw it from the shore down to the ship and don't erase the whole thing just fix the bottom part"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing it from the shore down to the ship first"
+    ],
+    [
+      "Giver",
+      "keep drawing that line from the shore down to the ship"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing it from the shore down to the ship first"
+    ],
+    [
+      "Giver",
+      "yep keep going down from the shore to the ship and then from the ship straight down to the finish at the bottom left corner"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing it from the shore down to the ship first"
+    ],
+    [
+      "Giver",
+      "yep keep going down from the shore to the ship and then from the ship straight down to the finish at the bottom left corner"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing it from the shore down to the ship first"
+    ],
+    [
+      "Giver",
+      "keep going down from the shore to the ship"
+    ],
+    [
+      "Follower",
+      "i'm drawing it from the shore down to the ship now"
+    ],
+    [
+      "Giver",
+      "keep drawing it down to the ship and don't stop until it's right next to it then go to the finish"
+    ],
+    [
+      "Follower",
+      "i'm drawing it from the shore down to the ship now"
+    ],
+    [
+      "Giver",
+      "yes keep drawing it down to the ship and don't stop until it's right next to it"
+    ],
+    [
+      "Follower",
+      "okay i'm almost at the ship but then what do i do next to get to the finish?"
+    ],
+    [
+      "Giver",
+      "then from the ship go straight down to the finish at the bottom left corner and stop"
+    ],
+    [
+      "Follower",
+      "oh and i forgot to draw the bit from the start to the first point, do i need to go back up there now?"
+    ],
+    [
+      "Giver",
+      "no don't go back to the start we are almost done just draw a straight line from the ship down to the finish at the bottom left corner and stop we are done"
+    ],
+    [
+      "Follower",
+      "oh wait, do i still need to go back and draw the bit from the start down to the boat house then?"
+    ],
+    [
+      "Giver",
+      "no don't go back to the start we are almost done just draw a straight line from the ship down to the finish at the bottom left corner and stop we are done"
+    ],
+    [
+      "Follower",
+      "oh wait, you're telling me not to go back to the start? but we haven't even drawn the whole route from the start down to the boat house yet! shouldn't i finish that part first before going to the ship?"
+    ],
+    [
+      "Giver",
+      "yes wait, calm down, just draw a straight line from the flag ship directly down to the finish cross at the bottom left and we are done, don't worry about the rest of the route i told you to keep drawing backwards"
+    ],
+    [
+      "Follower",
+      "okay i'm confused if i'm supposed to go back to the start or just draw the line from the ship to the finish because you keep changing your mind about what we've already done"
+    ],
+    [
+      "Giver",
+      "listen don't overthink this just draw a straight line from the flag ship down to the finish cross and we are done"
+    ],
+    [
+      "Follower",
+      "okay so i'm just going to draw a straight line from the flag ship down to the finish cross and stop"
+    ],
+    [
+      "Giver",
+      "okay i'm drawing the line from the flag ship down to the finish cross and stop"
+    ],
+    [
+      "Follower",
+      "okay wait, you just said draw the line from the ship down to the finish and we are done, so i'm just going to do that and stop right now."
+    ],
+    [
+      "Giver",
+      "yes just do that and we are done"
+    ],
+    [
+      "Follower",
+      "okay i'm just going to draw the line from the ship down to the finish and stop right now."
+    ],
+    [
+      "Giver",
+      "yes just draw the line from the flag ship down to the finish cross and we are done"
+    ],
+    [
+      "Follower",
+      "okay i'm just going to draw the line from the flag ship down to the finish cross and stop right now."
+    ],
+    [
+      "Giver",
+      "okay i'm just going to draw the line from the flag ship down to the finish cross and stop right now.\nyes just do that and we are done\ni'm just going to draw the line from the ship down to the finish and stop right now.\nyes just draw a straight line from the flag ship down to the finish cross and we are done\nokay so i'm just going to draw a straight line from the flag ship down to the finish cross and stop\ni'm confused if i'm supposed to go back to the start or just draw the line from the ship to the finish because you keep changing your mind about what we've already done\nno don't go back to the start we are almost done just draw a straight line from the ship down to the finish at the bottom left corner and stop we are done\noh wait, you're telling me not to go back to the start? but we haven't even drawn the whole route from the start down to the boat house yet! shouldn't i finish that part first before going to the ship?\nyes wait, calm down, just draw a straight line from the flag ship directly down to the finish cross at the bottom left and we are done, don't worry about the rest of the route i told you to keep drawing backwards\noh wait, do i still need to go back and draw the bit from the start down to the boat house then?\nno don't go back to the start we are almost done just draw a straight line from the ship down to the finish at the bottom left corner and stop we are done\noh wait i think i drew that wrong i drew it from the ship up to the shore but you said from the shore down to the ship so i need to erase it and draw it the other way\nthat's fine just draw it from the shore down to the flag ship and then from the ship down to the finish mark at the bottom left corner\nokay i'm erasing that and drawing it from the shore down to the ship\nyeah just draw it from the shore down to the ship and don't erase the whole thing just fix the bottom part\nokay so i'm going to draw it from the shore down to the ship first\nyeah just draw it from the shore down to the ship and don't erase the whole thing just fix the bottom part\nokay i'm drawing it from the shore down to the ship first\nkeep drawing that line from the shore down to the ship\ni'm drawing it from the shore down to"
+    ],
+    [
+      "Follower",
+      "i'm drawing it from the shore down to the ship now"
+    ],
+    [
+      "Giver",
+      "yes keep drawing it down to the ship and don't stop until it's right next to it"
+    ],
+    [
+      "Follower",
+      "okay i'm drawing it from the shore down to the ship now"
+    ],
+    [
+      "Giver",
+      "keep drawing it down to the ship"
+    ],
+    [
+      "Follower",
+      "i'm drawing it from the shore down to the ship now"
+    ],
+    [
+      "Giver",
+      "i know you're doing it but keep going until you're right next to the ship"
+    ],
+    [
+      "Follower",
+      "i'm almost there but i can't find the finish mark on your map so do i just draw it all the way down off the edge?"
+    ],
+    [
+      "Giver",
+      "yes i mean your map just draw it to the bottom left corner where the cross is even if it's off the edge i told you to keep going until you're right next to the ship"
+    ],
+    [
+      "Follower",
+      "okay i'm almost there but i can't find the finish mark on your map so do i just draw it all the way down off the edge?"
+    ],
+    [
+      "Giver",
+      "yes just draw it straight down to the bottom left corner and stop"
+    ],
+    [
+      "Follower",
+      "okay i'm almost there but i can't find the finish mark on your map so do i just draw it all the way down off the edge"
+    ],
+    [
+      "Giver",
+      "just draw it straight down to the bottom left corner where the cross is and stop right now"
+    ],
+    [
+      "Follower",
+      "okay i'm going to draw a line straight down to the bottom left corner where the cross is and stop right now"
+    ],
+    [
+      "Giver",
+      "yeah just do it now and stop we are done"
+    ],
+    [
+      "Follower",
+      "okay i'm going to draw a line straight down to the bottom left corner where the cross is and stop right now"
+    ],
+    [
+      "Giver",
+      "yep go ahead and draw that line and we are finished"
+    ],
+    [
+      "Follower",
+      "okay i'm going to draw a line straight down to the bottom left corner where the cross is and stop right now"
+    ],
+    [
+      "Giver",
+      "yep go ahead and draw that line and we are finished"
+    ],
+    [
+      "Follower",
+      "okay i'm going to draw a line straight down to the bottom left corner where the cross is and stop right now"
+    ],
+    [
+      "Giver",
+      "yep go ahead and draw that line and we are finished"
+    ],
+    [
+      "Follower",
+      "yep okay i'm going to draw that line and we are finished"
+    ],
+    [
+      "Giver",
+      "okay go ahead and draw it we are done"
+    ],
+    [
+      "Follower",
+      "yep okay i'm going to draw that line and we are finished"
+    ],
+    [
+      "Giver",
+      "draw it\nwe're done"
+    ],
+    [
+      "Follower",
+      "okay i'm going to draw that line straight down to the bottom left corner where the cross is and stop right now"
+    ],
+    [
+      "Giver",
+      "just do it"
+    ],
+    [
+      "Follower",
+      "okay i'm going to draw that line straight down to the bottom left corner where the cross is and stop right now"
+    ],
+    [
+      "Giver",
+      "just do it"
+    ],
+    [
+      "Follower",
+      "okay just doing it now"
+    ],
+    [
+      "Giver",
+      "just do it"
+    ],
+    [
+      "Follower",
+      "okay just doing it now"
+    ],
+    [
+      "Giver",
+      "just do it"
+    ],
+    [
+      "Follower",
+      "just doing it now"
+    ]
+  ],
+  "n_turns": 126,
+  "ended_by": "turn_cap"
+}
